@@ -31,20 +31,27 @@ class Data
      *
      * @param string $type Type of column
      * @param string $name Name of column
+     *
+     * @throws GoogleChartsException If type is invalid
      */
     public function addColumn($type, $name)
     {
-        // TODO contrôler le type
+        if (!in_array($type, array('string', 'number', 'boolean', 'date', 'datetime', 'timeofday'))) {
+            throw new GoogleChartsException(
+                "Invalid type, $type, for column \"$name\"."
+            );
+        }
+
         $this->columns[] = new Column($type, $name);
         $this->nbColumns++;
     }
 
     /**
-     * Add rows. Rows must have the same number of columns.
+     * Add rows.
      *
      * @param array $rows An array of rows
      *
-     * @throws GoogleChartsException
+     * @throws GoogleChartsException If rows given with size different
      */
     public function addRows($rows)
     {
@@ -57,6 +64,14 @@ class Data
         }
 
         $this->rows = $rows;
+    }
+
+    /**
+     * @param array $arrayToTable
+     */
+    public function setArrayToTable($arrayToTable)
+    {
+        $this->arrayToTable = $arrayToTable;
     }
 
     /**
@@ -81,54 +96,4 @@ class Data
 
         return $js;
     }
-
-    /**
-     * @return Column[]
-     */
-    public function getColumns()
-    {
-        return $this->columns;
-    }
-//
-//    /**
-//     * @param Column[] $columns
-//     */
-//    public function setColumns($columns)
-//    {
-//        $this->columns = $columns;
-//    }
-
-    /**
-     * @return array
-     */
-    public function getRows()
-    {
-        return $this->rows;
-    }
-
-    /**
-     * @return array
-     */
-/*    public function getArrayToTable()
-    {
-        return $this->arrayToTable;
-    }*/
-
-    /**
-     * @param array $arrayToTable
-     */
-    public function setArrayToTable($arrayToTable)
-    {
-        $this->arrayToTable = $arrayToTable;
-    }
-
-//    /**
-//     * @param array $rows
-//     */
-//    public function setRows($rows)
-//    {
-//        $this->rows = $rows;
-//    }
-
-
 }

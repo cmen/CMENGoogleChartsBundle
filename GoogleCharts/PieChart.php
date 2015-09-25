@@ -2,6 +2,8 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts;
 
+use CMENGoogleChartsBundle\GoogleCharts\Options\PieCharts\PieChartOptions;
+
 class PieChart extends Chart
 {
     public function __construct()
@@ -33,13 +35,5 @@ class PieChart extends Chart
     public function getOptions()
     {
         return $this->options;
-    }
-
-    /**
-     * @param PieChartOptions $options
-     */
-    public function setOptions($options)
-    {
-        $this->options = $options;
     }
 }

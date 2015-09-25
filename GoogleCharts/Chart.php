@@ -3,6 +3,7 @@
 namespace CMENGoogleChartsBundle\GoogleCharts;
 
 use CMENGoogleChartsBundle\Exception\GoogleChartsException;
+use CMENGoogleChartsBundle\GoogleCharts\Options\Options;
 
 abstract class Chart
 {
@@ -41,9 +42,10 @@ abstract class Chart
      */
     abstract protected function getPackage();
 
+    /**
+     * @return Options
+     */
     abstract public function getOptions();
-
-    abstract public function setOptions($options);
 
     /**
      * Returns Javascript of chart.
@@ -54,7 +56,7 @@ abstract class Chart
      */
     public function draw()
     {
-        // TODO : mettre la version en paramétre
+        // TODO : mettre la version en paramètre
 
         if ($this->elementID === null) {
             throw new GoogleChartsException('Container is not defined. You must use setElementID().');
@@ -95,13 +97,5 @@ abstract class Chart
     public function getData()
     {
         return $this->data;
-    }
-
-    /**
-     * @param Data $data
-     */
-    public function setData($data)
-    {
-        $this->data = $data;
     }
 }
