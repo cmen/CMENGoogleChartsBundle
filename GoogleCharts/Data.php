@@ -4,6 +4,9 @@ namespace CMENGoogleChartsBundle\GoogleCharts;
 
 use CMENGoogleChartsBundle\Exception\GoogleChartsException;
 
+/**
+ * @author Christophe Meneses
+ */
 class Data
 {
     /**

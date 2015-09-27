@@ -5,6 +5,9 @@ namespace CMENGoogleChartsBundle\GoogleCharts;
 use CMENGoogleChartsBundle\Exception\GoogleChartsException;
 use CMENGoogleChartsBundle\GoogleCharts\Options\Options;
 
+/**
+ * @author Christophe Meneses
+ */
 abstract class Chart
 {
     /**
@@ -73,14 +76,6 @@ abstract class Chart
                     chart.draw(data, options);
                 }
             </script>';
-    }
-
-    /**
-     * @return string
-     */
-    public function getElementID()
-    {
-        return $this->elementID;
     }
 
     /**

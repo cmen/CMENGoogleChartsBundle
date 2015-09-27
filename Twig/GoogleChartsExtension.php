@@ -4,6 +4,9 @@ namespace CMENGoogleChartsBundle\Twig;
 
 use CMENGoogleChartsBundle\GoogleCharts\Chart;
 
+/**
+ * @author Christophe Meneses
+ */
 class GoogleChartsExtension extends \Twig_Extension
 {
     /**

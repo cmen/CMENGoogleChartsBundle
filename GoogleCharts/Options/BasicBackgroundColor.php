@@ -2,7 +2,10 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts\Options;
 
-class BackgroundColor
+/**
+ * @author Christophe Meneses
+ */
+class BasicBackgroundColor
 {
     /**
      * The color of the chart border, as an HTML color string.
@@ -17,13 +20,6 @@ class BackgroundColor
      * @var int
      */
     protected $strokeWidth;
-
-    /**
-     * The chart fill color, as an HTML color string.
-     *
-     * @var string
-     */
-    protected $fill;
 
 
     /**
@@ -40,13 +36,5 @@ class BackgroundColor
     public function setStrokeWidth($strokeWidth)
     {
         $this->strokeWidth = $strokeWidth;
-    }
-
-    /**
-     * @param string $fill
-     */
-    public function setFill($fill)
-    {
-        $this->fill = $fill;
     }
 }

@@ -2,6 +2,9 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts;
 
+/**
+ * @author Christophe Meneses
+ */
 class Column
 {
     /**

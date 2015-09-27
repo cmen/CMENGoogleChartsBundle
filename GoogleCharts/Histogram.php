@@ -2,15 +2,12 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\PieCharts\PieChartOptions;
+use CMENGoogleChartsBundle\GoogleCharts\Options\Histogram\HistogramOptions;
 
-/**
- * @author Christophe Meneses
- */
-class PieChart extends Chart
+class Histogram extends Chart
 {
     /**
-     * @var PieChartOptions
+     * @var HistogramOptions
      */
     protected $options;
 
@@ -19,16 +16,15 @@ class PieChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new PieChartOptions();
+        $this->options = new HistogramOptions();
     }
-
 
     /**
      * @inheritdoc
      */
     protected function getType()
     {
-        return 'PieChart';
+        return 'Histogram';
     }
 
     /**

@@ -2,6 +2,9 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts\Options\PieCharts;
 
+/**
+ * @author Christophe Meneses
+ */
 class PieSliceTextStyle
 {
     /**

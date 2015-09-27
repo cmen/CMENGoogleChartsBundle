@@ -2,13 +2,18 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts\Options;
 
+/**
+ * @author Christophe Meneses
+ */
 class ChartArea
 {
     /**
-     * Chart area background color. Two formats are supported: a number, or a number followed by %. A simple number
-     * is a value in pixels; a number followed by % is a percentage.
+     * Chart area background color. When a string is used, it can be either a hex string (e.g., '#fdc') or an
+     * English color name. When an object is used, the following properties can be provided :
+     *   stroke: the color, provided as a hex string or English color name.
+     *   strokeWidth: if provided, draws a border around the chart area of the given width and with the color of stroke.
      *
-     * @var BackgroundColor
+     * @var string|BasicBackgroundColor
      */
     protected $backgroundColor;
 
@@ -48,12 +53,12 @@ class ChartArea
 
     public function __construct()
     {
-        $this->backgroundColor = new BackgroundColor();
+        $this->backgroundColor = new BasicBackgroundColor();
     }
 
 
     /**
-     * @return BackgroundColor
+     * @return BasicBackgroundColor
      */
     public function getBackgroundColor()
     {
@@ -90,5 +95,13 @@ class ChartArea
     public function setWidth($width)
     {
         $this->width = $width;
+    }
+
+    /**
+     * @param string $backgroundColor
+     */
+    public function setBackgroundColor($backgroundColor)
+    {
+        $this->backgroundColor = $backgroundColor;
     }
 }

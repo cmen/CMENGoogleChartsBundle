@@ -4,6 +4,9 @@ namespace CMENGoogleChartsBundle\GoogleCharts\Tools;
 
 use CMENGoogleChartsBundle\GoogleCharts\Options\Options;
 
+/**
+ * @author Christophe Meneses
+ */
 class OptionsFormat
 {
     /**

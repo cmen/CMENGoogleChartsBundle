@@ -2,16 +2,36 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts\Options\PieCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\Options;
+use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMENGoogleChartsBundle\GoogleCharts\Options\FullTooltip;
+use CMENGoogleChartsBundle\GoogleCharts\Options\MediumChartOptions;
 
-class PieChartOptions extends Options
+/**
+ * @author Christophe Meneses
+ */
+class PieChartOptions extends MediumChartOptions
 {
+    /**
+     * Whether to guess the value of missing points. If true, it will guess the value of any missing data based on
+     * neighboring points. If false, it will leave a break in the line at the unknown point.
+     *
+     * This is not supported by Area charts with the isStacked: true/'percent'/'relative'/'absolute' option.
+     *
+     * @var boolean
+     */
+    protected $interpolateNulls;
+
     /**
      * If true, displays a three-dimensional chart.
      *
      * @var boolean
      */
     protected $is3D;
+
+    /**
+     * @var AdvancedLegend
+     */
+    protected $legend;
 
     /**
      * If between 0 and 1, displays a donut chart. The hole with have a radius equal to number times the radius of the
@@ -79,8 +99,8 @@ class PieChartOptions extends Options
      * You can specify either an array of array, each of which applies to the slice in the order given, or you can
      * specify an object where each child has a numeric key indicating which slice it applies to. For example, the
      * following two declarations are identical, and declare the first slice as black and the fourth as red :
-     * slices: [[color => 'black'], [], [], [color => 'red']]
-     * slices: [0 => [color => 'black'], 3: [color => 'red']]
+     * [[color => 'black'], [], [], [color => 'red']]
+     * [0 => [color => 'black'], 3 => [color => 'red']]
      *
      * @var array
      */
@@ -95,12 +115,19 @@ class PieChartOptions extends Options
      */
     protected $sliceVisibilityThreshold;
 
+    /**
+     * @var FullTooltip
+     */
+    protected $tooltip;
+
 
     public function __construct()
     {
         parent::__construct();
 
+        $this->legend = new AdvancedLegend();
         $this->pieSliceTextStyle = new PieSliceTextStyle();
+        $this->tooltip = new FullTooltip();
     }
 
 
@@ -110,6 +137,30 @@ class PieChartOptions extends Options
     public function getPieSliceTextStyle()
     {
         return $this->pieSliceTextStyle;
+    }
+
+    /**
+     * @return FullTooltip
+     */
+    public function getTooltip()
+    {
+        return $this->tooltip;
+    }
+
+    /**
+     * @return AdvancedLegend
+     */
+    public function getLegend()
+    {
+        return $this->legend;
+    }
+
+    /**
+     * @param boolean $interpolateNulls
+     */
+    public function setInterpolateNulls($interpolateNulls)
+    {
+        $this->interpolateNulls = $interpolateNulls;
     }
 
     /**

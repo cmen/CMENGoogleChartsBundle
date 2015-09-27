@@ -2,17 +2,121 @@
 
 namespace CMENGoogleChartsBundle\Controller;
 
+use CMENGoogleChartsBundle\GoogleCharts\Histogram;
 use CMENGoogleChartsBundle\GoogleCharts\PieChart;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
     /**
+     * @Route("/histo", name="histogram")
+     */
+    public function histoAction()
+    {
+        $histo = new Histogram();
+        $histo->setElementID('histo');
+        $histo->getData()->setArrayToTable([
+            ['Dinosaur', 'Length'],
+            ['Acrocanthosaurus (top-spined lizard)', 12.2],
+            ['Albertosaurus (Alberta lizard)', 9.1],
+            ['Allosaurus (other lizard)', 12.2],
+            ['Apatosaurus (deceptive lizard)', 22.9],
+            ['Archaeopteryx (ancient wing)', 0.9],
+            ['Argentinosaurus (Argentina lizard)', 36.6],
+            ['Baryonyx (heavy claws)', 9.1],
+            ['Brachiosaurus (arm lizard)', 30.5],
+            ['Ceratosaurus (horned lizard)', 6.1],
+            ['Coelophysis (hollow form)', 2.7],
+            ['Compsognathus (elegant jaw)', 0.9],
+            ['Deinonychus (terrible claw)', 2.7],
+            ['Diplodocus (double beam)', 27.1],
+            ['Dromicelomimus (emu mimic)', 3.4],
+            ['Gallimimus (fowl mimic)', 5.5],
+            ['Mamenchisaurus (Mamenchi lizard)', 21.0],
+            ['Megalosaurus (big lizard)', 7.9],
+            ['Microvenator (small hunter)', 1.2],
+            ['Ornithomimus (bird mimic)', 4.6],
+            ['Oviraptor (egg robber)', 1.5],
+            ['Plateosaurus (flat lizard)', 7.9],
+            ['Sauronithoides (narrow-clawed lizard)', 2.0],
+            ['Seismosaurus (tremor lizard)', 45.7],
+            ['Spinosaurus (spiny lizard)', 12.2],
+            ['Supersaurus (super lizard)', 30.5],
+            ['Tyrannosaurus (tyrant lizard)', 15.2],
+            ['Ultrasaurus (ultra lizard)', 30.5],
+            ['Velociraptor (swift robber)', 1.8]]);
+        $histo->getOptions()->setTitle('Lengths of dinosaurs, in meters');
+        $histo->getOptions()->setWidth(900);
+        $histo->getOptions()->setHeight(500);
+        $histo->getOptions()->getLegend()->setPosition('none');
+        $histo->getOptions()->setColors(['green']);
+
+        $histo2 = new Histogram();
+        $histo2->setElementID('histo2');
+        $histo2->getData()->setArrayToTable([
+            ['Population'],
+            [12000000],
+            [13000000],
+            [100000000],
+            [1000000000],
+            [25000000],
+            [600000],
+            [6000000],
+            [65000000],
+            [210000000],
+            [80000000],
+        ]);
+        $histo2->getOptions()->setTitle('Country Populations');
+        $histo2->getOptions()->setWidth(900);
+        $histo2->getOptions()->setHeight(500);
+        $histo2->getOptions()->getLegend()->setPosition('none');
+        $histo2->getOptions()->setColors(['#e7711c']);
+        $histo2->getOptions()->getHistogram()->setLastBucketPercentile(10);
+        $histo2->getOptions()->getHistogram()->setBucketSize(10000000);
+
+        $histo3 = new Histogram();
+        $histo3->setElementID('histo3');
+        $histo3->getData()->setArrayToTable(
+            [
+                ['Quarks', 'Leptons', 'Gauge Bosons', 'Scalar Bosons'],
+                [2/3, -1, 0, 0],
+                [2/3, -1, 0, null],
+                [2/3, -1, 0, null],
+                [-1/3, 0, 1, null],
+                [-1/3, 0, -1, null],
+                [-1/3, 0, null, null],
+                [-1/3, 0, null, null]
+            ]
+        );
+        $histo3->getOptions()->setTitle('Charges of subatomic particles');
+        $histo3->getOptions()->getLegend()->setPosition('top');
+        $histo3->getOptions()->getLegend()->setMaxLines(2);
+        $histo3->getOptions()->setColors(['#5C3292', '#1A8763', '#871B47', '#999999']);
+        $histo3->getOptions()->setInterpolateNulls(false);
+        $histo3->getOptions()->getAnimation()->setStartup(true);
+        $histo3->getOptions()->getAnimation()->setEasing('linear');
+        $histo3->getOptions()->setAxisTitlesPosition('out');
+        $histo3->getOptions()->setWidth(700);
+        $histo3->getOptions()->setHeight(500);
+        $histo3->getOptions()->getBar()->setGroupWidth(100);
+        $histo3->getOptions()->getHAxis()->getMinorGridlines()->setColor('#ff0000');
+        $histo3->getOptions()->getVAxis()->getMinorGridlines()->setColor('#00ff00');
+
+        return $this->render(
+            'CMENGoogleChartsBundle::histo.html.twig',
+            array(
+                'histo' => $histo,
+                'histo2' => $histo2,
+                'histo3' => $histo3,
+            )
+        );
+    }
+
+    /**
      * @Route("/piechart", name="piechart")
      */
-    public function indexAction(Request $request)
+    public function pieChartAction()
     {
         $piechart = new PieChart();
         $piechart->setElementID('piechart');
