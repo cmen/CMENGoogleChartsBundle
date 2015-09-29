@@ -3,7 +3,7 @@
 namespace CMENGoogleChartsBundle\GoogleCharts;
 
 use CMENGoogleChartsBundle\Exception\GoogleChartsException;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Options;
+use CMENGoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 
 /**
  * @author Christophe Meneses
@@ -21,7 +21,7 @@ abstract class Chart
     protected $data;
 
     /**
-     * @var Options
+     * @var ChartOptions
      */
     protected $options;
 
@@ -46,7 +46,7 @@ abstract class Chart
     abstract protected function getPackage();
 
     /**
-     * @return Options
+     * @return ChartOptions
      */
     abstract public function getOptions();
 

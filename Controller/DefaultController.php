@@ -2,6 +2,7 @@
 
 namespace CMENGoogleChartsBundle\Controller;
 
+use CMENGoogleChartsBundle\GoogleCharts\Gauge;
 use CMENGoogleChartsBundle\GoogleCharts\Histogram;
 use CMENGoogleChartsBundle\GoogleCharts\PieChart;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -100,8 +101,8 @@ class DefaultController extends Controller
         $histo3->getOptions()->setWidth(700);
         $histo3->getOptions()->setHeight(500);
         $histo3->getOptions()->getBar()->setGroupWidth(100);
-        $histo3->getOptions()->getHAxis()->getMinorGridlines()->setColor('#ff0000');
-        $histo3->getOptions()->getVAxis()->getMinorGridlines()->setColor('#00ff00');
+        $histo3->getOptions()->getHAxis()->getGridlines()->setColor('#ff0000');
+        $histo3->getOptions()->getVAxis()->getGridlines()->setColor('#00ff00');
 
         return $this->render(
             'CMENGoogleChartsBundle::histo.html.twig',
@@ -109,6 +110,37 @@ class DefaultController extends Controller
                 'histo' => $histo,
                 'histo2' => $histo2,
                 'histo3' => $histo3,
+            )
+        );
+    }
+
+    /**
+     * @Route("/gauge", name="gauge")
+     */
+    public function gaugeAction()
+    {
+        $gauge = new Gauge();
+        $gauge->setElementID('gauge');
+        $gauge->getData()->setArrayToTable([
+            ['Label', 'Value'],
+            ['Memory', 80],
+            ['CPU', 55],
+            ['Network', 68]
+        ]);
+        $gauge->getOptions()->setWidth(400);
+        $gauge->getOptions()->setHeight(120);
+        $gauge->getOptions()->setRedFrom(90);
+        $gauge->getOptions()->setRedTo(100);
+        $gauge->getOptions()->setYellowFrom(75);
+        $gauge->getOptions()->setYellowTo(90);
+        $gauge->getOptions()->setGreenFrom(0);
+        $gauge->getOptions()->setGreenTo(75);
+        $gauge->getOptions()->setMinorTicks(5);
+
+        return $this->render(
+            'CMENGoogleChartsBundle::gauge.html.twig',
+            array(
+                'gauge' => $gauge,
             )
         );
     }
@@ -314,38 +346,40 @@ class DefaultController extends Controller
      */
     public function xxxAction()
     {
-        $pieAllIn = new PieChart();
-        $pieAllIn->setElementID('pieTreshold');
-        $pieAllIn->getData()->addColumn('string', 'Pizza');
-        $pieAllIn->getData()->addColumn('number', 'Populartiy');
-        $pieAllIn->getData()->addRows([
-            ['Pepperoni', 33],
-            ['Hawaiian', 26],
-            ['Mushroom', 22],
-            ['Sausage', 10],
-            ['Anchovies', 9]
-        ]);
-        $pieAllIn->getOptions()->setTitle('Popularity of Types of Pizza');
-        $pieAllIn->getOptions()->setHeight(500);
-        $pieAllIn->getOptions()->setWidth(900);
-        $pieAllIn->getOptions()->getBackgroundColor()->setFill('green');
-        $pieAllIn->getOptions()->getBackgroundColor()->setStroke('blue');
-        $pieAllIn->getOptions()->getBackgroundColor()->setStrokeWidth(10);
-        $pieAllIn->getOptions()->getChartArea()->setLeft(10);
-        $pieAllIn->getOptions()->getChartArea()->setTop('30%');
-        $pieAllIn->getOptions()->getChartArea()->getBackgroundColor()->setStroke('red');
-        $pieAllIn->getOptions()->getChartArea()->getBackgroundColor()->setStrokeWidth(50);
-        $pieAllIn->getOptions()->setEnableInteractivity(false);
-        $pieAllIn->getOptions()->setForceIFrame(true);
-        $pieAllIn->getOptions()->setReverseCategories(true);
-        $pieAllIn->getOptions()->setSliceVisibilityThreshold(0.2);
-        $pieAllIn->getOptions()->setPieResidueSliceColor('#dd0000');
-        $pieAllIn->getOptions()->setPieResidueSliceLabel('Autres');
+        $histo3 = new Histogram();
+        $histo3->setElementID('chart');
+        $histo3->getData()->setArrayToTable(
+            [
+                ['Quarks', 'Leptons', 'Gauge Bosons', 'Scalar Bosons'],
+                [2/3, -1, 0, 0],
+                [2/3, -1, 0, null],
+                [2/3, -1, 0, null],
+                [-1/3, 0, 1, null],
+                [-1/3, 0, -1, null],
+                [-1/3, 0, null, null],
+                [-1/3, 0, null, null]
+            ]
+        );
+        $histo3->getOptions()->setTitle('Charges of subatomic particles');
+        $histo3->getOptions()->getLegend()->setPosition('top');
+        $histo3->getOptions()->getLegend()->setMaxLines(2);
+        $histo3->getOptions()->setColors(['#5C3292', '#1A8763', '#871B47', '#999999']);
+        $histo3->getOptions()->setInterpolateNulls(false);
+        $histo3->getOptions()->getAnimation()->setStartup(true);
+        $histo3->getOptions()->getAnimation()->setEasing('linear');
+        $histo3->getOptions()->setAxisTitlesPosition('out');
+        $histo3->getOptions()->setWidth(700);
+        $histo3->getOptions()->setHeight(500);
+        $histo3->getOptions()->getBar()->setGroupWidth(100);
+        //$histo3->getOptions()->getHAxis()->getMinorGridlines()->setColor('#ff0000');
+        $histo3->getOptions()->getHAxis()->getGridlines()->setColor('#ff0000');
+        //$histo3->getOptions()->getVAxis()->getMinorGridlines()->setColor('#00ff00');
+        $histo3->getOptions()->getVAxis()->getGridlines()->setColor('#00ff00');
 
         return $this->render(
-            'CMENGoogleChartsBundle::piechart.html.twig',
+            'CMENGoogleChartsBundle::chart.html.twig',
             array(
-                'pieAllIn' => $pieAllIn,
+                'chart' => $histo3,
             )
         );
     }

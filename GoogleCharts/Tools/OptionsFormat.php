@@ -2,7 +2,7 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts\Tools;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\Options;
+use CMENGoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 
 /**
  * @author Christophe Meneses
@@ -12,7 +12,7 @@ class OptionsFormat
     /**
      * Removes recursively array elements that have a null value.
      *
-     * @param Options|array $options Options instance or an array of options passed by reference
+     * @param ChartOptions|array $options ChartOptions instance or an array of options passed by reference
      */
     public function removeRecursivelyNullValue(&$options)
     {
@@ -46,30 +46,31 @@ class OptionsFormat
     }
 
     /**
-     * Renames recursively array keys to suppress prefix and suffix \x00.
-     * They come from conversion of class with protected properties to an array.
+     * Renames recursively array keys to remove prefixes and suffixes "\x00". They come from conversion of class with
+     * protected properties to an array.
      *
-     * @param $options Array of options passed by reference
+     * @param $options Array of options
+     *
+     * @return array Array of options with new keys
      */
-    public function renameRecursivelyKeys(&$options)
+    public function renameRecursivelyKeys($options)
     {
-        $oldKeys = array_keys($options);
+        $newOptions = array();
 
         foreach ($options as $key => $value) {
             if (!is_numeric($key)) {
                 $newKey = preg_replace('/\x00\*\x00/', '', $key);
-                $options[$newKey] = $value;
+                $newOptions[$newKey] = $value;
 
                 if (is_array($options[$key])) {
-                    $this->renameRecursivelyKeys($options[$key]);
+                    $newOptions[$newKey] = $this->renameRecursivelyKeys($options[$key]);
                 }
+
+            } else {
+                $newOptions[$key] = $value;
             }
         }
 
-        foreach ($oldKeys as $id => $key) {
-            if (!is_numeric($key)) {
-                unset($options[$key]);
-            }
-        }
+        return $newOptions;
     }
 }
