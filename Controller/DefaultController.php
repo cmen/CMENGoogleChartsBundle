@@ -2,8 +2,11 @@
 
 namespace CMENGoogleChartsBundle\Controller;
 
-use CMENGoogleChartsBundle\GoogleCharts\Gauge;
+use CMENGoogleChartsBundle\GoogleCharts\GaugeChart;
 use CMENGoogleChartsBundle\GoogleCharts\Histogram;
+use CMENGoogleChartsBundle\GoogleCharts\Line;
+use CMENGoogleChartsBundle\GoogleCharts\LineChart;
+use CMENGoogleChartsBundle\GoogleCharts\MaterialLineChart;
 use CMENGoogleChartsBundle\GoogleCharts\PieChart;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -119,7 +122,7 @@ class DefaultController extends Controller
      */
     public function gaugeAction()
     {
-        $gauge = new Gauge();
+        $gauge = new GaugeChart();
         $gauge->setElementID('gauge');
         $gauge->getData()->setArrayToTable([
             ['Label', 'Value'],
@@ -141,6 +144,160 @@ class DefaultController extends Controller
             'CMENGoogleChartsBundle::gauge.html.twig',
             array(
                 'gauge' => $gauge,
+            )
+        );
+    }
+
+    /**
+     * @Route("/line", name="line")
+     */
+    public function lineAction()
+    {
+        $line = new LineChart();
+        $line->setElementID('line');
+        $line->getData()->addColumn('number', 'X');
+        $line->getData()->addColumn('number', 'Dogs');
+        $line->getData()->addColumn('number', 'Cats');
+        $line->getData()->addRows([
+            [0, 0, 0],    [1, 10, 5],   [2, 23, 15],  [3, 17, 9],   [4, 18, 10],  [5, 9, 5],
+            [6, 11, 3],   [7, 27, 19],  [8, 33, 25],  [9, 40, 32],  [10, 32, 24], [11, 35, 27],
+            [12, 30, 22], [13, 40, 32], [14, 42, 34], [15, 47, 39], [16, 44, 36], [17, 48, 40],
+            [18, 52, 44], [19, 54, 46], [20, 42, 34], [21, 55, 47], [22, 56, 48], [23, 57, 49],
+            [24, 60, 52], [25, 50, 42], [26, 52, 44], [27, 51, 43], [28, 49, 41], [29, 53, 45],
+            [30, 55, 47], [31, 60, 52], [32, 61, 53], [33, 59, 51], [34, 62, 54], [35, 65, 57],
+            [36, 62, 54], [37, 58, 50], [38, 55, 47], [39, 61, 53], [40, 64, 56], [41, 65, 57],
+            [42, 63, 55], [43, 66, 58], [44, 67, 59], [45, 69, 61], [46, 69, 61], [47, 70, 62],
+            [48, 72, 64], [49, 68, 60], [50, 66, 58], [51, 65, 57], [52, 67, 59], [53, 70, 62],
+            [54, 71, 63], [55, 72, 64], [56, 73, 65], [57, 75, 67], [58, 70, 62], [59, 68, 60],
+            [60, 64, 56], [61, 60, 52], [62, 65, 57], [63, 67, 59], [64, 68, 60], [65, 69, 61],
+            [66, 70, 62], [67, 72, 64], [68, 75, 67], [69, 80, 72]
+        ]);
+        $line->getOptions()->getHAxis()->setTitle('Time');
+        $line->getOptions()->getHAxis()->getTextStyle()->setColor('#01579b');
+        $line->getOptions()->getHAxis()->getTextStyle()->setFontSize(20);
+        $line->getOptions()->getHAxis()->getTextStyle()->setFontName('Arial');
+        $line->getOptions()->getHAxis()->getTextStyle()->setBold(true);
+        $line->getOptions()->getHAxis()->getTextStyle()->setItalic(true);
+        $line->getOptions()->getHAxis()->getTitleTextStyle()->setColor('#01579b');
+        $line->getOptions()->getHAxis()->getTitleTextStyle()->setFontSize(16);
+        $line->getOptions()->getHAxis()->getTitleTextStyle()->setFontName('Arial');
+        $line->getOptions()->getHAxis()->getTitleTextStyle()->setBold(false);
+        $line->getOptions()->getHAxis()->getTitleTextStyle()->setItalic(true);
+        $line->getOptions()->getVAxis()->setTitle('Popularity');
+        $line->getOptions()->getVAxis()->getTextStyle()->setColor('#1a237e');
+        $line->getOptions()->getVAxis()->getTextStyle()->setFontSize(24);
+        $line->getOptions()->getVAxis()->getTextStyle()->setBold(true);
+        $line->getOptions()->getVAxis()->getTitleTextStyle()->setColor('#1a237e');
+        $line->getOptions()->getVAxis()->getTitleTextStyle()->setFontSize(24);
+        $line->getOptions()->getVAxis()->getTitleTextStyle()->setBold(true);
+        $line->getOptions()->setColors(['#a52714', '#097138']);
+
+
+        $line2 = new LineChart();
+        $line2->setElementID('line2');
+        $line2->getData()->setArrayToTable([
+            ['Year', 'Sales', 'Expenses'],
+            ['2004',  1000,      400],
+            ['2005',  1170,      460],
+            ['2006',  660,       1120],
+            ['2007',  1030,      540]
+        ]);
+        $line2->getOptions()->setTitle('Company Performance');
+        $line2->getOptions()->setCurveType('function');
+        $line2->getOptions()->getLegend()->setPosition('none');
+
+
+        $line3 = new MaterialLineChart();
+        $line3->setElementID('line3');
+        $line3->getData()->addColumn('number', 'Day');
+        $line3->getData()->addColumn('number', 'Guardians of the Galaxy');
+        $line3->getData()->addColumn('number', 'The Avengers');
+        $line3->getData()->addColumn('number', 'Transformers: Age of Extinction');
+        $line3->getData()->addRows([
+            [1,  37.8, 80.8, 41.8],
+            [2,  30.9, 69.5, 32.4],
+            [3,  25.4,   57, 25.7],
+            [4,  11.7, 18.8, 10.5],
+            [5,  11.9, 17.6, 10.4],
+            [6,   8.8, 13.6,  7.7],
+            [7,   7.6, 12.3,  9.6],
+            [8,  12.3, 29.2, 10.6],
+            [9,  16.9, 42.9, 14.8],
+            [10, 12.8, 30.9, 11.6],
+            [11,  5.3,  7.9,  4.7],
+            [12,  6.6,  8.4,  5.2],
+            [13,  4.8,  6.3,  3.6],
+            [14,  4.2,  6.2,  3.4]
+        ]);
+        $line3->getOptions()->getChart()->setTitle('Box Office Earnings in First Two Weeks of Opening');
+        $line3->getOptions()->getChart()->setSubtitle('in millions of dollars (USD)');
+        $line3->getOptions()->setWidth(900);
+        $line3->getOptions()->setHeight(500);
+
+        $line4 = new LineChart();
+        $line4->setElementID('line4');
+        $line4->getData()->addColumn('string', 'Month');
+        $line4->getData()->addColumn('number', "Average Temperature");
+        $line4->getData()->addColumn('number', "Average Hours of Daylight");
+        $line4->getData()->addRows([
+            ['2014-01',  -.5,  5.7],
+            ['2014-02',   .4,  8.7],
+            ['2014-03',   .5,   12],
+            ['2014-04',  2.9, 15.3],
+            ['2014-05',  6.3, 18.6],
+            ['2014-06',    9, 20.9],
+            ['2014-07', 10.6, 19.8],
+            ['2014-08', 10.3, 16.6],
+            ['2014-09',  7.4, 13.3],
+            ['2014-10',  4.4,  9.9],
+            ['2014-11', 1.1,  6.6],
+            ['2014-12', -.2,  4.5]
+        ]);
+        $line4->getOptions()->setTitle('Average Temperatures and Daylight in Iceland Throughout the Year');
+        $line4->getOptions()->setWidth(900);
+        $line4->getOptions()->setHeight(500);
+        $line4->getOptions()->setSeries([0 => ['targetAxisIndex' => 0], 1 => ['targetAxisIndex' => 1]]);
+        $line4->getOptions()->setVAxes([0 => ['title' => 'Temps (Celsius)'], 1 => ['title' => 'Daylight']]);
+        $line4->getOptions()->getHAxis()->setTicks(['2014-01', '2014-02', '2014-03', '2014-04', '2014-05', '2014-06',
+            '2014-07', '2014-08', '2014-09', '2014-10', '2014-11', '2014-12']);
+        $line4->getOptions()->getVAxis()->getViewWindow()->setMax(30);
+
+        $line5 = new MaterialLineChart();
+        $line5->setElementID('line5');
+        $line5->getData()->addColumn('number', 'Day');
+        $line5->getData()->addColumn('number', 'Guardians of the Galaxy');
+        $line5->getData()->addColumn('number', 'The Avengers');
+        $line5->getData()->addColumn('number', 'Transformers: Age of Extinction');
+        $line5->getData()->addRows([
+            [1,  37.8, 80.8, 41.8],
+            [2,  30.9, 69.5, 32.4],
+            [3,  25.4,   57, 25.7],
+            [4,  11.7, 18.8, 10.5],
+            [5,  11.9, 17.6, 10.4],
+            [6,   8.8, 13.6,  7.7],
+            [7,   7.6, 12.3,  9.6],
+            [8,  12.3, 29.2, 10.6],
+            [9,  16.9, 42.9, 14.8],
+            [10, 12.8, 30.9, 11.6],
+            [11,  5.3,  7.9,  4.7],
+            [12,  6.6,  8.4,  5.2],
+            [13,  4.8,  6.3,  3.6],
+            [14,  4.2,  6.2,  3.4]
+        ]);
+        $line5->getOptions()->getChart()->setTitle('Box Office Earnings in First Two Weeks of Opening');
+        $line5->getOptions()->getChart()->setSubtitle('in millions of dollars (USD)');
+        $line5->getOptions()->setWidth(900);
+        $line5->getOptions()->setHeight(500);
+        $line5->getOptions()->getAxes()->setX([0 => ['side' => 'top']]);
+
+        return $this->render(
+            'CMENGoogleChartsBundle::line.html.twig',
+            array(
+                'line' => $line,
+                'line2' => $line2,
+                'line3' => $line3,
+                'line4' => $line4,
+                'line5' => $line5,
             )
         );
     }

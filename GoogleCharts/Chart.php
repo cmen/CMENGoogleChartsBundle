@@ -31,12 +31,20 @@ abstract class Chart
         $this->data = new Data();
     }
 
+
     /**
      * Returns the chart type.
      *
      * @return string
      */
     abstract protected function getType();
+
+    /**
+     * Returns library used by chart.
+     *
+     * @return string
+     */
+    abstract protected function getLibrary();
 
     /**
      * Returns the chart package.
@@ -46,7 +54,7 @@ abstract class Chart
     abstract protected function getPackage();
 
     /**
-     * @return ChartOptions
+     * Returns the instance options.
      */
     abstract public function getOptions();
 
@@ -71,7 +79,7 @@ abstract class Chart
                 function drawChart() {
                     ' . $this->data->draw() .
                     $this->options->draw() .
-                    'var chart = new google.visualization.' . $this->getType() .
+                    'var chart = new google.'. $this->getLibrary() .'.' . $this->getType() .
                     '(document.getElementById("' . $this->elementID . '"));
                     chart.draw(data, options);
                 }

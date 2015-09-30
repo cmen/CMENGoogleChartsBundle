@@ -2,15 +2,15 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\PieChart\PieChartOptions;
+use CMENGoogleChartsBundle\GoogleCharts\Options\MaterialLineChart\MaterialLineChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class PieChart extends Chart
+class MaterialLineChart extends Chart
 {
     /**
-     * @var PieChartOptions
+     * @var MaterialLineChartOptions
      */
     protected $options;
 
@@ -19,16 +19,15 @@ class PieChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new PieChartOptions();
+        $this->options = new MaterialLineChartOptions();
     }
-
 
     /**
      * @inheritdoc
      */
     protected function getType()
     {
-        return 'PieChart';
+        return 'Line';
     }
 
     /**
@@ -36,7 +35,7 @@ class PieChart extends Chart
      */
     protected function getLibrary()
     {
-        return 'visualization';
+        return 'charts';
     }
 
     /**
@@ -44,11 +43,11 @@ class PieChart extends Chart
      */
     protected function getPackage()
     {
-        return 'corechart';
+        return 'line';
     }
 
     /**
-     * @PieChartOptions
+     * @return MaterialLineChartOptions
      */
     public function getOptions()
     {

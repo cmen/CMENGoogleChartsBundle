@@ -50,6 +50,7 @@ class Units
         $this->days = new Days();
         $this->hours = new Hours();
         $this->minutes = new Minutes();
+        $this->seconds = new Seconds();
         $this->milliseconds = new Milliseconds();
     }
 

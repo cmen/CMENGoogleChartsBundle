@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\PieCharts;
+namespace CMENGoogleChartsBundle\GoogleCharts\Options\PieChart;
 
 use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMENGoogleChartsBundle\GoogleCharts\Options\FullTooltip;

@@ -4,6 +4,9 @@ namespace CMENGoogleChartsBundle\GoogleCharts;
 
 use CMENGoogleChartsBundle\GoogleCharts\Options\Histogram\HistogramOptions;
 
+/**
+ * @author Christophe Meneses
+ */
 class Histogram extends Chart
 {
     /**
@@ -19,6 +22,7 @@ class Histogram extends Chart
         $this->options = new HistogramOptions();
     }
 
+
     /**
      * @inheritdoc
      */
@@ -30,13 +34,21 @@ class Histogram extends Chart
     /**
      * @inheritdoc
      */
+    protected function getLibrary()
+    {
+        return 'visualization';
+    }
+
+    /**
+     * @inheritdoc
+     */
     protected function getPackage()
     {
         return 'corechart';
     }
 
     /**
-     * @inheritdoc
+     * @return HistogramOptions
      */
     public function getOptions()
     {

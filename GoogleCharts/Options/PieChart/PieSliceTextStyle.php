@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\PieCharts;
+namespace CMENGoogleChartsBundle\GoogleCharts\Options\PieChart;
 
 /**
  * @author Christophe Meneses

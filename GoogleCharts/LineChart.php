@@ -2,15 +2,15 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\Gauge\GaugeOptions;
+use CMENGoogleChartsBundle\GoogleCharts\Options\LineChart\LineChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class Gauge extends Chart
+class LineChart extends Chart
 {
     /**
-     * @var GaugeOptions
+     * @var LineChartOptions
      */
     protected $options;
 
@@ -19,7 +19,7 @@ class Gauge extends Chart
     {
         parent::__construct();
 
-        $this->options = new GaugeOptions();
+        $this->options = new LineChartOptions();
     }
 
 
@@ -28,7 +28,15 @@ class Gauge extends Chart
      */
     protected function getType()
     {
-        return 'Gauge';
+        return 'LineChart';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    protected function getLibrary()
+    {
+        return 'visualization';
     }
 
     /**
@@ -36,11 +44,11 @@ class Gauge extends Chart
      */
     protected function getPackage()
     {
-        return 'gauge';
+        return 'corechart';
     }
 
     /**
-     * @inheritdoc
+     * @return LineChartOptions
      */
     public function getOptions()
     {

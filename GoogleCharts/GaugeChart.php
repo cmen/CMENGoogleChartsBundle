@@ -2,15 +2,15 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\PieChart\PieChartOptions;
+use CMENGoogleChartsBundle\GoogleCharts\Options\GaugeChart\GaugeChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class PieChart extends Chart
+class GaugeChart extends Chart
 {
     /**
-     * @var PieChartOptions
+     * @var GaugeChartOptions
      */
     protected $options;
 
@@ -19,7 +19,7 @@ class PieChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new PieChartOptions();
+        $this->options = new GaugeChartOptions();
     }
 
 
@@ -28,7 +28,7 @@ class PieChart extends Chart
      */
     protected function getType()
     {
-        return 'PieChart';
+        return 'Gauge';
     }
 
     /**
@@ -44,11 +44,11 @@ class PieChart extends Chart
      */
     protected function getPackage()
     {
-        return 'corechart';
+        return 'gauge';
     }
 
     /**
-     * @PieChartOptions
+     * @return GaugeChartOptions
      */
     public function getOptions()
     {

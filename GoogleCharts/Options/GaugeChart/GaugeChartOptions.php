@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\Gauge;
+namespace CMENGoogleChartsBundle\GoogleCharts\Options\GaugeChart;
 
 use CMENGoogleChartsBundle\GoogleCharts\Options\Animation;
 use CMENGoogleChartsBundle\GoogleCharts\Options\ChartOptions;
@@ -8,7 +8,7 @@ use CMENGoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 /**
  * @author Christophe Meneses
  */
-class GaugeOptions extends ChartOptions
+class GaugeChartOptions extends ChartOptions
 {
     /**
      * @var Animation
