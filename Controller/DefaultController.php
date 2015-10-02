@@ -2,9 +2,9 @@
 
 namespace CMENGoogleChartsBundle\Controller;
 
+use CMENGoogleChartsBundle\GoogleCharts\AreaChart;
 use CMENGoogleChartsBundle\GoogleCharts\GaugeChart;
 use CMENGoogleChartsBundle\GoogleCharts\Histogram;
-use CMENGoogleChartsBundle\GoogleCharts\Line;
 use CMENGoogleChartsBundle\GoogleCharts\LineChart;
 use CMENGoogleChartsBundle\GoogleCharts\MaterialLineChart;
 use CMENGoogleChartsBundle\GoogleCharts\PieChart;
@@ -13,6 +13,87 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
+    /**
+     * @Route("/area", name="area")
+     */
+    public function areaAction()
+    {
+        $area = new AreaChart();
+        $area->setElementID('area');
+        $area->getData()->setArrayToTable([
+            ['Year', 'Sales', 'Expenses'],
+            ['2013',  1000,      400],
+            ['2014',  1170,      460],
+            ['2015',  660,       1120],
+            ['2016',  1030,      540]
+        ]);
+        $area->getOptions()->setTitle('Company Performance');
+        $area->getOptions()->getHAxis()->setTitle('Year');
+        $area->getOptions()->getHAxis()->getTitleTextStyle()->setColor('#333');
+        $area->getOptions()->getVAxis()->setMinValue(0);
+
+        $area2 = new AreaChart();
+        $area2->setElementID('area2');
+        $area2->getData()->setArrayToTable([
+            ['Year', 'Cars', 'Trucks', 'Drones', 'Segways'],
+            ['2013', 870, 460, 10, 120],
+            ['2014', 460, 720, 20, 60],
+            ['2015', 930, 540, 40, 30],
+            ['2016', 1000, 400, 80, 15]
+        ]);
+        $area2->getOptions()->setIsStacked('relative');
+        $area2->getOptions()->setHeight(300);
+        $area2->getOptions()->getLegend()->setPosition('top');
+        $area2->getOptions()->getLegend()->setMaxLines(3);
+        $area2->getOptions()->getVAxis()->setMinValue(0);
+        $area2->getOptions()->getVAxis()->setTicks([0, 0.3, 0.6, 0.9, 1]);
+        $area2->getOptions()->setHeight(300);
+        $area2->getOptions()->setWidth(400);
+
+        $area3 = new AreaChart();
+        $area3->setElementID('area3');
+        $area3->getData()->setArrayToTable([
+            ['Year', 'Cars', 'Trucks', 'Drones', 'Segways'],
+            ['2013', 870, 460, 10, 120],
+            ['2014', 460, 720, 20, 60],
+            ['2015', 930, 540, 40, 30],
+            ['2016', 1000, 400, 80, 15]
+            ]);
+        $area3->getOptions()->setIsStacked(true);
+        $area3->getOptions()->setHeight(300);
+        $area3->getOptions()->getLegend()->setPosition('top');
+        $area3->getOptions()->getLegend()->setMaxLines(3);
+        $area3->getOptions()->getVAxis()->setMinValue(0);
+        $area3->getOptions()->setHeight(300);
+        $area3->getOptions()->setWidth(400);
+
+        $area4 = new AreaChart();
+        $area4->setElementID('area4');
+        $area4->getData()->setArrayToTable([
+            ['Year', 'Cars', 'Trucks', 'Drones', 'Segways'],
+            ['2013', 870, 460, 0, 120],
+            ['2014', 460, 720, 0, 60],
+            ['2015', 930, 540, 40, 30],
+            ['2016', 1000, 400, 80, 15]
+        ]);
+        $area4->getOptions()->setHeight(300);
+        $area4->getOptions()->getLegend()->setPosition('top');
+        $area4->getOptions()->getLegend()->setMaxLines(3);
+        $area4->getOptions()->getVAxis()->setMinValue(0);
+        $area4->getOptions()->setHeight(300);
+        $area4->getOptions()->setWidth(400);
+
+        return $this->render(
+            'CMENGoogleChartsBundle::area.html.twig',
+            array(
+                'area' => $area,
+                'area2' => $area2,
+                'area3' => $area3,
+                'area4' => $area4,
+            )
+        );
+    }
+
     /**
      * @Route("/histo", name="histogram")
      */

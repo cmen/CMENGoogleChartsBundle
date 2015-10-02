@@ -1,23 +1,34 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\Histogram;
+namespace CMENGoogleChartsBundle\GoogleCharts\Options\AreaChart;
 
 use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
+use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedHAxis;
 use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Bar;
-use CMENGoogleChartsBundle\GoogleCharts\Options\MediumTooltip;
-use CMENGoogleChartsBundle\GoogleCharts\Options\VAxis;
+use CMENGoogleChartsBundle\GoogleCharts\Options\Annotations;
+use CMENGoogleChartsBundle\GoogleCharts\Options\Crosshair;
+use CMENGoogleChartsBundle\GoogleCharts\Options\Explorer;
+use CMENGoogleChartsBundle\GoogleCharts\Options\LineOptions;
 
-/**
- * @author Christophe Meneses
- */
-class HistogramOptions extends AdvancedChartOptions
+class AreaChartOptions extends LineOptions
 {
     /**
      * @var AdvancedAnimation
      */
     protected $animation;
+
+    /**
+     * @var Annotations
+     */
+    protected $annotations;
+
+    /**
+     * The default opacity of the colored area under an area chart series, where 0.0 is fully transparent and 1.0 is
+     * fully opaque. To specify opacity for an individual series, set the areaOpacity value in the series property.
+     *
+     * @var float
+     */
+    protected $areaOpacity;
 
     /**
      * Where to place the axis titles, compared to the chart area. Supported values :
@@ -30,9 +41,9 @@ class HistogramOptions extends AdvancedChartOptions
     protected $axisTitlesPosition;
 
     /**
-     * @var Bar
+     * @var Crosshair
      */
-    protected $bar;
+    protected $crosshair;
 
     /**
      * The transparency of data points, with 1.0 being completely opaque and 0.0 fully transparent. In scatter,
@@ -45,6 +56,11 @@ class HistogramOptions extends AdvancedChartOptions
      * @var float
      */
     protected $dataOpacity;
+
+    /**
+     * @var Explorer
+     */
+    protected $explorer;
 
     /**
      *  The type of the entity that receives focus on mouse hover. Also affects which entity is selected by mouse
@@ -60,14 +76,9 @@ class HistogramOptions extends AdvancedChartOptions
     protected $focusTarget;
 
     /**
-     * @var HAxis
+     * @var AdvancedHAxis
      */
     protected $hAxis;
-
-    /**
-     * @var Histogram
-     */
-    protected $histogram;
 
     /**
      * Whether to guess the value of missing points. If true, it will guess the value of any missing data based on
@@ -123,9 +134,11 @@ class HistogramOptions extends AdvancedChartOptions
     protected $reverseCategories;
 
     /**
-     * @var MediumTooltip
+     * When selectionMode is 'multiple', users may select multiple data points.
+     *
+     * @var string
      */
-    protected $tooltip;
+    protected $selectionMode;
 
     /**
      * Specifies properties for individual vertical axes, if the chart has multiple vertical axes. Each child object
@@ -152,11 +165,11 @@ class HistogramOptions extends AdvancedChartOptions
         parent::__construct();
 
         $this->animation = new AdvancedAnimation();
-        $this->bar = new Bar();
-        $this->histogram = new Histogram();
-        $this->hAxis = new HAxis();
+        $this->annotations = new Annotations();
+        $this->crosshair = new Crosshair();
+        $this->explorer = new Explorer();
+        $this->hAxis = new AdvancedHAxis();
         $this->legend = new AdvancedLegend();
-        $this->tooltip = new MediumTooltip();
     }
 
 
@@ -169,23 +182,31 @@ class HistogramOptions extends AdvancedChartOptions
     }
 
     /**
-     * @return Bar
+     * @return Annotations
      */
-    public function getBar()
+    public function getAnnotations()
     {
-        return $this->bar;
+        return $this->annotations;
     }
 
     /**
-     * @return Histogram
+     * @return Crosshair
      */
-    public function getHistogram()
+    public function getCrosshair()
     {
-        return $this->histogram;
+        return $this->crosshair;
     }
 
     /**
-     * @return HAxis
+     * @return Explorer
+     */
+    public function getExplorer()
+    {
+        return $this->explorer;
+    }
+
+    /**
+     * @return AdvancedHAxis
      */
     public function getHAxis()
     {
@@ -201,11 +222,11 @@ class HistogramOptions extends AdvancedChartOptions
     }
 
     /**
-     * @return MediumTooltip
+     * @param float $areaOpacity
      */
-    public function getTooltip()
+    public function setAreaOpacity($areaOpacity)
     {
-        return $this->tooltip;
+        $this->areaOpacity = $areaOpacity;
     }
 
     /**
@@ -265,11 +286,11 @@ class HistogramOptions extends AdvancedChartOptions
     }
 
     /**
-     * @param string $theme
+     * @param string $selectionMode
      */
-    public function setTheme($theme)
+    public function setSelectionMode($selectionMode)
     {
-        $this->theme = $theme;
+        $this->selectionMode = $selectionMode;
     }
 
     /**

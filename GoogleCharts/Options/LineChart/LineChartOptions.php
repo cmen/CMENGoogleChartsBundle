@@ -16,29 +16,6 @@ use CMENGoogleChartsBundle\GoogleCharts\Options\LineOptions;
 class LineChartOptions extends LineOptions
 {
     /**
-     * How multiple data selections are rolled up into tooltips :
-     * 'category': Group selected data by x-value.
-     * 'series': Group selected data by series.
-     * 'auto': Group selected data by x-value if all selections have the same x-value, and by series otherwise.
-     * 'none': Show only one tooltip per selection.
-     * aggregationTarget will often be used in tandem with selectionMode and tooltip.trigger, e.g.:
-     * var options = {
-     *     // Allow multiple
-     *     // simultaneous selections.
-     *     selectionMode: 'multiple',
-     *     // Trigger tooltips
-     *     // on selections.
-     *     tooltip: {trigger: 'selection'},
-     *     // Group selections
-     *     // by x-value.
-     *     aggregationTarget: 'category',
-     *};
-     *
-     * @var string
-     */
-    protected $aggregationTarget;
-
-    /**
      * @var AdvancedAnimation
      */
     protected $animation;
@@ -77,7 +54,8 @@ class LineChartOptions extends LineOptions
      * histogram, bar, and column charts, this refers to the visible data: dots in the scatter chart and rectangles
      * in the others. In charts where selecting data creates a dot, such as the line and area charts, this refers to
      * the circles that appear upon hover or selection. The combo chart exhibits both behaviors, and this option has
-     * no effect on other charts.
+     * no effect on other charts. (To change the opacity of a trendline, see
+     * {@link https://developers.google.com/chart/interactive/docs/gallery/trendlines#Example4})
      *
      * @var float
      */
@@ -244,14 +222,6 @@ class LineChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param string $aggregationTarget
-     */
-    public function setAggregationTarget($aggregationTarget)
-    {
-        $this->aggregationTarget = $aggregationTarget;
     }
 
     /**
