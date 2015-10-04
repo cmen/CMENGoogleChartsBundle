@@ -26,16 +26,6 @@ class LineChartOptions extends LineOptions
     protected $annotations;
 
     /**
-     * Where to place the axis titles, compared to the chart area. Supported values :
-     * in - Draw the axis titles inside the the chart area.
-     * out - Draw the axis titles outside the chart area.
-     * none - Omit the axis titles.
-     *
-     * @var string
-     */
-    protected $axisTitlesPosition;
-
-    /**
      * @var Crosshair
      */
     protected $crosshair;
@@ -222,14 +212,6 @@ class LineChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param string $axisTitlesPosition
-     */
-    public function setAxisTitlesPosition($axisTitlesPosition)
-    {
-        $this->axisTitlesPosition = $axisTitlesPosition;
     }
 
     /**

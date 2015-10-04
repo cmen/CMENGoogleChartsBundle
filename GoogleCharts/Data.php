@@ -91,10 +91,48 @@ class Data
                 $js .= "data.addColumn('" . $column->getType() . "', '" . $column->getName() . "');\n";
             }
 
-            $js .= "data.addRows(" . json_encode($this->rows) . ");\n";
+            $js .= "data.addRows([\n";
+
+            end($this->rows);
+            $lastKeyRow = key($this->rows);
+            foreach ($this->rows as $keyRow => $row) {
+                $js .= '[';
+
+                end($row);
+                $lastKeyValue = key($row);
+                foreach ($row as $key => $value) {
+                    if (is_string($value)) {
+                        $js .= '"' . $value . '"';
+
+                    } elseif ($value instanceof \DateTime) {
+                        if ($this->columns[$key]->getType() == 'date') {
+                            $js .= 'new Date(' . $value->format('Y') . ', ' . $value->format('n') . ', ' .
+                                $value->format('d') . ')';
+                        } else {
+                            $js .= 'new Date(' . $value->format('Y') . ', ' . $value->format('n') . ', ' .
+                                $value->format('d') . ', ' . $value->format('H') . ', ' . $value->format('i') .
+                                ', ' . $value->format('s') . ')';
+                        }
+                    } else {
+                        $js .= $value;
+                    }
+
+                    if ($key != $lastKeyValue) {
+                        $js .= ', ';
+                    }
+                }
+                $js .= ']';
+
+                if ($keyRow != $lastKeyRow) {
+                    $js .= ",\n";
+                } else {
+                    $js .= "\n";
+                }
+            }
+            $js .= "]);\n";
 
         } else {
-            $js = "var data = new google.visualization.arrayToDataTable(". json_encode($this->arrayToTable) .");";
+            $js = "var data = new google.visualization.arrayToDataTable(" . json_encode($this->arrayToTable) . ");";
         }
 
         return $js;

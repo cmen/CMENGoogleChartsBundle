@@ -37,21 +37,19 @@ class Legend
     protected $position;
 
     /**
-     * An object that specifies the legend text style.
-     *
-     * @var TextStyle
+     * @var MediumTextStyle
      */
     protected $textStyle;
 
 
     public function __construct()
     {
-        $this->textStyle = new TextStyle();
+        $this->textStyle = new MediumTextStyle();
     }
 
 
     /**
-     * @return TextStyle
+     * @return MediumTextStyle
      */
     public function getTextStyle()
     {

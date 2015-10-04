@@ -2,7 +2,7 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts\Options\GeoChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\TextStyle;
+use CMENGoogleChartsBundle\GoogleCharts\Options\MediumTextStyle;
 
 /**
  * @author Christophe Meneses
@@ -10,7 +10,7 @@ use CMENGoogleChartsBundle\GoogleCharts\Options\TextStyle;
 class BasicTooltip
 {
     /**
-     * @var TextStyle
+     * @var MediumTextStyle
      */
     protected $textStyle;
 
@@ -27,11 +27,11 @@ class BasicTooltip
 
     public function __construct()
     {
-        $this->textStyle = new TextStyle();
+        $this->textStyle = new MediumTextStyle();
     }
 
     /**
-     * @return TextStyle
+     * @return MediumTextStyle
      */
     public function getTextStyle()
     {

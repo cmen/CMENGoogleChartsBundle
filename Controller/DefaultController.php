@@ -2,18 +2,294 @@
 
 namespace CMENGoogleChartsBundle\Controller;
 
+use CMENGoogleChartsBundle\GoogleCharts\AnnotationChart;
 use CMENGoogleChartsBundle\GoogleCharts\AreaChart;
+use CMENGoogleChartsBundle\GoogleCharts\BarChart;
+use CMENGoogleChartsBundle\GoogleCharts\BubbleChart;
+use CMENGoogleChartsBundle\GoogleCharts\CalendarChart;
+use CMENGoogleChartsBundle\GoogleCharts\ColumnChart;
 use CMENGoogleChartsBundle\GoogleCharts\GaugeChart;
 use CMENGoogleChartsBundle\GoogleCharts\GeoChart;
 use CMENGoogleChartsBundle\GoogleCharts\Histogram;
 use CMENGoogleChartsBundle\GoogleCharts\LineChart;
 use CMENGoogleChartsBundle\GoogleCharts\MaterialLineChart;
 use CMENGoogleChartsBundle\GoogleCharts\PieChart;
+use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
+    /**
+     * @Route("/col", name="col")
+     */
+    public function colAction()
+    {
+        $col = new ColumnChart();
+        $col->getData()->addColumn('timeofday', 'Time of Day');
+        $col->getData()->addColumn('number', 'Motivation Level');
+        $col->getData()->addColumn('string', ['role' => 'annotation']);
+        $col->getData()->addColumn('number', 'Energy Level');
+        $col->getData()->addColumn('string', 'Energy Level');
+        $col->getData()->setArrayToTable(
+            [
+            ['Time of Day', 'Motivation Level', ['role' => 'annotation'], 'Energy Level', ['role' => 'annotation']],
+            [['v' => [8, 0, 0], 'f' => '8 am'],  1, '1', 0.25, '0.2'],
+            [['v' => [9, 0, 0], 'f' => '9 am'],  2, '2',  0.5, '0.5'],
+            [['v' => [10, 0, 0], 'f' => '10 am'], 3, '3',    1,  '1'],
+            [['v' => [11, 0, 0], 'f' => '11 am'], 4, '4', 2.25,  '2'],
+            [['v' => [12, 0, 0], 'f' => '12 am'], 5, '5', 2.25,  '2'],
+            [['v' => [13, 0, 0], 'f' => '1 pm'],  6, '6',    3,  '3'],
+            [['v' => [14, 0, 0], 'f' => '2 pm'],  7, '7', 3.25,  '3'],
+            [['v' => [15, 0, 0], 'f' => '3 pm'],  8, '8',    5,  '5'],
+            [['v' => [16, 0, 0], 'f' => '4 pm'],  9, '9',  6.5,  '6'],
+            [['v' => [17, 0, 0], 'f' => '5 pm'], 10, '10',  10, '10']
+            ]
+        );
+        $col->getOptions()->setTitle('Motivation and Energy Level Throughout the Day');
+        $col->getOptions()->getAnnotations()->setAlwaysOutside(true);
+        $col->getOptions()->getAnnotations()->getTextStyle()->setFontSize(14);
+        $col->getOptions()->getAnnotations()->getTextStyle()->setColor('#000');
+        $col->getOptions()->getAnnotations()->getTextStyle()->setAuraColor('none');
+        $col->getOptions()->getHAxis()->setTitle('Time of Day');
+        $col->getOptions()->getHAxis()->setFormat('h:mm a');
+        $col->getOptions()->getHAxis()->getViewWindow()->setMin([7, 30, 0]);
+        $col->getOptions()->getHAxis()->getViewWindow()->setMax([17, 30, 0]);
+        $col->getOptions()->getVAxis()->setTitle('Rating (scale of 1-10)');
+
+        return $this->render(
+            'CMENGoogleChartsBundle::col.html.twig',
+            array(
+                'col' => $col,
+            )
+        );
+    }
+
+    /**
+     * @Route("/cal", name="cal")
+     */
+    public function calAction()
+    {
+        $cal = new CalendarChart();
+        $cal->getData()->addColumn('date', 'Date');
+        $cal->getData()->addColumn('number', 'Won/Loss');
+        $cal->getData()->addRows([
+            [ new DateTime('2012-03-13'), 37032 ],
+            [ new DateTime('2012-03-14'), 38024 ],
+            [ new DateTime('2012-03-15'), 38024 ],
+            [ new DateTime('2012-03-16'), 38108 ],
+            [ new DateTime('2012-03-17'), 38229 ],
+            [ new DateTime('2012-03-18'), 38177 ],
+            [ new DateTime('2012-03-19'), 38705 ],
+            [ new DateTime('2012-03-20'), 38210 ],
+            [ new DateTime('2012-03-21'), 38029 ],
+            [ new DateTime('2012-03-22'), 38823 ],
+            [ new DateTime('2012-03-23'), 38345 ],
+            [ new DateTime('2012-03-24'), 38436 ],
+            [ new DateTime('2012-03-25'), 38447 ]
+        ]);
+        $cal->getOptions()->setTitle('Red Sox Attendance');
+        $cal->getOptions()->setHeight(350);
+        $cal->getOptions()->setWidth(1000);
+        $cal->getOptions()->getCalendar()->setCellSize(20);
+        //$cal->getOptions()->getNoDataPattern()->setBackgroundColor('#76a7fa');
+        //$cal->getOptions()->getNoDataPattern()->setColor('#a0c3ff');
+        $cal->getOptions()->getCalendar()->getCellColor()->setStroke('#76a7fa');
+        $cal->getOptions()->getCalendar()->getCellColor()->setStrokeOpacity(0.5);
+        $cal->getOptions()->getCalendar()->getCellColor()->setStrokeWidth(1);
+        $cal->getOptions()->getCalendar()->getFocusedCellColor()->setStroke('#d3362d');
+        $cal->getOptions()->getCalendar()->getFocusedCellColor()->setStrokeOpacity(1);
+        $cal->getOptions()->getCalendar()->getFocusedCellColor()->setStrokeWidth(1);
+        $cal->getOptions()->getCalendar()->getDayOfWeekLabel()->setFontName('Times-Roman');
+        $cal->getOptions()->getCalendar()->getDayOfWeekLabel()->setFontSize(12);
+        $cal->getOptions()->getCalendar()->getDayOfWeekLabel()->setColor('#1a8763');
+        $cal->getOptions()->getCalendar()->getDayOfWeekLabel()->setBold(true);
+        $cal->getOptions()->getCalendar()->getDayOfWeekLabel()->setItalic(true);
+        $cal->getOptions()->getCalendar()->setDayOfWeekRightSpace(10);
+        $cal->getOptions()->getCalendar()->setDaysOfWeek('DLMMJVS');
+        $cal->getOptions()->getCalendar()->getMonthLabel()->setFontName('Times-Roman');
+        $cal->getOptions()->getCalendar()->getMonthLabel()->setFontSize(12);
+        $cal->getOptions()->getCalendar()->getMonthLabel()->setColor('#981b48');
+        $cal->getOptions()->getCalendar()->getMonthLabel()->setBold(true);
+        $cal->getOptions()->getCalendar()->getMonthLabel()->setItalic(true);
+        $cal->getOptions()->getCalendar()->getMonthOutlineColor()->setStroke('#981b48');
+        $cal->getOptions()->getCalendar()->getMonthOutlineColor()->setStrokeOpacity(0.8);
+        $cal->getOptions()->getCalendar()->getMonthOutlineColor()->setStrokeWidth(2);
+        $cal->getOptions()->getCalendar()->getUnusedMonthOutlineColor()->setStroke('#bc5679');
+        $cal->getOptions()->getCalendar()->getUnusedMonthOutlineColor()->setStrokeOpacity(0.8);
+        $cal->getOptions()->getCalendar()->getUnusedMonthOutlineColor()->setStrokeWidth(1);
+        $cal->getOptions()->getCalendar()->setUnderMonthSpace(16);
+        $cal->getOptions()->getCalendar()->setUnderYearSpace(10);
+        $cal->getOptions()->getCalendar()->getYearLabel()->setFontName('Times-Roman');
+        $cal->getOptions()->getCalendar()->getYearLabel()->setFontSize(32);
+        $cal->getOptions()->getCalendar()->getYearLabel()->setColor('#1A8763');
+        $cal->getOptions()->getCalendar()->getYearLabel()->setBold(true);
+        $cal->getOptions()->getCalendar()->getYearLabel()->setItalic(true);
+
+        return $this->render(
+            'CMENGoogleChartsBundle::cal.html.twig',
+            array(
+                'cal' => $cal,
+            )
+        );
+    }
+
+    /**
+     * @Route("/bubble", name="bubble")
+     */
+    public function bubbleAction()
+    {
+        $bubble = new BubbleChart();
+        $bubble->getData()->setArrayToTable([
+            ['ID', 'Life Expectancy', 'Fertility Rate', 'Region',     'Population'],
+            ['CAN',    80.66,              1.67,      'North America',  33739900],
+            ['DEU',    79.84,              1.36,      'Europe',         81902307],
+            ['DNK',    78.6,               1.84,      'Europe',         5523095],
+            ['EGY',    72.73,              2.78,      'Middle East',    79716203],
+            ['GBR',    80.05,              2,         'Europe',         61801570],
+            ['IRN',    72.49,              1.7,       'Middle East',    73137148],
+            ['IRQ',    68.09,              4.77,      'Middle East',    31090763],
+            ['ISR',    81.55,              2.96,      'Middle East',    7485600],
+            ['RUS',    68.6,               1.54,      'Europe',         141850000],
+            ['USA',    78.09,              2.05,      'North America',  307007000]
+        ]);
+        $bubble->getOptions()->setTitle('Correlation between life expectancy, fertility rate and population of
+         some world countries (2010)');
+        $bubble->getOptions()->getHAxis()->setTitle('Life Expectancy');
+        $bubble->getOptions()->getVAxis()->setTitle('Fertility Rate');
+        $bubble->getOptions()->getBubble()->getTextStyle()->setFontSize(12);
+        $bubble->getOptions()->getBubble()->getTextStyle()->setFontName('Times-Roman');
+        $bubble->getOptions()->getBubble()->getTextStyle()->setColor('green');
+        $bubble->getOptions()->getBubble()->getTextStyle()->setBold(true);
+        $bubble->getOptions()->getBubble()->getTextStyle()->setItalic(true);
+        $bubble->getOptions()->getBubble()->getTextStyle()->setAuraColor('none');
+        $bubble->getOptions()->getBubble()->getTextStyle()->setOpacity(0.80);
+        $bubble->getOptions()->setWidth(900);
+        $bubble->getOptions()->setHeight(500);
+
+        $bubble2 = new BubbleChart();
+        $bubble2->getData()->setArrayToTable([
+            ['ID', 'X', 'Y', 'Temperature'],
+            ['',   80,  167,      120],
+            ['',   79,  136,      130],
+            ['',   78,  184,      50],
+            ['',   72,  278,      230],
+            ['',   81,  200,      210],
+            ['',   72,  170,      100],
+            ['',   68,  477,      80]
+        ]);
+        $bubble2->getOptions()->getColorAxis()->setColors(['yellow', 'red']);
+        $bubble2->getOptions()->setWidth(900);
+        $bubble2->getOptions()->setHeight(500);
+
+        return $this->render(
+            'CMENGoogleChartsBundle::bubble.html.twig',
+            array(
+                'bubble' => $bubble,
+                'bubble2' => $bubble2,
+            )
+        );
+    }
+
+    /**
+     * @Route("/bar", name="bar")
+     */
+    public function barAction()
+    {
+        $bar = new BarChart();
+        $bar->getData()->setArrayToTable([
+            ['City', '2010 Population', '2000 Population'],
+            ['New York City, NY', 8175000, 8008000],
+            ['Los Angeles, CA', 3792000, 3694000],
+            ['Chicago, IL', 2695000, 2896000],
+            ['Houston, TX', 2099000, 1953000],
+            ['Philadelphia, PA', 1526000, 1517000]
+        ]);
+        $bar->getOptions()->setTitle('Population of Largest U.S. Cities');
+        $bar->getOptions()->getHAxis()->setTitle('Population of Largest U.S. Cities');
+        $bar->getOptions()->getHAxis()->setMinValue(0);
+        $bar->getOptions()->getVAxis()->setTitle('City');
+        $bar->getOptions()->setBars('horizontal');
+        $bar->getOptions()->setWidth(900);
+        $bar->getOptions()->setHeight(500);
+
+        $bar2 = new BarChart();
+        $bar2->getData()->setArrayToTable([
+            ['Element', 'Density', ['role' => 'style'], ['role' => 'annotation']],
+            ['Copper', 8.94, '#b87333', 'Cu'],
+            ['Silver', 10.49, 'silver', 'Ag'],
+            ['Gold', 19.30, 'gold', 'Au'],
+            ['Platinum', 21.45, 'color: #e5e4e2', 'Pt']
+        ]);
+        $bar2->getOptions()->setWidth(900);
+        $bar2->getOptions()->setHeight(500);
+
+        $bar3 = new BarChart();
+        $bar3->getData()->setArrayToTable([
+            ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+                'Western', 'Literature', ['role' => 'annotation']],
+            ['2010', 10, 24, 20, 32, 18, 5, ''],
+            ['2020', 16, 22, 23, 30, 16, 9, ''],
+            ['2030', 28, 19, 29, 30, 12, 13, '']
+        ]);
+        $bar3->getOptions()->setWidth(600);
+        $bar3->getOptions()->setHeight(400);
+        $bar3->getOptions()->getLegend()->setPosition('top');
+        $bar3->getOptions()->getLegend()->setMaxLines(3);
+        //$bar3->getOptions()->getBar()->setGroupWidth('75%');
+        $bar3->getOptions()->setIsStacked('percent');
+        $bar3->getOptions()->getHAxis()->setTicks([0, 0.3, 0.6, 0.9, 1]);
+        $bar3->getOptions()->getHAxis()->setMinValue(0);
+
+
+        return $this->render(
+            'CMENGoogleChartsBundle::bar.html.twig',
+            array(
+                'bar' => $bar,
+                'bar2' => $bar2,
+                'bar3' => $bar3,
+            )
+        );
+    }
+
+    /**
+     * @Route("/anno", name="anno")
+     */
+    public function annoAction()
+    {
+        $anno = new AnnotationChart();
+        $anno->setElementID('anno');
+        $anno->getData()->addColumn('date', 'Date');
+        $anno->getData()->addColumn('number', 'Kepler-22b mission');
+        $anno->getData()->addColumn('string', 'Kepler title');
+        $anno->getData()->addColumn('string', 'Kepler text');
+        $anno->getData()->addColumn('number', 'Gliese 163 mission');
+        $anno->getData()->addColumn('string', 'Gliese title');
+        $anno->getData()->addColumn('string', 'Gliese text');
+        $anno->getData()->addRows([
+            [new DateTime('2314-02-15'), 12400, 'undefined', 'undefined',
+                10645, 'undefined', 'undefined'],
+            [new DateTime('2314-02-16'), 24045, 'Lalibertines', 'First encounter',
+                12374, 'undefined', 'undefined'],
+            [new DateTime('2314-02-17'), 35022, 'Lalibertines', 'They are very tall',
+                15766, 'Gallantors', 'First Encounter'],
+            [new DateTime('2314-02-18'), 12284, 'Lalibertines', 'Attack on our crew!',
+                34334, 'Gallantors', 'Statement of shared principles'],
+            [new DateTime('2314-02-19'), 8476, 'Lalibertines', 'Heavy casualties',
+                66467, 'Gallantors', 'Mysteries revealed'],
+            [new DateTime('2314-02-20'), 0, 'Lalibertines', 'All crew lost',
+                79463, 'Gallantors', 'Omniscience achieved']
+        ]);
+        $anno->getOptions()->setDisplayAnnotations(true);
+
+        return $this->render(
+            'CMENGoogleChartsBundle::anno.html.twig',
+            array(
+                'anno' => $anno,
+            )
+        );
+    }
+
     /**
      * @Route("/geo", name="geo")
      */

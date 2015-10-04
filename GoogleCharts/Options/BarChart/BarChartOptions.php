@@ -1,18 +1,21 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\Histogram;
+namespace CMENGoogleChartsBundle\GoogleCharts\Options\BarChart;
 
 use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
 use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
 use CMENGoogleChartsBundle\GoogleCharts\Options\Bar;
-use CMENGoogleChartsBundle\GoogleCharts\Options\MediumTooltip;
-use CMENGoogleChartsBundle\GoogleCharts\Options\VAxis;
+use CMENGoogleChartsBundle\GoogleCharts\Options\Explorer;
+use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMENGoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
+use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
+use CMENGoogleChartsBundle\GoogleCharts\Options\Tooltip;
 
 /**
  * @author Christophe Meneses
  */
-class HistogramOptions extends AdvancedChartOptions
+class BarChartOptions extends AdvancedChartOptions
 {
     /**
      * @var AdvancedAnimation
@@ -20,9 +23,24 @@ class HistogramOptions extends AdvancedChartOptions
     protected $animation;
 
     /**
+     * @var AdvancedAnnotations
+     */
+    protected $annotations;
+
+    /**
      * @var Bar
      */
     protected $bar;
+
+    /**
+     * Whether the bars in a Material Bar Chart are vertical or horizontal. This option has no effect on Classic Bar
+     * Charts or Classic Column Charts.
+     *
+     * Values : 'horizontal' or 'vertical'
+     *
+     * @var string
+     */
+    protected $bars;
 
     /**
      * The transparency of data points, with 1.0 being completely opaque and 0.0 fully transparent. In scatter,
@@ -35,6 +53,11 @@ class HistogramOptions extends AdvancedChartOptions
      * @var float
      */
     protected $dataOpacity;
+
+    /**
+     * @var Explorer
+     */
+    protected $explorer;
 
     /**
      *  The type of the entity that receives focus on mouse hover. Also affects which entity is selected by mouse
@@ -50,22 +73,36 @@ class HistogramOptions extends AdvancedChartOptions
     protected $focusTarget;
 
     /**
-     * @var HAxis
+     * Specifies properties for individual horizontal axes, if the chart has multiple horizontal axes. Each child
+     * object is a hAxis object, and can contain all the properties supported by hAxis. These property values
+     * override any global settings for the same property.
+     *
+     * To specify a chart with multiple horizontal axes, first define a new axis using series.targetAxisIndex, then
+     * configure the axis using hAxes. The following example assigns series 1 to the bottom axis and specifies a custom
+     * title and text style for it :
+     * series:{1:{targetAxisIndex:1}}, hAxes:{1:{title:'Losses', textStyle:{color: 'red'}}}
+     *
+     * This property can be either an object or an array: the object is a collection of objects, each with a numeric
+     * label that specifies the axis that it defines--this is the format shown above; the array is an array of objects,
+     * one per axis. For example, the following array-style notation is identical to the hAxis object shown above :
+     *
+     * hAxes: {
+     *   {}, // Nothing specified for axis 0
+     *   {
+     *   title:'Losses',
+     *   textStyle: {
+     *     color: 'red'
+     *   }
+     * } // Axis 1
+     *
+     * @var array
+     */
+    protected $hAxes;
+
+    /**
+     * @var MediumHAxis
      */
     protected $hAxis;
-
-    /**
-     * @var Histogram
-     */
-    protected $histogram;
-
-    /**
-     * Whether to guess the value of missing points. If true, it will guess the value of any missing data based on
-     * neighboring points. If false, it will leave a break in the line at the unknown point.
-     *
-     * @var boolean
-     */
-    protected $interpolateNulls;
 
     /**
      *  If set to true, stacks the elements for all series at each domain value. The isStacked option also supports
@@ -113,28 +150,33 @@ class HistogramOptions extends AdvancedChartOptions
     protected $reverseCategories;
 
     /**
-     * @var MediumTooltip
+     * @var AdvancedTooltip
      */
     protected $tooltip;
 
     /**
-     * Specifies properties for individual vertical axes, if the chart has multiple vertical axes. Each child object
-     * is a vAxis object, and can contain all the properties supported by vAxis. These property values override any
-     * global settings for the same property.
-     * To specify a chart with multiple vertical axes, first define a new axis using series.targetAxisIndex, then
-     * configure the axis using vAxes. The following example assigns series 2 to the right axis and specifies a custom
-     * title and text style for it :
-     * ['series' => [2 => ['targetAxisIndex' => 1], vAxes => [1 => ['title' => 'Losses',
-     * 'textStyle' => ['color' => 'red']]]]
-     *
-     * This property can be either an object or an array: the object is a collection of objects, each with a numeric
-     * label that specifies the axis that it defines--this is the format shown above; the array is an array of objects,
-     * one per axis. For example, the following array-style notation is identical to the vAxis object shown above :
-     * vAxes: [ [], ['title' => 'Losses', 'textStyle' => ['color' => 'red'] ] ]
+     * Displays trendlines on the charts that support them. By default, linear trendlines are used, but this can be
+     * customized with the trendlines.n.type option. Trendlines are specified on a per-series basis, so most of the
+     * time your options will look like this :
+     * var options = {
+     *    trendlines: {
+     *        0: {
+     *            type: 'linear',
+     *            color: 'green',
+     *            labelInLegend: 'label',
+     *            lineWidth: 3,
+     *            opacity: 0.3,
+     *            pointSize: 1,
+     *            pointsVisible : true,
+     *            showR2: true,
+     *            visibleInLegend: true
+     *          }
+     *       }
+     *    }
      *
      * @var array
      */
-    protected $vAxes;
+    protected $trendlines;
 
 
     public function __construct()
@@ -142,11 +184,12 @@ class HistogramOptions extends AdvancedChartOptions
         parent::__construct();
 
         $this->animation = new AdvancedAnimation();
+        $this->annotations = new AdvancedAnnotations();
         $this->bar = new Bar();
-        $this->histogram = new Histogram();
-        $this->hAxis = new HAxis();
+        $this->explorer = new Explorer();
+        $this->hAxis = new MediumHAxis();
         $this->legend = new AdvancedLegend();
-        $this->tooltip = new MediumTooltip();
+        $this->tooltip = new AdvancedTooltip();
     }
 
 
@@ -159,6 +202,14 @@ class HistogramOptions extends AdvancedChartOptions
     }
 
     /**
+     * @return AdvancedAnnotations
+     */
+    public function getAnnotations()
+    {
+        return $this->annotations;
+    }
+
+    /**
      * @return Bar
      */
     public function getBar()
@@ -167,15 +218,15 @@ class HistogramOptions extends AdvancedChartOptions
     }
 
     /**
-     * @return Histogram
+     * @return Explorer
      */
-    public function getHistogram()
+    public function getExplorer()
     {
-        return $this->histogram;
+        return $this->explorer;
     }
 
     /**
-     * @return HAxis
+     * @return MediumHAxis
      */
     public function getHAxis()
     {
@@ -191,11 +242,19 @@ class HistogramOptions extends AdvancedChartOptions
     }
 
     /**
-     * @return MediumTooltip
+     * @return AdvancedTooltip
      */
     public function getTooltip()
     {
         return $this->tooltip;
+    }
+
+    /**
+     * @param string $bars
+     */
+    public function setBars($bars)
+    {
+        $this->bars = $bars;
     }
 
     /**
@@ -215,11 +274,11 @@ class HistogramOptions extends AdvancedChartOptions
     }
 
     /**
-     * @param boolean $interpolateNulls
+     * @param array $hAxes
      */
-    public function setInterpolateNulls($interpolateNulls)
+    public function setHAxes($hAxes)
     {
-        $this->interpolateNulls = $interpolateNulls;
+        $this->hAxes = $hAxes;
     }
 
     /**
@@ -247,18 +306,10 @@ class HistogramOptions extends AdvancedChartOptions
     }
 
     /**
-     * @param string $theme
+     * @param array $trendlines
      */
-    public function setTheme($theme)
+    public function setTrendlines($trendlines)
     {
-        $this->theme = $theme;
-    }
-
-    /**
-     * @param array $vAxes
-     */
-    public function setVAxes($vAxes)
-    {
-        $this->vAxes = $vAxes;
+        $this->trendlines = $trendlines;
     }
 }

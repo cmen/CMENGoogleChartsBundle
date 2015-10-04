@@ -2,6 +2,9 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts\Options;
 
+/**
+ * @author Christophe Meneses
+ */
 class ColorAxis
 {
     /**

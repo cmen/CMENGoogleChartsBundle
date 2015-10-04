@@ -5,17 +5,10 @@ namespace CMENGoogleChartsBundle\GoogleCharts\Options;
 use CMENGoogleChartsBundle\GoogleCharts\Tools\OptionsFormat;
 
 /**
- * Beta fixture
- *
  * @author Christophe Meneses
  */
-class MaterialChartOptions
+class ChartOptionsDraw
 {
-    /**
-     * @var Chart
-     */
-    protected $chart;
-
     /**
      * @var OptionsFormat
      */
@@ -24,7 +17,6 @@ class MaterialChartOptions
 
     public function __construct()
     {
-        $this->chart = new Chart();
         $this->optionsFormat = new OptionsFormat();
     }
 
@@ -47,13 +39,5 @@ class MaterialChartOptions
         $options = $this->optionsFormat->renameRecursivelyKeys($options);
 
         return "var options = " . json_encode($options) . ";\n";
-    }
-
-    /**
-     * @return Chart
-     */
-    public function getChart()
-    {
-        return $this->chart;
     }
 }

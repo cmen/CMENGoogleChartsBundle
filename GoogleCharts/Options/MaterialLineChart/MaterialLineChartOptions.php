@@ -14,11 +14,6 @@ use CMENGoogleChartsBundle\GoogleCharts\Options\MaterialChartOptions;
 class MaterialLineChartOptions extends MaterialChartOptions
 {
     /**
-     * @var Chart
-     */
-    protected $chart;
-
-    /**
      * @var int
      */
     protected $height;
@@ -38,18 +33,9 @@ class MaterialLineChartOptions extends MaterialChartOptions
     {
         parent::__construct();
 
-        $this->chart = new Chart();
         $this->axes = new Axes();
     }
 
-
-    /**
-     * @return Chart
-     */
-    public function getChart()
-    {
-        return $this->chart;
-    }
 
     /**
      * @return Axes

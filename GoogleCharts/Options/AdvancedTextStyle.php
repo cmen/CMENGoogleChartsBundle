@@ -5,7 +5,7 @@ namespace CMENGoogleChartsBundle\GoogleCharts\Options;
 /**
  * @author Christophe Meneses
  */
-class AdvancedTextStyle extends TextStyle
+class AdvancedTextStyle extends MediumTextStyle
 {
     /**
      * Color of the text outline.

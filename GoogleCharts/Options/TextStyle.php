@@ -24,23 +24,6 @@ class TextStyle
      */
     protected $fontSize;
 
-    /**
-     * @var boolean
-     */
-    protected $bold;
-
-    /**
-     * @var boolean
-     */
-    protected $italic;
-
-    /**
-     * @return string
-     */
-    public function getColor()
-    {
-        return $this->color;
-    }
 
     /**
      * @param string $color
@@ -48,14 +31,6 @@ class TextStyle
     public function setColor($color)
     {
         $this->color = $color;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFontName()
-    {
-        return $this->fontName;
     }
 
     /**
@@ -67,50 +42,10 @@ class TextStyle
     }
 
     /**
-     * @return int
-     */
-    public function getFontSize()
-    {
-        return $this->fontSize;
-    }
-
-    /**
      * @param int $fontSize
      */
     public function setFontSize($fontSize)
     {
         $this->fontSize = $fontSize;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function isBold()
-    {
-        return $this->bold;
-    }
-
-    /**
-     * @param boolean $bold
-     */
-    public function setBold($bold)
-    {
-        $this->bold = $bold;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function isItalic()
-    {
-        return $this->italic;
-    }
-
-    /**
-     * @param boolean $italic
-     */
-    public function setItalic($italic)
-    {
-        $this->italic = $italic;
     }
 }

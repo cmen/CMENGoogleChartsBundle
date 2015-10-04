@@ -62,6 +62,26 @@ class MediumHAxis extends HAxis
     protected $logScale;
 
     /**
+     * Moves the max value of the horizontal axis to the specified value; this will be rightward in most charts.
+     * Ignored if this is set to a value smaller than the maximum x-value of the data. hAxis.viewWindow.max overrides
+     * this property.
+     * This option is only supported for a continuous axis.
+     *
+     * @var int
+     */
+    protected $maxValue;
+
+    /**
+     * Moves the min value of the horizontal axis to the specified value; this will be leftward in most charts.
+     * Ignored if this is set to a value greater than the minimum x-value of the data. hAxis.viewWindow.min overrides
+     * this property.
+     * This option is only supported for a continuous axis.
+     *
+     * @var int
+     */
+    protected $minValue;
+
+    /**
      * Replaces the automatically generated X-axis ticks with the specified array. Each element of the array should be
      * either a valid tick value (such as a number, date, datetime, or timeofday), or an object. If it's an object, it
      * should have a v property for the tick value, and an optional f property containing the literal string to be
@@ -122,5 +142,21 @@ class MediumHAxis extends HAxis
     public function setTicks($ticks)
     {
         $this->ticks = $ticks;
+    }
+
+    /**
+     * @param int $maxValue
+     */
+    public function setMaxValue($maxValue)
+    {
+        $this->maxValue = $maxValue;
+    }
+
+    /**
+     * @param int $minValue
+     */
+    public function setMinValue($minValue)
+    {
+        $this->minValue = $minValue;
     }
 }

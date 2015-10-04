@@ -67,7 +67,7 @@ class HAxis
     {
         $this->gridlines = new Gridlines();
         $this->minorGridlines = new MinorGridlines();
-        $this->textStyle = new TextStyle();
+        $this->textStyle = new MediumTextStyle();
         $this->titleTextStyle = new TitleTextStyle();
         $this->viewWindow = new ViewWindow();
     }
@@ -90,7 +90,7 @@ class HAxis
     }
 
     /**
-     * @return TextStyle
+     * @return MediumTextStyle
      */
     public function getTextStyle()
     {

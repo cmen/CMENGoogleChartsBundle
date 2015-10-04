@@ -13,7 +13,7 @@ class ViewWindow
      * element indices to display. In other words, every index such that min <= index < max will be displayed.
      * Ignored when hAxis.viewWindowMode is 'pretty' or 'maximized'.
      *
-     * @var int
+     * @var int|int[]
      */
     protected $max;
 
@@ -23,12 +23,12 @@ class ViewWindow
      * denotes the element indices to display. In other words, every index such that min <= index < max will be
      * displayed. Ignored when hAxis.viewWindowMode is 'pretty' or 'maximized'.
      *
-     * @var int
+     * @var int|int[]
      */
     protected $min;
 
     /**
-     * @param int $max
+     * @param int|int[] $max
      */
     public function setMax($max)
     {
@@ -36,7 +36,7 @@ class ViewWindow
     }
 
     /**
-     * @param int $min
+     * @param int|int[] $min
      */
     public function setMin($min)
     {

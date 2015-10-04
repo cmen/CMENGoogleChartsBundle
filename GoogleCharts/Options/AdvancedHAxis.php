@@ -63,26 +63,6 @@ class AdvancedHAxis extends MediumHAxis
      */
     protected $showTextEvery;
 
-    /**
-     * Moves the max value of the horizontal axis to the specified value; this will be rightward in most charts.
-     * Ignored if this is set to a value smaller than the maximum x-value of the data. hAxis.viewWindow.max overrides
-     * this property.
-     * This option is only supported for a continuous axis.
-     *
-     * @var int
-     */
-    protected $maxValue;
-
-    /**
-     * Moves the min value of the horizontal axis to the specified value; this will be leftward in most charts.
-     * Ignored if this is set to a value greater than the minimum x-value of the data. hAxis.viewWindow.min overrides
-     * this property.
-     * This option is only supported for a continuous axis.
-     *
-     * @var int
-     */
-    protected $minValue;
-
 
     /**
      * @param int $showTextEvery
@@ -138,21 +118,5 @@ class AdvancedHAxis extends MediumHAxis
     public function setMinTextSpacing($minTextSpacing)
     {
         $this->minTextSpacing = $minTextSpacing;
-    }
-
-    /**
-     * @param int $maxValue
-     */
-    public function setMaxValue($maxValue)
-    {
-        $this->maxValue = $maxValue;
-    }
-
-    /**
-     * @param int $minValue
-     */
-    public function setMinValue($minValue)
-    {
-        $this->minValue = $minValue;
     }
 }

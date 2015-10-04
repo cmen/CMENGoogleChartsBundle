@@ -8,7 +8,7 @@ namespace CMENGoogleChartsBundle\GoogleCharts\Options;
 class BasicTooltip extends Tooltip
 {
     /**
-     * @var TextStyle
+     * @var MediumTextStyle
      */
     protected $textStyle;
 
@@ -25,11 +25,11 @@ class BasicTooltip extends Tooltip
 
     public function __construct()
     {
-        $this->textStyle = new TextStyle();
+        $this->textStyle = new MediumTextStyle();
     }
 
     /**
-     * @return TextStyle
+     * @return MediumTextStyle
      */
     public function getTextStyle()
     {

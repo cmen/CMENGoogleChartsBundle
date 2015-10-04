@@ -23,11 +23,16 @@ class GoogleChartsExtension extends \Twig_Extension
      * Returns Javascript to draw a chart in Twig template.
      *
      * @param Chart $chart A Chart Instance
+     * @param string $elementID HTML element ID
      *
      * @return string The Javascript
      */
-    public function drawChart(Chart $chart)
+    public function drawChart(Chart $chart, $elementID = null)
     {
+        if ($elementID) {
+            $chart->setElementID($elementID);
+        }
+
         return $chart->draw();
     }
 

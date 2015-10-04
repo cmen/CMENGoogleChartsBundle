@@ -8,6 +8,16 @@ namespace CMENGoogleChartsBundle\GoogleCharts\Options;
 class AdvancedChartOptions extends MediumChartOptions
 {
     /**
+     * Where to place the axis titles, compared to the chart area. Supported values :
+     * in - Draw the axis titles inside the the chart area.
+     * out - Draw the axis titles outside the chart area.
+     * none - Omit the axis titles.
+     *
+     * @var string
+     */
+    protected $axisTitlesPosition;
+
+    /**
      * An array of objects, each describing the format of the corresponding series in the chart. To use default
      * values for a series, specify an empty object {}. If a series or a value is not specified, the global value
      * will be used.
@@ -75,6 +85,14 @@ class AdvancedChartOptions extends MediumChartOptions
     public function getVAxis()
     {
         return $this->vAxis;
+    }
+
+    /**
+     * @param string $axisTitlesPosition
+     */
+    public function setAxisTitlesPosition($axisTitlesPosition)
+    {
+        $this->axisTitlesPosition = $axisTitlesPosition;
     }
 
     /**

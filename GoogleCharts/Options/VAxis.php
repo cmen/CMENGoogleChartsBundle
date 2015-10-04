@@ -75,7 +75,7 @@ class VAxis
     protected $textPosition;
 
     /**
-     * @var TextStyle
+     * @var MediumTextStyle
      */
     protected $textStyle;
 
@@ -150,7 +150,7 @@ class VAxis
         $this->minorGridlines = new MinorGridlines();
         $this->titleTextStyle = new TitleTextStyle();
         $this->viewWindow = new ViewWindow();
-        $this->textStyle = new TextStyle();
+        $this->textStyle = new MediumTextStyle();
     }
 
     /**
@@ -186,7 +186,7 @@ class VAxis
     }
 
     /**
-     * @return TextStyle
+     * @return MediumTextStyle
      */
     public function getTextStyle()
     {

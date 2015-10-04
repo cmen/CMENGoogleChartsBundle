@@ -70,7 +70,7 @@ abstract class Chart
         // TODO : mettre la version en paramètre
 
         if ($this->elementID === null) {
-            throw new GoogleChartsException('Container is not defined. You must use setElementID().');
+            throw new GoogleChartsException('Container is not defined.');
         }
 
         return '<script type="text/javascript">

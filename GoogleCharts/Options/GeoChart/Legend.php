@@ -2,7 +2,7 @@
 
 namespace CMENGoogleChartsBundle\GoogleCharts\Options\GeoChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\TextStyle;
+use CMENGoogleChartsBundle\GoogleCharts\Options\MediumTextStyle;
 
 /**
  * @author Christophe Meneses
@@ -18,19 +18,19 @@ class Legend
     protected $numberFormat;
 
     /**
-     * @var TextStyle
+     * @var MediumTextStyle
      */
     protected $textStyle;
 
 
     public function __construct()
     {
-        $this->textStyle = new TextStyle();
+        $this->textStyle = new MediumTextStyle();
     }
 
 
     /**
-     * @return TextStyle
+     * @return MediumTextStyle
      */
     public function getTextStyle()
     {
