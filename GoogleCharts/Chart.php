@@ -11,6 +11,20 @@ use CMENGoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 abstract class Chart
 {
     /**
+     * Version of Google Charts used.
+     *
+     * @var string
+     */
+    protected $version;
+
+    /**
+     * True if an older version of Google Charts is used.
+     *
+     * @var boolean
+     */
+    protected $oldVersion;
+
+    /**
      * @var string
      */
     protected $elementID;
@@ -67,23 +81,46 @@ abstract class Chart
      */
     public function draw()
     {
-        // TODO : mettre la version en paramètre
-
         if ($this->elementID === null) {
             throw new GoogleChartsException('Container is not defined.');
         }
 
-        return '<script type="text/javascript">
-                google.load("visualization", "1", {packages:["'. $this->getPackage() .'"]});
-                google.setOnLoadCallback(drawChart);
-                function drawChart() {
-                    ' . $this->data->draw() .
-                    $this->options->draw() .
-                    'var chart = new google.'. $this->getLibrary() .'.' . $this->getType() .
-                    '(document.getElementById("' . $this->elementID . '"));
-                    chart.draw(data, options);
-                }
-            </script>';
+        $js = '<script type="text/javascript">';
+
+        if (!$this->oldVersion) {
+            $js .= 'google.load("visualization", "' . $this->version . '", {packages:["' . $this->getPackage() . '"]});
+                google.setOnLoadCallback(drawChart);';
+
+        } else {
+            $js .= 'google.charts.load("' . $this->version . '", {packages: ["' . $this->getPackage() . '"]});
+                google.charts.setOnLoadCallback(drawChart);';
+        }
+
+        $js .= 'function drawChart() { ' .
+            $this->data->draw() .
+            $this->options->draw() .
+            'var chart = new google.' . $this->getLibrary() . '.' . $this->getType() .
+            '(document.getElementById("' . $this->elementID . '"));
+                chart.draw(data, options);
+            }
+        </script>';
+
+        return $js;
+    }
+
+    /**
+     * @param string $version
+     */
+    public function setVersion($version)
+    {
+        $this->version = $version;
+
+        if (in_array($this->version, array('1', '1.1'))) {
+            $this->oldVersion = false;
+
+        } else {
+            $this->oldVersion = true;
+        }
     }
 
     /**

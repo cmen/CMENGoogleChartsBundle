@@ -10,6 +10,20 @@ use CMENGoogleChartsBundle\GoogleCharts\Chart;
 class GoogleChartsExtension extends \Twig_Extension
 {
     /**
+     * Version of Google Charts used.
+     *
+     * @var string
+     */
+    private $version;
+
+
+    public function __construct($version)
+    {
+        $this->version = $version;
+    }
+
+
+    /**
      * @inheritdoc
      */
     public function getFunctions()
@@ -29,6 +43,8 @@ class GoogleChartsExtension extends \Twig_Extension
      */
     public function drawChart(Chart $chart, $elementID = null)
     {
+        $chart->setVersion($this->version);
+
         if ($elementID) {
             $chart->setElementID($elementID);
         }
@@ -41,6 +57,6 @@ class GoogleChartsExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'cmengooglecharts_extension';
+        return 'cmen_google_charts_extension';
     }
 }

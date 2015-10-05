@@ -1,0 +1,19 @@
+{
+  "name": "cmen/google-charts",
+  "type": "symfony-bundle",
+  "description": "Symfony bundle that ease the use of Google Charts.",
+  "keywords": ["google", "chart"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christophe Meneses"
+    }
+  ],
+  "require": {
+    "symfony/framework-bundle": "~2.3"
+  },
+  "autoload": {
+    "psr-0": { "CMEN\\GoogleChartsBundle": "" }
+  },
+  "target-dir": "CMEN/GoogleChartsBundle"
+}
