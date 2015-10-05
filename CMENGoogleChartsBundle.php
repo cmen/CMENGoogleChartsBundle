@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle;
+namespace CMEN\Bundle\GoogleChartsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
