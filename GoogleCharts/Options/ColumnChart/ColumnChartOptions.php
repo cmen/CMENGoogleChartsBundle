@@ -1,15 +1,15 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\ColumnChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\ColumnChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedHAxis;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Bar;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Explorer;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Legend;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedHAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Legend;
 
 /**
  * @author Christophe Meneses

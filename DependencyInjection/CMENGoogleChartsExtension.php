@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\DependencyInjection;
+namespace CMEN\GoogleChartsBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

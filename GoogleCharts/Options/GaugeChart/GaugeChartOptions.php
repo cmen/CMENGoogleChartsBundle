@@ -1,9 +1,9 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\GaugeChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GaugeChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\Animation;
-use CMENGoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Animation;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 
 /**
  * @author Christophe Meneses

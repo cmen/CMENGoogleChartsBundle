@@ -1,10 +1,10 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\CalendarChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\ChartOptions;
-use CMENGoogleChartsBundle\GoogleCharts\Options\ColorAxis;
-use CMENGoogleChartsBundle\GoogleCharts\Options\TitleTextStyle;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTextStyle;
 
 /**
  * @author Christophe Meneses

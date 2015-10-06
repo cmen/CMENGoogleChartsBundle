@@ -1,10 +1,10 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\MaterialLineChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\MaterialLineChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\Axes;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Chart;
-use CMENGoogleChartsBundle\GoogleCharts\Options\MaterialChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Axes;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MaterialChartOptions;
 
 /**
  * Beta fixture

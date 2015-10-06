@@ -1,14 +1,14 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\AreaChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedHAxis;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Annotations;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Crosshair;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Explorer;
-use CMENGoogleChartsBundle\GoogleCharts\Options\LineOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedHAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Annotations;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
 
 class AreaChartOptions extends LineOptions
 {

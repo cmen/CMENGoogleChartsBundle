@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\CalendarChart\CalendarChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart\CalendarChartOptions;
 
 /**
  * @author Christophe Meneses

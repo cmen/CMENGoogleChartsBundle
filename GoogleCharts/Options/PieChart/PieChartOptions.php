@@ -1,10 +1,10 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\PieChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\PieChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
-use CMENGoogleChartsBundle\GoogleCharts\Options\FullTooltip;
-use CMENGoogleChartsBundle\GoogleCharts\Options\MediumChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FullTooltip;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumChartOptions;
 
 /**
  * @author Christophe Meneses

@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\AreaChart\AreaChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaChart\AreaChartOptions;
 
 class AreaChart extends Chart
 {

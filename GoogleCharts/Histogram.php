@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\Histogram\HistogramOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Histogram\HistogramOptions;
 
 /**
  * @author Christophe Meneses

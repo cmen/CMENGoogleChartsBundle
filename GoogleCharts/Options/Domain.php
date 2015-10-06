@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 
 /**
  * Domain object lets you override Google Charts' choice for annotations provided for a domain

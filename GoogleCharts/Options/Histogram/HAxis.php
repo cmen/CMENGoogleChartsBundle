@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\Histogram;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Histogram;
 
-class HAxis extends \CMENGoogleChartsBundle\GoogleCharts\Options\HAxis
+class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
 {
     /**
      * If false, will hide outermost labels rather than allow them to be cropped by the chart container. If true,

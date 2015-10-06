@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\Histogram;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Histogram;
 
 /**
  * @author Christophe Meneses

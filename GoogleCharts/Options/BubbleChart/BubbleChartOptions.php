@@ -1,16 +1,16 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\BubbleChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\BubbleChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedColorAxis;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
-use CMENGoogleChartsBundle\GoogleCharts\Options\BasicTooltip;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Explorer;
-use CMENGoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
-use CMENGoogleChartsBundle\GoogleCharts\Options\SizeAxis;
-use CMENGoogleChartsBundle\GoogleCharts\Options\VAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedColorAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\BasicTooltip;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\SizeAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
  * @author Christophe Meneses

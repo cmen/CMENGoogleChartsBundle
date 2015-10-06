@@ -1,13 +1,13 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\GeoChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GeoChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedBackgroundColor;
-use CMENGoogleChartsBundle\GoogleCharts\Options\ChartOptions;
-use CMENGoogleChartsBundle\GoogleCharts\Options\ColorAxis;
-use CMENGoogleChartsBundle\GoogleCharts\Options\MagnifyingGlass;
-use CMENGoogleChartsBundle\GoogleCharts\Options\SizeAxis;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Tooltip;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedBackgroundColor;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MagnifyingGlass;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\SizeAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Tooltip;
 
 /**
  * @author Christophe Meneses

@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\CalendarChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart;
 
 /**
  * cellColor option lets you customize the border of the calendar day squares.

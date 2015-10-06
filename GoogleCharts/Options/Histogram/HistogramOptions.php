@@ -1,13 +1,13 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\Histogram;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Histogram;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Bar;
-use CMENGoogleChartsBundle\GoogleCharts\Options\MediumTooltip;
-use CMENGoogleChartsBundle\GoogleCharts\Options\VAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumTooltip;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
  * @author Christophe Meneses

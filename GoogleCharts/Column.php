@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
 /**
  * @author Christophe Meneses

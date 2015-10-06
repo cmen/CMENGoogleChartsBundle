@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\BubbleChart\Legend;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\BubbleChart\Legend;
 
 /**
  * @author Christophe Meneses

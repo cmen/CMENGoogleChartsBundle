@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\Exception;
+namespace CMEN\GoogleChartsBundle\Exception;
 
 /**
  * @author Christophe Meneses

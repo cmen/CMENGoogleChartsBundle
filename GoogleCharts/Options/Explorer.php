@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 
 /**
  * The explorer option allows users to pan and zoom Google charts. explorer: {} provides the default explorer behavior,

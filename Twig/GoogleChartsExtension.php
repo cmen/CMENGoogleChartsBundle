@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\Twig;
+namespace CMEN\GoogleChartsBundle\Twig;
 
-use CMENGoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 
 /**
  * @author Christophe Meneses

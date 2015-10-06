@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\AnnotationChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart;
 
 /**
  * @author Christophe Meneses

@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\DependencyInjection;
+namespace CMEN\GoogleChartsBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

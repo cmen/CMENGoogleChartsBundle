@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\MaterialLineChart\MaterialLineChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MaterialLineChart\MaterialLineChartOptions;
 
 /**
  * @author Christophe Meneses

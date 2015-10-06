@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\AnnotationChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
 use DateTime;
 
 /**

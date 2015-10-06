@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\PieChart\PieChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\PieChart\PieChartOptions;
 
 /**
  * @author Christophe Meneses

@@ -1,16 +1,16 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\BarChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\BarChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Bar;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Explorer;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
-use CMENGoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
-use CMENGoogleChartsBundle\GoogleCharts\Options\Tooltip;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Tooltip;
 
 /**
  * @author Christophe Meneses

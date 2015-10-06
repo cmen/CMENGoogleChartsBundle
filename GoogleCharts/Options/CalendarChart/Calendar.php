@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\CalendarChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\MediumTextStyle;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumTextStyle;
 
 /**
  * @author Christophe Meneses

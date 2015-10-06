@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\GeoChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GeoChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\MediumTextStyle;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumTextStyle;
 
 /**
  * @author Christophe Meneses

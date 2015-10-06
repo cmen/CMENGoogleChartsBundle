@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\GeoChart\GeoChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\GeoChart\GeoChartOptions;
 
 /**
  * @author Christophe Meneses

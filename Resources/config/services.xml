@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="cmen_google_charts.twig_extension" class="CMENGoogleChartsBundle\Twig\GoogleChartsExtension" public="false">
+        <service id="cmen_google_charts.twig_extension" class="CMEN\GoogleChartsBundle\Twig\GoogleChartsExtension" public="false">
             <argument>%cmen_google_charts.version%</argument>
             <tag name="twig.extension" />
         </service>

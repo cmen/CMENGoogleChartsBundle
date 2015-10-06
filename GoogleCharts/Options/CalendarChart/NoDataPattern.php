@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\CalendarChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart;
 
 /**
  * Calendar charts use a striped diagonal pattern to indicate that there is no data for a particular day. Use the

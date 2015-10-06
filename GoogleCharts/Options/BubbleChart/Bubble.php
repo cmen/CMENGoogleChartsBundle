@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options\BubbleChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\BubbleChart;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\AdvancedTextStyle;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedTextStyle;
 
 /**
  * @author Christophe Meneses

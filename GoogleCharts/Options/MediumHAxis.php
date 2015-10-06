@@ -1,6 +1,6 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Options;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 
 class MediumHAxis extends HAxis
 {

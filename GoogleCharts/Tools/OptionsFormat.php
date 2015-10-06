@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts\Tools;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Tools;
 
-use CMENGoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 
 /**
  * @author Christophe Meneses

@@ -1,8 +1,8 @@
 <?php
 
-namespace CMENGoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMENGoogleChartsBundle\Exception\GoogleChartsException;
+use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 
 /**
  * @author Christophe Meneses
