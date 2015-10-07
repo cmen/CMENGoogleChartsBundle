@@ -1,16 +1,17 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart\CalendarChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\BubbleChart\BubbleChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class CalendarChart extends Chart
+class BubbleChart extends Chart
 {
     /**
-     * @var CalendarChartOptions
+     * @var BubbleChartOptions
      */
     protected $options;
 
@@ -19,7 +20,7 @@ class CalendarChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new CalendarChartOptions();
+        $this->options = new BubbleChartOptions();
     }
 
 
@@ -28,7 +29,7 @@ class CalendarChart extends Chart
      */
     protected function getType()
     {
-        return 'Calendar';
+        return 'BubbleChart';
     }
 
     /**
@@ -44,11 +45,11 @@ class CalendarChart extends Chart
      */
     protected function getPackage()
     {
-        return 'calendar';
+        return 'corechart';
     }
 
     /**
-     * @return CalendarChartOptions
+     * @return BubbleChartOptions
      */
     public function getOptions()
     {

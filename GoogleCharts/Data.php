@@ -2,79 +2,37 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
-
 /**
  * @author Christophe Meneses
  */
 class Data
 {
     /**
-     * @var Column[]
-     */
-    private $columns;
-
-    /**
-     * @var integer
-     */
-    private $nbColumns = 0;
-
-    /**
-     * @var array
-     */
-    private $rows;
-
-    /**
      * @var array
      */
     private $arrayToTable;
 
     /**
-     * Add a column.
-     *
-     * @param string $type Type of column
-     * @param string $name Name of column
-     *
-     * @throws GoogleChartsException If type is invalid
+     * @var boolean
      */
-    public function addColumn($type, $name)
-    {
-        if (!in_array($type, array('string', 'number', 'boolean', 'date', 'datetime', 'timeofday'))) {
-            throw new GoogleChartsException(
-                "Invalid type, $type, for column \"$name\"."
-            );
-        }
-
-        $this->columns[] = new Column($type, $name);
-        $this->nbColumns++;
-    }
+    private $firstRowIsData;
 
     /**
-     * Add rows.
+     * This method takes in a two-dimensional array. The data types of each column are interpreted automatically from
+     * the data given. If a cell has no value, specify a null or empty value as appropriate. Column data types can also
+     * be specified using the object literal notation in the first row (the column header row) of the array
+     * (i.e. ['label' => 'Start Date', 'type' => 'date']). Optional data roles may be used as well, but they must be
+     * defined explicitly using object literal notation. Object literal notation may also be used for any cell,
+     * allowing you to define Cell Objects).
      *
-     * @param array $rows An array of rows
-     *
-     * @throws GoogleChartsException If rows given with size different
+     * @param array $arrayToTable A two-dimensional array, where each row represents a row in the data table.
+     * @param boolean $firstRowIsData If opt_firstRowIsData is false (the default), the first row will be interpreted
+     *     as header labels.
      */
-    public function addRows($rows)
-    {
-        for ($i = 0; $i < count($rows); $i++) {
-            if (count($rows[$i]) != $this->nbColumns) {
-                throw new GoogleChartsException(
-                    'Row given with size different than ' . $this->nbColumns . ' (the number of columns in the table)'
-                );
-            }
-        }
-
-        $this->rows = $rows;
-    }
-
-    /**
-     * @param array $arrayToTable
-     */
-    public function setArrayToTable($arrayToTable)
+    public function setArrayToTable($arrayToTable, $firstRowIsData = false)
     {
         $this->arrayToTable = $arrayToTable;
+        $this->firstRowIsData = $firstRowIsData;
     }
 
     /**
@@ -84,56 +42,37 @@ class Data
      */
     public function draw()
     {
-        if ($this->arrayToTable === null) {
-            $js = "var data = new google.visualization.DataTable();\n";
+        $js = 'var data = new google.visualization.arrayToDataTable([';
 
-            foreach ($this->columns as $column) {
-                $js .= "data.addColumn('" . $column->getType() . "', '" . $column->getName() . "');\n";
-            }
+        end($this->arrayToTable);
+        $lastKeyRow = key($this->arrayToTable);
+        foreach ($this->arrayToTable as $keyRow => $row) {
+            $js .= '[';
 
-            $js .= "data.addRows([\n";
-
-            end($this->rows);
-            $lastKeyRow = key($this->rows);
-            foreach ($this->rows as $keyRow => $row) {
-                $js .= '[';
-
-                end($row);
-                $lastKeyValue = key($row);
-                foreach ($row as $key => $value) {
-                    if (is_string($value)) {
-                        $js .= '"' . $value . '"';
-
-                    } elseif ($value instanceof \DateTime) {
-                        if ($this->columns[$key]->getType() == 'date') {
-                            $js .= 'new Date(' . $value->format('Y') . ', ' . $value->format('n') . ', ' .
-                                $value->format('d') . ')';
-                        } else {
-                            $js .= 'new Date(' . $value->format('Y') . ', ' . $value->format('n') . ', ' .
-                                $value->format('d') . ', ' . $value->format('H') . ', ' . $value->format('i') .
-                                ', ' . $value->format('s') . ')';
-                        }
-                    } else {
-                        $js .= $value;
-                    }
-
-                    if ($key != $lastKeyValue) {
-                        $js .= ', ';
-                    }
-                }
-                $js .= ']';
-
-                if ($keyRow != $lastKeyRow) {
-                    $js .= ",\n";
+            end($row);
+            $lastKeyValue = key($row);
+            foreach ($row as $key => $value) {
+                if ($value instanceof \DateTime) {
+                    $js .= 'new Date(' . $value->format('Y') . ', ' . $value->format('n') . ', ' .
+                        $value->format('d') . ')';
                 } else {
-                    $js .= "\n";
+                    $js .= json_encode($value);
+                }
+
+                if ($key != $lastKeyValue) {
+                    $js .= ', ';
                 }
             }
-            $js .= "]);\n";
+            unset($value);
+            $js .= ']';
 
-        } else {
-            $js = "var data = new google.visualization.arrayToDataTable(" . json_encode($this->arrayToTable) . ");";
+            if ($keyRow != $lastKeyRow) {
+                $js .= ', ';
+            }
         }
+        unset($row);
+
+        $this->firstRowIsData ? $js .= '], true);' : $js .= '], false);';
 
         return $js;
     }

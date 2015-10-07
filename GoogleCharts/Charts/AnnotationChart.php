@@ -1,16 +1,17 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineChart\LineChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart\AnnotationChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class LineChart extends Chart
+class AnnotationChart extends Chart
 {
     /**
-     * @var LineChartOptions
+     * @var AnnotationChartOptions
      */
     protected $options;
 
@@ -19,7 +20,7 @@ class LineChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new LineChartOptions();
+        $this->options = new AnnotationChartOptions();
     }
 
 
@@ -28,7 +29,7 @@ class LineChart extends Chart
      */
     protected function getType()
     {
-        return 'LineChart';
+        return 'AnnotationChart';
     }
 
     /**
@@ -44,11 +45,11 @@ class LineChart extends Chart
      */
     protected function getPackage()
     {
-        return 'corechart';
+        return 'annotationchart';
     }
 
     /**
-     * @return LineChartOptions
+     * @return AnnotationChartOptions
      */
     public function getOptions()
     {

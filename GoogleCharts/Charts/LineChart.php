@@ -1,16 +1,17 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\MaterialLineChart\MaterialLineChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineChart\LineChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class MaterialLineChart extends Chart
+class LineChart extends Chart
 {
     /**
-     * @var MaterialLineChartOptions
+     * @var LineChartOptions
      */
     protected $options;
 
@@ -19,15 +20,16 @@ class MaterialLineChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new MaterialLineChartOptions();
+        $this->options = new LineChartOptions();
     }
+
 
     /**
      * @inheritdoc
      */
     protected function getType()
     {
-        return 'Line';
+        return 'LineChart';
     }
 
     /**
@@ -35,7 +37,7 @@ class MaterialLineChart extends Chart
      */
     protected function getLibrary()
     {
-        return 'charts';
+        return 'visualization';
     }
 
     /**
@@ -43,11 +45,11 @@ class MaterialLineChart extends Chart
      */
     protected function getPackage()
     {
-        return 'line';
+        return 'corechart';
     }
 
     /**
-     * @return MaterialLineChartOptions
+     * @return LineChartOptions
      */
     public function getOptions()
     {

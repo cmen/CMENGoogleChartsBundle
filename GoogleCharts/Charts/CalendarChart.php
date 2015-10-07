@@ -1,16 +1,17 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ComboChart\ComboChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart\CalendarChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class ComboChart extends Chart
+class CalendarChart extends Chart
 {
     /**
-     * @var ComboChartOptions
+     * @var CalendarChartOptions
      */
     protected $options;
 
@@ -19,7 +20,7 @@ class ComboChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new ComboChartOptions();
+        $this->options = new CalendarChartOptions();
     }
 
 
@@ -28,7 +29,7 @@ class ComboChart extends Chart
      */
     protected function getType()
     {
-        return 'ComboChart';
+        return 'Calendar';
     }
 
     /**
@@ -44,11 +45,11 @@ class ComboChart extends Chart
      */
     protected function getPackage()
     {
-        return 'corechart';
+        return 'calendar';
     }
 
     /**
-     * @return ComboChartOptions
+     * @return CalendarChartOptions
      */
     public function getOptions()
     {

@@ -10,7 +10,6 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\Tooltip;
 
 /**
  * @author Christophe Meneses
@@ -31,16 +30,6 @@ class BarChartOptions extends AdvancedChartOptions
      * @var Bar
      */
     protected $bar;
-
-    /**
-     * Whether the bars in a Material Bar Chart are vertical or horizontal. This option has no effect on Classic Bar
-     * Charts or Classic Column Charts.
-     *
-     * Values : 'horizontal' or 'vertical'
-     *
-     * @var string
-     */
-    protected $bars;
 
     /**
      * The transparency of data points, with 1.0 being completely opaque and 0.0 fully transparent. In scatter,
@@ -247,14 +236,6 @@ class BarChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $bars
-     */
-    public function setBars($bars)
-    {
-        $this->bars = $bars;
     }
 
     /**

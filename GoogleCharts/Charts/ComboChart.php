@@ -1,16 +1,17 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\BubbleChart\BubbleChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ComboChart\ComboChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class BubbleChart extends Chart
+class ComboChart extends Chart
 {
     /**
-     * @var BubbleChartOptions
+     * @var ComboChartOptions
      */
     protected $options;
 
@@ -19,7 +20,7 @@ class BubbleChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new BubbleChartOptions();
+        $this->options = new ComboChartOptions();
     }
 
 
@@ -28,7 +29,7 @@ class BubbleChart extends Chart
      */
     protected function getType()
     {
-        return 'BubbleChart';
+        return 'ComboChart';
     }
 
     /**
@@ -48,7 +49,7 @@ class BubbleChart extends Chart
     }
 
     /**
-     * @return BubbleChartOptions
+     * @return ComboChartOptions
      */
     public function getOptions()
     {

@@ -32,16 +32,6 @@ class ColumnChartOptions extends AdvancedChartOptions
     protected $bar;
 
     /**
-     * Whether the bars in a Material Bar Chart are vertical or horizontal. This option has no effect on Classic Bar
-     * Charts or Classic Column Charts.
-     *
-     * Values : 'horizontal' or 'vertical'
-     *
-     * @var string
-     */
-    protected $bars;
-
-    /**
      * The transparency of data points, with 1.0 being completely opaque and 0.0 fully transparent. In scatter,
      * histogram, bar, and column charts, this refers to the visible data: dots in the scatter chart and rectangles
      * in the others. In charts where selecting data creates a dot, such as the line and area charts, this refers to
@@ -219,14 +209,6 @@ class ColumnChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $bars
-     */
-    public function setBars($bars)
-    {
-        $this->bars = $bars;
     }
 
     /**

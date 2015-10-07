@@ -1,16 +1,17 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\Histogram\HistogramOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\PieChart\PieChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class Histogram extends Chart
+class PieChart extends Chart
 {
     /**
-     * @var HistogramOptions
+     * @var PieChartOptions
      */
     protected $options;
 
@@ -19,7 +20,7 @@ class Histogram extends Chart
     {
         parent::__construct();
 
-        $this->options = new HistogramOptions();
+        $this->options = new PieChartOptions();
     }
 
 
@@ -28,7 +29,7 @@ class Histogram extends Chart
      */
     protected function getType()
     {
-        return 'Histogram';
+        return 'PieChart';
     }
 
     /**
@@ -48,7 +49,7 @@ class Histogram extends Chart
     }
 
     /**
-     * @return HistogramOptions
+     * @PieChartOptions
      */
     public function getOptions()
     {

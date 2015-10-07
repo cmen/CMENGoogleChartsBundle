@@ -1,16 +1,17 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\GeoChart\GeoChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Histogram\HistogramOptions;
 
 /**
  * @author Christophe Meneses
  */
-class GeoChart extends Chart
+class Histogram extends Chart
 {
     /**
-     * @var GeoChartOptions
+     * @var HistogramOptions
      */
     protected $options;
 
@@ -19,7 +20,7 @@ class GeoChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new GeoChartOptions();
+        $this->options = new HistogramOptions();
     }
 
 
@@ -28,7 +29,7 @@ class GeoChart extends Chart
      */
     protected function getType()
     {
-        return 'GeoChart';
+        return 'Histogram';
     }
 
     /**
@@ -44,11 +45,11 @@ class GeoChart extends Chart
      */
     protected function getPackage()
     {
-        return 'geochart';
+        return 'corechart';
     }
 
     /**
-     * @return GeoChartOptions
+     * @return HistogramOptions
      */
     public function getOptions()
     {

@@ -3,7 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
 use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
 
 /**
  * @author Christophe Meneses
@@ -35,7 +35,7 @@ abstract class Chart
     protected $data;
 
     /**
-     * @var ChartOptions
+     * @var ChartOptionsDraw
      */
     protected $options;
 
@@ -99,9 +99,9 @@ abstract class Chart
         $js .= 'function drawChart() { ' .
             $this->data->draw() .
             $this->options->draw() .
-            'var chart = new google.' . $this->getLibrary() . '.' . $this->getType() .
+            'var chart_'. $this->elementID .' = new google.' . $this->getLibrary() . '.' . $this->getType() .
             '(document.getElementById("' . $this->elementID . '"));
-                chart.draw(data, options);
+                chart_'. $this->elementID .'.draw(data, options);
             }
         </script>';
 

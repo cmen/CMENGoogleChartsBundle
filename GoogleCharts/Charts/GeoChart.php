@@ -1,16 +1,17 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart\AnnotationChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\GeoChart\GeoChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class AnnotationChart extends Chart
+class GeoChart extends Chart
 {
     /**
-     * @var AnnotationChartOptions
+     * @var GeoChartOptions
      */
     protected $options;
 
@@ -19,7 +20,7 @@ class AnnotationChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new AnnotationChartOptions();
+        $this->options = new GeoChartOptions();
     }
 
 
@@ -28,7 +29,7 @@ class AnnotationChart extends Chart
      */
     protected function getType()
     {
-        return 'AnnotationChart';
+        return 'GeoChart';
     }
 
     /**
@@ -44,11 +45,11 @@ class AnnotationChart extends Chart
      */
     protected function getPackage()
     {
-        return 'annotationchart';
+        return 'geochart';
     }
 
     /**
-     * @return AnnotationChartOptions
+     * @return GeoChartOptions
      */
     public function getOptions()
     {
