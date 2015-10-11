@@ -34,7 +34,7 @@ cmen_google_charts:
     version: "1"
 ```
 
-The cutting edge developer version
+The cutting edge developer version :
 ```
 # app/config.yml
 ...
@@ -96,15 +96,21 @@ And in your template :
 ```
 
 ## Available chart types
-- AnnotationsChart
-- AreaChart
-- BarChart
-- BubbleChart
-- CalendarChart
-- ColumnChart
-- ComboChart
-- GaugeChart
-- GeoChart
-- Histogram
-- LineChart
-- PieChart
+- Annotations Charts
+- Area Charts
+- Bar Charts
+- Bubble Charts
+- Calendar Charts
+- Candlestick Charts
+- Column Charts
+- Combo Charts
+- Gantt Charts
+- Gauge Charts
+- Geo Charts
+- Histograms
+- Line Charts
+- Pie Charts
+- Sankey Diagrams
+- Scatter Charts
+- Stepped Area Charts
+- Table Charts

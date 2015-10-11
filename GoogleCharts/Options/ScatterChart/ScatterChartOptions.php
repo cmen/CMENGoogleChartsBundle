@@ -1,20 +1,44 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\LineChart;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\ScatterChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedHAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Annotations;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
 
 /**
  * @author Christophe Meneses
  */
-class LineChartOptions extends LineOptions
+class ScatterChartOptions extends AdvancedChartOptions
 {
+    /**
+     * How multiple data selections are rolled up into tooltips :
+     * 'category': Group selected data by x-value.
+     * 'series': Group selected data by series.
+     * 'auto': Group selected data by x-value if all selections have the same x-value, and by series otherwise.
+     * 'none': Show only one tooltip per selection.
+     * aggregationTarget will often be used in tandem with selectionMode and tooltip.trigger, e.g.:
+     * var options = {
+     *     // Allow multiple
+     *     // simultaneous selections.
+     *     selectionMode: 'multiple',
+     *     // Trigger tooltips
+     *     // on selections.
+     *     tooltip: {trigger: 'selection'},
+     *     // Group selections
+     *     // by x-value.
+     *     aggregationTarget: 'category',
+     *};
+     *
+     * @var string
+     */
+    protected $aggregationTarget;
+
     /**
      * @var AdvancedAnimation
      */
@@ -57,34 +81,21 @@ class LineChartOptions extends LineOptions
     protected $explorer;
 
     /**
-     * The type of the entity that receives focus on mouse hover. Also affects which entity is selected by mouse
-     * click, and which data table element is associated with events. Can be one of the following :
-     * 'datum' - Focus on a single data point. Correlates to a cell in the data table.
-     * 'category' - Focus on a grouping of all data points along the major axis. Correlates to a row in the data table.
-     * In focusTarget 'category' the tooltip displays all the category values. This may be useful for comparing values
-     * of different series.
-     *
-     * @var string
-     */
-    protected $focusTarget;
-
-    /**
-     * @var AdvancedHAxis
+     * @var MediumHAxis
      */
     protected $hAxis;
-
-    /**
-     * Whether to guess the value of missing points. If true, it will guess the value of any missing data based on
-     * neighboring points. If false, it will leave a break in the line at the unknown point.
-     *
-     * @var int boolean
-     */
-    protected $interpolateNulls;
 
     /**
      * @var AdvancedLegend
      */
     protected $legend;
+
+    /**
+     * Line width in pixels. Use zero to hide all lines and show only the points.
+     *
+     * @var int
+     */
+    protected $lineWidth;
 
     /**
      * The orientation of the chart. When set to 'vertical', rotates the axes of the chart so that (for instance) a
@@ -95,13 +106,31 @@ class LineChartOptions extends LineOptions
     protected $orientation;
 
     /**
-     * If set to true, will draw series from right to left. The default is to draw left-to-right.
+     * The shape of individual data elements: 'circle', 'triangle', 'square', 'diamond', 'star', or 'polygon'.
      *
-     * This option is only supported for a discrete major axis.
+     * @var string
+     */
+    protected $pointShape;
+
+    /**
+     * Diameter of displayed points in pixels. Use zero to hide all points. You can override values for individual
+     * series using the series property. If you're using a trendline, the pointSize option will affect the width of
+     * the trendline unless you override it with the trendlines.n.pointsize option.
+     *
+     * @var int
+     */
+    protected $pointSize;
+
+    /**
+     *  Determines whether points will be displayed. Set to false to hide all points. You can override values for
+     * individual series using the series property. If you're using a trendline, the pointsVisible option will affect
+     * the visibility of the points on all trendlines unless you override it with the trendlines.n.pointsVisible option.
+     *
+     * This can also be overridden using the style role in the form of "point {visible: true}".
      *
      * @var boolean
      */
-    protected $reverseCategories;
+    protected $pointsVisible;
 
     /**
      * When selectionMode is 'multiple', users may select multiple data points.
@@ -109,6 +138,11 @@ class LineChartOptions extends LineOptions
      * @var string
      */
     protected $selectionMode;
+
+    /**
+     * @var AdvancedTooltip
+     */
+    protected $tooltip;
 
     /**
      * Displays trendlines on the charts that support them. By default, linear trendlines are used, but this can be
@@ -134,25 +168,6 @@ class LineChartOptions extends LineOptions
      */
     protected $trendlines;
 
-    /**
-     * Specifies properties for individual vertical axes, if the chart has multiple vertical axes. Each child object
-     * is a vAxis object, and can contain all the properties supported by vAxis. These property values override any
-     * global settings for the same property.
-     * To specify a chart with multiple vertical axes, first define a new axis using series.targetAxisIndex, then
-     * configure the axis using vAxes. The following example assigns series 2 to the right axis and specifies a custom
-     * title and text style for it :
-     * ['series' => [2 => ['targetAxisIndex' => 1], vAxes => [1 => ['title' => 'Losses',
-     * 'textStyle' => ['color' => 'red']]]]
-     *
-     * This property can be either an object or an array: the object is a collection of objects, each with a numeric
-     * label that specifies the axis that it defines--this is the format shown above; the array is an array of objects,
-     * one per axis. For example, the following array-style notation is identical to the vAxis object shown above :
-     * vAxes: [ [], ['title' => 'Losses', 'textStyle' => ['color' => 'red'] ] ]
-     *
-     * @var array
-     */
-    protected $vAxes;
-
 
     public function __construct()
     {
@@ -162,8 +177,9 @@ class LineChartOptions extends LineOptions
         $this->annotations = new Annotations();
         $this->crosshair = new Crosshair();
         $this->explorer = new Explorer();
-        $this->hAxis = new AdvancedHAxis();
+        $this->hAxis = new MediumHAxis();
         $this->legend = new AdvancedLegend();
+        $this->tooltip = new AdvancedTooltip();
     }
 
 
@@ -200,7 +216,7 @@ class LineChartOptions extends LineOptions
     }
 
     /**
-     * @return AdvancedHAxis
+     * @return MediumHAxis
      */
     public function getHAxis()
     {
@@ -213,6 +229,22 @@ class LineChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
+    }
+
+    /**
+     * @return AdvancedTooltip
+     */
+    public function getTooltip()
+    {
+        return $this->tooltip;
+    }
+
+    /**
+     * @param string $aggregationTarget
+     */
+    public function setAggregationTarget($aggregationTarget)
+    {
+        $this->aggregationTarget = $aggregationTarget;
     }
 
     /**
@@ -232,19 +264,11 @@ class LineChartOptions extends LineOptions
     }
 
     /**
-     * @param string $focusTarget
+     * @param int $lineWidth
      */
-    public function setFocusTarget($focusTarget)
+    public function setLineWidth($lineWidth)
     {
-        $this->focusTarget = $focusTarget;
-    }
-
-    /**
-     * @param int $interpolateNulls
-     */
-    public function setInterpolateNulls($interpolateNulls)
-    {
-        $this->interpolateNulls = $interpolateNulls;
+        $this->lineWidth = $lineWidth;
     }
 
     /**
@@ -256,11 +280,27 @@ class LineChartOptions extends LineOptions
     }
 
     /**
-     * @param boolean $reverseCategories
+     * @param string $pointShape
      */
-    public function setReverseCategories($reverseCategories)
+    public function setPointShape($pointShape)
     {
-        $this->reverseCategories = $reverseCategories;
+        $this->pointShape = $pointShape;
+    }
+
+    /**
+     * @param int $pointSize
+     */
+    public function setPointSize($pointSize)
+    {
+        $this->pointSize = $pointSize;
+    }
+
+    /**
+     * @param boolean $pointsVisible
+     */
+    public function setPointsVisible($pointsVisible)
+    {
+        $this->pointsVisible = $pointsVisible;
     }
 
     /**
@@ -277,13 +317,5 @@ class LineChartOptions extends LineOptions
     public function setTrendlines($trendlines)
     {
         $this->trendlines = $trendlines;
-    }
-
-    /**
-     * @param array $vAxes
-     */
-    public function setVAxes($vAxes)
-    {
-        $this->vAxes = $vAxes;
     }
 }
