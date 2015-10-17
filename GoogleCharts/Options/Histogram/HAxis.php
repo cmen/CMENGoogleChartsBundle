@@ -2,6 +2,9 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Histogram;
 
+/**
+ * @author Christophe Meneses
+ */
 class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
 {
     /**

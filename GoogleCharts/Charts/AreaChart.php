@@ -5,6 +5,9 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaChart\AreaChartOptions;
 
+/**
+ * @author Christophe Meneses
+ */
 class AreaChart extends Chart
 {
     /**

@@ -10,6 +10,9 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
 
+/**
+ * @author Christophe Meneses
+ */
 class AreaChartOptions extends LineOptions
 {
     /**

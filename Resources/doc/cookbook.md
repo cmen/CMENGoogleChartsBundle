@@ -107,6 +107,36 @@ $line->getOptions()->setLineWidth(4);
 $line->getOptions()->getLegend()->setPosition('none');
 ```
 
+## Map
+```
+$map = new Map();
+$map->getData()->setArrayToTable(
+    [
+        ['Lake Buena Vista, FL 32830, United States',                  'Walt Disney World'],
+        ['6000 Universal Boulevard, Orlando, FL 32819, United States', 'Universal Studios'],
+        ['7007 Sea World Drive, Orlando, FL 32821, United States',     'Seaworld Orlando' ]
+    ],
+    true
+);
+$map->getOptions()->setMapType('styledMap');
+$map->getOptions()->setZoomLevel(12);
+$map->getOptions()->setShowTip(true);
+$map->getOptions()->setUseMapTypeControl(true);
+$map->getOptions()->setMaps(
+    ['styledMap' => [
+        'name' => 'Styled Map',
+        'styles' => [
+            ['featureType' => 'poi.attraction', 'stylers' => [['color' => '#fce8b2']]],
+            ['featureType' => 'road.highway', 'stylers' => [['color' => '#0277bd', 'saturation' => -50]]],
+            ['featureType' => 'road.highway', 'elementType' => 'labels.icon',
+                'stylers' => [['hue' => '#000', 'saturation' => 100, 'lightness' => 50]]],
+            ['featureType' => 'landscape',
+                'stylers' => [['hue' => '#259b24', 'saturation' => 10, 'lightness' => -22]]]
+        ]
+    ]]
+);
+```
+
 ## Sankey Diagram
 ```
 $sankey = new SankeyDiagram();

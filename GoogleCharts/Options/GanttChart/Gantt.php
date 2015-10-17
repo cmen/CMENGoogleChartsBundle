@@ -1,6 +1,7 @@
 <?php
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GanttChart;
+
 use DateTime;
 
 /**

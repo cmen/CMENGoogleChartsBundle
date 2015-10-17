@@ -3,15 +3,15 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\Timeline\TimelineOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Map\MapOptions;
 
 /**
  * @author Christophe Meneses
  */
-class Timeline extends Chart
+class Map extends Chart
 {
     /**
-     * @var TimelineOptions
+     * @var MapOptions
      */
     protected $options;
 
@@ -20,20 +20,24 @@ class Timeline extends Chart
     {
         parent::__construct();
 
-        $this->options = new TimelineOptions();
+        $this->options = new MapOptions();
     }
 
 
     /**
-     * @inheritdoc
+     * Returns the chart type.
+     *
+     * @return string
      */
     protected function getType()
     {
-        return 'Timeline';
+        return 'Map';
     }
 
     /**
-     * @inheritdoc
+     * Returns library used by chart.
+     *
+     * @return string
      */
     protected function getLibrary()
     {
@@ -41,15 +45,17 @@ class Timeline extends Chart
     }
 
     /**
-     * @inheritdoc
+     * Returns the chart package.
+     *
+     * @return string
      */
     protected function getPackage()
     {
-        return 'timeline';
+        return 'map';
     }
 
     /**
-     * @return TimelineOptions
+     * @return MapOptions
      */
     public function getOptions()
     {

@@ -7,7 +7,6 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumTooltip;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
  * @author Christophe Meneses
