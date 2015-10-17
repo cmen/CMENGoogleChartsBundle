@@ -3,15 +3,12 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\TableChart\TableChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Timeline\TimelineOptions;
 
-/**
- * @author Christophe Meneses
- */
-class TableChart extends Chart
+class Timeline extends Chart
 {
     /**
-     * @var TableChartOptions
+     * @var TimelineOptions
      */
     protected $options;
 
@@ -20,7 +17,7 @@ class TableChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new TableChartOptions();
+        $this->options = new TimelineOptions();
     }
 
 
@@ -29,7 +26,7 @@ class TableChart extends Chart
      */
     protected function getType()
     {
-        return 'Table';
+        return 'Timeline';
     }
 
     /**
@@ -45,11 +42,11 @@ class TableChart extends Chart
      */
     protected function getPackage()
     {
-        return 'table';
+        return 'timeline';
     }
 
     /**
-     * @return TableChartOptions
+     * @return TimelineOptions
      */
     public function getOptions()
     {
