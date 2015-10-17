@@ -1,5 +1,5 @@
 {
-  "name": "cmen/google-charts",
+  "name": "cmen/google-charts-bundle",
   "type": "symfony-bundle",
   "description": "Symfony bundle that ease the use of Google Charts.",
   "keywords": ["google", "charts"],
