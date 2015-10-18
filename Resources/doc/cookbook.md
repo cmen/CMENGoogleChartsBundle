@@ -4,7 +4,7 @@ Here, you can find recipes to recreate charts demo in [Google documentation] (ht
 ## Combo Chart
 ```
 $combo = new ComboChart();
-$combo->getData()->setArrayToTable([
+$combo->getData()->setArrayToDataTable([
     ['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
     ['2004/05',  165,      938,         522,             998,           450,      614.6],
     ['2005/06',  135,      1120,        599,             1268,          288,      682],
@@ -24,7 +24,7 @@ $combo->getOptions()->setHeight(500);
 ## Candlestick Chart
 ```
 $candle = new CandlestickChart();
-$candle->getData()->setArrayToTable([
+$candle->getData()->setArrayToDataTable([
     ['Mon', 28, 28, 38, 38],
     ['Tue', 38, 38, 55, 55],
     ['Wed', 55, 55, 77, 77],
@@ -44,7 +44,7 @@ $candle->getOptions()->setHeight(500);
 ## Gantt Chart
 ```
 $gantt = new GanttChart();
-$gantt->getData()->setArrayToTable([
+$gantt->getData()->setArrayToDataTable([
     [['label' => 'Task ID', 'type' => 'string'], ['label' => 'Task Name', 'type' => 'string'],
         ['label' => 'Resource', 'type' => 'string'], ['label' => 'Start Date', 'type' => 'date'],
         ['label' => 'End Date', 'type' => 'date'], ['label' => 'Duration', 'type' => 'number'],
@@ -82,7 +82,7 @@ $gantt->getOptions()->setWidth(900);
 ## Line Chart
 ```
 $line = new LineChart();
-$line->getData()->setArrayToTable(
+$line->getData()->setArrayToDataTable(
     [
     [['label' => 'x', 'type' => 'number'], ['label' => 'values', 'type' => 'number'],
     ['id' =>'i0', 'type' => 'number', 'role' =>'interval'],
@@ -110,7 +110,7 @@ $line->getOptions()->getLegend()->setPosition('none');
 ## Map
 ```
 $map = new Map();
-$map->getData()->setArrayToTable(
+$map->getData()->setArrayToDataTable(
     [
         ['Lake Buena Vista, FL 32830, United States',                  'Walt Disney World'],
         ['6000 Universal Boulevard, Orlando, FL 32819, United States', 'Universal Studios'],
@@ -140,7 +140,7 @@ $map->getOptions()->setMaps(
 ## Sankey Diagram
 ```
 $sankey = new SankeyDiagram();
-$sankey->getData()->setArrayToTable(
+$sankey->getData()->setArrayToDataTable(
     [
         [['label' => 'From', 'type' => 'string'], ['label' => 'To', 'type' => 'string'],
             ['label' => 'Weight', 'type' => 'number']],
@@ -210,7 +210,7 @@ $sankey->getOptions()->getSankey()->getNode()->setNodePadding(60);
 ## Scatter Chart
 ```
 $scatter = new ScatterChart();
-$scatter->getData()->setArrayToTable([
+$scatter->getData()->setArrayToDataTable([
     ['Age', 'Weight'],
     [ 8,      12],
     [ 4,      5.5],
@@ -232,7 +232,7 @@ $scatter->getOptions()->getLegend()->setPosition('none');
 ## Stepped Area Chart
 ```
 $sarea = new SteppedAreaChart();
-$sarea->getData()->setArrayToTable(
+$sarea->getData()->setArrayToDataTable(
     [
         ['Director (Year)',  'Rotten Tomatoes', 'IMDB'],
         ['Alfred Hitchcock (1935)', 8.4,         7.9],
@@ -250,7 +250,7 @@ $sarea->getOptions()->setWidth(900);
 ## Table Chart
 ```
 $table = new TableChart();
-$table->getData()->setArrayToTable(
+$table->getData()->setArrayToDataTable(
     [
         [['label' => 'Name', 'type' => 'string'], ['label' => 'Salary', 'type' => 'number'],
             ['label' => 'Full Time Employee', 'type' => 'boolean']],
@@ -268,7 +268,7 @@ $table->getOptions()->setWidth('30%');
 ## Timeline
 ```
 $timeline = new Timeline();
-$timeline->getData()->setArrayToTable(
+$timeline->getData()->setArrayToDataTable(
     [
         [ 'Washington', 'George Washington', new DateTime('1789-03-30'), new DateTime('1797-02-04') ],
         [ 'Adams', 'John Adams', new DateTime('1797-02-04'), new DateTime('1801-02-04') ],
@@ -283,4 +283,82 @@ $timeline->getOptions()->getTimeline()->getRowLabelStyle()->setColor('#603913');
 $timeline->getOptions()->getTimeline()->getBarLabelStyle()->setFontName('Garamond');
 $timeline->getOptions()->getTimeline()->getBarLabelStyle()->setFontSize(14);
 $timeline->getOptions()->setColors(['#cbb69d', '#603913', '#c69c6e']);
+```
+
+## Tree Map Chart
+```
+$treemap = new TreeMapChart();
+$treemap->getData()->setArrayToDataTable(
+    [
+        ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
+        ['Global',    null,                 0,                               0],
+        ['America',   'Global',             0,                               0],
+        ['Europe',    'Global',             0,                               0],
+        ['Asia',      'Global',             0,                               0],
+        ['Australia', 'Global',             0,                               0],
+        ['Africa',    'Global',             0,                               0],
+        ['Brazil',    'America',            11,                              10],
+        ['USA',       'America',            52,                              31],
+        ['Mexico',    'America',            24,                              12],
+        ['Canada',    'America',            16,                              -23],
+        ['France',    'Europe',             42,                              -11],
+        ['Germany',   'Europe',             31,                              -2],
+        ['Sweden',    'Europe',             22,                              -13],
+        ['Italy',     'Europe',             17,                              4],
+        ['UK',        'Europe',             21,                              -5],
+        ['China',     'Asia',               36,                              4],
+        ['Japan',     'Asia',               20,                              -12],
+        ['India',     'Asia',               40,                              63],
+        ['Laos',      'Asia',               4,                               34],
+        ['Mongolia',  'Asia',               1,                               -5],
+        ['Israel',    'Asia',               12,                              24],
+        ['Iran',      'Asia',               18,                              13],
+        ['Pakistan',  'Asia',               11,                              -52],
+        ['Egypt',     'Africa',             21,                              0],
+        ['S. Africa', 'Africa',             30,                              43],
+        ['Sudan',     'Africa',             12,                              2],
+        ['Congo',     'Africa',             10,                              12],
+        ['Zaire',     'Africa',             8,                               10]
+    ]
+);
+$treemap->getOptions()->setMinColor('#f00');
+$treemap->getOptions()->setMidColor('#ddd');
+$treemap->getOptions()->setMaxColor('#0d0');
+$treemap->getOptions()->setHeaderHeight(15);
+$treemap->getOptions()->setFontColor('black');
+$treemap->getOptions()->setShowScale(true);
+$treemap->getOptions()->setWidth(900);
+$treemap->getOptions()->setHeight(500);
+```
+
+## Word Tree
+```
+$wordTree = new WordTree();
+$wordTree->getData()->setArrayToDataTable(
+    [ ['Phrases'],
+        ['cats are better than dogs'],
+        ['cats eat kibble'],
+        ['cats are better than hamsters'],
+        ['cats are awesome'],
+        ['cats are people too'],
+        ['cats eat mice'],
+        ['cats meowing'],
+        ['cats in the cradle'],
+        ['cats eat mice'],
+        ['cats in the cradle lyrics'],
+        ['cats eat kibble'],
+        ['cats for adoption'],
+        ['cats are family'],
+        ['cats eat mice'],
+        ['cats are better than kittens'],
+        ['cats are evil'],
+        ['cats are weird'],
+        ['cats eat mice'],
+    ]
+);
+$wordTree->getOptions()->getWordtree()->setFormat('implicit');
+$wordTree->getOptions()->getWordtree()->setWord('cats');
+$wordTree->getOptions()->setFontName('Times-Roman');
+$wordTree->getOptions()->setWidth(900);
+$wordTree->getOptions()->setHeight(500);
 ```

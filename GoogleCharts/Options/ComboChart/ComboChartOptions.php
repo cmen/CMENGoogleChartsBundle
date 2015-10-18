@@ -91,7 +91,7 @@ class ComboChartOptions extends LineOptions
      * Whether to guess the value of missing points. If true, it will guess the value of any missing data based on
      * neighboring points. If false, it will leave a break in the line at the unknown point.
      *
-     * @var int boolean
+     * @var boolean
      */
     protected $interpolateNulls;
 
@@ -278,7 +278,7 @@ class ComboChartOptions extends LineOptions
     }
 
     /**
-     * @param int $interpolateNulls
+     * @param bool $interpolateNulls
      */
     public function setInterpolateNulls($interpolateNulls)
     {

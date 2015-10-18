@@ -10,7 +10,7 @@ class Data
     /**
      * @var array
      */
-    private $arrayToTable;
+    private $arrayToDataTable;
 
     /**
      * @var boolean
@@ -25,13 +25,13 @@ class Data
      * defined explicitly using object literal notation. Object literal notation may also be used for any cell,
      * allowing you to define Cell Objects).
      *
-     * @param array $arrayToTable A two-dimensional array, where each row represents a row in the data table.
+     * @param array $arrayToDataTable A two-dimensional array, where each row represents a row in the data table.
      * @param boolean $firstRowIsData If opt_firstRowIsData is false (the default), the first row will be interpreted
      *     as header labels.
      */
-    public function setArrayToTable($arrayToTable, $firstRowIsData = false)
+    public function setArrayToDataTable($arrayToDataTable, $firstRowIsData = false)
     {
-        $this->arrayToTable = $arrayToTable;
+        $this->arrayToDataTable = $arrayToDataTable;
         $this->firstRowIsData = $firstRowIsData;
     }
 
@@ -44,9 +44,9 @@ class Data
     {
         $js = 'var data = new google.visualization.arrayToDataTable([';
 
-        end($this->arrayToTable);
-        $lastKeyRow = key($this->arrayToTable);
-        foreach ($this->arrayToTable as $keyRow => $row) {
+        end($this->arrayToDataTable);
+        $lastKeyRow = key($this->arrayToDataTable);
+        foreach ($this->arrayToDataTable as $keyRow => $row) {
             $js .= '[';
 
             end($row);

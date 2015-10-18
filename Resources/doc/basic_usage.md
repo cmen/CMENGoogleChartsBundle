@@ -4,7 +4,7 @@ First, in your controller :
 public function indexAction()
 {
     $pieChart = new PieChart();
-    $pieChart->getData()->setArrayToTable(
+    $pieChart->getData()->setArrayToDataTable(
         [['Task', 'Hours per Day'],
          ['Work',     11],
          ['Eat',      2],
