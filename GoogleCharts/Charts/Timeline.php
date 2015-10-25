@@ -43,7 +43,7 @@ class Timeline extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'timeline';
     }
@@ -54,5 +54,17 @@ class Timeline extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options TimelineOptions
+     *
+     * @return Timeline
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

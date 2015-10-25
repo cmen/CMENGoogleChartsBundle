@@ -43,7 +43,7 @@ class AnnotationChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'annotationchart';
     }
@@ -54,5 +54,17 @@ class AnnotationChart extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options AnnotationChartOptions
+     *
+     * @return AnnotationChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

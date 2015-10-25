@@ -43,7 +43,7 @@ class CandlestickChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'corechart';
     }
@@ -54,5 +54,17 @@ class CandlestickChart extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options CandlestickChartOptions
+     *
+     * @return CandlestickChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

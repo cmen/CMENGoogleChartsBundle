@@ -43,7 +43,7 @@ class ScatterChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'corechart';
     }
@@ -54,5 +54,17 @@ class ScatterChart extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options ScatterChartOptions
+     *
+     * @return ScatterChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

@@ -3,7 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\TreeMapChart\TreeMapOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\TreeMapChart\TreeMapChartOptions;
 
 /**
  * @author Christophe Meneses
@@ -11,7 +11,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\TreeMapChart\TreeMapOptions;
 class TreeMapChart extends Chart
 {
     /**
-     * @var TreeMapOptions
+     * @var TreeMapChartOptions
      */
     protected $options;
 
@@ -20,7 +20,7 @@ class TreeMapChart extends Chart
     {
         parent::__construct();
 
-        $this->options = new TreeMapOptions();
+        $this->options = new TreeMapChartOptions();
     }
 
 
@@ -43,16 +43,28 @@ class TreeMapChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'treemap';
     }
 
     /**
-     * @return TreeMapOptions
+     * @return TreeMapChartOptions
      */
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options TreeMapChartOptions
+     *
+     * @return TreeMapChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

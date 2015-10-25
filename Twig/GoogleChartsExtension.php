@@ -43,13 +43,22 @@ class GoogleChartsExtension extends \Twig_Extension
      */
     public function drawChart(Chart $chart, $elementID = null)
     {
-        $chart->setVersion($this->version);
-
         if ($elementID) {
             $chart->setElementID($elementID);
         }
 
-        return $chart->draw();
+        $js = '<script type="text/javascript">';
+
+        if (in_array($this->version, array('1', '1.1'))) {
+            $js .= 'google.load("visualization", "' . $this->version . '", {packages:["' . $chart->getPackage() . '"]});
+                google.setOnLoadCallback(drawChart);';
+
+        } else {
+            $js .= 'google.charts.load("' . $this->version . '", {packages: ["' . $chart->getPackage() . '"]});
+                google.charts.setOnLoadCallback(drawChart);';
+        }
+
+        return $js . 'function drawChart() { ' . $chart->draw() . '} </script>';
     }
 
     /**

@@ -43,16 +43,28 @@ class PieChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'corechart';
     }
 
     /**
-     * @PieChartOptions
+     * @return PieChartOptions
      */
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options PieChartOptions
+     *
+     * @return PieChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

@@ -43,7 +43,7 @@ class WordTree extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'wordtree';
     }
@@ -54,5 +54,17 @@ class WordTree extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options WordTreeOptions
+     *
+     * @return WordTree
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

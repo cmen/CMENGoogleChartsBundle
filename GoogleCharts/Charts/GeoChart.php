@@ -43,7 +43,7 @@ class GeoChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'geochart';
     }
@@ -54,5 +54,17 @@ class GeoChart extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options GeoChartOptions
+     *
+     * @return GeoChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

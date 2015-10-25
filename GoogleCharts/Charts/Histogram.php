@@ -43,7 +43,7 @@ class Histogram extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'corechart';
     }
@@ -54,5 +54,17 @@ class Histogram extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options HistogramOptions
+     *
+     * @return Histogram
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

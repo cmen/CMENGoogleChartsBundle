@@ -43,7 +43,7 @@ class CalendarChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'calendar';
     }
@@ -54,5 +54,17 @@ class CalendarChart extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options CalendarChartOptions
+     *
+     * @return CalendarChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

@@ -49,7 +49,7 @@ class AreaChart extends Chart
      *
      * @return string
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'corechart';
     }
@@ -60,5 +60,17 @@ class AreaChart extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options AreaChartOptions
+     *
+     * @return AreaChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

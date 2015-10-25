@@ -43,7 +43,7 @@ class GaugeChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'gauge';
     }
@@ -54,5 +54,17 @@ class GaugeChart extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options GaugeChartOptions
+     *
+     * @return GaugeChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

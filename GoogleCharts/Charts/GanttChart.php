@@ -43,7 +43,7 @@ class GanttChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'gantt';
     }
@@ -54,5 +54,17 @@ class GanttChart extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options GanttChartOptions
+     *
+     * @return GanttChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

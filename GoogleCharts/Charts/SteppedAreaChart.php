@@ -49,7 +49,7 @@ class SteppedAreaChart extends Chart
      *
      * @return string
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'corechart';
     }
@@ -60,5 +60,17 @@ class SteppedAreaChart extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options SteppedAreaChartOptions
+     *
+     * @return SteppedAreaChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

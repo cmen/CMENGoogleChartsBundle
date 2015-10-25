@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
 use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff\DiffChart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
 
 /**
@@ -10,20 +11,6 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
  */
 abstract class Chart
 {
-    /**
-     * Version of Google Charts used.
-     *
-     * @var string
-     */
-    protected $version;
-
-    /**
-     * True if an older version of Google Charts is used.
-     *
-     * @var boolean
-     */
-    protected $oldVersion;
-
     /**
      * @var string
      */
@@ -65,12 +52,21 @@ abstract class Chart
      *
      * @return string
      */
-    abstract protected function getPackage();
+    abstract public function getPackage();
 
     /**
      * Returns the instance options.
      */
     abstract public function getOptions();
+
+    /**
+     * Sets the instance Options
+     *
+     * @param ChartOptionsDraw $options
+     *
+     * @return ChartOptionsDraw
+     */
+    abstract public function setOptions($options);
 
     /**
      * Returns Javascript of chart.
@@ -85,42 +81,24 @@ abstract class Chart
             throw new GoogleChartsException('Container is not defined.');
         }
 
-        $js = '<script type="text/javascript">';
+        $chartName = 'chart_' . $this->elementID;
 
-        if (!$this->oldVersion) {
-            $js .= 'google.load("visualization", "' . $this->version . '", {packages:["' . $this->getPackage() . '"]});
-                google.setOnLoadCallback(drawChart);';
+        $js = 'var ' . $chartName . ' = new google.' . $this->getLibrary() . '.' . $this->getType() .
+            '(document.getElementById("' . $this->elementID . '"));';
+
+        if (!$this instanceof DiffChart) {
+            $js .= $this->data->draw($this->elementID);
 
         } else {
-            $js .= 'google.charts.load("' . $this->version . '", {packages: ["' . $this->getPackage() . '"]});
-                google.charts.setOnLoadCallback(drawChart);';
+            $js .= $this->getOldChart()->getData()->draw('old_' . $this->elementID) .
+                $this->getNewChart()->getData()->draw('new_' . $this->elementID) .
+                'var data_' . $this->elementID . ' = ' . $chartName . '.computeDiff(data_old_' . $this->elementID . ',
+                 data_new_' . $this->elementID . ');';
         }
 
-        $js .= 'function drawChart() { ' .
-            $this->data->draw() .
-            $this->options->draw() .
-            'var chart_'. $this->elementID .' = new google.' . $this->getLibrary() . '.' . $this->getType() .
-            '(document.getElementById("' . $this->elementID . '"));
-                chart_'. $this->elementID .'.draw(data, options);
-            }
-        </script>';
+        $js .= $this->options->draw() . $chartName . '.draw(data_' . $this->elementID . ', options);';
 
         return $js;
-    }
-
-    /**
-     * @param string $version
-     */
-    public function setVersion($version)
-    {
-        $this->version = $version;
-
-        if (in_array($this->version, array('1', '1.1'))) {
-            $this->oldVersion = false;
-
-        } else {
-            $this->oldVersion = true;
-        }
     }
 
     /**

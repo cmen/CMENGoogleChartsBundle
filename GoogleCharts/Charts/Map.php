@@ -49,7 +49,7 @@ class Map extends Chart
      *
      * @return string
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'map';
     }
@@ -60,5 +60,17 @@ class Map extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options MapOptions
+     *
+     * @return Map
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

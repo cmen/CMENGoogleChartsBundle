@@ -1,0 +1,18 @@
+<?php
+
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff;
+
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+
+interface DiffChart
+{
+    /**
+     * @return Chart
+     */
+    public function getOldChart();
+
+    /**
+     * @return Chart
+     */
+    public function getNewChart();
+}

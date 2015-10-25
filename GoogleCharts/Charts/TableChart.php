@@ -43,7 +43,7 @@ class TableChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getPackage()
+    public function getPackage()
     {
         return 'table';
     }
@@ -54,5 +54,17 @@ class TableChart extends Chart
     public function getOptions()
     {
         return $this->options;
+    }
+
+    /**
+     * @param $options TableChartOptions
+     *
+     * @return TableChart
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+
+        return $this;
     }
 }

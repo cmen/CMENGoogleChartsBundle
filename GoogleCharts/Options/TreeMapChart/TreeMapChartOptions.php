@@ -9,7 +9,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTextStyle;
 /**
  * @author Christophe Meneses
  */
-class TreeMapOptions extends ChartOptions
+class TreeMapChartOptions extends ChartOptions
 {
     /**
      * The text color. Specify an HTML color value.
