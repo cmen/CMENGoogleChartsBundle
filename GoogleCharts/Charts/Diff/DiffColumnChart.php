@@ -22,8 +22,8 @@ class DiffColumnChart extends ColumnChart implements DiffChart
 
     public function __construct($oldChart, $newChart)
     {
-        if (!$oldChart instanceof ColumnChart && !$oldChart instanceof BarChart
-            && !$newChart instanceof ColumnChart && !$newChart instanceof BarChart) {
+        if ((!$oldChart instanceof ColumnChart && !$oldChart instanceof BarChart)
+            || (!$newChart instanceof ColumnChart && !$newChart instanceof BarChart)) {
             throw new GoogleChartsException('Instance of ColumnChart or BarChart is expected');
         }
 
@@ -47,7 +47,7 @@ class DiffColumnChart extends ColumnChart implements DiffChart
     /**
      * @param $options DiffColumnChartOptions
      *
-     * @return BarChart
+     * @return DiffColumnChart
      */
     public function setOptions($options)
     {

@@ -3,43 +3,41 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff;
 
 use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
-use CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart;
-use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnChart;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffBarChart\DiffBarChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterChart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffScatterChart\DiffScatterChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class DiffBarChart extends BarChart implements DiffChart
+class DiffScatterChart extends ScatterChart implements DiffChart
 {
     /**
-     * @var BarChart|ColumnChart
+     * @var ScatterChart
      */
     private $oldChart;
 
     /**
-     * @var BarChart|ColumnChart
+     * @var ScatterChart
      */
     private $newChart;
 
 
     public function __construct($oldChart, $newChart)
     {
-        if ((!$oldChart instanceof ColumnChart && !$oldChart instanceof BarChart)
-            || (!$newChart instanceof ColumnChart && !$newChart instanceof BarChart)) {
-            throw new GoogleChartsException('Instance of ColumnChart or BarChart is expected');
+        if (!$oldChart instanceof ScatterChart || !$newChart instanceof ScatterChart) {
+            throw new GoogleChartsException('Instance of PieChart is expected');
         }
 
         parent::__construct();
 
-        $this->options = new DiffBarChartOptions();
+        $this->options = new DiffScatterChartOptions();
 
         $this->oldChart = $oldChart;
         $this->newChart = $newChart;
     }
 
     /**
-     * @return DiffBarChartOptions
+     * @return DiffScatterChartOptions
      */
     public function getOptions()
     {
@@ -47,9 +45,9 @@ class DiffBarChart extends BarChart implements DiffChart
     }
 
     /**
-     * @param $options DiffBarChartOptions
+     * @param $options DiffScatterChartOptions
      *
-     * @return DiffBarChart
+     * @return DiffScatterChart
      */
     public function setOptions($options)
     {
@@ -59,7 +57,7 @@ class DiffBarChart extends BarChart implements DiffChart
     }
 
     /**
-     * @return BarChart|ColumnChart
+     * @return ScatterChart
      */
     public function getOldChart()
     {
@@ -67,7 +65,7 @@ class DiffBarChart extends BarChart implements DiffChart
     }
 
     /**
-     * @return BarChart|ColumnChart
+     * @return ScatterChart
      */
     public function getNewChart()
     {

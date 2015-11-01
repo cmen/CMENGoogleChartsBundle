@@ -3,43 +3,41 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff;
 
 use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
-use CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart;
-use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnChart;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffBarChart\DiffBarChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\PieChart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffPieChart\DiffPieChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class DiffBarChart extends BarChart implements DiffChart
+class DiffPieChart extends PieChart implements DiffChart
 {
     /**
-     * @var BarChart|ColumnChart
+     * @var PieChart
      */
     private $oldChart;
 
     /**
-     * @var BarChart|ColumnChart
+     * @var PieChart
      */
     private $newChart;
 
 
     public function __construct($oldChart, $newChart)
     {
-        if ((!$oldChart instanceof ColumnChart && !$oldChart instanceof BarChart)
-            || (!$newChart instanceof ColumnChart && !$newChart instanceof BarChart)) {
-            throw new GoogleChartsException('Instance of ColumnChart or BarChart is expected');
+        if (!$oldChart instanceof PieChart || !$newChart instanceof PieChart) {
+            throw new GoogleChartsException('Instance of PieChart is expected');
         }
 
         parent::__construct();
 
-        $this->options = new DiffBarChartOptions();
+        $this->options = new DiffPieChartOptions();
 
         $this->oldChart = $oldChart;
         $this->newChart = $newChart;
     }
 
     /**
-     * @return DiffBarChartOptions
+     * @return DiffPieChartOptions
      */
     public function getOptions()
     {
@@ -47,9 +45,9 @@ class DiffBarChart extends BarChart implements DiffChart
     }
 
     /**
-     * @param $options DiffBarChartOptions
+     * @param $options DiffPieChartOptions
      *
-     * @return DiffBarChart
+     * @return DiffPieChart
      */
     public function setOptions($options)
     {
@@ -59,7 +57,7 @@ class DiffBarChart extends BarChart implements DiffChart
     }
 
     /**
-     * @return BarChart|ColumnChart
+     * @return PieChart
      */
     public function getOldChart()
     {
@@ -67,7 +65,7 @@ class DiffBarChart extends BarChart implements DiffChart
     }
 
     /**
-     * @return BarChart|ColumnChart
+     * @return PieChart
      */
     public function getNewChart()
     {
