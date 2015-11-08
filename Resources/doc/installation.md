@@ -1,8 +1,8 @@
 # Installation
 
-## Step 1 : Download CMENGoogleChartsBundle using Composer
+## Step 1 : Download last version of CMENGoogleChartsBundle using Composer
 ```
-composer require cmen/google-charts-bundle "@dev"
+composer require cmen/google-charts-bundle "~x.x"
 ```
 Composer will install the bundle to your project's vendor directory.
 

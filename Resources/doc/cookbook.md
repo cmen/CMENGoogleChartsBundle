@@ -1,6 +1,204 @@
 # Cookbook
 Here, you can find recipes to recreate charts demo in [Google documentation] (https://google-developers.appspot.com/chart/interactive/docs/gallery).
 
+## Annotation Chart
+```
+$anno = new AnnotationChart();
+$anno->setElementID('anno');
+$anno->getData()->setArrayToDataTable([
+    [['label' => 'Date', 'type' => 'date'], ['label' => 'Kepler-22b mission', 'type' => 'number'],
+     ['label' => 'Kepler title', 'type' => 'string'], ['label' => 'Kepler text', 'type' => 'string'],
+     ['label' => 'Gliese 163 mission', 'type' => 'number'], ['label' => 'Gliese title', 'type' => 'string'],
+     ['label' => 'Gliese text', 'type' => 'string']
+    ],
+    [new DateTime('2314-02-15'), 12400, 'undefined', 'undefined', 10645, 'undefined', 'undefined'],
+    [new DateTime('2314-02-16'), 24045, 'Lalibertines', 'First encounter', 12374, 'undefined', 'undefined'],
+    [new DateTime('2314-02-17'), 35022, 'Lalibertines', 'They are very tall', 15766, 'Gallantors', 'First Encounter'],
+    [new DateTime('2314-02-18'), 12284, 'Lalibertines', 'Attack on our crew!', 34334, 'Gallantors', 'Statement of shared principles'],
+    [new DateTime('2314-02-19'), 8476, 'Lalibertines', 'Heavy casualties', 66467, 'Gallantors', 'Mysteries revealed'],
+    [new DateTime('2314-02-20'), 0, 'Lalibertines', 'All crew lost', 79463, 'Gallantors', 'Omniscience achieved']
+]);
+$anno->getOptions()->setDisplayAnnotations(true);
+```
+
+## Area Chart
+```
+$area = new AreaChart();
+$area->setElementID('area');
+$area->getData()->setArrayToDataTable([
+    ['Year', 'Sales', 'Expenses'],
+    ['2013',  1000,      400],
+    ['2014',  1170,      460],
+    ['2015',  660,       1120],
+    ['2016',  1030,      540]
+]);
+$area->getOptions()->setTitle('Company Performance');
+$area->getOptions()->getHAxis()->setTitle('Year');
+$area->getOptions()->getHAxis()->getTitleTextStyle()->setColor('#333');
+$area->getOptions()->getVAxis()->setMinValue(0);
+```
+
+## Bar Chart
+```
+$bar = new BarChart();
+$bar->getData()->setArrayToDataTable([
+    ['City', '2010 Population', '2000 Population'],
+    ['New York City, NY', 8175000, 8008000],
+    ['Los Angeles, CA', 3792000, 3694000],
+    ['Chicago, IL', 2695000, 2896000],
+    ['Houston, TX', 2099000, 1953000],
+    ['Philadelphia, PA', 1526000, 1517000]
+]);
+$bar->getOptions()->setTitle('Population of Largest U.S. Cities');
+$bar->getOptions()->getHAxis()->setTitle('Population of Largest U.S. Cities');
+$bar->getOptions()->getHAxis()->setMinValue(0);
+$bar->getOptions()->getVAxis()->setTitle('City');
+$bar->getOptions()->setWidth(900);
+$bar->getOptions()->setHeight(500);
+```
+
+## Bubble Chart
+```
+$bubble = new BubbleChart();
+$bubble->getData()->setArrayToDataTable([
+    ['ID', 'Life Expectancy', 'Fertility Rate', 'Region',     'Population'],
+    ['CAN',    80.66,              1.67,      'North America',  33739900],
+    ['DEU',    79.84,              1.36,      'Europe',         81902307],
+    ['DNK',    78.6,               1.84,      'Europe',         5523095],
+    ['EGY',    72.73,              2.78,      'Middle East',    79716203],
+    ['GBR',    80.05,              2,         'Europe',         61801570],
+    ['IRN',    72.49,              1.7,       'Middle East',    73137148],
+    ['IRQ',    68.09,              4.77,      'Middle East',    31090763],
+    ['ISR',    81.55,              2.96,      'Middle East',    7485600],
+    ['RUS',    68.6,               1.54,      'Europe',         141850000],
+    ['USA',    78.09,              2.05,      'North America',  307007000]
+]);
+$bubble->getOptions()->setTitle('Correlation between life expectancy, fertility rate and population of
+ some world countries (2010)');
+$bubble->getOptions()->getHAxis()->setTitle('Life Expectancy');
+$bubble->getOptions()->getVAxis()->setTitle('Fertility Rate');
+$bubble->getOptions()->getBubble()->getTextStyle()->setFontSize(12);
+$bubble->getOptions()->getBubble()->getTextStyle()->setFontName('Times-Roman');
+$bubble->getOptions()->getBubble()->getTextStyle()->setColor('green');
+$bubble->getOptions()->getBubble()->getTextStyle()->setBold(true);
+$bubble->getOptions()->getBubble()->getTextStyle()->setItalic(true);
+$bubble->getOptions()->getBubble()->getTextStyle()->setAuraColor('none');
+$bubble->getOptions()->getBubble()->getTextStyle()->setOpacity(0.80);
+$bubble->getOptions()->setWidth(900);
+$bubble->getOptions()->setHeight(500);
+```
+
+## Calendar Chart
+```
+$cal = new CalendarChart();
+$cal->getData()->setArrayToDataTable(
+    [
+        [['label' => 'Date', 'type' => 'date'], ['label' => 'Attendance', 'type' => 'number']],
+        [ new DateTime('2012-03-13'), 37032 ],
+        [ new DateTime('2012-03-14'), 38024 ],
+        [ new DateTime('2012-03-15'), 38024 ],
+        [ new DateTime('2012-03-16'), 38108 ],
+        [ new DateTime('2012-03-17'), 38229 ],
+        [ new DateTime('2012-03-18'), 38177 ],
+        [ new DateTime('2012-03-19'), 38705 ],
+        [ new DateTime('2012-03-20'), 38210 ],
+        [ new DateTime('2012-03-21'), 38029 ],
+        [ new DateTime('2012-03-22'), 38823 ],
+        [ new DateTime('2012-03-23'), 38345 ],
+        [ new DateTime('2012-03-24'), 38436 ],
+        [ new DateTime('2012-03-25'), 38447 ]
+    ]
+);
+$cal->getOptions()->setTitle('Red Sox Attendance');
+$cal->getOptions()->setHeight(350);
+$cal->getOptions()->setWidth(1000);
+$cal->getOptions()->getCalendar()->setCellSize(20);
+$cal->getOptions()->getCalendar()->getCellColor()->setStroke('#76a7fa');
+$cal->getOptions()->getCalendar()->getCellColor()->setStrokeOpacity(0.5);
+$cal->getOptions()->getCalendar()->getCellColor()->setStrokeWidth(1);
+$cal->getOptions()->getCalendar()->getFocusedCellColor()->setStroke('#d3362d');
+$cal->getOptions()->getCalendar()->getFocusedCellColor()->setStrokeOpacity(1);
+$cal->getOptions()->getCalendar()->getFocusedCellColor()->setStrokeWidth(1);
+$cal->getOptions()->getCalendar()->getDayOfWeekLabel()->setFontName('Times-Roman');
+$cal->getOptions()->getCalendar()->getDayOfWeekLabel()->setFontSize(12);
+$cal->getOptions()->getCalendar()->getDayOfWeekLabel()->setColor('#1a8763');
+$cal->getOptions()->getCalendar()->getDayOfWeekLabel()->setBold(true);
+$cal->getOptions()->getCalendar()->getDayOfWeekLabel()->setItalic(true);
+$cal->getOptions()->getCalendar()->setDayOfWeekRightSpace(10);
+$cal->getOptions()->getCalendar()->setDaysOfWeek('DLMMJVS');
+$cal->getOptions()->getCalendar()->getMonthLabel()->setFontName('Times-Roman');
+$cal->getOptions()->getCalendar()->getMonthLabel()->setFontSize(12);
+$cal->getOptions()->getCalendar()->getMonthLabel()->setColor('#981b48');
+$cal->getOptions()->getCalendar()->getMonthLabel()->setBold(true);
+$cal->getOptions()->getCalendar()->getMonthLabel()->setItalic(true);
+$cal->getOptions()->getCalendar()->getMonthOutlineColor()->setStroke('#981b48');
+$cal->getOptions()->getCalendar()->getMonthOutlineColor()->setStrokeOpacity(0.8);
+$cal->getOptions()->getCalendar()->getMonthOutlineColor()->setStrokeWidth(2);
+$cal->getOptions()->getCalendar()->getUnusedMonthOutlineColor()->setStroke('#bc5679');
+$cal->getOptions()->getCalendar()->getUnusedMonthOutlineColor()->setStrokeOpacity(0.8);
+$cal->getOptions()->getCalendar()->getUnusedMonthOutlineColor()->setStrokeWidth(1);
+$cal->getOptions()->getCalendar()->setUnderMonthSpace(16);
+$cal->getOptions()->getCalendar()->setUnderYearSpace(10);
+$cal->getOptions()->getCalendar()->getYearLabel()->setFontName('Times-Roman');
+$cal->getOptions()->getCalendar()->getYearLabel()->setFontSize(32);
+$cal->getOptions()->getCalendar()->getYearLabel()->setColor('#1A8763');
+$cal->getOptions()->getCalendar()->getYearLabel()->setBold(true);
+$cal->getOptions()->getCalendar()->getYearLabel()->setItalic(true);
+```
+
+## Candlestick Chart
+```
+$candle = new CandlestickChart();
+$candle->getData()->setArrayToDataTable([
+    ['Mon', 28, 28, 38, 38],
+    ['Tue', 38, 38, 55, 55],
+    ['Wed', 55, 55, 77, 77],
+    ['Thu', 77, 77, 66, 66],
+    ['Fri', 66, 66, 22, 22]
+    // Treat the first row as data.
+], true);
+$candle->getOptions()->getLegend()->setPosition('none');
+$candle->getOptions()->getBar()->setGroupWidth('100%');
+$candle->getOptions()->getCandlestick()->getFallingColor()->setStrokeWidth(0);
+$candle->getOptions()->getCandlestick()->getFallingColor()->setFill('#a52714');
+$candle->getOptions()->getCandlestick()->getRisingColor()->setStrokeWidth(0);
+$candle->getOptions()->getCandlestick()->getRisingColor()->setFill('#0f9d58');
+$candle->getOptions()->setWidth(900);
+$candle->getOptions()->setHeight(500);
+```
+
+## Column CHart
+```
+$col = new ColumnChart();
+$col->getData()->setArrayToDataTable(
+    [
+        ['Time of Day', 'Motivation Level', ['role' => 'annotation'], 'Energy Level', ['role' => 'annotation']],
+        [['v' => [8, 0, 0], 'f' => '8 am'],  1, '1', 0.25, '0.2'],
+        [['v' => [9, 0, 0], 'f' => '9 am'],  2, '2',  0.5, '0.5'],
+        [['v' => [10, 0, 0], 'f' => '10 am'], 3, '3',    1,  '1'],
+        [['v' => [11, 0, 0], 'f' => '11 am'], 4, '4', 2.25,  '2'],
+        [['v' => [12, 0, 0], 'f' => '12 am'], 5, '5', 2.25,  '2'],
+        [['v' => [13, 0, 0], 'f' => '1 pm'],  6, '6',    3,  '3'],
+        [['v' => [14, 0, 0], 'f' => '2 pm'],  7, '7', 3.25,  '3'],
+        [['v' => [15, 0, 0], 'f' => '3 pm'],  8, '8',    5,  '5'],
+        [['v' => [16, 0, 0], 'f' => '4 pm'],  9, '9',  6.5,  '6'],
+        [['v' => [17, 0, 0], 'f' => '5 pm'], 10, '10',  10, '10']
+    ]
+);
+$col->getOptions()->setTitle('Motivation and Energy Level Throughout the Day');
+$col->getOptions()->getAnnotations()->setAlwaysOutside(true);
+$col->getOptions()->getAnnotations()->getTextStyle()->setFontSize(14);
+$col->getOptions()->getAnnotations()->getTextStyle()->setColor('#000');
+$col->getOptions()->getAnnotations()->getTextStyle()->setAuraColor('none');
+$col->getOptions()->getHAxis()->setTitle('Time of Day');
+$col->getOptions()->getHAxis()->setFormat('h:mm a');
+$col->getOptions()->getHAxis()->getViewWindow()->setMin([7, 30, 0]);
+$col->getOptions()->getHAxis()->getViewWindow()->setMax([17, 30, 0]);
+$col->getOptions()->getVAxis()->setTitle('Rating (scale of 1-10)');
+$col->getOptions()->setWidth(900);
+$col->getOptions()->setHeight(500);
+```
+
 ## Combo Chart
 ```
 $combo = new ComboChart();
@@ -79,6 +277,95 @@ $gantt->getOptions()->getGantt()->setTrackHeight(30);
 $gantt->getOptions()->setWidth(900);
 ```
 
+## Gauge Chart
+```
+$gauge = new GaugeChart();
+$gauge->setElementID('gauge');
+$gauge->getData()->setArrayToDataTable([
+    ['Label', 'Value'],
+    ['Memory', 80],
+    ['CPU', 55],
+    ['Network', 68]
+]);
+$gauge->getOptions()->setWidth(400);
+$gauge->getOptions()->setHeight(120);
+$gauge->getOptions()->setRedFrom(90);
+$gauge->getOptions()->setRedTo(100);
+$gauge->getOptions()->setYellowFrom(75);
+$gauge->getOptions()->setYellowTo(90);
+$gauge->getOptions()->setGreenFrom(0);
+$gauge->getOptions()->setGreenTo(75);
+$gauge->getOptions()->setMinorTicks(5);
+```
+
+## Geo Chart
+```
+$geo = new GeoChart();
+$geo->setElementID('geo2');
+$geo->getData()->setArrayToDataTable(
+    [
+        ['City',   'Population', 'Area'],
+        ['Rome',      2761477,    1285.31],
+        ['Milan',     1324110,    181.76],
+        ['Naples',    959574,     117.27],
+        ['Turin',     907563,     130.17],
+        ['Palermo',   655875,     158.9],
+        ['Genoa',     607906,     243.60],
+        ['Bologna',   380181,     140.7],
+        ['Florence',  371282,     102.41],
+        ['Fiumicino', 67370,      213.44],
+        ['Anzio',     52192,      43.43],
+        ['Ciampino',  38262,      11]
+    ]
+);
+$geo->getOptions()->setRegion('IT');
+$geo->getOptions()->setDisplayMode('markers');
+$geo->getOptions()->getColorAxis()->setColors(['green', 'blue']);
+$geo->getOptions()->setWidth(900);
+$geo->getOptions()->setHeight(500);
+```
+
+## Histogram
+```
+$histo = new Histogram();
+$histo->setElementID('histo');
+$histo->getData()->setArrayToDataTable([
+    ['Dinosaur', 'Length'],
+    ['Acrocanthosaurus (top-spined lizard)', 12.2],
+    ['Albertosaurus (Alberta lizard)', 9.1],
+    ['Allosaurus (other lizard)', 12.2],
+    ['Apatosaurus (deceptive lizard)', 22.9],
+    ['Archaeopteryx (ancient wing)', 0.9],
+    ['Argentinosaurus (Argentina lizard)', 36.6],
+    ['Baryonyx (heavy claws)', 9.1],
+    ['Brachiosaurus (arm lizard)', 30.5],
+    ['Ceratosaurus (horned lizard)', 6.1],
+    ['Coelophysis (hollow form)', 2.7],
+    ['Compsognathus (elegant jaw)', 0.9],
+    ['Deinonychus (terrible claw)', 2.7],
+    ['Diplodocus (double beam)', 27.1],
+    ['Dromicelomimus (emu mimic)', 3.4],
+    ['Gallimimus (fowl mimic)', 5.5],
+    ['Mamenchisaurus (Mamenchi lizard)', 21.0],
+    ['Megalosaurus (big lizard)', 7.9],
+    ['Microvenator (small hunter)', 1.2],
+    ['Ornithomimus (bird mimic)', 4.6],
+    ['Oviraptor (egg robber)', 1.5],
+    ['Plateosaurus (flat lizard)', 7.9],
+    ['Sauronithoides (narrow-clawed lizard)', 2.0],
+    ['Seismosaurus (tremor lizard)', 45.7],
+    ['Spinosaurus (spiny lizard)', 12.2],
+    ['Supersaurus (super lizard)', 30.5],
+    ['Tyrannosaurus (tyrant lizard)', 15.2],
+    ['Ultrasaurus (ultra lizard)', 30.5],
+    ['Velociraptor (swift robber)', 1.8]]);
+$histo->getOptions()->setTitle('Lengths of dinosaurs, in meters');
+$histo->getOptions()->setWidth(900);
+$histo->getOptions()->setHeight(500);
+$histo->getOptions()->getLegend()->setPosition('none');
+$histo->getOptions()->setColors(['green']);
+```
+
 ## Line Chart
 ```
 $line = new LineChart();
@@ -135,6 +422,23 @@ $map->getOptions()->setMaps(
         ]
     ]]
 );
+```
+
+## Pie Chart
+```
+$piechart = new PieChart();
+$piechart->setElementID('piechart');
+$piechart->getData()->setArrayToDataTable([
+    [['label' => 'Topping', 'type' => 'string'], ['label' => 'Slices', 'type' => 'number']],
+    ['Mushrooms', 3],
+    ['Onions', 1],
+    ['Olives', 1],
+    ['Zucchini', 1],
+    ['Pepperoni', 2]
+]);
+$piechart->getOptions()->setHeight(300);
+$piechart->getOptions()->setWidth(400);
+$piechart->getOptions()->setTitle('How Much Pizza I Ate Last Night');
 ```
 
 ## Sankey Diagram
@@ -194,10 +498,8 @@ $sankey->getData()->setArrayToDataTable(
 );
 $sankey->getOptions()->setWidth(900);
 $sankey->getOptions()->setHeight(600);
-$sankey->getOptions()->getSankey()->getNode()->setColors(['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
-    '#cab2d6', '#ffff99', '#1f78b4', '#33a02c']);
-$sankey->getOptions()->getSankey()->getLink()->setColors(['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
-    '#cab2d6', '#ffff99', '#1f78b4', '#33a02c']);
+$sankey->getOptions()->getSankey()->getNode()->setColors(['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f', '#cab2d6', '#ffff99', '#1f78b4', '#33a02c']);
+$sankey->getOptions()->getSankey()->getLink()->setColors(['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f', '#cab2d6', '#ffff99', '#1f78b4', '#33a02c']);
 $sankey->getOptions()->getSankey()->getLink()->setColorMode('gradient');
 $sankey->getOptions()->getSankey()->getNode()->getLabel()->setFontName('Times-Roman');
 $sankey->getOptions()->getSankey()->getNode()->getLabel()->setFontSize(14);
@@ -276,7 +578,6 @@ $timeline->getData()->setArrayToDataTable(
     ],
     true
 );
-
 $timeline->getOptions()->getTimeline()->getRowLabelStyle()->setFontName('Helvetica');
 $timeline->getOptions()->getTimeline()->getRowLabelStyle()->setFontSize(24);
 $timeline->getOptions()->getTimeline()->getRowLabelStyle()->setColor('#603913');
