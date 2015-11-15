@@ -26,9 +26,11 @@ class ChartOptionsDraw
      * a string or an array. If an option have a null value, an empty array or an empty class, it is not returned :
      * the default value will be applied.
      *
+     * @param string $optionsName Variable name who will contain the options Javascript
+     *
      * @return string Javascript
      */
-    public function draw()
+    public function draw($optionsName)
     {
         $options = $this;
 
@@ -38,6 +40,6 @@ class ChartOptionsDraw
 
         $options = $this->optionsFormat->renameRecursivelyKeys($options);
 
-        return "var options = " . json_encode($options) . ";\n";
+        return "var $optionsName = " . json_encode($options) . ";\n";
     }
 }

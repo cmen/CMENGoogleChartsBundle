@@ -38,13 +38,13 @@ class Data
     /**
      * Returns Javascript of data.
      *
-     * @param string $id Identifiant for name variable who will contain the Javascript
+     * @param string $dataName Variable name who will contain the data Javascript
      *
-     * @return string Javascript
+     * @return string  A Javascript string
      */
-    public function draw($id)
+    public function draw($dataName)
     {
-        $js = "var data_$id = new google.visualization.arrayToDataTable([";
+        $js = "var $dataName = new google.visualization.arrayToDataTable([";
 
         end($this->arrayToDataTable);
         $lastKeyRow = key($this->arrayToDataTable);

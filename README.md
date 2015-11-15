@@ -8,4 +8,5 @@
 * [Basic usage](Resources/doc/basic_usage.md)
 * [Cookbook](Resources/doc/cookbook.md)
 * [Diff charts](Resources/doc/diff_charts.md)
+* [Events](Resources/doc/events.md)
 * [Google Charts documentation](https://developers.google.com/chart/interactive/docs/)

@@ -3,7 +3,6 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\Map\MapOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrgChart\OrgChartOptions;
 
 /**
@@ -12,7 +11,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrgChart\OrgChartOptions;
 class OrgChart extends Chart
 {
     /**
-     * @var MapOptions
+     * @var OrgChartOptions
      */
     protected $options;
 

@@ -48,12 +48,17 @@ public function indexAction()
 And in your template :
 ```
 <!-- index.html.twig -->
-<div id="div_old"></div>
-<div id="div_new"></div>
-<div id="div_diff"></div>
-
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-{{ drawChart(oldColumnChart, 'div_old') }}
-{{ drawChart(newColumnChart, 'div_new') }}
-{{ drawChart(diffColumnChart, 'div_diff') }}
+<html>
+<head></head>
+<body>
+    <div id="oldColumnChart"></div>
+    <div id="newColumnChart"></div>
+    <div id="diffColumnChart"></div>
+    
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        {{ gc_draw([oldColumnChart, newColumnChart, diffColumnChart], ['oldColumnChart', 'newColumnChart', 'diffColumnChart']) }}
+    </script>
+</body>
+</html>
 ```
