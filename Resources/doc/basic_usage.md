@@ -91,6 +91,7 @@ public function indexAction()
 
     return $this->render('AppBundle::index.html.twig', array('piechart' => $piechart, 'histogram' => $histogram);
 }
+```
 
 And in your template :
 ```
