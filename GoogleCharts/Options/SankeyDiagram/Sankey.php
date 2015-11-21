@@ -53,9 +53,13 @@ class Sankey
 
     /**
      * @param int $iterations
+     *
+     * @return Sankey
      */
     public function setIterations($iterations)
     {
         $this->iterations = $iterations;
+
+        return $this;
     }
 }

@@ -199,65 +199,97 @@ class HistogramOptions extends AdvancedChartOptions
 
     /**
      * @param float $dataOpacity
+     *
+     * @return HistogramOptions
      */
     public function setDataOpacity($dataOpacity)
     {
         $this->dataOpacity = $dataOpacity;
+
+        return $this;
     }
 
     /**
      * @param string $focusTarget
+     *
+     * @return HistogramOptions
      */
     public function setFocusTarget($focusTarget)
     {
         $this->focusTarget = $focusTarget;
+
+        return $this;
     }
 
     /**
      * @param boolean $interpolateNulls
+     *
+     * @return HistogramOptions
      */
     public function setInterpolateNulls($interpolateNulls)
     {
         $this->interpolateNulls = $interpolateNulls;
+
+        return $this;
     }
 
     /**
      * @param bool|string $isStacked
+     *
+     * @return HistogramOptions
      */
     public function setIsStacked($isStacked)
     {
         $this->isStacked = $isStacked;
+
+        return $this;
     }
 
     /**
      * @param string $orientation
+     *
+     * @return HistogramOptions
      */
     public function setOrientation($orientation)
     {
         $this->orientation = $orientation;
+
+        return $this;
     }
 
     /**
      * @param boolean $reverseCategories
+     *
+     * @return HistogramOptions
      */
     public function setReverseCategories($reverseCategories)
     {
         $this->reverseCategories = $reverseCategories;
+
+        return $this;
     }
 
     /**
      * @param string $theme
+     *
+     * @return HistogramOptions
      */
     public function setTheme($theme)
     {
         $this->theme = $theme;
+
+        return $this;
     }
 
     /**
      * @param array $vAxes
+     *
+     * @return HistogramOptions
      */
     public function setVAxes($vAxes)
     {
         $this->vAxes = $vAxes;
+
+        return $this;
     }
 }

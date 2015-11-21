@@ -52,49 +52,73 @@ class Arrow
 
     /**
      * @param int $angle
+     *
+     * @return Arrow
      */
     public function setAngle($angle)
     {
         $this->angle = $angle;
+
+        return $this;
     }
 
     /**
      * @param string $color
+     *
+     * @return Arrow
      */
     public function setColor($color)
     {
         $this->color = $color;
+
+        return $this;
     }
 
     /**
      * @param int $length
+     *
+     * @return Arrow
      */
     public function setLength($length)
     {
         $this->length = $length;
+
+        return $this;
     }
 
     /**
      * @param int $radius
+     *
+     * @return Arrow
      */
     public function setRadius($radius)
     {
         $this->radius = $radius;
+
+        return $this;
     }
 
     /**
      * @param int $spaceAfter
+     *
+     * @return Arrow
      */
     public function setSpaceAfter($spaceAfter)
     {
         $this->spaceAfter = $spaceAfter;
+
+        return $this;
     }
 
     /**
      * @param float $width
+     *
+     * @return Arrow
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
+        return $this;
     }
 }

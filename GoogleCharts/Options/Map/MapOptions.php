@@ -103,89 +103,133 @@ class MapOptions extends ChartOptionsDraw
 
     /**
      * @param boolean $enableScrollWheel
+     *
+     * @return MapOptions
      */
     public function setEnableScrollWheel($enableScrollWheel)
     {
         $this->enableScrollWheel = $enableScrollWheel;
+
+        return $this;
     }
 
     /**
      * @param array $icons
+     *
+     * @return MapOptions
      */
     public function setIcons($icons)
     {
         $this->icons = $icons;
+
+        return $this;
     }
 
     /**
      * @param boolean $lineColor
+     *
+     * @return MapOptions
      */
     public function setLineColor($lineColor)
     {
         $this->lineColor = $lineColor;
+
+        return $this;
     }
 
     /**
      * @param int $lineWidth
+     *
+     * @return MapOptions
      */
     public function setLineWidth($lineWidth)
     {
         $this->lineWidth = $lineWidth;
+
+        return $this;
     }
 
     /**
      * @param array $maps
+     *
+     * @return MapOptions
      */
     public function setMaps($maps)
     {
         $this->maps = $maps;
+
+        return $this;
     }
 
     /**
      * @param string $mapType
+     *
+     * @return MapOptions
      */
     public function setMapType($mapType)
     {
         $this->mapType = $mapType;
+
+        return $this;
     }
 
     /**
      * @param array $mapTypeIds
+     *
+     * @return MapOptions
      */
     public function setMapTypeIds($mapTypeIds)
     {
         $this->mapTypeIds = $mapTypeIds;
+
+        return $this;
     }
 
     /**
      * @param boolean $showLine
+     *
+     * @return MapOptions
      */
     public function setShowLine($showLine)
     {
         $this->showLine = $showLine;
+
+        return $this;
     }
 
     /**
      * @param boolean $showTip
+     *
+     * @return MapOptions
      */
     public function setShowTip($showTip)
     {
         $this->showTip = $showTip;
+
+        return $this;
     }
 
     /**
      * @param boolean $useMapTypeControl
+     *
+     * @return MapOptions
      */
     public function setUseMapTypeControl($useMapTypeControl)
     {
         $this->useMapTypeControl = $useMapTypeControl;
+
+        return $this;
     }
 
     /**
      * @param int $zoomLevel
+     *
+     * @return MapOptions
      */
     public function setZoomLevel($zoomLevel)
     {
         $this->zoomLevel = $zoomLevel;
+
+        return $this;
     }
 }

@@ -33,25 +33,37 @@ class CellColor
 
     /**
      * @param string $stroke
+     *
+     * @return CellColor
      */
     public function setStroke($stroke)
     {
         $this->stroke = $stroke;
+
+        return $this;
     }
 
     /**
      * @param float $strokeOpacity
+     *
+     * @return CellColor
      */
     public function setStrokeOpacity($strokeOpacity)
     {
         $this->strokeOpacity = $strokeOpacity;
+
+        return $this;
     }
 
     /**
      * @param int $strokeWidth
+     *
+     * @return CellColor
      */
     public function setStrokeWidth($strokeWidth)
     {
         $this->strokeWidth = $strokeWidth;
+
+        return $this;
     }
 }

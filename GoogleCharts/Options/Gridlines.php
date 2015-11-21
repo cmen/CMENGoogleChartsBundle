@@ -44,17 +44,25 @@ class Gridlines
 
     /**
      * @param int $count
+     *
+     * @return Gridlines
      */
     public function setCount($count)
     {
         $this->count = $count;
+
+        return $this;
     }
 
     /**
      * @param string $color
+     *
+     * @return Gridlines
      */
     public function setColor($color)
     {
         $this->color = $color;
+
+        return $this;
     }
 }

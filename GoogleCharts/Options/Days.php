@@ -14,9 +14,13 @@ class Days
 
     /**
      * @param string $format
+     *
+     * @return Days
      */
     public function setFormat($format)
     {
         $this->format = $format;
+
+        return $this;
     }
 }

@@ -24,17 +24,25 @@ class BasicBackgroundColor
 
     /**
      * @param string $stroke
+     *
+     * @return BasicBackgroundColor
      */
     public function setStroke($stroke)
     {
         $this->stroke = $stroke;
+
+        return $this;
     }
 
     /**
      * @param int $strokeWidth
+     *
+     * @return BasicBackgroundColor
      */
     public function setStrokeWidth($strokeWidth)
     {
         $this->strokeWidth = $strokeWidth;
+
+        return $this;
     }
 }

@@ -184,129 +184,193 @@ class TableChartOptions extends ChartOptionsDraw
 
     /**
      * @param boolean $allowHtml
+     *
+     * @return TableChartOptions
      */
     public function setAllowHtml($allowHtml)
     {
         $this->allowHtml = $allowHtml;
+
+        return $this;
     }
 
     /**
      * @param boolean $alternatingRowStyle
+     *
+     * @return TableChartOptions
      */
     public function setAlternatingRowStyle($alternatingRowStyle)
     {
         $this->alternatingRowStyle = $alternatingRowStyle;
+
+        return $this;
     }
 
     /**
      * @param int $firstRowNumber
+     *
+     * @return TableChartOptions
      */
     public function setFirstRowNumber($firstRowNumber)
     {
         $this->firstRowNumber = $firstRowNumber;
+
+        return $this;
     }
 
     /**
      * @param int $frozenColumns
+     *
+     * @return TableChartOptions
      */
     public function setFrozenColumns($frozenColumns)
     {
         $this->frozenColumns = $frozenColumns;
+
+        return $this;
     }
 
     /**
      * @param string $height
+     *
+     * @return TableChartOptions
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
+        return $this;
     }
 
     /**
      * @param string $page
+     *
+     * @return TableChartOptions
      */
     public function setPage($page)
     {
         $this->page = $page;
+
+        return $this;
     }
 
     /**
      * @param int $pageSize
+     *
+     * @return TableChartOptions
      */
     public function setPageSize($pageSize)
     {
         $this->pageSize = $pageSize;
+
+        return $this;
     }
 
     /**
      * @param int|string $pagingButtons
+     *
+     * @return TableChartOptions
      */
     public function setPagingButtons($pagingButtons)
     {
         $this->pagingButtons = $pagingButtons;
+
+        return $this;
     }
 
     /**
      * @param boolean $rtlTable
+     *
+     * @return TableChartOptions
      */
     public function setRtlTable($rtlTable)
     {
         $this->rtlTable = $rtlTable;
+
+        return $this;
     }
 
     /**
      * @param int $scrollLeftStartPosition
+     *
+     * @return TableChartOptions
      */
     public function setScrollLeftStartPosition($scrollLeftStartPosition)
     {
         $this->scrollLeftStartPosition = $scrollLeftStartPosition;
+
+        return $this;
     }
 
     /**
      * @param boolean $showRowNumber
+     *
+     * @return TableChartOptions
      */
     public function setShowRowNumber($showRowNumber)
     {
         $this->showRowNumber = $showRowNumber;
+
+        return $this;
     }
 
     /**
      * @param string $sort
+     *
+     * @return TableChartOptions
      */
     public function setSort($sort)
     {
         $this->sort = $sort;
+
+        return $this;
     }
 
     /**
      * @param boolean $sortAscending
+     *
+     * @return TableChartOptions
      */
     public function setSortAscending($sortAscending)
     {
         $this->sortAscending = $sortAscending;
+
+        return $this;
     }
 
     /**
      * @param int $sortColumn
+     *
+     * @return TableChartOptions
      */
     public function setSortColumn($sortColumn)
     {
         $this->sortColumn = $sortColumn;
+
+        return $this;
     }
 
     /**
      * @param int $startPage
+     *
+     * @return TableChartOptions
      */
     public function setStartPage($startPage)
     {
         $this->startPage = $startPage;
+
+        return $this;
     }
 
     /**
      * @param string $width
+     *
+     * @return TableChartOptions
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
+        return $this;
     }
 }

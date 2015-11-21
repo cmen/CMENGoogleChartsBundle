@@ -184,10 +184,14 @@ abstract class Chart
 
     /**
      * @param string $elementID
+     *
+     * @return Chart
      */
     public function setElementID($elementID)
     {
         $this->elementID = $elementID;
+
+        return $this;
     }
 
     /**

@@ -49,41 +49,61 @@ class OrgChartOptions extends ChartOptionsDraw
 
     /**
      * @param boolean $allowCollapse
+     *
+     * @return OrgChartOptions
      */
     public function setAllowCollapse($allowCollapse)
     {
         $this->allowCollapse = $allowCollapse;
+
+        return $this;
     }
 
     /**
      * @param boolean $allowHtml
+     *
+     * @return OrgChartOptions
      */
     public function setAllowHtml($allowHtml)
     {
         $this->allowHtml = $allowHtml;
+
+        return $this;
     }
 
     /**
      * @param string $nodeClass
+     *
+     * @return OrgChartOptions
      */
     public function setNodeClass($nodeClass)
     {
         $this->nodeClass = $nodeClass;
+
+        return $this;
     }
 
     /**
      * @param string $selectedNodeClass
+     *
+     * @return OrgChartOptions
      */
     public function setSelectedNodeClass($selectedNodeClass)
     {
         $this->selectedNodeClass = $selectedNodeClass;
+
+        return $this;
     }
 
     /**
      * @param string $size
+     *
+     * @return OrgChartOptions
      */
     public function setSize($size)
     {
         $this->size = $size;
+
+        return $this;
     }
 }

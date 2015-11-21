@@ -197,81 +197,121 @@ class GeoChartOptions extends ChartOptions
 
     /**
      * @param string $backgroundColor
+     *
+     * @return GeoChartOptions
      */
     public function setBackgroundColor($backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
+
+        return $this;
     }
 
     /**
      * @param string $datalessRegionColor
+     *
+     * @return GeoChartOptions
      */
     public function setDatalessRegionColor($datalessRegionColor)
     {
         $this->datalessRegionColor = $datalessRegionColor;
+
+        return $this;
     }
 
     /**
      * @param string $displayMode
+     *
+     * @return GeoChartOptions
      */
     public function setDisplayMode($displayMode)
     {
         $this->displayMode = $displayMode;
+
+        return $this;
     }
 
     /**
      * @param string $defaultColor
+     *
+     * @return GeoChartOptions
      */
     public function setDefaultColor($defaultColor)
     {
         $this->defaultColor = $defaultColor;
+
+        return $this;
     }
 
     /**
      * @param string $domain
+     *
+     * @return GeoChartOptions
      */
     public function setDomain($domain)
     {
         $this->domain = $domain;
+
+        return $this;
     }
 
     /**
      * @param boolean $keepAspectRatio
+     *
+     * @return GeoChartOptions
      */
     public function setKeepAspectRatio($keepAspectRatio)
     {
         $this->keepAspectRatio = $keepAspectRatio;
+
+        return $this;
     }
 
     /**
      * @param boolean $enableRegionInteractivity
+     *
+     * @return GeoChartOptions
      */
     public function setEnableRegionInteractivity($enableRegionInteractivity)
     {
         $this->enableRegionInteractivity = $enableRegionInteractivity;
+
+        return $this;
     }
 
     /**
      * @param string $region
+     *
+     * @return GeoChartOptions
      */
     public function setRegion($region)
     {
         $this->region = $region;
+
+        return $this;
     }
 
     /**
      * @param float $markerOpacity
+     *
+     * @return GeoChartOptions
      */
     public function setMarkerOpacity($markerOpacity)
     {
         $this->markerOpacity = $markerOpacity;
+
+        return $this;
     }
 
     /**
      * @param string $resolution
+     *
+     * @return GeoChartOptions
      */
     public function setResolution($resolution)
     {
         $this->resolution = $resolution;
+
+        return $this;
     }
 }

@@ -185,65 +185,97 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
 
     /**
      * @param string $aggregationTarget
+     *
+     * @return SteppedAreaChartOptions
      */
     public function setAggregationTarget($aggregationTarget)
     {
         $this->aggregationTarget = $aggregationTarget;
+
+        return $this;
     }
 
     /**
      * @param float $areaOpacity
+     *
+     * @return SteppedAreaChartOptions
      */
     public function setAreaOpacity($areaOpacity)
     {
         $this->areaOpacity = $areaOpacity;
+
+        return $this;
     }
 
     /**
      * @param boolean $connectSteps
+     *
+     * @return SteppedAreaChartOptions
      */
     public function setConnectSteps($connectSteps)
     {
         $this->connectSteps = $connectSteps;
+
+        return $this;
     }
 
     /**
      * @param bool|string $isStacked
+     *
+     * @return SteppedAreaChartOptions
      */
     public function setIsStacked($isStacked)
     {
         $this->isStacked = $isStacked;
+
+        return $this;
     }
 
     /**
      * @param \int[] $lineDashStyle
+     *
+     * @return SteppedAreaChartOptions
      */
     public function setLineDashStyle($lineDashStyle)
     {
         $this->lineDashStyle = $lineDashStyle;
+
+        return $this;
     }
 
     /**
      * @param boolean $reverseCategories
+     *
+     * @return SteppedAreaChartOptions
      */
     public function setReverseCategories($reverseCategories)
     {
         $this->reverseCategories = $reverseCategories;
+
+        return $this;
     }
 
     /**
      * @param string $selectionMode
+     *
+     * @return SteppedAreaChartOptions
      */
     public function setSelectionMode($selectionMode)
     {
         $this->selectionMode = $selectionMode;
+
+        return $this;
     }
 
     /**
      * @param array $vAxes
+     *
+     * @return SteppedAreaChartOptions
      */
     public function setVAxes($vAxes)
     {
         $this->vAxes = $vAxes;
+
+        return $this;
     }
 }

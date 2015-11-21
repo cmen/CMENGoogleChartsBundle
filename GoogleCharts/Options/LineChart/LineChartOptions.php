@@ -217,73 +217,109 @@ class LineChartOptions extends LineOptions
 
     /**
      * @param string $curveType
+     *
+     * @return LineChartOptions
      */
     public function setCurveType($curveType)
     {
         $this->curveType = $curveType;
+
+        return $this;
     }
 
     /**
      * @param float $dataOpacity
+     *
+     * @return LineChartOptions
      */
     public function setDataOpacity($dataOpacity)
     {
         $this->dataOpacity = $dataOpacity;
+
+        return $this;
     }
 
     /**
      * @param string $focusTarget
+     *
+     * @return LineChartOptions
      */
     public function setFocusTarget($focusTarget)
     {
         $this->focusTarget = $focusTarget;
+
+        return $this;
     }
 
     /**
      * @param int $interpolateNulls
+     *
+     * @return LineChartOptions
      */
     public function setInterpolateNulls($interpolateNulls)
     {
         $this->interpolateNulls = $interpolateNulls;
+
+        return $this;
     }
 
     /**
      * @param string $orientation
+     *
+     * @return LineChartOptions
      */
     public function setOrientation($orientation)
     {
         $this->orientation = $orientation;
+
+        return $this;
     }
 
     /**
      * @param boolean $reverseCategories
+     *
+     * @return LineChartOptions
      */
     public function setReverseCategories($reverseCategories)
     {
         $this->reverseCategories = $reverseCategories;
+
+        return $this;
     }
 
     /**
      * @param string $selectionMode
+     *
+     * @return LineChartOptions
      */
     public function setSelectionMode($selectionMode)
     {
         $this->selectionMode = $selectionMode;
+
+        return $this;
     }
 
     /**
      * @param array $trendlines
+     *
+     * @return LineChartOptions
      */
     public function setTrendlines($trendlines)
     {
         $this->trendlines = $trendlines;
+
+        return $this;
     }
 
     /**
      * @param array $vAxes
+     *
+     * @return LineChartOptions
      */
     public function setVAxes($vAxes)
     {
         $this->vAxes = $vAxes;
+
+        return $this;
     }
 }

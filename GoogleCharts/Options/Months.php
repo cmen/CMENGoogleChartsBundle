@@ -14,9 +14,13 @@ class Months
 
     /**
      * @param string $format
+     *
+     * @return Months
      */
     public function setFormat($format)
     {
         $this->format = $format;
+
+        return $this;
     }
 }

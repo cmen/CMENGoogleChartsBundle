@@ -24,17 +24,25 @@ class InnerCircle
 
     /**
      * @param float $radiusFactor
+     *
+     * @return InnerCircle
      */
     public function setRadiusFactor($radiusFactor)
     {
         $this->radiusFactor = $radiusFactor;
+
+        return $this;
     }
 
     /**
      * @param float $borderFactor
+     *
+     * @return InnerCircle
      */
     public function setBorderFactor($borderFactor)
     {
         $this->borderFactor = $borderFactor;
+
+        return $this;
     }
 }

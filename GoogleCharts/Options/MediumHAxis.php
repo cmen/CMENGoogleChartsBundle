@@ -98,65 +98,97 @@ class MediumHAxis extends HAxis
 
     /**
      * @param int $baseline
+     *
+     * @return MediumHAxis
      */
     public function setBaseline($baseline)
     {
         $this->baseline = $baseline;
+
+        return $this;
     }
 
     /**
      * @param string $baselineColor
+     *
+     * @return MediumHAxis
      */
     public function setBaselineColor($baselineColor)
     {
         $this->baselineColor = $baselineColor;
+
+        return $this;
     }
 
     /**
      * @param int $direction
+     *
+     * @return MediumHAxis
      */
     public function setDirection($direction)
     {
         $this->direction = $direction;
+
+        return $this;
     }
 
     /**
      * @param string $format
+     *
+     * @return MediumHAxis
      */
     public function setFormat($format)
     {
         $this->format = $format;
+
+        return $this;
     }
 
     /**
      * @param boolean $logScale
+     *
+     * @return MediumHAxis
      */
     public function setLogScale($logScale)
     {
         $this->logScale = $logScale;
+
+        return $this;
     }
 
     /**
      * @param array $ticks
+     *
+     * @return MediumHAxis
      */
     public function setTicks($ticks)
     {
         $this->ticks = $ticks;
+
+        return $this;
     }
 
     /**
      * @param int $maxValue
+     *
+     * @return MediumHAxis
      */
     public function setMaxValue($maxValue)
     {
         $this->maxValue = $maxValue;
+
+        return $this;
     }
 
     /**
      * @param int $minValue
+     *
+     * @return MediumHAxis
      */
     public function setMinValue($minValue)
     {
         $this->minValue = $minValue;
+
+        return $this;
     }
 }

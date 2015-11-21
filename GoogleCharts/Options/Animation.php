@@ -28,17 +28,25 @@ class Animation
 
     /**
      * @param int $duration
+     *
+     * @return Animation
      */
     public function setDuration($duration)
     {
         $this->duration = $duration;
+
+        return $this;
     }
 
     /**
      * @param string $easing
+     *
+     * @return Animation
      */
     public function setEasing($easing)
     {
         $this->easing = $easing;
+
+        return $this;
     }
 }

@@ -168,17 +168,25 @@ class BubbleChartOptions extends AdvancedChartOptions
 
     /**
      * @param string $selectionMode
+     *
+     * @return BubbleChartOptions
      */
     public function setSelectionMode($selectionMode)
     {
         $this->selectionMode = $selectionMode;
+
+        return $this;
     }
 
     /**
      * @param boolean $sortBubblesBySize
+     *
+     * @return BubbleChartOptions
      */
     public function setSortBubblesBySize($sortBubblesBySize)
     {
         $this->sortBubblesBySize = $sortBubblesBySize;
+
+        return $this;
     }
 }

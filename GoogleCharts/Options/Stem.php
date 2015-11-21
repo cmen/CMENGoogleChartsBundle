@@ -22,17 +22,25 @@ class Stem
 
     /**
      * @param string $color
+     *
+     * @return Stem
      */
     public function setColor($color)
     {
         $this->color = $color;
+
+        return $this;
     }
 
     /**
      * @param int $length
+     *
+     * @return Stem
      */
     public function setLength($length)
     {
         $this->length = $length;
+
+        return $this;
     }
 }

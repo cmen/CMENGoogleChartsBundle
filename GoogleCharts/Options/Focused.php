@@ -23,17 +23,25 @@ class Focused
 
     /**
      * @param string $color
+     *
+     * @return Focused
      */
     public function setColor($color)
     {
         $this->color = $color;
+
+        return $this;
     }
 
     /**
      * @param float $opacity
+     *
+     * @return Focused
      */
     public function setOpacity($opacity)
     {
         $this->opacity = $opacity;
+
+        return $this;
     }
 }

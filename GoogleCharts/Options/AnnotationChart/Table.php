@@ -24,17 +24,25 @@ class Table
 
     /**
      * @param boolean $sortAscending
+     *
+     * @return Table
      */
     public function setSortAscending($sortAscending)
     {
         $this->sortAscending = $sortAscending;
+
+        return $this;
     }
 
     /**
      * @param int $sortColumn
+     *
+     * @return Table
      */
     public function setSortColumn($sortColumn)
     {
         $this->sortColumn = $sortColumn;
+
+        return $this;
     }
 }

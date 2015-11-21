@@ -98,49 +98,73 @@ class LineOptions extends AdvancedChartOptions
 
     /**
      * @param string $aggregationTarget
+     *
+     * @return LineOptions
      */
     public function setAggregationTarget($aggregationTarget)
     {
         $this->aggregationTarget = $aggregationTarget;
+
+        return $this;
     }
 
     /**
      * @param int $lineWidth
+     *
+     * @return LineOptions
      */
     public function setLineWidth($lineWidth)
     {
         $this->lineWidth = $lineWidth;
+
+        return $this;
     }
 
     /**
      * @param int[] $lineDashStyle
+     *
+     * @return LineOptions
      */
     public function setLineDashStyle($lineDashStyle)
     {
         $this->lineDashStyle = $lineDashStyle;
+
+        return $this;
     }
 
     /**
      * @param string $pointShape
+     *
+     * @return LineOptions
      */
     public function setPointShape($pointShape)
     {
         $this->pointShape = $pointShape;
+
+        return $this;
     }
 
     /**
      * @param int $pointSize
+     *
+     * @return LineOptions
      */
     public function setPointSize($pointSize)
     {
         $this->pointSize = $pointSize;
+
+        return $this;
     }
 
     /**
      * @param boolean $pointsVisible
+     *
+     * @return LineOptions
      */
     public function setPointsVisible($pointsVisible)
     {
         $this->pointsVisible = $pointsVisible;
+
+        return $this;
     }
 }

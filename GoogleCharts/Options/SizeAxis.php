@@ -40,33 +40,49 @@ class SizeAxis
 
     /**
      * @param int $maxSize
+     *
+     * @return SizeAxis
      */
     public function setMaxSize($maxSize)
     {
         $this->maxSize = $maxSize;
+
+        return $this;
     }
 
     /**
      * @param int $maxValue
+     *
+     * @return SizeAxis
      */
     public function setMaxValue($maxValue)
     {
         $this->maxValue = $maxValue;
+
+        return $this;
     }
 
     /**
      * @param int $minSize
+     *
+     * @return SizeAxis
      */
     public function setMinSize($minSize)
     {
         $this->minSize = $minSize;
+
+        return $this;
     }
 
     /**
      * @param int $minValue
+     *
+     * @return SizeAxis
      */
     public function setMinValue($minValue)
     {
         $this->minValue = $minValue;
+
+        return $this;
     }
 }

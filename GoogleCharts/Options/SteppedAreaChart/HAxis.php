@@ -155,89 +155,133 @@ class HAxis
 
     /**
      * @param string $title
+     *
+     * @return HAxis
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 
     /**
      * @param array $ticks
+     *
+     * @return HAxis
      */
     public function setTicks($ticks)
     {
         $this->ticks = $ticks;
+
+        return $this;
     }
 
     /**
      * @param int $direction
+     *
+     * @return HAxis
      */
     public function setDirection($direction)
     {
         $this->direction = $direction;
+
+        return $this;
     }
 
     /**
      * @param int $showTextEvery
+     *
+     * @return HAxis
      */
     public function setShowTextEvery($showTextEvery)
     {
         $this->showTextEvery = $showTextEvery;
+
+        return $this;
     }
 
     /**
      * @param boolean $allowContainerBoundaryTextCufoff
+     *
+     * @return HAxis
      */
     public function setAllowContainerBoundaryTextCufoff($allowContainerBoundaryTextCufoff)
     {
         $this->allowContainerBoundaryTextCufoff = $allowContainerBoundaryTextCufoff;
+
+        return $this;
     }
 
     /**
      * @param boolean $slantedText
+     *
+     * @return HAxis
      */
     public function setSlantedText($slantedText)
     {
         $this->slantedText = $slantedText;
+
+        return $this;
     }
 
     /**
      * @param int $slantedTextAngle
+     *
+     * @return HAxis
      */
     public function setSlantedTextAngle($slantedTextAngle)
     {
         $this->slantedTextAngle = $slantedTextAngle;
+
+        return $this;
     }
 
     /**
      * @param int $maxAlternation
+     *
+     * @return HAxis
      */
     public function setMaxAlternation($maxAlternation)
     {
         $this->maxAlternation = $maxAlternation;
+
+        return $this;
     }
 
     /**
      * @param int $maxTextLines
+     *
+     * @return HAxis
      */
     public function setMaxTextLines($maxTextLines)
     {
         $this->maxTextLines = $maxTextLines;
+
+        return $this;
     }
 
     /**
      * @param int $minTextSpacing
+     *
+     * @return HAxis
      */
     public function setMinTextSpacing($minTextSpacing)
     {
         $this->minTextSpacing = $minTextSpacing;
+
+        return $this;
     }
 
     /**
      * @param string $textPosition
+     *
+     * @return HAxis
      */
     public function setTextPosition($textPosition)
     {
         $this->textPosition = $textPosition;
+
+        return $this;
     }
 }

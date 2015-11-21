@@ -26,17 +26,25 @@ class MagnifyingGlass
 
     /**
      * @param boolean $enable
+     *
+     * @return MagnifyingGlass
      */
     public function setEnable($enable)
     {
         $this->enable = $enable;
+
+        return $this;
     }
 
     /**
      * @param float $zoomFactor
+     *
+     * @return MagnifyingGlass
      */
     public function setZoomFactor($zoomFactor)
     {
         $this->zoomFactor = $zoomFactor;
+
+        return $this;
     }
 }

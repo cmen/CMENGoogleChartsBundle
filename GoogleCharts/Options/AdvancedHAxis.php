@@ -66,57 +66,85 @@ class AdvancedHAxis extends MediumHAxis
 
     /**
      * @param int $showTextEvery
+     *
+     * @return AdvancedHAxis
      */
     public function setShowTextEvery($showTextEvery)
     {
         $this->showTextEvery = $showTextEvery;
+
+        return $this;
     }
 
     /**
      * @param boolean $allowContainerBoundaryTextCufoff
+     *
+     * @return AdvancedHAxis
      */
     public function setAllowContainerBoundaryTextCufoff($allowContainerBoundaryTextCufoff)
     {
         $this->allowContainerBoundaryTextCufoff = $allowContainerBoundaryTextCufoff;
+
+        return $this;
     }
 
     /**
      * @param boolean $slantedText
+     *
+     * @return AdvancedHAxis
      */
     public function setSlantedText($slantedText)
     {
         $this->slantedText = $slantedText;
+
+        return $this;
     }
 
     /**
      * @param int $slantedTextAngle
+     *
+     * @return AdvancedHAxis
      */
     public function setSlantedTextAngle($slantedTextAngle)
     {
         $this->slantedTextAngle = $slantedTextAngle;
+
+        return $this;
     }
 
     /**
      * @param int $maxAlternation
+     *
+     * @return AdvancedHAxis
      */
     public function setMaxAlternation($maxAlternation)
     {
         $this->maxAlternation = $maxAlternation;
+
+        return $this;
     }
 
     /**
      * @param int $maxTextLines
+     *
+     * @return AdvancedHAxis
      */
     public function setMaxTextLines($maxTextLines)
     {
         $this->maxTextLines = $maxTextLines;
+
+        return $this;
     }
 
     /**
      * @param int $minTextSpacing
+     *
+     * @return AdvancedHAxis
      */
     public function setMinTextSpacing($minTextSpacing)
     {
         $this->minTextSpacing = $minTextSpacing;
+
+        return $this;
     }
 }

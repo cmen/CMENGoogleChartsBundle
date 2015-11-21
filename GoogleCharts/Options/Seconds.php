@@ -14,9 +14,13 @@ class Seconds
 
     /**
      * @param string $format
+     *
+     * @return Seconds
      */
     public function setFormat($format)
     {
         $this->format = $format;
+
+        return $this;
     }
 }

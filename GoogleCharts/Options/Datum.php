@@ -39,9 +39,13 @@ class Datum
 
     /**
      * @param string $style
+     *
+     * @return Datum
      */
     public function setStyle($style)
     {
         $this->style = $style;
+
+        return $this;
     }
 }

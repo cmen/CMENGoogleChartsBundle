@@ -72,25 +72,37 @@ class TimelineOptions extends BasicChartOptions
 
     /**
      * @param boolean $avoidOverlappingGridLines
+     *
+     * @return TimelineOptions
      */
     public function setAvoidOverlappingGridLines($avoidOverlappingGridLines)
     {
         $this->avoidOverlappingGridLines = $avoidOverlappingGridLines;
+
+        return $this;
     }
 
     /**
      * @param string $backgroundColor
+     *
+     * @return TimelineOptions
      */
     public function setBackgroundColor($backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
+
+        return $this;
     }
 
     /**
      * @param string[] $colors
+     *
+     * @return TimelineOptions
      */
     public function setColors($colors)
     {
         $this->colors = $colors;
+
+        return $this;
     }
 }

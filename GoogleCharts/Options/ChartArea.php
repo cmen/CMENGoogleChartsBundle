@@ -67,41 +67,61 @@ class ChartArea
 
     /**
      * @param int|string $height
+     *
+     * @return ChartArea
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
+        return $this;
     }
 
     /**
      * @param int|string $left
+     *
+     * @return ChartArea
      */
     public function setLeft($left)
     {
         $this->left = $left;
+
+        return $this;
     }
 
     /**
      * @param int|string $top
+     *
+     * @return ChartArea
      */
     public function setTop($top)
     {
         $this->top = $top;
+
+        return $this;
     }
 
     /**
      * @param int|string $width
+     *
+     * @return ChartArea
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
+        return $this;
     }
 
     /**
      * @param string $backgroundColor
+     *
+     * @return ChartArea
      */
     public function setBackgroundColor($backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
+
+        return $this;
     }
 }

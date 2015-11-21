@@ -157,81 +157,121 @@ class PieChartOptions extends MediumChartOptions
 
     /**
      * @param boolean $interpolateNulls
+     *
+     * @return PieChartOptions
      */
     public function setInterpolateNulls($interpolateNulls)
     {
         $this->interpolateNulls = $interpolateNulls;
+
+        return $this;
     }
 
     /**
      * @param boolean $is3D
+     *
+     * @return PieChartOptions
      */
     public function setIs3D($is3D)
     {
         $this->is3D = $is3D;
+
+        return $this;
     }
 
     /**
      * @param float $pieHole
+     *
+     * @return PieChartOptions
      */
     public function setPieHole($pieHole)
     {
         $this->pieHole = $pieHole;
+
+        return $this;
     }
 
     /**
      * @param int $pieStartAngle
+     *
+     * @return PieChartOptions
      */
     public function setPieStartAngle($pieStartAngle)
     {
         $this->pieStartAngle = $pieStartAngle;
+
+        return $this;
     }
 
     /**
      * @param string $pieSliceText
+     *
+     * @return PieChartOptions
      */
     public function setPieSliceText($pieSliceText)
     {
         $this->pieSliceText = $pieSliceText;
+
+        return $this;
     }
 
     /**
      * @param array $slices
+     *
+     * @return PieChartOptions
      */
     public function setSlices($slices)
     {
         $this->slices = $slices;
+
+        return $this;
     }
 
     /**
      * @param float $sliceVisibilityThreshold
+     *
+     * @return PieChartOptions
      */
     public function setSliceVisibilityThreshold($sliceVisibilityThreshold)
     {
         $this->sliceVisibilityThreshold = $sliceVisibilityThreshold;
+
+        return $this;
     }
 
     /**
      * @param boolean $reverseCategories
+     *
+     * @return PieChartOptions
      */
     public function setReverseCategories($reverseCategories)
     {
         $this->reverseCategories = $reverseCategories;
+
+        return $this;
     }
 
     /**
      * @param string $pieResidueSliceColor
+     *
+     * @return PieChartOptions
      */
     public function setPieResidueSliceColor($pieResidueSliceColor)
     {
         $this->pieResidueSliceColor = $pieResidueSliceColor;
+
+        return $this;
     }
 
     /**
      * @param string $pieResidueSliceLabel
+     *
+     * @return PieChartOptions
      */
     public function setPieResidueSliceLabel($pieResidueSliceLabel)
     {
         $this->pieResidueSliceLabel = $pieResidueSliceLabel;
+
+        return $this;
     }
 }

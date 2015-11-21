@@ -43,17 +43,25 @@ class MinorGridlines
 
     /**
      * @param string $color
+     *
+     * @return MinorGridlines
      */
     public function setColor($color)
     {
         $this->color = $color;
+
+        return $this;
     }
 
     /**
      * @param int $count
+     *
+     * @return MinorGridlines
      */
     public function setCount($count)
     {
         $this->count = $count;
+
+        return $this;
     }
 }

@@ -195,89 +195,133 @@ class VAxis
 
     /**
      * @param int $baseline
+     *
+     * @return VAxis
      */
     public function setBaseline($baseline)
     {
         $this->baseline = $baseline;
+
+        return $this;
     }
 
     /**
      * @param string $baselineColor
+     *
+     * @return VAxis
      */
     public function setBaselineColor($baselineColor)
     {
         $this->baselineColor = $baselineColor;
+
+        return $this;
     }
 
     /**
      * @param int $direction
+     *
+     * @return VAxis
      */
     public function setDirection($direction)
     {
         $this->direction = $direction;
+
+        return $this;
     }
 
     /**
      * @param string $format
+     *
+     * @return VAxis
      */
     public function setFormat($format)
     {
         $this->format = $format;
+
+        return $this;
     }
 
     /**
      * @param boolean $logScale
+     *
+     * @return VAxis
      */
     public function setLogScale($logScale)
     {
         $this->logScale = $logScale;
+
+        return $this;
     }
 
     /**
      * @param string $textPosition
+     *
+     * @return VAxis
      */
     public function setTextPosition($textPosition)
     {
         $this->textPosition = $textPosition;
+
+        return $this;
     }
 
     /**
      * @param array $ticks
+     *
+     * @return VAxis
      */
     public function setTicks($ticks)
     {
         $this->ticks = $ticks;
+
+        return $this;
     }
 
     /**
      * @param string $title
+     *
+     * @return VAxis
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 
     /**
      * @param int $maxValue
+     *
+     * @return VAxis
      */
     public function setMaxValue($maxValue)
     {
         $this->maxValue = $maxValue;
+
+        return $this;
     }
 
     /**
      * @param int $minValue
+     *
+     * @return VAxis
      */
     public function setMinValue($minValue)
     {
         $this->minValue = $minValue;
+
+        return $this;
     }
 
     /**
      * @param string $viewWindowMode
+     *
+     * @return VAxis
      */
     public function setViewWindowMode($viewWindowMode)
     {
         $this->viewWindowMode = $viewWindowMode;
+
+        return $this;
     }
 }

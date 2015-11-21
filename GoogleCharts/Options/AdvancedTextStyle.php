@@ -24,17 +24,25 @@ class AdvancedTextStyle extends MediumTextStyle
 
     /**
      * @param string $auraColor
+     *
+     * @return AdvancedTextStyle
      */
     public function setAuraColor($auraColor)
     {
         $this->auraColor = $auraColor;
+
+        return $this;
     }
 
     /**
      * @param float $opacity
+     *
+     * @return AdvancedTextStyle
      */
     public function setOpacity($opacity)
     {
         $this->opacity = $opacity;
+
+        return $this;
     }
 }

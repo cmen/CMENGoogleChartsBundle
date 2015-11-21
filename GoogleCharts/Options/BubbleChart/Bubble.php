@@ -45,17 +45,25 @@ class Bubble
 
     /**
      * @param string $stroke
+     *
+     * @return Bubble
      */
     public function setStroke($stroke)
     {
         $this->stroke = $stroke;
+
+        return $this;
     }
 
     /**
      * @param float $opacity
+     *
+     * @return Bubble
      */
     public function setOpacity($opacity)
     {
         $this->opacity = $opacity;
+
+        return $this;
     }
 }

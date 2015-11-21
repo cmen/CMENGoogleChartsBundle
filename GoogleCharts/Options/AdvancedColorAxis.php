@@ -13,4 +13,19 @@ class AdvancedColorAxis extends ColorAxis
      * @var Legend
      */
     protected $legend;
+
+
+    public function __construct()
+    {
+        $this->legend = new Legend();
+    }
+
+
+    /**
+     * @return Legend
+     */
+    public function getLegend()
+    {
+        return $this->legend;
+    }
 }

@@ -16,9 +16,13 @@ class BackgroundColor
 
     /**
      * @param string $fill
+     *
+     * @return BackgroundColor
      */
     public function setFill($fill)
     {
         $this->fill = $fill;
+
+        return $this;
     }
 }

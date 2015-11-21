@@ -14,9 +14,13 @@ class Hours
 
     /**
      * @param string $format
+     *
+     * @return Hours
      */
     public function setFormat($format)
     {
         $this->format = $format;
+
+        return $this;
     }
 }

@@ -69,57 +69,85 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
 
     /**
      * @param int $showTextEvery
+     *
+     * @return HAxis
      */
     public function setShowTextEvery($showTextEvery)
     {
         $this->showTextEvery = $showTextEvery;
+
+        return $this;
     }
 
     /**
      * @param boolean $allowContainerBoundaryTextCufoff
+     *
+     * @return HAxis
      */
     public function setAllowContainerBoundaryTextCufoff($allowContainerBoundaryTextCufoff)
     {
         $this->allowContainerBoundaryTextCufoff = $allowContainerBoundaryTextCufoff;
+
+        return $this;
     }
 
     /**
      * @param boolean $slantedText
+     *
+     * @return HAxis
      */
     public function setSlantedText($slantedText)
     {
         $this->slantedText = $slantedText;
+
+        return $this;
     }
 
     /**
      * @param int $slantedTextAngle
+     *
+     * @return HAxis
      */
     public function setSlantedTextAngle($slantedTextAngle)
     {
         $this->slantedTextAngle = $slantedTextAngle;
+
+        return $this;
     }
 
     /**
      * @param int $maxAlternation
+     *
+     * @return HAxis
      */
     public function setMaxAlternation($maxAlternation)
     {
         $this->maxAlternation = $maxAlternation;
+
+        return $this;
     }
 
     /**
      * @param int $maxTextLines
+     *
+     * @return HAxis
      */
     public function setMaxTextLines($maxTextLines)
     {
         $this->maxTextLines = $maxTextLines;
+
+        return $this;
     }
 
     /**
      * @param int $minTextSpacing
+     *
+     * @return HAxis
      */
     public function setMinTextSpacing($minTextSpacing)
     {
         $this->minTextSpacing = $minTextSpacing;
+
+        return $this;
     }
 }

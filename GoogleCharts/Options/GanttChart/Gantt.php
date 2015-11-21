@@ -186,81 +186,121 @@ class Gantt
 
     /**
      * @param int $barCornerRadius
+     *
+     * @return Gantt
      */
     public function setBarCornerRadius($barCornerRadius)
     {
         $this->barCornerRadius = $barCornerRadius;
+
+        return $this;
     }
 
     /**
      * @param int $barHeight
+     *
+     * @return Gantt
      */
     public function setBarHeight($barHeight)
     {
         $this->barHeight = $barHeight;
+
+        return $this;
     }
 
     /**
      * @param boolean $criticalPathEnabled
+     *
+     * @return Gantt
      */
     public function setCriticalPathEnabled($criticalPathEnabled)
     {
         $this->criticalPathEnabled = $criticalPathEnabled;
+
+        return $this;
     }
 
     /**
      * @param DateTime|int $defaultStartDate
+     *
+     * @return Gantt
      */
     public function setDefaultStartDate($defaultStartDate)
     {
         $this->defaultStartDate = $defaultStartDate;
+
+        return $this;
     }
 
     /**
      * @param int $labelMaxWidth
+     *
+     * @return Gantt
      */
     public function setLabelMaxWidth($labelMaxWidth)
     {
         $this->labelMaxWidth = $labelMaxWidth;
+
+        return $this;
     }
 
     /**
      * @param boolean $percentEnabled
+     *
+     * @return Gantt
      */
     public function setPercentEnabled($percentEnabled)
     {
         $this->percentEnabled = $percentEnabled;
+
+        return $this;
     }
 
     /**
      * @param boolean $shadowEnabled
+     *
+     * @return Gantt
      */
     public function setShadowEnabled($shadowEnabled)
     {
         $this->shadowEnabled = $shadowEnabled;
+
+        return $this;
     }
 
     /**
      * @param string $shadowColor
+     *
+     * @return Gantt
      */
     public function setShadowColor($shadowColor)
     {
         $this->shadowColor = $shadowColor;
+
+        return $this;
     }
 
     /**
      * @param int $shadowOffset
+     *
+     * @return Gantt
      */
     public function setShadowOffset($shadowOffset)
     {
         $this->shadowOffset = $shadowOffset;
+
+        return $this;
     }
 
     /**
      * @param int $trackHeight
+     *
+     * @return Gantt
      */
     public function setTrackHeight($trackHeight)
     {
         $this->trackHeight = $trackHeight;
+
+        return $this;
     }
 }

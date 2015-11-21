@@ -16,9 +16,13 @@ class PercentStyle
 
     /**
      * @param string $fill
+     *
+     * @return PercentStyle
      */
     public function setFill($fill)
     {
         $this->fill = $fill;
+
+        return $this;
     }
 }

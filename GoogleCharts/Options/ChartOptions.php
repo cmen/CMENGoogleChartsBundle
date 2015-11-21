@@ -32,25 +32,37 @@ class ChartOptions extends ChartOptionsDraw
 
     /**
      * @param int $width
+     *
+     * @return ChartOptions
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
+        return $this;
     }
 
     /**
      * @param int $height
+     *
+     * @return ChartOptions
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
+        return $this;
     }
 
     /**
      * @param boolean $forceIFrame
+     *
+     * @return ChartOptions
      */
     public function setForceIFrame($forceIFrame)
     {
         $this->forceIFrame = $forceIFrame;
+
+        return $this;
     }
 }

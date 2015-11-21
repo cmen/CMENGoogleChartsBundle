@@ -16,9 +16,13 @@ class InnerGridDarkTrack
 
     /**
      * @param string $fill
+     *
+     * @return InnerGridDarkTrack
      */
     public function setFill($fill)
     {
         $this->fill = $fill;
+
+        return $this;
     }
 }

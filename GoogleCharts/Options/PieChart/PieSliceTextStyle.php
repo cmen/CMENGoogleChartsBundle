@@ -26,25 +26,37 @@ class PieSliceTextStyle
 
     /**
      * @param string $color
+     *
+     * @return PieSliceTextStyle
      */
     public function setColor($color)
     {
         $this->color = $color;
+
+        return $this;
     }
 
     /**
      * @param string $fontName
+     *
+     * @return PieSliceTextStyle
      */
     public function setFontName($fontName)
     {
         $this->fontName = $fontName;
+
+        return $this;
     }
 
     /**
      * @param int $fontSize
+     *
+     * @return PieSliceTextStyle
      */
     public function setFontSize($fontSize)
     {
         $this->fontSize = $fontSize;
+
+        return $this;
     }
 }

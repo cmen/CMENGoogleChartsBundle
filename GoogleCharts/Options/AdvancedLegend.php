@@ -18,9 +18,13 @@ class AdvancedLegend extends Legend
 
     /**
      * @param int $maxLines
+     *
+     * @return AdvancedLegend
      */
     public function setMaxLines($maxLines)
     {
         $this->maxLines = $maxLines;
+
+        return $this;
     }
 }

@@ -247,9 +247,9 @@ class AnnotationChartOptions extends ChartOptionsDraw
 
     public function __construct()
     {
-        $this->table = new Table();
-
         parent::__construct();
+
+        $this->table = new Table();
     }
 
 
@@ -263,193 +263,289 @@ class AnnotationChartOptions extends ChartOptionsDraw
 
     /**
      * @param boolean $allowHtml
+     *
+     * @return AnnotationChartOptions
      */
     public function setAllowHtml($allowHtml)
     {
         $this->allowHtml = $allowHtml;
+
+        return $this;
     }
 
     /**
      * @param string $allValuesSuffix
+     *
+     * @return AnnotationChartOptions
      */
     public function setAllValuesSuffix($allValuesSuffix)
     {
         $this->allValuesSuffix = $allValuesSuffix;
+
+        return $this;
     }
 
     /**
      * @param int $annotationsWidth
+     *
+     * @return AnnotationChartOptions
      */
     public function setAnnotationsWidth($annotationsWidth)
     {
         $this->annotationsWidth = $annotationsWidth;
+
+        return $this;
     }
 
     /**
      * @param \string[] $colors
+     *
+     * @return AnnotationChartOptions
      */
     public function setColors($colors)
     {
         $this->colors = $colors;
+
+        return $this;
     }
 
     /**
      * @param string $dateFormat
+     *
+     * @return AnnotationChartOptions
      */
     public function setDateFormat($dateFormat)
     {
         $this->dateFormat = $dateFormat;
+
+        return $this;
     }
 
     /**
      * @param boolean $displayAnnotations
+     *
+     * @return AnnotationChartOptions
      */
     public function setDisplayAnnotations($displayAnnotations)
     {
         $this->displayAnnotations = $displayAnnotations;
+
+        return $this;
     }
 
     /**
      * @param boolean $displayAnnotationsFilter
+     *
+     * @return AnnotationChartOptions
      */
     public function setDisplayAnnotationsFilter($displayAnnotationsFilter)
     {
         $this->displayAnnotationsFilter = $displayAnnotationsFilter;
+
+        return $this;
     }
 
     /**
      * @param boolean $displayDateBarSeparator
+     *
+     * @return AnnotationChartOptions
      */
     public function setDisplayDateBarSeparator($displayDateBarSeparator)
     {
         $this->displayDateBarSeparator = $displayDateBarSeparator;
+
+        return $this;
     }
 
     /**
      * @param boolean $displayExactValues
+     *
+     * @return AnnotationChartOptions
      */
     public function setDisplayExactValues($displayExactValues)
     {
         $this->displayExactValues = $displayExactValues;
+
+        return $this;
     }
 
     /**
      * @param boolean $displayLegendDots
+     *
+     * @return AnnotationChartOptions
      */
     public function setDisplayLegendDots($displayLegendDots)
     {
         $this->displayLegendDots = $displayLegendDots;
+
+        return $this;
     }
 
     /**
      * @param boolean $displayLegendValues
+     *
+     * @return AnnotationChartOptions
      */
     public function setDisplayLegendValues($displayLegendValues)
     {
         $this->displayLegendValues = $displayLegendValues;
+
+        return $this;
     }
 
     /**
      * @param boolean $displayRangeSelector
+     *
+     * @return AnnotationChartOptions
      */
     public function setDisplayRangeSelector($displayRangeSelector)
     {
         $this->displayRangeSelector = $displayRangeSelector;
+
+        return $this;
     }
 
     /**
      * @param boolean $displayZoomButtons
+     *
+     * @return AnnotationChartOptions
      */
     public function setDisplayZoomButtons($displayZoomButtons)
     {
         $this->displayZoomButtons = $displayZoomButtons;
+
+        return $this;
     }
 
     /**
      * @param int $fill
+     *
+     * @return AnnotationChartOptions
      */
     public function setFill($fill)
     {
         $this->fill = $fill;
+
+        return $this;
     }
 
     /**
      * @param string $legendPosition
+     *
+     * @return AnnotationChartOptions
      */
     public function setLegendPosition($legendPosition)
     {
         $this->legendPosition = $legendPosition;
+
+        return $this;
     }
 
     /**
      * @param int $max
+     *
+     * @return AnnotationChartOptions
      */
     public function setMax($max)
     {
         $this->max = $max;
+
+        return $this;
     }
 
     /**
      * @param int $min
+     *
+     * @return AnnotationChartOptions
      */
     public function setMin($min)
     {
         $this->min = $min;
+
+        return $this;
     }
 
     /**
      * @param string $numberFormats
+     *
+     * @return AnnotationChartOptions
      */
     public function setNumberFormats($numberFormats)
     {
         $this->numberFormats = $numberFormats;
+
+        return $this;
     }
 
     /**
      * @param \int[] $scaleColumns
+     *
+     * @return AnnotationChartOptions
      */
     public function setScaleColumns($scaleColumns)
     {
         $this->scaleColumns = $scaleColumns;
+
+        return $this;
     }
 
     /**
      * @param string $scaleFormat
+     *
+     * @return AnnotationChartOptions
      */
     public function setScaleFormat($scaleFormat)
     {
         $this->scaleFormat = $scaleFormat;
+
+        return $this;
     }
 
     /**
      * @param string $scaleType
+     *
+     * @return AnnotationChartOptions
      */
     public function setScaleType($scaleType)
     {
         $this->scaleType = $scaleType;
+
+        return $this;
     }
 
     /**
      * @param DateTime $zoomStartTime
+     *
+     * @return AnnotationChartOptions
      */
     public function setZoomStartTime($zoomStartTime)
     {
         $this->zoomStartTime = $zoomStartTime;
+
+        return $this;
     }
 
     /**
      * @param int $thickness
+     *
+     * @return AnnotationChartOptions
      */
     public function setThickness($thickness)
     {
         $this->thickness = $thickness;
+
+        return $this;
     }
 
     /**
      * @param DateTime $zoomEndTime
+     *
+     * @return AnnotationChartOptions
      */
     public function setZoomEndTime($zoomEndTime)
     {
         $this->zoomEndTime = $zoomEndTime;
+
+        return $this;
     }
 }

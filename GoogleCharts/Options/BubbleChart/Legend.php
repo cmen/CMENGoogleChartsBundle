@@ -36,9 +36,13 @@ class Legend
 
     /**
      * @param string $position
+     *
+     * @return Legend
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 }

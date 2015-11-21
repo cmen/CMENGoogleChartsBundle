@@ -31,25 +31,37 @@ class RisingColor
 
     /**
      * @param string $fill
+     *
+     * @return RisingColor
      */
     public function setFill($fill)
     {
         $this->fill = $fill;
+
+        return $this;
     }
 
     /**
      * @param string $stroke
+     *
+     * @return RisingColor
      */
     public function setStroke($stroke)
     {
         $this->stroke = $stroke;
+
+        return $this;
     }
 
     /**
      * @param int $strokeWidth
+     *
+     * @return RisingColor
      */
     public function setStrokeWidth($strokeWidth)
     {
         $this->strokeWidth = $strokeWidth;
+
+        return $this;
     }
 }

@@ -14,9 +14,13 @@ class Milliseconds
 
     /**
      * @param string $format
+     *
+     * @return Milliseconds
      */
     public function setFormat($format)
     {
         $this->format = $format;
+
+        return $this;
     }
 }

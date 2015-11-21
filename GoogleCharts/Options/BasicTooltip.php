@@ -28,6 +28,7 @@ class BasicTooltip extends Tooltip
         $this->textStyle = new MediumTextStyle();
     }
 
+
     /**
      * @return MediumTextStyle
      */
@@ -38,9 +39,13 @@ class BasicTooltip extends Tooltip
 
     /**
      * @param string $trigger
+     *
+     * @return BasicTooltip
      */
     public function setTrigger($trigger)
     {
         $this->trigger = $trigger;
+
+        return $this;
     }
 }

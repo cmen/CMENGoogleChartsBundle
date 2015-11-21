@@ -46,33 +46,49 @@ class ColorAxis
 
     /**
      * @param int $minValue
+     *
+     * @return ColorAxis
      */
     public function setMinValue($minValue)
     {
         $this->minValue = $minValue;
+
+        return $this;
     }
 
     /**
      * @param int $maxValue
+     *
+     * @return ColorAxis
      */
     public function setMaxValue($maxValue)
     {
         $this->maxValue = $maxValue;
+
+        return $this;
     }
 
     /**
      * @param int[] $values
+     *
+     * @return ColorAxis
      */
     public function setValues($values)
     {
         $this->values = $values;
+
+        return $this;
     }
 
     /**
      * @param string[] $colors
+     *
+     * @return ColorAxis
      */
     public function setColors($colors)
     {
         $this->colors = $colors;
+
+        return $this;
     }
 }

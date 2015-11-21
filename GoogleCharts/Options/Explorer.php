@@ -71,33 +71,49 @@ class Explorer
 
     /**
      * @param array $actions
+     *
+     * @return Explorer
      */
     public function setActions($actions)
     {
         $this->actions = $actions;
+
+        return $this;
     }
 
     /**
      * @param string $axis
+     *
+     * @return Explorer
      */
     public function setAxis($axis)
     {
         $this->axis = $axis;
+
+        return $this;
     }
 
     /**
      * @param boolean $keepInBounds
+     *
+     * @return Explorer
      */
     public function setKeepInBounds($keepInBounds)
     {
         $this->keepInBounds = $keepInBounds;
+
+        return $this;
     }
 
     /**
      * @param float $maxZoomIn
+     *
+     * @return Explorer
      */
     public function setMaxZoomIn($maxZoomIn)
     {
         $this->maxZoomIn = $maxZoomIn;
+
+        return $this;
     }
 }

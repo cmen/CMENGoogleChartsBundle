@@ -39,9 +39,13 @@ class Legend
 
     /**
      * @param string $numberFormat
+     *
+     * @return Legend
      */
     public function setNumberFormat($numberFormat)
     {
         $this->numberFormat = $numberFormat;
+
+        return $this;
     }
 }

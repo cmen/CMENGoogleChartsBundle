@@ -29,17 +29,25 @@ class ViewWindow
 
     /**
      * @param int|int[] $max
+     *
+     * @return ViewWindow
      */
     public function setMax($max)
     {
         $this->max = $max;
+
+        return $this;
     }
 
     /**
      * @param int|int[] $min
+     *
+     * @return ViewWindow
      */
     public function setMin($min)
     {
         $this->min = $min;
+
+        return $this;
     }
 }

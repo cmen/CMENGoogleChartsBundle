@@ -213,49 +213,73 @@ class ColumnChartOptions extends AdvancedChartOptions
 
     /**
      * @param float $dataOpacity
+     *
+     * @return ColumnChartOptions
      */
     public function setDataOpacity($dataOpacity)
     {
         $this->dataOpacity = $dataOpacity;
+
+        return $this;
     }
 
     /**
      * @param string $focusTarget
+     *
+     * @return ColumnChartOptions
      */
     public function setFocusTarget($focusTarget)
     {
         $this->focusTarget = $focusTarget;
+
+        return $this;
     }
 
     /**
      * @param bool|string $isStacked
+     *
+     * @return ColumnChartOptions
      */
     public function setIsStacked($isStacked)
     {
         $this->isStacked = $isStacked;
+
+        return $this;
     }
 
     /**
      * @param string $orientation
+     *
+     * @return ColumnChartOptions
      */
     public function setOrientation($orientation)
     {
         $this->orientation = $orientation;
+
+        return $this;
     }
 
     /**
      * @param boolean $reverseCategories
+     *
+     * @return ColumnChartOptions
      */
     public function setReverseCategories($reverseCategories)
     {
         $this->reverseCategories = $reverseCategories;
+
+        return $this;
     }
 
     /**
      * @param array $trendlines
+     *
+     * @return ColumnChartOptions
      */
     public function setTrendlines($trendlines)
     {
         $this->trendlines = $trendlines;
+
+        return $this;
     }
 }

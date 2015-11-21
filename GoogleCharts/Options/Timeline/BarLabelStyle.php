@@ -20,17 +20,25 @@ class BarLabelStyle
 
     /**
      * @param string $fontName
+     *
+     * @return BarLabelStyle
      */
     public function setFontName($fontName)
     {
         $this->fontName = $fontName;
+
+        return $this;
     }
 
     /**
      * @param int $fontSize
+     *
+     * @return BarLabelStyle
      */
     public function setFontSize($fontSize)
     {
         $this->fontSize = $fontSize;
+
+        return $this;
     }
 }

@@ -232,193 +232,289 @@ class TreeMapChartOptions extends ChartOptions
 
     /**
      * @param boolean $useWeightedAverageForAggregation
+     *
+     * @return TreeMapChartOptions
      */
     public function setUseWeightedAverageForAggregation($useWeightedAverageForAggregation)
     {
         $this->useWeightedAverageForAggregation = $useWeightedAverageForAggregation;
+
+        return $this;
     }
 
     /**
      * @param string $title
+     *
+     * @return TreeMapChartOptions
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 
     /**
      * @param string $fontColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setFontColor($fontColor)
     {
         $this->fontColor = $fontColor;
+
+        return $this;
     }
 
     /**
      * @param string $fontFamily
+     *
+     * @return TreeMapChartOptions
      */
     public function setFontFamily($fontFamily)
     {
         $this->fontFamily = $fontFamily;
+
+        return $this;
     }
 
     /**
      * @param int $fontSize
+     *
+     * @return TreeMapChartOptions
      */
     public function setFontSize($fontSize)
     {
         $this->fontSize = $fontSize;
+
+        return $this;
     }
 
     /**
      * @param string $headerColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setHeaderColor($headerColor)
     {
         $this->headerColor = $headerColor;
+
+        return $this;
     }
 
     /**
      * @param int $headerHeight
+     *
+     * @return TreeMapChartOptions
      */
     public function setHeaderHeight($headerHeight)
     {
         $this->headerHeight = $headerHeight;
+
+        return $this;
     }
 
     /**
      * @param string $headerHighlightColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setHeaderHighlightColor($headerHighlightColor)
     {
         $this->headerHighlightColor = $headerHighlightColor;
+
+        return $this;
     }
 
     /**
      * @param boolean $highlightOnMouseOver
+     *
+     * @return TreeMapChartOptions
      */
     public function setHighlightOnMouseOver($highlightOnMouseOver)
     {
         $this->highlightOnMouseOver = $highlightOnMouseOver;
+
+        return $this;
     }
 
     /**
      * @param float $hintOpacity
+     *
+     * @return TreeMapChartOptions
      */
     public function setHintOpacity($hintOpacity)
     {
         $this->hintOpacity = $hintOpacity;
+
+        return $this;
     }
 
     /**
      * @param string $maxColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setMaxColor($maxColor)
     {
         $this->maxColor = $maxColor;
+
+        return $this;
     }
 
     /**
      * @param int $maxDepth
+     *
+     * @return TreeMapChartOptions
      */
     public function setMaxDepth($maxDepth)
     {
         $this->maxDepth = $maxDepth;
+
+        return $this;
     }
 
     /**
      * @param string $maxHighlightColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setMaxHighlightColor($maxHighlightColor)
     {
         $this->maxHighlightColor = $maxHighlightColor;
+
+        return $this;
     }
 
     /**
      * @param int $maxPostDepth
+     *
+     * @return TreeMapChartOptions
      */
     public function setMaxPostDepth($maxPostDepth)
     {
         $this->maxPostDepth = $maxPostDepth;
+
+        return $this;
     }
 
     /**
      * @param int $maxColorValue
+     *
+     * @return TreeMapChartOptions
      */
     public function setMaxColorValue($maxColorValue)
     {
         $this->maxColorValue = $maxColorValue;
+
+        return $this;
     }
 
     /**
      * @param string $midColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setMidColor($midColor)
     {
         $this->midColor = $midColor;
+
+        return $this;
     }
 
     /**
      * @param string $midHighlightColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setMidHighlightColor($midHighlightColor)
     {
         $this->midHighlightColor = $midHighlightColor;
+
+        return $this;
     }
 
     /**
      * @param string $minColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setMinColor($minColor)
     {
         $this->minColor = $minColor;
+
+        return $this;
     }
 
     /**
      * @param string $minHighlightColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setMinHighlightColor($minHighlightColor)
     {
         $this->minHighlightColor = $minHighlightColor;
+
+        return $this;
     }
 
     /**
      * @param int $minColorValue
+     *
+     * @return TreeMapChartOptions
      */
     public function setMinColorValue($minColorValue)
     {
         $this->minColorValue = $minColorValue;
+
+        return $this;
     }
 
     /**
      * @param string $noColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setNoColor($noColor)
     {
         $this->noColor = $noColor;
+
+        return $this;
     }
 
     /**
      * @param string $noHighlightColor
+     *
+     * @return TreeMapChartOptions
      */
     public function setNoHighlightColor($noHighlightColor)
     {
         $this->noHighlightColor = $noHighlightColor;
+
+        return $this;
     }
 
     /**
      * @param boolean $showScale
+     *
+     * @return TreeMapChartOptions
      */
     public function setShowScale($showScale)
     {
         $this->showScale = $showScale;
+
+        return $this;
     }
 
     /**
      * @param boolean $showTooltips
+     *
+     * @return TreeMapChartOptions
      */
     public function setShowTooltips($showTooltips)
     {
         $this->showTooltips = $showTooltips;
+
+        return $this;
     }
 }

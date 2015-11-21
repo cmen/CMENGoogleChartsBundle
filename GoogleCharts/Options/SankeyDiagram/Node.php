@@ -72,49 +72,73 @@ class Node
 
     /**
      * @param boolean $interactivity
+     *
+     * @return Node
      */
     public function setInteractivity($interactivity)
     {
         $this->interactivity = $interactivity;
+
+        return $this;
     }
 
     /**
      * @param int $labelPadding
+     *
+     * @return Node
      */
     public function setLabelPadding($labelPadding)
     {
         $this->labelPadding = $labelPadding;
+
+        return $this;
     }
 
     /**
      * @param int $nodePadding
+     *
+     * @return Node
      */
     public function setNodePadding($nodePadding)
     {
         $this->nodePadding = $nodePadding;
+
+        return $this;
     }
 
     /**
      * @param int $width
+     *
+     * @return Node
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
+        return $this;
     }
 
     /**
      * @param string[] $colors
+     *
+     * @return Node
      */
     public function setColors($colors)
     {
         $this->colors = $colors;
+
+        return $this;
     }
 
     /**
      * @param string $colorMode
+     *
+     * @return Node
      */
     public function setColorMode($colorMode)
     {
         $this->colorMode = $colorMode;
+
+        return $this;
     }
 }

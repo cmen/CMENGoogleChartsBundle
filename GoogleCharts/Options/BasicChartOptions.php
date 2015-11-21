@@ -18,9 +18,13 @@ class BasicChartOptions extends ChartOptions
 
     /**
      * @param boolean $enableInteractivity
+     *
+     * @return BasicChartOptions
      */
     public function setEnableInteractivity($enableInteractivity)
     {
         $this->enableInteractivity = $enableInteractivity;
+
+        return $this;
     }
 }

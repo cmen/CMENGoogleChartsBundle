@@ -16,9 +16,13 @@ class AdvancedAnnotations extends Annotations
 
     /**
      * @param boolean $alwaysOutside
+     *
+     * @return AdvancedAnnotations
      */
     public function setAlwaysOutside($alwaysOutside)
     {
         $this->alwaysOutside = $alwaysOutside;
+
+        return $this;
     }
 }

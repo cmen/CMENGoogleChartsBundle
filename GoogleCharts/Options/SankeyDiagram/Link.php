@@ -52,17 +52,25 @@ class Link
 
     /**
      * @param string[] $colors
+     *
+     * @return Link
      */
     public function setColors($colors)
     {
         $this->colors = $colors;
+
+        return $this;
     }
 
     /**
      * @param string $colorMode
+     *
+     * @return Link
      */
     public function setColorMode($colorMode)
     {
         $this->colorMode = $colorMode;
+
+        return $this;
     }
 }

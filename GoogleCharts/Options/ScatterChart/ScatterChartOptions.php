@@ -241,81 +241,121 @@ class ScatterChartOptions extends AdvancedChartOptions
 
     /**
      * @param string $aggregationTarget
+     *
+     * @return ScatterChartOptions
      */
     public function setAggregationTarget($aggregationTarget)
     {
         $this->aggregationTarget = $aggregationTarget;
+
+        return $this;
     }
 
     /**
      * @param string $curveType
+     *
+     * @return ScatterChartOptions
      */
     public function setCurveType($curveType)
     {
         $this->curveType = $curveType;
+
+        return $this;
     }
 
     /**
      * @param float $dataOpacity
+     *
+     * @return ScatterChartOptions
      */
     public function setDataOpacity($dataOpacity)
     {
         $this->dataOpacity = $dataOpacity;
+
+        return $this;
     }
 
     /**
      * @param int $lineWidth
+     *
+     * @return ScatterChartOptions
      */
     public function setLineWidth($lineWidth)
     {
         $this->lineWidth = $lineWidth;
+
+        return $this;
     }
 
     /**
      * @param string $orientation
+     *
+     * @return ScatterChartOptions
      */
     public function setOrientation($orientation)
     {
         $this->orientation = $orientation;
+
+        return $this;
     }
 
     /**
      * @param string $pointShape
+     *
+     * @return ScatterChartOptions
      */
     public function setPointShape($pointShape)
     {
         $this->pointShape = $pointShape;
+
+        return $this;
     }
 
     /**
      * @param int $pointSize
+     *
+     * @return ScatterChartOptions
      */
     public function setPointSize($pointSize)
     {
         $this->pointSize = $pointSize;
+
+        return $this;
     }
 
     /**
      * @param boolean $pointsVisible
+     *
+     * @return ScatterChartOptions
      */
     public function setPointsVisible($pointsVisible)
     {
         $this->pointsVisible = $pointsVisible;
+
+        return $this;
     }
 
     /**
      * @param string $selectionMode
+     *
+     * @return ScatterChartOptions
      */
     public function setSelectionMode($selectionMode)
     {
         $this->selectionMode = $selectionMode;
+
+        return $this;
     }
 
     /**
      * @param array $trendlines
+     *
+     * @return ScatterChartOptions
      */
     public function setTrendlines($trendlines)
     {
         $this->trendlines = $trendlines;
+
+        return $this;
     }
 }

@@ -24,17 +24,25 @@ class OldData
 
     /**
      * @param float $opacity
+     *
+     * @return OldData
      */
     public function setOpacity($opacity)
     {
         $this->opacity = $opacity;
+
+        return $this;
     }
 
     /**
      * @param boolean $inCenter
+     *
+     * @return OldData
      */
     public function setInCenter($inCenter)
     {
         $this->inCenter = $inCenter;
+
+        return $this;
     }
 }

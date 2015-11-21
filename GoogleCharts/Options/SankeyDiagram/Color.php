@@ -38,33 +38,49 @@ class Color
 
     /**
      * @param string $fill
+     *
+     * @return Color
      */
     public function setFill($fill)
     {
         $this->fill = $fill;
+
+        return $this;
     }
 
     /**
      * @param float $fillOpacity
+     *
+     * @return Color
      */
     public function setFillOpacity($fillOpacity)
     {
         $this->fillOpacity = $fillOpacity;
+
+        return $this;
     }
 
     /**
      * @param string $stroke
+     *
+     * @return Color
      */
     public function setStroke($stroke)
     {
         $this->stroke = $stroke;
+
+        return $this;
     }
 
     /**
      * @param int $strokeWidth
+     *
+     * @return Color
      */
     public function setStrokeWidth($strokeWidth)
     {
         $this->strokeWidth = $strokeWidth;
+
+        return $this;
     }
 }

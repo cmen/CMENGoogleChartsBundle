@@ -27,25 +27,37 @@ class TextStyle
 
     /**
      * @param string $color
+     *
+     * @return TextStyle
      */
     public function setColor($color)
     {
         $this->color = $color;
+
+        return $this;
     }
 
     /**
      * @param string $fontName
+     *
+     * @return TextStyle
      */
     public function setFontName($fontName)
     {
         $this->fontName = $fontName;
+
+        return $this;
     }
 
     /**
      * @param int $fontSize
+     *
+     * @return TextStyle
      */
     public function setFontSize($fontSize)
     {
         $this->fontSize = $fontSize;
+
+        return $this;
     }
 }

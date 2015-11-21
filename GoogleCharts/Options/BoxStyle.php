@@ -49,33 +49,49 @@ class BoxStyle
 
     /**
      * @param string $stroke
+     *
+     * @return BoxStyle
      */
     public function setStroke($stroke)
     {
         $this->stroke = $stroke;
+
+        return $this;
     }
 
     /**
      * @param int $strokeWidth
+     *
+     * @return BoxStyle
      */
     public function setStrokeWidth($strokeWidth)
     {
         $this->strokeWidth = $strokeWidth;
+
+        return $this;
     }
 
     /**
      * @param int $rx
+     *
+     * @return BoxStyle
      */
     public function setRx($rx)
     {
         $this->rx = $rx;
+
+        return $this;
     }
 
     /**
      * @param int $ry
+     *
+     * @return BoxStyle
      */
     public function setRy($ry)
     {
         $this->ry = $ry;
+
+        return $this;
     }
 }

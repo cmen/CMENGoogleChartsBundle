@@ -19,9 +19,13 @@ class Tooltip
 
     /**
      * @param boolean $isHtml
+     *
+     * @return Tooltip
      */
     public function setIsHtml($isHtml)
     {
         $this->isHtml = $isHtml;
+
+        return $this;
     }
 }

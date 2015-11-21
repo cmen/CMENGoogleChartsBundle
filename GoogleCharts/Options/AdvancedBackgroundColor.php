@@ -16,9 +16,13 @@ class AdvancedBackgroundColor extends BasicBackgroundColor
 
     /**
      * @param string $fill
+     *
+     * @return AdvancedBackgroundColor
      */
     public function setFill($fill)
     {
         $this->fill = $fill;
+
+        return $this;
     }
 }

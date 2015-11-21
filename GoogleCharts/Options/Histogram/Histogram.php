@@ -28,27 +28,40 @@ class Histogram
      */
     protected $lastBucketPercentile;
 
+
     /**
      * @param int $bucketSize
+     *
+     * @return Histogram
      */
     public function setBucketSize($bucketSize)
     {
         $this->bucketSize = $bucketSize;
+
+        return $this;
     }
 
     /**
      * @param boolean $hideBucketItems
+     *
+     * @return Histogram
      */
     public function setHideBucketItems($hideBucketItems)
     {
         $this->hideBucketItems = $hideBucketItems;
+
+        return $this;
     }
 
     /**
      * @param int $lastBucketPercentile
+     *
+     * @return Histogram
      */
     public function setLastBucketPercentile($lastBucketPercentile)
     {
         $this->lastBucketPercentile = $lastBucketPercentile;
+
+        return $this;
     }
 }

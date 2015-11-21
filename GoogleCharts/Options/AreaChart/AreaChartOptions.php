@@ -216,73 +216,109 @@ class AreaChartOptions extends LineOptions
 
     /**
      * @param float $areaOpacity
+     *
+     * @return AreaChartOptions
      */
     public function setAreaOpacity($areaOpacity)
     {
         $this->areaOpacity = $areaOpacity;
+
+        return $this;
     }
 
     /**
      * @param float $dataOpacity
+     *
+     * @return AreaChartOptions
      */
     public function setDataOpacity($dataOpacity)
     {
         $this->dataOpacity = $dataOpacity;
+
+        return $this;
     }
 
     /**
      * @param string $focusTarget
+     *
+     * @return AreaChartOptions
      */
     public function setFocusTarget($focusTarget)
     {
         $this->focusTarget = $focusTarget;
+
+        return $this;
     }
 
     /**
      * @param boolean $interpolateNulls
+     *
+     * @return AreaChartOptions
      */
     public function setInterpolateNulls($interpolateNulls)
     {
         $this->interpolateNulls = $interpolateNulls;
+
+        return $this;
     }
 
     /**
      * @param bool|string $isStacked
+     *
+     * @return AreaChartOptions
      */
     public function setIsStacked($isStacked)
     {
         $this->isStacked = $isStacked;
+
+        return $this;
     }
 
     /**
      * @param string $orientation
+     *
+     * @return AreaChartOptions
      */
     public function setOrientation($orientation)
     {
         $this->orientation = $orientation;
+
+        return $this;
     }
 
     /**
      * @param boolean $reverseCategories
+     *
+     * @return AreaChartOptions
      */
     public function setReverseCategories($reverseCategories)
     {
         $this->reverseCategories = $reverseCategories;
+
+        return $this;
     }
 
     /**
      * @param string $selectionMode
+     *
+     * @return AreaChartOptions
      */
     public function setSelectionMode($selectionMode)
     {
         $this->selectionMode = $selectionMode;
+
+        return $this;
     }
 
     /**
      * @param array $vAxes
+     *
+     * @return AreaChartOptions
      */
     public function setVAxes($vAxes)
     {
         $this->vAxes = $vAxes;
+
+        return $this;
     }
 }

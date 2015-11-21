@@ -115,25 +115,37 @@ class HAxis
 
     /**
      * @param string $textPosition
+     *
+     * @return HAxis
      */
     public function setTextPosition($textPosition)
     {
         $this->textPosition = $textPosition;
+
+        return $this;
     }
 
     /**
      * @param string $title
+     *
+     * @return HAxis
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 
     /**
      * @param string $viewWindowMode
+     *
+     * @return HAxis
      */
     public function setViewWindowMode($viewWindowMode)
     {
         $this->viewWindowMode = $viewWindowMode;
+
+        return $this;
     }
 }

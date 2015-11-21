@@ -62,17 +62,25 @@ class GanttChartOptions extends ChartOptionsDraw
 
     /**
      * @param int $height
+     *
+     * @return GanttChartOptions
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
+        return $this;
     }
 
     /**
      * @param int $width
+     *
+     * @return GanttChartOptions
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
+        return $this;
     }
 }

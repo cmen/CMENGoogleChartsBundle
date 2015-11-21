@@ -255,97 +255,145 @@ class ComboChartOptions extends LineOptions
 
     /**
      * @param string $curveType
+     *
+     * @return ComboChartOptions
      */
     public function setCurveType($curveType)
     {
         $this->curveType = $curveType;
+
+        return $this;
     }
 
     /**
      * @param float $dataOpacity
+     *
+     * @return ComboChartOptions
      */
     public function setDataOpacity($dataOpacity)
     {
         $this->dataOpacity = $dataOpacity;
+
+        return $this;
     }
 
     /**
      * @param string $focusTarget
+     *
+     * @return ComboChartOptions
      */
     public function setFocusTarget($focusTarget)
     {
         $this->focusTarget = $focusTarget;
+
+        return $this;
     }
 
     /**
      * @param bool $interpolateNulls
+     *
+     * @return ComboChartOptions
      */
     public function setInterpolateNulls($interpolateNulls)
     {
         $this->interpolateNulls = $interpolateNulls;
+
+        return $this;
     }
 
     /**
      * @param string $orientation
+     *
+     * @return ComboChartOptions
      */
     public function setOrientation($orientation)
     {
         $this->orientation = $orientation;
+
+        return $this;
     }
 
     /**
      * @param boolean $reverseCategories
+     *
+     * @return ComboChartOptions
      */
     public function setReverseCategories($reverseCategories)
     {
         $this->reverseCategories = $reverseCategories;
+
+        return $this;
     }
 
     /**
      * @param string $selectionMode
+     *
+     * @return ComboChartOptions
      */
     public function setSelectionMode($selectionMode)
     {
         $this->selectionMode = $selectionMode;
+
+        return $this;
     }
 
     /**
      * @param array $trendlines
+     *
+     * @return ComboChartOptions
      */
     public function setTrendlines($trendlines)
     {
         $this->trendlines = $trendlines;
+
+        return $this;
     }
 
     /**
      * @param array $vAxes
+     *
+     * @return ComboChartOptions
      */
     public function setVAxes($vAxes)
     {
         $this->vAxes = $vAxes;
+
+        return $this;
     }
 
     /**
      * @param float $areaOpacity
+     *
+     * @return ComboChartOptions
      */
     public function setAreaOpacity($areaOpacity)
     {
         $this->areaOpacity = $areaOpacity;
+
+        return $this;
     }
 
     /**
      * @param boolean $isStacked
+     *
+     * @return ComboChartOptions
      */
     public function setIsStacked($isStacked)
     {
         $this->isStacked = $isStacked;
+
+        return $this;
     }
 
     /**
      * @param string $seriesType
+     *
+     * @return ComboChartOptions
      */
     public function setSeriesType($seriesType)
     {
         $this->seriesType = $seriesType;
+
+        return $this;
     }
 }

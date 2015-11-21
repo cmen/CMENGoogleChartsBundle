@@ -50,9 +50,13 @@ class Candlestick
 
     /**
      * @param boolean $hollowIsRising
+     *
+     * @return Candlestick
      */
     public function setHollowIsRising($hollowIsRising)
     {
         $this->hollowIsRising = $hollowIsRising;
+
+        return $this;
     }
 }

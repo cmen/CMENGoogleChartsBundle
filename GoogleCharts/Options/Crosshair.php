@@ -70,33 +70,49 @@ class Crosshair
 
     /**
      * @param string $color
+     *
+     * @return Crosshair
      */
     public function setColor($color)
     {
         $this->color = $color;
+
+        return $this;
     }
 
     /**
      * @param float $opacity
+     *
+     * @return Crosshair
      */
     public function setOpacity($opacity)
     {
         $this->opacity = $opacity;
+
+        return $this;
     }
 
     /**
      * @param string $orientation
+     *
+     * @return Crosshair
      */
     public function setOrientation($orientation)
     {
         $this->orientation = $orientation;
+
+        return $this;
     }
 
     /**
      * @param string $trigger
+     *
+     * @return Crosshair
      */
     public function setTrigger($trigger)
     {
         $this->trigger = $trigger;
+
+        return $this;
     }
 }

@@ -102,17 +102,25 @@ class Annotations
 
     /**
      * @param boolean $highContrast
+     *
+     * @return Annotations
      */
     public function setHighContrast($highContrast)
     {
         $this->highContrast = $highContrast;
+
+        return $this;
     }
 
     /**
      * @param string $style
+     *
+     * @return Annotations
      */
     public function setStyle($style)
     {
         $this->style = $style;
+
+        return $this;
     }
 }

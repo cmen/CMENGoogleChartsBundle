@@ -48,41 +48,61 @@ class WordTree
 
     /**
      * @param string $format
+     *
+     * @return WordTree
      */
     public function setFormat($format)
     {
         $this->format = $format;
+
+        return $this;
     }
 
     /**
      * @param string $sentenceRegex
+     *
+     * @return WordTree
      */
     public function setSentenceRegex($sentenceRegex)
     {
         $this->sentenceRegex = $sentenceRegex;
+
+        return $this;
     }
 
     /**
      * @param string $type
+     *
+     * @return WordTree
      */
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
     }
 
     /**
      * @param string $word
+     *
+     * @return WordTree
      */
     public function setWord($word)
     {
         $this->word = $word;
+
+        return $this;
     }
 
     /**
      * @param string $wordRegex
+     *
+     * @return WordTree
      */
     public function setWordRegex($wordRegex)
     {
         $this->wordRegex = $wordRegex;
+
+        return $this;
     }
 }

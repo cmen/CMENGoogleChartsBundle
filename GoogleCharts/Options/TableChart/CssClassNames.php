@@ -67,65 +67,97 @@ class CssClassNames
 
     /**
      * @param string $headerRow
+     *
+     * @return CssClassNames
      */
     public function setHeaderRow($headerRow)
     {
         $this->headerRow = $headerRow;
+
+        return $this;
     }
 
     /**
      * @param string $tableRow
+     *
+     * @return CssClassNames
      */
     public function setTableRow($tableRow)
     {
         $this->tableRow = $tableRow;
+
+        return $this;
     }
 
     /**
      * @param string $oddTableRow
+     *
+     * @return CssClassNames
      */
     public function setOddTableRow($oddTableRow)
     {
         $this->oddTableRow = $oddTableRow;
+
+        return $this;
     }
 
     /**
      * @param string $selectedTableRow
+     *
+     * @return CssClassNames
      */
     public function setSelectedTableRow($selectedTableRow)
     {
         $this->selectedTableRow = $selectedTableRow;
+
+        return $this;
     }
 
     /**
      * @param string $hoverTableRow
+     *
+     * @return CssClassNames
      */
     public function setHoverTableRow($hoverTableRow)
     {
         $this->hoverTableRow = $hoverTableRow;
+
+        return $this;
     }
 
     /**
      * @param string $headerCell
+     *
+     * @return CssClassNames
      */
     public function setHeaderCell($headerCell)
     {
         $this->headerCell = $headerCell;
+
+        return $this;
     }
 
     /**
      * @param string $tableCell
+     *
+     * @return CssClassNames
      */
     public function setTableCell($tableCell)
     {
         $this->tableCell = $tableCell;
+
+        return $this;
     }
 
     /**
      * @param string $rowNumberCell
+     *
+     * @return CssClassNames
      */
     public function setRowNumberCell($rowNumberCell)
     {
         $this->rowNumberCell = $rowNumberCell;
+
+        return $this;
     }
 }

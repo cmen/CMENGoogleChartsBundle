@@ -70,9 +70,13 @@ class CalendarChartOptions extends ChartOptions
 
     /**
      * @param string $title
+     *
+     * @return CalendarChartOptions
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 }

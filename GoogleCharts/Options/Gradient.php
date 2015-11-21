@@ -59,57 +59,85 @@ class Gradient
 
     /**
      * @param string $color1
+     *
+     * @return Gradient
      */
     public function setColor1($color1)
     {
         $this->color1 = $color1;
+
+        return $this;
     }
 
     /**
      * @param string $color2
+     *
+     * @return Gradient
      */
     public function setColor2($color2)
     {
         $this->color2 = $color2;
+
+        return $this;
     }
 
     /**
      * @param string $x1
+     *
+     * @return Gradient
      */
     public function setX1($x1)
     {
         $this->x1 = $x1;
+
+        return $this;
     }
 
     /**
      * @param string $y1
+     *
+     * @return Gradient
      */
     public function setY1($y1)
     {
         $this->y1 = $y1;
+
+        return $this;
     }
 
     /**
      * @param string $x2
+     *
+     * @return Gradient
      */
     public function setX2($x2)
     {
         $this->x2 = $x2;
+
+        return $this;
     }
 
     /**
      * @param string $y2
+     *
+     * @return Gradient
      */
     public function setY2($y2)
     {
         $this->y2 = $y2;
+
+        return $this;
     }
 
     /**
      * @param boolean $useObjectBoundingBoxUnits
+     *
+     * @return Gradient
      */
     public function setUseObjectBoundingBoxUnits($useObjectBoundingBoxUnits)
     {
         $this->useObjectBoundingBoxUnits = $useObjectBoundingBoxUnits;
+
+        return $this;
     }
 }

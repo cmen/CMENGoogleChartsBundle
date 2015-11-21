@@ -31,25 +31,37 @@ class FallingColor
 
     /**
      * @param string $fill
+     *
+     * @return FallingColor
      */
     public function setFill($fill)
     {
         $this->fill = $fill;
+
+        return $this;
     }
 
     /**
      * @param string $stroke
+     *
+     * @return FallingColor
      */
     public function setStroke($stroke)
     {
         $this->stroke = $stroke;
+
+        return $this;
     }
 
     /**
      * @param int $strokeWidth
+     *
+     * @return FallingColor
      */
     public function setStrokeWidth($strokeWidth)
     {
         $this->strokeWidth = $strokeWidth;
+
+        return $this;
     }
 }

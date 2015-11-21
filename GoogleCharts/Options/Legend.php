@@ -58,17 +58,25 @@ class Legend
 
     /**
      * @param string $alignment
+     *
+     * @return Legend
      */
     public function setAlignment($alignment)
     {
         $this->alignment = $alignment;
+
+        return $this;
     }
 
     /**
      * @param string $position
+     *
+     * @return Legend
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 }

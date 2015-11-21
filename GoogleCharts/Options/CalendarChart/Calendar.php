@@ -150,41 +150,61 @@ class Calendar
 
     /**
      * @param int $cellSize
+     *
+     * @return Calendar
      */
     public function setCellSize($cellSize)
     {
         $this->cellSize = $cellSize;
+
+        return $this;
     }
 
     /**
      * @param int $dayOfWeekRightSpace
+     *
+     * @return Calendar
      */
     public function setDayOfWeekRightSpace($dayOfWeekRightSpace)
     {
         $this->dayOfWeekRightSpace = $dayOfWeekRightSpace;
+
+        return $this;
     }
 
     /**
      * @param string $daysOfWeek
+     *
+     * @return Calendar
      */
     public function setDaysOfWeek($daysOfWeek)
     {
         $this->daysOfWeek = $daysOfWeek;
+
+        return $this;
     }
 
     /**
      * @param int $underMonthSpace
+     *
+     * @return Calendar
      */
     public function setUnderMonthSpace($underMonthSpace)
     {
         $this->underMonthSpace = $underMonthSpace;
+
+        return $this;
     }
 
     /**
      * @param int $underYearSpace
+     *
+     * @return Calendar
      */
     public function setUnderYearSpace($underYearSpace)
     {
         $this->underYearSpace = $underYearSpace;
+
+        return $this;
     }
 }

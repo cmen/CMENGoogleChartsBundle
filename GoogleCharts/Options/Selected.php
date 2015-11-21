@@ -23,17 +23,25 @@ class Selected
 
     /**
      * @param string $color
+     *
+     * @return Selected
      */
     public function setColor($color)
     {
         $this->color = $color;
+
+        return $this;
     }
 
     /**
      * @param float $opacity
+     *
+     * @return Selected
      */
     public function setOpacity($opacity)
     {
         $this->opacity = $opacity;
+
+        return $this;
     }
 }

@@ -89,33 +89,49 @@ class AdvancedChartOptions extends MediumChartOptions
 
     /**
      * @param string $axisTitlesPosition
+     *
+     * @return AdvancedChartOptions
      */
     public function setAxisTitlesPosition($axisTitlesPosition)
     {
         $this->axisTitlesPosition = $axisTitlesPosition;
+
+        return $this;
     }
 
     /**
      * @param array $series
+     *
+     * @return AdvancedChartOptions
      */
     public function setSeries($series)
     {
         $this->series = $series;
+
+        return $this;
     }
 
     /**
      * @param string $theme
+     *
+     * @return AdvancedChartOptions
      */
     public function setTheme($theme)
     {
         $this->theme = $theme;
+
+        return $this;
     }
 
     /**
      * @param string $titlePosition
+     *
+     * @return AdvancedChartOptions
      */
     public function setTitlePosition($titlePosition)
     {
         $this->titlePosition = $titlePosition;
+
+        return $this;
     }
 }

@@ -17,9 +17,13 @@ class NewData
 
     /**
      * @param float $opacity
+     *
+     * @return NewData
      */
     public function setOpacity($opacity)
     {
         $this->opacity = $opacity;
+
+        return $this;
     }
 }

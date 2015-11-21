@@ -79,41 +79,61 @@ class Timeline
 
     /**
      * @param boolean $colorByRowLabel
+     *
+     * @return Timeline
      */
     public function setColorByRowLabel($colorByRowLabel)
     {
         $this->colorByRowLabel = $colorByRowLabel;
+
+        return $this;
     }
 
     /**
      * @param boolean $showBarLabels
+     *
+     * @return Timeline
      */
     public function setShowBarLabels($showBarLabels)
     {
         $this->showBarLabels = $showBarLabels;
+
+        return $this;
     }
 
     /**
      * @param boolean $showRowLabels
+     *
+     * @return Timeline
      */
     public function setShowRowLabels($showRowLabels)
     {
         $this->showRowLabels = $showRowLabels;
+
+        return $this;
     }
 
     /**
      * @param string $singleColor
+     *
+     * @return Timeline
      */
     public function setSingleColor($singleColor)
     {
         $this->singleColor = $singleColor;
+
+        return $this;
     }
 
     /**
      * @param boolean $groupByRowLabel
+     *
+     * @return Timeline
      */
     public function setGroupByRowLabel($groupByRowLabel)
     {
         $this->groupByRowLabel = $groupByRowLabel;
+
+        return $this;
     }
 }

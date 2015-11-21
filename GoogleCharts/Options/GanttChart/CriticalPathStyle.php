@@ -23,17 +23,25 @@ class CriticalPathStyle
 
     /**
      * @param string $stroke
+     *
+     * @return CriticalPathStyle
      */
     public function setStroke($stroke)
     {
         $this->stroke = $stroke;
+
+        return $this;
     }
 
     /**
      * @param float $strokeWidth
+     *
+     * @return CriticalPathStyle
      */
     public function setStrokeWidth($strokeWidth)
     {
         $this->strokeWidth = $strokeWidth;
+
+        return $this;
     }
 }

@@ -40,9 +40,13 @@ class BasicTooltip
 
     /**
      * @param string $trigger
+     *
+     * @return BasicTooltip
      */
     public function setTrigger($trigger)
     {
         $this->trigger = $trigger;
+
+        return $this;
     }
 }

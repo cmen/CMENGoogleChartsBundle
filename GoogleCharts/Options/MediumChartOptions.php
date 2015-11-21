@@ -96,41 +96,61 @@ class MediumChartOptions extends BasicChartOptions
 
     /**
      * @param string $title
+     *
+     * @return MediumChartOptions
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 
     /**
      * @param string $backgroundColor
+     *
+     * @return MediumChartOptions
      */
     public function setBackgroundColor($backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
+
+        return $this;
     }
 
     /**
      * @param array $colors
+     *
+     * @return MediumChartOptions
      */
     public function setColors($colors)
     {
         $this->colors = $colors;
+
+        return $this;
     }
 
     /**
      * @param string $fontName
+     *
+     * @return MediumChartOptions
      */
     public function setFontName($fontName)
     {
         $this->fontName = $fontName;
+
+        return $this;
     }
 
     /**
      * @param int $fontSize
+     *
+     * @return MediumChartOptions
      */
     public function setFontSize($fontSize)
     {
         $this->fontSize = $fontSize;
+
+        return $this;
     }
 }

@@ -187,49 +187,73 @@ class CandlestickChartOptions extends AdvancedChartOptions
 
     /**
      * @param string $aggregationTarget
+     *
+     * @return CandlestickChartOptions
      */
     public function setAggregationTarget($aggregationTarget)
     {
         $this->aggregationTarget = $aggregationTarget;
+
+        return $this;
     }
 
     /**
      * @param string $focusTarget
+     *
+     * @return CandlestickChartOptions
      */
     public function setFocusTarget($focusTarget)
     {
         $this->focusTarget = $focusTarget;
+
+        return $this;
     }
 
     /**
      * @param string $orientation
+     *
+     * @return CandlestickChartOptions
      */
     public function setOrientation($orientation)
     {
         $this->orientation = $orientation;
+
+        return $this;
     }
 
     /**
      * @param boolean $reverseCategories
+     *
+     * @return CandlestickChartOptions
      */
     public function setReverseCategories($reverseCategories)
     {
         $this->reverseCategories = $reverseCategories;
+
+        return $this;
     }
 
     /**
      * @param string $selectionMode
+     *
+     * @return CandlestickChartOptions
      */
     public function setSelectionMode($selectionMode)
     {
         $this->selectionMode = $selectionMode;
+
+        return $this;
     }
 
     /**
      * @param array $vAxes
+     *
+     * @return CandlestickChartOptions
      */
     public function setVAxes($vAxes)
     {
         $this->vAxes = $vAxes;
+
+        return $this;
     }
 }

@@ -240,57 +240,85 @@ class BarChartOptions extends AdvancedChartOptions
 
     /**
      * @param float $dataOpacity
+     *
+     * @return BarChartOptions
      */
     public function setDataOpacity($dataOpacity)
     {
         $this->dataOpacity = $dataOpacity;
+
+        return $this;
     }
 
     /**
      * @param string $focusTarget
+     *
+     * @return BarChartOptions
      */
     public function setFocusTarget($focusTarget)
     {
         $this->focusTarget = $focusTarget;
+
+        return $this;
     }
 
     /**
      * @param array $hAxes
+     *
+     * @return BarChartOptions
      */
     public function setHAxes($hAxes)
     {
         $this->hAxes = $hAxes;
+
+        return $this;
     }
 
     /**
      * @param bool|string $isStacked
+     *
+     * @return BarChartOptions
      */
     public function setIsStacked($isStacked)
     {
         $this->isStacked = $isStacked;
+
+        return $this;
     }
 
     /**
      * @param string $orientation
+     *
+     * @return BarChartOptions
      */
     public function setOrientation($orientation)
     {
         $this->orientation = $orientation;
+
+        return $this;
     }
 
     /**
      * @param boolean $reverseCategories
+     *
+     * @return BarChartOptions
      */
     public function setReverseCategories($reverseCategories)
     {
         $this->reverseCategories = $reverseCategories;
+
+        return $this;
     }
 
     /**
      * @param array $trendlines
+     *
+     * @return BarChartOptions
      */
     public function setTrendlines($trendlines)
     {
         $this->trendlines = $trendlines;
+
+        return $this;
     }
 }

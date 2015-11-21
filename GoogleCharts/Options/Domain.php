@@ -39,9 +39,13 @@ class Domain
 
     /**
      * @param string $style
+     *
+     * @return Domain
      */
     public function setStyle($style)
     {
         $this->style = $style;
+
+        return $this;
     }
 }

@@ -56,25 +56,37 @@ class WordTreeOptions extends ChartOptions
 
     /**
      * @param string[] $colors
+     *
+     * @return WordTreeOptions
      */
     public function setColors($colors)
     {
         $this->colors = $colors;
+
+        return $this;
     }
 
     /**
      * @param string $fontName
+     *
+     * @return WordTreeOptions
      */
     public function setFontName($fontName)
     {
         $this->fontName = $fontName;
+
+        return $this;
     }
 
     /**
      * @param int $maxFontSize
+     *
+     * @return WordTreeOptions
      */
     public function setMaxFontSize($maxFontSize)
     {
         $this->maxFontSize = $maxFontSize;
+
+        return $this;
     }
 }

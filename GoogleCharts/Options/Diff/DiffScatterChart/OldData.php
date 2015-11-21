@@ -17,9 +17,13 @@ class OldData
 
     /**
      * @param float $opacity
+     *
+     * @return OldData
      */
     public function setOpacity($opacity)
     {
         $this->opacity = $opacity;
+
+        return $this;
     }
 }

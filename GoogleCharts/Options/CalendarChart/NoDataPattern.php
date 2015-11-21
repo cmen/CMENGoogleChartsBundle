@@ -22,17 +22,25 @@ class NoDataPattern
 
     /**
      * @param string $backgroundColor
+     *
+     * @return NoDataPattern
      */
     public function setBackgroundColor($backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
+
+        return $this;
     }
 
     /**
      * @param string $color
+     *
+     * @return NoDataPattern
      */
     public function setColor($color)
     {
         $this->color = $color;
+
+        return $this;
     }
 }
