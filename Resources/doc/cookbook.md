@@ -4,7 +4,6 @@ Here, you can find recipes to recreate charts demo in [Google documentation] (ht
 ## Annotation Chart
 ```
 $anno = new AnnotationChart();
-$anno->setElementID('anno');
 $anno->getData()->setArrayToDataTable([
     [['label' => 'Date', 'type' => 'date'], ['label' => 'Kepler-22b mission', 'type' => 'number'],
      ['label' => 'Kepler title', 'type' => 'string'], ['label' => 'Kepler text', 'type' => 'string'],
@@ -24,7 +23,6 @@ $anno->getOptions()->setDisplayAnnotations(true);
 ## Area Chart
 ```
 $area = new AreaChart();
-$area->setElementID('area');
 $area->getData()->setArrayToDataTable([
     ['Year', 'Sales', 'Expenses'],
     ['2013',  1000,      400],
@@ -280,7 +278,6 @@ $gantt->getOptions()->setWidth(900);
 ## Gauge Chart
 ```
 $gauge = new GaugeChart();
-$gauge->setElementID('gauge');
 $gauge->getData()->setArrayToDataTable([
     ['Label', 'Value'],
     ['Memory', 80],
@@ -301,7 +298,6 @@ $gauge->getOptions()->setMinorTicks(5);
 ## Geo Chart
 ```
 $geo = new GeoChart();
-$geo->setElementID('geo2');
 $geo->getData()->setArrayToDataTable(
     [
         ['City',   'Population', 'Area'],
@@ -328,7 +324,6 @@ $geo->getOptions()->setHeight(500);
 ## Histogram
 ```
 $histo = new Histogram();
-$histo->setElementID('histo');
 $histo->getData()->setArrayToDataTable([
     ['Dinosaur', 'Length'],
     ['Acrocanthosaurus (top-spined lizard)', 12.2],
@@ -444,7 +439,6 @@ $org->getOptions()->setAllowHtml(true);
 ## Pie Chart
 ```
 $piechart = new PieChart();
-$piechart->setElementID('piechart');
 $piechart->getData()->setArrayToDataTable([
     [['label' => 'Topping', 'type' => 'string'], ['label' => 'Slices', 'type' => 'number']],
     ['Mushrooms', 3],
