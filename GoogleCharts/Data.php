@@ -55,7 +55,7 @@ class Data
             $lastKeyValue = key($row);
             foreach ($row as $key => $value) {
                 if ($value instanceof \DateTime) {
-                    $js .= 'new Date(' . $value->format('Y') . ', ' . $value->format('n') . ', ' .
+                    $js .= 'new Date(' . $value->format('Y') . ', ' . ($value->format('n')-1) . ', ' .
                         $value->format('d') . ')';
                 } else {
                     $js .= json_encode($value);
