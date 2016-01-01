@@ -8,6 +8,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
 
@@ -67,24 +68,9 @@ class BarChartOptions extends AdvancedChartOptions
      * override any global settings for the same property.
      *
      * To specify a chart with multiple horizontal axes, first define a new axis using series.targetAxisIndex, then
-     * configure the axis using hAxes. The following example assigns series 1 to the bottom axis and specifies a custom
-     * title and text style for it :
-     * series:{1:{targetAxisIndex:1}}, hAxes:{1:{title:'Losses', textStyle:{color: 'red'}}}
+     * configure the axis using hAxes.
      *
-     * This property can be either an object or an array: the object is a collection of objects, each with a numeric
-     * label that specifies the axis that it defines--this is the format shown above; the array is an array of objects,
-     * one per axis. For example, the following array-style notation is identical to the hAxis object shown above :
-     *
-     * hAxes: {
-     *   {}, // Nothing specified for axis 0
-     *   {
-     *   title:'Losses',
-     *   textStyle: {
-     *     color: 'red'
-     *   }
-     * } // Axis 1
-     *
-     * @var array
+     * @var HAxis[]
      */
     protected $hAxes;
 
@@ -263,7 +249,7 @@ class BarChartOptions extends AdvancedChartOptions
     }
 
     /**
-     * @param array $hAxes
+     * @param HAxis[] $hAxes
      *
      * @return BarChartOptions
      */
