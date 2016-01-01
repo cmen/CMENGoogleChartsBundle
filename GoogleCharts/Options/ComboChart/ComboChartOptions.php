@@ -10,6 +10,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Candlestick;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
  * @author Christophe Meneses
@@ -165,20 +166,12 @@ class ComboChartOptions extends LineOptions
 
     /**
      * Specifies properties for individual vertical axes, if the chart has multiple vertical axes. Each child object
-     * is a vAxis object, and can contain all the properties supported by vAxis. These property values override any
+     * is a VAxis object, and can contain all the properties supported by vAxis. These property values override any
      * global settings for the same property.
      * To specify a chart with multiple vertical axes, first define a new axis using series.targetAxisIndex, then
-     * configure the axis using vAxes. The following example assigns series 2 to the right axis and specifies a custom
-     * title and text style for it :
-     * ['series' => [2 => ['targetAxisIndex' => 1], vAxes => [1 => ['title' => 'Losses',
-     * 'textStyle' => ['color' => 'red']]]]
+     * configure the axis using vAxes.
      *
-     * This property can be either an object or an array: the object is a collection of objects, each with a numeric
-     * label that specifies the axis that it defines--this is the format shown above; the array is an array of objects,
-     * one per axis. For example, the following array-style notation is identical to the vAxis object shown above :
-     * vAxes: [ [], ['title' => 'Losses', 'textStyle' => ['color' => 'red'] ] ]
-     *
-     * @var array
+     * @var VAxis[]
      */
     protected $vAxes;
 
@@ -350,7 +343,7 @@ class ComboChartOptions extends LineOptions
     }
 
     /**
-     * @param array $vAxes
+     * @param VAxis[] $vAxes
      *
      * @return ComboChartOptions
      */
