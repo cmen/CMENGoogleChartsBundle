@@ -21,7 +21,7 @@ class OptionsFormat
         });
 
         foreach ($options as $key => $value) {
-            if (is_object($value)) {
+            if (is_object($value) || is_array($value)) {
                 $this->removeRecursivelyNullValue($options[$key]);
             }
         }
@@ -49,7 +49,7 @@ class OptionsFormat
      * Renames recursively array keys to remove prefixes and suffixes "\x00". They come from conversion of class with
      * protected properties to an array.
      *
-     * @param $options Array of options
+     * @param array $options Array of options
      *
      * @return array Array of options with new keys
      */
@@ -68,6 +68,10 @@ class OptionsFormat
 
             } else {
                 $newOptions[$key] = $value;
+
+                if (is_array($options[$key])) {
+                    $newOptions[$key] = $this->renameRecursivelyKeys($options[$key]);
+                }
             }
         }
 

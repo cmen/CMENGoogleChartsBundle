@@ -18,26 +18,18 @@ class AdvancedChartOptions extends MediumChartOptions
     protected $axisTitlesPosition;
 
     /**
-     * An array of objects, each describing the format of the corresponding series in the chart. To use default
-     * values for a series, specify an empty object {}. If a series or a value is not specified, the global value
+     * An array of Series object, each describing the format of the corresponding series in the chart. To use default
+     * values for a series, specify a null value. If a series or a value is not specified, the global value
      * will be used.
-     * Each object supports the following properties :
-     * color - The color to use for this series. Specify a valid HTML color string.
-     * labelInLegend - The description of the series to appear in the chart legend.
-     * targetAxisIndex - Which axis to assign this series to, where 0 is the default axis, and 1 is the opposite axis.
-     *   Default value is 0; set to 1 to define a chart where different series are rendered against different axes.
-     *   At least one series much be allocated to the default axis. You can define a different scale for different axes.
-     * visibleInLegend - A boolean value, where true means that the series should have a legend entry, and false means
-     * that it should not. Default is true.
      *
-     * You can specify either an array of objects, each of which applies to the series in the order given, or you can
-     * specify an object where each child has a numeric key indicating which series it applies to. For example, the
-     * following two declarations are identical, and declare the first series as black and absent from the legend,
-     * and the fourth as red and absent from the legend :
-     * [['color' => 'black', 'visibleInLegend' => false], [], [], ['color' => 'red', 'visibleInLegend' => false]]
-     * [0 => ['color' => 'black', 'visibleInLegend' => false], 3 => ['color' => 'red', 'visibleInLegend' => false]
+     * You can specify either an array of Series object, each of which applies to the series in the order given,
+     * or you can specify an array where each child has a numeric key indicating which series it applies to.
+     * For example, the following two declarations are identical :
      *
-     * @var array
+     * $chart->getOptions()->setSeries([$series1, null, $series3]);
+     * $chart->getOptions()->setSeries([0 => $series1, 2 => $series3])
+     *
+     * @var Series[]
      */
     protected $series;
 
@@ -100,7 +92,7 @@ class AdvancedChartOptions extends MediumChartOptions
     }
 
     /**
-     * @param array $series
+     * @param Series[] $series
      *
      * @return AdvancedChartOptions
      */
