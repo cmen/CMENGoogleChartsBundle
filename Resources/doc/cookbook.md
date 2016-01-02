@@ -212,9 +212,55 @@ $combo->getOptions()->setTitle('Monthly Coffee Production by Country');
 $combo->getOptions()->getVAxis()->setTitle('Cups');
 $combo->getOptions()->getHAxis()->setTitle('Month');
 $combo->getOptions()->setSeriesType('bars');
-$combo->getOptions()->setSeries([5 => ['type' => 'line']]);
+
+$series5 = new \CMEN\GoogleChartsBundle\GoogleCharts\Options\ComboChart\Series();
+$series5->setType('line');
+$combo->getOptions()->setSeries([5 => $series5]);
+
 $combo->getOptions()->setWidth(900);
 $combo->getOptions()->setHeight(500);
+```
+
+## Combo Chart with multiple vertical axes
+```
+$data[] = ['Year', 'Income', ['role' => 'tooltip'], 'Cost', ['role' => 'tooltip'], 'Evolution', ['role' => 'tooltip']];
+$data[] = ['2012', 106756, '106 756 €', 67450, '67 450 €', 12.54, '12.54 %'];
+$data[] = ['2013', 153765, '153 765 €', 82345, '82 345 €', 18.12, '18.12 %'];
+$data[] = ['2014', 198450, '198 450 €', 73984, '73 984 €', 8.68, '8.68 %'];
+
+$chart = new ComboChart();
+$chart->getData()->setArrayToDataTable($data);
+$chart->getOptions()->setHeight(600);
+$chart->getOptions()->setWidth(900);
+$chart->getOptions()->getTooltip()->getTextStyle()->setBold(true);
+
+$vAxis1 = new VAxis();
+$vAxis1->setTitle('Amount (€)');
+$vAxis2 = new VAxis();
+$vAxis2->setTitle('Evolution (%)');
+$chart->getOptions()->setVAxes([$vAxis1, $vAxis2]);
+
+/* Income */
+$series1 = new \CMEN\GoogleChartsBundle\GoogleCharts\Options\ComboChart\Series();
+$series1->setType('bars');
+$series1->setTargetAxisIndex(0);
+$series1->setColor('#00ff00');
+
+/* Cost */
+$series2 = new \CMEN\GoogleChartsBundle\GoogleCharts\Options\ComboChart\Series();
+$series2->setType('bars');
+$series2->setTargetAxisIndex(0);
+$series2->setColor('#ff0000');
+
+/* Evolution */
+$series3 = new \CMEN\GoogleChartsBundle\GoogleCharts\Options\ComboChart\Series();
+$series3->setType('line');
+$series3->setTargetAxisIndex(1);
+$series3->setColor('#f6dc12');
+
+$chart->getOptions()->setSeries([$series1, $series2, $series3]);
+
+$chart->getOptions()->getHAxis()->setTitle('Year');
 ```
 
 ## Candlestick Chart
@@ -438,18 +484,27 @@ $org->getOptions()->setAllowHtml(true);
 
 ## Pie Chart
 ```
-$piechart = new PieChart();
-$piechart->getData()->setArrayToDataTable([
-    [['label' => 'Topping', 'type' => 'string'], ['label' => 'Slices', 'type' => 'number']],
-    ['Mushrooms', 3],
-    ['Onions', 1],
-    ['Olives', 1],
-    ['Zucchini', 1],
-    ['Pepperoni', 2]
-]);
-$piechart->getOptions()->setHeight(300);
-$piechart->getOptions()->setWidth(400);
-$piechart->getOptions()->setTitle('How Much Pizza I Ate Last Night');
+$pieChart = new PieChart();
+$pieChart->getData()->setArrayToDataTable(
+    [
+        ['Pac Man', 'Percentage'],
+        ['', 75],
+        ['', 25]
+    ]
+);
+$pieChart->getOptions()->getLegend()->setPosition('none');
+$pieChart->getOptions()->setPieSliceText('none');
+$pieChart->getOptions()->setPieStartAngle(135);
+
+$pieSlice1 = new PieSlice();
+$pieSlice1->setColor('yellow');
+$pieSlice2 = new PieSlice();
+$pieSlice2->setColor('transparent');
+$pieChart->getOptions()->setSlices([$pieSlice1, $pieSlice2]);
+
+$pieChart->getOptions()->setHeight(500);
+$pieChart->getOptions()->setWidth(900);
+$pieChart->getOptions()->getTooltip()->setTrigger('none');
 ```
 
 ## Sankey Diagram

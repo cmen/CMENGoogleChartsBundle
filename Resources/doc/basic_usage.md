@@ -50,7 +50,6 @@ In your controller :
 public function indexAction()
 {
     $pieChart = new PieChart();
-    $pieChart->setElementID('pieRotate');
     $pieChart->getData()->setArrayToDataTable(
         [
             ['Language', 'Speakers (in millions)'],
