@@ -89,20 +89,16 @@ class PieChartOptions extends MediumChartOptions
     protected $reverseCategories;
 
     /**
-     * An array of array, each describing the format of the corresponding slice in the pie. To use default values
-     * for a slice, specify an empty array (i.e., []). If a slice or a value is not specified, the global value will
-     * be used. Each object supports the following properties :
-     * color - The color to use for this slice. Specify a valid HTML color string.
-     * offset - How far to separate the slice from the rest of the pie, from 0.0 (not at all) to 1.0 (the pie's radius).
-     * textStyle - Overrides the global pieSliceTextSlice for this slice.
+     * An array of Slice object, each describing the format of the corresponding slice in the pie. To use default values
+     * for a slice, specify a null value. If a slice or a value is not specified, the global value will be used.
      *
-     * You can specify either an array of array, each of which applies to the slice in the order given, or you can
-     * specify an object where each child has a numeric key indicating which slice it applies to. For example, the
-     * following two declarations are identical, and declare the first slice as black and the fourth as red :
-     * [[color => 'black'], [], [], [color => 'red']]
-     * [0 => [color => 'black'], 3 => [color => 'red']]
+     * You can specify either an array of Slice object, each of which applies to the slice in the order given, or you
+     * can specify an array where each child has a numeric key indicating which slice it applies to. For example, the
+     * following two declarations are identical :
+     * [$slice1, null, $slice2]
+     * [0 => $slice1, 2 => $slice2]
      *
-     * @var array
+     * @var PieSlice[]
      */
     protected $slices;
 
@@ -216,7 +212,7 @@ class PieChartOptions extends MediumChartOptions
     }
 
     /**
-     * @param array $slices
+     * @param PieSlice[] $slices
      *
      * @return PieChartOptions
      */
