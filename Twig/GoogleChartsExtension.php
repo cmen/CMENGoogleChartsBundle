@@ -30,11 +30,6 @@ class GoogleChartsExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction(
-                'drawChart',
-                array($this, 'drawChartDeprecated'),
-                array('is_safe' => array('html'), 'deprecated' => true, 'alternative' => 'gc_draw')
-            ),
             new \Twig_SimpleFunction('gc_draw', array($this, 'draw'), array('is_safe' => array('html'))),
             new \Twig_SimpleFunction('gc_start', array($this, 'start'), array('is_safe' => array('html'))),
             new \Twig_SimpleFunction('gc_end', array($this, 'end'), array('is_safe' => array('html'))),
@@ -281,36 +276,6 @@ class GoogleChartsExtension extends \Twig_Extension
     public function drawCharts($charts, $elementsID = null)
     {
         return $this->startCharts($charts, $elementsID) . $this->endCharts($charts);
-    }
-
-    /**
-     * Returns Javascript to draw a chart in Twig template.
-     *
-     * @param Chart $chart A Chart Instance
-     * @param string $elementID HTML element ID
-     *
-     * @return string The Javascript
-     *
-     * @deprecated Will be remove in 1.0
-     */
-    public function drawChartDeprecated(Chart $chart, $elementID = null)
-    {
-        if ($elementID) {
-            $chart->setElementID($elementID);
-        }
-
-        $js = '<script type="text/javascript">';
-
-        if (in_array($this->version, array('1', '1.1'))) {
-            $js .= 'google.load("visualization", "' . $this->version . '", {packages:["' . $chart->getPackage() . '"]});
-                google.setOnLoadCallback(drawChart);';
-
-        } else {
-            $js .= 'google.charts.load("' . $this->version . '", {packages: ["' . $chart->getPackage() . '"]});
-                google.charts.setOnLoadCallback(drawChart);';
-        }
-
-        return $js . 'function drawChart() { ' . $chart->draw() . '} </script>';
     }
 
     /**

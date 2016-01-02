@@ -148,41 +148,6 @@ abstract class Chart
     }
 
     /**
-     * Returns Javascript of chart.
-     *
-     * @return string Javascript
-     *
-     * @throws GoogleChartsException
-     *
-     * @deprecated Will be remove in 1.0
-     */
-    public function draw()
-    {
-        if ($this->elementID === null) {
-            throw new GoogleChartsException('Container is not defined.');
-        }
-
-        $js = 'var ' . $this->getName() . ' = new google.' . $this->getLibrary() . '.' . $this->getType() .
-            '(document.getElementById("' . $this->elementID . '"));';
-
-        if (!$this instanceof DiffChart) {
-            $js .= $this->data->draw($this->getDataName());
-
-        } else {
-            $js .= $this->getOldChart()->getData()->draw('old_' . $this->getDataName()) .
-                $this->getNewChart()->getData()->draw('new_' . $this->getDataName()) .
-                'var ' . $this->getDataName() . ' = ' . $this->getName() .
-                '.computeDiff(old_' . $this->getDataName() . ',
-                 new_' . $this->getDataName() . ');';
-        }
-
-        $js .= $this->options->draw($this->getOptionsName()) . $this->events->draw().
-            $this->getName() . '.draw('. $this->getDataName() . ', '. $this->getOptionsName() .');';
-
-        return $js;
-    }
-
-    /**
      * @param string $elementID
      *
      * @return Chart

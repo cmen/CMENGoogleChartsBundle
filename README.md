@@ -1,6 +1,6 @@
 # CMENGoogleChartsBundle
 
-`CMENGoogleChartsBundle` eases the use of [Google Charts](https://developers.google.com/chart/) to display charts in your Symfony2 application by providing Twig extension and PHP objects.
+`CMENGoogleChartsBundle` eases the use of [Google Charts](https://developers.google.com/chart/) to display charts in your Symfony application by providing Twig extension and PHP objects.
 
 ## Documentation
 
