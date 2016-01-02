@@ -11,6 +11,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 
 /**
  * @author Christophe Meneses
@@ -131,25 +132,9 @@ class BarChartOptions extends AdvancedChartOptions
 
     /**
      * Displays trendlines on the charts that support them. By default, linear trendlines are used, but this can be
-     * customized with the trendlines.n.type option. Trendlines are specified on a per-series basis, so most of the
-     * time your options will look like this :
-     * var options = {
-     *    trendlines: {
-     *        0: {
-     *            type: 'linear',
-     *            color: 'green',
-     *            labelInLegend: 'label',
-     *            lineWidth: 3,
-     *            opacity: 0.3,
-     *            pointSize: 1,
-     *            pointsVisible : true,
-     *            showR2: true,
-     *            visibleInLegend: true
-     *          }
-     *       }
-     *    }
+     * customized with the trendlines.n.type option.
      *
-     * @var array
+     * @var Trendlines[]
      */
     protected $trendlines;
 
@@ -297,7 +282,7 @@ class BarChartOptions extends AdvancedChartOptions
     }
 
     /**
-     * @param array $trendlines
+     * @param Trendlines[] $trendlines
      *
      * @return BarChartOptions
      */

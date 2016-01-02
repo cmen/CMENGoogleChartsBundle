@@ -10,6 +10,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Candlestick;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
@@ -142,25 +143,9 @@ class ComboChartOptions extends LineOptions
 
     /**
      * Displays trendlines on the charts that support them. By default, linear trendlines are used, but this can be
-     * customized with the trendlines.n.type option. Trendlines are specified on a per-series basis, so most of the
-     * time your options will look like this :
-     * var options = {
-     *    trendlines: {
-     *        0: {
-     *            type: 'linear',
-     *            color: 'green',
-     *            labelInLegend: 'label',
-     *            lineWidth: 3,
-     *            opacity: 0.3,
-     *            pointSize: 1,
-     *            pointsVisible : true,
-     *            showR2: true,
-     *            visibleInLegend: true
-     *          }
-     *       }
-     *    }
+     * customized with the trendlines.n.type option.
      *
-     * @var array
+     * @var Trendlines[]
      */
     protected $trendlines;
 
@@ -331,7 +316,7 @@ class ComboChartOptions extends LineOptions
     }
 
     /**
-     * @param array $trendlines
+     * @param Trendlines[] $trendlines
      *
      * @return ComboChartOptions
      */
