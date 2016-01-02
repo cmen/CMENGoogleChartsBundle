@@ -157,7 +157,7 @@ class GoogleChartsExtension extends \Twig_Extension
     /**
      * Checks if all elements of an array are instances of Chart. Throws an exception if not.
      *
-     * @param array $charts
+     * @param Chart[] $charts
      *
      * @throws GoogleChartsException
      */

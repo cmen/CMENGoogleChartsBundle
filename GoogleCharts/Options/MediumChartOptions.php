@@ -27,7 +27,7 @@ class MediumChartOptions extends BasicChartOptions
      * The colors to use for the chart elements. An array of strings, where each element is an HTML color string,
      * for example : ['red', '#004411']
      *
-     * @var array
+     * @var string[]
      */
     protected $colors;
 
@@ -119,7 +119,7 @@ class MediumChartOptions extends BasicChartOptions
     }
 
     /**
-     * @param array $colors
+     * @param string[] $colors
      *
      * @return MediumChartOptions
      */

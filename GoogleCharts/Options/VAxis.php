@@ -81,12 +81,12 @@ class VAxis
 
     /**
      * Replaces the automatically generated Y-axis ticks with the specified array. Each element of the array should
-     * be either a valid tick value (such as a number, date, datetime, or timeofday), or an object. If it's an object,
+     * be either a valid tick value (such as a number, date, datetime, or timeofday), or an array. If it's an array,
      * it should have a v property for the tick value, and an optional f property containing the literal string to be
      * displayed as the label. Examples :
-     *     [5,10,15,20]
-     *     [ ['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four'] ] ]
-     *     [16, ['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four'], 128] ]
+     * [5,10,15,20]
+     * [ ['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four'] ] ]
+     * [16, ['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four'], 128] ]
      *
      * @var array
      */

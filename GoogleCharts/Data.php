@@ -26,8 +26,8 @@ class Data
      * allowing you to define Cell Objects).
      *
      * @param array $arrayToDataTable A two-dimensional array, where each row represents a row in the data table.
-     * @param boolean $firstRowIsData If opt_firstRowIsData is false (the default), the first row will be interpreted
-     *     as header labels.
+     * @param boolean $firstRowIsData If firstRowIsData is false (the default), the first row will be interpreted
+     *                                as header labels.
      */
     public function setArrayToDataTable($arrayToDataTable, $firstRowIsData = false)
     {

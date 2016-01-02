@@ -21,8 +21,7 @@ class MapOptions extends ChartOptionsDraw
      * default set by setting the default option, or custom marker sets by setting a unique marker ID.
      *
      * ['default' => ['normal' => '/path/to/marker/image', 'selected' => '/path/to/marker/image'],
-     *  'customMarker' => ['normal' => '/path/to/other/marker/image', 'selected' => '/path/to/other/marker/image']
-     * ]
+     *  'customMarker' => ['normal' => '/path/to/other/marker/image', 'selected' => '/path/to/other/marker/image']]
      *
      * @var array
      */

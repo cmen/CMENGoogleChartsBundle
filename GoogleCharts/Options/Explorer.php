@@ -21,7 +21,7 @@ class Explorer
      *     explorer.maxZoomOut, and explorer.zoomDelta for zoom customizations.
      *   rightClickToReset: Right clicking on the chart returns it to the original pan and zoom level.
      *
-     * @var array
+     * @var string[]
      */
     protected $actions;
 
@@ -70,7 +70,7 @@ class Explorer
 
 
     /**
-     * @param array $actions
+     * @param string[] $actions
      *
      * @return Explorer
      */
