@@ -47,3 +47,30 @@ cmen_google_charts:
 ```
 
 If you do not configure the bundle, the latest version is used.
+
+## Step 4 (optional) : Customize locale
+You can change locale to customize text for a country or language, affecting the formatting of values such as 
+currencies, dates, and numbers. For example, if you want to use french :
+```
+cmen_google_charts:
+    language: 'fr'
+```
+
+If you need to set dynamically the locale, you can use `gc_language` Twig function in Twig template :
+```
+<html>
+<head></head>
+<body>
+    <div id="div_histogram"></div>
+    
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        {{ gc_language('fr') }}
+    
+        {{ gc_draw(histogram, 'div_histogram') }}
+    </script>
+</body>
+</html>    
+```
+
+By default, the Google Chart libraries are loaded with the "en" locale.

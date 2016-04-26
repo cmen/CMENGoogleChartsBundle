@@ -7,6 +7,7 @@
     <services>
         <service id="cmen_google_charts.twig_extension" class="CMEN\GoogleChartsBundle\Twig\GoogleChartsExtension" public="false">
             <argument>%cmen_google_charts.version%</argument>
+            <argument>%cmen_google_charts.language%</argument>
             <tag name="twig.extension" />
         </service>
     </services>

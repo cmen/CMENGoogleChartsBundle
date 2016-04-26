@@ -17,10 +17,24 @@ class GoogleChartsExtension extends \Twig_Extension
      */
     private $version;
 
+    /**
+     * Locale to customize currencies, dates, and numbers.
+     *
+     * @var string
+     */
+    private $language;
 
-    public function __construct($version)
+
+    /**
+     * GoogleChartsExtension constructor.
+     *
+     * @param string $version
+     * @param string $language
+     */
+    public function __construct($version, $language)
     {
         $this->version = $version;
+        $this->language = $language;
     }
 
 
@@ -34,6 +48,7 @@ class GoogleChartsExtension extends \Twig_Extension
             new \Twig_SimpleFunction('gc_start', array($this, 'start'), array('is_safe' => array('html'))),
             new \Twig_SimpleFunction('gc_end', array($this, 'end'), array('is_safe' => array('html'))),
             new \Twig_SimpleFunction('gc_event', array($this, 'event'), array('is_safe' => array('html'))),
+            new \Twig_SimpleFunction('gc_language', array($this, 'language')),
         );
     }
 
@@ -97,6 +112,18 @@ class GoogleChartsExtension extends \Twig_Extension
     public function event(Chart $chart, $type, $functionName)
     {
         $chart->getEvents()->addListener($type, $functionName);
+    }
+
+    /**
+     * Set the locale. Must be called before drawing charts.
+     *
+     * @link https://developers.google.com/chart/interactive/docs/basic_load_libs#loadwithlocale
+     *
+     * @param string $language Locale, for example : "fr"
+     */
+    public function language($language)
+    {
+        $this->language = $language;
     }
 
     /**
@@ -178,13 +205,16 @@ class GoogleChartsExtension extends \Twig_Extension
         array_walk($packages, function (&$item) {
             $item = '"' . $item . '"';
         });
-        $packages = implode(',', $packages);
 
-        if (in_array($this->version, array('1', '1.1'))) {
-            return 'google.load("visualization", "' . $this->version . '", {packages:[' . $packages . ']});';
+        ($this->language) ? $language = ', language: "' . $this->language . '"' : $language = '';
+
+        $load = '"' . $this->version . '", {packages:[' . implode(',', $packages) . ']' . $language . '}';
+
+        if ($this->version == '1' || $this->version == '1.1') {
+            return 'google.load("visualization", ' . $load . ');';
 
         } else {
-            return 'google.charts.load("' . $this->version . '", {packages: [' . $packages . ']});';
+            return 'google.charts.load(' . $load . ');';
         }
     }
 
