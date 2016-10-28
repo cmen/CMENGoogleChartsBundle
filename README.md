@@ -1,6 +1,11 @@
 # CMENGoogleChartsBundle
 
-`CMENGoogleChartsBundle` eases the use of [Google Charts](https://developers.google.com/chart/) to display charts in your Symfony application by providing Twig extension and PHP objects.
+![Latest Stable Version](https://poser.pugx.org/cmen/google-charts-bundle/v/stable)
+![Total Downloads](https://img.shields.io/packagist/dt/cmen/google-charts-bundle.svg?style=flat)
+![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cmen/CMENGoogleChartsBundle/badges/quality-score.png?b=master)
+![License](https://poser.pugx.org/cmen/google-charts-bundle/license)
+
+`CMENGoogleChartsBundle` provides a Twig extension and PHP objects to display [Google Charts](https://developers.google.com/chart/) in your Symfony application.
 
 ## Documentation
 
@@ -10,3 +15,17 @@
 * [Diff charts](Resources/doc/diff_charts.md)
 * [Events](Resources/doc/events.md)
 * [Google Charts documentation](https://developers.google.com/chart/interactive/docs/)
+
+## Examples
+
+![Pie Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/g2.png)  
+
+![Histogram](http://static.christophe-meneses.fr/img/google_charts_bundle/g3.png)  
+
+![Line Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/g4.png)  
+
+![Combo Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/g1.png)  
+
+## License
+
+This bundle is released under the MIT license. See the complete license in file LICENCE.

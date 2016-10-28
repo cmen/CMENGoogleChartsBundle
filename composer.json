@@ -1,7 +1,7 @@
 {
   "name": "cmen/google-charts-bundle",
   "type": "symfony-bundle",
-  "description": "Symfony bundle that ease the use of Google Charts.",
+  "description": "This Bundle provides a Twig extension and PHP objects to display Google charts in your Symfony application.",
   "keywords": ["google", "charts"],
   "license": "MIT",
   "authors": [
