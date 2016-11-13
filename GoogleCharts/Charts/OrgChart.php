@@ -35,16 +35,6 @@ class OrgChart extends Chart
     }
 
     /**
-     * Returns library used by chart.
-     *
-     * @return string
-     */
-    protected function getLibrary()
-    {
-        return 'visualization';
-    }
-
-    /**
      * Returns the chart package.
      *
      * @return string

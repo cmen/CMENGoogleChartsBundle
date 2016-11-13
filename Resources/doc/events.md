@@ -38,7 +38,7 @@ In your template, you must use the Twig functions `gc_start`, `gc_end` and `gc_e
     <div id="table"></div>
     <div id="org"></div>
     
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         {{ gc_start([table, org], ['table', 'org']) }}
     
@@ -89,7 +89,7 @@ In your template :
     <div id="chart"></div>
     <div id='png'></div>
     
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         {{ gc_start(chart, 'chart') }}
         

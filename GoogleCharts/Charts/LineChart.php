@@ -35,14 +35,6 @@ class LineChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getLibrary()
-    {
-        return 'visualization';
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function getPackage()
     {
         return 'corechart';

@@ -55,7 +55,7 @@ And in your template :
     <div id="newColumnChart"></div>
     <div id="diffColumnChart"></div>
     
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         {{ gc_draw([oldColumnChart, newColumnChart, diffColumnChart], ['oldColumnChart', 'newColumnChart', 'diffColumnChart']) }}
     </script>

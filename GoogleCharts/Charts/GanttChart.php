@@ -29,15 +29,7 @@ class GanttChart extends Chart
      */
     protected function getType()
     {
-        return 'GanttChart';
-    }
-
-    /**
-     * @inheritdoc
-     */
-    protected function getLibrary()
-    {
-        return 'visualization';
+        return 'Gantt';
     }
 
     /**

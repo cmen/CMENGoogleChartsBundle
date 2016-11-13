@@ -1,8 +1,8 @@
 # Installation
 
-## Step 1 : Download last version of CMENGoogleChartsBundle using Composer
+## Step 1 : Download stable version of CMENGoogleChartsBundle using Composer
 ```
-composer require cmen/google-charts-bundle "~x.x"
+composer require cmen/google-charts-bundle
 ```
 Composer will install the bundle to your project's vendor directory.
 
@@ -22,20 +22,20 @@ public function registerBundles()
 ```
 
 ## Step 3 (optional) : Configure version of Google Charts
-The latest version :
+The latest stable version :
 ```
 # app/config.yml
 ...
 cmen_google_charts:
-    version: "1"
+    version: "current"
 ```
 
-The cutting edge developer version :
+The next version in development :
 ```
 # app/config.yml
 ...
 cmen_google_charts:
-    version: "1.1"
+    version: "upcoming"
 ```
 
 A frozen version :
@@ -43,17 +43,20 @@ A frozen version :
 # app/config.yml
 ...
 cmen_google_charts:
-    version: "41"
+    version: "45"
 ```
 
-If you do not configure the bundle, the latest version is used.
+See this [page] (https://developers.google.com/chart/interactive/docs/basic_load_libs#load-version-name-or-number) 
+for more information.
+
+If you do not configure the bundle, the latest stable version is used.
 
 ## Step 4 (optional) : Customize locale
 You can change locale to customize text for a country or language, affecting the formatting of values such as 
 currencies, dates, and numbers. For example, if you want to use french :
 ```
 cmen_google_charts:
-    language: 'fr'
+    language: "fr"
 ```
 
 If you need to set dynamically the locale, you can use `gc_language` Twig function in Twig template :
@@ -63,7 +66,7 @@ If you need to set dynamically the locale, you can use `gc_language` Twig functi
 <body>
     <div id="div_histogram"></div>
     
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         {{ gc_language('fr') }}
     
@@ -73,4 +76,4 @@ If you need to set dynamically the locale, you can use `gc_language` Twig functi
 </html>    
 ```
 
-By default, the Google Chart libraries are loaded with the "en" locale.
+By default, Google Chart libraries are loaded with the "en" locale.

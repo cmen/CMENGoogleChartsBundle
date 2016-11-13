@@ -77,13 +77,6 @@ abstract class Chart
     abstract protected function getType();
 
     /**
-     * Returns library used by chart.
-     *
-     * @return string
-     */
-    abstract protected function getLibrary();
-
-    /**
      * Returns the chart package.
      *
      * @return string
@@ -117,7 +110,7 @@ abstract class Chart
             throw new GoogleChartsException('Container is not defined.');
         }
 
-        $js = 'var ' . $this->getName() . ' = new google.' . $this->getLibrary() . '.' . $this->getType() .
+        $js = 'var ' . $this->getName() . ' = new google.visualization.' . $this->getType() .
             '(document.getElementById("' . $this->elementID . '"));';
 
         if (!$this instanceof DiffChart) {

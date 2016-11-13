@@ -203,19 +203,14 @@ class GoogleChartsExtension extends \Twig_Extension
     private function loadLibraries($packages)
     {
         array_walk($packages, function (&$item) {
-            $item = '"' . $item . '"';
+            $item = "'" . $item . "'";
         });
 
-        ($this->language) ? $language = ', language: "' . $this->language . '"' : $language = '';
+        ($this->language) ? $language = ", language: '" . $this->language . "'" : $language = '';
 
-        $load = '"' . $this->version . '", {packages:[' . implode(',', $packages) . ']' . $language . '}';
+        $load = "'" . $this->version . "', {packages:[" . implode(',', $packages) . ']' . $language . '}';
 
-        if ($this->version == '1' || $this->version == '1.1') {
-            return 'google.load("visualization", ' . $load . ');';
-
-        } else {
-            return 'google.charts.load(' . $load . ');';
-        }
+        return "google.charts.load($load);";
     }
 
     /**
@@ -227,7 +222,7 @@ class GoogleChartsExtension extends \Twig_Extension
      */
     private function startCallback($name)
     {
-        return "google.setOnLoadCallback($name);
+        return "google.charts.setOnLoadCallback($name);
             function $name() {";
     }
 

@@ -36,7 +36,7 @@ And in your template :
 <body>
     <div id="div_chart"></div>
     
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         {{ gc_draw(piechart, 'div_chart') }}
     </script>
@@ -101,27 +101,9 @@ And in your template :
     <div id="div_piechart"></div>
     <div id="div_histogram"></div>
     
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         {{ gc_draw([piechart, histogram], ['div_piechart', 'div_histogram']) }}
-    </script>
-</body>
-</html>
-```
-
-You can also use the Twig function `gc_draw` for each chart :
-```
-<!-- index.html.twig -->
-<html>
-<head></head>
-<body>
-    <div id="div_piechart"></div>
-    <div id="div_histogram"></div>
-    
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-        {{ gc_draw(piechart, 'div_piechart') }}
-        {{ gc_draw(histogram, 'div_histogram') }}
     </script>
 </body>
 </html>

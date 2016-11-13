@@ -35,14 +35,6 @@ class GaugeChart extends Chart
     /**
      * @inheritdoc
      */
-    protected function getLibrary()
-    {
-        return 'visualization';
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function getPackage()
     {
         return 'gauge';

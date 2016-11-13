@@ -22,7 +22,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('version')->defaultValue('1')->end()
+                ->scalarNode('version')->defaultValue('current')->end()
                 ->scalarNode('language')->defaultValue('')->end()
             ->end()
         ;
