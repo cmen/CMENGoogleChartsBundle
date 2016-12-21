@@ -56,7 +56,8 @@ class Data
             foreach ($row as $key => $value) {
                 if ($value instanceof \DateTime) {
                     $js .= 'new Date(' . $value->format('Y') . ', ' . ($value->format('n')-1) . ', ' .
-                        $value->format('d') . ')';
+                        $value->format('d') . ', '. $value->format('H')  .', '. $value->format('i').', '.
+                        $value->format('s') .')';
                 } else {
                     $js .= json_encode($value);
                 }
