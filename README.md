@@ -1,9 +1,9 @@
 # CMENGoogleChartsBundle
 
-![Latest Stable Version](https://poser.pugx.org/cmen/google-charts-bundle/v/stable)
-![Total Downloads](https://img.shields.io/packagist/dt/cmen/google-charts-bundle.svg?style=flat)
-![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cmen/CMENGoogleChartsBundle/badges/quality-score.png?b=master)
-![License](https://poser.pugx.org/cmen/google-charts-bundle/license)
+[![Latest Stable Version](https://poser.pugx.org/cmen/google-charts-bundle/v/stable)](https://packagist.org/packages/cmen/google-charts-bundle)
+[![Total Downloads](https://img.shields.io/packagist/dt/cmen/google-charts-bundle.svg?style=flat)](https://packagist.org/packages/cmen/google-charts-bundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cmen/CMENGoogleChartsBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cmen/CMENGoogleChartsBundle/)
+[![License](https://poser.pugx.org/cmen/google-charts-bundle/license)](https://packagist.org/packages/cmen/google-charts-bundle)
 
 `CMENGoogleChartsBundle` provides a Twig extension and PHP objects to display [Google Charts](https://developers.google.com/chart/) in your Symfony application.
 
