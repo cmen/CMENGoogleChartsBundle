@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
+use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
+
 /**
  * @author Christophe Meneses
  */
@@ -40,10 +42,18 @@ class Data
      *
      * @param string $dataName Variable name who will contain the data Javascript
      *
-     * @return string  A Javascript string
+     * @return string A Javascript string
+     *
+     * @throws GoogleChartsException
      */
     public function draw($dataName)
     {
+        if (!$this->arrayToDataTable) {
+            throw new GoogleChartsException(
+                'There is no data for chart. Use method setArrayToDataTable() to provide data.'
+            );
+        }
+
         $js = "var $dataName = new google.visualization.arrayToDataTable([";
 
         end($this->arrayToDataTable);
@@ -55,9 +65,9 @@ class Data
             $lastKeyValue = key($row);
             foreach ($row as $key => $value) {
                 if ($value instanceof \DateTime) {
-                    $js .= 'new Date(' . $value->format('Y') . ', ' . ($value->format('n')-1) . ', ' .
-                        $value->format('d') . ', '. $value->format('H')  .', '. $value->format('i').', '.
-                        $value->format('s') .')';
+                    $js .= 'new Date(' . $value->format('Y') . ', ' . ($value->format('n') - 1) . ', ' .
+                        $value->format('d') . ', ' . $value->format('H') . ', ' . $value->format('i') . ', ' .
+                        $value->format('s') . ')';
                 } else {
                     $js .= json_encode($value);
                 }
