@@ -18,7 +18,7 @@ class AdvancedAnimation extends Animation
     /**
      * @param boolean $startup
      *
-     * @return AdvancedAnimation
+     * @return $this
      */
     public function setStartup($startup)
     {

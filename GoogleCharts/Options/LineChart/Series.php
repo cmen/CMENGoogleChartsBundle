@@ -25,6 +25,9 @@ class Series extends LineSeries
     protected $curveType;
 
 
+    /**
+     * Series constructor.
+     */
     public function __construct()
     {
         $this->annotations = new Annotations();
@@ -41,7 +44,7 @@ class Series extends LineSeries
     /**
      * @param string $curveType
      *
-     * @return Series
+     * @return $this
      */
     public function setCurveType($curveType)
     {

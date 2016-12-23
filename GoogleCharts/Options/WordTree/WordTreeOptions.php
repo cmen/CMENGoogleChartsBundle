@@ -38,6 +38,9 @@ class WordTreeOptions extends ChartOptions
     protected $wordtree;
 
 
+    /**
+     * WordTreeOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -57,7 +60,7 @@ class WordTreeOptions extends ChartOptions
     /**
      * @param string[] $colors
      *
-     * @return WordTreeOptions
+     * @return $this
      */
     public function setColors($colors)
     {
@@ -69,7 +72,7 @@ class WordTreeOptions extends ChartOptions
     /**
      * @param string $fontName
      *
-     * @return WordTreeOptions
+     * @return $this
      */
     public function setFontName($fontName)
     {
@@ -81,7 +84,7 @@ class WordTreeOptions extends ChartOptions
     /**
      * @param int $maxFontSize
      *
-     * @return WordTreeOptions
+     * @return $this
      */
     public function setMaxFontSize($maxFontSize)
     {

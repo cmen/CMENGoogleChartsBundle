@@ -41,6 +41,9 @@ class BoxStyle
     protected $gradient;
 
 
+    /**
+     * BoxStyle constructor.
+     */
     public function __construct()
     {
         $this->gradient = new Gradient();
@@ -50,7 +53,7 @@ class BoxStyle
     /**
      * @param string $stroke
      *
-     * @return BoxStyle
+     * @return $this
      */
     public function setStroke($stroke)
     {
@@ -62,7 +65,7 @@ class BoxStyle
     /**
      * @param int $strokeWidth
      *
-     * @return BoxStyle
+     * @return $this
      */
     public function setStrokeWidth($strokeWidth)
     {
@@ -74,7 +77,7 @@ class BoxStyle
     /**
      * @param int $rx
      *
-     * @return BoxStyle
+     * @return $this
      */
     public function setRx($rx)
     {
@@ -86,7 +89,7 @@ class BoxStyle
     /**
      * @param int $ry
      *
-     * @return BoxStyle
+     * @return $this
      */
     public function setRy($ry)
     {

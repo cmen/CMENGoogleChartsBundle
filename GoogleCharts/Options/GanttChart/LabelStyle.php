@@ -27,7 +27,7 @@ class LabelStyle
     /**
      * @param string $fontName
      *
-     * @return LabelStyle
+     * @return $this
      */
     public function setFontName($fontName)
     {
@@ -39,7 +39,7 @@ class LabelStyle
     /**
      * @param int $fontSize
      *
-     * @return LabelStyle
+     * @return $this
      */
     public function setFontSize($fontSize)
     {
@@ -51,7 +51,7 @@ class LabelStyle
     /**
      * @param string $color
      *
-     * @return LabelStyle
+     * @return $this
      */
     public function setColor($color)
     {

@@ -30,7 +30,7 @@ class ViewWindow
     /**
      * @param int|int[] $max
      *
-     * @return ViewWindow
+     * @return $this
      */
     public function setMax($max)
     {
@@ -42,7 +42,7 @@ class ViewWindow
     /**
      * @param int|int[] $min
      *
-     * @return ViewWindow
+     * @return $this
      */
     public function setMin($min)
     {

@@ -21,7 +21,7 @@ class BarLabelStyle
     /**
      * @param string $fontName
      *
-     * @return BarLabelStyle
+     * @return $this
      */
     public function setFontName($fontName)
     {
@@ -33,7 +33,7 @@ class BarLabelStyle
     /**
      * @param int $fontSize
      *
-     * @return BarLabelStyle
+     * @return $this
      */
     public function setFontSize($fontSize)
     {

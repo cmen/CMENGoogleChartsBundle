@@ -154,6 +154,9 @@ class ScatterChartOptions extends AdvancedChartOptions
     protected $trendlines;
 
 
+    /**
+     * ScatterChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -227,7 +230,7 @@ class ScatterChartOptions extends AdvancedChartOptions
     /**
      * @param string $aggregationTarget
      *
-     * @return ScatterChartOptions
+     * @return $this
      */
     public function setAggregationTarget($aggregationTarget)
     {
@@ -239,7 +242,7 @@ class ScatterChartOptions extends AdvancedChartOptions
     /**
      * @param string $curveType
      *
-     * @return ScatterChartOptions
+     * @return $this
      */
     public function setCurveType($curveType)
     {
@@ -251,7 +254,7 @@ class ScatterChartOptions extends AdvancedChartOptions
     /**
      * @param float $dataOpacity
      *
-     * @return ScatterChartOptions
+     * @return $this
      */
     public function setDataOpacity($dataOpacity)
     {
@@ -263,7 +266,7 @@ class ScatterChartOptions extends AdvancedChartOptions
     /**
      * @param int $lineWidth
      *
-     * @return ScatterChartOptions
+     * @return $this
      */
     public function setLineWidth($lineWidth)
     {
@@ -275,7 +278,7 @@ class ScatterChartOptions extends AdvancedChartOptions
     /**
      * @param string $orientation
      *
-     * @return ScatterChartOptions
+     * @return $this
      */
     public function setOrientation($orientation)
     {
@@ -287,7 +290,7 @@ class ScatterChartOptions extends AdvancedChartOptions
     /**
      * @param string $pointShape
      *
-     * @return ScatterChartOptions
+     * @return $this
      */
     public function setPointShape($pointShape)
     {
@@ -299,7 +302,7 @@ class ScatterChartOptions extends AdvancedChartOptions
     /**
      * @param int $pointSize
      *
-     * @return ScatterChartOptions
+     * @return $this
      */
     public function setPointSize($pointSize)
     {
@@ -311,7 +314,7 @@ class ScatterChartOptions extends AdvancedChartOptions
     /**
      * @param boolean $pointsVisible
      *
-     * @return ScatterChartOptions
+     * @return $this
      */
     public function setPointsVisible($pointsVisible)
     {
@@ -323,7 +326,7 @@ class ScatterChartOptions extends AdvancedChartOptions
     /**
      * @param string $selectionMode
      *
-     * @return ScatterChartOptions
+     * @return $this
      */
     public function setSelectionMode($selectionMode)
     {
@@ -335,7 +338,7 @@ class ScatterChartOptions extends AdvancedChartOptions
     /**
      * @param Trendlines[] $trendlines
      *
-     * @return ScatterChartOptions
+     * @return $this
      */
     public function setTrendlines($trendlines)
     {

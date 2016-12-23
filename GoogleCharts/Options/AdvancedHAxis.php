@@ -67,7 +67,7 @@ class AdvancedHAxis extends MediumHAxis
     /**
      * @param int $showTextEvery
      *
-     * @return AdvancedHAxis
+     * @return $this
      */
     public function setShowTextEvery($showTextEvery)
     {
@@ -79,7 +79,7 @@ class AdvancedHAxis extends MediumHAxis
     /**
      * @param boolean $allowContainerBoundaryTextCufoff
      *
-     * @return AdvancedHAxis
+     * @return $this
      */
     public function setAllowContainerBoundaryTextCufoff($allowContainerBoundaryTextCufoff)
     {
@@ -91,7 +91,7 @@ class AdvancedHAxis extends MediumHAxis
     /**
      * @param boolean $slantedText
      *
-     * @return AdvancedHAxis
+     * @return $this
      */
     public function setSlantedText($slantedText)
     {
@@ -103,7 +103,7 @@ class AdvancedHAxis extends MediumHAxis
     /**
      * @param int $slantedTextAngle
      *
-     * @return AdvancedHAxis
+     * @return $this
      */
     public function setSlantedTextAngle($slantedTextAngle)
     {
@@ -115,7 +115,7 @@ class AdvancedHAxis extends MediumHAxis
     /**
      * @param int $maxAlternation
      *
-     * @return AdvancedHAxis
+     * @return $this
      */
     public function setMaxAlternation($maxAlternation)
     {
@@ -127,7 +127,7 @@ class AdvancedHAxis extends MediumHAxis
     /**
      * @param int $maxTextLines
      *
-     * @return AdvancedHAxis
+     * @return $this
      */
     public function setMaxTextLines($maxTextLines)
     {
@@ -139,7 +139,7 @@ class AdvancedHAxis extends MediumHAxis
     /**
      * @param int $minTextSpacing
      *
-     * @return AdvancedHAxis
+     * @return $this
      */
     public function setMinTextSpacing($minTextSpacing)
     {

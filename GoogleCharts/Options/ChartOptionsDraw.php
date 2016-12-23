@@ -15,6 +15,9 @@ class ChartOptionsDraw
     private $optionsFormat;
 
 
+    /**
+     * ChartOptionsDraw constructor.
+     */
     public function __construct()
     {
         $this->optionsFormat = new OptionsFormat();

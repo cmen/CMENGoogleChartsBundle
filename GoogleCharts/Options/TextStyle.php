@@ -28,7 +28,7 @@ class TextStyle
     /**
      * @param string $color
      *
-     * @return TextStyle
+     * @return $this
      */
     public function setColor($color)
     {
@@ -40,7 +40,7 @@ class TextStyle
     /**
      * @param string $fontName
      *
-     * @return TextStyle
+     * @return $this
      */
     public function setFontName($fontName)
     {
@@ -52,7 +52,7 @@ class TextStyle
     /**
      * @param int $fontSize
      *
-     * @return TextStyle
+     * @return $this
      */
     public function setFontSize($fontSize)
     {

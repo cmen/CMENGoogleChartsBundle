@@ -146,6 +146,9 @@ class AreaChartOptions extends LineOptions
     protected $vAxes;
 
 
+    /**
+     * AreaChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -210,7 +213,7 @@ class AreaChartOptions extends LineOptions
     /**
      * @param float $areaOpacity
      *
-     * @return AreaChartOptions
+     * @return $this
      */
     public function setAreaOpacity($areaOpacity)
     {
@@ -222,7 +225,7 @@ class AreaChartOptions extends LineOptions
     /**
      * @param float $dataOpacity
      *
-     * @return AreaChartOptions
+     * @return $this
      */
     public function setDataOpacity($dataOpacity)
     {
@@ -234,7 +237,7 @@ class AreaChartOptions extends LineOptions
     /**
      * @param string $focusTarget
      *
-     * @return AreaChartOptions
+     * @return $this
      */
     public function setFocusTarget($focusTarget)
     {
@@ -246,7 +249,7 @@ class AreaChartOptions extends LineOptions
     /**
      * @param boolean $interpolateNulls
      *
-     * @return AreaChartOptions
+     * @return $this
      */
     public function setInterpolateNulls($interpolateNulls)
     {
@@ -258,7 +261,7 @@ class AreaChartOptions extends LineOptions
     /**
      * @param bool|string $isStacked
      *
-     * @return AreaChartOptions
+     * @return $this
      */
     public function setIsStacked($isStacked)
     {
@@ -270,7 +273,7 @@ class AreaChartOptions extends LineOptions
     /**
      * @param string $orientation
      *
-     * @return AreaChartOptions
+     * @return $this
      */
     public function setOrientation($orientation)
     {
@@ -282,7 +285,7 @@ class AreaChartOptions extends LineOptions
     /**
      * @param boolean $reverseCategories
      *
-     * @return AreaChartOptions
+     * @return $this
      */
     public function setReverseCategories($reverseCategories)
     {
@@ -294,7 +297,7 @@ class AreaChartOptions extends LineOptions
     /**
      * @param string $selectionMode
      *
-     * @return AreaChartOptions
+     * @return $this
      */
     public function setSelectionMode($selectionMode)
     {
@@ -306,7 +309,7 @@ class AreaChartOptions extends LineOptions
     /**
      * @param VAxis[] $vAxes
      *
-     * @return AreaChartOptions
+     * @return $this
      */
     public function setVAxes($vAxes)
     {

@@ -43,6 +43,9 @@ class Units
     protected $milliseconds;
 
 
+    /**
+     * Units constructor.
+     */
     public function __construct()
     {
         $this->years = new Years();

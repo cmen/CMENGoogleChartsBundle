@@ -47,7 +47,7 @@ class ColorAxis
     /**
      * @param int $minValue
      *
-     * @return ColorAxis
+     * @return $this
      */
     public function setMinValue($minValue)
     {
@@ -59,7 +59,7 @@ class ColorAxis
     /**
      * @param int $maxValue
      *
-     * @return ColorAxis
+     * @return $this
      */
     public function setMaxValue($maxValue)
     {
@@ -71,7 +71,7 @@ class ColorAxis
     /**
      * @param int[] $values
      *
-     * @return ColorAxis
+     * @return $this
      */
     public function setValues($values)
     {
@@ -83,7 +83,7 @@ class ColorAxis
     /**
      * @param string[] $colors
      *
-     * @return ColorAxis
+     * @return $this
      */
     public function setColors($colors)
     {

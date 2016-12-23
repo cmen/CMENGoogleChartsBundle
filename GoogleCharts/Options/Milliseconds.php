@@ -15,7 +15,7 @@ class Milliseconds
     /**
      * @param string $format
      *
-     * @return Milliseconds
+     * @return $this
      */
     public function setFormat($format)
     {

@@ -23,6 +23,9 @@ class Diff
     protected $oldData;
 
 
+    /**
+     * Diff constructor.
+     */
     public function __construct()
     {
         $this->innerCircle = new InnerCircle();

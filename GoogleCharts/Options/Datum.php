@@ -23,6 +23,9 @@ class Datum
     protected $style;
 
 
+    /**
+     * Datum constructor.
+     */
     public function __construct()
     {
         $this->stem = new Stem();
@@ -40,7 +43,7 @@ class Datum
     /**
      * @param string $style
      *
-     * @return Datum
+     * @return $this
      */
     public function setStyle($style)
     {

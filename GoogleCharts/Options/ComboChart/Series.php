@@ -51,6 +51,9 @@ class Series extends LineSeries
     protected $type;
 
 
+    /**
+     * Series constructor.
+     */
     public function __construct()
     {
         $this->annotations = new Annotations();
@@ -86,7 +89,7 @@ class Series extends LineSeries
     /**
      * @param string $type
      *
-     * @return Series
+     * @return $this
      */
     public function setType($type)
     {
@@ -98,7 +101,7 @@ class Series extends LineSeries
     /**
      * @param float $areaOpacity
      *
-     * @return Series
+     * @return $this
      */
     public function setAreaOpacity($areaOpacity)
     {
@@ -110,7 +113,7 @@ class Series extends LineSeries
     /**
      * @param string $curveType
      *
-     * @return Series
+     * @return $this
      */
     public function setCurveType($curveType)
     {

@@ -32,7 +32,7 @@ class Histogram
     /**
      * @param int $bucketSize
      *
-     * @return Histogram
+     * @return $this
      */
     public function setBucketSize($bucketSize)
     {
@@ -44,7 +44,7 @@ class Histogram
     /**
      * @param boolean $hideBucketItems
      *
-     * @return Histogram
+     * @return $this
      */
     public function setHideBucketItems($hideBucketItems)
     {
@@ -56,7 +56,7 @@ class Histogram
     /**
      * @param int $lastBucketPercentile
      *
-     * @return Histogram
+     * @return $this
      */
     public function setLastBucketPercentile($lastBucketPercentile)
     {

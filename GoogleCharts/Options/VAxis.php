@@ -144,6 +144,9 @@ class VAxis
     protected $viewWindow;
 
 
+    /**
+     * VAxis constructor.
+     */
     public function __construct()
     {
         $this->gridlines = new Gridlines();
@@ -196,7 +199,7 @@ class VAxis
     /**
      * @param int $baseline
      *
-     * @return VAxis
+     * @return $this
      */
     public function setBaseline($baseline)
     {
@@ -208,7 +211,7 @@ class VAxis
     /**
      * @param string $baselineColor
      *
-     * @return VAxis
+     * @return $this
      */
     public function setBaselineColor($baselineColor)
     {
@@ -220,7 +223,7 @@ class VAxis
     /**
      * @param int $direction
      *
-     * @return VAxis
+     * @return $this
      */
     public function setDirection($direction)
     {
@@ -232,7 +235,7 @@ class VAxis
     /**
      * @param string $format
      *
-     * @return VAxis
+     * @return $this
      */
     public function setFormat($format)
     {
@@ -244,7 +247,7 @@ class VAxis
     /**
      * @param boolean $logScale
      *
-     * @return VAxis
+     * @return $this
      */
     public function setLogScale($logScale)
     {
@@ -256,7 +259,7 @@ class VAxis
     /**
      * @param string $textPosition
      *
-     * @return VAxis
+     * @return $this
      */
     public function setTextPosition($textPosition)
     {
@@ -268,7 +271,7 @@ class VAxis
     /**
      * @param array $ticks
      *
-     * @return VAxis
+     * @return $this
      */
     public function setTicks($ticks)
     {
@@ -280,7 +283,7 @@ class VAxis
     /**
      * @param string $title
      *
-     * @return VAxis
+     * @return $this
      */
     public function setTitle($title)
     {
@@ -292,7 +295,7 @@ class VAxis
     /**
      * @param int $maxValue
      *
-     * @return VAxis
+     * @return $this
      */
     public function setMaxValue($maxValue)
     {
@@ -304,7 +307,7 @@ class VAxis
     /**
      * @param int $minValue
      *
-     * @return VAxis
+     * @return $this
      */
     public function setMinValue($minValue)
     {
@@ -316,7 +319,7 @@ class VAxis
     /**
      * @param string $viewWindowMode
      *
-     * @return VAxis
+     * @return $this
      */
     public function setViewWindowMode($viewWindowMode)
     {

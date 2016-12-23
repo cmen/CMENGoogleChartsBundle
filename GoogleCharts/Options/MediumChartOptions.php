@@ -60,6 +60,9 @@ class MediumChartOptions extends BasicChartOptions
     protected $titleTextStyle;
 
 
+    /**
+     * MediumChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -97,7 +100,7 @@ class MediumChartOptions extends BasicChartOptions
     /**
      * @param string $title
      *
-     * @return MediumChartOptions
+     * @return $this
      */
     public function setTitle($title)
     {
@@ -109,7 +112,7 @@ class MediumChartOptions extends BasicChartOptions
     /**
      * @param string $backgroundColor
      *
-     * @return MediumChartOptions
+     * @return $this
      */
     public function setBackgroundColor($backgroundColor)
     {
@@ -121,7 +124,7 @@ class MediumChartOptions extends BasicChartOptions
     /**
      * @param string[] $colors
      *
-     * @return MediumChartOptions
+     * @return $this
      */
     public function setColors($colors)
     {
@@ -133,7 +136,7 @@ class MediumChartOptions extends BasicChartOptions
     /**
      * @param string $fontName
      *
-     * @return MediumChartOptions
+     * @return $this
      */
     public function setFontName($fontName)
     {
@@ -145,7 +148,7 @@ class MediumChartOptions extends BasicChartOptions
     /**
      * @param int $fontSize
      *
-     * @return MediumChartOptions
+     * @return $this
      */
     public function setFontSize($fontSize)
     {

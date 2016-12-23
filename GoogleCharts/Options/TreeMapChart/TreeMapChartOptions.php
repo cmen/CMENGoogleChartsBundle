@@ -205,6 +205,9 @@ class TreeMapChartOptions extends ChartOptions
     protected $useWeightedAverageForAggregation;
 
 
+    /**
+     * TreeMapChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -233,7 +236,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param boolean $useWeightedAverageForAggregation
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setUseWeightedAverageForAggregation($useWeightedAverageForAggregation)
     {
@@ -245,7 +248,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $title
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setTitle($title)
     {
@@ -257,7 +260,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $fontColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setFontColor($fontColor)
     {
@@ -269,7 +272,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $fontFamily
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setFontFamily($fontFamily)
     {
@@ -281,7 +284,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param int $fontSize
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setFontSize($fontSize)
     {
@@ -293,7 +296,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $headerColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setHeaderColor($headerColor)
     {
@@ -305,7 +308,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param int $headerHeight
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setHeaderHeight($headerHeight)
     {
@@ -317,7 +320,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $headerHighlightColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setHeaderHighlightColor($headerHighlightColor)
     {
@@ -329,7 +332,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param boolean $highlightOnMouseOver
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setHighlightOnMouseOver($highlightOnMouseOver)
     {
@@ -341,7 +344,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param float $hintOpacity
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setHintOpacity($hintOpacity)
     {
@@ -353,7 +356,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $maxColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setMaxColor($maxColor)
     {
@@ -365,7 +368,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param int $maxDepth
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setMaxDepth($maxDepth)
     {
@@ -377,7 +380,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $maxHighlightColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setMaxHighlightColor($maxHighlightColor)
     {
@@ -389,7 +392,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param int $maxPostDepth
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setMaxPostDepth($maxPostDepth)
     {
@@ -401,7 +404,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param int $maxColorValue
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setMaxColorValue($maxColorValue)
     {
@@ -413,7 +416,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $midColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setMidColor($midColor)
     {
@@ -425,7 +428,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $midHighlightColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setMidHighlightColor($midHighlightColor)
     {
@@ -437,7 +440,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $minColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setMinColor($minColor)
     {
@@ -449,7 +452,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $minHighlightColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setMinHighlightColor($minHighlightColor)
     {
@@ -461,7 +464,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param int $minColorValue
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setMinColorValue($minColorValue)
     {
@@ -473,7 +476,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $noColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setNoColor($noColor)
     {
@@ -485,7 +488,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param string $noHighlightColor
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setNoHighlightColor($noHighlightColor)
     {
@@ -497,7 +500,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param boolean $showScale
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setShowScale($showScale)
     {
@@ -509,7 +512,7 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * @param boolean $showTooltips
      *
-     * @return TreeMapChartOptions
+     * @return $this
      */
     public function setShowTooltips($showTooltips)
     {

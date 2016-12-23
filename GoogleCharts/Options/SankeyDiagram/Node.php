@@ -56,6 +56,9 @@ class Node
     protected $colorMode;
 
 
+    /**
+     * Node constructor.
+     */
     public function __construct()
     {
         $this->label = new Label();
@@ -73,7 +76,7 @@ class Node
     /**
      * @param boolean $interactivity
      *
-     * @return Node
+     * @return $this
      */
     public function setInteractivity($interactivity)
     {
@@ -85,7 +88,7 @@ class Node
     /**
      * @param int $labelPadding
      *
-     * @return Node
+     * @return $this
      */
     public function setLabelPadding($labelPadding)
     {
@@ -97,7 +100,7 @@ class Node
     /**
      * @param int $nodePadding
      *
-     * @return Node
+     * @return $this
      */
     public function setNodePadding($nodePadding)
     {
@@ -109,7 +112,7 @@ class Node
     /**
      * @param int $width
      *
-     * @return Node
+     * @return $this
      */
     public function setWidth($width)
     {
@@ -121,7 +124,7 @@ class Node
     /**
      * @param string[] $colors
      *
-     * @return Node
+     * @return $this
      */
     public function setColors($colors)
     {
@@ -133,7 +136,7 @@ class Node
     /**
      * @param string $colorMode
      *
-     * @return Node
+     * @return $this
      */
     public function setColorMode($colorMode)
     {

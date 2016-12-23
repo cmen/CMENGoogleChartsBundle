@@ -23,6 +23,9 @@ class Domain
     protected $style;
 
 
+    /**
+     * Domain constructor.
+     */
     public function __construct()
     {
         $this->stem = new Stem();
@@ -40,7 +43,7 @@ class Domain
     /**
      * @param string $style
      *
-     * @return Domain
+     * @return $this
      */
     public function setStyle($style)
     {

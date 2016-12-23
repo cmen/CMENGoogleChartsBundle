@@ -161,6 +161,9 @@ class ComboChartOptions extends LineOptions
     protected $vAxes;
 
 
+    /**
+     * ComboChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -234,7 +237,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param string $curveType
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setCurveType($curveType)
     {
@@ -246,7 +249,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param float $dataOpacity
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setDataOpacity($dataOpacity)
     {
@@ -258,7 +261,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param string $focusTarget
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setFocusTarget($focusTarget)
     {
@@ -270,7 +273,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param bool $interpolateNulls
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setInterpolateNulls($interpolateNulls)
     {
@@ -282,7 +285,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param string $orientation
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setOrientation($orientation)
     {
@@ -294,7 +297,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param boolean $reverseCategories
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setReverseCategories($reverseCategories)
     {
@@ -306,7 +309,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param string $selectionMode
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setSelectionMode($selectionMode)
     {
@@ -318,7 +321,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param Trendlines[] $trendlines
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setTrendlines($trendlines)
     {
@@ -330,7 +333,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param VAxis[] $vAxes
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setVAxes($vAxes)
     {
@@ -342,7 +345,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param float $areaOpacity
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setAreaOpacity($areaOpacity)
     {
@@ -354,7 +357,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param boolean $isStacked
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setIsStacked($isStacked)
     {
@@ -366,7 +369,7 @@ class ComboChartOptions extends LineOptions
     /**
      * @param string $seriesType
      *
-     * @return ComboChartOptions
+     * @return $this
      */
     public function setSeriesType($seriesType)
     {

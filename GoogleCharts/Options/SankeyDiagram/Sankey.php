@@ -28,6 +28,9 @@ class Sankey
     protected $node;
 
 
+    /**
+     * Sankey constructor.
+     */
     public function __construct()
     {
         $this->link = new Link();
@@ -54,7 +57,7 @@ class Sankey
     /**
      * @param int $iterations
      *
-     * @return Sankey
+     * @return $this
      */
     public function setIterations($iterations)
     {

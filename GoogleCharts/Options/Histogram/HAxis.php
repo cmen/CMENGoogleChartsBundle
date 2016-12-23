@@ -70,7 +70,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
     /**
      * @param int $showTextEvery
      *
-     * @return HAxis
+     * @return $this
      */
     public function setShowTextEvery($showTextEvery)
     {
@@ -82,7 +82,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
     /**
      * @param boolean $allowContainerBoundaryTextCufoff
      *
-     * @return HAxis
+     * @return $this
      */
     public function setAllowContainerBoundaryTextCufoff($allowContainerBoundaryTextCufoff)
     {
@@ -94,7 +94,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
     /**
      * @param boolean $slantedText
      *
-     * @return HAxis
+     * @return $this
      */
     public function setSlantedText($slantedText)
     {
@@ -106,7 +106,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
     /**
      * @param int $slantedTextAngle
      *
-     * @return HAxis
+     * @return $this
      */
     public function setSlantedTextAngle($slantedTextAngle)
     {
@@ -118,7 +118,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
     /**
      * @param int $maxAlternation
      *
-     * @return HAxis
+     * @return $this
      */
     public function setMaxAlternation($maxAlternation)
     {
@@ -130,7 +130,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
     /**
      * @param int $maxTextLines
      *
-     * @return HAxis
+     * @return $this
      */
     public function setMaxTextLines($maxTextLines)
     {
@@ -142,7 +142,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
     /**
      * @param int $minTextSpacing
      *
-     * @return HAxis
+     * @return $this
      */
     public function setMinTextSpacing($minTextSpacing)
     {

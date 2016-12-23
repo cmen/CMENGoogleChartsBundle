@@ -17,7 +17,7 @@ class InnerGridDarkTrack
     /**
      * @param string $fill
      *
-     * @return InnerGridDarkTrack
+     * @return $this
      */
     public function setFill($fill)
     {

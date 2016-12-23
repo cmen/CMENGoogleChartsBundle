@@ -15,7 +15,7 @@ class Days
     /**
      * @param string $format
      *
-     * @return Days
+     * @return $this
      */
     public function setFormat($format)
     {

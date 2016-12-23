@@ -38,7 +38,7 @@ class Label
     /**
      * @param string $color
      *
-     * @return Label
+     * @return $this
      */
     public function setColor($color)
     {
@@ -50,7 +50,7 @@ class Label
     /**
      * @param string $fontName
      *
-     * @return Label
+     * @return $this
      */
     public function setFontName($fontName)
     {
@@ -62,7 +62,7 @@ class Label
     /**
      * @param int $fontSize
      *
-     * @return Label
+     * @return $this
      */
     public function setFontSize($fontSize)
     {
@@ -74,7 +74,7 @@ class Label
     /**
      * @param boolean $bold
      *
-     * @return Label
+     * @return $this
      */
     public function setBold($bold)
     {
@@ -86,7 +86,7 @@ class Label
     /**
      * @param boolean $italic
      *
-     * @return Label
+     * @return $this
      */
     public function setItalic($italic)
     {

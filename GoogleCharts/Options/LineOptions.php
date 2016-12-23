@@ -80,6 +80,9 @@ class LineOptions extends AdvancedChartOptions
     protected $tooltip;
 
 
+    /**
+     * LineOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -99,7 +102,7 @@ class LineOptions extends AdvancedChartOptions
     /**
      * @param string $aggregationTarget
      *
-     * @return LineOptions
+     * @return $this
      */
     public function setAggregationTarget($aggregationTarget)
     {
@@ -111,7 +114,7 @@ class LineOptions extends AdvancedChartOptions
     /**
      * @param int $lineWidth
      *
-     * @return LineOptions
+     * @return $this
      */
     public function setLineWidth($lineWidth)
     {
@@ -123,7 +126,7 @@ class LineOptions extends AdvancedChartOptions
     /**
      * @param int[] $lineDashStyle
      *
-     * @return LineOptions
+     * @return $this
      */
     public function setLineDashStyle($lineDashStyle)
     {
@@ -135,7 +138,7 @@ class LineOptions extends AdvancedChartOptions
     /**
      * @param string $pointShape
      *
-     * @return LineOptions
+     * @return $this
      */
     public function setPointShape($pointShape)
     {
@@ -147,7 +150,7 @@ class LineOptions extends AdvancedChartOptions
     /**
      * @param int $pointSize
      *
-     * @return LineOptions
+     * @return $this
      */
     public function setPointSize($pointSize)
     {
@@ -159,7 +162,7 @@ class LineOptions extends AdvancedChartOptions
     /**
      * @param boolean $pointsVisible
      *
-     * @return LineOptions
+     * @return $this
      */
     public function setPointsVisible($pointsVisible)
     {

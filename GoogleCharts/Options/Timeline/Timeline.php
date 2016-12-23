@@ -54,6 +54,9 @@ class Timeline
     protected $singleColor;
 
 
+    /**
+     * Timeline constructor.
+     */
     public function __construct()
     {
         $this->barLabelStyle = new BarLabelStyle();
@@ -80,7 +83,7 @@ class Timeline
     /**
      * @param boolean $colorByRowLabel
      *
-     * @return Timeline
+     * @return $this
      */
     public function setColorByRowLabel($colorByRowLabel)
     {
@@ -92,7 +95,7 @@ class Timeline
     /**
      * @param boolean $showBarLabels
      *
-     * @return Timeline
+     * @return $this
      */
     public function setShowBarLabels($showBarLabels)
     {
@@ -104,7 +107,7 @@ class Timeline
     /**
      * @param boolean $showRowLabels
      *
-     * @return Timeline
+     * @return $this
      */
     public function setShowRowLabels($showRowLabels)
     {
@@ -116,7 +119,7 @@ class Timeline
     /**
      * @param string $singleColor
      *
-     * @return Timeline
+     * @return $this
      */
     public function setSingleColor($singleColor)
     {
@@ -128,7 +131,7 @@ class Timeline
     /**
      * @param boolean $groupByRowLabel
      *
-     * @return Timeline
+     * @return $this
      */
     public function setGroupByRowLabel($groupByRowLabel)
     {

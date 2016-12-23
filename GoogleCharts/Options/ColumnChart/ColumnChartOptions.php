@@ -126,6 +126,9 @@ class ColumnChartOptions extends AdvancedChartOptions
     protected $trendlines;
 
 
+    /**
+     * ColumnChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -199,7 +202,7 @@ class ColumnChartOptions extends AdvancedChartOptions
     /**
      * @param float $dataOpacity
      *
-     * @return ColumnChartOptions
+     * @return $this
      */
     public function setDataOpacity($dataOpacity)
     {
@@ -211,7 +214,7 @@ class ColumnChartOptions extends AdvancedChartOptions
     /**
      * @param string $focusTarget
      *
-     * @return ColumnChartOptions
+     * @return $this
      */
     public function setFocusTarget($focusTarget)
     {
@@ -223,7 +226,7 @@ class ColumnChartOptions extends AdvancedChartOptions
     /**
      * @param bool|string $isStacked
      *
-     * @return ColumnChartOptions
+     * @return $this
      */
     public function setIsStacked($isStacked)
     {
@@ -235,7 +238,7 @@ class ColumnChartOptions extends AdvancedChartOptions
     /**
      * @param string $orientation
      *
-     * @return ColumnChartOptions
+     * @return $this
      */
     public function setOrientation($orientation)
     {
@@ -247,7 +250,7 @@ class ColumnChartOptions extends AdvancedChartOptions
     /**
      * @param boolean $reverseCategories
      *
-     * @return ColumnChartOptions
+     * @return $this
      */
     public function setReverseCategories($reverseCategories)
     {
@@ -259,7 +262,7 @@ class ColumnChartOptions extends AdvancedChartOptions
     /**
      * @param Trendlines[] $trendlines
      *
-     * @return ColumnChartOptions
+     * @return $this
      */
     public function setTrendlines($trendlines)
     {

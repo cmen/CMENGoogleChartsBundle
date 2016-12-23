@@ -27,7 +27,7 @@ class PieSliceTextStyle
     /**
      * @param string $color
      *
-     * @return PieSliceTextStyle
+     * @return $this
      */
     public function setColor($color)
     {
@@ -39,7 +39,7 @@ class PieSliceTextStyle
     /**
      * @param string $fontName
      *
-     * @return PieSliceTextStyle
+     * @return $this
      */
     public function setFontName($fontName)
     {
@@ -51,7 +51,7 @@ class PieSliceTextStyle
     /**
      * @param int $fontSize
      *
-     * @return PieSliceTextStyle
+     * @return $this
      */
     public function setFontSize($fontSize)
     {

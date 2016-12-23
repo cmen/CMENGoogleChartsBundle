@@ -25,6 +25,9 @@ class BasicTooltip
     protected $trigger;
 
 
+    /**
+     * BasicTooltip constructor.
+     */
     public function __construct()
     {
         $this->textStyle = new MediumTextStyle();
@@ -41,7 +44,7 @@ class BasicTooltip
     /**
      * @param string $trigger
      *
-     * @return BasicTooltip
+     * @return $this
      */
     public function setTrigger($trigger)
     {

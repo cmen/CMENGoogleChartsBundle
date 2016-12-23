@@ -29,6 +29,9 @@ class Bubble
     protected $textStyle;
 
 
+    /**
+     * Bubble constructor.
+     */
     public function __construct()
     {
         $this->textStyle = new AdvancedTextStyle();
@@ -46,7 +49,7 @@ class Bubble
     /**
      * @param string $stroke
      *
-     * @return Bubble
+     * @return $this
      */
     public function setStroke($stroke)
     {
@@ -58,7 +61,7 @@ class Bubble
     /**
      * @param float $opacity
      *
-     * @return Bubble
+     * @return $this
      */
     public function setOpacity($opacity)
     {

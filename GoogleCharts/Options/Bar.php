@@ -19,7 +19,7 @@ class Bar
     /**
      * @param int|string $groupWidth
      *
-     * @return Bar
+     * @return $this
      */
     public function setGroupWidth($groupWidth)
     {

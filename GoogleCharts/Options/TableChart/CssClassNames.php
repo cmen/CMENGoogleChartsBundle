@@ -68,7 +68,7 @@ class CssClassNames
     /**
      * @param string $headerRow
      *
-     * @return CssClassNames
+     * @return $this
      */
     public function setHeaderRow($headerRow)
     {
@@ -80,7 +80,7 @@ class CssClassNames
     /**
      * @param string $tableRow
      *
-     * @return CssClassNames
+     * @return $this
      */
     public function setTableRow($tableRow)
     {
@@ -92,7 +92,7 @@ class CssClassNames
     /**
      * @param string $oddTableRow
      *
-     * @return CssClassNames
+     * @return $this
      */
     public function setOddTableRow($oddTableRow)
     {
@@ -104,7 +104,7 @@ class CssClassNames
     /**
      * @param string $selectedTableRow
      *
-     * @return CssClassNames
+     * @return $this
      */
     public function setSelectedTableRow($selectedTableRow)
     {
@@ -116,7 +116,7 @@ class CssClassNames
     /**
      * @param string $hoverTableRow
      *
-     * @return CssClassNames
+     * @return $this
      */
     public function setHoverTableRow($hoverTableRow)
     {
@@ -128,7 +128,7 @@ class CssClassNames
     /**
      * @param string $headerCell
      *
-     * @return CssClassNames
+     * @return $this
      */
     public function setHeaderCell($headerCell)
     {
@@ -140,7 +140,7 @@ class CssClassNames
     /**
      * @param string $tableCell
      *
-     * @return CssClassNames
+     * @return $this
      */
     public function setTableCell($tableCell)
     {
@@ -152,7 +152,7 @@ class CssClassNames
     /**
      * @param string $rowNumberCell
      *
-     * @return CssClassNames
+     * @return $this
      */
     public function setRowNumberCell($rowNumberCell)
     {

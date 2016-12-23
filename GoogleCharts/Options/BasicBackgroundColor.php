@@ -25,7 +25,7 @@ class BasicBackgroundColor
     /**
      * @param string $stroke
      *
-     * @return BasicBackgroundColor
+     * @return $this
      */
     public function setStroke($stroke)
     {
@@ -37,7 +37,7 @@ class BasicBackgroundColor
     /**
      * @param int $strokeWidth
      *
-     * @return BasicBackgroundColor
+     * @return $this
      */
     public function setStrokeWidth($strokeWidth)
     {

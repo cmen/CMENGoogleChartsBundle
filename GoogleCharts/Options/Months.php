@@ -15,7 +15,7 @@ class Months
     /**
      * @param string $format
      *
-     * @return Months
+     * @return $this
      */
     public function setFormat($format)
     {

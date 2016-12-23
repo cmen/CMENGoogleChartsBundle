@@ -20,7 +20,7 @@ class MediumTextStyle extends TextStyle
     /**
      * @param boolean $bold
      *
-     * @return MediumTextStyle
+     * @return $this
      */
     public function setBold($bold)
     {
@@ -32,7 +32,7 @@ class MediumTextStyle extends TextStyle
     /**
      * @param boolean $italic
      *
-     * @return MediumTextStyle
+     * @return $this
      */
     public function setItalic($italic)
     {

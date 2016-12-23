@@ -45,6 +45,9 @@ class Crosshair
     protected $trigger;
 
 
+    /**
+     * Crosshair constructor.
+     */
     public function __construct()
     {
         $this->focused = new Focused();
@@ -71,7 +74,7 @@ class Crosshair
     /**
      * @param string $color
      *
-     * @return Crosshair
+     * @return $this
      */
     public function setColor($color)
     {
@@ -83,7 +86,7 @@ class Crosshair
     /**
      * @param float $opacity
      *
-     * @return Crosshair
+     * @return $this
      */
     public function setOpacity($opacity)
     {
@@ -95,7 +98,7 @@ class Crosshair
     /**
      * @param string $orientation
      *
-     * @return Crosshair
+     * @return $this
      */
     public function setOrientation($orientation)
     {
@@ -107,7 +110,7 @@ class Crosshair
     /**
      * @param string $trigger
      *
-     * @return Crosshair
+     * @return $this
      */
     public function setTrigger($trigger)
     {

@@ -129,6 +129,9 @@ class HistogramOptions extends AdvancedChartOptions
     protected $vAxes;
 
 
+    /**
+     * HistogramOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -193,7 +196,7 @@ class HistogramOptions extends AdvancedChartOptions
     /**
      * @param float $dataOpacity
      *
-     * @return HistogramOptions
+     * @return $this
      */
     public function setDataOpacity($dataOpacity)
     {
@@ -205,7 +208,7 @@ class HistogramOptions extends AdvancedChartOptions
     /**
      * @param string $focusTarget
      *
-     * @return HistogramOptions
+     * @return $this
      */
     public function setFocusTarget($focusTarget)
     {
@@ -217,7 +220,7 @@ class HistogramOptions extends AdvancedChartOptions
     /**
      * @param boolean $interpolateNulls
      *
-     * @return HistogramOptions
+     * @return $this
      */
     public function setInterpolateNulls($interpolateNulls)
     {
@@ -229,7 +232,7 @@ class HistogramOptions extends AdvancedChartOptions
     /**
      * @param bool|string $isStacked
      *
-     * @return HistogramOptions
+     * @return $this
      */
     public function setIsStacked($isStacked)
     {
@@ -241,7 +244,7 @@ class HistogramOptions extends AdvancedChartOptions
     /**
      * @param string $orientation
      *
-     * @return HistogramOptions
+     * @return $this
      */
     public function setOrientation($orientation)
     {
@@ -253,7 +256,7 @@ class HistogramOptions extends AdvancedChartOptions
     /**
      * @param boolean $reverseCategories
      *
-     * @return HistogramOptions
+     * @return $this
      */
     public function setReverseCategories($reverseCategories)
     {
@@ -265,7 +268,7 @@ class HistogramOptions extends AdvancedChartOptions
     /**
      * @param string $theme
      *
-     * @return HistogramOptions
+     * @return $this
      */
     public function setTheme($theme)
     {
@@ -277,7 +280,7 @@ class HistogramOptions extends AdvancedChartOptions
     /**
      * @param VAxis[] $vAxes
      *
-     * @return HistogramOptions
+     * @return $this
      */
     public function setVAxes($vAxes)
     {

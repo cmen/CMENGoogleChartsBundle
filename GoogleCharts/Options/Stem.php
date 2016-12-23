@@ -23,7 +23,7 @@ class Stem
     /**
      * @param string $color
      *
-     * @return Stem
+     * @return $this
      */
     public function setColor($color)
     {
@@ -35,7 +35,7 @@ class Stem
     /**
      * @param int $length
      *
-     * @return Stem
+     * @return $this
      */
     public function setLength($length)
     {

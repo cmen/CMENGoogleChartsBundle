@@ -24,7 +24,7 @@ class InnerGridHorizLine
     /**
      * @param string $stroke
      *
-     * @return InnerGridHorizLine
+     * @return $this
      */
     public function setStroke($stroke)
     {
@@ -36,7 +36,7 @@ class InnerGridHorizLine
     /**
      * @param int $strokeWidth
      *
-     * @return InnerGridHorizLine
+     * @return $this
      */
     public function setStrokeWidth($strokeWidth)
     {

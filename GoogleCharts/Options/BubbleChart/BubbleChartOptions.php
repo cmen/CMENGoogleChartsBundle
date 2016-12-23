@@ -78,6 +78,9 @@ class BubbleChartOptions extends AdvancedChartOptions
     protected $vAxis;
 
 
+    /**
+     * BubbleChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -169,7 +172,7 @@ class BubbleChartOptions extends AdvancedChartOptions
     /**
      * @param string $selectionMode
      *
-     * @return BubbleChartOptions
+     * @return $this
      */
     public function setSelectionMode($selectionMode)
     {
@@ -181,7 +184,7 @@ class BubbleChartOptions extends AdvancedChartOptions
     /**
      * @param boolean $sortBubblesBySize
      *
-     * @return BubbleChartOptions
+     * @return $this
      */
     public function setSortBubblesBySize($sortBubblesBySize)
     {

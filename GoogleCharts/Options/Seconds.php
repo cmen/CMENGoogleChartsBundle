@@ -15,7 +15,7 @@ class Seconds
     /**
      * @param string $format
      *
-     * @return Seconds
+     * @return $this
      */
     public function setFormat($format)
     {

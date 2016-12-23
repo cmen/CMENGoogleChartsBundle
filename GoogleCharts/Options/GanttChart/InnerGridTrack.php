@@ -18,7 +18,7 @@ class InnerGridTrack
     /**
      * @param string $fill
      *
-     * @return InnerGridTrack
+     * @return $this
      */
     public function setFill($fill)
     {

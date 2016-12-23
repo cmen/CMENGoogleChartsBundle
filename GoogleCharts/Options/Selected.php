@@ -24,7 +24,7 @@ class Selected
     /**
      * @param string $color
      *
-     * @return Selected
+     * @return $this
      */
     public function setColor($color)
     {
@@ -36,7 +36,7 @@ class Selected
     /**
      * @param float $opacity
      *
-     * @return Selected
+     * @return $this
      */
     public function setOpacity($opacity)
     {

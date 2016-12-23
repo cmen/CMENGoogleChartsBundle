@@ -63,6 +63,9 @@ class HAxis
     protected $viewWindowMode;
 
 
+    /**
+     * HAxis constructor.
+     */
     public function __construct()
     {
         $this->gridlines = new Gridlines();
@@ -116,7 +119,7 @@ class HAxis
     /**
      * @param string $textPosition
      *
-     * @return HAxis
+     * @return $this
      */
     public function setTextPosition($textPosition)
     {
@@ -128,7 +131,7 @@ class HAxis
     /**
      * @param string $title
      *
-     * @return HAxis
+     * @return $this
      */
     public function setTitle($title)
     {
@@ -140,7 +143,7 @@ class HAxis
     /**
      * @param string $viewWindowMode
      *
-     * @return HAxis
+     * @return $this
      */
     public function setViewWindowMode($viewWindowMode)
     {

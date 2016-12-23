@@ -20,7 +20,7 @@ class Tooltip
     /**
      * @param boolean $isHtml
      *
-     * @return Tooltip
+     * @return $this
      */
     public function setIsHtml($isHtml)
     {

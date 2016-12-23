@@ -25,6 +25,9 @@ class Candlestick
     protected $risingColor;
 
 
+    /**
+     * Candlestick constructor.
+     */
     public function __construct()
     {
         $this->fallingColor = new FallingColor();
@@ -51,7 +54,7 @@ class Candlestick
     /**
      * @param boolean $hollowIsRising
      *
-     * @return Candlestick
+     * @return $this
      */
     public function setHollowIsRising($hollowIsRising)
     {

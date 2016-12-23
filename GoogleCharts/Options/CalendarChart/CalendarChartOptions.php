@@ -34,6 +34,9 @@ class CalendarChartOptions extends ChartOptions
     protected $noDataPattern;
 
 
+    /**
+     * CalendarChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -71,7 +74,7 @@ class CalendarChartOptions extends ChartOptions
     /**
      * @param string $title
      *
-     * @return CalendarChartOptions
+     * @return $this
      */
     public function setTitle($title)
     {

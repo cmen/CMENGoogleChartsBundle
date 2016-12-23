@@ -36,6 +36,9 @@ class Link
     protected $colorMode;
 
 
+    /**
+     * Link constructor.
+     */
     public function __construct()
     {
         $this->color = new Color();
@@ -53,7 +56,7 @@ class Link
     /**
      * @param string[] $colors
      *
-     * @return Link
+     * @return $this
      */
     public function setColors($colors)
     {
@@ -65,7 +68,7 @@ class Link
     /**
      * @param string $colorMode
      *
-     * @return Link
+     * @return $this
      */
     public function setColorMode($colorMode)
     {

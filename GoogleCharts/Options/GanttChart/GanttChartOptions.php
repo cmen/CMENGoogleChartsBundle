@@ -35,6 +35,9 @@ class GanttChartOptions extends ChartOptionsDraw
     protected $width;
 
 
+    /**
+     * GanttChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -63,7 +66,7 @@ class GanttChartOptions extends ChartOptionsDraw
     /**
      * @param int $height
      *
-     * @return GanttChartOptions
+     * @return $this
      */
     public function setHeight($height)
     {
@@ -75,7 +78,7 @@ class GanttChartOptions extends ChartOptionsDraw
     /**
      * @param int $width
      *
-     * @return GanttChartOptions
+     * @return $this
      */
     public function setWidth($width)
     {

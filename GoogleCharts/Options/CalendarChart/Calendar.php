@@ -80,6 +80,9 @@ class Calendar
     protected $yearLabel;
 
 
+    /**
+     * Calendar constructor.
+     */
     public function __construct()
     {
         $this->cellColor = new CellColor();
@@ -151,7 +154,7 @@ class Calendar
     /**
      * @param int $cellSize
      *
-     * @return Calendar
+     * @return $this
      */
     public function setCellSize($cellSize)
     {
@@ -163,7 +166,7 @@ class Calendar
     /**
      * @param int $dayOfWeekRightSpace
      *
-     * @return Calendar
+     * @return $this
      */
     public function setDayOfWeekRightSpace($dayOfWeekRightSpace)
     {
@@ -175,7 +178,7 @@ class Calendar
     /**
      * @param string $daysOfWeek
      *
-     * @return Calendar
+     * @return $this
      */
     public function setDaysOfWeek($daysOfWeek)
     {
@@ -187,7 +190,7 @@ class Calendar
     /**
      * @param int $underMonthSpace
      *
-     * @return Calendar
+     * @return $this
      */
     public function setUnderMonthSpace($underMonthSpace)
     {
@@ -199,7 +202,7 @@ class Calendar
     /**
      * @param int $underYearSpace
      *
-     * @return Calendar
+     * @return $this
      */
     public function setUnderYearSpace($underYearSpace)
     {

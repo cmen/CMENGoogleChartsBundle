@@ -27,7 +27,7 @@ class Series extends AdvancedSeries
     /**
      * @param float $areaOpacity
      *
-     * @return Series
+     * @return $this
      */
     public function setAreaOpacity($areaOpacity)
     {
@@ -39,7 +39,7 @@ class Series extends AdvancedSeries
     /**
      * @param int[] $lineDashStyle
      *
-     * @return Series
+     * @return $this
      */
     public function setLineDashStyle($lineDashStyle)
     {

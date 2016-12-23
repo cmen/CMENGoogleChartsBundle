@@ -17,6 +17,9 @@ class Series extends AdvancedSeries
     protected $annotations;
 
 
+    /**
+     * Series constructor.
+     */
     public function __construct()
     {
         $this->annotations = new Annotations();

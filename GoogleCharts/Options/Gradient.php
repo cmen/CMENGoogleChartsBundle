@@ -60,7 +60,7 @@ class Gradient
     /**
      * @param string $color1
      *
-     * @return Gradient
+     * @return $this
      */
     public function setColor1($color1)
     {
@@ -72,7 +72,7 @@ class Gradient
     /**
      * @param string $color2
      *
-     * @return Gradient
+     * @return $this
      */
     public function setColor2($color2)
     {
@@ -84,7 +84,7 @@ class Gradient
     /**
      * @param string $x1
      *
-     * @return Gradient
+     * @return $this
      */
     public function setX1($x1)
     {
@@ -96,7 +96,7 @@ class Gradient
     /**
      * @param string $y1
      *
-     * @return Gradient
+     * @return $this
      */
     public function setY1($y1)
     {
@@ -108,7 +108,7 @@ class Gradient
     /**
      * @param string $x2
      *
-     * @return Gradient
+     * @return $this
      */
     public function setX2($x2)
     {
@@ -120,7 +120,7 @@ class Gradient
     /**
      * @param string $y2
      *
-     * @return Gradient
+     * @return $this
      */
     public function setY2($y2)
     {
@@ -132,7 +132,7 @@ class Gradient
     /**
      * @param boolean $useObjectBoundingBoxUnits
      *
-     * @return Gradient
+     * @return $this
      */
     public function setUseObjectBoundingBoxUnits($useObjectBoundingBoxUnits)
     {

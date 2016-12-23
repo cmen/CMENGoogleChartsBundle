@@ -24,7 +24,7 @@ class CriticalPathStyle
     /**
      * @param string $stroke
      *
-     * @return CriticalPathStyle
+     * @return $this
      */
     public function setStroke($stroke)
     {
@@ -36,7 +36,7 @@ class CriticalPathStyle
     /**
      * @param float $strokeWidth
      *
-     * @return CriticalPathStyle
+     * @return $this
      */
     public function setStrokeWidth($strokeWidth)
     {

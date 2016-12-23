@@ -116,6 +116,9 @@ class Gantt
     protected $trackHeight;
 
 
+    /**
+     * Gantt constructor.
+     */
     public function __construct()
     {
         $this->arrow = new Arrow();
@@ -187,7 +190,7 @@ class Gantt
     /**
      * @param int $barCornerRadius
      *
-     * @return Gantt
+     * @return $this
      */
     public function setBarCornerRadius($barCornerRadius)
     {
@@ -199,7 +202,7 @@ class Gantt
     /**
      * @param int $barHeight
      *
-     * @return Gantt
+     * @return $this
      */
     public function setBarHeight($barHeight)
     {
@@ -211,7 +214,7 @@ class Gantt
     /**
      * @param boolean $criticalPathEnabled
      *
-     * @return Gantt
+     * @return $this
      */
     public function setCriticalPathEnabled($criticalPathEnabled)
     {
@@ -223,7 +226,7 @@ class Gantt
     /**
      * @param DateTime|int $defaultStartDate
      *
-     * @return Gantt
+     * @return $this
      */
     public function setDefaultStartDate($defaultStartDate)
     {
@@ -235,7 +238,7 @@ class Gantt
     /**
      * @param int $labelMaxWidth
      *
-     * @return Gantt
+     * @return $this
      */
     public function setLabelMaxWidth($labelMaxWidth)
     {
@@ -247,7 +250,7 @@ class Gantt
     /**
      * @param boolean $percentEnabled
      *
-     * @return Gantt
+     * @return $this
      */
     public function setPercentEnabled($percentEnabled)
     {
@@ -259,7 +262,7 @@ class Gantt
     /**
      * @param boolean $shadowEnabled
      *
-     * @return Gantt
+     * @return $this
      */
     public function setShadowEnabled($shadowEnabled)
     {
@@ -271,7 +274,7 @@ class Gantt
     /**
      * @param string $shadowColor
      *
-     * @return Gantt
+     * @return $this
      */
     public function setShadowColor($shadowColor)
     {
@@ -283,7 +286,7 @@ class Gantt
     /**
      * @param int $shadowOffset
      *
-     * @return Gantt
+     * @return $this
      */
     public function setShadowOffset($shadowOffset)
     {
@@ -295,7 +298,7 @@ class Gantt
     /**
      * @param int $trackHeight
      *
-     * @return Gantt
+     * @return $this
      */
     public function setTrackHeight($trackHeight)
     {

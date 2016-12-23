@@ -132,6 +132,9 @@ class LineChartOptions extends LineOptions
     protected $vAxes;
 
 
+    /**
+     * LineChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -196,7 +199,7 @@ class LineChartOptions extends LineOptions
     /**
      * @param string $curveType
      *
-     * @return LineChartOptions
+     * @return $this
      */
     public function setCurveType($curveType)
     {
@@ -208,7 +211,7 @@ class LineChartOptions extends LineOptions
     /**
      * @param float $dataOpacity
      *
-     * @return LineChartOptions
+     * @return $this
      */
     public function setDataOpacity($dataOpacity)
     {
@@ -220,7 +223,7 @@ class LineChartOptions extends LineOptions
     /**
      * @param string $focusTarget
      *
-     * @return LineChartOptions
+     * @return $this
      */
     public function setFocusTarget($focusTarget)
     {
@@ -232,7 +235,7 @@ class LineChartOptions extends LineOptions
     /**
      * @param int $interpolateNulls
      *
-     * @return LineChartOptions
+     * @return $this
      */
     public function setInterpolateNulls($interpolateNulls)
     {
@@ -244,7 +247,7 @@ class LineChartOptions extends LineOptions
     /**
      * @param string $orientation
      *
-     * @return LineChartOptions
+     * @return $this
      */
     public function setOrientation($orientation)
     {
@@ -256,7 +259,7 @@ class LineChartOptions extends LineOptions
     /**
      * @param boolean $reverseCategories
      *
-     * @return LineChartOptions
+     * @return $this
      */
     public function setReverseCategories($reverseCategories)
     {
@@ -268,7 +271,7 @@ class LineChartOptions extends LineOptions
     /**
      * @param string $selectionMode
      *
-     * @return LineChartOptions
+     * @return $this
      */
     public function setSelectionMode($selectionMode)
     {
@@ -280,7 +283,7 @@ class LineChartOptions extends LineOptions
     /**
      * @param Trendlines[] $trendlines
      *
-     * @return LineChartOptions
+     * @return $this
      */
     public function setTrendlines($trendlines)
     {
@@ -292,7 +295,7 @@ class LineChartOptions extends LineOptions
     /**
      * @param VAxis[] $vAxes
      *
-     * @return LineChartOptions
+     * @return $this
      */
     public function setVAxes($vAxes)
     {

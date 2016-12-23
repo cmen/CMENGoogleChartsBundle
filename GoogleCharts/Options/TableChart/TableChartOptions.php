@@ -166,6 +166,9 @@ class TableChartOptions extends ChartOptionsDraw
     protected $width;
 
 
+    /**
+     * TableChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -185,7 +188,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $allowHtml
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setAllowHtml($allowHtml)
     {
@@ -197,7 +200,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $alternatingRowStyle
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setAlternatingRowStyle($alternatingRowStyle)
     {
@@ -209,7 +212,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param int $firstRowNumber
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setFirstRowNumber($firstRowNumber)
     {
@@ -221,7 +224,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param int $frozenColumns
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setFrozenColumns($frozenColumns)
     {
@@ -233,7 +236,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param string $height
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setHeight($height)
     {
@@ -245,7 +248,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param string $page
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setPage($page)
     {
@@ -257,7 +260,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param int $pageSize
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setPageSize($pageSize)
     {
@@ -269,7 +272,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param int|string $pagingButtons
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setPagingButtons($pagingButtons)
     {
@@ -281,7 +284,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $rtlTable
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setRtlTable($rtlTable)
     {
@@ -293,7 +296,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param int $scrollLeftStartPosition
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setScrollLeftStartPosition($scrollLeftStartPosition)
     {
@@ -305,7 +308,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $showRowNumber
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setShowRowNumber($showRowNumber)
     {
@@ -317,7 +320,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param string $sort
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setSort($sort)
     {
@@ -329,7 +332,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $sortAscending
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setSortAscending($sortAscending)
     {
@@ -341,7 +344,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param int $sortColumn
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setSortColumn($sortColumn)
     {
@@ -353,7 +356,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param int $startPage
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setStartPage($startPage)
     {
@@ -365,7 +368,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * @param string $width
      *
-     * @return TableChartOptions
+     * @return $this
      */
     public function setWidth($width)
     {

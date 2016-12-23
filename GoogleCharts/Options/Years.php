@@ -15,7 +15,7 @@ class Years
     /**
      * @param string $format
      *
-     * @return Years
+     * @return $this
      */
     public function setFormat($format)
     {

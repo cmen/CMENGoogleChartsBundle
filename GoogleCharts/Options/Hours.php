@@ -15,7 +15,7 @@ class Hours
     /**
      * @param string $format
      *
-     * @return Hours
+     * @return $this
      */
     public function setFormat($format)
     {

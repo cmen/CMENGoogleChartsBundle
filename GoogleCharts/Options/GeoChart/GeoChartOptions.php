@@ -134,6 +134,9 @@ class GeoChartOptions extends ChartOptions
     protected $tooltip;
 
 
+    /**
+     * GeoChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -198,7 +201,7 @@ class GeoChartOptions extends ChartOptions
     /**
      * @param string $backgroundColor
      *
-     * @return GeoChartOptions
+     * @return $this
      */
     public function setBackgroundColor($backgroundColor)
     {
@@ -210,7 +213,7 @@ class GeoChartOptions extends ChartOptions
     /**
      * @param string $datalessRegionColor
      *
-     * @return GeoChartOptions
+     * @return $this
      */
     public function setDatalessRegionColor($datalessRegionColor)
     {
@@ -222,7 +225,7 @@ class GeoChartOptions extends ChartOptions
     /**
      * @param string $displayMode
      *
-     * @return GeoChartOptions
+     * @return $this
      */
     public function setDisplayMode($displayMode)
     {
@@ -234,7 +237,7 @@ class GeoChartOptions extends ChartOptions
     /**
      * @param string $defaultColor
      *
-     * @return GeoChartOptions
+     * @return $this
      */
     public function setDefaultColor($defaultColor)
     {
@@ -246,7 +249,7 @@ class GeoChartOptions extends ChartOptions
     /**
      * @param string $domain
      *
-     * @return GeoChartOptions
+     * @return $this
      */
     public function setDomain($domain)
     {
@@ -258,7 +261,7 @@ class GeoChartOptions extends ChartOptions
     /**
      * @param boolean $keepAspectRatio
      *
-     * @return GeoChartOptions
+     * @return $this
      */
     public function setKeepAspectRatio($keepAspectRatio)
     {
@@ -270,7 +273,7 @@ class GeoChartOptions extends ChartOptions
     /**
      * @param boolean $enableRegionInteractivity
      *
-     * @return GeoChartOptions
+     * @return $this
      */
     public function setEnableRegionInteractivity($enableRegionInteractivity)
     {
@@ -282,7 +285,7 @@ class GeoChartOptions extends ChartOptions
     /**
      * @param string $region
      *
-     * @return GeoChartOptions
+     * @return $this
      */
     public function setRegion($region)
     {
@@ -294,7 +297,7 @@ class GeoChartOptions extends ChartOptions
     /**
      * @param float $markerOpacity
      *
-     * @return GeoChartOptions
+     * @return $this
      */
     public function setMarkerOpacity($markerOpacity)
     {
@@ -306,7 +309,7 @@ class GeoChartOptions extends ChartOptions
     /**
      * @param string $resolution
      *
-     * @return GeoChartOptions
+     * @return $this
      */
     public function setResolution($resolution)
     {

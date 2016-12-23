@@ -50,7 +50,7 @@ class OrgChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $allowCollapse
      *
-     * @return OrgChartOptions
+     * @return $this
      */
     public function setAllowCollapse($allowCollapse)
     {
@@ -62,7 +62,7 @@ class OrgChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $allowHtml
      *
-     * @return OrgChartOptions
+     * @return $this
      */
     public function setAllowHtml($allowHtml)
     {
@@ -74,7 +74,7 @@ class OrgChartOptions extends ChartOptionsDraw
     /**
      * @param string $nodeClass
      *
-     * @return OrgChartOptions
+     * @return $this
      */
     public function setNodeClass($nodeClass)
     {
@@ -86,7 +86,7 @@ class OrgChartOptions extends ChartOptionsDraw
     /**
      * @param string $selectedNodeClass
      *
-     * @return OrgChartOptions
+     * @return $this
      */
     public function setSelectedNodeClass($selectedNodeClass)
     {
@@ -98,7 +98,7 @@ class OrgChartOptions extends ChartOptionsDraw
     /**
      * @param string $size
      *
-     * @return OrgChartOptions
+     * @return $this
      */
     public function setSize($size)
     {

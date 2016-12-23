@@ -139,6 +139,9 @@ class BarChartOptions extends AdvancedChartOptions
     protected $trendlines;
 
 
+    /**
+     * BarChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -212,7 +215,7 @@ class BarChartOptions extends AdvancedChartOptions
     /**
      * @param float $dataOpacity
      *
-     * @return BarChartOptions
+     * @return $this
      */
     public function setDataOpacity($dataOpacity)
     {
@@ -224,7 +227,7 @@ class BarChartOptions extends AdvancedChartOptions
     /**
      * @param string $focusTarget
      *
-     * @return BarChartOptions
+     * @return $this
      */
     public function setFocusTarget($focusTarget)
     {
@@ -236,7 +239,7 @@ class BarChartOptions extends AdvancedChartOptions
     /**
      * @param HAxis[] $hAxes
      *
-     * @return BarChartOptions
+     * @return $this
      */
     public function setHAxes($hAxes)
     {
@@ -248,7 +251,7 @@ class BarChartOptions extends AdvancedChartOptions
     /**
      * @param bool|string $isStacked
      *
-     * @return BarChartOptions
+     * @return $this
      */
     public function setIsStacked($isStacked)
     {
@@ -260,7 +263,7 @@ class BarChartOptions extends AdvancedChartOptions
     /**
      * @param string $orientation
      *
-     * @return BarChartOptions
+     * @return $this
      */
     public function setOrientation($orientation)
     {
@@ -272,7 +275,7 @@ class BarChartOptions extends AdvancedChartOptions
     /**
      * @param boolean $reverseCategories
      *
-     * @return BarChartOptions
+     * @return $this
      */
     public function setReverseCategories($reverseCategories)
     {
@@ -284,7 +287,7 @@ class BarChartOptions extends AdvancedChartOptions
     /**
      * @param Trendlines[] $trendlines
      *
-     * @return BarChartOptions
+     * @return $this
      */
     public function setTrendlines($trendlines)
     {

@@ -15,6 +15,9 @@ class DiffColumnChartOptions extends ColumnChartOptions
     protected $diff;
 
 
+    /**
+     * DiffColumnChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();

@@ -27,7 +27,7 @@ class AdvancedSeries extends Series
     /**
      * @param int $targetAxisIndex
      *
-     * @return AdvancedSeries
+     * @return $this
      */
     public function setTargetAxisIndex($targetAxisIndex)
     {
@@ -39,7 +39,7 @@ class AdvancedSeries extends Series
     /**
      * @param string $labelInLegend
      *
-     * @return AdvancedSeries
+     * @return $this
      */
     public function setLabelInLegend($labelInLegend)
     {

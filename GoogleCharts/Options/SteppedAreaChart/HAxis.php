@@ -122,6 +122,9 @@ class HAxis
     protected $viewWindow;
 
 
+    /**
+     * HAxis constructor.
+     */
     public function __construct()
     {
         $this->textStyle = new TextStyle();
@@ -156,7 +159,7 @@ class HAxis
     /**
      * @param string $title
      *
-     * @return HAxis
+     * @return $this
      */
     public function setTitle($title)
     {
@@ -168,7 +171,7 @@ class HAxis
     /**
      * @param array $ticks
      *
-     * @return HAxis
+     * @return $this
      */
     public function setTicks($ticks)
     {
@@ -180,7 +183,7 @@ class HAxis
     /**
      * @param int $direction
      *
-     * @return HAxis
+     * @return $this
      */
     public function setDirection($direction)
     {
@@ -192,7 +195,7 @@ class HAxis
     /**
      * @param int $showTextEvery
      *
-     * @return HAxis
+     * @return $this
      */
     public function setShowTextEvery($showTextEvery)
     {
@@ -204,7 +207,7 @@ class HAxis
     /**
      * @param boolean $allowContainerBoundaryTextCufoff
      *
-     * @return HAxis
+     * @return $this
      */
     public function setAllowContainerBoundaryTextCufoff($allowContainerBoundaryTextCufoff)
     {
@@ -216,7 +219,7 @@ class HAxis
     /**
      * @param boolean $slantedText
      *
-     * @return HAxis
+     * @return $this
      */
     public function setSlantedText($slantedText)
     {
@@ -228,7 +231,7 @@ class HAxis
     /**
      * @param int $slantedTextAngle
      *
-     * @return HAxis
+     * @return $this
      */
     public function setSlantedTextAngle($slantedTextAngle)
     {
@@ -240,7 +243,7 @@ class HAxis
     /**
      * @param int $maxAlternation
      *
-     * @return HAxis
+     * @return $this
      */
     public function setMaxAlternation($maxAlternation)
     {
@@ -252,7 +255,7 @@ class HAxis
     /**
      * @param int $maxTextLines
      *
-     * @return HAxis
+     * @return $this
      */
     public function setMaxTextLines($maxTextLines)
     {
@@ -264,7 +267,7 @@ class HAxis
     /**
      * @param int $minTextSpacing
      *
-     * @return HAxis
+     * @return $this
      */
     public function setMinTextSpacing($minTextSpacing)
     {
@@ -276,7 +279,7 @@ class HAxis
     /**
      * @param string $textPosition
      *
-     * @return HAxis
+     * @return $this
      */
     public function setTextPosition($textPosition)
     {

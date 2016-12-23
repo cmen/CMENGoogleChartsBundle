@@ -20,7 +20,7 @@ class Chart
     /**
      * @param string $title
      *
-     * @return Chart
+     * @return $this
      */
     public function setTitle($title)
     {
@@ -32,7 +32,7 @@ class Chart
     /**
      * @param mixed $subtitle
      *
-     * @return Chart
+     * @return $this
      */
     public function setSubtitle($subtitle)
     {

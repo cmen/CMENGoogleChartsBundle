@@ -17,7 +17,7 @@ class BackgroundColor
     /**
      * @param string $fill
      *
-     * @return BackgroundColor
+     * @return $this
      */
     public function setFill($fill)
     {

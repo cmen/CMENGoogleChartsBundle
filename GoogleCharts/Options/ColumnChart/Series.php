@@ -24,6 +24,9 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
     protected $targetAxisIndex;
 
 
+    /**
+     * Series constructor.
+     */
     public function __construct()
     {
         $this->annotations = new AdvancedAnnotations();
@@ -40,7 +43,7 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
     /**
      * @param int $targetAxisIndex
      *
-     * @return Series
+     * @return $this
      */
     public function setTargetAxisIndex($targetAxisIndex)
     {

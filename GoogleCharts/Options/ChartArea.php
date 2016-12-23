@@ -51,6 +51,9 @@ class ChartArea
     protected $width;
 
 
+    /**
+     * ChartArea constructor.
+     */
     public function __construct()
     {
         $this->backgroundColor = new BasicBackgroundColor();
@@ -68,7 +71,7 @@ class ChartArea
     /**
      * @param int|string $height
      *
-     * @return ChartArea
+     * @return $this
      */
     public function setHeight($height)
     {
@@ -80,7 +83,7 @@ class ChartArea
     /**
      * @param int|string $left
      *
-     * @return ChartArea
+     * @return $this
      */
     public function setLeft($left)
     {
@@ -92,7 +95,7 @@ class ChartArea
     /**
      * @param int|string $top
      *
-     * @return ChartArea
+     * @return $this
      */
     public function setTop($top)
     {
@@ -104,7 +107,7 @@ class ChartArea
     /**
      * @param int|string $width
      *
-     * @return ChartArea
+     * @return $this
      */
     public function setWidth($width)
     {
@@ -116,7 +119,7 @@ class ChartArea
     /**
      * @param string $backgroundColor
      *
-     * @return ChartArea
+     * @return $this
      */
     public function setBackgroundColor($backgroundColor)
     {

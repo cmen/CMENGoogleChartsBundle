@@ -21,6 +21,9 @@ class SankeyDiagramOptions extends ChartOptions
     protected $tooltip;
 
 
+    /**
+     * SankeyDiagramOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();

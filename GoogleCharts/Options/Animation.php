@@ -29,7 +29,7 @@ class Animation
     /**
      * @param int $duration
      *
-     * @return Animation
+     * @return $this
      */
     public function setDuration($duration)
     {
@@ -41,7 +41,7 @@ class Animation
     /**
      * @param string $easing
      *
-     * @return Animation
+     * @return $this
      */
     public function setEasing($easing)
     {

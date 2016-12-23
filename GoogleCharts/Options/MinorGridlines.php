@@ -27,6 +27,9 @@ class MinorGridlines
     protected $units;
 
 
+    /**
+     * MinorGridlines constructor.
+     */
     public function __construct()
     {
         $this->units = new Units();
@@ -44,7 +47,7 @@ class MinorGridlines
     /**
      * @param string $color
      *
-     * @return MinorGridlines
+     * @return $this
      */
     public function setColor($color)
     {
@@ -56,7 +59,7 @@ class MinorGridlines
     /**
      * @param int $count
      *
-     * @return MinorGridlines
+     * @return $this
      */
     public function setCount($count)
     {

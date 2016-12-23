@@ -49,7 +49,7 @@ class WordTree
     /**
      * @param string $format
      *
-     * @return WordTree
+     * @return $this
      */
     public function setFormat($format)
     {
@@ -61,7 +61,7 @@ class WordTree
     /**
      * @param string $sentenceRegex
      *
-     * @return WordTree
+     * @return $this
      */
     public function setSentenceRegex($sentenceRegex)
     {
@@ -73,7 +73,7 @@ class WordTree
     /**
      * @param string $type
      *
-     * @return WordTree
+     * @return $this
      */
     public function setType($type)
     {
@@ -85,7 +85,7 @@ class WordTree
     /**
      * @param string $word
      *
-     * @return WordTree
+     * @return $this
      */
     public function setWord($word)
     {
@@ -97,7 +97,7 @@ class WordTree
     /**
      * @param string $wordRegex
      *
-     * @return WordTree
+     * @return $this
      */
     public function setWordRegex($wordRegex)
     {

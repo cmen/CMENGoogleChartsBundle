@@ -26,7 +26,7 @@ class Series
     /**
      * @param string $color
      *
-     * @return Series
+     * @return $this
      */
     public function setColor($color)
     {
@@ -38,7 +38,7 @@ class Series
     /**
      * @param bool $visibleInLegend
      *
-     * @return Series
+     * @return $this
      */
     public function setVisibleInLegend($visibleInLegend)
     {

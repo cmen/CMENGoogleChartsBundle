@@ -32,7 +32,7 @@ class FallingColor
     /**
      * @param string $fill
      *
-     * @return FallingColor
+     * @return $this
      */
     public function setFill($fill)
     {
@@ -44,7 +44,7 @@ class FallingColor
     /**
      * @param string $stroke
      *
-     * @return FallingColor
+     * @return $this
      */
     public function setStroke($stroke)
     {
@@ -56,7 +56,7 @@ class FallingColor
     /**
      * @param int $strokeWidth
      *
-     * @return FallingColor
+     * @return $this
      */
     public function setStrokeWidth($strokeWidth)
     {

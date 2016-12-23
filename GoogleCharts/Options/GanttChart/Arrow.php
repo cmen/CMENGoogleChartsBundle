@@ -53,7 +53,7 @@ class Arrow
     /**
      * @param int $angle
      *
-     * @return Arrow
+     * @return $this
      */
     public function setAngle($angle)
     {
@@ -65,7 +65,7 @@ class Arrow
     /**
      * @param string $color
      *
-     * @return Arrow
+     * @return $this
      */
     public function setColor($color)
     {
@@ -77,7 +77,7 @@ class Arrow
     /**
      * @param int $length
      *
-     * @return Arrow
+     * @return $this
      */
     public function setLength($length)
     {
@@ -89,7 +89,7 @@ class Arrow
     /**
      * @param int $radius
      *
-     * @return Arrow
+     * @return $this
      */
     public function setRadius($radius)
     {
@@ -101,7 +101,7 @@ class Arrow
     /**
      * @param int $spaceAfter
      *
-     * @return Arrow
+     * @return $this
      */
     public function setSpaceAfter($spaceAfter)
     {
@@ -113,7 +113,7 @@ class Arrow
     /**
      * @param float $width
      *
-     * @return Arrow
+     * @return $this
      */
     public function setWidth($width)
     {

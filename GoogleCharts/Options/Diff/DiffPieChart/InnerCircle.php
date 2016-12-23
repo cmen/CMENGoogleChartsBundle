@@ -25,7 +25,7 @@ class InnerCircle
     /**
      * @param float $radiusFactor
      *
-     * @return InnerCircle
+     * @return $this
      */
     public function setRadiusFactor($radiusFactor)
     {
@@ -37,7 +37,7 @@ class InnerCircle
     /**
      * @param float $borderFactor
      *
-     * @return InnerCircle
+     * @return $this
      */
     public function setBorderFactor($borderFactor)
     {

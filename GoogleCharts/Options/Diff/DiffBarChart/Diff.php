@@ -13,6 +13,9 @@ class Diff
     protected $newData;
 
 
+    /**
+     * Diff constructor.
+     */
     public function __construct()
     {
         $this->newData = new NewData();

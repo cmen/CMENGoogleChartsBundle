@@ -117,6 +117,9 @@ class PieChartOptions extends MediumChartOptions
     protected $tooltip;
 
 
+    /**
+     * PieChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -154,7 +157,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * @param boolean $interpolateNulls
      *
-     * @return PieChartOptions
+     * @return $this
      */
     public function setInterpolateNulls($interpolateNulls)
     {
@@ -166,7 +169,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * @param boolean $is3D
      *
-     * @return PieChartOptions
+     * @return $this
      */
     public function setIs3D($is3D)
     {
@@ -178,7 +181,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * @param float $pieHole
      *
-     * @return PieChartOptions
+     * @return $this
      */
     public function setPieHole($pieHole)
     {
@@ -190,7 +193,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * @param int $pieStartAngle
      *
-     * @return PieChartOptions
+     * @return $this
      */
     public function setPieStartAngle($pieStartAngle)
     {
@@ -202,7 +205,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * @param string $pieSliceText
      *
-     * @return PieChartOptions
+     * @return $this
      */
     public function setPieSliceText($pieSliceText)
     {
@@ -214,7 +217,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * @param PieSlice[] $slices
      *
-     * @return PieChartOptions
+     * @return $this
      */
     public function setSlices($slices)
     {
@@ -226,7 +229,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * @param float $sliceVisibilityThreshold
      *
-     * @return PieChartOptions
+     * @return $this
      */
     public function setSliceVisibilityThreshold($sliceVisibilityThreshold)
     {
@@ -238,7 +241,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * @param boolean $reverseCategories
      *
-     * @return PieChartOptions
+     * @return $this
      */
     public function setReverseCategories($reverseCategories)
     {
@@ -250,7 +253,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * @param string $pieResidueSliceColor
      *
-     * @return PieChartOptions
+     * @return $this
      */
     public function setPieResidueSliceColor($pieResidueSliceColor)
     {
@@ -262,7 +265,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * @param string $pieResidueSliceLabel
      *
-     * @return PieChartOptions
+     * @return $this
      */
     public function setPieResidueSliceLabel($pieResidueSliceLabel)
     {

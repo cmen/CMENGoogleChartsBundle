@@ -15,6 +15,9 @@ class AdvancedColorAxis extends ColorAxis
     protected $legend;
 
 
+    /**
+     * AdvancedColorAxis constructor.
+     */
     public function __construct()
     {
         $this->legend = new Legend();

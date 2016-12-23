@@ -133,6 +133,9 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     protected $vAxes;
 
 
+    /**
+     * SteppedAreaChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -179,7 +182,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     /**
      * @param string $aggregationTarget
      *
-     * @return SteppedAreaChartOptions
+     * @return $this
      */
     public function setAggregationTarget($aggregationTarget)
     {
@@ -191,7 +194,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     /**
      * @param float $areaOpacity
      *
-     * @return SteppedAreaChartOptions
+     * @return $this
      */
     public function setAreaOpacity($areaOpacity)
     {
@@ -203,7 +206,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     /**
      * @param boolean $connectSteps
      *
-     * @return SteppedAreaChartOptions
+     * @return $this
      */
     public function setConnectSteps($connectSteps)
     {
@@ -215,7 +218,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     /**
      * @param bool|string $isStacked
      *
-     * @return SteppedAreaChartOptions
+     * @return $this
      */
     public function setIsStacked($isStacked)
     {
@@ -227,7 +230,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     /**
      * @param \int[] $lineDashStyle
      *
-     * @return SteppedAreaChartOptions
+     * @return $this
      */
     public function setLineDashStyle($lineDashStyle)
     {
@@ -239,7 +242,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     /**
      * @param boolean $reverseCategories
      *
-     * @return SteppedAreaChartOptions
+     * @return $this
      */
     public function setReverseCategories($reverseCategories)
     {
@@ -251,7 +254,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     /**
      * @param string $selectionMode
      *
-     * @return SteppedAreaChartOptions
+     * @return $this
      */
     public function setSelectionMode($selectionMode)
     {
@@ -263,7 +266,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     /**
      * @param VAxis[] $vAxes
      *
-     * @return SteppedAreaChartOptions
+     * @return $this
      */
     public function setVAxes($vAxes)
     {

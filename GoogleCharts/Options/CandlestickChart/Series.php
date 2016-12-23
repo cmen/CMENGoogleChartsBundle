@@ -22,6 +22,9 @@ class Series extends AdvancedSeries
     protected $risingColor;
 
 
+    /**
+     * Series constructor.
+     */
     public function __construct()
     {
         $this->fallingColor = new FallingColor();

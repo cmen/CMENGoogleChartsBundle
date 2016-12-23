@@ -85,7 +85,7 @@ class Trendlines
     /**
      * @param boolean $visibleInLegend
      *
-     * @return Trendlines
+     * @return $this
      */
     public function setVisibleInLegend($visibleInLegend)
     {
@@ -97,7 +97,7 @@ class Trendlines
     /**
      * @param string $color
      *
-     * @return Trendlines
+     * @return $this
      */
     public function setColor($color)
     {
@@ -109,7 +109,7 @@ class Trendlines
     /**
      * @param int $degree
      *
-     * @return Trendlines
+     * @return $this
      */
     public function setDegree($degree)
     {
@@ -121,7 +121,7 @@ class Trendlines
     /**
      * @param string $labelInLegend
      *
-     * @return Trendlines
+     * @return $this
      */
     public function setLabelInLegend($labelInLegend)
     {
@@ -133,7 +133,7 @@ class Trendlines
     /**
      * @param int $lineWidth
      *
-     * @return Trendlines
+     * @return $this
      */
     public function setLineWidth($lineWidth)
     {
@@ -145,7 +145,7 @@ class Trendlines
     /**
      * @param float $opacity
      *
-     * @return Trendlines
+     * @return $this
      */
     public function setOpacity($opacity)
     {
@@ -157,7 +157,7 @@ class Trendlines
     /**
      * @param int $pointSize
      *
-     * @return Trendlines
+     * @return $this
      */
     public function setPointSize($pointSize)
     {
@@ -169,7 +169,7 @@ class Trendlines
     /**
      * @param boolean $pointsVisible
      *
-     * @return Trendlines
+     * @return $this
      */
     public function setPointsVisible($pointsVisible)
     {
@@ -181,7 +181,7 @@ class Trendlines
     /**
      * @param boolean $showR2
      *
-     * @return Trendlines
+     * @return $this
      */
     public function setShowR2($showR2)
     {
@@ -193,7 +193,7 @@ class Trendlines
     /**
      * @param string $type
      *
-     * @return Trendlines
+     * @return $this
      */
     public function setType($type)
     {

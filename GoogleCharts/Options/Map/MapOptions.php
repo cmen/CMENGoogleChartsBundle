@@ -103,7 +103,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param boolean $enableScrollWheel
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setEnableScrollWheel($enableScrollWheel)
     {
@@ -115,7 +115,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param array $icons
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setIcons($icons)
     {
@@ -127,7 +127,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param boolean $lineColor
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setLineColor($lineColor)
     {
@@ -139,7 +139,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param int $lineWidth
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setLineWidth($lineWidth)
     {
@@ -151,7 +151,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param array $maps
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setMaps($maps)
     {
@@ -163,7 +163,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param string $mapType
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setMapType($mapType)
     {
@@ -175,7 +175,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param array $mapTypeIds
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setMapTypeIds($mapTypeIds)
     {
@@ -187,7 +187,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param boolean $showLine
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setShowLine($showLine)
     {
@@ -199,7 +199,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param boolean $showTip
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setShowTip($showTip)
     {
@@ -211,7 +211,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param boolean $useMapTypeControl
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setUseMapTypeControl($useMapTypeControl)
     {
@@ -223,7 +223,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * @param int $zoomLevel
      *
-     * @return MapOptions
+     * @return $this
      */
     public function setZoomLevel($zoomLevel)
     {

@@ -29,6 +29,9 @@ class PieSlice
     protected $textStyle;
 
 
+    /**
+     * PieSlice constructor.
+     */
     public function __construct()
     {
         $this->textStyle = new PieSliceTextStyle();
@@ -46,7 +49,7 @@ class PieSlice
     /**
      * @param string $color
      *
-     * @return PieSlice
+     * @return $this
      */
     public function setColor($color)
     {
@@ -58,7 +61,7 @@ class PieSlice
     /**
      * @param float $offset
      *
-     * @return PieSlice
+     * @return $this
      */
     public function setOffset($offset)
     {

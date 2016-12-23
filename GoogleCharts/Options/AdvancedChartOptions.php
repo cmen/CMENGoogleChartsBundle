@@ -63,6 +63,9 @@ class AdvancedChartOptions extends MediumChartOptions
     protected $vAxis;
 
 
+    /**
+     * AdvancedChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -82,7 +85,7 @@ class AdvancedChartOptions extends MediumChartOptions
     /**
      * @param string $axisTitlesPosition
      *
-     * @return AdvancedChartOptions
+     * @return $this
      */
     public function setAxisTitlesPosition($axisTitlesPosition)
     {
@@ -94,7 +97,7 @@ class AdvancedChartOptions extends MediumChartOptions
     /**
      * @param Series[] $series
      *
-     * @return AdvancedChartOptions
+     * @return $this
      */
     public function setSeries($series)
     {
@@ -106,7 +109,7 @@ class AdvancedChartOptions extends MediumChartOptions
     /**
      * @param string $theme
      *
-     * @return AdvancedChartOptions
+     * @return $this
      */
     public function setTheme($theme)
     {
@@ -118,7 +121,7 @@ class AdvancedChartOptions extends MediumChartOptions
     /**
      * @param string $titlePosition
      *
-     * @return AdvancedChartOptions
+     * @return $this
      */
     public function setTitlePosition($titlePosition)
     {

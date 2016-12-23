@@ -46,7 +46,7 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
     /**
      * @param string $labelInLegend
      *
-     * @return Series
+     * @return $this
      */
     public function setLabelInLegend($labelInLegend)
     {
@@ -58,7 +58,7 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
     /**
      * @param int $lineWidth
      *
-     * @return Series
+     * @return $this
      */
     public function setLineWidth($lineWidth)
     {
@@ -70,7 +70,7 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
     /**
      * @param string $pointShape
      *
-     * @return Series
+     * @return $this
      */
     public function setPointShape($pointShape)
     {
@@ -82,7 +82,7 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
     /**
      * @param int $pointSize
      *
-     * @return Series
+     * @return $this
      */
     public function setPointSize($pointSize)
     {
@@ -94,7 +94,7 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
     /**
      * @param bool $pointsVisible
      *
-     * @return Series
+     * @return $this
      */
     public function setPointsVisible($pointsVisible)
     {

@@ -18,7 +18,7 @@ class NewData
     /**
      * @param float $opacity
      *
-     * @return NewData
+     * @return $this
      */
     public function setOpacity($opacity)
     {

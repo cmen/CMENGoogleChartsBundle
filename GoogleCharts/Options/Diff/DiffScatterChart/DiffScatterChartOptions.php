@@ -12,6 +12,9 @@ class DiffScatterChartOptions extends ScatterChartOptions
     protected $diff;
 
 
+    /**
+     * DiffScatterChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();

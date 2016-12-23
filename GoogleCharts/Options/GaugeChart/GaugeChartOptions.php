@@ -108,6 +108,9 @@ class GaugeChartOptions extends ChartOptions
     protected $yellowTo;
 
 
+    /**
+     * GaugeChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -126,7 +129,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param string $greenColor
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setGreenColor($greenColor)
     {
@@ -138,7 +141,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param int $greenFrom
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setGreenFrom($greenFrom)
     {
@@ -150,7 +153,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param int $greenTo
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setGreenTo($greenTo)
     {
@@ -162,7 +165,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param array $majorTicks
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setMajorTicks($majorTicks)
     {
@@ -174,7 +177,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param int $max
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setMax($max)
     {
@@ -186,7 +189,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param int $min
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setMin($min)
     {
@@ -198,7 +201,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param int $minorTicks
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setMinorTicks($minorTicks)
     {
@@ -210,7 +213,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param string $redColor
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setRedColor($redColor)
     {
@@ -222,7 +225,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param int $redFrom
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setRedFrom($redFrom)
     {
@@ -234,7 +237,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param int $redTo
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setRedTo($redTo)
     {
@@ -246,7 +249,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param string $yellowColor
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setYellowColor($yellowColor)
     {
@@ -258,7 +261,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param int $yellowFrom
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setYellowFrom($yellowFrom)
     {
@@ -270,7 +273,7 @@ class GaugeChartOptions extends ChartOptions
     /**
      * @param int $yellowTo
      *
-     * @return GaugeChartOptions
+     * @return $this
      */
     public function setYellowTo($yellowTo)
     {

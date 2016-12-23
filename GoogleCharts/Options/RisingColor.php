@@ -32,7 +32,7 @@ class RisingColor
     /**
      * @param string $fill
      *
-     * @return RisingColor
+     * @return $this
      */
     public function setFill($fill)
     {
@@ -44,7 +44,7 @@ class RisingColor
     /**
      * @param string $stroke
      *
-     * @return RisingColor
+     * @return $this
      */
     public function setStroke($stroke)
     {
@@ -56,7 +56,7 @@ class RisingColor
     /**
      * @param int $strokeWidth
      *
-     * @return RisingColor
+     * @return $this
      */
     public function setStrokeWidth($strokeWidth)
     {

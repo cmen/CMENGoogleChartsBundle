@@ -28,6 +28,9 @@ class Gridlines
     protected $units;
 
 
+    /**
+     * Gridlines constructor.
+     */
     public function __construct()
     {
         $this->units = new Units();
@@ -45,7 +48,7 @@ class Gridlines
     /**
      * @param int $count
      *
-     * @return Gridlines
+     * @return $this
      */
     public function setCount($count)
     {
@@ -57,7 +60,7 @@ class Gridlines
     /**
      * @param string $color
      *
-     * @return Gridlines
+     * @return $this
      */
     public function setColor($color)
     {

@@ -99,7 +99,7 @@ class MediumHAxis extends HAxis
     /**
      * @param int $baseline
      *
-     * @return MediumHAxis
+     * @return $this
      */
     public function setBaseline($baseline)
     {
@@ -111,7 +111,7 @@ class MediumHAxis extends HAxis
     /**
      * @param string $baselineColor
      *
-     * @return MediumHAxis
+     * @return $this
      */
     public function setBaselineColor($baselineColor)
     {
@@ -123,7 +123,7 @@ class MediumHAxis extends HAxis
     /**
      * @param int $direction
      *
-     * @return MediumHAxis
+     * @return $this
      */
     public function setDirection($direction)
     {
@@ -135,7 +135,7 @@ class MediumHAxis extends HAxis
     /**
      * @param string $format
      *
-     * @return MediumHAxis
+     * @return $this
      */
     public function setFormat($format)
     {
@@ -147,7 +147,7 @@ class MediumHAxis extends HAxis
     /**
      * @param boolean $logScale
      *
-     * @return MediumHAxis
+     * @return $this
      */
     public function setLogScale($logScale)
     {
@@ -159,7 +159,7 @@ class MediumHAxis extends HAxis
     /**
      * @param array $ticks
      *
-     * @return MediumHAxis
+     * @return $this
      */
     public function setTicks($ticks)
     {
@@ -171,7 +171,7 @@ class MediumHAxis extends HAxis
     /**
      * @param int $maxValue
      *
-     * @return MediumHAxis
+     * @return $this
      */
     public function setMaxValue($maxValue)
     {
@@ -183,7 +183,7 @@ class MediumHAxis extends HAxis
     /**
      * @param int $minValue
      *
-     * @return MediumHAxis
+     * @return $this
      */
     public function setMinValue($minValue)
     {

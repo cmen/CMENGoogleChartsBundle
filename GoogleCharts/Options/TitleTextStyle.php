@@ -37,7 +37,7 @@ class TitleTextStyle
     /**
      * @param string $color
      *
-     * @return TitleTextStyle
+     * @return $this
      */
     public function setColor($color)
     {
@@ -49,7 +49,7 @@ class TitleTextStyle
     /**
      * @param string $fontName
      *
-     * @return TitleTextStyle
+     * @return $this
      */
     public function setFontName($fontName)
     {
@@ -61,7 +61,7 @@ class TitleTextStyle
     /**
      * @param int $fontSize
      *
-     * @return TitleTextStyle
+     * @return $this
      */
     public function setFontSize($fontSize)
     {
@@ -73,7 +73,7 @@ class TitleTextStyle
     /**
      * @param boolean $bold
      *
-     * @return TitleTextStyle
+     * @return $this
      */
     public function setBold($bold)
     {
@@ -85,7 +85,7 @@ class TitleTextStyle
     /**
      * @param boolean $italic
      *
-     * @return TitleTextStyle
+     * @return $this
      */
     public function setItalic($italic)
     {

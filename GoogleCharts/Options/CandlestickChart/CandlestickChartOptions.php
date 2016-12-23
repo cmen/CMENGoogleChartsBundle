@@ -117,6 +117,9 @@ class CandlestickChartOptions extends AdvancedChartOptions
     protected $vAxes;
 
 
+    /**
+     * CandlestickChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -181,7 +184,7 @@ class CandlestickChartOptions extends AdvancedChartOptions
     /**
      * @param string $aggregationTarget
      *
-     * @return CandlestickChartOptions
+     * @return $this
      */
     public function setAggregationTarget($aggregationTarget)
     {
@@ -193,7 +196,7 @@ class CandlestickChartOptions extends AdvancedChartOptions
     /**
      * @param string $focusTarget
      *
-     * @return CandlestickChartOptions
+     * @return $this
      */
     public function setFocusTarget($focusTarget)
     {
@@ -205,7 +208,7 @@ class CandlestickChartOptions extends AdvancedChartOptions
     /**
      * @param string $orientation
      *
-     * @return CandlestickChartOptions
+     * @return $this
      */
     public function setOrientation($orientation)
     {
@@ -217,7 +220,7 @@ class CandlestickChartOptions extends AdvancedChartOptions
     /**
      * @param boolean $reverseCategories
      *
-     * @return CandlestickChartOptions
+     * @return $this
      */
     public function setReverseCategories($reverseCategories)
     {
@@ -229,7 +232,7 @@ class CandlestickChartOptions extends AdvancedChartOptions
     /**
      * @param string $selectionMode
      *
-     * @return CandlestickChartOptions
+     * @return $this
      */
     public function setSelectionMode($selectionMode)
     {
@@ -241,7 +244,7 @@ class CandlestickChartOptions extends AdvancedChartOptions
     /**
      * @param VAxis[] $vAxes
      *
-     * @return CandlestickChartOptions
+     * @return $this
      */
     public function setVAxes($vAxes)
     {

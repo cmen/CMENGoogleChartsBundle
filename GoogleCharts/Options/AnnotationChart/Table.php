@@ -25,7 +25,7 @@ class Table
     /**
      * @param boolean $sortAscending
      *
-     * @return Table
+     * @return $this
      */
     public function setSortAscending($sortAscending)
     {
@@ -37,7 +37,7 @@ class Table
     /**
      * @param int $sortColumn
      *
-     * @return Table
+     * @return $this
      */
     public function setSortColumn($sortColumn)
     {

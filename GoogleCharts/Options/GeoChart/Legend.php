@@ -23,6 +23,9 @@ class Legend
     protected $textStyle;
 
 
+    /**
+     * Legend constructor.
+     */
     public function __construct()
     {
         $this->textStyle = new MediumTextStyle();
@@ -40,7 +43,7 @@ class Legend
     /**
      * @param string $numberFormat
      *
-     * @return Legend
+     * @return $this
      */
     public function setNumberFormat($numberFormat)
     {

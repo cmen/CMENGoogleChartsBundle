@@ -45,6 +45,9 @@ class TimelineOptions extends BasicChartOptions
     protected $tooltip;
 
 
+    /**
+     * TimelineOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -73,7 +76,7 @@ class TimelineOptions extends BasicChartOptions
     /**
      * @param boolean $avoidOverlappingGridLines
      *
-     * @return TimelineOptions
+     * @return $this
      */
     public function setAvoidOverlappingGridLines($avoidOverlappingGridLines)
     {
@@ -85,7 +88,7 @@ class TimelineOptions extends BasicChartOptions
     /**
      * @param string $backgroundColor
      *
-     * @return TimelineOptions
+     * @return $this
      */
     public function setBackgroundColor($backgroundColor)
     {
@@ -97,7 +100,7 @@ class TimelineOptions extends BasicChartOptions
     /**
      * @param string[] $colors
      *
-     * @return TimelineOptions
+     * @return $this
      */
     public function setColors($colors)
     {

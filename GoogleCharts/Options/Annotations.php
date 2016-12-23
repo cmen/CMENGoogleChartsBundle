@@ -50,6 +50,9 @@ class Annotations
     protected $textStyle;
 
 
+    /**
+     * Annotations constructor.
+     */
     public function __construct()
     {
         $this->boxStyle = new BoxStyle();
@@ -103,7 +106,7 @@ class Annotations
     /**
      * @param boolean $highContrast
      *
-     * @return Annotations
+     * @return $this
      */
     public function setHighContrast($highContrast)
     {
@@ -115,7 +118,7 @@ class Annotations
     /**
      * @param string $style
      *
-     * @return Annotations
+     * @return $this
      */
     public function setStyle($style)
     {

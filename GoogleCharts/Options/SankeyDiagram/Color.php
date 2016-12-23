@@ -39,7 +39,7 @@ class Color
     /**
      * @param string $fill
      *
-     * @return Color
+     * @return $this
      */
     public function setFill($fill)
     {
@@ -51,7 +51,7 @@ class Color
     /**
      * @param float $fillOpacity
      *
-     * @return Color
+     * @return $this
      */
     public function setFillOpacity($fillOpacity)
     {
@@ -63,7 +63,7 @@ class Color
     /**
      * @param string $stroke
      *
-     * @return Color
+     * @return $this
      */
     public function setStroke($stroke)
     {
@@ -75,7 +75,7 @@ class Color
     /**
      * @param int $strokeWidth
      *
-     * @return Color
+     * @return $this
      */
     public function setStrokeWidth($strokeWidth)
     {

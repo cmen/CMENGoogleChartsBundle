@@ -26,7 +26,7 @@ class RowLabelStyle
     /**
      * @param string $color
      *
-     * @return RowLabelStyle
+     * @return $this
      */
     public function setColor($color)
     {
@@ -38,7 +38,7 @@ class RowLabelStyle
     /**
      * @param string $fontName
      *
-     * @return RowLabelStyle
+     * @return $this
      */
     public function setFontName($fontName)
     {
@@ -50,7 +50,7 @@ class RowLabelStyle
     /**
      * @param int $fontSize
      *
-     * @return RowLabelStyle
+     * @return $this
      */
     public function setFontSize($fontSize)
     {

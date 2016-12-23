@@ -245,6 +245,9 @@ class AnnotationChartOptions extends ChartOptionsDraw
     protected $zoomStartTime;
 
 
+    /**
+     * AnnotationChartOptions constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -264,7 +267,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $allowHtml
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setAllowHtml($allowHtml)
     {
@@ -276,7 +279,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param string $allValuesSuffix
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setAllValuesSuffix($allValuesSuffix)
     {
@@ -288,7 +291,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param int $annotationsWidth
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setAnnotationsWidth($annotationsWidth)
     {
@@ -300,7 +303,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param \string[] $colors
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setColors($colors)
     {
@@ -312,7 +315,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param string $dateFormat
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setDateFormat($dateFormat)
     {
@@ -324,7 +327,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $displayAnnotations
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setDisplayAnnotations($displayAnnotations)
     {
@@ -336,7 +339,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $displayAnnotationsFilter
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setDisplayAnnotationsFilter($displayAnnotationsFilter)
     {
@@ -348,7 +351,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $displayDateBarSeparator
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setDisplayDateBarSeparator($displayDateBarSeparator)
     {
@@ -360,7 +363,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $displayExactValues
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setDisplayExactValues($displayExactValues)
     {
@@ -372,7 +375,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $displayLegendDots
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setDisplayLegendDots($displayLegendDots)
     {
@@ -384,7 +387,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $displayLegendValues
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setDisplayLegendValues($displayLegendValues)
     {
@@ -396,7 +399,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $displayRangeSelector
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setDisplayRangeSelector($displayRangeSelector)
     {
@@ -408,7 +411,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param boolean $displayZoomButtons
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setDisplayZoomButtons($displayZoomButtons)
     {
@@ -420,7 +423,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param int $fill
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setFill($fill)
     {
@@ -432,7 +435,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param string $legendPosition
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setLegendPosition($legendPosition)
     {
@@ -444,7 +447,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param int $max
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setMax($max)
     {
@@ -456,7 +459,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param int $min
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setMin($min)
     {
@@ -468,7 +471,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param string $numberFormats
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setNumberFormats($numberFormats)
     {
@@ -480,7 +483,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param \int[] $scaleColumns
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setScaleColumns($scaleColumns)
     {
@@ -492,7 +495,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param string $scaleFormat
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setScaleFormat($scaleFormat)
     {
@@ -504,7 +507,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param string $scaleType
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setScaleType($scaleType)
     {
@@ -516,7 +519,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param DateTime $zoomStartTime
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setZoomStartTime($zoomStartTime)
     {
@@ -528,7 +531,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param int $thickness
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setThickness($thickness)
     {
@@ -540,7 +543,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     /**
      * @param DateTime $zoomEndTime
      *
-     * @return AnnotationChartOptions
+     * @return $this
      */
     public function setZoomEndTime($zoomEndTime)
     {

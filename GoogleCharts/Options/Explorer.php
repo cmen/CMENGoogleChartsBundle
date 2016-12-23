@@ -72,7 +72,7 @@ class Explorer
     /**
      * @param string[] $actions
      *
-     * @return Explorer
+     * @return $this
      */
     public function setActions($actions)
     {
@@ -84,7 +84,7 @@ class Explorer
     /**
      * @param string $axis
      *
-     * @return Explorer
+     * @return $this
      */
     public function setAxis($axis)
     {
@@ -96,7 +96,7 @@ class Explorer
     /**
      * @param boolean $keepInBounds
      *
-     * @return Explorer
+     * @return $this
      */
     public function setKeepInBounds($keepInBounds)
     {
@@ -108,7 +108,7 @@ class Explorer
     /**
      * @param float $maxZoomIn
      *
-     * @return Explorer
+     * @return $this
      */
     public function setMaxZoomIn($maxZoomIn)
     {

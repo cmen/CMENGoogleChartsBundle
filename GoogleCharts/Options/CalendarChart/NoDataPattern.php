@@ -23,7 +23,7 @@ class NoDataPattern
     /**
      * @param string $backgroundColor
      *
-     * @return NoDataPattern
+     * @return $this
      */
     public function setBackgroundColor($backgroundColor)
     {
@@ -35,7 +35,7 @@ class NoDataPattern
     /**
      * @param string $color
      *
-     * @return NoDataPattern
+     * @return $this
      */
     public function setColor($color)
     {
