@@ -13,7 +13,9 @@
     "symfony/framework-bundle": "~2.3|~3.0"
   },
   "autoload": {
-    "psr-0": { "CMEN\\GoogleChartsBundle": "" }
+    "psr-4": { "CMEN\\GoogleChartsBundle\\": "" }
   },
-  "target-dir": "CMEN/GoogleChartsBundle"
+  "require-dev": {
+    "phpunit/phpunit": "^5.7"
+  }
 }

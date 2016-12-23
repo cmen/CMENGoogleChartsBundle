@@ -115,7 +115,6 @@ abstract class Chart
 
         if (!$this instanceof DiffChart) {
             $js .= $this->data->draw($this->getDataName());
-
         } else {
             $js .= $this->getOldChart()->getData()->draw('old_' . $this->getDataName()) .
                 $this->getNewChart()->getData()->draw('new_' . $this->getDataName()) .
@@ -143,7 +142,7 @@ abstract class Chart
     /**
      * @param string $elementID
      *
-     * @return Chart
+     * @return $this
      */
     public function setElementID($elementID)
     {

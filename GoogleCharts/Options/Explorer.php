@@ -116,4 +116,28 @@ class Explorer
 
         return $this;
     }
+
+    /**
+     * @param float $maxZoomOut
+     *
+     * @return $this
+     */
+    public function setMaxZoomOut($maxZoomOut)
+    {
+        $this->maxZoomOut = $maxZoomOut;
+
+        return $this;
+    }
+
+    /**
+     * @param float $zoomDelta
+     *
+     * @return Explorer
+     */
+    public function setZoomDelta($zoomDelta)
+    {
+        $this->zoomDelta = $zoomDelta;
+
+        return $this;
+    }
 }

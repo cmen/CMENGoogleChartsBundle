@@ -62,6 +62,22 @@ class MediumHAxis extends HAxis
     protected $logScale;
 
     /**
+     *  hAxis property that makes the horizontal axis a logarithmic scale. Can be one of the following:
+     *
+     * - null : No logarithmic scaling is performed.
+     * - 'log' : Logarithmic scaling. Negative and zero values are not plotted. This option is the same as setting
+     *     hAxis: { logscale: true }.
+     * - 'mirrorLog' : Logarithmic scaling in which negative and zero values are plotted. The plotted value of a
+     *     negative number is the negative of the log of the absolute value. Values close to 0 are plotted on a
+     *     linear scale.
+     *
+     * This option is only supported for a continuous axis.
+     *
+     * @var string
+     */
+    protected $scaleType;
+
+    /**
      * Moves the max value of the horizontal axis to the specified value; this will be rightward in most charts.
      * Ignored if this is set to a value smaller than the maximum x-value of the data. hAxis.viewWindow.max overrides
      * this property.
@@ -152,6 +168,18 @@ class MediumHAxis extends HAxis
     public function setLogScale($logScale)
     {
         $this->logScale = $logScale;
+
+        return $this;
+    }
+
+    /**
+     * @param string $scaleType
+     *
+     * @return $this
+     */
+    public function setScaleType($scaleType)
+    {
+        $this->scaleType = $scaleType;
 
         return $this;
     }

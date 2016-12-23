@@ -68,6 +68,22 @@ class VAxis
     protected $logScale;
 
     /**
+     *  vAxis property that makes the vertical axis a logarithmic scale. Can be one of the following:
+     *
+     * - null : No logarithmic scaling is performed.
+     * - 'log' : Logarithmic scaling. Negative and zero values are not plotted. This option is the same as setting
+     *     hAxis: { logscale: true }.
+     * - 'mirrorLog' : Logarithmic scaling in which negative and zero values are plotted. The plotted value of a
+     *     negative number is the negative of the log of the absolute value. Values close to 0 are plotted on a
+     *     linear scale.
+     *
+     * This option is only supported for a continuous axis.
+     *
+     * @var string
+     */
+    protected $scaleType;
+
+    /**
      * Position of the vertical axis text, relative to the chart area. Supported values: 'out', 'in', 'none'.
      *
      * @var string
@@ -252,6 +268,18 @@ class VAxis
     public function setLogScale($logScale)
     {
         $this->logScale = $logScale;
+
+        return $this;
+    }
+
+    /**
+     * @param string $scaleType
+     *
+     * @return $this
+     */
+    public function setScaleType($scaleType)
+    {
+        $this->scaleType = $scaleType;
 
         return $this;
     }
