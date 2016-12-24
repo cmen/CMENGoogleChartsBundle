@@ -2,6 +2,8 @@ filter:
     excluded_paths:
         - Tests/*
 build:
+    environment:
+        php: '5.6.16'
     tests:
         override:
             -
