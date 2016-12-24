@@ -29,7 +29,7 @@ class AdvancedChartOptions extends MediumChartOptions
      * $chart->getOptions()->setSeries([$series1, null, $series3]);
      * $chart->getOptions()->setSeries([0 => $series1, 2 => $series3])
      *
-     * @var Series[]
+     * @var array|Series[]
      */
     protected $series;
 
@@ -95,7 +95,7 @@ class AdvancedChartOptions extends MediumChartOptions
     }
 
     /**
-     * @param Series[] $series
+     * @param array|Series[] $series
      *
      * @return $this
      */

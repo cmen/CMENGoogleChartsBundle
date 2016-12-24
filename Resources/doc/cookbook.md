@@ -55,6 +55,35 @@ $bar->getOptions()->setWidth(900);
 $bar->getOptions()->setHeight(500);
 ```
 
+## Bar Chart (Material)
+Warning : the Material Charts are in beta.
+
+![Material Bar Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matbar.png) 
+
+```
+$chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\BarChart();
+$chart->getData()->setArrayToDataTable([
+    ['Galaxy', 'Distance', 'Brightness'],
+    ['Canis Major Dwarf', 8000, 23.3],
+    ['Sagittarius Dwarf', 24000, 4.5],
+    ['Ursa Major II Dwarf', 30000, 14.3],
+    ['Lg. Magellanic Cloud', 50000, 0.9],
+    ['Bootes I', 60000, 13.1]
+]);
+
+$chart->getOptions()->getChart()
+    ->setTitle('Nearby galaxies')
+    ->setSubtitle('distance on the left, brightness on the right');
+$chart->getOptions()
+    ->setHeight(400)
+    ->setWidth(900)
+    ->setSeries([['axis' => 'distance'], ['axis' => 'brightness']])
+    ->setAxes(['x' => [
+        'distance' => ['label' => 'parsecs'],
+        'brightness' => ['side' => 'top', 'label' => 'apparent magnitude']]
+    ]);
+```
+
 ## Bubble Chart
 ```
 $bubble = new BubbleChart();
@@ -165,7 +194,7 @@ $candle->getOptions()->setWidth(900);
 $candle->getOptions()->setHeight(500);
 ```
 
-## Column CHart
+## Column Chart
 ```
 $col = new ColumnChart();
 $col->getData()->setArrayToDataTable(
@@ -195,6 +224,33 @@ $col->getOptions()->getHAxis()->getViewWindow()->setMax([17, 30, 0]);
 $col->getOptions()->getVAxis()->setTitle('Rating (scale of 1-10)');
 $col->getOptions()->setWidth(900);
 $col->getOptions()->setHeight(500);
+```
+
+## Column Chart (Material)
+Warning : the Material Charts are in beta.
+
+![Material Column Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matcol.png) 
+
+```
+$chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\ColumnChart();
+$chart->getData()->setArrayToDataTable([
+    ['Year', 'Sales', 'Expenses', 'Profit'],
+    ['2014', 1000, 400, 200],
+    ['2015', 1170, 460, 250],
+    ['2016', 660, 1120, 300],
+    ['2017', 1030, 540, 350]
+]);
+
+$chart->getOptions()->getChart()
+    ->setTitle('Company Performance')
+    ->setSubtitle('Sales, Expenses, and Profit: 2014-2017');
+$chart->getOptions()
+    ->setBars('vertical')
+    ->setHeight(400)
+    ->setWidth(900)
+    ->setColors(['#1b9e77', '#d95f02', '#7570b3'])
+    ->getVAxis()
+        ->setFormat('decimal');
 ```
 
 ## Combo Chart
@@ -435,6 +491,38 @@ $line->getOptions()->setLineWidth(4);
 $line->getOptions()->getLegend()->setPosition('none');
 ```
 
+## Line Chart (Material)
+Warning : the Material Charts are in beta.
+
+![Material Line Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matline.png) 
+
+```
+$chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\LineChart();
+$chart->getData()->setArrayToDataTable([
+    ['Month', 'Average Temperature', 'Average Hours of Daylight'],
+    [new DateTime('2014-01'),  -.5,  5.7],
+    [new DateTime('2014-02'),   .4,  8.7],
+    [new DateTime('2014-03'),   .5,   12],
+    [new DateTime('2014-04'),  2.9, 15.3],
+    [new DateTime('2014-05'),  6.3, 18.6],
+    [new DateTime('2014-06'),    9, 20.9],
+    [new DateTime('2014-07'), 10.6, 19.8],
+    [new DateTime('2014-08'), 10.3, 16.6],
+    [new DateTime('2014-09'),  7.4, 13.3],
+    [new DateTime('2014-10'),  4.4,  9.9],
+    [new DateTime('2014-11'), 1.1,  6.6],
+    [new DateTime('2014-12'), -.2,  4.5]
+]);
+
+$chart->getOptions()->getChart()
+    ->setTitle('Average Temperatures and Daylight in Iceland Throughout the Year');
+$chart->getOptions()
+    ->setHeight(400)
+    ->setWidth(900)
+    ->setSeries([['axis' => 'Temps'], ['axis' => 'Daylight']])
+    ->setAxes(['y' => ['Temps' => ['label' => 'Temps (Celsius)'], 'Daylight' => ['label' => 'Daylight']]]);
+```
+
 ## Map
 ```
 $map = new Map();
@@ -594,6 +682,39 @@ $scatter->getOptions()->getVAxis()->setTitle('Weight');
 $scatter->getOptions()->getVAxis()->setMinValue(0);
 $scatter->getOptions()->getVAxis()->setMaxValue(15);
 $scatter->getOptions()->getLegend()->setPosition('none');
+```
+
+## Scatter Chart (Material)
+Warning : the Material Charts are in beta.
+
+![Material Scatter Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matscat.png) 
+
+```
+$chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\ScatterChart();
+$chart->getData()->setArrayToDataTable([
+    ['Student ID', 'Hours Studied', 'Final'],
+    [0, 0, 67],  [1, 1, 88],   [2, 2, 77],
+    [3, 3, 93],  [4, 4, 85],   [5, 5, 91],
+    [6, 6, 71],  [7, 7, 78],   [8, 8, 93],
+    [9, 9, 80],  [10, 10, 82], [11, 0, 75],
+    [12, 5, 80], [13, 3, 90],  [14, 1, 72],
+    [15, 5, 75], [16, 6, 68],  [17, 7, 98],
+    [18, 3, 82], [19, 9, 94],  [20, 2, 79],
+    [21, 2, 95], [22, 2, 86],  [23, 3, 67],
+    [24, 4, 60], [25, 2, 80],  [26, 6, 92],
+    [27, 2, 81], [28, 8, 79],  [29, 9, 83]
+]);
+
+$chart->getOptions()->getChart()
+    ->setTitle('Students\' Final Grades')
+    ->setSubtitle('based on hours studied');
+$chart->getOptions()
+    ->setHeight(400)
+    ->setWidth(900)
+    ->setSeries([['axis' => 'hours studied'], ['axis' => 'final grade']])
+    ->setAxes(['y' => ['hours studied' =>
+        ['label' => 'Hours Studied'], 'final grade' => ['label' => 'Final Exam Grade']]
+    ]);
 ```
 
 ## Stepped Area Chart

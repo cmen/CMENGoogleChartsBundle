@@ -32,6 +32,9 @@ abstract class Chart
     protected $events;
 
 
+    /**
+     * Chart constructor.
+     */
     public function __construct()
     {
         $this->data = new Data();
@@ -56,7 +59,7 @@ abstract class Chart
      */
     public function getDataName()
     {
-        return 'data'. ucfirst($this->getName());
+        return 'data' . ucfirst($this->getName());
     }
 
     /**
@@ -66,7 +69,7 @@ abstract class Chart
      */
     public function getOptionsName()
     {
-        return 'options'. ucfirst($this->getName());
+        return 'options' . ucfirst($this->getName());
     }
 
     /**
@@ -75,6 +78,16 @@ abstract class Chart
      * @return string
      */
     abstract protected function getType();
+
+    /**
+     * Returns library used by chart.
+     *
+     * @return string
+     */
+    protected function getLibrary()
+    {
+        return 'visualization';
+    }
 
     /**
      * Returns the chart package.
@@ -110,7 +123,7 @@ abstract class Chart
             throw new GoogleChartsException('Container is not defined.');
         }
 
-        $js = 'var ' . $this->getName() . ' = new google.visualization.' . $this->getType() .
+        $js = 'var ' . $this->getName() . ' = new google.' . $this->getLibrary() . '.' . $this->getType() .
             '(document.getElementById("' . $this->elementID . '"));';
 
         if (!$this instanceof DiffChart) {
@@ -119,7 +132,7 @@ abstract class Chart
             $js .= $this->getOldChart()->getData()->draw('old_' . $this->getDataName()) .
                 $this->getNewChart()->getData()->draw('new_' . $this->getDataName()) .
                 'var ' . $this->getDataName() . ' = ' . $this->getName() .
-                    '.computeDiff(old_' . $this->getDataName() . ',
+                '.computeDiff(old_' . $this->getDataName() . ',
                  new_' . $this->getDataName() . ');';
         }
 
@@ -135,8 +148,16 @@ abstract class Chart
      */
     public function endDraw()
     {
-        return $this->events->draw(). $this->getName() .
-            '.draw('. $this->getDataName() . ', '. $this->getOptionsName() .');';
+        if ($this->getLibrary() == 'visualization') {
+            $options = $this->getOptionsName();
+        } else {
+            /* Options conversion for material charts */
+            $options = 'google.' . $this->getLibrary() . '.' . $this->getType() .
+                '.convertOptions(' . $this->getOptionsName() . ')';
+        }
+
+        return $this->events->draw() . $this->getName() .
+            '.draw(' . $this->getDataName() . ', ' . $options . ');';
     }
 
     /**
