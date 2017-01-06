@@ -20,6 +20,14 @@ class Data
     private $firstRowIsData;
 
     /**
+     * @return array
+     */
+    public function getArrayToDataTable()
+    {
+        return $this->arrayToDataTable;
+    }
+
+    /**
      * This method takes in a two-dimensional array. The data types of each column are interpreted automatically from
      * the data given. If a cell has no value, specify a null or empty value as appropriate. Column data types can also
      * be specified using the object literal notation in the first row (the column header row) of the array
