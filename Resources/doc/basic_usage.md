@@ -24,7 +24,7 @@ public function indexAction()
     $pieChart->getOptions()->getTitleTextStyle()->setFontName('Arial');
     $pieChart->getOptions()->getTitleTextStyle()->setFontSize(20);
 
-    return $this->render('AppBundle::index.html.twig', array('piechart' => $piechart));
+    return $this->render('AppBundle::index.html.twig', array('piechart' => $pieChart));
 }
 ```
 
