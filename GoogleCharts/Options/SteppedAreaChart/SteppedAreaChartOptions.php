@@ -9,6 +9,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AggregationTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\IsStackedTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineDashStyleTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
@@ -45,14 +46,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
      */
     protected $legend;
 
-    /**
-     * The on-and-off pattern for dashed lines. For instance, [4, 4] will repeat 4-length dashes followed by 4-length
-     * gaps, and [5, 1, 3] will repeat a 5-length dash, a 1-length gap, a 3-length dash, a 5-length gap, a 1-length
-     * dash, and a 3-length gap. See Dashed Lines for more information.
-     *
-     * @var int[]
-     */
-    protected $lineDashStyle;
+    use LineDashStyleTrait;
 
     /**
      * If set to true, will draw series from right to left. The default is to draw left-to-right.
@@ -139,18 +133,6 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     public function setConnectSteps($connectSteps)
     {
         $this->connectSteps = $connectSteps;
-
-        return $this;
-    }
-
-    /**
-     * @param \int[] $lineDashStyle
-     *
-     * @return $this
-     */
-    public function setLineDashStyle($lineDashStyle)
-    {
-        $this->lineDashStyle = $lineDashStyle;
 
         return $this;
     }

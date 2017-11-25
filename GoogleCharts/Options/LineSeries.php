@@ -7,12 +7,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class LineSeries extends AdvancedSeries
 {
-    /**
-     * Overrides the global lineDashStyle value for this series.
-     *
-     * @var int[]
-     */
-    protected $lineDashStyle;
+    use LineDashStyleTrait;
 
     /**
      * Overrides the global lineWidth value for this series.
@@ -41,19 +36,6 @@ class LineSeries extends AdvancedSeries
      * @var bool
      */
     protected $pointsVisible;
-
-
-    /**
-     * @param int[] $lineDashStyle
-     *
-     * @return $this
-     */
-    public function setLineDashStyle($lineDashStyle)
-    {
-        $this->lineDashStyle = $lineDashStyle;
-
-        return $this;
-    }
 
     /**
      * @param int $lineWidth
