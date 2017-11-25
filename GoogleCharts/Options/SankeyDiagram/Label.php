@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\SankeyDiagram;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontNameTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontSizeTrait;
 
 /**
  * @author Christophe Meneses
@@ -18,10 +19,7 @@ class Label
 
     use FontNameTrait;
 
-    /**
-     * @var int
-     */
-    protected $fontSize;
+    use FontSizeTrait;
 
     /**
      * @var boolean
@@ -42,18 +40,6 @@ class Label
     public function setColor($color)
     {
         $this->color = $color;
-
-        return $this;
-    }
-
-    /**
-     * @param int $fontSize
-     *
-     * @return $this
-     */
-    public function setFontSize($fontSize)
-    {
-        $this->fontSize = $fontSize;
 
         return $this;
     }

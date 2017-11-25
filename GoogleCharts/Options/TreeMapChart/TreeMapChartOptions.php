@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\TreeMapChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontSizeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumTextStyle;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTextStyle;
 
@@ -25,12 +26,7 @@ class TreeMapChartOptions extends ChartOptions
      */
     protected $fontFamily;
 
-    /**
-     * The font size for all text, in points.
-     *
-     * @var int
-     */
-    protected $fontSize;
+    use FontSizeTrait;
 
     /**
      * The color of the header section for each node. Specify an HTML color value.
@@ -277,18 +273,6 @@ class TreeMapChartOptions extends ChartOptions
     public function setFontFamily($fontFamily)
     {
         $this->fontFamily = $fontFamily;
-
-        return $this;
-    }
-
-    /**
-     * @param int $fontSize
-     *
-     * @return $this
-     */
-    public function setFontSize($fontSize)
-    {
-        $this->fontSize = $fontSize;
 
         return $this;
     }

@@ -16,11 +16,7 @@ class TextStyle
 
     use FontNameTrait;
 
-    /**
-     * @var int
-     */
-    protected $fontSize;
-
+    use FontSizeTrait;
 
     /**
      * @param string $color
@@ -30,18 +26,6 @@ class TextStyle
     public function setColor($color)
     {
         $this->color = $color;
-
-        return $this;
-    }
-
-    /**
-     * @param int $fontSize
-     *
-     * @return $this
-     */
-    public function setFontSize($fontSize)
-    {
-        $this->fontSize = $fontSize;
 
         return $this;
     }

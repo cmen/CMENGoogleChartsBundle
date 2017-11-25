@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Timeline;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontNameTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontSizeTrait;
 
 /**
  * @author Christophe Meneses
@@ -16,11 +17,7 @@ class RowLabelStyle
 
     use FontNameTrait;
 
-    /**
-     * @var int
-     */
-    protected $fontSize;
-
+    use FontSizeTrait;
 
     /**
      * @param string $color
@@ -30,18 +27,6 @@ class RowLabelStyle
     public function setColor($color)
     {
         $this->color = $color;
-
-        return $this;
-    }
-
-    /**
-     * @param int $fontSize
-     *
-     * @return $this
-     */
-    public function setFontSize($fontSize)
-    {
-        $this->fontSize = $fontSize;
 
         return $this;
     }

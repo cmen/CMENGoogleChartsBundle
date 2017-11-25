@@ -16,10 +16,7 @@ class TitleTextStyle
 
     use FontNameTrait;
 
-    /**
-     * @var int
-     */
-    protected $fontSize;
+    use FontSizeTrait;
 
     /**
      * @var boolean
@@ -39,18 +36,6 @@ class TitleTextStyle
     public function setColor($color)
     {
         $this->color = $color;
-
-        return $this;
-    }
-
-    /**
-     * @param int $fontSize
-     *
-     * @return $this
-     */
-    public function setFontSize($fontSize)
-    {
-        $this->fontSize = $fontSize;
 
         return $this;
     }
