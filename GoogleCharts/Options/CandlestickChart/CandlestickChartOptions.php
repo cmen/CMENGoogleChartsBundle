@@ -10,6 +10,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AggregationTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Candlestick;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
@@ -34,17 +35,7 @@ class CandlestickChartOptions extends AdvancedChartOptions
      */
     protected $candlestick;
 
-    /**
-     * The type of the entity that receives focus on mouse hover. Also affects which entity is selected by mouse
-     * click, and which data table element is associated with events. Can be one of the following :
-     * 'datum' - Focus on a single data point. Correlates to a cell in the data table.
-     * 'category' - Focus on a grouping of all data points along the major axis. Correlates to a row in the data table.
-     * In focusTarget 'category' the tooltip displays all the category values. This may be useful for comparing values
-     * of different series.
-     *
-     * @var string
-     */
-    protected $focusTarget;
+    use FocusTargetTrait;
 
     /**
      * @var AdvancedHAxis
@@ -159,18 +150,6 @@ class CandlestickChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $focusTarget
-     *
-     * @return $this
-     */
-    public function setFocusTarget($focusTarget)
-    {
-        $this->focusTarget = $focusTarget;
-
-        return $this;
     }
 
     /**

@@ -9,6 +9,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\DataOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
@@ -41,18 +42,7 @@ class BarChartOptions extends AdvancedChartOptions
      */
     protected $explorer;
 
-    /**
-     *  The type of the entity that receives focus on mouse hover. Also affects which entity is selected by mouse
-     * click, and which data table element is associated with events. Can be one of the following :
-     * 'datum' - Focus on a single data point. Correlates to a cell in the data table.
-     * 'category' - Focus on a grouping of all data points along the major axis. Correlates to a row in the data table.
-     *
-     * In focusTarget 'category' the tooltip displays all the category values. This may be useful for comparing values
-     * of different series.
-     *
-     * @var string
-     */
-    protected $focusTarget;
+    use FocusTargetTrait;
 
     /**
      * Specifies properties for individual horizontal axes, if the chart has multiple horizontal axes. Each child
@@ -201,18 +191,6 @@ class BarChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $focusTarget
-     *
-     * @return $this
-     */
-    public function setFocusTarget($focusTarget)
-    {
-        $this->focusTarget = $focusTarget;
-
-        return $this;
     }
 
     /**
