@@ -6,6 +6,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MaxTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MinTrait;
 use DateTime;
 
 /**
@@ -122,16 +123,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
 
     use MaxTrait;
 
-    /**
-     * The minimum value to show on the Y axis. If the minimum data point is less than this value, this setting will
-     * be ignored, and the chart will be adjusted to show the next major tick mark below the minimum data point. This
-     * will take precedence over the Y axis minimum determined by scaleType.
-     *
-     * This is similar to minValue in core charts.
-     *
-     * @var int
-     */
-    protected $min;
+    use MinTrait;
 
     /**
      * Specifies the number format patterns to be used to format the values at the top of the graph.
@@ -399,18 +391,6 @@ class AnnotationChartOptions extends ChartOptionsDraw
     public function setLegendPosition($legendPosition)
     {
         $this->legendPosition = $legendPosition;
-
-        return $this;
-    }
-
-    /**
-     * @param int $min
-     *
-     * @return $this
-     */
-    public function setMin($min)
-    {
-        $this->min = $min;
 
         return $this;
     }

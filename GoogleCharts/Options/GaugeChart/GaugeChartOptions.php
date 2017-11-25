@@ -5,6 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GaugeChart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Animation;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MaxTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MinTrait;
 
 /**
  * @author Christophe Meneses
@@ -47,12 +48,7 @@ class GaugeChartOptions extends ChartOptions
 
     use MaxTrait;
 
-    /**
-     * The minimal value of a gauge.
-     *
-     * @var int
-     */
-    protected $min;
+    use MinTrait;
 
     /**
      * The number of minor tick section in each major tick section.
@@ -166,18 +162,6 @@ class GaugeChartOptions extends ChartOptions
     public function setMajorTicks($majorTicks)
     {
         $this->majorTicks = $majorTicks;
-
-        return $this;
-    }
-
-    /**
-     * @param int $min
-     *
-     * @return $this
-     */
-    public function setMin($min)
-    {
-        $this->min = $min;
 
         return $this;
     }
