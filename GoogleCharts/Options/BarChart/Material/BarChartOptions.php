@@ -2,6 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\BarChart\Material;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\BarsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Material\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Material\MaterialTrait;
 
@@ -14,12 +15,7 @@ class BarChartOptions extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\BarC
 {
     use MaterialTrait;
 
-    /**
-     *  Whether the bars in a Material Bar Chart are vertical or horizontal.
-     *
-     * @var string
-     */
-    protected $bars;
+    use BarsTrait;
 
     /**
      * BarChartOptions constructor.
@@ -29,17 +25,5 @@ class BarChartOptions extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\BarC
         parent::__construct();
 
         $this->chart = new Chart();
-    }
-
-    /**
-     * @param string $bars
-     *
-     * @return BarChartOptions
-     */
-    public function setBars($bars)
-    {
-        $this->bars = $bars;
-
-        return $this;
     }
 }
