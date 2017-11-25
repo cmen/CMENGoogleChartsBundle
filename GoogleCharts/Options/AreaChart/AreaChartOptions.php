@@ -6,6 +6,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Annotations;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
@@ -26,13 +27,7 @@ class AreaChartOptions extends LineOptions
      */
     protected $annotations;
 
-    /**
-     * The default opacity of the colored area under an area chart series, where 0.0 is fully transparent and 1.0 is
-     * fully opaque. To specify opacity for an individual series, set the areaOpacity value in the series property.
-     *
-     * @var float
-     */
-    protected $areaOpacity;
+    use AreaOpacityTrait;
 
     /**
      * @var Crosshair
@@ -208,18 +203,6 @@ class AreaChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param float $areaOpacity
-     *
-     * @return $this
-     */
-    public function setAreaOpacity($areaOpacity)
-    {
-        $this->areaOpacity = $areaOpacity;
-
-        return $this;
     }
 
     /**

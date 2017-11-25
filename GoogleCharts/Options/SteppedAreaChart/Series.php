@@ -3,18 +3,14 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\SteppedAreaChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedSeries;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaOpacityTrait;
 
 /**
  * @author Christophe Meneses
  */
 class Series extends AdvancedSeries
 {
-    /**
-     * Overrides the global areaOpacity for this series.
-     *
-     * @var float
-     */
-    protected $areaOpacity;
+    use AreaOpacityTrait;
 
     /**
      * Overrides the global lineDashStyle value for this series.
@@ -22,19 +18,6 @@ class Series extends AdvancedSeries
      * @var int[]
      */
     protected $lineDashStyle;
-
-
-    /**
-     * @param float $areaOpacity
-     *
-     * @return $this
-     */
-    public function setAreaOpacity($areaOpacity)
-    {
-        $this->areaOpacity = $areaOpacity;
-
-        return $this;
-    }
 
     /**
      * @param int[] $lineDashStyle

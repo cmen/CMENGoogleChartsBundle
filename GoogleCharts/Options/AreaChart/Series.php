@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Annotations;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineSeries;
 
 /**
@@ -15,12 +16,7 @@ class Series extends LineSeries
      */
     protected $annotations;
 
-    /**
-     * Overrides the global areaOpacity for this series.
-     *
-     * @var float
-     */
-    protected $areaOpacity;
+    use AreaOpacityTrait;
 
 
     /**
@@ -38,17 +34,5 @@ class Series extends LineSeries
     public function getAnnotations()
     {
         return $this->annotations;
-    }
-
-    /**
-     * @param float $areaOpacity
-     *
-     * @return $this
-     */
-    public function setAreaOpacity($areaOpacity)
-    {
-        $this->areaOpacity = $areaOpacity;
-
-        return $this;
     }
 }

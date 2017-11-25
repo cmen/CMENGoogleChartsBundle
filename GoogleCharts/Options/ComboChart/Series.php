@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\ComboChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Annotations;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FallingColor;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineSeries;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\RisingColor;
@@ -17,12 +18,7 @@ class Series extends LineSeries
      */
     protected $annotations;
 
-    /**
-     * Overrides the global areaOpacity for this series.
-     *
-     * @var float
-     */
-    protected $areaOpacity;
+    use AreaOpacityTrait;
 
     /**
      * Overrides the global curveType value for this series.
@@ -94,18 +90,6 @@ class Series extends LineSeries
     public function setType($type)
     {
         $this->type = $type;
-
-        return $this;
-    }
-
-    /**
-     * @param float $areaOpacity
-     *
-     * @return $this
-     */
-    public function setAreaOpacity($areaOpacity)
-    {
-        $this->areaOpacity = $areaOpacity;
 
         return $this;
     }

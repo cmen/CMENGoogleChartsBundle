@@ -6,6 +6,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Annotations;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Candlestick;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
@@ -28,13 +29,7 @@ class ComboChartOptions extends LineOptions
      */
     protected $annotations;
 
-    /**
-     * The default opacity of the colored area under an area chart series, where 0.0 is fully transparent and 1.0 is
-     * fully opaque. To specify opacity for an individual series, set the areaOpacity value in the series property.
-     *
-     * @var float
-     */
-    protected $areaOpacity;
+    use AreaOpacityTrait;
 
     /**
      * @var Bar
@@ -338,18 +333,6 @@ class ComboChartOptions extends LineOptions
     public function setVAxes($vAxes)
     {
         $this->vAxes = $vAxes;
-
-        return $this;
-    }
-
-    /**
-     * @param float $areaOpacity
-     *
-     * @return $this
-     */
-    public function setAreaOpacity($areaOpacity)
-    {
-        $this->areaOpacity = $areaOpacity;
 
         return $this;
     }
