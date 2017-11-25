@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
 use DateTime;
 
 /**
@@ -27,13 +28,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
      */
     protected $annotationsWidth;
 
-    /**
-     * The colors to use for the chart lines and labels. An array of strings. Each element is a string in a valid HTML
-     * color format. For example 'red' or '#00cc00'.
-     *
-     * @var string[]
-     */
-    protected $colors;
+    use ColorsTrait;
 
     /**
      * The format used to display the date information in the top right corner. The format of this field is as
@@ -280,18 +275,6 @@ class AnnotationChartOptions extends ChartOptionsDraw
     public function setAnnotationsWidth($annotationsWidth)
     {
         $this->annotationsWidth = $annotationsWidth;
-
-        return $this;
-    }
-
-    /**
-     * @param \string[] $colors
-     *
-     * @return $this
-     */
-    public function setColors($colors)
-    {
-        $this->colors = $colors;
 
         return $this;
     }

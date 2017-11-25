@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Timeline;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\BasicChartOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\BasicTooltip;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
 
 /**
  * @author Christophe Meneses
@@ -26,13 +27,7 @@ class TimelineOptions extends BasicChartOptions
      */
     protected $backgroundColor;
 
-    /**
-     * The colors to use for the chart elements. An array of strings, where each element is an HTML color string,
-     * for example: colors:['red','#004411'].
-     *
-     * @var string[]
-     */
-    protected $colors;
+    use ColorsTrait;
 
     /**
      * @var Timeline
@@ -93,18 +88,6 @@ class TimelineOptions extends BasicChartOptions
     public function setBackgroundColor($backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
-
-        return $this;
-    }
-
-    /**
-     * @param string[] $colors
-     *
-     * @return $this
-     */
-    public function setColors($colors)
-    {
-        $this->colors = $colors;
 
         return $this;
     }

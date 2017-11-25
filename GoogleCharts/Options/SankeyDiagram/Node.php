@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\SankeyDiagram;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
+
 /**
  * @author Christophe Meneses
  */
@@ -40,12 +42,7 @@ class Node
      */
     protected $width;
 
-    /**
-     * Custom color palette for sankey nodes. Nodes will cycle through this palette giving each node its own color.
-     *
-     * @var string[]
-     */
-    protected $colors;
+    use ColorsTrait;
 
     /**
      * Sets a coloring mode for the sankey nodes. Possible values:
@@ -117,18 +114,6 @@ class Node
     public function setWidth($width)
     {
         $this->width = $width;
-
-        return $this;
-    }
-
-    /**
-     * @param string[] $colors
-     *
-     * @return $this
-     */
-    public function setColors($colors)
-    {
-        $this->colors = $colors;
 
         return $this;
     }

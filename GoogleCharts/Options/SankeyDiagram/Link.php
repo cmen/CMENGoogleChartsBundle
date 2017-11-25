@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\SankeyDiagram;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
+
 /**
  * @author Christophe Meneses
  */
@@ -12,13 +14,7 @@ class Link
      */
     protected $color;
 
-    /**
-     * Custom color palette for sankey links. Nodes will cycle through this palette giving the links for that node
-     * the color.
-     *
-     * @var string[]
-     */
-    protected $colors;
+    use ColorsTrait;
 
     /**
      * Sets a coloring mode for the links between nodes. Possible values :
@@ -51,18 +47,6 @@ class Link
     public function getColor()
     {
         return $this->color;
-    }
-
-    /**
-     * @param string[] $colors
-     *
-     * @return $this
-     */
-    public function setColors($colors)
-    {
-        $this->colors = $colors;
-
-        return $this;
     }
 
     /**

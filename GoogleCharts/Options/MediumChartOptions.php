@@ -23,13 +23,7 @@ class MediumChartOptions extends BasicChartOptions
      */
     protected $chartArea;
 
-    /**
-     * The colors to use for the chart elements. An array of strings, where each element is an HTML color string,
-     * for example : ['red', '#004411']
-     *
-     * @var string[]
-     */
-    protected $colors;
+    use ColorsTrait;
 
     /**
      * The default font size, in pixels, of all text in the chart. You can override this using properties for specific
@@ -117,18 +111,6 @@ class MediumChartOptions extends BasicChartOptions
     public function setBackgroundColor($backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
-
-        return $this;
-    }
-
-    /**
-     * @param string[] $colors
-     *
-     * @return $this
-     */
-    public function setColors($colors)
-    {
-        $this->colors = $colors;
 
         return $this;
     }

@@ -33,15 +33,7 @@ class ColorAxis
      */
     protected $values;
 
-    /**
-     * Colors to assign to values in the visualization. An array of strings, where each element is an HTML color string,
-     * for example: colorAxis: {colors:['red','#004411']}. You must have at least two values; the gradient will include
-     * all your values, plus calculated intermediary values, with the first color as the smallest value, and the last
-     * color as the highest.
-     *
-     * @var string[]
-     */
-    protected $colors;
+    use ColorsTrait;
 
 
     /**
@@ -76,18 +68,6 @@ class ColorAxis
     public function setValues($values)
     {
         $this->values = $values;
-
-        return $this;
-    }
-
-    /**
-     * @param string[] $colors
-     *
-     * @return $this
-     */
-    public function setColors($colors)
-    {
-        $this->colors = $colors;
 
         return $this;
     }

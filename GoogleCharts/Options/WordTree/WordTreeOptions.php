@@ -3,20 +3,14 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\WordTree;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
 
 /**
  * @author Christophe Meneses
  */
 class WordTreeOptions extends ChartOptions
 {
-    /**
-     * A list of three colors, specified either by English name or hex value. The colors for words will be taken from
-     * a spectrum that begins at the first color (the low value), moves through the middle color (neutral), and ends
-     * at the last color (high).
-     *
-     * @var string[]
-     */
-    protected $colors;
+    use ColorsTrait;
 
     /**
      * The word tree typeface.
@@ -55,18 +49,6 @@ class WordTreeOptions extends ChartOptions
     public function getWordtree()
     {
         return $this->wordtree;
-    }
-
-    /**
-     * @param string[] $colors
-     *
-     * @return $this
-     */
-    public function setColors($colors)
-    {
-        $this->colors = $colors;
-
-        return $this;
     }
 
     /**
