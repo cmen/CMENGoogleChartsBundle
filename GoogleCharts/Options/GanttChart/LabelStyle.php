@@ -2,6 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GanttChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontNameTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontSizeTrait;
 
@@ -16,20 +17,5 @@ class LabelStyle
 
     use FontSizeTrait;
 
-    /**
-     * @var string
-     */
-    protected $color;
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-
-        return $this;
-    }
+    use ColorTrait;
 }

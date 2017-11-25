@@ -7,12 +7,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class Series
 {
-    /**
-     * The color to use for this series. Specify a valid HTML color string.
-     *
-     * @var string
-     */
-    protected $color;
+    use ColorTrait;
 
     /**
      * A boolean value, where true means that the series should have a legend entry,
@@ -21,19 +16,6 @@ class Series
      * @var bool
      */
     protected $visibleInLegend;
-
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-
-        return $this;
-    }
 
     /**
      * @param bool $visibleInLegend

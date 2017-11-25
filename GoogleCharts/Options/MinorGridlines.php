@@ -7,12 +7,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class MinorGridlines
 {
-    /**
-     * The color of the horizontal minor gridlines inside the chart area. Specify a valid HTML color string.
-     *
-     * @var string
-     */
-    protected $color;
+    use ColorTrait;
 
     /**
      * The number of horizontal minor gridlines between two regular gridlines.
@@ -42,18 +37,6 @@ class MinorGridlines
     public function getUnits()
     {
         return $this->units;
-    }
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-
-        return $this;
     }
 
     /**

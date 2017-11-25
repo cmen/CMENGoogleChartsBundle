@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorTrait;
+
 /**
  * Calendar charts use a striped diagonal pattern to indicate that there is no data for a particular day. Use the
  * noDataPattern.backgroundColor and noDataPattern.color options to override the grayscale defaults.
@@ -15,10 +17,7 @@ class NoDataPattern
      */
     protected $backgroundColor;
 
-    /**
-     * @var string
-     */
-    protected $color;
+    use ColorTrait;
 
     /**
      * @param string $backgroundColor
@@ -28,18 +27,6 @@ class NoDataPattern
     public function setBackgroundColor($backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
-
-        return $this;
-    }
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
 
         return $this;
     }

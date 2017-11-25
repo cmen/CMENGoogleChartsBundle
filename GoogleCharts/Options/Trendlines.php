@@ -7,12 +7,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class Trendlines
 {
-    /**
-     * The color of the trendline , expressed as either an English color name or a hex string.
-     *
-     * @var string
-     */
-    protected $color;
+    use ColorTrait;
 
     /**
      * For trendlines of type: 'polynomial', the degree of the polynomial (2 for quadratic, 3 for cubic, and so on).
@@ -90,18 +85,6 @@ class Trendlines
     public function setVisibleInLegend($visibleInLegend)
     {
         $this->visibleInLegend = $visibleInLegend;
-
-        return $this;
-    }
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
 
         return $this;
     }

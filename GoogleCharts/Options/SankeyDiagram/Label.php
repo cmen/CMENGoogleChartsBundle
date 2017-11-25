@@ -2,6 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\SankeyDiagram;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontNameTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontSizeTrait;
 
@@ -10,12 +11,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontSizeTrait;
  */
 class Label
 {
-    /**
-     * The color can be any HTML color string, for example: 'red' or '#00cc00'.
-     *
-     * @var string
-     */
-    protected $color;
+    use ColorTrait;
 
     use FontNameTrait;
 
@@ -30,19 +26,6 @@ class Label
      * @var boolean
      */
     protected $italic;
-
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-
-        return $this;
-    }
 
     /**
      * @param boolean $bold

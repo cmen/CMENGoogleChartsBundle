@@ -2,17 +2,14 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\PieChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorTrait;
+
 /**
  * @author Christophe Meneses
  */
 class PieSlice
 {
-    /**
-     * The color to use for this slice. Specify a valid HTML color string.
-     *
-     * @var string
-     */
-    protected $color;
+    use ColorTrait;
 
     /**
      * How far to separate the slice from the rest of the pie, from 0.0 (not at all) to 1.0 (the pie's radius).
@@ -44,18 +41,6 @@ class PieSlice
     public function getTextStyle()
     {
         return $this->textStyle;
-    }
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-
-        return $this;
     }
 
     /**

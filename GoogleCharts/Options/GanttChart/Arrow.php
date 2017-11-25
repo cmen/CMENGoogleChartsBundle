@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GanttChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorTrait;
+
 /**
  * @author Christophe Meneses
  */
@@ -14,12 +16,7 @@ class Arrow
      */
     protected $angle;
 
-    /**
-     * The color of the arrows.
-     *
-     * @var string
-     */
-    protected $color;
+    use ColorTrait;
 
     /**
      * The length of the head of the arrow.
@@ -58,18 +55,6 @@ class Arrow
     public function setAngle($angle)
     {
         $this->angle = $angle;
-
-        return $this;
-    }
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
 
         return $this;
     }

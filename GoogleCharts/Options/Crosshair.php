@@ -7,12 +7,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class Crosshair
 {
-    /**
-     * The crosshair color, expressed as either a color name (e.g., "blue") or an RGB value (e.g., "#adf").
-     *
-     * @var string
-     */
-    protected $color;
+    use ColorTrait;
 
     /**
      * @var Focused
@@ -69,18 +64,6 @@ class Crosshair
     public function getSelected()
     {
         return $this->selected;
-    }
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-
-        return $this;
     }
 
     /**

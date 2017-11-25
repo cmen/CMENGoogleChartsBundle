@@ -7,12 +7,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class Focused
 {
-    /**
-     * Color, expressed as either a color name (e.g., "blue") or an RGB value (e.g., "#adf").
-     *
-     * @var string
-     */
-    protected $color;
+    use ColorTrait;
 
     /**
      * Opacity, with 0.0 being fully transparent and 1.0 fully opaque.
@@ -20,18 +15,6 @@ class Focused
      * @var float
      */
     protected $opacity;
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-
-        return $this;
-    }
 
     /**
      * @param float $opacity

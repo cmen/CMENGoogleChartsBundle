@@ -7,30 +7,12 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class Stem
 {
-    /**
-     * HTML color string
-     *
-     * @var string
-     */
-    protected $color;
+    use ColorTrait;
 
     /**
      * @var int
      */
     protected $length;
-
-
-    /**
-     * @param string $color
-     *
-     * @return $this
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-
-        return $this;
-    }
 
     /**
      * @param int $length
