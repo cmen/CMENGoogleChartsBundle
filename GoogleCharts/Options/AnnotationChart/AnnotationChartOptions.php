@@ -5,6 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MaxTrait;
 use DateTime;
 
 /**
@@ -119,16 +120,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
      */
     protected $legendPosition;
 
-    /**
-     * The maximum value to show on the Y axis. If the maximum data point exceeds this value, this setting will be
-     * ignored, and the chart will be adjusted to show the next major tick mark above the maximum data point. This
-     * will take precedence over the Y axis maximum determined by scaleType.
-     *
-     * This is similar to maxValue in core charts.
-     *
-     * @var int
-     */
-    protected $max;
+    use MaxTrait;
 
     /**
      * The minimum value to show on the Y axis. If the minimum data point is less than this value, this setting will
@@ -407,18 +399,6 @@ class AnnotationChartOptions extends ChartOptionsDraw
     public function setLegendPosition($legendPosition)
     {
         $this->legendPosition = $legendPosition;
-
-        return $this;
-    }
-
-    /**
-     * @param int $max
-     *
-     * @return $this
-     */
-    public function setMax($max)
-    {
-        $this->max = $max;
 
         return $this;
     }

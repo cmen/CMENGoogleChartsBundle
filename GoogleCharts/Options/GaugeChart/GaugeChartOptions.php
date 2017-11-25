@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GaugeChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Animation;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\MaxTrait;
 
 /**
  * @author Christophe Meneses
@@ -44,12 +45,7 @@ class GaugeChartOptions extends ChartOptions
      */
     protected $majorTicks;
 
-    /**
-     * The maximal value of a gauge.
-     *
-     * @var int
-     */
-    protected $max;
+    use MaxTrait;
 
     /**
      * The minimal value of a gauge.
@@ -170,18 +166,6 @@ class GaugeChartOptions extends ChartOptions
     public function setMajorTicks($majorTicks)
     {
         $this->majorTicks = $majorTicks;
-
-        return $this;
-    }
-
-    /**
-     * @param int $max
-     *
-     * @return $this
-     */
-    public function setMax($max)
-    {
-        $this->max = $max;
 
         return $this;
     }
