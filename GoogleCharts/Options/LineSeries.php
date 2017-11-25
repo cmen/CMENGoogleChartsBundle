@@ -9,12 +9,7 @@ class LineSeries extends AdvancedSeries
 {
     use LineDashStyleTrait;
 
-    /**
-     * Overrides the global lineWidth value for this series.
-     *
-     * @var int
-     */
-    protected $lineWidth;
+    use LineWidthTrait;
 
     /**
      * Overrides the global pointShape value for this series.
@@ -36,18 +31,6 @@ class LineSeries extends AdvancedSeries
      * @var bool
      */
     protected $pointsVisible;
-
-    /**
-     * @param int $lineWidth
-     *
-     * @return $this
-     */
-    public function setLineWidth($lineWidth)
-    {
-        $this->lineWidth = $lineWidth;
-
-        return $this;
-    }
 
     /**
      * @param string $pointShape

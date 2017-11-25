@@ -12,6 +12,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\CurveTypeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\DataOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineWidthTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 
@@ -56,12 +57,7 @@ class ScatterChartOptions extends AdvancedChartOptions
      */
     protected $legend;
 
-    /**
-     * Line width in pixels. Use zero to hide all lines and show only the points.
-     *
-     * @var int
-     */
-    protected $lineWidth;
+    use LineWidthTrait;
 
     /**
      * The orientation of the chart. When set to 'vertical', rotates the axes of the chart so that (for instance) a
@@ -190,18 +186,6 @@ class ScatterChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param int $lineWidth
-     *
-     * @return $this
-     */
-    public function setLineWidth($lineWidth)
-    {
-        $this->lineWidth = $lineWidth;
-
-        return $this;
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Map;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineWidthTrait;
 
 /**
  * @author Christophe Meneses
@@ -34,12 +35,7 @@ class MapOptions extends ChartOptionsDraw
      */
     protected $lineColor;
 
-    /**
-     * If showLine is true, defines the line width (in pixels).
-     *
-     * @var int
-     */
-    protected $lineWidth;
+    use LineWidthTrait;
 
     /**
      * An object containing properties of a custom map type. This custom map type will be accessed by the mapTypeId
@@ -132,18 +128,6 @@ class MapOptions extends ChartOptionsDraw
     public function setLineColor($lineColor)
     {
         $this->lineColor = $lineColor;
-
-        return $this;
-    }
-
-    /**
-     * @param int $lineWidth
-     *
-     * @return $this
-     */
-    public function setLineWidth($lineWidth)
-    {
-        $this->lineWidth = $lineWidth;
 
         return $this;
     }

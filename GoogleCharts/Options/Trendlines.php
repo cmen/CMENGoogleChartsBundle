@@ -24,12 +24,7 @@ class Trendlines
      */
     protected $labelInLegend;
 
-    /**
-     * The line width of the trendline , in pixels.
-     *
-     * @var int
-     */
-    protected $lineWidth;
+    use LineWidthTrait;
 
     /**
      * The transparency of the trendline , from 0.0 (transparent) to 1.0 (opaque).
@@ -109,18 +104,6 @@ class Trendlines
     public function setLabelInLegend($labelInLegend)
     {
         $this->labelInLegend = $labelInLegend;
-
-        return $this;
-    }
-
-    /**
-     * @param int $lineWidth
-     *
-     * @return $this
-     */
-    public function setLineWidth($lineWidth)
-    {
-        $this->lineWidth = $lineWidth;
 
         return $this;
     }

@@ -11,13 +11,7 @@ class LineOptions extends AdvancedChartOptions
 
     use LineDashStyleTrait;
 
-    /**
-     * Data line width in pixels. Use zero to hide all lines and show only the points. You can override values for
-     * individual series using the series property.
-     *
-     * @var int
-     */
-    protected $lineWidth;
+    use LineWidthTrait;
 
     /**
      * The shape of individual data elements: 'circle', 'triangle', 'square', 'diamond', 'star', or 'polygon'.
@@ -69,18 +63,6 @@ class LineOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param int $lineWidth
-     *
-     * @return $this
-     */
-    public function setLineWidth($lineWidth)
-    {
-        $this->lineWidth = $lineWidth;
-
-        return $this;
     }
 
     /**

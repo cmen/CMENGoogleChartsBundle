@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\ScatterChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineWidthTrait;
+
 /**
  * @author Christophe Meneses
  */
@@ -14,12 +16,7 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
      */
     protected $labelInLegend;
 
-    /**
-     * Overrides the global lineWidth value for this series.
-     *
-     * @var int
-     */
-    protected $lineWidth;
+    use LineWidthTrait;
 
     /**
      * Overrides the global pointShape value for this series.
@@ -51,18 +48,6 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
     public function setLabelInLegend($labelInLegend)
     {
         $this->labelInLegend = $labelInLegend;
-
-        return $this;
-    }
-
-    /**
-     * @param int $lineWidth
-     *
-     * @return $this
-     */
-    public function setLineWidth($lineWidth)
-    {
-        $this->lineWidth = $lineWidth;
 
         return $this;
     }
