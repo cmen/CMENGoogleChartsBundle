@@ -9,6 +9,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AggregationTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Annotations;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\CurveTypeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
@@ -35,14 +36,7 @@ class ScatterChartOptions extends AdvancedChartOptions
      */
     protected $crosshair;
 
-    /**
-     * Controls the curve of the lines when the line width is not zero. Can be one of the following:
-     * 'none' - Straight lines without curve.
-     * 'function' - The angles of the line will be smoothed.
-     *
-     * @var string
-     */
-    protected $curveType;
+    use CurveTypeTrait;
 
     /**
      * The transparency of data points, with 1.0 being completely opaque and 0.0 fully transparent. In scatter,
@@ -205,18 +199,6 @@ class ScatterChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $curveType
-     *
-     * @return $this
-     */
-    public function setCurveType($curveType)
-    {
-        $this->curveType = $curveType;
-
-        return $this;
     }
 
     /**
