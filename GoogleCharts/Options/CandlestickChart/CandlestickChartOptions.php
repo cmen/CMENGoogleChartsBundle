@@ -7,6 +7,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AggregationTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Candlestick;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
@@ -16,28 +17,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
  */
 class CandlestickChartOptions extends AdvancedChartOptions
 {
-    /**
-     * How multiple data selections are rolled up into tooltips :
-     * 'category': Group selected data by x-value.
-     * 'series': Group selected data by series.
-     * 'auto': Group selected data by x-value if all selections have the same x-value, and by series otherwise.
-     * 'none': Show only one tooltip per selection.
-     * aggregationTarget will often be used in tandem with selectionMode and tooltip.trigger, e.g.:
-     * var options = {
-     *     // Allow multiple
-     *     // simultaneous selections.
-     *     selectionMode: 'multiple',
-     *     // Trigger tooltips
-     *     // on selections.
-     *     tooltip: {trigger: 'selection'},
-     *     // Group selections
-     *     // by x-value.
-     *     aggregationTarget: 'category',
-     *};
-     *
-     * @var string
-     */
-    protected $aggregationTarget;
+    use AggregationTargetTrait;
 
     /**
      * @var AdvancedAnimation
@@ -179,18 +159,6 @@ class CandlestickChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $aggregationTarget
-     *
-     * @return $this
-     */
-    public function setAggregationTarget($aggregationTarget)
-    {
-        $this->aggregationTarget = $aggregationTarget;
-
-        return $this;
     }
 
     /**

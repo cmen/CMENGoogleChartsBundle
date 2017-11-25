@@ -7,28 +7,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class LineOptions extends AdvancedChartOptions
 {
-    /**
-     * How multiple data selections are rolled up into tooltips :
-     * 'category': Group selected data by x-value.
-     * 'series': Group selected data by series.
-     * 'auto': Group selected data by x-value if all selections have the same x-value, and by series otherwise.
-     * 'none': Show only one tooltip per selection.
-     * aggregationTarget will often be used in tandem with selectionMode and tooltip.trigger, e.g.:
-     * var options = {
-     *     // Allow multiple
-     *     // simultaneous selections.
-     *     selectionMode: 'multiple',
-     *     // Trigger tooltips
-     *     // on selections.
-     *     tooltip: {trigger: 'selection'},
-     *     // Group selections
-     *     // by x-value.
-     *     aggregationTarget: 'category',
-     *};
-     *
-     * @var string
-     */
-    protected $aggregationTarget;
+    use AggregationTargetTrait;
 
     /**
      * The on-and-off pattern for dashed lines. For instance, [4, 4] will repeat 4-length dashes followed by 4-length
@@ -97,18 +76,6 @@ class LineOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $aggregationTarget
-     *
-     * @return $this
-     */
-    public function setAggregationTarget($aggregationTarget)
-    {
-        $this->aggregationTarget = $aggregationTarget;
-
-        return $this;
     }
 
     /**
