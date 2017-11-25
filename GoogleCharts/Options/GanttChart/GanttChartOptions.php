@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GanttChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\HeightTrait;
 
 /**
  * @author Christophe Meneses
@@ -14,13 +15,7 @@ class GanttChartOptions extends ChartOptionsDraw
      */
     protected $backgroundColor;
 
-    /**
-     * Height of the chart, in pixels.
-     *
-     * @var int
-     */
-    protected $height;
-
+    use HeightTrait;
 
     /**
      * @var Gantt
@@ -61,18 +56,6 @@ class GanttChartOptions extends ChartOptionsDraw
     public function getGantt()
     {
         return $this->gantt;
-    }
-
-    /**
-     * @param int $height
-     *
-     * @return $this
-     */
-    public function setHeight($height)
-    {
-        $this->height = $height;
-
-        return $this;
     }
 
     /**

@@ -9,12 +9,7 @@ class ChartOptions extends ChartOptionsDraw
 {
     use ForceIFrameTrait;
 
-    /**
-     * Height of the chart, in pixels.
-     *
-     * @var int
-     */
-    protected $height;
+    use HeightTrait;
 
     /**
      * Width of the chart, in pixels.
@@ -32,18 +27,6 @@ class ChartOptions extends ChartOptionsDraw
     public function setWidth($width)
     {
         $this->width = $width;
-
-        return $this;
-    }
-
-    /**
-     * @param int $height
-     *
-     * @return $this
-     */
-    public function setHeight($height)
-    {
-        $this->height = $height;
 
         return $this;
     }

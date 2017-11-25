@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\TableChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\HeightTrait;
 
 /**
  * @author Christophe Meneses
@@ -40,16 +41,7 @@ class TableChartOptions extends ChartOptionsDraw
      */
     protected $frozenColumns;
 
-    /**
-     * Sets the height of the visualization's container element. You can use standard HTML units (for example, '100px',
-     * '80em', '60'). If no units are specified the number is assumed to be pixels. If not specified, the browser will
-     * adjust the height automatically to fit the table, shrinking as much as possible in the process; if set smaller
-     * than the height required, the table will add a vertical scroll bar (the header row is also frozen). If set to
-     * '100%', the table will expand as much as possible into the container element.
-     *
-     * @var string
-     */
-    protected $height;
+    use HeightTrait;
 
     /**
      *  If and how to enable paging through the data. Choose one of the following string values :
@@ -212,18 +204,6 @@ class TableChartOptions extends ChartOptionsDraw
     public function setFrozenColumns($frozenColumns)
     {
         $this->frozenColumns = $frozenColumns;
-
-        return $this;
-    }
-
-    /**
-     * @param string $height
-     *
-     * @return $this
-     */
-    public function setHeight($height)
-    {
-        $this->height = $height;
 
         return $this;
     }
