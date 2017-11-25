@@ -2,6 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\TableChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
 
 /**
@@ -9,13 +10,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
  */
 class TableChartOptions extends ChartOptionsDraw
 {
-    /**
-     * If set to true, formatted values of cells that include HTML tags will be rendered as HTML. If set to false,
-     * most custom formatters will not work properly.
-     *
-     * @var boolean
-     */
-    protected $allowHtml;
+    use AllowHtmlTrait;
 
     /**
      * Determines if alternating color style will be assigned to odd and even rows.
@@ -183,18 +178,6 @@ class TableChartOptions extends ChartOptionsDraw
     public function getCssClassNames()
     {
         return $this->cssClassNames;
-    }
-
-    /**
-     * @param boolean $allowHtml
-     *
-     * @return $this
-     */
-    public function setAllowHtml($allowHtml)
-    {
-        $this->allowHtml = $allowHtml;
-
-        return $this;
     }
 
     /**

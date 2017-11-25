@@ -2,6 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\OrgChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
 
 /**
@@ -16,12 +17,7 @@ class OrgChartOptions extends ChartOptionsDraw
      */
     protected $allowCollapse;
 
-    /**
-     * If set to true, names that includes HTML tags will be rendered as HTML.
-     *
-     * @var boolean
-     */
-    protected $allowHtml;
+    use AllowHtmlTrait;
 
     /**
      * A class name to assign to node elements. Apply CSS to this class name to specify colors or styles for the chart
@@ -55,18 +51,6 @@ class OrgChartOptions extends ChartOptionsDraw
     public function setAllowCollapse($allowCollapse)
     {
         $this->allowCollapse = $allowCollapse;
-
-        return $this;
-    }
-
-    /**
-     * @param boolean $allowHtml
-     *
-     * @return $this
-     */
-    public function setAllowHtml($allowHtml)
-    {
-        $this->allowHtml = $allowHtml;
 
         return $this;
     }

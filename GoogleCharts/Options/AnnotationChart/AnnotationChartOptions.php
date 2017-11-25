@@ -2,6 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
 use DateTime;
 
@@ -10,12 +11,7 @@ use DateTime;
  */
 class AnnotationChartOptions extends ChartOptionsDraw
 {
-    /**
-     * If set to true, any annotation text that includes HTML tags will be rendered as HTML.
-     *
-     * @var boolean
-     */
-    protected $allowHtml;
+    use AllowHtmlTrait;
 
     /**
      * A suffix to be added to all values in the legend and tick labels in the vertical axes.
@@ -262,18 +258,6 @@ class AnnotationChartOptions extends ChartOptionsDraw
     public function getTable()
     {
         return $this->table;
-    }
-
-    /**
-     * @param boolean $allowHtml
-     *
-     * @return $this
-     */
-    public function setAllowHtml($allowHtml)
-    {
-        $this->allowHtml = $allowHtml;
-
-        return $this;
     }
 
     /**
