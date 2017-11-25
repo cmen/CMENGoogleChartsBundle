@@ -13,6 +13,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\CurveTypeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\DataOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\InterpolateNullsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
@@ -60,13 +61,7 @@ class ComboChartOptions extends LineOptions
      */
     protected $hAxis;
 
-    /**
-     * Whether to guess the value of missing points. If true, it will guess the value of any missing data based on
-     * neighboring points. If false, it will leave a break in the line at the unknown point.
-     *
-     * @var boolean
-     */
-    protected $interpolateNulls;
+    use InterpolateNullsTrait;
 
     /**
      * If set to true, series elements of the same type are stacked. Affects bar, column and area series only.
@@ -203,18 +198,6 @@ class ComboChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param bool $interpolateNulls
-     *
-     * @return $this
-     */
-    public function setInterpolateNulls($interpolateNulls)
-    {
-        $this->interpolateNulls = $interpolateNulls;
-
-        return $this;
     }
 
     /**

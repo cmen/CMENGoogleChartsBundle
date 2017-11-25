@@ -11,6 +11,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\CurveTypeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\DataOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\InterpolateNullsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
@@ -51,13 +52,7 @@ class LineChartOptions extends LineOptions
      */
     protected $hAxis;
 
-    /**
-     * Whether to guess the value of missing points. If true, it will guess the value of any missing data based on
-     * neighboring points. If false, it will leave a break in the line at the unknown point.
-     *
-     * @var int boolean
-     */
-    protected $interpolateNulls;
+    use InterpolateNullsTrait;
 
     /**
      * @var AdvancedLegend
@@ -170,18 +165,6 @@ class LineChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param int $interpolateNulls
-     *
-     * @return $this
-     */
-    public function setInterpolateNulls($interpolateNulls)
-    {
-        $this->interpolateNulls = $interpolateNulls;
-
-        return $this;
     }
 
     /**

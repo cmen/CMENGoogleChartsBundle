@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\PieChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FullTooltip;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\InterpolateNullsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumChartOptions;
 
 /**
@@ -11,15 +12,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumChartOptions;
  */
 class PieChartOptions extends MediumChartOptions
 {
-    /**
-     * Whether to guess the value of missing points. If true, it will guess the value of any missing data based on
-     * neighboring points. If false, it will leave a break in the line at the unknown point.
-     *
-     * This is not supported by Area charts with the isStacked: true/'percent'/'relative'/'absolute' option.
-     *
-     * @var boolean
-     */
-    protected $interpolateNulls;
+    use InterpolateNullsTrait;
 
     /**
      * If true, displays a three-dimensional chart.
@@ -152,18 +145,6 @@ class PieChartOptions extends MediumChartOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param boolean $interpolateNulls
-     *
-     * @return $this
-     */
-    public function setInterpolateNulls($interpolateNulls)
-    {
-        $this->interpolateNulls = $interpolateNulls;
-
-        return $this;
     }
 
     /**

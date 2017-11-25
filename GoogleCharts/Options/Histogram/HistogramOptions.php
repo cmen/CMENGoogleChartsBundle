@@ -8,6 +8,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\DataOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\InterpolateNullsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
@@ -40,13 +41,7 @@ class HistogramOptions extends AdvancedChartOptions
      */
     protected $histogram;
 
-    /**
-     * Whether to guess the value of missing points. If true, it will guess the value of any missing data based on
-     * neighboring points. If false, it will leave a break in the line at the unknown point.
-     *
-     * @var boolean
-     */
-    protected $interpolateNulls;
+    use InterpolateNullsTrait;
 
     /**
      *  If set to true, stacks the elements for all series at each domain value. The isStacked option also supports
@@ -172,18 +167,6 @@ class HistogramOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param boolean $interpolateNulls
-     *
-     * @return $this
-     */
-    public function setInterpolateNulls($interpolateNulls)
-    {
-        $this->interpolateNulls = $interpolateNulls;
-
-        return $this;
     }
 
     /**

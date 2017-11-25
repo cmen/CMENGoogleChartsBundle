@@ -11,6 +11,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Crosshair;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\DataOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\InterpolateNullsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
@@ -50,13 +51,7 @@ class AreaChartOptions extends LineOptions
      */
     protected $hAxis;
 
-    /**
-     * Whether to guess the value of missing points. If true, it will guess the value of any missing data based on
-     * neighboring points. If false, it will leave a break in the line at the unknown point.
-     *
-     * @var boolean
-     */
-    protected $interpolateNulls;
+    use InterpolateNullsTrait;
 
     /**
      *  If set to true, stacks the elements for all series at each domain value. The isStacked option also supports
@@ -184,18 +179,6 @@ class AreaChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param boolean $interpolateNulls
-     *
-     * @return $this
-     */
-    public function setInterpolateNulls($interpolateNulls)
-    {
-        $this->interpolateNulls = $interpolateNulls;
-
-        return $this;
     }
 
     /**
