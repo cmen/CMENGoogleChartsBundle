@@ -25,6 +25,8 @@ class MediumChartOptions extends BasicChartOptions
 
     use ColorsTrait;
 
+    use FontNameTrait;
+
     /**
      * The default font size, in pixels, of all text in the chart. You can override this using properties for specific
      * chart elements.
@@ -32,14 +34,6 @@ class MediumChartOptions extends BasicChartOptions
      * @var int
      */
     protected $fontSize;
-
-    /**
-     * The default font face for all text in the chart. You can override this using properties for specific chart
-     * elements.
-     *
-     * @var string
-     */
-    protected $fontName;
 
     /**
      * Text to display above the chart.
@@ -111,18 +105,6 @@ class MediumChartOptions extends BasicChartOptions
     public function setBackgroundColor($backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fontName
-     *
-     * @return $this
-     */
-    public function setFontName($fontName)
-    {
-        $this->fontName = $fontName;
 
         return $this;
     }

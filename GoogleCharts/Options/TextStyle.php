@@ -14,10 +14,7 @@ class TextStyle
      */
     protected $color;
 
-    /**
-     * @var string
-     */
-    protected $fontName;
+    use FontNameTrait;
 
     /**
      * @var int
@@ -33,18 +30,6 @@ class TextStyle
     public function setColor($color)
     {
         $this->color = $color;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fontName
-     *
-     * @return $this
-     */
-    public function setFontName($fontName)
-    {
-        $this->fontName = $fontName;
 
         return $this;
     }

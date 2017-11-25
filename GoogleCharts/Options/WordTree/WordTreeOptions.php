@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\WordTree;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontNameTrait;
 
 /**
  * @author Christophe Meneses
@@ -12,12 +13,7 @@ class WordTreeOptions extends ChartOptions
 {
     use ColorsTrait;
 
-    /**
-     * The word tree typeface.
-     *
-     * @var string
-     */
-    protected $fontName;
+    use FontNameTrait;
 
     /**
      * The upper limit for font size of displayed words.
@@ -49,18 +45,6 @@ class WordTreeOptions extends ChartOptions
     public function getWordtree()
     {
         return $this->wordtree;
-    }
-
-    /**
-     * @param string $fontName
-     *
-     * @return $this
-     */
-    public function setFontName($fontName)
-    {
-        $this->fontName = $fontName;
-
-        return $this;
     }
 
     /**

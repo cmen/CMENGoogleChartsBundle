@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GanttChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontNameTrait;
+
 /**
  * The styles for task labels.
  *
@@ -9,10 +11,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GanttChart;
  */
 class LabelStyle
 {
-    /**
-     * @var string
-     */
-    protected $fontName;
+    use FontNameTrait;
 
     /**
      * @var int
@@ -23,18 +22,6 @@ class LabelStyle
      * @var string
      */
     protected $color;
-
-    /**
-     * @param string $fontName
-     *
-     * @return $this
-     */
-    public function setFontName($fontName)
-    {
-        $this->fontName = $fontName;
-
-        return $this;
-    }
 
     /**
      * @param int $fontSize

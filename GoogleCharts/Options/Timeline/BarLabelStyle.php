@@ -2,33 +2,19 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Timeline;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontNameTrait;
+
 /**
  * @author Christophe Meneses
  */
 class BarLabelStyle
 {
-    /**
-     * @var string
-     */
-    protected $fontName;
+    use FontNameTrait;
 
     /**
      * @var int
      */
     protected $fontSize;
-
-
-    /**
-     * @param string $fontName
-     *
-     * @return $this
-     */
-    public function setFontName($fontName)
-    {
-        $this->fontName = $fontName;
-
-        return $this;
-    }
 
     /**
      * @param int $fontSize

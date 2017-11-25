@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Timeline;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontNameTrait;
+
 /**
  * @author Christophe Meneses
  */
@@ -12,10 +14,7 @@ class RowLabelStyle
      */
     protected $color;
 
-    /**
-     * @var string
-     */
-    protected $fontName;
+    use FontNameTrait;
 
     /**
      * @var int
@@ -31,18 +30,6 @@ class RowLabelStyle
     public function setColor($color)
     {
         $this->color = $color;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fontName
-     *
-     * @return $this
-     */
-    public function setFontName($fontName)
-    {
-        $this->fontName = $fontName;
 
         return $this;
     }

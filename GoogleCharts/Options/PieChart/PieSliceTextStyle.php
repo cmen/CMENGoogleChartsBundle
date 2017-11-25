@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\PieChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontNameTrait;
+
 /**
  * @author Christophe Meneses
  */
@@ -14,10 +16,7 @@ class PieSliceTextStyle
      */
     protected $color;
 
-    /**
-     * @var string
-     */
-    protected $fontName;
+    use FontNameTrait;
 
     /**
      * @var int
@@ -32,18 +31,6 @@ class PieSliceTextStyle
     public function setColor($color)
     {
         $this->color = $color;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fontName
-     *
-     * @return $this
-     */
-    public function setFontName($fontName)
-    {
-        $this->fontName = $fontName;
 
         return $this;
     }
