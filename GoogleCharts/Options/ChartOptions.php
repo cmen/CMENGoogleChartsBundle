@@ -7,13 +7,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class ChartOptions extends ChartOptionsDraw
 {
-    /**
-     * Draws the chart inside an inline frame. (Note that on IE8, this option is ignored; all IE8 charts are drawn
-     * in i-frames.)
-     *
-     * @var boolean
-     */
-    protected $forceIFrame;
+    use ForceIFrameTrait;
 
     /**
      * Height of the chart, in pixels.
@@ -50,18 +44,6 @@ class ChartOptions extends ChartOptionsDraw
     public function setHeight($height)
     {
         $this->height = $height;
-
-        return $this;
-    }
-
-    /**
-     * @param boolean $forceIFrame
-     *
-     * @return $this
-     */
-    public function setForceIFrame($forceIFrame)
-    {
-        $this->forceIFrame = $forceIFrame;
 
         return $this;
     }
