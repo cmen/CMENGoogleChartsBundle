@@ -26,12 +26,7 @@ class Trendlines
 
     use LineWidthTrait;
 
-    /**
-     * The transparency of the trendline , from 0.0 (transparent) to 1.0 (opaque).
-     *
-     * @var float
-     */
-    protected $opacity;
+    use OpacityTrait;
 
     use PointSizeTrait;
 
@@ -91,18 +86,6 @@ class Trendlines
     public function setLabelInLegend($labelInLegend)
     {
         $this->labelInLegend = $labelInLegend;
-
-        return $this;
-    }
-
-    /**
-     * @param float $opacity
-     *
-     * @return $this
-     */
-    public function setOpacity($opacity)
-    {
-        $this->opacity = $opacity;
 
         return $this;
     }

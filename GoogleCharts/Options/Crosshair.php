@@ -14,12 +14,7 @@ class Crosshair
      */
     protected $focused;
 
-    /**
-     * The crosshair opacity, with 0.0 being fully transparent and 1.0 fully opaque.
-     *
-     * @var float
-     */
-    protected $opacity;
+    use OpacityTrait;
 
     use OrientationTrait;
 
@@ -58,18 +53,6 @@ class Crosshair
     public function getSelected()
     {
         return $this->selected;
-    }
-
-    /**
-     * @param float $opacity
-     *
-     * @return $this
-     */
-    public function setOpacity($opacity)
-    {
-        $this->opacity = $opacity;
-
-        return $this;
     }
 
     /**

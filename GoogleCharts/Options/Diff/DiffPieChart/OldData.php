@@ -2,17 +2,14 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffPieChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\OpacityTrait;
+
 /**
  * @author Christophe Meneses
  */
 class OldData
 {
-    /**
-     * Transparency of old data.
-     *
-     * @var float
-     */
-    protected $opacity;
+    use OpacityTrait;
 
     /**
      * If false, the oldest data surrounds the newest data.
@@ -20,19 +17,6 @@ class OldData
      * @var boolean
      */
     protected $inCenter;
-
-
-    /**
-     * @param float $opacity
-     *
-     * @return $this
-     */
-    public function setOpacity($opacity)
-    {
-        $this->opacity = $opacity;
-
-        return $this;
-    }
 
     /**
      * @param boolean $inCenter

@@ -2,28 +2,12 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffScatterChart;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\OpacityTrait;
+
 /**
  * @author Christophe Meneses
  */
 class OldData
 {
-    /**
-     * Transparency of old data.
-     *
-     * @var float
-     */
-    protected $opacity;
-
-
-    /**
-     * @param float $opacity
-     *
-     * @return $this
-     */
-    public function setOpacity($opacity)
-    {
-        $this->opacity = $opacity;
-
-        return $this;
-    }
+    use OpacityTrait;
 }

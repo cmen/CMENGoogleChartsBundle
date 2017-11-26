@@ -14,13 +14,7 @@ class AdvancedTextStyle extends MediumTextStyle
      */
     protected $auraColor;
 
-    /**
-     * The transparency of the text.
-     *
-     * @var float
-     */
-    protected $opacity;
-
+    use OpacityTrait;
 
     /**
      * @param string $auraColor
@@ -30,18 +24,6 @@ class AdvancedTextStyle extends MediumTextStyle
     public function setAuraColor($auraColor)
     {
         $this->auraColor = $auraColor;
-
-        return $this;
-    }
-
-    /**
-     * @param float $opacity
-     *
-     * @return $this
-     */
-    public function setOpacity($opacity)
-    {
-        $this->opacity = $opacity;
 
         return $this;
     }
