@@ -33,22 +33,9 @@ class Trendlines
      */
     protected $opacity;
 
-    /**
-     * Trendlines are constucted by stamping a bunch of dots on the chart; this rarely-needed option lets you customize
-     * the size of the dots. The trendline's lineWidth option will usually be preferable. However, you'll need this
-     * option if you're using the global pointSize option and want a different point size for your trendlines.
-     *
-     * @var int
-     */
-    protected $pointSize;
+    use PointSizeTrait;
 
-    /**
-     * Trendlines are constucted by stamping a bunch of dots on the chart. The trendline's pointsVisible option
-     * determines whether the points for a particular trendline are visible.
-     *
-     * @var bool
-     */
-    protected $pointsVisible;
+    use PointsVisibleTrait;
 
     /**
      * Whether to show the coefficient of determination in the legend or trendline tooltip.
@@ -116,30 +103,6 @@ class Trendlines
     public function setOpacity($opacity)
     {
         $this->opacity = $opacity;
-
-        return $this;
-    }
-
-    /**
-     * @param int $pointSize
-     *
-     * @return $this
-     */
-    public function setPointSize($pointSize)
-    {
-        $this->pointSize = $pointSize;
-
-        return $this;
-    }
-
-    /**
-     * @param boolean $pointsVisible
-     *
-     * @return $this
-     */
-    public function setPointsVisible($pointsVisible)
-    {
-        $this->pointsVisible = $pointsVisible;
 
         return $this;
     }

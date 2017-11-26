@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\ScatterChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineWidthTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\PointTrait;
 
 /**
  * @author Christophe Meneses
@@ -18,27 +19,7 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
 
     use LineWidthTrait;
 
-    /**
-     * Overrides the global pointShape value for this series.
-     *
-     * @var string
-     */
-    protected $pointShape;
-
-    /**
-     * Overrides the global pointSize value for this series.
-     *
-     * @var int
-     */
-    protected $pointSize;
-
-    /**
-     * Overrides the global pointsVisible value for this series.
-     *
-     * @var bool
-     */
-    protected $pointsVisible;
-
+    use PointTrait;
 
     /**
      * @param string $labelInLegend
@@ -48,42 +29,6 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
     public function setLabelInLegend($labelInLegend)
     {
         $this->labelInLegend = $labelInLegend;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pointShape
-     *
-     * @return $this
-     */
-    public function setPointShape($pointShape)
-    {
-        $this->pointShape = $pointShape;
-
-        return $this;
-    }
-
-    /**
-     * @param int $pointSize
-     *
-     * @return $this
-     */
-    public function setPointSize($pointSize)
-    {
-        $this->pointSize = $pointSize;
-
-        return $this;
-    }
-
-    /**
-     * @param bool $pointsVisible
-     *
-     * @return $this
-     */
-    public function setPointsVisible($pointsVisible)
-    {
-        $this->pointsVisible = $pointsVisible;
 
         return $this;
     }
