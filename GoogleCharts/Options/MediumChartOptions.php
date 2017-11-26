@@ -29,12 +29,7 @@ class MediumChartOptions extends BasicChartOptions
 
     use FontSizeTrait;
 
-    /**
-     * Text to display above the chart.
-     *
-     * @var string
-     */
-    protected $title;
+    use TitleTrait;
 
     /**
      * @var TitleTextStyle
@@ -77,18 +72,6 @@ class MediumChartOptions extends BasicChartOptions
     public function getTitleTextStyle()
     {
         return $this->titleTextStyle;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-
-        return $this;
     }
 
     /**

@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Material;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTrait;
+
 /**
  * Class Chart
  *
@@ -16,12 +18,7 @@ class Chart
      */
     protected $subtitle;
 
-    /**
-     * This option specifies the title.
-     *
-     * @var string
-     */
-    protected $title;
+    use TitleTrait;
 
     /**
      * @param string $subtitle
@@ -31,18 +28,6 @@ class Chart
     public function setSubtitle($subtitle)
     {
         $this->subtitle = $subtitle;
-
-        return $this;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return Chart
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
 
         return $this;
     }

@@ -4,19 +4,14 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorAxis;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTextStyle;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTrait;
 
 /**
  * @author Christophe Meneses
  */
 class CalendarChartOptions extends ChartOptions
 {
-    /**
-     * Text to display above the chart.
-     *
-     * @var string
-     */
-    protected $title;
+    use TitleTrait;
 
     /**
      * @var Calendar
@@ -69,17 +64,5 @@ class CalendarChartOptions extends ChartOptions
     public function getNoDataPattern()
     {
         return $this->noDataPattern;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-
-        return $this;
     }
 }

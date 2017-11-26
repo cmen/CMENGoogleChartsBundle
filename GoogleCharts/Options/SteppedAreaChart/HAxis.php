@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\SteppedAreaChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\TextStyle;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTextStyle;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ViewWindow;
 
 /**
@@ -104,12 +105,7 @@ class HAxis
      */
     protected $ticks;
 
-    /**
-     * hAxis property that specifies the title of the horizontal axis.
-     *
-     * @var string
-     */
-    protected $title;
+    use TitleTrait;
 
     /**
      * @var TitleTextStyle
@@ -154,18 +150,6 @@ class HAxis
     public function getViewWindow()
     {
         return $this->viewWindow;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-
-        return $this;
     }
 
     /**

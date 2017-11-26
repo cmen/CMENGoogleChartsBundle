@@ -6,6 +6,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FontSizeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumTextStyle;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTextStyle;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTrait;
 
 /**
  * @author Christophe Meneses
@@ -181,12 +182,7 @@ class TreeMapChartOptions extends ChartOptions
      */
     protected $textStyle;
 
-    /**
-     * Text to display above the chart.
-     *
-     * @var string
-     */
-    protected $title;
+    use TitleTrait;
 
     /**
      * @var TitleTextStyle
@@ -237,18 +233,6 @@ class TreeMapChartOptions extends ChartOptions
     public function setUseWeightedAverageForAggregation($useWeightedAverageForAggregation)
     {
         $this->useWeightedAverageForAggregation = $useWeightedAverageForAggregation;
-
-        return $this;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
 
         return $this;
     }

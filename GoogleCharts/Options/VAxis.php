@@ -108,12 +108,7 @@ class VAxis
      */
     protected $ticks;
 
-    /**
-     * vAxis property that specifies a title for the vertical axis.
-     *
-     * @var string
-     */
-    protected $title;
+    use TitleTrait;
 
     /**
      * @var TitleTextStyle
@@ -304,18 +299,6 @@ class VAxis
     public function setTicks($ticks)
     {
         $this->ticks = $ticks;
-
-        return $this;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
 
         return $this;
     }

@@ -5,23 +5,25 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 /**
  * @author Christophe Meneses
  */
-class Chart
+trait TitleTrait
 {
-    use TitleTrait;
-
     /**
+     * Text to display for title.
+     *
+     * Default: no title
+     *
      * @var string
      */
-    protected $subtitle;
+    protected $title;
 
     /**
-     * @param mixed $subtitle
+     * @param string $title
      *
      * @return $this
      */
-    public function setSubtitle($subtitle)
+    public function setTitle($title)
     {
-        $this->subtitle = $subtitle;
+        $this->title = $title;
 
         return $this;
     }

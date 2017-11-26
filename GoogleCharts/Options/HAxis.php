@@ -29,12 +29,7 @@ class HAxis
      */
     protected $textStyle;
 
-    /**
-     * hAxis property that specifies the title of the horizontal axis.
-     *
-     * @var string
-     */
-    protected $title;
+    use TitleTrait;
 
     /**
      * @var TitleTextStyle
@@ -124,18 +119,6 @@ class HAxis
     public function setTextPosition($textPosition)
     {
         $this->textPosition = $textPosition;
-
-        return $this;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
 
         return $this;
     }
