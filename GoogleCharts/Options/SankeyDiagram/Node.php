@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\SankeyDiagram;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\WidthTrait;
 
 /**
  * @author Christophe Meneses
@@ -35,12 +36,7 @@ class Node
      */
     protected $nodePadding;
 
-    /**
-     * Thickness of the node.
-     *
-     * @var int
-     */
-    protected $width;
+    use WidthTrait;
 
     use ColorsTrait;
 
@@ -102,18 +98,6 @@ class Node
     public function setNodePadding($nodePadding)
     {
         $this->nodePadding = $nodePadding;
-
-        return $this;
-    }
-
-    /**
-     * @param int $width
-     *
-     * @return $this
-     */
-    public function setWidth($width)
-    {
-        $this->width = $width;
 
         return $this;
     }

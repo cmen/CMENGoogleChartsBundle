@@ -17,7 +17,14 @@ class ChartArea
      */
     protected $backgroundColor;
 
-    use HeightTrait;
+    /**
+     * Chart area height.
+     * Two formats are supported: a number, or a number followed by %. A simple number is a value in pixels;
+     * a number followed by % is a percentage.
+     *
+     * @var string|int
+     */
+    protected $height;
 
     /**
      * How far to draw the chart from the left border. Two formats are supported: a number, or a number followed by %.
@@ -59,6 +66,18 @@ class ChartArea
     public function getBackgroundColor()
     {
         return $this->backgroundColor;
+    }
+
+    /**
+     * @param int|string $height
+     *
+     * @return $this
+     */
+    public function setHeight($height)
+    {
+        $this->height = $height;
+
+        return $this;
     }
 
     /**

@@ -11,23 +11,5 @@ class ChartOptions extends ChartOptionsDraw
 
     use HeightTrait;
 
-    /**
-     * Width of the chart, in pixels.
-     *
-     * @var int
-     */
-    protected $width;
-
-
-    /**
-     * @param int $width
-     *
-     * @return $this
-     */
-    public function setWidth($width)
-    {
-        $this->width = $width;
-
-        return $this;
-    }
+    use WidthTrait;
 }

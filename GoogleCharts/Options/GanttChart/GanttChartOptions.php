@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GanttChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\HeightTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\WidthTrait;
 
 /**
  * @author Christophe Meneses
@@ -22,13 +23,7 @@ class GanttChartOptions extends ChartOptionsDraw
      */
     protected $gantt;
 
-    /**
-     * Width of the chart, in pixels.
-     *
-     * @var int
-     */
-    protected $width;
-
+    use WidthTrait;
 
     /**
      * GanttChartOptions constructor.
@@ -56,17 +51,5 @@ class GanttChartOptions extends ChartOptionsDraw
     public function getGantt()
     {
         return $this->gantt;
-    }
-
-    /**
-     * @param int $width
-     *
-     * @return $this
-     */
-    public function setWidth($width)
-    {
-        $this->width = $width;
-
-        return $this;
     }
 }
