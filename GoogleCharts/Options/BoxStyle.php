@@ -7,19 +7,9 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class BoxStyle
 {
-    /**
-     * Color of the box outline.
-     *
-     * @var string
-     */
-    protected $stroke;
+    use StrokeTrait;
 
-    /**
-     * Thickness of the box outline.
-     *
-     * @var int
-     */
-    protected $strokeWidth;
+    use StrokeWidthTrait;
 
     /**
      *  x-radius of the corner curvature.
@@ -47,31 +37,6 @@ class BoxStyle
     public function __construct()
     {
         $this->gradient = new Gradient();
-    }
-
-
-    /**
-     * @param string $stroke
-     *
-     * @return $this
-     */
-    public function setStroke($stroke)
-    {
-        $this->stroke = $stroke;
-
-        return $this;
-    }
-
-    /**
-     * @param int $strokeWidth
-     *
-     * @return $this
-     */
-    public function setStrokeWidth($strokeWidth)
-    {
-        $this->strokeWidth = $strokeWidth;
-
-        return $this;
     }
 
     /**

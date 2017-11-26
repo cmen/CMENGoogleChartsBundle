@@ -2,6 +2,9 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\SankeyDiagram;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\StrokeTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\StrokeWidthTrait;
+
 /**
  * @author Christophe Meneses
  */
@@ -21,20 +24,9 @@ class Color
      */
     protected $fillOpacity;
 
-    /**
-     * Color of the link border.
-     *
-     * @var string
-     */
-    protected $stroke;
+    use StrokeTrait;
 
-    /**
-     * Thickness of the link border (default 0).
-     *
-     * @var int
-     */
-    protected $strokeWidth;
-
+    use StrokeWidthTrait;
 
     /**
      * @param string $fill
@@ -56,30 +48,6 @@ class Color
     public function setFillOpacity($fillOpacity)
     {
         $this->fillOpacity = $fillOpacity;
-
-        return $this;
-    }
-
-    /**
-     * @param string $stroke
-     *
-     * @return $this
-     */
-    public function setStroke($stroke)
-    {
-        $this->stroke = $stroke;
-
-        return $this;
-    }
-
-    /**
-     * @param int $strokeWidth
-     *
-     * @return $this
-     */
-    public function setStrokeWidth($strokeWidth)
-    {
-        $this->strokeWidth = $strokeWidth;
 
         return $this;
     }
