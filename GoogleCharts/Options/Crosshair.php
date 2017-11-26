@@ -24,10 +24,14 @@ class Crosshair
     protected $selected;
 
     /**
+     * Value can be :
+     * 'both' : display on both focus and selection
+     * 'focus' : display on focus only
+     * 'selection' : display on selection only
+     *
      * @var string
      */
     protected $trigger;
-
 
     /**
      * Crosshair constructor.
