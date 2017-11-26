@@ -12,6 +12,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Candlestick;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
@@ -50,14 +51,7 @@ class CandlestickChartOptions extends AdvancedChartOptions
 
     use OrientationTrait;
 
-    /**
-     * If set to true, will draw series from right to left. The default is to draw left-to-right.
-     *
-     * This option is only supported for a discrete major axis.
-     *
-     * @var boolean
-     */
-    protected $reverseCategories;
+    use ReverseCategoriesTrait;
 
     /**
      * When selectionMode is 'multiple', users may select multiple data points.
@@ -145,18 +139,6 @@ class CandlestickChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param boolean $reverseCategories
-     *
-     * @return $this
-     */
-    public function setReverseCategories($reverseCategories)
-    {
-        $this->reverseCategories = $reverseCategories;
-
-        return $this;
     }
 
     /**

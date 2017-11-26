@@ -6,6 +6,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FullTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\InterpolateNullsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
 
 /**
  * @author Christophe Meneses
@@ -74,12 +75,7 @@ class PieChartOptions extends MediumChartOptions
      */
     protected $pieStartAngle;
 
-    /**
-     * If true, draws slices counterclockwise. The default is to draw clockwise.
-     *
-     * @var boolean
-     */
-    protected $reverseCategories;
+    use ReverseCategoriesTrait;
 
     /**
      * An array of Slice object, each describing the format of the corresponding slice in the pie. To use default values
@@ -215,18 +211,6 @@ class PieChartOptions extends MediumChartOptions
     public function setSliceVisibilityThreshold($sliceVisibilityThreshold)
     {
         $this->sliceVisibilityThreshold = $sliceVisibilityThreshold;
-
-        return $this;
-    }
-
-    /**
-     * @param boolean $reverseCategories
-     *
-     * @return $this
-     */
-    public function setReverseCategories($reverseCategories)
-    {
-        $this->reverseCategories = $reverseCategories;
 
         return $this;
     }

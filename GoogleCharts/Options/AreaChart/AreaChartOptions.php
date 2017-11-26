@@ -15,6 +15,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\InterpolateNullsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\IsStackedTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
@@ -64,12 +65,7 @@ class AreaChartOptions extends LineOptions
 
     use OrientationTrait;
 
-    /**
-     * If set to true, will draw series from right to left. The default is to draw left-to-right.
-     *
-     * @var boolean
-     */
-    protected $reverseCategories;
+    use ReverseCategoriesTrait;
 
     /**
      * When selectionMode is 'multiple', users may select multiple data points.
@@ -152,18 +148,6 @@ class AreaChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param boolean $reverseCategories
-     *
-     * @return $this
-     */
-    public function setReverseCategories($reverseCategories)
-    {
-        $this->reverseCategories = $reverseCategories;
-
-        return $this;
     }
 
     /**

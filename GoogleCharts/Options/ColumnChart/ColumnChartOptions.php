@@ -14,6 +14,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\IsStackedTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Legend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
@@ -60,12 +61,7 @@ class ColumnChartOptions extends AdvancedChartOptions
 
     use OrientationTrait;
 
-    /**
-     * If set to true, will draw series from right to left. The default is to draw left-to-right.
-     *
-     * @var boolean
-     */
-    protected $reverseCategories;
+    use ReverseCategoriesTrait;
 
     /**
      * @var AdvancedTooltip
@@ -163,18 +159,6 @@ class ColumnChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param boolean $reverseCategories
-     *
-     * @return $this
-     */
-    public function setReverseCategories($reverseCategories)
-    {
-        $this->reverseCategories = $reverseCategories;
-
-        return $this;
     }
 
     /**

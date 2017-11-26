@@ -10,6 +10,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AggregationTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\IsStackedTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineDashStyleTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
@@ -48,12 +49,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
 
     use LineDashStyleTrait;
 
-    /**
-     * If set to true, will draw series from right to left. The default is to draw left-to-right.
-     *
-     * @var boolean
-     */
-    protected $reverseCategories;
+    use ReverseCategoriesTrait;
 
     /**
      * When selectionMode is 'multiple', users may select multiple data points.
@@ -133,18 +129,6 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     public function setConnectSteps($connectSteps)
     {
         $this->connectSteps = $connectSteps;
-
-        return $this;
-    }
-
-    /**
-     * @param boolean $reverseCategories
-     *
-     * @return $this
-     */
-    public function setReverseCategories($reverseCategories)
-    {
-        $this->reverseCategories = $reverseCategories;
 
         return $this;
     }

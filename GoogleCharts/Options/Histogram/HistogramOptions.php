@@ -12,6 +12,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\InterpolateNullsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\IsStackedTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
@@ -54,12 +55,7 @@ class HistogramOptions extends AdvancedChartOptions
 
     use OrientationTrait;
 
-    /**
-     * If set to true, will draw series from right to left. The default is to draw left-to-right.
-     *
-     * @var boolean
-     */
-    protected $reverseCategories;
+    use ReverseCategoriesTrait;
 
     /**
      * @var MediumTooltip
@@ -140,18 +136,6 @@ class HistogramOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param boolean $reverseCategories
-     *
-     * @return $this
-     */
-    public function setReverseCategories($reverseCategories)
-    {
-        $this->reverseCategories = $reverseCategories;
-
-        return $this;
     }
 
     /**
