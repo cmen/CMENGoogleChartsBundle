@@ -7,37 +7,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class MediumTextStyle extends TextStyle
 {
-    /**
-     * @var boolean
-     */
-    protected $bold;
+    use BoldTrait;
 
-    /**
-     * @var boolean
-     */
-    protected $italic;
-
-    /**
-     * @param boolean $bold
-     *
-     * @return $this
-     */
-    public function setBold($bold)
-    {
-        $this->bold = $bold;
-
-        return $this;
-    }
-
-    /**
-     * @param boolean $italic
-     *
-     * @return $this
-     */
-    public function setItalic($italic)
-    {
-        $this->italic = $italic;
-
-        return $this;
-    }
+    use ItalicTrait;
 }
