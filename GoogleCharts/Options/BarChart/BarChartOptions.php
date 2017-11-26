@@ -14,6 +14,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\IsStackedTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 
 /**
@@ -69,12 +70,7 @@ class BarChartOptions extends AdvancedChartOptions
      */
     protected $legend;
 
-    /**
-     * The orientation of the chart. When set to 'vertical', rotates the axes of the chart.
-     *
-     * @var string
-     */
-    protected $orientation;
+    use OrientationTrait;
 
     /**
      * If set to true, will draw series from right to left. The default is to draw left-to-right.
@@ -178,18 +174,6 @@ class BarChartOptions extends AdvancedChartOptions
     public function setHAxes($hAxes)
     {
         $this->hAxes = $hAxes;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orientation
-     *
-     * @return $this
-     */
-    public function setOrientation($orientation)
-    {
-        $this->orientation = $orientation;
 
         return $this;
     }

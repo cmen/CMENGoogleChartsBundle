@@ -21,13 +21,7 @@ class Crosshair
      */
     protected $opacity;
 
-    /**
-     * The crosshair orientation, which can be 'vertical' for vertical hairs only, 'horizontal' for horizontal hairs
-     * only, or 'both' for traditional crosshairs.
-     *
-     * @var string
-     */
-    protected $orientation;
+    use OrientationTrait;
 
     /**
      * @var Selected
@@ -74,18 +68,6 @@ class Crosshair
     public function setOpacity($opacity)
     {
         $this->opacity = $opacity;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orientation
-     *
-     * @return $this
-     */
-    public function setOrientation($orientation)
-    {
-        $this->orientation = $orientation;
 
         return $this;
     }

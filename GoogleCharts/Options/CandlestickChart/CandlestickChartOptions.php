@@ -11,6 +11,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AggregationTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Candlestick;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
@@ -47,13 +48,7 @@ class CandlestickChartOptions extends AdvancedChartOptions
      */
     protected $legend;
 
-    /**
-     * The orientation of the chart. When set to 'vertical', rotates the axes of the chart so that (for instance) a
-     * column chart becomes a bar chart, and an area chart grows rightward.
-     *
-     * @var string
-     */
-    protected $orientation;
+    use OrientationTrait;
 
     /**
      * If set to true, will draw series from right to left. The default is to draw left-to-right.
@@ -150,18 +145,6 @@ class CandlestickChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $orientation
-     *
-     * @return $this
-     */
-    public function setOrientation($orientation)
-    {
-        $this->orientation = $orientation;
-
-        return $this;
     }
 
     /**

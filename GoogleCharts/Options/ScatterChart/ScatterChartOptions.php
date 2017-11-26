@@ -14,6 +14,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\DataOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineWidthTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 
 /**
@@ -59,13 +60,7 @@ class ScatterChartOptions extends AdvancedChartOptions
 
     use LineWidthTrait;
 
-    /**
-     * The orientation of the chart. When set to 'vertical', rotates the axes of the chart so that (for instance) a
-     * column chart becomes a bar chart, and an area chart grows rightward.
-     *
-     * @var string
-     */
-    protected $orientation;
+    use OrientationTrait;
 
     /**
      * The shape of individual data elements: 'circle', 'triangle', 'square', 'diamond', 'star', or 'polygon'.
@@ -186,18 +181,6 @@ class ScatterChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $orientation
-     *
-     * @return $this
-     */
-    public function setOrientation($orientation)
-    {
-        $this->orientation = $orientation;
-
-        return $this;
     }
 
     /**

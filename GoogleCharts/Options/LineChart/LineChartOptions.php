@@ -13,6 +13,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\InterpolateNullsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
@@ -59,13 +60,7 @@ class LineChartOptions extends LineOptions
      */
     protected $legend;
 
-    /**
-     * The orientation of the chart. When set to 'vertical', rotates the axes of the chart so that (for instance) a
-     * column chart becomes a bar chart, and an area chart grows rightward.
-     *
-     * @var string
-     */
-    protected $orientation;
+    use OrientationTrait;
 
     /**
      * If set to true, will draw series from right to left. The default is to draw left-to-right.
@@ -165,18 +160,6 @@ class LineChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param string $orientation
-     *
-     * @return $this
-     */
-    public function setOrientation($orientation)
-    {
-        $this->orientation = $orientation;
-
-        return $this;
     }
 
     /**
