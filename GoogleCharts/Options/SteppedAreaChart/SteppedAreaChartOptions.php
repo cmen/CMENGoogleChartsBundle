@@ -11,6 +11,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\IsStackedTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineDashStyleTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\SelectionModeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
@@ -51,12 +52,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
 
     use ReverseCategoriesTrait;
 
-    /**
-     * When selectionMode is 'multiple', users may select multiple data points.
-     *
-     * @var string
-     */
-    protected $selectionMode;
+    use SelectionModeTrait;
 
     /**
      * @var AdvancedTooltip
@@ -129,18 +125,6 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     public function setConnectSteps($connectSteps)
     {
         $this->connectSteps = $connectSteps;
-
-        return $this;
-    }
-
-    /**
-     * @param string $selectionMode
-     *
-     * @return $this
-     */
-    public function setSelectionMode($selectionMode)
-    {
-        $this->selectionMode = $selectionMode;
 
         return $this;
     }

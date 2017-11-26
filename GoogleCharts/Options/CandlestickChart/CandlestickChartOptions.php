@@ -13,6 +13,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Candlestick;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\SelectionModeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
@@ -53,12 +54,7 @@ class CandlestickChartOptions extends AdvancedChartOptions
 
     use ReverseCategoriesTrait;
 
-    /**
-     * When selectionMode is 'multiple', users may select multiple data points.
-     *
-     * @var string
-     */
-    protected $selectionMode;
+    use SelectionModeTrait;
 
     /**
      * @var AdvancedTooltip
@@ -139,18 +135,6 @@ class CandlestickChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $selectionMode
-     *
-     * @return $this
-     */
-    public function setSelectionMode($selectionMode)
-    {
-        $this->selectionMode = $selectionMode;
-
-        return $this;
     }
 
     /**

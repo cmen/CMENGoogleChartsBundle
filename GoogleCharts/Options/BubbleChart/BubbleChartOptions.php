@@ -9,6 +9,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\BasicTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\SelectionModeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\SizeAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
@@ -47,12 +48,7 @@ class BubbleChartOptions extends AdvancedChartOptions
      */
     protected $legend;
 
-    /**
-     * When selectionMode is 'multiple', users may select multiple data points.
-     *
-     * @var string
-     */
-    protected $selectionMode;
+    use SelectionModeTrait;
 
     /**
      * @var SizeAxis
@@ -167,18 +163,6 @@ class BubbleChartOptions extends AdvancedChartOptions
     public function getVAxis()
     {
         return $this->vAxis;
-    }
-
-    /**
-     * @param string $selectionMode
-     *
-     * @return $this
-     */
-    public function setSelectionMode($selectionMode)
-    {
-        $this->selectionMode = $selectionMode;
-
-        return $this;
     }
 
     /**

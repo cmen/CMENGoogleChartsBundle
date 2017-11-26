@@ -15,6 +15,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\InterpolateNullsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\SelectionModeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
@@ -65,12 +66,7 @@ class LineChartOptions extends LineOptions
 
     use ReverseCategoriesTrait;
 
-    /**
-     * When selectionMode is 'multiple', users may select multiple data points.
-     *
-     * @var string
-     */
-    protected $selectionMode;
+    use SelectionModeTrait;
 
     /**
      * Displays trendlines on the charts that support them. By default, linear trendlines are used, but this can be
@@ -154,18 +150,6 @@ class LineChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param string $selectionMode
-     *
-     * @return $this
-     */
-    public function setSelectionMode($selectionMode)
-    {
-        $this->selectionMode = $selectionMode;
-
-        return $this;
     }
 
     /**

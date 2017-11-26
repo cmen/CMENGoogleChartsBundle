@@ -16,6 +16,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineWidthTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\PointTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\SelectionModeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 
 /**
@@ -65,12 +66,7 @@ class ScatterChartOptions extends AdvancedChartOptions
 
     use PointTrait;
 
-    /**
-     * When selectionMode is 'multiple', users may select multiple data points.
-     *
-     * @var string
-     */
-    protected $selectionMode;
+    use SelectionModeTrait;
 
     /**
      * @var AdvancedTooltip
@@ -157,18 +153,6 @@ class ScatterChartOptions extends AdvancedChartOptions
     public function getTooltip()
     {
         return $this->tooltip;
-    }
-
-    /**
-     * @param string $selectionMode
-     *
-     * @return $this
-     */
-    public function setSelectionMode($selectionMode)
-    {
-        $this->selectionMode = $selectionMode;
-
-        return $this;
     }
 
     /**

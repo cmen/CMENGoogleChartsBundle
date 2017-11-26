@@ -18,6 +18,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\IsStackedTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineOptions;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\SelectionModeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
@@ -77,12 +78,7 @@ class ComboChartOptions extends LineOptions
 
     use ReverseCategoriesTrait;
 
-    /**
-     * When selectionMode is 'multiple', users may select multiple data points.
-     *
-     * @var string
-     */
-    protected $selectionMode;
+    use SelectionModeTrait;
 
     /**
      * The default line type for any series not specified in the series property. Available values are 'line', 'area',
@@ -183,18 +179,6 @@ class ComboChartOptions extends LineOptions
     public function getLegend()
     {
         return $this->legend;
-    }
-
-    /**
-     * @param string $selectionMode
-     *
-     * @return $this
-     */
-    public function setSelectionMode($selectionMode)
-    {
-        $this->selectionMode = $selectionMode;
-
-        return $this;
     }
 
     /**
