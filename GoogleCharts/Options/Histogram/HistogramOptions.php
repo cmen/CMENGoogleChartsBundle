@@ -139,18 +139,6 @@ class HistogramOptions extends AdvancedChartOptions
     }
 
     /**
-     * @param string $theme
-     *
-     * @return $this
-     */
-    public function setTheme($theme)
-    {
-        $this->theme = $theme;
-
-        return $this;
-    }
-
-    /**
      * @param VAxis[] $vAxes
      *
      * @return $this

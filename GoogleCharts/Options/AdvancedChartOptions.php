@@ -11,19 +11,7 @@ class AdvancedChartOptions extends MediumChartOptions
 
     use SeriesTrait;
 
-    /**
-     * A theme is a set of predefined option values that work together to achieve a specific chart behavior or visual
-     * effect. Currently only one theme is available :
-     * 'maximized' - Maximizes the area of the chart, and draws the legend and all of the labels inside the chart area.
-     *   Sets the following options:
-     *   chartArea: {width: '100%', height: '100%'},
-     *   legend: {position: 'in'},
-     *   titlePosition: 'in', axisTitlesPosition: 'in',
-     *   hAxis: {textPosition: 'in'}, vAxis: {textPosition: 'in'}
-     *
-     * @var string
-     */
-    protected $theme;
+    use ThemeTrait;
 
     /**
      * Where to place the chart title, compared to the chart area. Supported values:
@@ -57,18 +45,6 @@ class AdvancedChartOptions extends MediumChartOptions
     public function getVAxis()
     {
         return $this->vAxis;
-    }
-
-    /**
-     * @param string $theme
-     *
-     * @return $this
-     */
-    public function setTheme($theme)
-    {
-        $this->theme = $theme;
-
-        return $this;
     }
 
     /**
