@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\SankeyDiagram;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FillOpacityTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\FillTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\StrokeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\StrokeWidthTrait;
 
@@ -10,45 +12,11 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\StrokeWidthTrait;
  */
 class Color
 {
-    /**
-     * Color of the link.
-     *
-     * @var string
-     */
-    protected $fill;
+    use FillTrait;
 
-    /**
-     * Transparency of the link.
-     *
-     * @var float
-     */
-    protected $fillOpacity;
+    use FillOpacityTrait;
 
     use StrokeTrait;
 
     use StrokeWidthTrait;
-
-    /**
-     * @param string $fill
-     *
-     * @return $this
-     */
-    public function setFill($fill)
-    {
-        $this->fill = $fill;
-
-        return $this;
-    }
-
-    /**
-     * @param float $fillOpacity
-     *
-     * @return $this
-     */
-    public function setFillOpacity($fillOpacity)
-    {
-        $this->fillOpacity = $fillOpacity;
-
-        return $this;
-    }
 }
