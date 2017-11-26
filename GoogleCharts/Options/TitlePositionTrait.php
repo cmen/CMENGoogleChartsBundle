@@ -18,4 +18,16 @@ trait TitlePositionTrait
      * @var string
      */
     protected $titlePosition;
+
+    /**
+     * @param string $titlePosition
+     *
+     * @return $this
+     */
+    public function setTitlePosition($titlePosition)
+    {
+        $this->titlePosition = $titlePosition;
+
+        return $this;
+    }
 }

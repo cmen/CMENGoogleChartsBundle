@@ -20,7 +20,6 @@ class AdvancedChartOptions extends MediumChartOptions
      */
     protected $vAxis;
 
-
     /**
      * AdvancedChartOptions constructor.
      */
@@ -37,17 +36,5 @@ class AdvancedChartOptions extends MediumChartOptions
     public function getVAxis()
     {
         return $this->vAxis;
-    }
-
-    /**
-     * @param string $titlePosition
-     *
-     * @return $this
-     */
-    public function setTitlePosition($titlePosition)
-    {
-        $this->titlePosition = $titlePosition;
-
-        return $this;
     }
 }
