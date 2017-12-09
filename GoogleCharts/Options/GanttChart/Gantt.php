@@ -31,7 +31,7 @@ class Gantt
     /**
      * If true any arrows on the critical path will be styled differently.
      *
-     * @var boolean
+     * @var bool
      */
     protected $criticalPathEnabled;
 
@@ -78,7 +78,7 @@ class Gantt
     /**
      * Fills the task bar based on the percentage completed for the task.
      *
-     * @var boolean
+     * @var bool
      */
     protected $percentEnabled;
 
@@ -90,7 +90,7 @@ class Gantt
     /**
      * If set to true, draws a shadow under each task bar which has dependencies.
      *
-     * @var boolean
+     * @var bool
      */
     protected $shadowEnabled;
 
@@ -115,7 +115,6 @@ class Gantt
      */
     protected $trackHeight;
 
-
     /**
      * Gantt constructor.
      */
@@ -129,7 +128,6 @@ class Gantt
         $this->labelStyle = new LabelStyle();
         $this->percentStyle = new PercentStyle();
     }
-
 
     /**
      * @return Arrow
@@ -212,7 +210,7 @@ class Gantt
     }
 
     /**
-     * @param boolean $criticalPathEnabled
+     * @param bool $criticalPathEnabled
      *
      * @return $this
      */
@@ -248,7 +246,7 @@ class Gantt
     }
 
     /**
-     * @param boolean $percentEnabled
+     * @param bool $percentEnabled
      *
      * @return $this
      */
@@ -260,7 +258,7 @@ class Gantt
     }
 
     /**
-     * @param boolean $shadowEnabled
+     * @param bool $shadowEnabled
      *
      * @return $this
      */

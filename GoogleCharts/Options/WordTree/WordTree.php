@@ -45,7 +45,6 @@ class WordTree
      */
     protected $wordRegex;
 
-
     /**
      * @param string $format
      *

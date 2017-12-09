@@ -15,14 +15,12 @@ class Map extends Chart
      */
     protected $options;
 
-
     public function __construct()
     {
         parent::__construct();
 
         $this->options = new MapOptions();
     }
-
 
     /**
      * Returns the chart type.

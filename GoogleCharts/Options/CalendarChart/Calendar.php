@@ -79,7 +79,6 @@ class Calendar
      */
     protected $yearLabel;
 
-
     /**
      * Calendar constructor.
      */
@@ -93,7 +92,6 @@ class Calendar
         $this->unusedMonthOutlineColor = new CellColor();
         $this->yearLabel = new MediumTextStyle();
     }
-
 
     /**
      * @return CellColor

@@ -8,12 +8,12 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 trait BoldTrait
 {
     /**
-     * @var boolean
+     * @var bool
      */
     protected $bold;
 
     /**
-     * @param boolean $bold
+     * @param bool $bold
      *
      * @return $this
      */

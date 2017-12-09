@@ -81,7 +81,6 @@ class ScatterChartOptions extends AdvancedChartOptions
      */
     protected $trendlines;
 
-
     /**
      * ScatterChartOptions constructor.
      */
@@ -97,7 +96,6 @@ class ScatterChartOptions extends AdvancedChartOptions
         $this->legend = new AdvancedLegend();
         $this->tooltip = new AdvancedTooltip();
     }
-
 
     /**
      * @return AdvancedAnimation

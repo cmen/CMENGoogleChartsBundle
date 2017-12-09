@@ -28,7 +28,7 @@ class Annotations
      * on light. If you set annotations.highContrast to false and don't specify your own annotation color, Google
      * Charts will use the default series color for the annotation.
      *
-     * @var boolean
+     * @var bool
      */
     protected $highContrast;
 
@@ -49,7 +49,6 @@ class Annotations
      */
     protected $textStyle;
 
-
     /**
      * Annotations constructor.
      */
@@ -61,7 +60,6 @@ class Annotations
         $this->stem = new Stem();
         $this->textStyle = new AdvancedTextStyle();
     }
-
 
     /**
      * @return BoxStyle
@@ -104,7 +102,7 @@ class Annotations
     }
 
     /**
-     * @param boolean $highContrast
+     * @param bool $highContrast
      *
      * @return $this
      */

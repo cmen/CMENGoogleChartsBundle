@@ -23,7 +23,6 @@ class AdvancedSeries extends Series
      */
     protected $labelInLegend;
 
-
     /**
      * @param int $targetAxisIndex
      *

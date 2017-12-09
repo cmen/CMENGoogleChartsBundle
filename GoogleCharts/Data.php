@@ -36,7 +36,7 @@ class Data
      * allowing you to define Cell Objects).
      *
      * @param array $arrayToDataTable A two-dimensional array, where each row represents a row in the data table.
-     * @param boolean $firstRowIsData If firstRowIsData is false (the default), the first row will be interpreted
+     * @param bool  $firstRowIsData   If firstRowIsData is false (the default), the first row will be interpreted
      *                                as header labels.
      */
     public function setArrayToDataTable($arrayToDataTable, $firstRowIsData = false)
@@ -73,9 +73,9 @@ class Data
             $lastKeyValue = key($row);
             foreach ($row as $key => $value) {
                 if ($value instanceof \DateTime) {
-                    $js .= 'new Date(' . $value->format('Y') . ', ' . ($value->format('n') - 1) . ', ' .
-                        $value->format('d') . ', ' . $value->format('H') . ', ' . $value->format('i') . ', ' .
-                        $value->format('s') . ')';
+                    $js .= 'new Date('.$value->format('Y').', '.($value->format('n') - 1).', '.
+                        $value->format('d').', '.$value->format('H').', '.$value->format('i').', '.
+                        $value->format('s').')';
                 } else {
                     $js .= json_encode($value);
                 }

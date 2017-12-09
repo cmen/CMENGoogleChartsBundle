@@ -22,7 +22,6 @@ class BasicTooltip extends Tooltip
         $this->textStyle = new MediumTextStyle();
     }
 
-
     /**
      * @return MediumTextStyle
      */

@@ -25,7 +25,6 @@ class PieSlice
      */
     protected $textStyle;
 
-
     /**
      * PieSlice constructor.
      */
@@ -33,7 +32,6 @@ class PieSlice
     {
         $this->textStyle = new PieSliceTextStyle();
     }
-
 
     /**
      * @return PieSliceTextStyle

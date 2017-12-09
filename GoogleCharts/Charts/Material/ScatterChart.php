@@ -5,7 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ScatterChart\Material\ScatterChartOptions;
 
 /**
- * Class ScatterChart
+ * Class ScatterChart.
  *
  * @author Christophe Meneses
  */
@@ -22,7 +22,7 @@ class ScatterChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterC
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getPackage()
     {
@@ -30,7 +30,7 @@ class ScatterChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterC
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function getLibrary()
     {
@@ -38,7 +38,7 @@ class ScatterChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterC
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function getType()
     {

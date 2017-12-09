@@ -46,7 +46,6 @@ class Arrow
      */
     protected $width;
 
-
     /**
      * @param int $angle
      *

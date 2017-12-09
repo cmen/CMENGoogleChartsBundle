@@ -4,7 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 
 /**
  * Domain object lets you override Google Charts' choice for annotations provided for a domain
- * (the major axis of the chart, such as the X axis on a typical line chart)
+ * (the major axis of the chart, such as the X axis on a typical line chart).
  *
  * @author Christophe Meneses
  */
@@ -22,7 +22,6 @@ class Domain
      */
     protected $style;
 
-
     /**
      * Domain constructor.
      */
@@ -30,7 +29,6 @@ class Domain
     {
         $this->stem = new Stem();
     }
-
 
     /**
      * @return Stem

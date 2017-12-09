@@ -16,12 +16,12 @@ trait PointsVisibleTrait
      *
      * Default: true
      *
-     * @var boolean
+     * @var bool
      */
     protected $pointsVisible;
 
     /**
-     * @param boolean $pointsVisible
+     * @param bool $pointsVisible
      *
      * @return $this
      */

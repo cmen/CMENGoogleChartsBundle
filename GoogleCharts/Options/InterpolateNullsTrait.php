@@ -14,12 +14,12 @@ trait InterpolateNullsTrait
      *
      * Default: false
      *
-     * @var boolean
+     * @var bool
      */
     protected $interpolateNulls;
 
     /**
-     * @param boolean $interpolateNulls
+     * @param bool $interpolateNulls
      *
      * @return $this
      */

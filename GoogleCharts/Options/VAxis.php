@@ -25,7 +25,7 @@ class VAxis
 
     /**
      * The direction in which the values along the vertical axis grow. Specify -1 to reverse the order of the values.
-     * Default : 1
+     * Default : 1.
      *
      * @var int
      */
@@ -41,7 +41,7 @@ class VAxis
      * 'currency' : displays numbers in the local currency (e.g., $8,000,000.00)
      * 'percent' : displays numbers as percentages (e.g., 800,000,000%)
      * 'short' : displays abbreviated numbers (e.g., 8M)
-     * 'long' : displays numbers as full words (e.g., 8 million)
+     * 'long' : displays numbers as full words (e.g., 8 million).
      *
      * The actual formatting applied to the label is derived from the locale the API has been loaded with.
      * For more details, see loading charts with a specific locale.
@@ -63,12 +63,12 @@ class VAxis
     /**
      * If true, makes the vertical axis a logarithmic scale. Note : All values must be positive.
      *
-     * @var boolean
+     * @var bool
      */
     protected $logScale;
 
     /**
-     *  vAxis property that makes the vertical axis a logarithmic scale. Can be one of the following:
+     *  vAxis property that makes the vertical axis a logarithmic scale. Can be one of the following:.
      *
      * - null : No logarithmic scaling is performed.
      * - 'log' : Logarithmic scaling. Negative and zero values are not plotted. This option is the same as setting
@@ -102,7 +102,7 @@ class VAxis
      * displayed as the label. Examples :
      * [5,10,15,20]
      * [ ['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four'] ] ]
-     * [16, ['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four'], 128] ]
+     * [16, ['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four'], 128] ].
      *
      * @var array
      */
@@ -153,7 +153,6 @@ class VAxis
      * @var ViewWindow
      */
     protected $viewWindow;
-
 
     /**
      * VAxis constructor.
@@ -256,7 +255,7 @@ class VAxis
     }
 
     /**
-     * @param boolean $logScale
+     * @param bool $logScale
      *
      * @return $this
      */

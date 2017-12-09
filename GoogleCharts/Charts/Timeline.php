@@ -15,7 +15,6 @@ class Timeline extends Chart
      */
     protected $options;
 
-
     public function __construct()
     {
         parent::__construct();
@@ -23,9 +22,8 @@ class Timeline extends Chart
         $this->options = new TimelineOptions();
     }
 
-
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function getType()
     {
@@ -33,7 +31,7 @@ class Timeline extends Chart
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getPackage()
     {

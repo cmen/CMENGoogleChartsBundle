@@ -13,12 +13,12 @@ trait ReverseCategoriesTrait
      *
      * Default: false
      *
-     * @var boolean
+     * @var bool
      */
     protected $reverseCategories;
 
     /**
-     * @param boolean $reverseCategories
+     * @param bool $reverseCategories
      *
      * @return $this
      */

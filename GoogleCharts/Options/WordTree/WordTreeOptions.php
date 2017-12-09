@@ -27,7 +27,6 @@ class WordTreeOptions extends ChartOptions
      */
     protected $wordtree;
 
-
     /**
      * WordTreeOptions constructor.
      */
@@ -37,7 +36,6 @@ class WordTreeOptions extends ChartOptions
 
         $this->wordtree = new WordTree();
     }
-
 
     /**
      * @return WordTree

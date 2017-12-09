@@ -21,7 +21,6 @@ class Series extends AdvancedSeries
      */
     protected $risingColor;
 
-
     /**
      * Series constructor.
      */

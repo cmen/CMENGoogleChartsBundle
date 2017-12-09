@@ -22,7 +22,6 @@ class Gridlines
      */
     protected $units;
 
-
     /**
      * Gridlines constructor.
      */
@@ -30,7 +29,6 @@ class Gridlines
     {
         $this->units = new Units();
     }
-
 
     /**
      * @return Units

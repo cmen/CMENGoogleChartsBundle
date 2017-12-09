@@ -3,7 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Material;
 
 /**
- * Trait MaterialTrait
+ * Trait MaterialTrait.
  *
  * @author Christophe Meneses
  */

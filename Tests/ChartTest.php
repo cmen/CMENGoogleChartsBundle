@@ -7,7 +7,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnChart;
 class ChartTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @expectedException CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
      * @expectedExceptionMessage Container is not defined.
      */
     public function testNullContainer()
@@ -25,7 +25,7 @@ class ChartTest extends \PHPUnit_Framework_TestCase
             [['v' => [14, 0, 0], 'f' => '2 pm'],  7, '7', 3.25,  '3'],
             [['v' => [15, 0, 0], 'f' => '3 pm'],  8, '8',    5,  '5'],
             [['v' => [16, 0, 0], 'f' => '4 pm'],  9, '9',  6.5,  '6'],
-            [['v' => [17, 0, 0], 'f' => '5 pm'], 10, '10',  10, '10']
+            [['v' => [17, 0, 0], 'f' => '5 pm'], 10, '10',  10, '10'],
         ]);
 
         $chart->startDraw();

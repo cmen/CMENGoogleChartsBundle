@@ -13,7 +13,7 @@ class MagnifyingGlass
      * Note: this feature is not supported in browsers that do not support SVG, i.e. Internet Explorer version 8 or
      * earlier.
      *
-     * @var boolean
+     * @var bool
      */
     protected $enable;
 
@@ -25,7 +25,7 @@ class MagnifyingGlass
     protected $zoomFactor;
 
     /**
-     * @param boolean $enable
+     * @param bool $enable
      *
      * @return $this
      */

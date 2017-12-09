@@ -15,14 +15,12 @@ class OrgChart extends Chart
      */
     protected $options;
 
-
     public function __construct()
     {
         parent::__construct();
 
         $this->options = new OrgChartOptions();
     }
-
 
     /**
      * Returns the chart type.

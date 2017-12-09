@@ -24,7 +24,6 @@ class GoogleChartsExtension extends \Twig_Extension
      */
     private $language;
 
-
     /**
      * GoogleChartsExtension constructor.
      *
@@ -37,25 +36,24 @@ class GoogleChartsExtension extends \Twig_Extension
         $this->language = $language;
     }
 
-
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getFunctions()
     {
-        return array(
-            new \Twig_SimpleFunction('gc_draw', array($this, 'draw'), array('is_safe' => array('html'))),
-            new \Twig_SimpleFunction('gc_start', array($this, 'start'), array('is_safe' => array('html'))),
-            new \Twig_SimpleFunction('gc_end', array($this, 'end'), array('is_safe' => array('html'))),
-            new \Twig_SimpleFunction('gc_event', array($this, 'event'), array('is_safe' => array('html'))),
-            new \Twig_SimpleFunction('gc_language', array($this, 'language')),
-        );
+        return [
+            new \Twig_SimpleFunction('gc_draw', [$this, 'draw'], ['is_safe' => ['html']]),
+            new \Twig_SimpleFunction('gc_start', [$this, 'start'], ['is_safe' => ['html']]),
+            new \Twig_SimpleFunction('gc_end', [$this, 'end'], ['is_safe' => ['html']]),
+            new \Twig_SimpleFunction('gc_event', [$this, 'event'], ['is_safe' => ['html']]),
+            new \Twig_SimpleFunction('gc_language', [$this, 'language']),
+        ];
     }
 
     /**
      * Returns the Javascript for the beginning of one or more charts.
      *
-     * @param Chart|Chart[] $charts Chart instance or array of Chart instance
+     * @param Chart|Chart[]        $charts     Chart instance or array of Chart instance
      * @param string|string[]|null $elementsID HTML element ID or array of HTML elements IDs. Can be null
      *
      * @return string
@@ -77,13 +75,11 @@ class GoogleChartsExtension extends \Twig_Extension
     public function end($charts)
     {
         if ($charts instanceof Chart) {
-            return $this->endCharts(array($charts));
-
+            return $this->endCharts([$charts]);
         } elseif (is_array($charts) && !empty($charts)) {
             $this->checkChartType($charts);
 
             return $this->endCharts($charts);
-
         } else {
             throw new GoogleChartsException('An instance of Chart or an array of Chart is expected.');
         }
@@ -92,7 +88,7 @@ class GoogleChartsExtension extends \Twig_Extension
     /**
      * Returns the full Javascript to draw one or more charts.
      *
-     * @param Chart|Chart[] $charts Chart instance or array of Chart instance
+     * @param Chart|Chart[]        $charts     Chart instance or array of Chart instance
      * @param string|string[]|null $elementsID HTML element ID or array of HTML elements IDs. Can be null
      *
      * @return string
@@ -105,8 +101,8 @@ class GoogleChartsExtension extends \Twig_Extension
     /**
      * Add an event to a chart.
      *
-     * @param Chart $chart A Chart instance
-     * @param string $type Type of event
+     * @param Chart  $chart        A Chart instance
+     * @param string $type         Type of event
      * @param string $functionName Name of Javascript function
      */
     public function event(Chart $chart, $type, $functionName)
@@ -117,7 +113,7 @@ class GoogleChartsExtension extends \Twig_Extension
     /**
      * Set the locale. Must be called before drawing charts.
      *
-     * @link https://developers.google.com/chart/interactive/docs/basic_load_libs#loadwithlocale
+     * @see https://developers.google.com/chart/interactive/docs/basic_load_libs#loadwithlocale
      *
      * @param string $language Locale, for example : "fr"
      */
@@ -129,8 +125,8 @@ class GoogleChartsExtension extends \Twig_Extension
     /**
      * Returns Javascript according to the called method.
      *
-     * @param string $name Method's name to be called
-     * @param Chart|Chart[] $charts Chart instance or array of Chart instance
+     * @param string               $name       Method's name to be called
+     * @param Chart|Chart[]        $charts     Chart instance or array of Chart instance
      * @param string|string[]|null $elementsID HTML element ID or array of HTML elements IDs. Can be null
      *
      * @return string
@@ -145,14 +141,12 @@ class GoogleChartsExtension extends \Twig_Extension
                     throw new GoogleChartsException('A string is expected for HTML element ID.');
                 }
 
-                return $this->$name(array($charts), array($elementsID));
-
+                return $this->$name([$charts], [$elementsID]);
             } else {
-                return $this->$name(array($charts));
+                return $this->$name([$charts]);
             }
-
         } elseif (is_array($charts) && !empty($charts)) {
-            if ($elementsID !== null) {
+            if (null !== $elementsID) {
                 if (count($charts) != count($elementsID)) {
                     throw new GoogleChartsException(
                         'Array charts and array HTML elements ID do not have the same number of element.'
@@ -170,7 +164,6 @@ class GoogleChartsExtension extends \Twig_Extension
             $this->checkChartType($charts);
 
             return $this->$name($charts, $elementsID);
-
         } else {
             throw new GoogleChartsException('An instance of Chart or an array of Chart is expected.');
         }
@@ -203,12 +196,12 @@ class GoogleChartsExtension extends \Twig_Extension
     private function loadLibraries($packages)
     {
         array_walk($packages, function (&$item) {
-            $item = "'" . $item . "'";
+            $item = "'".$item."'";
         });
 
-        ($this->language) ? $language = ", language: '" . $this->language . "'" : $language = '';
+        ($this->language) ? $language = ", language: '".$this->language."'" : $language = '';
 
-        $load = "'" . $this->version . "', {packages:[" . implode(',', $packages) . ']' . $language . '}';
+        $load = "'".$this->version."', {packages:[".implode(',', $packages).']'.$language.'}';
 
         return "google.charts.load($load);";
     }
@@ -239,16 +232,16 @@ class GoogleChartsExtension extends \Twig_Extension
     /**
      * Returns the Javascript for the beginning of the charts.
      *
-     * @param Chart[] $charts Array of Chart instance
+     * @param Chart[]       $charts     Array of Chart instance
      * @param string[]|null $elementsID Array of HTML elements IDs. Can be null
      *
      * @return string
      */
     public function startCharts($charts, $elementsID = null)
     {
-        $packages = array();
+        $packages = [];
         $drawChartName = '';
-        for ($i = 0; $i < count($charts); $i++) {
+        for ($i = 0; $i < count($charts); ++$i) {
             if ($elementsID) {
                 $charts[$i]->setElementID($elementsID[$i]);
             }
@@ -261,7 +254,7 @@ class GoogleChartsExtension extends \Twig_Extension
 
         $js = $this->loadLibraries($packages);
 
-        $js .= $this->startCallback('drawChart' . ucfirst(md5($drawChartName)));
+        $js .= $this->startCallback('drawChart'.ucfirst(md5($drawChartName)));
 
         foreach ($charts as $chart) {
             $js .= $chart->startDraw();
@@ -293,18 +286,18 @@ class GoogleChartsExtension extends \Twig_Extension
     /**
      * Returns the full Javascript to draw charts.
      *
-     * @param Chart[] $charts Array of Chart instance
+     * @param Chart[]       $charts     Array of Chart instance
      * @param string[]|null $elementsID Array of HTML elements IDs. Can be null
      *
      * @return string
      */
     public function drawCharts($charts, $elementsID = null)
     {
-        return $this->startCharts($charts, $elementsID) . $this->endCharts($charts);
+        return $this->startCharts($charts, $elementsID).$this->endCharts($charts);
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getName()
     {

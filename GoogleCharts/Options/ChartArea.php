@@ -50,7 +50,6 @@ class ChartArea
      */
     protected $width;
 
-
     /**
      * ChartArea constructor.
      */
@@ -58,7 +57,6 @@ class ChartArea
     {
         $this->backgroundColor = new BasicBackgroundColor();
     }
-
 
     /**
      * @return BasicBackgroundColor

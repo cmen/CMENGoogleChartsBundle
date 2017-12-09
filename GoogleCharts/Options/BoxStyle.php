@@ -30,7 +30,6 @@ class BoxStyle
      */
     protected $gradient;
 
-
     /**
      * BoxStyle constructor.
      */

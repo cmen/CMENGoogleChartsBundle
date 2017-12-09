@@ -15,14 +15,12 @@ class SteppedAreaChart extends Chart
      */
     protected $options;
 
-
     public function __construct()
     {
         parent::__construct();
 
         $this->options = new SteppedAreaChartOptions();
     }
-
 
     /**
      * Returns the chart type.

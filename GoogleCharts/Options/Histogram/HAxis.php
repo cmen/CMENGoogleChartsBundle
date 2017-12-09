@@ -11,7 +11,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
      * If false, will hide outermost labels rather than allow them to be cropped by the chart container. If true,
      * will allow label cropping.
      *
-     * @var boolean
+     * @var bool
      */
     protected $allowContainerBoundaryTextCufoff;
 
@@ -20,7 +20,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
      * horizontal axis text upright. Default behavior is to slant text if it cannot all fit when drawn upright.
      * Notice that this option is available only when the hAxis.textPosition is set to 'out' (which is the default).
      *
-     * @var boolean
+     * @var bool
      */
     protected $slantedText;
 
@@ -66,7 +66,6 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
      */
     protected $showTextEvery;
 
-
     /**
      * @param int $showTextEvery
      *
@@ -80,7 +79,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
     }
 
     /**
-     * @param boolean $allowContainerBoundaryTextCufoff
+     * @param bool $allowContainerBoundaryTextCufoff
      *
      * @return $this
      */
@@ -92,7 +91,7 @@ class HAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis
     }
 
     /**
-     * @param boolean $slantedText
+     * @param bool $slantedText
      *
      * @return $this
      */

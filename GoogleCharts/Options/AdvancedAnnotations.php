@@ -10,12 +10,12 @@ class AdvancedAnnotations extends Annotations
     /**
      * if set to true, draws all annotations outside of the chart.
      *
-     * @var boolean
+     * @var bool
      */
     protected $alwaysOutside;
 
     /**
-     * @param boolean $alwaysOutside
+     * @param bool $alwaysOutside
      *
      * @return $this
      */

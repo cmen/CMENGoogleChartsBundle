@@ -15,7 +15,6 @@ class TreeMapChart extends Chart
      */
     protected $options;
 
-
     public function __construct()
     {
         parent::__construct();
@@ -23,9 +22,8 @@ class TreeMapChart extends Chart
         $this->options = new TreeMapChartOptions();
     }
 
-
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function getType()
     {
@@ -33,7 +31,7 @@ class TreeMapChart extends Chart
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getPackage()
     {

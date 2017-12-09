@@ -19,17 +19,15 @@ class Listener
      */
     protected $functionName;
 
-
     public function __construct($type, $functionName)
     {
-        if (!in_array($type, array('select', 'ready', 'click', 'error', 'onmouseover', 'onmouseout'))) {
+        if (!in_array($type, ['select', 'ready', 'click', 'error', 'onmouseover', 'onmouseout'])) {
             throw new GoogleChartsException("$type is not a valid type of event.");
         }
 
         $this->type = $type;
         $this->functionName = $functionName;
     }
-
 
     /**
      * @return string

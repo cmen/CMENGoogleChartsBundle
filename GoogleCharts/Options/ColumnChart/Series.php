@@ -23,7 +23,6 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
      */
     protected $targetAxisIndex;
 
-
     /**
      * Series constructor.
      */

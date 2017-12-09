@@ -18,7 +18,7 @@ class PieChartOptions extends MediumChartOptions
     /**
      * If true, displays a three-dimensional chart.
      *
-     * @var boolean
+     * @var bool
      */
     protected $is3D;
 
@@ -105,7 +105,6 @@ class PieChartOptions extends MediumChartOptions
      */
     protected $tooltip;
 
-
     /**
      * PieChartOptions constructor.
      */
@@ -117,7 +116,6 @@ class PieChartOptions extends MediumChartOptions
         $this->pieSliceTextStyle = new PieSliceTextStyle();
         $this->tooltip = new FullTooltip();
     }
-
 
     /**
      * @return PieSliceTextStyle
@@ -144,7 +142,7 @@ class PieChartOptions extends MediumChartOptions
     }
 
     /**
-     * @param boolean $is3D
+     * @param bool $is3D
      *
      * @return $this
      */

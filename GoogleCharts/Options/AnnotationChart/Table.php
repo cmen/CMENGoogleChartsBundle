@@ -10,7 +10,7 @@ class Table
     /**
      * If set to true, reverses the order of the annotations table and displays them in ascending order.
      *
-     * @var boolean
+     * @var bool
      */
     protected $sortAscending;
 
@@ -23,7 +23,7 @@ class Table
     protected $sortColumn;
 
     /**
-     * @param boolean $sortAscending
+     * @param bool $sortAscending
      *
      * @return $this
      */

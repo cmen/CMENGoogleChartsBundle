@@ -39,7 +39,6 @@ class TimelineOptions extends BasicChartOptions
      */
     protected $tooltip;
 
-
     /**
      * TimelineOptions constructor.
      */
@@ -48,9 +47,8 @@ class TimelineOptions extends BasicChartOptions
         parent::__construct();
 
         $this->timeline = new Timeline();
-        $this->tooltip =  new BasicTooltip();
+        $this->tooltip = new BasicTooltip();
     }
-
 
     /**
      * @return Timeline
@@ -69,7 +67,7 @@ class TimelineOptions extends BasicChartOptions
     }
 
     /**
-     * @param boolean $avoidOverlappingGridLines
+     * @param bool $avoidOverlappingGridLines
      *
      * @return $this
      */

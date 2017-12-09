@@ -42,7 +42,6 @@ class Units
      */
     protected $milliseconds;
 
-
     /**
      * Units constructor.
      */
@@ -56,7 +55,6 @@ class Units
         $this->seconds = new Seconds();
         $this->milliseconds = new Milliseconds();
     }
-
 
     /**
      * @return Years

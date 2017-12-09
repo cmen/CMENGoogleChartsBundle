@@ -5,7 +5,6 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 class MediumHAxis extends HAxis
 {
     /**
-     *
      * The baseline for the horizontal axis.
      * This option is only supported for a continuous axis.
      *
@@ -40,7 +39,7 @@ class MediumHAxis extends HAxis
      *     'currency' : displays numbers in the local currency (e.g., $8,000,000.00)
      *     'percent' : displays numbers as percentages (e.g., 800,000,000%)
      *     'short' : displays abbreviated numbers (e.g., 8M)
-     *     'long' : displays numbers as full words (e.g., 8 million)
+     *     'long' : displays numbers as full words (e.g., 8 million).
      *
      * For date axis labels, this is a subset of the date formatting ICU pattern set . For instance, 'MMM d, y' will
      * display the value "Jul 1, 2011" for the date of July first in 2011.
@@ -57,12 +56,12 @@ class MediumHAxis extends HAxis
      * Set to true for yes.
      * This option is only supported for a continuous axis.
      *
-     * @var boolean
+     * @var bool
      */
     protected $logScale;
 
     /**
-     *  hAxis property that makes the horizontal axis a logarithmic scale. Can be one of the following:
+     *  hAxis property that makes the horizontal axis a logarithmic scale. Can be one of the following:.
      *
      * - null : No logarithmic scaling is performed.
      * - 'log' : Logarithmic scaling. Negative and zero values are not plotted. This option is the same as setting
@@ -103,14 +102,13 @@ class MediumHAxis extends HAxis
      * should have a v property for the tick value, and an optional f property containing the literal string to be
      * displayed as the label. Examples :
      * [5, 10, 15, 20]
-     * [['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four']]
+     * [['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four']].
      *
      * This option is only supported for a continuous axis.
      *
      * @var array
      */
     protected $ticks;
-
 
     /**
      * @param int $baseline
@@ -161,7 +159,7 @@ class MediumHAxis extends HAxis
     }
 
     /**
-     * @param boolean $logScale
+     * @param bool $logScale
      *
      * @return $this
      */

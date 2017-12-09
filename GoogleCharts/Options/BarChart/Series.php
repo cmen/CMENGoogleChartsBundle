@@ -16,7 +16,6 @@ class Series extends AdvancedSeries
      */
     protected $annotations;
 
-
     /**
      * Series constructor.
      */
@@ -24,7 +23,6 @@ class Series extends AdvancedSeries
     {
         $this->annotations = new Annotations();
     }
-
 
     /**
      * @return AdvancedAnnotations

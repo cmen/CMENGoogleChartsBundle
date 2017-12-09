@@ -14,7 +14,6 @@ class NewData
      */
     protected $widthFactor;
 
-
     /**
      * @param float $widthFactor
      *

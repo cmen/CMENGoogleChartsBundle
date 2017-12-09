@@ -27,7 +27,7 @@ class Crosshair
      * Value can be :
      * 'both' : display on both focus and selection
      * 'focus' : display on focus only
-     * 'selection' : display on selection only
+     * 'selection' : display on selection only.
      *
      * @var string
      */
@@ -41,7 +41,6 @@ class Crosshair
         $this->focused = new Focused();
         $this->selected = new Selected();
     }
-
 
     /**
      * @return Focused

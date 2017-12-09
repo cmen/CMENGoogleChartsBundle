@@ -11,7 +11,7 @@ class Trendlines
 
     /**
      * For trendlines of type: 'polynomial', the degree of the polynomial (2 for quadratic, 3 for cubic, and so on).
-     * (The default degree may change from 3 to 2 in an upcoming release of Google Charts.)
+     * (The default degree may change from 3 to 2 in an upcoming release of Google Charts.).
      *
      * @var int
      */
@@ -47,15 +47,14 @@ class Trendlines
     protected $type;
 
     /**
-     * Whether the trendline equation appears in the legend. (It will appear in the trendline tooltip.)
+     * Whether the trendline equation appears in the legend. (It will appear in the trendline tooltip.).
      *
      * @var bool
      */
     protected $visibleInLegend;
 
-
     /**
-     * @param boolean $visibleInLegend
+     * @param bool $visibleInLegend
      *
      * @return $this
      */
@@ -91,7 +90,7 @@ class Trendlines
     }
 
     /**
-     * @param boolean $showR2
+     * @param bool $showR2
      *
      * @return $this
      */

@@ -8,12 +8,12 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 trait ItalicTrait
 {
     /**
-     * @var boolean
+     * @var bool
      */
     protected $italic;
 
     /**
-     * @param boolean $italic
+     * @param bool $italic
      *
      * @return $this
      */

@@ -15,7 +15,6 @@ class ScatterChart extends Chart
      */
     protected $options;
 
-
     public function __construct()
     {
         parent::__construct();
@@ -23,9 +22,8 @@ class ScatterChart extends Chart
         $this->options = new ScatterChartOptions();
     }
 
-
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function getType()
     {
@@ -33,7 +31,7 @@ class ScatterChart extends Chart
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getPackage()
     {

@@ -20,7 +20,6 @@ class LineOptions extends AdvancedChartOptions
      */
     protected $tooltip;
 
-
     /**
      * LineOptions constructor.
      */
@@ -30,7 +29,6 @@ class LineOptions extends AdvancedChartOptions
 
         $this->tooltip = new AdvancedTooltip();
     }
-
 
     /**
      * @return AdvancedTooltip

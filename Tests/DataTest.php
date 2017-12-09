@@ -7,7 +7,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnChart;
 class DataTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @expectedException CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
      * @expectedExceptionMessage There is no data for chart. Use method setArrayToDataTable() to provide data.
      */
     public function testEmptyData()

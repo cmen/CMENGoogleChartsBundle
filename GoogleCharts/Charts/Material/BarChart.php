@@ -5,7 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\BarChart\Material\BarChartOptions;
 
 /**
- * Class BarChart
+ * Class BarChart.
  *
  * @author Christophe Meneses
  */
@@ -23,7 +23,7 @@ class BarChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getPackage()
     {
@@ -31,7 +31,7 @@ class BarChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function getLibrary()
     {
@@ -39,7 +39,7 @@ class BarChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function getType()
     {

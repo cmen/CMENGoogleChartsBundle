@@ -25,7 +25,6 @@ class Legend
      */
     protected $textStyle;
 
-
     /**
      * @return TextStyle
      */

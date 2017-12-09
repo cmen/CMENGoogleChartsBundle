@@ -10,7 +10,7 @@ class Candlestick
     /**
      * If true, rising candles will appear hollow and falling candles will appear solid, otherwise, the opposite.
      *
-     * @var boolean
+     * @var bool
      */
     protected $hollowIsRising;
 
@@ -24,7 +24,6 @@ class Candlestick
      */
     protected $risingColor;
 
-
     /**
      * Candlestick constructor.
      */
@@ -33,7 +32,6 @@ class Candlestick
         $this->fallingColor = new FallingColor();
         $this->risingColor = new RisingColor();
     }
-
 
     /**
      * @return FallingColor
@@ -52,7 +50,7 @@ class Candlestick
     }
 
     /**
-     * @param boolean $hollowIsRising
+     * @param bool $hollowIsRising
      *
      * @return $this
      */

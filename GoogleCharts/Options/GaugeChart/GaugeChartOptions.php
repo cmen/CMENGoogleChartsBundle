@@ -99,7 +99,6 @@ class GaugeChartOptions extends ChartOptions
      */
     protected $yellowTo;
 
-
     /**
      * GaugeChartOptions constructor.
      */

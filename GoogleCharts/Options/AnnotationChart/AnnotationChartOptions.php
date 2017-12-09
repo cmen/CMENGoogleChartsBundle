@@ -46,7 +46,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
      * of this option). When this option is set to true, after every numeric column, two optional annotation string
      * columns can be added, one for the annotation title and one for the annotation text.
      *
-     * @var boolean
+     * @var bool
      */
     protected $displayAnnotations;
 
@@ -54,7 +54,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
      * If set to true, the chart will display a filter control to filter annotations. Use this option when there are
      * many annotations.
      *
-     * @var boolean
+     * @var bool
      */
     protected $displayAnnotationsFilter;
 
@@ -62,7 +62,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
      * Whether to display a small bar separator ( | ) between the series values and the date in the legend, where
      * true means yes.
      *
-     * @var boolean
+     * @var bool
      */
     protected $displayDateBarSeparator;
 
@@ -70,21 +70,21 @@ class AnnotationChartOptions extends ChartOptionsDraw
      * Whether to display a shortened, rounded version of the values on the top of the graph, to save space; false
      * indicates that it may. For example, if set to false, 56123.45 might be displayed as 56.12k.
      *
-     * @var boolean
+     * @var bool
      */
     protected $displayExactValues;
 
     /**
      * Whether to display dots next to the values in the legend text, where true means yes.
      *
-     * @var boolean
+     * @var bool
      */
     protected $displayLegendDots;
 
     /**
      * Whether to display the highlighted values in the legend, where true means yes.
      *
-     * @var boolean
+     * @var bool
      */
     protected $displayLegendValues;
 
@@ -94,14 +94,14 @@ class AnnotationChartOptions extends ChartOptionsDraw
      * The outline in the zoom selector is a log scale version of the first series in the chart, scaled to fit the
      * height of the zoom selector.
      *
-     * @var boolean
+     * @var bool
      */
     protected $displayRangeSelector;
 
     /**
      * Whether to show the zoom buttons ("1d 5d 1m" and so on), where false means no.
      *
-     * @var boolean
+     * @var bool
      */
     protected $displayZoomButtons;
 
@@ -219,7 +219,6 @@ class AnnotationChartOptions extends ChartOptionsDraw
      */
     protected $zoomStartTime;
 
-
     /**
      * AnnotationChartOptions constructor.
      */
@@ -229,7 +228,6 @@ class AnnotationChartOptions extends ChartOptionsDraw
 
         $this->table = new Table();
     }
-
 
     /**
      * @return Table
@@ -276,7 +274,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $displayAnnotations
+     * @param bool $displayAnnotations
      *
      * @return $this
      */
@@ -288,7 +286,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $displayAnnotationsFilter
+     * @param bool $displayAnnotationsFilter
      *
      * @return $this
      */
@@ -300,7 +298,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $displayDateBarSeparator
+     * @param bool $displayDateBarSeparator
      *
      * @return $this
      */
@@ -312,7 +310,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $displayExactValues
+     * @param bool $displayExactValues
      *
      * @return $this
      */
@@ -324,7 +322,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $displayLegendDots
+     * @param bool $displayLegendDots
      *
      * @return $this
      */
@@ -336,7 +334,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $displayLegendValues
+     * @param bool $displayLegendValues
      *
      * @return $this
      */
@@ -348,7 +346,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $displayRangeSelector
+     * @param bool $displayRangeSelector
      *
      * @return $this
      */
@@ -360,7 +358,7 @@ class AnnotationChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $displayZoomButtons
+     * @param bool $displayZoomButtons
      *
      * @return $this
      */

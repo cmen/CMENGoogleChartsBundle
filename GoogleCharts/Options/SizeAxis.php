@@ -37,7 +37,6 @@ class SizeAxis
      */
     protected $minValue;
 
-
     /**
      * @param int $maxSize
      *

@@ -16,7 +16,7 @@ class OptionsFormat
      */
     public function removeRecursivelyNullValue(&$options)
     {
-        $options = array_filter((array)$options, function ($val) {
+        $options = array_filter((array) $options, function ($val) {
             return !is_null($val);
         });
 
@@ -55,7 +55,7 @@ class OptionsFormat
      */
     public function renameRecursivelyKeys($options)
     {
-        $newOptions = array();
+        $newOptions = [];
 
         foreach ($options as $key => $value) {
             if (!is_numeric($key)) {
@@ -65,7 +65,6 @@ class OptionsFormat
                 if (is_array($options[$key])) {
                     $newOptions[$newKey] = $this->renameRecursivelyKeys($options[$key]);
                 }
-
             } else {
                 $newOptions[$key] = $value;
 

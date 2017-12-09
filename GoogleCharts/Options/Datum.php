@@ -4,7 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 
 /**
  * Datum object lets you override Google Charts' choice for annotations provided for individual data elements
- * (such as values displayed with each bar on a bar chart)
+ * (such as values displayed with each bar on a bar chart).
  *
  * @author Christophe Meneses
  */
@@ -22,7 +22,6 @@ class Datum
      */
     protected $style;
 
-
     /**
      * Datum constructor.
      */
@@ -30,7 +29,6 @@ class Datum
     {
         $this->stem = new Stem();
     }
-
 
     /**
      * @return Stem

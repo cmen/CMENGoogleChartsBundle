@@ -18,7 +18,7 @@ class Node
     /**
      * Allows you to select nodes.
      *
-     * @var boolean
+     * @var bool
      */
     protected $interactivity;
 
@@ -48,7 +48,6 @@ class Node
      */
     protected $colorMode;
 
-
     /**
      * Node constructor.
      */
@@ -56,7 +55,6 @@ class Node
     {
         $this->label = new Label();
     }
-
 
     /**
      * @return Label
@@ -67,7 +65,7 @@ class Node
     }
 
     /**
-     * @param boolean $interactivity
+     * @param bool $interactivity
      *
      * @return $this
      */

@@ -6,7 +6,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Material\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Material\MaterialTrait;
 
 /**
- * Class LineChartOptions
+ * Class LineChartOptions.
  *
  * @author Christophe Meneses
  */

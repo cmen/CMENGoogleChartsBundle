@@ -17,18 +17,16 @@ class Events
      */
     protected $chart;
 
-
     public function __construct(Chart $chart)
     {
         $this->listeners = [];
         $this->chart = $chart;
     }
 
-
     /**
      * Adds a listener.
      *
-     * @param string $type Type of event
+     * @param string $type         Type of event
      * @param string $functionName Name of Javascript function
      */
     public function addListener($type, $functionName)
@@ -46,8 +44,8 @@ class Events
         $js = '';
 
         foreach ($this->listeners as $listener) {
-            $js .= "google.visualization.events.addListener(" . $this->chart->getName() . ", '" . $listener->getType() .
-                "', " . $listener->getFunction() . ");";
+            $js .= 'google.visualization.events.addListener('.$this->chart->getName().", '".$listener->getType().
+                "', ".$listener->getFunction().');';
         }
 
         return $js;

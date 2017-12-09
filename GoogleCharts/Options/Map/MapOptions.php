@@ -13,7 +13,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * If set to true, enables zooming in and out using the mouse scroll wheel.
      *
-     * @var boolean
+     * @var bool
      */
     protected $enableScrollWheel;
 
@@ -31,7 +31,7 @@ class MapOptions extends ChartOptionsDraw
     /**
      * If showLine is true, defines the line color. For example: '#800000'.
      *
-     * @var boolean
+     * @var bool
      */
     protected $lineColor;
 
@@ -42,7 +42,7 @@ class MapOptions extends ChartOptionsDraw
      * you specify for the custom map type. A new mapTypeId must be given for each custom map type created. Each custom
      * map type should contain two properties :
      *    name: The display name for the styled map type
-     *    styles: An array containing the style objects for the styled map type
+     *    styles: An array containing the style objects for the styled map type.
      *
      * @var array
      */
@@ -68,14 +68,14 @@ class MapOptions extends ChartOptionsDraw
     /**
      * If set to true, shows a Google Maps polyline through all the points.
      *
-     * @var boolean
+     * @var bool
      */
     protected $showLine;
 
     /**
      * If set to true, shows the location description as a tooltip when the mouse is positioned above a point marker.
      *
-     * @var boolean
+     * @var bool
      */
     protected $showTip;
 
@@ -83,7 +83,7 @@ class MapOptions extends ChartOptionsDraw
      * Show a map type selector that enables the viewer to switch between [map, satellite, hybrid, terrain]. When
      * useMapTypeControl is false (default) no selector is presented and the type is determined by the mapType option.
      *
-     * @var boolean
+     * @var bool
      */
     protected $useMapTypeControl;
 
@@ -95,9 +95,8 @@ class MapOptions extends ChartOptionsDraw
      */
     protected $zoomLevel;
 
-
     /**
-     * @param boolean $enableScrollWheel
+     * @param bool $enableScrollWheel
      *
      * @return $this
      */
@@ -121,7 +120,7 @@ class MapOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $lineColor
+     * @param bool $lineColor
      *
      * @return $this
      */
@@ -169,7 +168,7 @@ class MapOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $showLine
+     * @param bool $showLine
      *
      * @return $this
      */
@@ -181,7 +180,7 @@ class MapOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $showTip
+     * @param bool $showTip
      *
      * @return $this
      */
@@ -193,7 +192,7 @@ class MapOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $useMapTypeControl
+     * @param bool $useMapTypeControl
      *
      * @return $this
      */

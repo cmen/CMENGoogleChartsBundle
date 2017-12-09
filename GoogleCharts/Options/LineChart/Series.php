@@ -18,7 +18,6 @@ class Series extends LineSeries
 
     use CurveTypeTrait;
 
-
     /**
      * Series constructor.
      */

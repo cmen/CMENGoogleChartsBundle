@@ -31,7 +31,6 @@ class Link
      */
     protected $colorMode;
 
-
     /**
      * Link constructor.
      */
@@ -39,7 +38,6 @@ class Link
     {
         $this->color = new Color();
     }
-
 
     /**
      * @return Color

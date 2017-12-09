@@ -22,7 +22,6 @@ class DiffBarChart extends BarChart implements DiffChart
      */
     private $newChart;
 
-
     public function __construct($oldChart, $newChart)
     {
         if ((!$oldChart instanceof ColumnChart && !$oldChart instanceof BarChart)

@@ -13,7 +13,7 @@ class OrgChartOptions extends ChartOptionsDraw
     /**
      * Determines if double click will collapse a node.
      *
-     * @var boolean
+     * @var bool
      */
     protected $allowCollapse;
 
@@ -36,15 +36,14 @@ class OrgChartOptions extends ChartOptionsDraw
     protected $selectedNodeClass;
 
     /**
-     * 'small', 'medium' or 'large'
+     * 'small', 'medium' or 'large'.
      *
      * @var string
      */
     protected $size;
 
-
     /**
-     * @param boolean $allowCollapse
+     * @param bool $allowCollapse
      *
      * @return $this
      */

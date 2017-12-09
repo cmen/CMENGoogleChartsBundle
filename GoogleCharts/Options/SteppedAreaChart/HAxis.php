@@ -16,7 +16,7 @@ class HAxis
      * If false, will hide outermost labels rather than allow them to be cropped by the chart container. If true,
      * will allow label cropping.
      *
-     * @var boolean
+     * @var bool
      */
     protected $allowContainerBoundaryTextCufoff;
 
@@ -33,7 +33,7 @@ class HAxis
      * horizontal axis text upright. Default behavior is to slant text if it cannot all fit when drawn upright.
      * Notice that this option is available only when the hAxis.textPosition is set to 'out' (which is the default).
      *
-     * @var boolean
+     * @var bool
      */
     protected $slantedText;
 
@@ -97,7 +97,7 @@ class HAxis
      * should have a v property for the tick value, and an optional f property containing the literal string to be
      * displayed as the label. Examples :
      * [5, 10, 15, 20]
-     * [['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four']]
+     * [['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four']].
      *
      * This option is only supported for a continuous axis.
      *
@@ -116,7 +116,6 @@ class HAxis
      * @var ViewWindow
      */
     protected $viewWindow;
-
 
     /**
      * HAxis constructor.
@@ -189,7 +188,7 @@ class HAxis
     }
 
     /**
-     * @param boolean $allowContainerBoundaryTextCufoff
+     * @param bool $allowContainerBoundaryTextCufoff
      *
      * @return $this
      */
@@ -201,7 +200,7 @@ class HAxis
     }
 
     /**
-     * @param boolean $slantedText
+     * @param bool $slantedText
      *
      * @return $this
      */

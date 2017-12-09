@@ -21,7 +21,6 @@ class MinorGridlines
      */
     protected $units;
 
-
     /**
      * MinorGridlines constructor.
      */
@@ -29,7 +28,6 @@ class MinorGridlines
     {
         $this->units = new Units();
     }
-
 
     /**
      * @return Units

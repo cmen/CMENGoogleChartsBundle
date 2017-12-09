@@ -41,7 +41,6 @@ class Legend
      */
     protected $textStyle;
 
-
     /**
      * Legend constructor.
      */
@@ -49,7 +48,6 @@ class Legend
     {
         $this->textStyle = new MediumTextStyle();
     }
-
 
     /**
      * @return MediumTextStyle

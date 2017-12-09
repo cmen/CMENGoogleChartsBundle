@@ -15,14 +15,12 @@ class SankeyDiagram extends Chart
      */
     protected $options;
 
-
     public function __construct()
     {
         parent::__construct();
 
         $this->options = new SankeyDiagramOptions();
     }
-
 
     /**
      * Returns the chart type.

@@ -14,7 +14,6 @@ class DiffBarChartOptions extends BarChartOptions
      */
     protected $diff;
 
-
     /**
      * DiffBarChartOptions constructor.
      */

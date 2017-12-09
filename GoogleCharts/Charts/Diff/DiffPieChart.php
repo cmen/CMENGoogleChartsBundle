@@ -21,7 +21,6 @@ class DiffPieChart extends PieChart implements DiffChart
      */
     private $newChart;
 
-
     public function __construct($oldChart, $newChart)
     {
         if (!$oldChart instanceof PieChart || !$newChart instanceof PieChart) {

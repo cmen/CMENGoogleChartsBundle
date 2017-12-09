@@ -14,12 +14,12 @@ trait EnableInteractivityTrait
      *
      * Default: true
      *
-     * @var boolean
+     * @var bool
      */
     protected $enableInteractivity;
 
     /**
-     * @param boolean $enableInteractivity
+     * @param bool $enableInteractivity
      *
      * @return $this
      */

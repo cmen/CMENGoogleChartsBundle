@@ -5,7 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineChart\Material\LineChartOptions;
 
 /**
- * Class LineChart
+ * Class LineChart.
  *
  * @author Christophe Meneses
  */
@@ -22,7 +22,7 @@ class LineChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\LineChart
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getPackage()
     {
@@ -30,7 +30,7 @@ class LineChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\LineChart
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function getLibrary()
     {
@@ -38,7 +38,7 @@ class LineChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\LineChart
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function getType()
     {

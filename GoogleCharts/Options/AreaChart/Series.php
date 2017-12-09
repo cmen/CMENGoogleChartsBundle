@@ -18,7 +18,6 @@ class Series extends LineSeries
 
     use AreaOpacityTrait;
 
-
     /**
      * Series constructor.
      */
@@ -26,7 +25,6 @@ class Series extends LineSeries
     {
         $this->annotations = new Annotations();
     }
-
 
     /**
      * @return Annotations

@@ -9,7 +9,7 @@ class Animation
 {
     /**
      * The duration of the animation, in milliseconds. For details, see the animation documentation.
-     * {@link https://developers.google.com/chart/interactive/docs/animation}
+     * {@link https://developers.google.com/chart/interactive/docs/animation}.
      *
      * @var int
      */

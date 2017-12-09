@@ -59,7 +59,7 @@ class BubbleChartOptions extends AdvancedChartOptions
      * If true, sorts the bubbles by size so the smaller bubbles appear above the larger bubbles. If false, bubbles
      * are sorted according to their order in the DataTable.
      *
-     * @var boolean
+     * @var bool
      */
     protected $sortBubblesBySize;
 
@@ -72,7 +72,6 @@ class BubbleChartOptions extends AdvancedChartOptions
      * @var VAxis
      */
     protected $vAxis;
-
 
     /**
      * BubbleChartOptions constructor.
@@ -91,7 +90,6 @@ class BubbleChartOptions extends AdvancedChartOptions
         $this->tooltip = new BasicTooltip();
         $this->vAxis = new VAxis();
     }
-
 
     /**
      * @return AdvancedAnimation
@@ -166,7 +164,7 @@ class BubbleChartOptions extends AdvancedChartOptions
     }
 
     /**
-     * @param boolean $sortBubblesBySize
+     * @param bool $sortBubblesBySize
      *
      * @return $this
      */

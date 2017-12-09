@@ -12,12 +12,12 @@ trait AllowHtmlTrait
      *
      * Default: false
      *
-     * @var boolean
+     * @var bool
      */
     protected $allowHtml;
 
     /**
-     * @param boolean $allowHtml
+     * @param bool $allowHtml
      *
      * @return $this
      */

@@ -28,7 +28,6 @@ class CalendarChartOptions extends ChartOptions
      */
     protected $noDataPattern;
 
-
     /**
      * CalendarChartOptions constructor.
      */
@@ -40,7 +39,6 @@ class CalendarChartOptions extends ChartOptions
         $this->colorAxis = new ColorAxis();
         $this->noDataPattern = new NoDataPattern();
     }
-
 
     /**
      * @return Calendar

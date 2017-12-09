@@ -38,7 +38,7 @@ class Explorer
      * By default, users can pan all around, regardless of where the data is. To ensure that users don't pan beyond
      * the original chart, set keepInBounds true.
      *
-     * @var boolean
+     * @var bool
      */
     protected $keepInBounds;
 
@@ -68,7 +68,6 @@ class Explorer
      */
     protected $zoomDelta;
 
-
     /**
      * @param string[] $actions
      *
@@ -94,7 +93,7 @@ class Explorer
     }
 
     /**
-     * @param boolean $keepInBounds
+     * @param bool $keepInBounds
      *
      * @return $this
      */

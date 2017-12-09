@@ -13,12 +13,12 @@ class Tooltip
      * Note : customization of the HTML tooltip content via the tooltip column data role is not supported by the
      * Bubble Chart visualization.
      *
-     * @var boolean
+     * @var bool
      */
     protected $isHtml;
 
     /**
-     * @param boolean $isHtml
+     * @param bool $isHtml
      *
      * @return $this
      */

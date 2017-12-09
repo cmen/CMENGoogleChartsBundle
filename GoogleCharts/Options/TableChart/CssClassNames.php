@@ -64,7 +64,6 @@ class CssClassNames
      */
     protected $rowNumberCell;
 
-
     /**
      * @param string $headerRow
      *

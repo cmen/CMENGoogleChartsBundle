@@ -27,7 +27,6 @@ class Sankey
      */
     protected $node;
 
-
     /**
      * Sankey constructor.
      */
@@ -36,7 +35,6 @@ class Sankey
         $this->link = new Link();
         $this->node = new Node();
     }
-
 
     /**
      * @return Link

@@ -11,7 +11,6 @@ class DiffScatterChartOptions extends ScatterChartOptions
      */
     protected $diff;
 
-
     /**
      * DiffScatterChartOptions constructor.
      */

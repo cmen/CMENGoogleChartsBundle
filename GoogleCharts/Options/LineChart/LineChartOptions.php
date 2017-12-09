@@ -93,7 +93,6 @@ class LineChartOptions extends LineOptions
         $this->legend = new AdvancedLegend();
     }
 
-
     /**
      * @return AdvancedAnimation
      */

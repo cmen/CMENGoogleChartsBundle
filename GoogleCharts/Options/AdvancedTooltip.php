@@ -12,12 +12,12 @@ class AdvancedTooltip extends MediumTooltip
      *  Note: This only applies to HTML tooltips. If this is enabled with SVG tooltips, any overflow outside of the
      * chart bounds will be cropped. See Customizing Tooltip Content for more details.
      *
-     * @var boolean
+     * @var bool
      */
     protected $ignoreBounds;
 
     /**
-     * @param boolean $ignoreBounds
+     * @param bool $ignoreBounds
      *
      * @return $this
      */

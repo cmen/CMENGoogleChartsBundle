@@ -5,7 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Material;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTrait;
 
 /**
- * Class Chart
+ * Class Chart.
  *
  * @author Christophe Meneses
  */

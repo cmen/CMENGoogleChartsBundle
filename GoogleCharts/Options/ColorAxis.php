@@ -35,7 +35,6 @@ class ColorAxis
 
     use ColorsTrait;
 
-
     /**
      * @param int $minValue
      *

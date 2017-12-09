@@ -15,7 +15,7 @@ trait ThemeTrait
      *   chartArea: {width: '100%', height: '100%'},
      *   legend: {position: 'in'},
      *   titlePosition: 'in', axisTitlesPosition: 'in',
-     *   hAxis: {textPosition: 'in'}, vAxis: {textPosition: 'in'}
+     *   hAxis: {textPosition: 'in'}, vAxis: {textPosition: 'in'}.
      *
      * Default: null
      *

@@ -15,14 +15,12 @@ class AreaChart extends Chart
      */
     protected $options;
 
-
     public function __construct()
     {
         parent::__construct();
 
         $this->options = new AreaChartOptions();
     }
-
 
     /**
      * Returns the chart type.

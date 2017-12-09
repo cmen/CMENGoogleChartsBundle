@@ -20,7 +20,6 @@ class SankeyDiagramOptions extends ChartOptions
      */
     protected $tooltip;
 
-
     /**
      * SankeyDiagramOptions constructor.
      */
@@ -31,7 +30,6 @@ class SankeyDiagramOptions extends ChartOptions
         $this->sankey = new Sankey();
         $this->tooltip = new MediumTooltip();
     }
-
 
     /**
      * @return Sankey

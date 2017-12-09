@@ -36,7 +36,6 @@ class MediumChartOptions extends BasicChartOptions
      */
     protected $titleTextStyle;
 
-
     /**
      * MediumChartOptions constructor.
      */
@@ -48,7 +47,6 @@ class MediumChartOptions extends BasicChartOptions
         $this->chartArea = new ChartArea();
         $this->titleTextStyle = new TitleTextStyle();
     }
-
 
     /**
      * @return AdvancedBackgroundColor

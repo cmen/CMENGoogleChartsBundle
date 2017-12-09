@@ -55,7 +55,7 @@ class TreeMapChartOptions extends ChartOptions
      * Determines if elements should show highlighted effects when moused over. If set to true, highlighting for
      * different elements can be specified using the various highlightColor options.
      *
-     * @var boolean
+     * @var bool
      */
     protected $highlightOnMouseOver;
 
@@ -85,7 +85,7 @@ class TreeMapChartOptions extends ChartOptions
 
     /**
      * The highlight color to use for the node with the largest value in column 3. Specify an HTML color value or null;
-     * If null, this value will be the value of maxColor lightened by 35%
+     * If null, this value will be the value of maxColor lightened by 35%.
      *
      * @var string
      */
@@ -132,7 +132,7 @@ class TreeMapChartOptions extends ChartOptions
 
     /**
      * The highlight color to use for the node with a column 3 value nearest to minColorValue. Specify an HTML color
-     * value or null; if null, this value will be the value of minColor lightened by 35%
+     * value or null; if null, this value will be the value of minColor lightened by 35%.
      *
      * @var string
      */
@@ -166,14 +166,14 @@ class TreeMapChartOptions extends ChartOptions
      * Whether or not to show a color gradient scale from minColor to maxColor along the top of the chart. Specify
      * true to show the scale.
      *
-     * @var boolean
+     * @var bool
      */
     protected $showScale;
 
     /**
      * Whether to show tooltips.
      *
-     * @var boolean
+     * @var bool
      */
     protected $showTooltips;
 
@@ -192,10 +192,9 @@ class TreeMapChartOptions extends ChartOptions
     /**
      * Whether to use weighted averages for aggregation.
      *
-     * @var boolean
+     * @var bool
      */
     protected $useWeightedAverageForAggregation;
-
 
     /**
      * TreeMapChartOptions constructor.
@@ -207,7 +206,6 @@ class TreeMapChartOptions extends ChartOptions
         $this->textStyle = new MediumTextStyle();
         $this->titleTextStyle = new TitleTextStyle();
     }
-
 
     /**
      * @return MediumTextStyle
@@ -226,7 +224,7 @@ class TreeMapChartOptions extends ChartOptions
     }
 
     /**
-     * @param boolean $useWeightedAverageForAggregation
+     * @param bool $useWeightedAverageForAggregation
      *
      * @return $this
      */
@@ -298,7 +296,7 @@ class TreeMapChartOptions extends ChartOptions
     }
 
     /**
-     * @param boolean $highlightOnMouseOver
+     * @param bool $highlightOnMouseOver
      *
      * @return $this
      */
@@ -466,7 +464,7 @@ class TreeMapChartOptions extends ChartOptions
     }
 
     /**
-     * @param boolean $showScale
+     * @param bool $showScale
      *
      * @return $this
      */
@@ -478,7 +476,7 @@ class TreeMapChartOptions extends ChartOptions
     }
 
     /**
-     * @param boolean $showTooltips
+     * @param bool $showTooltips
      *
      * @return $this
      */

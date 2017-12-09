@@ -78,7 +78,6 @@ class CandlestickChartOptions extends AdvancedChartOptions
         $this->tooltip = new AdvancedTooltip();
     }
 
-
     /**
      * @return AdvancedAnimation
      */

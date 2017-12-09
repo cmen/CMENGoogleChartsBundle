@@ -14,7 +14,6 @@ class ChartOptionsDraw
      */
     private $optionsFormat;
 
-
     /**
      * ChartOptionsDraw constructor.
      */
@@ -22,7 +21,6 @@ class ChartOptionsDraw
     {
         $this->optionsFormat = new OptionsFormat();
     }
-
 
     /**
      * Returns Javascript of options. Multilevel of options are possible. A level of option can be a class of option,
@@ -43,6 +41,6 @@ class ChartOptionsDraw
 
         $options = $this->optionsFormat->renameRecursivelyKeys($options);
 
-        return "var $optionsName = " . json_encode($options) . ";\n";
+        return "var $optionsName = ".json_encode($options).";\n";
     }
 }

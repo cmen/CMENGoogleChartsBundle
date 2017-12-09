@@ -17,7 +17,7 @@ class Histogram
     /**
      * Omit the thin divisions between the blocks of the histogram, making it into a series of solid bars.
      *
-     * @var boolean
+     * @var bool
      */
     protected $hideBucketItems;
 
@@ -27,7 +27,6 @@ class Histogram
      * @var int
      */
     protected $lastBucketPercentile;
-
 
     /**
      * @param int $bucketSize
@@ -42,7 +41,7 @@ class Histogram
     }
 
     /**
-     * @param boolean $hideBucketItems
+     * @param bool $hideBucketItems
      *
      * @return $this
      */

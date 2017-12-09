@@ -52,10 +52,9 @@ class Gradient
     /**
      * If true, the boundary for x1, y1, x2, and y2 is the box. If false, it's the entire chart.
      *
-     * @var boolean
+     * @var bool
      */
     protected $useObjectBoundingBoxUnits;
-
 
     /**
      * @param string $color1
@@ -130,7 +129,7 @@ class Gradient
     }
 
     /**
-     * @param boolean $useObjectBoundingBoxUnits
+     * @param bool $useObjectBoundingBoxUnits
      *
      * @return $this
      */

@@ -21,7 +21,6 @@ class InnerCircle
      */
     protected $borderFactor;
 
-
     /**
      * @param float $radiusFactor
      *

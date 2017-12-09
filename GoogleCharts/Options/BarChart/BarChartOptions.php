@@ -88,7 +88,6 @@ class BarChartOptions extends AdvancedChartOptions
      */
     protected $trendlines;
 
-
     /**
      * BarChartOptions constructor.
      */
@@ -104,7 +103,6 @@ class BarChartOptions extends AdvancedChartOptions
         $this->legend = new AdvancedLegend();
         $this->tooltip = new AdvancedTooltip();
     }
-
 
     /**
      * @return AdvancedAnimation

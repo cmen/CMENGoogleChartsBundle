@@ -53,7 +53,6 @@ class Timeline
      */
     protected $singleColor;
 
-
     /**
      * Timeline constructor.
      */
@@ -62,7 +61,6 @@ class Timeline
         $this->barLabelStyle = new BarLabelStyle();
         $this->rowLabelStyle = new RowLabelStyle();
     }
-
 
     /**
      * @return BarLabelStyle
@@ -81,7 +79,7 @@ class Timeline
     }
 
     /**
-     * @param boolean $colorByRowLabel
+     * @param bool $colorByRowLabel
      *
      * @return $this
      */
@@ -93,7 +91,7 @@ class Timeline
     }
 
     /**
-     * @param boolean $showBarLabels
+     * @param bool $showBarLabels
      *
      * @return $this
      */
@@ -105,7 +103,7 @@ class Timeline
     }
 
     /**
-     * @param boolean $showRowLabels
+     * @param bool $showRowLabels
      *
      * @return $this
      */
@@ -129,7 +127,7 @@ class Timeline
     }
 
     /**
-     * @param boolean $groupByRowLabel
+     * @param bool $groupByRowLabel
      *
      * @return $this
      */

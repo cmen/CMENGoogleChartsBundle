@@ -6,7 +6,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Material\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Material\MaterialTrait;
 
 /**
- * Class ScatterChartOptions
+ * Class ScatterChartOptions.
  *
  * @author Christophe Meneses
  */

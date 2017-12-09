@@ -94,7 +94,6 @@ class ColumnChartOptions extends AdvancedChartOptions
         $this->tooltip = new AdvancedTooltip();
     }
 
-
     /**
      * @return AdvancedAnimation
      */

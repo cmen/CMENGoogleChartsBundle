@@ -17,7 +17,6 @@ class Diff
      */
     protected $oldData;
 
-
     /**
      * Diff constructor.
      */
@@ -26,7 +25,6 @@ class Diff
         $this->newData = new NewData();
         $this->oldData = new OldData();
     }
-
 
     /**
      * @return NewData

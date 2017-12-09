@@ -21,7 +21,6 @@ class DiffScatterChart extends ScatterChart implements DiffChart
      */
     private $newChart;
 
-
     public function __construct($oldChart, $newChart)
     {
         if (!$oldChart instanceof ScatterChart || !$newChart instanceof ScatterChart) {

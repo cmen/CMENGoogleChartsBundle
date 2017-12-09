@@ -11,7 +11,6 @@ class DiffPieChartOptions extends PieChartOptions
      */
     protected $diff;
 
-
     /**
      * DiffPieChartOptions constructor.
      */

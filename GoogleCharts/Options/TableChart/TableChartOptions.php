@@ -16,7 +16,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * Determines if alternating color style will be assigned to odd and even rows.
      *
-     * @var boolean
+     * @var bool
      */
     protected $alternatingRowStyle;
 
@@ -85,7 +85,7 @@ class TableChartOptions extends ChartOptionsDraw
      * enable paging (using the page option), or if the table has scroll bars because you have specified height and
      * width options smaller than the required table size.
      *
-     * @var boolean
+     * @var bool
      */
     protected $rtlTable;
 
@@ -100,7 +100,7 @@ class TableChartOptions extends ChartOptionsDraw
     /**
      * If set to true, shows the row number as the first column of the table.
      *
-     * @var boolean
+     * @var bool
      */
     protected $showRowNumber;
 
@@ -122,7 +122,7 @@ class TableChartOptions extends ChartOptionsDraw
      * The order in which the initial sort column is sorted. True for ascending, false for descending. Ignored if
      * sortColumn is not specified.
      *
-     * @var boolean
+     * @var bool
      */
     protected $sortAscending;
 
@@ -152,7 +152,6 @@ class TableChartOptions extends ChartOptionsDraw
      */
     protected $width;
 
-
     /**
      * TableChartOptions constructor.
      */
@@ -163,7 +162,6 @@ class TableChartOptions extends ChartOptionsDraw
         $this->cssClassNames = new CssClassNames();
     }
 
-
     /**
      * @return CssClassNames
      */
@@ -173,7 +171,7 @@ class TableChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $alternatingRowStyle
+     * @param bool $alternatingRowStyle
      *
      * @return $this
      */
@@ -245,7 +243,7 @@ class TableChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $rtlTable
+     * @param bool $rtlTable
      *
      * @return $this
      */
@@ -269,7 +267,7 @@ class TableChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $showRowNumber
+     * @param bool $showRowNumber
      *
      * @return $this
      */
@@ -293,7 +291,7 @@ class TableChartOptions extends ChartOptionsDraw
     }
 
     /**
-     * @param boolean $sortAscending
+     * @param bool $sortAscending
      *
      * @return $this
      */

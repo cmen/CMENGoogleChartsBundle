@@ -19,7 +19,6 @@ class DiffColumnChart extends ColumnChart implements DiffChart
      */
     private $newChart;
 
-
     public function __construct($oldChart, $newChart)
     {
         if ((!$oldChart instanceof ColumnChart && !$oldChart instanceof BarChart)
@@ -34,7 +33,6 @@ class DiffColumnChart extends ColumnChart implements DiffChart
         $this->oldChart = $oldChart;
         $this->newChart = $newChart;
     }
-
 
     /**
      * @return DiffColumnChartOptions

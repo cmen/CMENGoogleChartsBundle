@@ -79,7 +79,6 @@ class HistogramOptions extends AdvancedChartOptions
         $this->tooltip = new MediumTooltip();
     }
 
-
     /**
      * @return AdvancedAnimation
      */

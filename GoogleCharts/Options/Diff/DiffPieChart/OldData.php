@@ -14,12 +14,12 @@ class OldData
     /**
      * If false, the oldest data surrounds the newest data.
      *
-     * @var boolean
+     * @var bool
      */
     protected $inCenter;
 
     /**
-     * @param boolean $inCenter
+     * @param bool $inCenter
      *
      * @return $this
      */

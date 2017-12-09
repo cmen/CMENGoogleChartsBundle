@@ -66,7 +66,7 @@ class GeoChartOptions extends ChartOptions
      *
      * The default is true in region mode, and false in marker mode.
      *
-     * @var boolean
+     * @var bool
      */
     protected $enableRegionInteractivity;
 
@@ -78,7 +78,7 @@ class GeoChartOptions extends ChartOptions
      * If false, the geochart will be stretched to the exact size of the chart as specified by the width and height
      * options.
      *
-     * @var boolean
+     * @var bool
      */
     protected $keepAspectRatio;
 
@@ -96,6 +96,7 @@ class GeoChartOptions extends ChartOptions
      *    - A state in the United States, specified by its ISO 3166-2:US code, e.g., 'US-AL' for Alabama. Note that
      *      the resolution option must be set to either 'provinces' or 'metros'.
 
+     *
      * @var string
      */
     protected $region;
@@ -133,7 +134,6 @@ class GeoChartOptions extends ChartOptions
      */
     protected $tooltip;
 
-
     /**
      * GeoChartOptions constructor.
      */
@@ -148,7 +148,6 @@ class GeoChartOptions extends ChartOptions
         $this->sizeAxis = new SizeAxis();
         $this->tooltip = new Tooltip();
     }
-
 
     /**
      * @return AdvancedBackgroundColor
@@ -259,7 +258,7 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param boolean $keepAspectRatio
+     * @param bool $keepAspectRatio
      *
      * @return $this
      */
@@ -271,7 +270,7 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param boolean $enableRegionInteractivity
+     * @param bool $enableRegionInteractivity
      *
      * @return $this
      */

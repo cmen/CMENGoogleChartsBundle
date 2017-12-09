@@ -9,7 +9,7 @@ trait ColorsTrait
 {
     /**
      * The colors to use for the chart elements. An array of strings, where each element is an HTML color string,
-     * for example : ['red', '#004411']
+     * for example : ['red', '#004411'].
      *
      * @var string[]
      */

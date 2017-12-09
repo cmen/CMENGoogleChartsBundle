@@ -11,12 +11,12 @@ class AdvancedAnimation extends Animation
      * Determines if the chart will animate on the initial draw. If true, the chart will start at the baseline and
      * animate to its final state.
      *
-     * @var boolean
+     * @var bool
      */
     protected $startup;
 
     /**
-     * @param boolean $startup
+     * @param bool $startup
      *
      * @return $this
      */

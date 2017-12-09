@@ -14,7 +14,6 @@ class AdvancedColorAxis extends ColorAxis
      */
     protected $legend;
 
-
     /**
      * AdvancedColorAxis constructor.
      */
@@ -22,7 +21,6 @@ class AdvancedColorAxis extends ColorAxis
     {
         $this->legend = new Legend();
     }
-
 
     /**
      * @return Legend

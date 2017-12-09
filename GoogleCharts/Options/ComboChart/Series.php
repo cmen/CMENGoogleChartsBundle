@@ -42,7 +42,6 @@ class Series extends LineSeries
      */
     protected $type;
 
-
     /**
      * Series constructor.
      */
@@ -52,7 +51,6 @@ class Series extends LineSeries
         $this->fallingColor = new FallingColor();
         $this->risingColor = new RisingColor();
     }
-
 
     /**
      * @return Annotations

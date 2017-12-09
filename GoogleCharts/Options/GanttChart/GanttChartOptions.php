@@ -36,7 +36,6 @@ class GanttChartOptions extends ChartOptionsDraw
         $this->gantt = new Gantt();
     }
 
-
     /**
      * @return BackgroundColor
      */

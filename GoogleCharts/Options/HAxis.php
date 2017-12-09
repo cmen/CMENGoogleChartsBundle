@@ -57,7 +57,6 @@ class HAxis
      */
     protected $viewWindowMode;
 
-
     /**
      * HAxis constructor.
      */
@@ -69,7 +68,6 @@ class HAxis
         $this->titleTextStyle = new TitleTextStyle();
         $this->viewWindow = new ViewWindow();
     }
-
 
     /**
      * @return Gridlines

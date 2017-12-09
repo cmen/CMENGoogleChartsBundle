@@ -32,7 +32,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
      * If set to true, will connect the steps to form a stepped line. Otherwise, only a top line appears. The default
      * is to connect the steps.
      *
-     * @var boolean
+     * @var bool
      */
     protected $connectSteps;
 
@@ -74,7 +74,6 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
         $this->tooltip = new AdvancedTooltip();
     }
 
-
     /**
      * @return AdvancedAnimation
      */
@@ -108,7 +107,7 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
     }
 
     /**
-     * @param boolean $connectSteps
+     * @param bool $connectSteps
      *
      * @return $this
      */
