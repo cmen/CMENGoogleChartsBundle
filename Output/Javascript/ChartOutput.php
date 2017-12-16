@@ -1,15 +1,79 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\ChartOutput;
+namespace CMEN\GoogleChartsBundle\Output\Javascript;
 
 use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff\DiffChart;
+use CMEN\GoogleChartsBundle\Output\AbstractChartOutput;
+use CMEN\GoogleChartsBundle\Output\OptionOutputInterface;
 
 /**
  * @author Christophe Meneses
  */
-class JavascriptChartOutput extends AbstractChartOutput
+class ChartOutput extends AbstractChartOutput
 {
+    /** @var OptionOutputInterface */
+    private $optionOutput;
+
+    /**
+     * JavascriptChartOutput constructor.
+     *
+     * @param string                $version
+     * @param string                $language
+     * @param OptionOutputInterface $optionOutput
+     */
+    public function __construct($version, $language, OptionOutputInterface $optionOutput)
+    {
+        parent::__construct($version, $language);
+
+        $this->optionOutput = $optionOutput;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function startChart(Chart $chart)
+    {
+        if (null === $chart->getElementID()) {
+            throw new GoogleChartsException('Container is not defined.');
+        }
+
+        $js = 'var '.$chart->getName().' = new google.'.$chart->getLibrary().'.'.$chart->getType().
+            '(document.getElementById("'.$chart->getElementID().'"));';
+
+        if (!$chart instanceof DiffChart) {
+            $js .= $chart->getData()->draw($chart->getDataName());
+        } else {
+            $js .= $chart->getOldChart()->getData()->draw('old_'.$chart->getDataName()).
+                $chart->getNewChart()->getData()->draw('new_'.$chart->getDataName()).
+                'var '.$chart->getDataName().' = '.$chart->getName().
+                '.computeDiff(old_'.$chart->getDataName().',
+                 new_'.$chart->getDataName().');';
+        }
+
+        $js .= $this->optionOutput->draw($chart->getOptionsName(), $chart->getOptions());
+
+        return $js;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function endChart(Chart $chart)
+    {
+        if ('visualization' == $chart->getLibrary()) {
+            $options = $chart->getOptionsName();
+        } else {
+            /* Options conversion for material charts */
+            $options = 'google.'.$chart->getLibrary().'.'.$chart->getType().
+                '.convertOptions('.$chart->getOptionsName().')';
+        }
+
+        return $chart->getEvents()->draw().$chart->getName().
+            '.draw('.$chart->getDataName().', '.$options.');';
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -53,7 +117,7 @@ class JavascriptChartOutput extends AbstractChartOutput
         $js .= $this->startCallback('drawChart'.ucfirst(md5($drawChartName)));
 
         foreach ($charts as $chart) {
-            $js .= $chart->startDraw();
+            $js .= $this->startChart($chart);
         }
 
         return $js;
@@ -65,13 +129,13 @@ class JavascriptChartOutput extends AbstractChartOutput
     public function endCharts($charts)
     {
         if ($charts instanceof Chart) {
-            $js = $charts->endDraw().$this->endCallback();
+            $js = $this->endChart($charts).$this->endCallback();
         } elseif (is_array($charts) && !empty($charts)) {
             $this->checkChartsTypes($charts);
 
             $js = '';
             foreach ($charts as $chart) {
-                $js .= $chart->endDraw();
+                $js .= $this->endChart($chart);
             }
 
             $js .= $this->endCallback();
@@ -120,44 +184,5 @@ class JavascriptChartOutput extends AbstractChartOutput
     public function endCallback()
     {
         return '}';
-    }
-
-    /**
-     * Checks if all elements ID are string and same number as charts.
-     *
-     * @param Chart[]  $charts
-     * @param string[] $elementsID
-     *
-     * @throws GoogleChartsException
-     */
-    private function checkElementsId(array $charts, array $elementsID)
-    {
-        if (count($charts) != count($elementsID)) {
-            throw new GoogleChartsException(
-                'Array charts and array HTML elements ID do not have the same number of element.'
-            );
-        }
-
-        foreach ($elementsID as $elementId) {
-            if (!is_string($elementId)) {
-                throw new GoogleChartsException('A string is expected for HTML element ID.');
-            }
-        }
-    }
-
-    /**
-     * Checks if all elements of an array are instances of Chart. Throws an exception if not.
-     *
-     * @param Chart[] $charts
-     *
-     * @throws GoogleChartsException
-     */
-    private function checkChartsTypes(array $charts)
-    {
-        foreach ($charts as $chart) {
-            if (!$chart instanceof Chart) {
-                throw new GoogleChartsException('An array of Chart is expected.');
-            }
-        }
     }
 }

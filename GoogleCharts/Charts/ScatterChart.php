@@ -25,7 +25,7 @@ class ScatterChart extends Chart
     /**
      * {@inheritdoc}
      */
-    protected function getType()
+    public function getType()
     {
         return 'ScatterChart';
     }

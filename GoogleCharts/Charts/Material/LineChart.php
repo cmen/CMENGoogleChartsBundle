@@ -32,7 +32,7 @@ class LineChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\LineChart
     /**
      * {@inheritdoc}
      */
-    protected function getLibrary()
+    public function getLibrary()
     {
         return 'charts';
     }
@@ -40,7 +40,7 @@ class LineChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\LineChart
     /**
      * {@inheritdoc}
      */
-    protected function getType()
+    public function getType()
     {
         return 'Line';
     }

@@ -33,7 +33,7 @@ class BarChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart
     /**
      * {@inheritdoc}
      */
-    protected function getLibrary()
+    public function getLibrary()
     {
         return 'charts';
     }
@@ -41,7 +41,7 @@ class BarChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart
     /**
      * {@inheritdoc}
      */
-    protected function getType()
+    public function getType()
     {
         return 'Bar';
     }

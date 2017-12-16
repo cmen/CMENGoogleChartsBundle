@@ -25,7 +25,7 @@ class TableChart extends Chart
     /**
      * {@inheritdoc}
      */
-    protected function getType()
+    public function getType()
     {
         return 'Table';
     }

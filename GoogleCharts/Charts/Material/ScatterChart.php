@@ -32,7 +32,7 @@ class ScatterChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterC
     /**
      * {@inheritdoc}
      */
-    protected function getLibrary()
+    public function getLibrary()
     {
         return 'charts';
     }
@@ -40,7 +40,7 @@ class ScatterChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterC
     /**
      * {@inheritdoc}
      */
-    protected function getType()
+    public function getType()
     {
         return 'Scatter';
     }

@@ -32,7 +32,7 @@ class ColumnChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnCha
     /**
      * {@inheritdoc}
      */
-    protected function getLibrary()
+    public function getLibrary()
     {
         return 'charts';
     }
@@ -40,7 +40,7 @@ class ColumnChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnCha
     /**
      * {@inheritdoc}
      */
-    protected function getType()
+    public function getType()
     {
         return 'Bar';
     }

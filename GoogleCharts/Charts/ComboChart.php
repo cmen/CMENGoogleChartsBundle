@@ -25,7 +25,7 @@ class ComboChart extends Chart
     /**
      * {@inheritdoc}
      */
-    protected function getType()
+    public function getType()
     {
         return 'ComboChart';
     }

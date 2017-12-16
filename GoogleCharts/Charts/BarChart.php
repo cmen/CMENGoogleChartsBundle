@@ -25,7 +25,7 @@ class BarChart extends Chart
     /**
      * {@inheritdoc}
      */
-    protected function getType()
+    public function getType()
     {
         return 'BarChart';
     }

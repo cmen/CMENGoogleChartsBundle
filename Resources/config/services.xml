@@ -4,13 +4,17 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="CMEN\GoogleChartsBundle\ChartOutput\JavascriptChartOutput" class="CMEN\GoogleChartsBundle\ChartOutput\JavascriptChartOutput" public="false">
+        <service id="CMEN\GoogleChartsBundle\Output\Javascript\OptionOutput" class="CMEN\GoogleChartsBundle\Output\Javascript\OptionOutput" public="false">
+        </service>
+
+        <service id="CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput" class="CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput" public="false">
             <argument>%cmen_google_charts.version%</argument>
             <argument>%cmen_google_charts.language%</argument>
+            <argument type="service" id="CMEN\GoogleChartsBundle\Output\Javascript\OptionOutput"/>
         </service>
 
         <service id="CMEN\GoogleChartsBundle\Twig\GoogleChartsExtension" class="CMEN\GoogleChartsBundle\Twig\GoogleChartsExtension" public="false">
-            <argument type="service" id="CMEN\GoogleChartsBundle\ChartOutput\JavascriptChartOutput"/>
+            <argument type="service" id="CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput"/>
             <tag name="twig.extension" />
         </service>
     </services>

@@ -2,9 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
-use CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff\DiffChart;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 
 /**
  * @author Christophe Meneses
@@ -22,7 +20,7 @@ abstract class Chart
     protected $data;
 
     /**
-     * @var ChartOptionsDraw
+     * @var ChartOptions
      */
     protected $options;
 
@@ -75,14 +73,14 @@ abstract class Chart
      *
      * @return string
      */
-    abstract protected function getType();
+    abstract public function getType();
 
     /**
      * Returns library used by chart.
      *
      * @return string
      */
-    protected function getLibrary()
+    public function getLibrary()
     {
         return 'visualization';
     }
@@ -102,61 +100,11 @@ abstract class Chart
     /**
      * Sets the instance Options.
      *
-     * @param ChartOptionsDraw $options
+     * @param ChartOptions $options
      *
-     * @return ChartOptionsDraw
+     * @return ChartOptions
      */
     abstract public function setOptions($options);
-
-    /**
-     * Returns the Javascript of the beginning of the chart (Declaration, data and options).
-     *
-     * @return string Javascript
-     *
-     * @throws GoogleChartsException
-     */
-    public function startDraw()
-    {
-        if (null === $this->elementID) {
-            throw new GoogleChartsException('Container is not defined.');
-        }
-
-        $js = 'var '.$this->getName().' = new google.'.$this->getLibrary().'.'.$this->getType().
-            '(document.getElementById("'.$this->elementID.'"));';
-
-        if (!$this instanceof DiffChart) {
-            $js .= $this->data->draw($this->getDataName());
-        } else {
-            $js .= $this->getOldChart()->getData()->draw('old_'.$this->getDataName()).
-                $this->getNewChart()->getData()->draw('new_'.$this->getDataName()).
-                'var '.$this->getDataName().' = '.$this->getName().
-                '.computeDiff(old_'.$this->getDataName().',
-                 new_'.$this->getDataName().');';
-        }
-
-        $js .= $this->options->draw($this->getOptionsName());
-
-        return $js;
-    }
-
-    /**
-     * Returns the Javascript of the end of the chart (Events and drawing).
-     *
-     * @return string
-     */
-    public function endDraw()
-    {
-        if ('visualization' == $this->getLibrary()) {
-            $options = $this->getOptionsName();
-        } else {
-            /* Options conversion for material charts */
-            $options = 'google.'.$this->getLibrary().'.'.$this->getType().
-                '.convertOptions('.$this->getOptionsName().')';
-        }
-
-        return $this->events->draw().$this->getName().
-            '.draw('.$this->getDataName().', '.$options.');';
-    }
 
     /**
      * @param string $elementID

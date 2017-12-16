@@ -27,7 +27,7 @@ class AreaChart extends Chart
      *
      * @return string
      */
-    protected function getType()
+    public function getType()
     {
         return 'AreaChart';
     }

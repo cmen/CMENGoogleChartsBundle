@@ -1,6 +1,6 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\ChartOutput;
+namespace CMEN\GoogleChartsBundle\Output;
 
 use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
@@ -10,6 +10,26 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
  */
 interface ChartOutputInterface
 {
+    /**
+     * Returns a string to draw the beginning of the chart (Declaration, data and options).
+     *
+     * @param Chart $chart
+     *
+     * @return string Javascript
+     *
+     * @throws GoogleChartsException
+     */
+    public function startChart(Chart $chart);
+
+    /**
+     * Returns a string to draw the end of the chart (Events and drawing).
+     *
+     * @param Chart $chart
+     *
+     * @return string
+     */
+    public function endChart(Chart $chart);
+
     /**
      * Returns a string to draw the beginning of one or more charts.
      *

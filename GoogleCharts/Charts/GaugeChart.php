@@ -25,7 +25,7 @@ class GaugeChart extends Chart
     /**
      * {@inheritdoc}
      */
-    protected function getType()
+    public function getType()
     {
         return 'Gauge';
     }

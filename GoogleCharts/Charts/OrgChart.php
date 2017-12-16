@@ -27,7 +27,7 @@ class OrgChart extends Chart
      *
      * @return string
      */
-    protected function getType()
+    public function getType()
     {
         return 'OrgChart';
     }

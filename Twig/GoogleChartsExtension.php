@@ -2,9 +2,9 @@
 
 namespace CMEN\GoogleChartsBundle\Twig;
 
-use CMEN\GoogleChartsBundle\ChartOutput\ChartOutputInterface;
 use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\Output\ChartOutputInterface;
 
 /**
  * @author Christophe Meneses
@@ -70,7 +70,7 @@ class GoogleChartsExtension extends \Twig_Extension
     /**
      * Returns the full Javascript to draw one or more charts.
      *
-     * @param Chart|Chart[] $charts Chart instance or array of Chart instance
+     * @param Chart|Chart[]        $charts     Chart instance or array of Chart instance
      * @param string|string[]|null $elementsID HTML element ID or array of HTML elements IDs. Can be null
      *
      * @return string

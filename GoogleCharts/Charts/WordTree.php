@@ -25,7 +25,7 @@ class WordTree extends Chart
     /**
      * {@inheritdoc}
      */
-    protected function getType()
+    public function getType()
     {
         return 'WordTree';
     }
