@@ -105,12 +105,4 @@ class GoogleChartsExtension extends \Twig_Extension
     {
         $this->chartOutput->setLanguage($language);
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
-    {
-        return 'cmen_google_charts_extension';
-    }
 }
