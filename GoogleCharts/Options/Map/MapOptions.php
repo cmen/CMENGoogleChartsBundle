@@ -2,13 +2,13 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Map;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineWidthTrait;
 
 /**
  * @author Christophe Meneses
  */
-class MapOptions extends ChartOptionsDraw
+class MapOptions implements ChartOptionsInterface
 {
     /**
      * If set to true, enables zooming in and out using the mouse scroll wheel.

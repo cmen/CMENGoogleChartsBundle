@@ -15,6 +15,9 @@ class AreaChart extends Chart
      */
     protected $options;
 
+    /**
+     * AreaChart constructor.
+     */
     public function __construct()
     {
         parent::__construct();

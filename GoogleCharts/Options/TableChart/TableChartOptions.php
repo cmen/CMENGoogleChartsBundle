@@ -3,13 +3,13 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\TableChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\HeightTrait;
 
 /**
  * @author Christophe Meneses
  */
-class TableChartOptions extends ChartOptionsDraw
+class TableChartOptions implements ChartOptionsInterface
 {
     use AllowHtmlTrait;
 
@@ -157,8 +157,6 @@ class TableChartOptions extends ChartOptionsDraw
      */
     public function __construct()
     {
-        parent::__construct();
-
         $this->cssClassNames = new CssClassNames();
     }
 

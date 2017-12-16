@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MaxTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MinTrait;
@@ -11,7 +12,7 @@ use DateTime;
 /**
  * @author Christophe Meneses
  */
-class AnnotationChartOptions extends ChartOptionsDraw
+class AnnotationChartOptions implements ChartOptionsInterface
 {
     use AllowHtmlTrait;
 
@@ -223,8 +224,6 @@ class AnnotationChartOptions extends ChartOptionsDraw
      */
     public function __construct()
     {
-        parent::__construct();
-
         $this->table = new Table();
     }
 

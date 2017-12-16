@@ -2,7 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\Output\Javascript;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\Output\AbstractOptionsOutput;
 
 /**
@@ -13,7 +13,7 @@ class OptionsOutput extends AbstractOptionsOutput
     /**
      * {@inheritdoc}
      */
-    public function draw(ChartOptions $options, $optionsName)
+    public function draw(ChartOptionsInterface $options, $optionsName)
     {
         $this->removeRecursivelyNullValue($options);
 

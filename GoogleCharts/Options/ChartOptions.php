@@ -5,7 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
 /**
  * @author Christophe Meneses
  */
-class ChartOptions
+class ChartOptions implements ChartOptionsInterface
 {
     use ForceIFrameTrait;
 

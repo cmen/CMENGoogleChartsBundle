@@ -2,14 +2,14 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GanttChart;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\HeightTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\WidthTrait;
 
 /**
  * @author Christophe Meneses
  */
-class GanttChartOptions extends ChartOptionsDraw
+class GanttChartOptions implements ChartOptionsInterface
 {
     /**
      * @var BackgroundColor
@@ -30,8 +30,6 @@ class GanttChartOptions extends ChartOptionsDraw
      */
     public function __construct()
     {
-        parent::__construct();
-
         $this->backgroundColor = new BackgroundColor();
         $this->gantt = new Gantt();
     }

@@ -2,7 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\Output;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
@@ -12,7 +12,7 @@ interface OptionsOutputInterface
     /**
      * Removes recursively array elements that have a null value.
      *
-     * @param ChartOptions|array $options ChartOptions instance or an array of options passed by reference
+     * @param ChartOptionsInterface|array $options ChartOptions instance or an array of options passed by reference
      */
     public function removeRecursivelyNullValue(&$options);
 
@@ -38,10 +38,10 @@ interface OptionsOutputInterface
      * a string or an array. If an option have a null value, an empty array or an empty class, it is not returned :
      * the default value will be applied.
      *
-     * @param ChartOptions $options
-     * @param string       $optionsName Variable name who will contain the options
+     * @param ChartOptionsInterface $options
+     * @param string                $optionsName Variable name who will contain the options
      *
      * @return string
      */
-    public function draw(ChartOptions $options, $optionsName);
+    public function draw(ChartOptionsInterface $options, $optionsName);
 }

@@ -2,7 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\Output;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
@@ -12,7 +12,7 @@ abstract class AbstractOptionsOutput implements OptionsOutputInterface
     /**
      * Removes recursively array elements that have a null value.
      *
-     * @param ChartOptions|array $options ChartOptions instance or an array of options passed by reference
+     * @param ChartOptionsInterface|array $options ChartOptions instance or an array of options passed by reference
      */
     public function removeRecursivelyNullValue(&$options)
     {

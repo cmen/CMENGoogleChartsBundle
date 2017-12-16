@@ -2,7 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
@@ -20,7 +20,7 @@ abstract class Chart
     protected $data;
 
     /**
-     * @var ChartOptions
+     * @var ChartOptionsInterface
      */
     protected $options;
 
@@ -100,9 +100,9 @@ abstract class Chart
     /**
      * Sets the instance Options.
      *
-     * @param ChartOptions $options
+     * @param ChartOptionsInterface $options
      *
-     * @return ChartOptions
+     * @return ChartOptionsInterface
      */
     abstract public function setOptions($options);
 

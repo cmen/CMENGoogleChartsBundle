@@ -3,12 +3,12 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\OrgChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
  */
-class OrgChartOptions extends ChartOptionsDraw
+class OrgChartOptions implements ChartOptionsInterface
 {
     /**
      * Determines if double click will collapse a node.
