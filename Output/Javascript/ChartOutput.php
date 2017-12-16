@@ -7,6 +7,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff\DiffChart;
 use CMEN\GoogleChartsBundle\Output\AbstractChartOutput;
 use CMEN\GoogleChartsBundle\Output\DataOutputInterface;
+use CMEN\GoogleChartsBundle\Output\EventsOutputInterface;
 use CMEN\GoogleChartsBundle\Output\OptionsOutputInterface;
 
 /**
@@ -20,6 +21,9 @@ class ChartOutput extends AbstractChartOutput
     /** @var DataOutputInterface */
     private $dataOutput;
 
+    /** @var EventsOutputInterface */
+    private $eventsOutput;
+
     /**
      * ChartOutput constructor.
      *
@@ -27,17 +31,20 @@ class ChartOutput extends AbstractChartOutput
      * @param string                 $language
      * @param OptionsOutputInterface $optionsOutput
      * @param DataOutputInterface    $dataOutput
+     * @param EventsOutputInterface  $eventsOutput
      */
     public function __construct(
         $version,
         $language,
         OptionsOutputInterface $optionsOutput,
-        DataOutputInterface $dataOutput
+        DataOutputInterface $dataOutput,
+        EventsOutputInterface $eventsOutput
     ) {
         parent::__construct($version, $language);
 
         $this->optionsOutput = $optionsOutput;
         $this->dataOutput = $dataOutput;
+        $this->eventsOutput = $eventsOutput;
     }
 
     /**
@@ -80,7 +87,7 @@ class ChartOutput extends AbstractChartOutput
                 '.convertOptions('.$chart->getOptionsName().')';
         }
 
-        return $chart->getEvents()->draw().$chart->getName().
+        return $this->eventsOutput->draw($chart->getEvents(), $chart->getName()).$chart->getName().
             '.draw('.$chart->getDataName().', '.$options.');';
     }
 

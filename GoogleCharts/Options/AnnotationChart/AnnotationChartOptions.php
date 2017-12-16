@@ -3,7 +3,6 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AllowHtmlTrait;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsDraw;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MaxTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MinTrait;

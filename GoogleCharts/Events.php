@@ -17,6 +17,11 @@ class Events
      */
     protected $chart;
 
+    /**
+     * Events constructor.
+     *
+     * @param Chart $chart
+     */
     public function __construct(Chart $chart)
     {
         $this->listeners = [];
@@ -32,23 +37,6 @@ class Events
     public function addListener($type, $functionName)
     {
         $this->listeners[] = new Listener($type, $functionName);
-    }
-
-    /**
-     * Returns Javascript of events.
-     *
-     * @return string Javascript
-     */
-    public function draw()
-    {
-        $js = '';
-
-        foreach ($this->listeners as $listener) {
-            $js .= 'google.visualization.events.addListener('.$this->chart->getName().", '".$listener->getType().
-                "', ".$listener->getFunction().');';
-        }
-
-        return $js;
     }
 
     /**

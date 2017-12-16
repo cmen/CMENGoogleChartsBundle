@@ -10,11 +10,15 @@
         <service id="CMEN\GoogleChartsBundle\Output\Javascript\DataOutput" class="CMEN\GoogleChartsBundle\Output\Javascript\DataOutput" public="false">
         </service>
 
+        <service id="CMEN\GoogleChartsBundle\Output\Javascript\EventsOutput" class="CMEN\GoogleChartsBundle\Output\Javascript\EventsOutput" public="false">
+        </service>
+
         <service id="CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput" class="CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput" public="false">
             <argument>%cmen_google_charts.version%</argument>
             <argument>%cmen_google_charts.language%</argument>
             <argument type="service" id="CMEN\GoogleChartsBundle\Output\Javascript\OptionsOutput"/>
             <argument type="service" id="CMEN\GoogleChartsBundle\Output\Javascript\DataOutput"/>
+            <argument type="service" id="CMEN\GoogleChartsBundle\Output\Javascript\EventsOutput"/>
         </service>
 
         <service id="CMEN\GoogleChartsBundle\Twig\GoogleChartsExtension" class="CMEN\GoogleChartsBundle\Twig\GoogleChartsExtension" public="false">
