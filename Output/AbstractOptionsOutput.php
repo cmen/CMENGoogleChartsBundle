@@ -1,13 +1,13 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts\Tools;
+namespace CMEN\GoogleChartsBundle\Output;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 
 /**
  * @author Christophe Meneses
  */
-class OptionsFormat
+abstract class AbstractOptionsOutput implements OptionsOutputInterface
 {
     /**
      * Removes recursively array elements that have a null value.

@@ -15,7 +15,7 @@ interface ChartOutputInterface
      *
      * @param Chart $chart
      *
-     * @return string Javascript
+     * @return string
      *
      * @throws GoogleChartsException
      */

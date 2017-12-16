@@ -19,6 +19,14 @@ class Listener
      */
     protected $functionName;
 
+    /**
+     * Listener constructor.
+     *
+     * @param string $type
+     * @param string $functionName
+     *
+     * @throws GoogleChartsException
+     */
     public function __construct($type, $functionName)
     {
         if (!in_array($type, ['select', 'ready', 'click', 'error', 'onmouseover', 'onmouseout'])) {

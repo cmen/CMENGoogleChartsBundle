@@ -2,8 +2,6 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
-use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
-
 /**
  * @author Christophe Meneses
  */
@@ -15,9 +13,18 @@ class Data
     private $arrayToDataTable;
 
     /**
-     * @var boolean
+     * @var bool
      */
     private $firstRowIsData;
+
+    /**
+     * Data constructor.
+     */
+    public function __construct()
+    {
+        $this->arrayToDataTable = [];
+        $this->firstRowIsData = false;
+    }
 
     /**
      * @return array
@@ -35,9 +42,9 @@ class Data
      * defined explicitly using object literal notation. Object literal notation may also be used for any cell,
      * allowing you to define Cell Objects).
      *
-     * @param array $arrayToDataTable A two-dimensional array, where each row represents a row in the data table.
-     * @param bool  $firstRowIsData   If firstRowIsData is false (the default), the first row will be interpreted
-     *                                as header labels.
+     * @param array $arrayToDataTable a two-dimensional array, where each row represents a row in the data table
+     * @param bool  $firstRowIsData   if firstRowIsData is false (the default), the first row will be interpreted
+     *                                as header labels
      */
     public function setArrayToDataTable($arrayToDataTable, $firstRowIsData = false)
     {
@@ -46,55 +53,10 @@ class Data
     }
 
     /**
-     * Returns Javascript of data.
-     *
-     * @param string $dataName Variable name who will contain the data Javascript
-     *
-     * @return string A Javascript string
-     *
-     * @throws GoogleChartsException
+     * @return bool
      */
-    public function draw($dataName)
+    public function isFirstRowIsData()
     {
-        if (!$this->arrayToDataTable) {
-            throw new GoogleChartsException(
-                'There is no data for chart. Use method setArrayToDataTable() to provide data.'
-            );
-        }
-
-        $js = "var $dataName = new google.visualization.arrayToDataTable([";
-
-        end($this->arrayToDataTable);
-        $lastKeyRow = key($this->arrayToDataTable);
-        foreach ($this->arrayToDataTable as $keyRow => $row) {
-            $js .= '[';
-
-            end($row);
-            $lastKeyValue = key($row);
-            foreach ($row as $key => $value) {
-                if ($value instanceof \DateTime) {
-                    $js .= 'new Date('.$value->format('Y').', '.($value->format('n') - 1).', '.
-                        $value->format('d').', '.$value->format('H').', '.$value->format('i').', '.
-                        $value->format('s').')';
-                } else {
-                    $js .= json_encode($value);
-                }
-
-                if ($key != $lastKeyValue) {
-                    $js .= ', ';
-                }
-            }
-            unset($value);
-            $js .= ']';
-
-            if ($keyRow != $lastKeyRow) {
-                $js .= ', ';
-            }
-        }
-        unset($row);
-
-        $this->firstRowIsData ? $js .= '], true);' : $js .= '], false);';
-
-        return $js;
+        return $this->firstRowIsData;
     }
 }

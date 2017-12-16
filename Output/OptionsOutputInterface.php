@@ -7,7 +7,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptions;
 /**
  * @author Christophe Meneses
  */
-interface OptionOutputInterface
+interface OptionsOutputInterface
 {
     /**
      * Removes recursively array elements that have a null value.
@@ -38,10 +38,10 @@ interface OptionOutputInterface
      * a string or an array. If an option have a null value, an empty array or an empty class, it is not returned :
      * the default value will be applied.
      *
-     * @param string       $optionsName Variable name who will contain the options
      * @param ChartOptions $options
+     * @param string       $optionsName Variable name who will contain the options
      *
-     * @return string Javascript
+     * @return string
      */
-    public function draw($optionsName, ChartOptions $options);
+    public function draw(ChartOptions $options, $optionsName);
 }

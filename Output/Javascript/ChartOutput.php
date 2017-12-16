@@ -6,28 +6,38 @@ use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff\DiffChart;
 use CMEN\GoogleChartsBundle\Output\AbstractChartOutput;
-use CMEN\GoogleChartsBundle\Output\OptionOutputInterface;
+use CMEN\GoogleChartsBundle\Output\DataOutputInterface;
+use CMEN\GoogleChartsBundle\Output\OptionsOutputInterface;
 
 /**
  * @author Christophe Meneses
  */
 class ChartOutput extends AbstractChartOutput
 {
-    /** @var OptionOutputInterface */
-    private $optionOutput;
+    /** @var OptionsOutputInterface */
+    private $optionsOutput;
+
+    /** @var DataOutputInterface */
+    private $dataOutput;
 
     /**
-     * JavascriptChartOutput constructor.
+     * ChartOutput constructor.
      *
-     * @param string                $version
-     * @param string                $language
-     * @param OptionOutputInterface $optionOutput
+     * @param string                 $version
+     * @param string                 $language
+     * @param OptionsOutputInterface $optionsOutput
+     * @param DataOutputInterface    $dataOutput
      */
-    public function __construct($version, $language, OptionOutputInterface $optionOutput)
-    {
+    public function __construct(
+        $version,
+        $language,
+        OptionsOutputInterface $optionsOutput,
+        DataOutputInterface $dataOutput
+    ) {
         parent::__construct($version, $language);
 
-        $this->optionOutput = $optionOutput;
+        $this->optionsOutput = $optionsOutput;
+        $this->dataOutput = $dataOutput;
     }
 
     /**
@@ -43,16 +53,16 @@ class ChartOutput extends AbstractChartOutput
             '(document.getElementById("'.$chart->getElementID().'"));';
 
         if (!$chart instanceof DiffChart) {
-            $js .= $chart->getData()->draw($chart->getDataName());
+            $js .= $this->dataOutput->draw($chart->getData(), $chart->getDataName());
         } else {
-            $js .= $chart->getOldChart()->getData()->draw('old_'.$chart->getDataName()).
-                $chart->getNewChart()->getData()->draw('new_'.$chart->getDataName()).
+            $js .= $this->dataOutput->draw($chart->getOldChart()->getData(), 'old_'.$chart->getDataName()).
+                $this->dataOutput->draw($chart->getNewChart()->getData(), 'new_'.$chart->getDataName()).
                 'var '.$chart->getDataName().' = '.$chart->getName().
                 '.computeDiff(old_'.$chart->getDataName().',
                  new_'.$chart->getDataName().');';
         }
 
-        $js .= $this->optionOutput->draw($chart->getOptionsName(), $chart->getOptions());
+        $js .= $this->optionsOutput->draw($chart->getOptions(), $chart->getOptionsName());
 
         return $js;
     }
