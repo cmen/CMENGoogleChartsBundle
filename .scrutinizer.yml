@@ -3,11 +3,11 @@ filter:
         - Tests/*
 build:
     environment:
-        php: '5.6.16'
+        php: '5.6.9'
     tests:
         override:
             -
-                command: 'phpunit --coverage-clover=coverage-file'
+                command: 'vendor/bin/phpunit --coverage-clover=coverage-file'
                 coverage:
                     file: 'coverage-file'
                     format: 'clover'
