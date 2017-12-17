@@ -72,7 +72,7 @@ interface ChartOutputInterface
      *
      * @return string
      */
-    public function loadLibraries($packages);
+    public function loadLibraries(array $packages);
 
     /**
      * Returns a string for the beginning of the callback.

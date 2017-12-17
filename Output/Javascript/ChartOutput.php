@@ -174,7 +174,7 @@ class ChartOutput extends AbstractChartOutput
     /**
      * {@inheritdoc}
      */
-    public function loadLibraries($packages)
+    public function loadLibraries(array $packages)
     {
         array_walk($packages, function (&$item) {
             $item = "'".$item."'";
