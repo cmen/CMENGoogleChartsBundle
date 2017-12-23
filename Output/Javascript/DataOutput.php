@@ -5,12 +5,26 @@ namespace CMEN\GoogleChartsBundle\Output\Javascript;
 use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Data;
 use CMEN\GoogleChartsBundle\Output\DataOutputInterface;
+use CMEN\GoogleChartsBundle\Output\DateOutputInterface;
 
 /**
  * @author Christophe Meneses
  */
 class DataOutput implements DataOutputInterface
 {
+    /** @var DateOutputInterface */
+    private $dateOutput;
+
+    /**
+     * DataOutput constructor.
+     *
+     * @param DateOutputInterface $dateOutput
+     */
+    public function __construct(DateOutputInterface $dateOutput)
+    {
+        $this->dateOutput = $dateOutput;
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -35,9 +49,7 @@ class DataOutput implements DataOutputInterface
             $lastKeyValue = key($row);
             foreach ($row as $key => $value) {
                 if ($value instanceof \DateTimeInterface) {
-                    $js .= 'new Date('.$value->format('Y').', '.($value->format('n') - 1).', '.
-                        $value->format('d').', '.$value->format('H').', '.$value->format('i').', '.
-                        $value->format('s').')';
+                    $js .= $this->dateOutput->draw($value);
                 } else {
                     $js .= json_encode($value);
                 }
@@ -46,14 +58,12 @@ class DataOutput implements DataOutputInterface
                     $js .= ', ';
                 }
             }
-            unset($value);
             $js .= ']';
 
             if ($keyRow != $lastKeyRow) {
                 $js .= ', ';
             }
         }
-        unset($row);
 
         $data->isFirstRowIsData() ? $js .= '], true);' : $js .= '], false);';
 
