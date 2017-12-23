@@ -2,9 +2,13 @@
 
 namespace Tests\CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnChart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 use CMEN\GoogleChartsBundle\Output\ChartOutputInterface;
 use CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\DataOutput;
+use CMEN\GoogleChartsBundle\Output\Javascript\DateOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\EventsOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\OptionsOutput;
 
@@ -21,17 +25,15 @@ class ColumnChartTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $optionsOutput = new OptionsOutput();
-        $dataOutput = new DataOutput();
+        $dateOutput = new DateOutput();
+        $optionsOutput = new OptionsOutput($dateOutput);
+        $dataOutput = new DataOutput($dateOutput);
         $eventsOutput = new EventsOutput();
 
         $this->chartOutput = new ChartOutput('current', 'en', $optionsOutput, $dataOutput, $eventsOutput);
     }
 
-    /*
-     * TODO
-     */
-    /*public function testJavascriptOutput()
+    public function testJavascriptOutput()
     {
         $chart = new ColumnChart();
         $chart->setElementID('div-chart')
@@ -60,7 +62,15 @@ class ColumnChartTest extends \PHPUnit_Framework_TestCase
                 ->setStroke('#888')
                 ->setStrokeWidth(1)
                 ->setRx(10)
-                ->setRy(10);
+                ->setRy(10)
+                ->getGradient()
+                    ->setColor1('#fbf6a7')
+                    ->setColor2('#33b679')
+                    ->setX1('0%')
+                    ->setX2('100%')
+                    ->setY1('0%')
+                    ->setY2('100%')
+                    ->setUseObjectBoundingBoxUnits(true);
         $chart->getOptions()->getAnnotations()
             ->getDatum()
                 ->setStyle('point')
@@ -333,8 +343,9 @@ class ColumnChartTest extends \PHPUnit_Framework_TestCase
 
         $chart->getOptions()->setWidth(700);
 
+        /** @noinspection PhpUnhandledExceptionInspection */
         $js = $this->chartOutput->fullCharts($chart);
 
-        $this->assertContains('{"animation":{"startup":true,"duration":1000,"easing":"in"},"annotations":{"alwaysOutside":true,"boxStyle":{"stroke":"#888","strokeWidth":1,"rx":10,"ry":10},"datum":{"stem":{"color":"black","length":12},"style":"point"},"domain":{"stem":{"color":"black","length":5},"style":"point"},"highContrast":true,"stem":{"color":"black","length":5},"style":"point","textStyle":{"auraColor":"#d799ae","opacity":0.8,"bold":true,"italic":true,"color":"#871b47","fontName":"Times-Roman","fontSize":18}},"bar":{"groupWidth":"61.8%"},"dataOpacity":1,"explorer":{"actions":["dragToPan","rightClickToReset"],"axis":"vertical","keepInBounds":false,"maxZoomIn":0.25,"maxZoomOut":4,"zoomDelta":1.5},"focusTarget":"datum","hAxis":{"allowContainerBoundaryTextCufoff":false,"slantedText":false,"slantedTextAngle":30,"maxAlternation":2,"maxTextLines":5,"minTextSpacing":5,"showTextEvery":1,"baseline":5,"baselineColor":"black","direction":1,"format":"decimal","logScale":false,"scaleType":"log","maxValue":100,"minValue":1,"ticks":[5,10,15,20],"gridlines":{"color":"#CCC","count":5,"units":{"years":{"format":"yyyy"},"months":{"format":"M"},"days":{"format":"d"},"hours":{"format":"H"},"minutes":{"format":"i"},"seconds":{"format":"s"},"milliseconds":{"format":"u"}}},"minorGridlines":{"color":"black","count":0,"units":{"years":{"format":"yyyy"},"months":{"format":"M"},"days":{"format":"d"},"hours":{"format":"H"},"minutes":{"format":"i"},"seconds":{"format":"s"},"milliseconds":{"format":"u"}}},"textPosition":"out","textStyle":{"bold":true,"italic":true,"color":"black","fontName":"Times-Roman","fontSize":12},"title":"title","titleTextStyle":{"color":"black","fontName":"Arial","fontSize":18,"bold":true,"italic":true},"viewWindow":{"max":100,"min":1},"viewWindowMode":"pretty"},"isStacked":false,"legend":{"alignment":"start","position":"right","textStyle":{"bold":false,"italic":false,"color":"black","fontName":"Arial","fontSize":10}},"orientation":"horizontal","reverseCategories":false,"tooltip":{"ignoreBounds":false,"showColorCode":false,"textStyle":{"bold":false,"italic":false,"color":"black","fontName":"Arial","fontSize":10},"trigger":"focus","isHtml":false},"vAxes":[{"title":"v1"},{"title":"v2"}],"axisTitlesPosition":"out","series":{"0":{"color":"black","visibleInLegend":false},"3":{"color":"red","visibleInLegend":false}},"theme":"maximized","titlePosition":"out","vAxis":{"baseline":5,"baselineColor":"black","direction":1,"format":"decimal","gridlines":{"color":"#CCC","count":5,"units":{"years":{"format":"yyyy"},"months":{"format":"M"},"days":{"format":"d"},"hours":{"format":"H"},"minutes":{"format":"i"},"seconds":{"format":"s"},"milliseconds":{"format":"u"}}},"minorGridlines":{"color":"black","count":0,"units":{"years":{"format":"yyyy"},"months":{"format":"M"},"days":{"format":"d"},"hours":{"format":"H"},"minutes":{"format":"i"},"seconds":{"format":"s"},"milliseconds":{"format":"u"}}},"logScale":false,"scaleType":"log","textPosition":"out","textStyle":{"bold":true,"italic":true,"color":"black","fontName":"Times-Roman","fontSize":12},"ticks":[5,10,15,20],"title":"title","titleTextStyle":{"color":"black","fontName":"Arial","fontSize":18,"bold":true,"italic":true},"maxValue":100,"minValue":1,"viewWindowMode":"pretty","viewWindow":{"max":100,"min":1}},"backgroundColor":{"fill":"white","stroke":"#666","strokeWidth":0},"chartArea":{"backgroundColor":{"stroke":"black","strokeWidth":1},"height":"auto","left":"auto","top":"auto","width":"auto"},"colors":["red","#004411"],"fontSize":12,"fontName":"Arial","title":"Title","titleTextStyle":{"color":"black","fontName":"Arial","fontSize":18,"bold":false,"italic":false},"enableInteractivity":true,"forceIFrame":false,"height":500,"width":700}', $js);
-    }*/
+        $this->assertContains('{"animation":{"startup":true,"duration":1000,"easing":"in"}, "annotations":{"alwaysOutside":true,"boxStyle":{"rx":10,"ry":10,"gradient":{"color1":"#fbf6a7","color2":"#33b679","x1":"0%","y1":"0%","x2":"100%","y2":"100%","useObjectBoundingBoxUnits":true},"stroke":"#888","strokeWidth":1},"datum":{"stem":{"length":12,"color":"black"},"style":"point"},"domain":{"stem":{"length":5,"color":"black"},"style":"point"},"highContrast":true,"stem":{"length":5,"color":"black"},"style":"point","textStyle":{"auraColor":"#d799ae","color":"#871b47","fontName":"Times-Roman","fontSize":18,"bold":true,"italic":true,"opacity":0.8}}, "bar":{"groupWidth":"61.8%"}, "explorer":{"actions":["dragToPan","rightClickToReset"],"axis":"vertical","keepInBounds":false,"maxZoomIn":0.25,"maxZoomOut":4,"zoomDelta":1.5}, "hAxis":{"allowContainerBoundaryTextCufoff":false,"slantedText":false,"slantedTextAngle":30,"maxAlternation":2,"maxTextLines":5,"minTextSpacing":5,"showTextEvery":1,"baseline":5,"baselineColor":"black","direction":1,"format":"decimal","logScale":false,"scaleType":"log","maxValue":100,"minValue":1,"ticks":[5,10,15,20],"gridlines":{"count":5,"units":{"years":{"format":"yyyy"},"months":{"format":"M"},"days":{"format":"d"},"hours":{"format":"H"},"minutes":{"format":"i"},"seconds":{"format":"s"},"milliseconds":{"format":"u"}},"color":"#CCC"},"minorGridlines":{"count":0,"units":{"years":{"format":"yyyy"},"months":{"format":"M"},"days":{"format":"d"},"hours":{"format":"H"},"minutes":{"format":"i"},"seconds":{"format":"s"},"milliseconds":{"format":"u"}},"color":"black"},"textPosition":"out","textStyle":{"color":"black","fontName":"Times-Roman","fontSize":12,"bold":true,"italic":true},"titleTextStyle":{"color":"black","fontName":"Arial","fontSize":18,"bold":true,"italic":true},"viewWindow":{"max":100,"min":1},"viewWindowMode":"pretty","title":"title"}, "legend":{"alignment":"start","position":"right","textStyle":{"color":"black","fontName":"Arial","fontSize":10,"bold":false,"italic":false}}, "tooltip":{"ignoreBounds":false,"showColorCode":false,"textStyle":{"color":"black","fontName":"Arial","fontSize":10,"bold":false,"italic":false},"isHtml":false,"trigger":"focus"}, "vAxis":{"baseline":5,"baselineColor":"black","direction":1,"format":"decimal","gridlines":{"count":5,"units":{"years":{"format":"yyyy"},"months":{"format":"M"},"days":{"format":"d"},"hours":{"format":"H"},"minutes":{"format":"i"},"seconds":{"format":"s"},"milliseconds":{"format":"u"}},"color":"#CCC"},"minorGridlines":{"count":0,"units":{"years":{"format":"yyyy"},"months":{"format":"M"},"days":{"format":"d"},"hours":{"format":"H"},"minutes":{"format":"i"},"seconds":{"format":"s"},"milliseconds":{"format":"u"}},"color":"black"},"logScale":false,"scaleType":"log","textPosition":"out","textStyle":{"color":"black","fontName":"Times-Roman","fontSize":12,"bold":true,"italic":true},"ticks":[5,10,15,20],"titleTextStyle":{"color":"black","fontName":"Arial","fontSize":18,"bold":true,"italic":true},"maxValue":100,"minValue":1,"viewWindowMode":"pretty","viewWindow":{"max":100,"min":1},"title":"title"}, "backgroundColor":{"stroke":"#666","strokeWidth":0,"fill":"white"}, "chartArea":{"backgroundColor":{"stroke":"black","strokeWidth":1},"height":"auto","left":"auto","top":"auto","width":"auto"}, "titleTextStyle":{"color":"black","fontName":"Arial","fontSize":18,"bold":false,"italic":false}, "forceIFrame":false, "height":500, "width":700, "enableInteractivity":true, "colors":["red","#004411"], "fontName":"Arial", "fontSize":12, "title":"Title", "axisTitlesPosition":"out", "series":{"0":{"color":"black","visibleInLegend":false},"3":{"color":"red","visibleInLegend":false}}, "theme":"maximized", "titlePosition":"out", "dataOpacity":1, "focusTarget":"datum", "isStacked":false, "orientation":"horizontal", "reverseCategories":false, "vAxes":[{"title":"v1"},{"title":"v2"}]};', $js);
+    }
 }

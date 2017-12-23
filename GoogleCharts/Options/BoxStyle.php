@@ -39,6 +39,14 @@ class BoxStyle
     }
 
     /**
+     * @return Gradient
+     */
+    public function getGradient()
+    {
+        return $this->gradient;
+    }
+
+    /**
      * @param int $rx
      *
      * @return $this
