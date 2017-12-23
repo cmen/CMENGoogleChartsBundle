@@ -15,6 +15,9 @@ class GanttChart extends Chart
      */
     protected $options;
 
+    /**
+     * GanttChart constructor.
+     */
     public function __construct()
     {
         parent::__construct();

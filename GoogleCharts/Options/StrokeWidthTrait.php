@@ -12,12 +12,12 @@ trait StrokeWidthTrait
      *
      * Default: '0'
      *
-     * @var int
+     * @var int|float
      */
     protected $strokeWidth;
 
     /**
-     * @param int $strokeWidth
+     * @param int|float $strokeWidth
      *
      * @return $this
      */

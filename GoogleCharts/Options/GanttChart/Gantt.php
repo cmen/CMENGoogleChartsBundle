@@ -2,8 +2,6 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\GanttChart;
 
-use DateTime;
-
 /**
  * @author Christophe Meneses
  */
@@ -42,9 +40,9 @@ class Gantt
 
     /**
      * If the start date cannot be computed from the values in the DataTable, the start date will be set to this.
-     * Accepts a date value (YYYY, M, D) or a number, which is the number of milliseconds to use.
+     * Accepts a number, which is the number of milliseconds to use.
      *
-     * @var DateTime|int
+     * @var int
      */
     protected $defaultStartDate;
 
@@ -222,7 +220,7 @@ class Gantt
     }
 
     /**
-     * @param DateTime|int $defaultStartDate
+     * @param int $defaultStartDate
      *
      * @return $this
      */
