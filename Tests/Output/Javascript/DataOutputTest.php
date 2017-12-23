@@ -4,6 +4,7 @@ namespace Tests\CMEN\GoogleChartsBundle\Output\Javascript;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Data;
 use CMEN\GoogleChartsBundle\Output\Javascript\DataOutput;
+use CMEN\GoogleChartsBundle\Output\Javascript\DateOutput;
 
 /**
  * @author Christophe Meneses
@@ -20,7 +21,7 @@ class DataOutputTest extends \PHPUnit_Framework_TestCase
     {
         $data = new Data();
 
-        $dataOutput = new DataOutput();
+        $dataOutput = new DataOutput(new DateOutput());
         $dataOutput->draw($data, 'dataName');
     }
 }

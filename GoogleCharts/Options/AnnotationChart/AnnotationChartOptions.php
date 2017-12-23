@@ -14,14 +14,14 @@ use DateTime;
  */
 class AnnotationChartOptions implements ChartOptionsInterface
 {
-    use AllowHtmlTrait;
-
     /**
      * A suffix to be added to all values in the legend and tick labels in the vertical axes.
      *
      * @var string
      */
     protected $allValuesSuffix;
+
+    use AllowHtmlTrait;
 
     /**
      * The width (in percent) of the annotations area, out of the entire chart area. Must be a number in the range 5-80.

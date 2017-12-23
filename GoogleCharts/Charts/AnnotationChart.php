@@ -15,6 +15,9 @@ class AnnotationChart extends Chart
      */
     protected $options;
 
+    /**
+     * AnnotationChart constructor.
+     */
     public function __construct()
     {
         parent::__construct();
