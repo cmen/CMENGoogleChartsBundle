@@ -34,7 +34,7 @@ class DataOutput implements DataOutputInterface
             end($row);
             $lastKeyValue = key($row);
             foreach ($row as $key => $value) {
-                if ($value instanceof \DateTime) {
+                if ($value instanceof \DateTimeInterface) {
                     $js .= 'new Date('.$value->format('Y').', '.($value->format('n') - 1).', '.
                         $value->format('d').', '.$value->format('H').', '.$value->format('i').', '.
                         $value->format('s').')';
