@@ -1,5 +1,5 @@
 # Cookbook
-Here, you can find recipes to recreate charts demo in [Google documentation] (https://google-developers.appspot.com/chart/interactive/docs/gallery).
+Here, you can find recipes to recreate charts demo in [Google documentation](https://google-developers.appspot.com/chart/interactive/docs/gallery).
 
 ## Annotation Chart
 ```

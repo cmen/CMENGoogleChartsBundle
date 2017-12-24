@@ -1,12 +1,12 @@
 # Installation
 
-## Step 1 : Download stable version of CMENGoogleChartsBundle using Composer
+## Step 1 : Download stable version using Composer
 ```
 composer require cmen/google-charts-bundle
 ```
-Composer will install the bundle to your project's vendor directory.
+Composer will install the bundle in *vendor* directory.
 
-## Step 2 : Enable the bundle
+## Step 2 : Enable the bundle (only for Symfony < 4)
 Enable the bundle in the kernel :
 ```
 <?php
@@ -22,31 +22,27 @@ public function registerBundles()
 ```
 
 ## Step 3 (optional) : Configure version of Google Charts
+If you use Symfony < 4 put the configuration in **app/config.yml**, otherwise put the configuration in **config/packages/cmen_google_charts.yaml**.
+
 The latest stable version :
 ```
-# app/config.yml
-...
 cmen_google_charts:
     version: "current"
 ```
 
 The next version in development :
 ```
-# app/config.yml
-...
 cmen_google_charts:
     version: "upcoming"
 ```
 
 A frozen version :
 ```
-# app/config.yml
-...
 cmen_google_charts:
     version: "45"
 ```
 
-See this [page] (https://developers.google.com/chart/interactive/docs/basic_load_libs#load-version-name-or-number) 
+See this [page](https://developers.google.com/chart/interactive/docs/basic_load_libs#load-version-name-or-number) 
 for more information.
 
 If you do not configure the bundle, the latest stable version is used.

@@ -16,12 +16,6 @@
 * [Events](Resources/doc/events.md)
 * [Google Charts documentation](https://developers.google.com/chart/interactive/docs/)
 
-## Version
-| CMENGoogleChartsBundle       | Google Charts    |
-| :--------------------------: | :--------------: |
-| >= 2.0                       |       >= 45      |
-| <= 1.1                       |       < 45       |
-
 ## Examples
 
 ![Pie Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/g2.png)  
