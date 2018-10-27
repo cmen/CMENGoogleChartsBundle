@@ -2,7 +2,7 @@
 Diff charts are available for bar charts, column charts, pie charts, and scatter charts. See [Google documentation](https://developers.google.com/chart/interactive/docs/gallery/diffchart).
 
 Here you can find an example to create a diff column chart. First in your controller :
-```
+```php
 public function indexAction()
 {
     $oldColumnChart = new ColumnChart();
@@ -46,7 +46,7 @@ public function indexAction()
 ```
 
 And in your template :
-```
+```twig
 <!-- index.html.twig -->
 <html>
 <head></head>

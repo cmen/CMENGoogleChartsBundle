@@ -4,7 +4,7 @@
 The [following example ](https://developers.google.com/chart/interactive/docs/events#event-handling-example) demonstrates both getSelection() and setSelection(). It synchronizes the selection between two charts that use the same data table. Click on either chart to synchronize the selection in the other chart.
 
 In your controller :
-```
+```php
 public function eventAction()
 {
     $data =  [
@@ -30,7 +30,7 @@ public function eventAction()
 ```
 
 In your template, you must use the Twig functions `gc_start`, `gc_end` and `gc_event` to add an event to a chart :
-```
+```twig
 <!-- index.html.twig -->
 <html>
 <head></head>
@@ -62,7 +62,7 @@ In your template, you must use the Twig functions `gc_start`, `gc_end` and `gc_e
 The following example can be found [here in Google documentation](https://developers.google.com/chart/interactive/docs/printing#overview).
 
 In your controller :
-```
+```php
 public function event2Action()
 {
     $chart = new ColumnChart();
@@ -81,7 +81,7 @@ public function event2Action()
 ```
 
 In your template :
-```
+```twig
 <!-- index.html.twig -->
 <html>
 <head></head>

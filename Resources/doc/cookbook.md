@@ -2,7 +2,7 @@
 Here, you can find recipes to recreate charts demo in [Google documentation](https://google-developers.appspot.com/chart/interactive/docs/gallery).
 
 ## Annotation Chart
-```
+```php
 $anno = new AnnotationChart();
 $anno->getData()->setArrayToDataTable([
     [['label' => 'Date', 'type' => 'date'], ['label' => 'Kepler-22b mission', 'type' => 'number'],
@@ -21,7 +21,7 @@ $anno->getOptions()->setDisplayAnnotations(true);
 ```
 
 ## Area Chart
-```
+```php
 $area = new AreaChart();
 $area->getData()->setArrayToDataTable([
     ['Year', 'Sales', 'Expenses'],
@@ -37,7 +37,7 @@ $area->getOptions()->getVAxis()->setMinValue(0);
 ```
 
 ## Bar Chart
-```
+```php
 $bar = new BarChart();
 $bar->getData()->setArrayToDataTable([
     ['City', '2010 Population', '2000 Population'],
@@ -60,7 +60,7 @@ Warning : the Material Charts are in beta.
 
 ![Material Bar Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matbar.png) 
 
-```
+```php
 $chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\BarChart();
 $chart->getData()->setArrayToDataTable([
     ['Galaxy', 'Distance', 'Brightness'],
@@ -85,7 +85,7 @@ $chart->getOptions()
 ```
 
 ## Bubble Chart
-```
+```php
 $bubble = new BubbleChart();
 $bubble->getData()->setArrayToDataTable([
     ['ID', 'Life Expectancy', 'Fertility Rate', 'Region',     'Population'],
@@ -116,7 +116,7 @@ $bubble->getOptions()->setHeight(500);
 ```
 
 ## Calendar Chart
-```
+```php
 $cal = new CalendarChart();
 $cal->getData()->setArrayToDataTable(
     [
@@ -174,7 +174,7 @@ $cal->getOptions()->getCalendar()->getYearLabel()->setItalic(true);
 ```
 
 ## Candlestick Chart
-```
+```php
 $candle = new CandlestickChart();
 $candle->getData()->setArrayToDataTable([
     ['Mon', 28, 28, 38, 38],
@@ -195,7 +195,7 @@ $candle->getOptions()->setHeight(500);
 ```
 
 ## Column Chart
-```
+```php
 $col = new ColumnChart();
 $col->getData()->setArrayToDataTable(
     [
@@ -231,7 +231,7 @@ Warning : the Material Charts are in beta.
 
 ![Material Column Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matcol.png) 
 
-```
+```php
 $chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\ColumnChart();
 $chart->getData()->setArrayToDataTable([
     ['Year', 'Sales', 'Expenses', 'Profit'],
@@ -254,7 +254,7 @@ $chart->getOptions()
 ```
 
 ## Combo Chart
-```
+```php
 $combo = new ComboChart();
 $combo->getData()->setArrayToDataTable([
     ['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
@@ -278,7 +278,7 @@ $combo->getOptions()->setHeight(500);
 ```
 
 ## Combo Chart with multiple vertical axes
-```
+```php
 $data[] = ['Year', 'Income', ['role' => 'tooltip'], 'Cost', ['role' => 'tooltip'], 'Evolution', ['role' => 'tooltip']];
 $data[] = ['2012', 106756, '106 756 €', 67450, '67 450 €', 12.54, '12.54 %'];
 $data[] = ['2013', 153765, '153 765 €', 82345, '82 345 €', 18.12, '18.12 %'];
@@ -320,7 +320,7 @@ $chart->getOptions()->getHAxis()->setTitle('Year');
 ```
 
 ## Candlestick Chart
-```
+```php
 $candle = new CandlestickChart();
 $candle->getData()->setArrayToDataTable([
     ['Mon', 28, 28, 38, 38],
@@ -340,7 +340,7 @@ $candle->getOptions()->setHeight(500);
 ```
 
 ## Gantt Chart
-```
+```php
 $gantt = new GanttChart();
 $gantt->getData()->setArrayToDataTable([
     [['label' => 'Task ID', 'type' => 'string'], ['label' => 'Task Name', 'type' => 'string'],
@@ -378,7 +378,7 @@ $gantt->getOptions()->setWidth(900);
 ```
 
 ## Gauge Chart
-```
+```php
 $gauge = new GaugeChart();
 $gauge->getData()->setArrayToDataTable([
     ['Label', 'Value'],
@@ -398,7 +398,7 @@ $gauge->getOptions()->setMinorTicks(5);
 ```
 
 ## Geo Chart
-```
+```php
 $geo = new GeoChart();
 $geo->getData()->setArrayToDataTable(
     [
@@ -424,7 +424,7 @@ $geo->getOptions()->setHeight(500);
 ```
 
 ## Histogram
-```
+```php
 $histo = new Histogram();
 $histo->getData()->setArrayToDataTable([
     ['Dinosaur', 'Length'],
@@ -464,7 +464,7 @@ $histo->getOptions()->setColors(['green']);
 ```
 
 ## Line Chart
-```
+```php
 $line = new LineChart();
 $line->getData()->setArrayToDataTable(
     [
@@ -496,7 +496,7 @@ Warning : the Material Charts are in beta.
 
 ![Material Line Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matline.png) 
 
-```
+```php
 $chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\LineChart();
 $chart->getData()->setArrayToDataTable([
     ['Month', 'Average Temperature', 'Average Hours of Daylight'],
@@ -524,7 +524,7 @@ $chart->getOptions()
 ```
 
 ## Map
-```
+```php
 $map = new Map();
 $map->getData()->setArrayToDataTable(
     [
@@ -554,7 +554,7 @@ $map->getOptions()->setMaps(
 ```
 
 ## Org Chart
-```
+```php
 $org = new OrgChart();
 $org->getData()->setArrayToDataTable(
     [
@@ -570,7 +570,7 @@ $org->getOptions()->setAllowHtml(true);
 ```
 
 ## Pie Chart
-```
+```php
 $pieChart = new PieChart();
 $pieChart->getData()->setArrayToDataTable(
     [
@@ -595,7 +595,7 @@ $pieChart->getOptions()->getTooltip()->setTrigger('none');
 ```
 
 ## Sankey Diagram
-```
+```php
 $sankey = new SankeyDiagram();
 $sankey->getData()->setArrayToDataTable(
     [
@@ -663,7 +663,7 @@ $sankey->getOptions()->getSankey()->getNode()->setNodePadding(60);
 ```
 
 ## Scatter Chart
-```
+```php
 $scatter = new ScatterChart();
 $scatter->getData()->setArrayToDataTable([
     ['Age', 'Weight'],
@@ -689,7 +689,7 @@ Warning : the Material Charts are in beta.
 
 ![Material Scatter Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matscat.png) 
 
-```
+```php
 $chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\ScatterChart();
 $chart->getData()->setArrayToDataTable([
     ['Student ID', 'Hours Studied', 'Final'],
@@ -718,7 +718,7 @@ $chart->getOptions()
 ```
 
 ## Stepped Area Chart
-```
+```php
 $sarea = new SteppedAreaChart();
 $sarea->getData()->setArrayToDataTable(
     [
@@ -736,7 +736,7 @@ $sarea->getOptions()->setWidth(900);
 ```
 
 ## Table Chart
-```
+```php
 $table = new TableChart();
 $table->getData()->setArrayToDataTable(
     [
@@ -754,7 +754,7 @@ $table->getOptions()->setWidth('30%');
 ```
 
 ## Timeline
-```
+```php
 $timeline = new Timeline();
 $timeline->getData()->setArrayToDataTable(
     [
@@ -773,7 +773,7 @@ $timeline->getOptions()->setColors(['#cbb69d', '#603913', '#c69c6e']);
 ```
 
 ## Tree Map Chart
-```
+```php
 $treemap = new TreeMapChart();
 $treemap->getData()->setArrayToDataTable(
     [
@@ -819,7 +819,7 @@ $treemap->getOptions()->setHeight(500);
 ```
 
 ## Word Tree
-```
+```php
 $wordTree = new WordTree();
 $wordTree->getData()->setArrayToDataTable(
     [ ['Phrases'],

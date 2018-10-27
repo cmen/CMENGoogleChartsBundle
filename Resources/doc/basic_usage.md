@@ -2,7 +2,7 @@
 
 ## Case 1 : one chart
 In your controller :
-```
+```php
 public function indexAction()
 {
     $pieChart = new PieChart();
@@ -29,7 +29,7 @@ public function indexAction()
 ```
 
 And in your template :
-```
+```twig
 <!-- index.html.twig -->
 <html>
 <head></head>
@@ -46,7 +46,7 @@ And in your template :
 
 ## Case 2 : multiple charts
 In your controller :
-```
+```php
 public function indexAction()
 {
     $pieChart = new PieChart();
@@ -93,7 +93,7 @@ public function indexAction()
 ```
 
 And in your template :
-```
+```twig
 <!-- index.html.twig -->
 <html>
 <head></head>
@@ -111,7 +111,7 @@ And in your template :
 
 ## Fluent setters
 Instead of this :
-```
+```php
 $col = new ColumnChart();
 $col->getData()->setArrayToDataTable(
     [
@@ -143,7 +143,7 @@ $col->getOptions()->setHeight(500);
 ```
 
 You can use fluent setters to have less code to write :
-```
+```php
 $col = new ColumnChart();
 $col->getData()->setArrayToDataTable(
     [
@@ -181,6 +181,4 @@ $col->getOptions()
 $col->getOptions()
     ->getVAxis()
         ->setTitle('Rating (scale of 1-10)');
-```        
-
-
+```
