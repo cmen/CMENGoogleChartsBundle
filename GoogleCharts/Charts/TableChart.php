@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\TableChart\TableChartOptions;
 
 /**
@@ -36,6 +37,19 @@ class TableChart extends Chart
     public function getPackage()
     {
         return 'table';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [
+            EventType::PAGE,
+            EventType::READY,
+            EventType::SELECT,
+            EventType::SORT,
+        ];
     }
 
     /**

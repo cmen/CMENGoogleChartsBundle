@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart\AnnotationChartOptions;
 
 /**
@@ -39,6 +40,18 @@ class AnnotationChart extends Chart
     public function getPackage()
     {
         return 'annotationchart';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [
+            EventType::RANGE_CHANGE,
+            EventType::READY,
+            EventType::SELECT,
+        ];
     }
 
     /**

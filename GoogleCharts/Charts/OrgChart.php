@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrgChart\OrgChartOptions;
 
 /**
@@ -40,6 +41,20 @@ class OrgChart extends Chart
     public function getPackage()
     {
         return 'orgchart';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [
+            EventType::COLLAPSE,
+            EventType::ON_MOUSE_OUT,
+            EventType::ON_MOUSE_OVER,
+            EventType::READY,
+            EventType::SELECT,
+        ];
     }
 
     /**

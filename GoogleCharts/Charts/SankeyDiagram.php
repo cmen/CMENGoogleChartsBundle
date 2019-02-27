@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\SankeyDiagram\SankeyDiagramOptions;
 
 /**
@@ -40,6 +41,20 @@ class SankeyDiagram extends Chart
     public function getPackage()
     {
         return 'sankey';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [
+            EventType::ERROR,
+            EventType::ON_MOUSE_OUT,
+            EventType::ON_MOUSE_OVER,
+            EventType::READY,
+            EventType::SELECT,
+        ];
     }
 
     /**

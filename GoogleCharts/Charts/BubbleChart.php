@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\BubbleChart\BubbleChartOptions;
 
 /**
@@ -36,6 +37,22 @@ class BubbleChart extends Chart
     public function getPackage()
     {
         return 'corechart';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [
+            EventType::ANIMATION_FINISH,
+            EventType::CLICK,
+            EventType::ERROR,
+            EventType::ON_MOUSE_OUT,
+            EventType::ON_MOUSE_OVER,
+            EventType::READY,
+            EventType::SELECT,
+        ];
     }
 
     /**

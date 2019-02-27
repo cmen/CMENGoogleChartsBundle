@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\GeoChart\GeoChartOptions;
 
 /**
@@ -36,6 +37,19 @@ class GeoChart extends Chart
     public function getPackage()
     {
         return 'geochart';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [
+            EventType::ERROR,
+            EventType::READY,
+            EventType::REGION_CLICK,
+            EventType::SELECT,
+        ];
     }
 
     /**

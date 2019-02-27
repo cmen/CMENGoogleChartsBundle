@@ -2,6 +2,8 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts;
 
+use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
+
 /**
  * @author Christophe Meneses
  */
@@ -36,6 +38,10 @@ class Events
      */
     public function addListener($type, $functionName)
     {
+        if (!in_array($type, $this->chart->getAvailableEventTypes())) {
+            throw new GoogleChartsException("$type event is not available for this type of chart.");
+        }
+
         $this->listeners[] = new Listener($type, $functionName);
     }
 

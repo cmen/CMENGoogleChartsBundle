@@ -12,11 +12,11 @@ class ChartOptions implements ChartOptionsInterface
     use HeightTrait;
 
     use WidthTrait;
-    
+
     /**
      * ChartOptions constructor.
      */
     public function __construct()
-    { 
+    {
     }
 }
