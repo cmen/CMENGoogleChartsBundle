@@ -2,6 +2,7 @@
 
 namespace Tests\CMEN\GoogleChartsBundle\GoogleCharts;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Listener;
 
 /**
@@ -20,9 +21,9 @@ class ListenerTest extends \PHPUnit_Framework_TestCase
 
     public function testGoodType()
     {
-        $listener = new Listener('ready', 'functionName');
+        $listener = new Listener(EventType::READY, 'functionName');
 
-        $this->assertEquals('ready', $listener->getType());
+        $this->assertEquals(EventType::READY, $listener->getType());
         $this->assertEquals('functionName', $listener->getFunction());
     }
 }

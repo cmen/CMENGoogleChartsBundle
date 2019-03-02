@@ -93,6 +93,13 @@ abstract class Chart
     abstract public function getPackage();
 
     /**
+     * Returns available event types.
+     *
+     * @return string[]
+     */
+    abstract public function getAvailableEventTypes();
+
+    /**
      * Returns the instance options.
      */
     abstract public function getOptions();

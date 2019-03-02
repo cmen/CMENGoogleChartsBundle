@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart\CalendarChartOptions;
 
 /**
@@ -36,6 +37,20 @@ class CalendarChart extends Chart
     public function getPackage()
     {
         return 'calendar';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [
+            EventType::ERROR,
+            EventType::ON_MOUSE_OUT,
+            EventType::ON_MOUSE_OVER,
+            EventType::READY,
+            EventType::SELECT,
+        ];
     }
 
     /**

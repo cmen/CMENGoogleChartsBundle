@@ -39,6 +39,14 @@ class GaugeChart extends Chart
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [];
+    }
+
+    /**
      * @return GaugeChartOptions
      */
     public function getOptions()

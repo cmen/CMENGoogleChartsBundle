@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Map\MapOptions;
 
 /**
@@ -40,6 +41,17 @@ class Map extends Chart
     public function getPackage()
     {
         return 'map';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [
+            EventType::ERROR,
+            EventType::SELECT,
+        ];
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\TreeMapChart\TreeMapChartOptions;
 
 /**
@@ -36,6 +37,20 @@ class TreeMapChart extends Chart
     public function getPackage()
     {
         return 'treemap';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [
+            EventType::ON_MOUSE_OUT,
+            EventType::ON_MOUSE_OVER,
+            EventType::READY,
+            EventType::ROLLUP,
+            EventType::SELECT,
+        ];
     }
 
     /**

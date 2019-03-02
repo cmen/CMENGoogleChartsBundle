@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\WordTree\WordTreeOptions;
 
 /**
@@ -36,6 +37,17 @@ class WordTree extends Chart
     public function getPackage()
     {
         return 'wordtree';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAvailableEventTypes()
+    {
+        return [
+            EventType::READY,
+            EventType::SELECT,
+        ];
     }
 
     /**
