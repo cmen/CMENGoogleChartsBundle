@@ -38,8 +38,7 @@ interface OptionsOutputInterface
      * a string or an array. If an option have a null value, an empty array or an empty class, it is not returned :
      * the default value will be applied.
      *
-     * @param ChartOptionsInterface $options
-     * @param string                $optionsName Variable name who will contain the options
+     * @param string $optionsName Variable name who will contain the options
      *
      * @return string
      */

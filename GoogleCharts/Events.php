@@ -21,8 +21,6 @@ class Events
 
     /**
      * Events constructor.
-     *
-     * @param Chart $chart
      */
     public function __construct(Chart $chart)
     {

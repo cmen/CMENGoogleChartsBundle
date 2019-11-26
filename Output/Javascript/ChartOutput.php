@@ -27,11 +27,8 @@ class ChartOutput extends AbstractChartOutput
     /**
      * ChartOutput constructor.
      *
-     * @param string                 $version
-     * @param string                 $language
-     * @param OptionsOutputInterface $optionsOutput
-     * @param DataOutputInterface    $dataOutput
-     * @param EventsOutputInterface  $eventsOutput
+     * @param string $version
+     * @param string $language
      */
     public function __construct(
         $version,

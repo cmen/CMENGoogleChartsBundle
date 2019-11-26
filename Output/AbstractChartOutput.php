@@ -59,9 +59,7 @@ abstract class AbstractChartOutput implements ChartOutputInterface
     protected function checkElementsId(array $charts, array $elementsID)
     {
         if (count($charts) != count($elementsID)) {
-            throw new GoogleChartsException(
-                'Array charts and array HTML elements ID do not have the same number of element.'
-            );
+            throw new GoogleChartsException('Array charts and array HTML elements ID do not have the same number of element.');
         }
 
         foreach ($elementsID as $elementId) {

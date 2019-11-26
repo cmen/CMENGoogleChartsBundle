@@ -18,8 +18,6 @@ class GoogleChartsExtension extends AbstractExtension
 
     /**
      * GoogleChartsExtension constructor.
-     *
-     * @param ChartOutputInterface $chartOutput
      */
     public function __construct(ChartOutputInterface $chartOutput)
     {
