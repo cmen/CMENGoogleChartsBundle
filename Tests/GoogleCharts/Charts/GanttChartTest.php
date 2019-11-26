@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\CMEN\GoogleChartsBundle\GoogleCharts\Charts;
+namespace CMEN\GoogleChartsBundle\Tests\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\GanttChart;
 use CMEN\GoogleChartsBundle\Output\ChartOutputInterface;

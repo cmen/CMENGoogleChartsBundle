@@ -13,7 +13,6 @@ interface DataOutputInterface
     /**
      * Returns a string to draw data.
      *
-     * @param Data   $data
      * @param string $dataName Variable name who will contain the data
      *
      * @return string

@@ -17,8 +17,6 @@ class DataOutput implements DataOutputInterface
 
     /**
      * DataOutput constructor.
-     *
-     * @param DateOutputInterface $dateOutput
      */
     public function __construct(DateOutputInterface $dateOutput)
     {
@@ -33,9 +31,7 @@ class DataOutput implements DataOutputInterface
         $arrayToDataTable = $data->getArrayToDataTable();
 
         if (!$arrayToDataTable) {
-            throw new GoogleChartsException(
-                'There is no data for chart. Use method setArrayToDataTable() to provide data.'
-            );
+            throw new GoogleChartsException('There is no data for chart. Use method setArrayToDataTable() to provide data.');
         }
 
         $js = "var $dataName = new google.visualization.arrayToDataTable([";

@@ -3,17 +3,17 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\BarChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Bar;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\DataOpacityTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\FocusTargetTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\HAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\IsStackedTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnnotations;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrientationTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ReverseCategoriesTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;

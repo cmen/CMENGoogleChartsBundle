@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart;
+namespace CMEN\GoogleChartsBundle\Tests\GoogleCharts\Options\AnnotationChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart\AnnotationChartOptions;
 

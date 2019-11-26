@@ -13,8 +13,6 @@ interface ChartOutputInterface
     /**
      * Returns a string to draw the beginning of the chart (Declaration, data and options).
      *
-     * @param Chart $chart
-     *
      * @return string
      *
      * @throws GoogleChartsException
@@ -23,8 +21,6 @@ interface ChartOutputInterface
 
     /**
      * Returns a string to draw the end of the chart (Events and drawing).
-     *
-     * @param Chart $chart
      *
      * @return string
      */

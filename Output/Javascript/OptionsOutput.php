@@ -16,8 +16,6 @@ class OptionsOutput extends AbstractOptionsOutput
 
     /**
      * OptionsOutput constructor.
-     *
-     * @param DateOutputInterface $dateOutput
      */
     public function __construct(DateOutputInterface $dateOutput)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\CMEN\GoogleChartsBundle\Output\Javascript;
+namespace CMEN\GoogleChartsBundle\Tests\Output\Javascript;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Data;
 use CMEN\GoogleChartsBundle\Output\Javascript\DataOutput;

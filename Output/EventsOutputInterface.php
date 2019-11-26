@@ -10,7 +10,6 @@ interface EventsOutputInterface
     /**
      * Returns a string to draw events of a chart.
      *
-     * @param Events $events
      * @param string $chartName
      *
      * @return string
