@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\CMEN\GoogleChartsBundle\GoogleCharts\Charts;
+namespace CMEN\GoogleChartsBundle\Tests\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\LineChart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;

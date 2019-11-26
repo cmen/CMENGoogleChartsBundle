@@ -5,11 +5,13 @@ namespace CMEN\GoogleChartsBundle\Twig;
 use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\Output\ChartOutputInterface;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * @author Christophe Meneses
  */
-class GoogleChartsExtension extends \Twig_Extension
+class GoogleChartsExtension extends AbstractExtension
 {
     /** @var ChartOutputInterface */
     private $chartOutput;
@@ -30,11 +32,11 @@ class GoogleChartsExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('gc_draw', [$this, 'gcDraw'], ['is_safe' => ['html']]),
-            new \Twig_SimpleFunction('gc_start', [$this, 'gcStart'], ['is_safe' => ['html']]),
-            new \Twig_SimpleFunction('gc_end', [$this, 'gcEnd'], ['is_safe' => ['html']]),
-            new \Twig_SimpleFunction('gc_event', [$this, 'gcEvent'], ['is_safe' => ['html']]),
-            new \Twig_SimpleFunction('gc_language', [$this, 'gcLanguage']),
+            new TwigFunction('gc_draw', [$this, 'gcDraw'], ['is_safe' => ['html']]),
+            new TwigFunction('gc_start', [$this, 'gcStart'], ['is_safe' => ['html']]),
+            new TwigFunction('gc_end', [$this, 'gcEnd'], ['is_safe' => ['html']]),
+            new TwigFunction('gc_event', [$this, 'gcEvent'], ['is_safe' => ['html']]),
+            new TwigFunction('gc_language', [$this, 'gcLanguage']),
         ];
     }
 

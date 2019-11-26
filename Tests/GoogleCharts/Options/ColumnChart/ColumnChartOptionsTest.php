@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\CMEN\GoogleChartsBundle\GoogleCharts\Options\ColumnChart;
+namespace CMEN\GoogleChartsBundle\Tests\GoogleCharts\Options\ColumnChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColumnChart\ColumnChartOptions;
 

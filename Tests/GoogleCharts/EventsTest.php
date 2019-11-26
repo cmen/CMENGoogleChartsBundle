@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\CMEN\GoogleChartsBundle\GoogleCharts;
+namespace CMEN\GoogleChartsBundle\Tests\GoogleCharts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ComboChart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\Map;

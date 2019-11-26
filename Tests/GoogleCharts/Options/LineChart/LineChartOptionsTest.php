@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\CMEN\GoogleChartsBundle\GoogleCharts\Options\LineChart;
+namespace CMEN\GoogleChartsBundle\Tests\GoogleCharts\Options\LineChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineChart\LineChartOptions;
 
