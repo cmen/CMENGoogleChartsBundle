@@ -1,0 +1,49 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  code_style:
+    runs-on: [ubuntu-latest]
+
+    name: Code style
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Run PHP CS Fixer
+        run: vendor/bin/php-cs-fixer fix --diff --dry-run --verbose
+
+  tests:
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+        php-versions: ['5.6', '7.0', '7.1', '7.2', '7.3', '7.4']
+
+    runs-on: ${{ matrix.operating-system }}
+
+    name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v1
+      with:
+        php-version: ${{ matrix.php-versions }}
+        extension-csv: xml, dom, mbstring
+        coverage: none
+
+    - name: Check PHP Extensions
+      run: php -m
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run test suite
+      run: vendor/bin/phpunit
