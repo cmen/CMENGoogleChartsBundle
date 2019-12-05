@@ -1,0 +1,8 @@
+parameters:
+    paths:
+        - .
+    excludes_analyse:
+        - %currentWorkingDirectory%/Tests
+        - %currentWorkingDirectory%/vendor
+    ignoreErrors:
+        - '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\TreeBuilder::root\(\).#'

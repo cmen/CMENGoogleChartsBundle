@@ -12,11 +12,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
-      - name: Install dependencies
+      - name: Install PHP dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Run PHP CS Fixer
-        run: vendor/bin/php-cs-fixer fix --diff --dry-run --verbose
+        run: vendor/bin/php-cs-fixer fix --diff --dry-run --verbose --stop-on-violation
+
+  code_analyze:
+    runs-on: [ubuntu-latest]
+
+    name: Code analyze
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Install PHP dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Run PHPStan
+        run: vendor/bin/phpstan analyse --level max
 
   tests:
     strategy:
@@ -39,11 +54,8 @@ jobs:
         extension-csv: xml, dom, mbstring
         coverage: none
 
-    - name: Check PHP Extensions
-      run: php -m
-
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
+    - name: Remove PHPStan (Not compatible with PHP < 7.1) and install PHP dependencies
+      run: composer remove phpstan/phpstan --dev
 
     - name: Run test suite
       run: vendor/bin/phpunit

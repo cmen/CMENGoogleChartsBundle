@@ -23,29 +23,16 @@ class SteppedAreaChart extends Chart
         $this->options = new SteppedAreaChartOptions();
     }
 
-    /**
-     * Returns the chart type.
-     *
-     * @return string
-     */
     public function getType()
     {
         return 'SteppedAreaChart';
     }
 
-    /**
-     * Returns the chart package.
-     *
-     * @return string
-     */
     public function getPackage()
     {
         return 'corechart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -68,7 +55,7 @@ class SteppedAreaChart extends Chart
     }
 
     /**
-     * @param $options SteppedAreaChartOptions
+     * @param SteppedAreaChartOptions $options
      *
      * @return SteppedAreaChart
      */

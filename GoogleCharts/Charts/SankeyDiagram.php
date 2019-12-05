@@ -23,29 +23,16 @@ class SankeyDiagram extends Chart
         $this->options = new SankeyDiagramOptions();
     }
 
-    /**
-     * Returns the chart type.
-     *
-     * @return string
-     */
     public function getType()
     {
         return 'Sankey';
     }
 
-    /**
-     * Returns the chart package.
-     *
-     * @return string
-     */
     public function getPackage()
     {
         return 'sankey';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -66,7 +53,7 @@ class SankeyDiagram extends Chart
     }
 
     /**
-     * @param $options SankeyDiagramOptions
+     * @param SankeyDiagramOptions $options
      *
      * @return SankeyDiagram
      */

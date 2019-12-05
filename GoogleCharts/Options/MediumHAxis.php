@@ -106,7 +106,7 @@ class MediumHAxis extends HAxis
      *
      * This option is only supported for a continuous axis.
      *
-     * @var array
+     * @var array<mixed>
      */
     protected $ticks;
 
@@ -183,7 +183,7 @@ class MediumHAxis extends HAxis
     }
 
     /**
-     * @param array $ticks
+     * @param array<mixed> $ticks
      *
      * @return $this
      */

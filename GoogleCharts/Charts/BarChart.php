@@ -23,25 +23,16 @@ class BarChart extends Chart
         $this->options = new BarChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'BarChart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'corechart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -64,7 +55,7 @@ class BarChart extends Chart
     }
 
     /**
-     * @param $options BarChartOptions
+     * @param BarChartOptions $options
      *
      * @return BarChart
      */

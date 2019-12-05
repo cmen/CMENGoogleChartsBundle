@@ -14,17 +14,11 @@ class OptionsOutput extends AbstractOptionsOutput
     /** @var DateOutputInterface */
     private $dateOutput;
 
-    /**
-     * OptionsOutput constructor.
-     */
     public function __construct(DateOutputInterface $dateOutput)
     {
         $this->dateOutput = $dateOutput;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function draw(ChartOptionsInterface $options, $optionsName)
     {
         $this->removeRecursivelyNullValue($options);

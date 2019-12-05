@@ -23,25 +23,16 @@ class CalendarChart extends Chart
         $this->options = new CalendarChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'Calendar';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'calendar';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -62,7 +53,7 @@ class CalendarChart extends Chart
     }
 
     /**
-     * @param $options CalendarChartOptions
+     * @param CalendarChartOptions $options
      *
      * @return CalendarChart
      */

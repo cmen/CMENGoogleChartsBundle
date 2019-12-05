@@ -19,9 +19,6 @@ class Events
      */
     protected $chart;
 
-    /**
-     * Events constructor.
-     */
     public function __construct(Chart $chart)
     {
         $this->listeners = [];
@@ -33,6 +30,8 @@ class Events
      *
      * @param string $type         Type of event
      * @param string $functionName Name of Javascript function
+     *
+     * @return void
      */
     public function addListener($type, $functionName)
     {

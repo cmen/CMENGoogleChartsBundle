@@ -8,7 +8,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\TriggerTrait;
 /**
  * @author Christophe Meneses
  */
-class BasicTooltip
+class Tooltip
 {
     /**
      * @var MediumTextStyle
@@ -17,9 +17,6 @@ class BasicTooltip
 
     use TriggerTrait;
 
-    /**
-     * BasicTooltip constructor.
-     */
     public function __construct()
     {
         $this->textStyle = new MediumTextStyle();

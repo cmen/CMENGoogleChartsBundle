@@ -23,29 +23,16 @@ class OrgChart extends Chart
         $this->options = new OrgChartOptions();
     }
 
-    /**
-     * Returns the chart type.
-     *
-     * @return string
-     */
     public function getType()
     {
         return 'OrgChart';
     }
 
-    /**
-     * Returns the chart package.
-     *
-     * @return string
-     */
     public function getPackage()
     {
         return 'orgchart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -66,9 +53,9 @@ class OrgChart extends Chart
     }
 
     /**
-     * @param $options OrgChartOptions
+     * @param OrgChartOptions $options
      *
-     * @return Map
+     * @return OrgChart
      */
     public function setOptions($options)
     {

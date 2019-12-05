@@ -16,9 +16,6 @@ class AnnotationChart extends Chart
      */
     protected $options;
 
-    /**
-     * AnnotationChart constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -26,25 +23,16 @@ class AnnotationChart extends Chart
         $this->options = new AnnotationChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'AnnotationChart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'annotationchart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -63,7 +51,7 @@ class AnnotationChart extends Chart
     }
 
     /**
-     * @param $options AnnotationChartOptions
+     * @param AnnotationChartOptions $options
      *
      * @return AnnotationChart
      */

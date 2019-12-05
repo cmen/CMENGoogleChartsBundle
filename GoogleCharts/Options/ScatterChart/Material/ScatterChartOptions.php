@@ -6,17 +6,12 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Material\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Material\MaterialTrait;
 
 /**
- * Class ScatterChartOptions.
- *
  * @author Christophe Meneses
  */
 class ScatterChartOptions extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\ScatterChart\ScatterChartOptions
 {
     use MaterialTrait;
 
-    /**
-     * ScatterChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();

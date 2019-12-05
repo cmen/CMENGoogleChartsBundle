@@ -25,8 +25,6 @@ abstract class AbstractChartOutput implements ChartOutputInterface
     protected $language;
 
     /**
-     * AbstractChartOutput constructor.
-     *
      * @param string $version
      * @param string $language
      */
@@ -54,6 +52,8 @@ abstract class AbstractChartOutput implements ChartOutputInterface
      * @param Chart[]  $charts
      * @param string[] $elementsID
      *
+     * @return void
+     *
      * @throws GoogleChartsException
      */
     protected function checkElementsId(array $charts, array $elementsID)
@@ -73,6 +73,8 @@ abstract class AbstractChartOutput implements ChartOutputInterface
      * Checks if all elements of an array are instances of Chart. Throws an exception if not.
      *
      * @param Chart[] $charts
+     *
+     * @return void
      *
      * @throws GoogleChartsException
      */

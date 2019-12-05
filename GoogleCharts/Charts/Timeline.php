@@ -23,25 +23,16 @@ class Timeline extends Chart
         $this->options = new TimelineOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'Timeline';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'timeline';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -62,7 +53,7 @@ class Timeline extends Chart
     }
 
     /**
-     * @param $options TimelineOptions
+     * @param TimelineOptions $options
      *
      * @return Timeline
      */

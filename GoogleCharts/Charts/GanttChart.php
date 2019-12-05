@@ -16,9 +16,6 @@ class GanttChart extends Chart
      */
     protected $options;
 
-    /**
-     * GanttChart constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -26,25 +23,16 @@ class GanttChart extends Chart
         $this->options = new GanttChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'Gantt';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'gantt';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -64,7 +52,7 @@ class GanttChart extends Chart
     }
 
     /**
-     * @param $options GanttChartOptions
+     * @param GanttChartOptions $options
      *
      * @return GanttChart
      */

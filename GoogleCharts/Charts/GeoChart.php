@@ -23,25 +23,16 @@ class GeoChart extends Chart
         $this->options = new GeoChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'GeoChart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'geochart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -61,7 +52,7 @@ class GeoChart extends Chart
     }
 
     /**
-     * @param $options GeoChartOptions
+     * @param GeoChartOptions $options
      *
      * @return GeoChart
      */

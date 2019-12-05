@@ -23,25 +23,16 @@ class PieChart extends Chart
         $this->options = new PieChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'PieChart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'corechart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -63,7 +54,7 @@ class PieChart extends Chart
     }
 
     /**
-     * @param $options PieChartOptions
+     * @param PieChartOptions $options
      *
      * @return PieChart
      */

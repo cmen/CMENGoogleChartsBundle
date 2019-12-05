@@ -10,7 +10,9 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class CMENGoogleChartsExtension extends Extension
 {
     /**
-     * {@inheritdoc}
+     * @param array<mixed> $configs
+     *
+     * @return void
      */
     public function load(array $configs, ContainerBuilder $container)
     {

@@ -23,25 +23,16 @@ class TableChart extends Chart
         $this->options = new TableChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'Table';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'table';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -61,7 +52,7 @@ class TableChart extends Chart
     }
 
     /**
-     * @param $options TableChartOptions
+     * @param TableChartOptions $options
      *
      * @return TableChart
      */

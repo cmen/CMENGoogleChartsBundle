@@ -19,12 +19,12 @@ trait SeriesTrait
      * $chart->getOptions()->setSeries([$series1, null, $series3]);
      * $chart->getOptions()->setSeries([0 => $series1, 2 => $series3])
      *
-     * @var array|Series[]
+     * @var array<mixed>|Series[]
      */
     protected $series;
 
     /**
-     * @param array|Series[] $series
+     * @param array<mixed>|Series[] $series
      *
      * @return $this
      */

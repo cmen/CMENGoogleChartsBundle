@@ -8,7 +8,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts;
 class Data
 {
     /**
-     * @var array
+     * @var array<mixed>
      */
     private $arrayToDataTable;
 
@@ -17,9 +17,6 @@ class Data
      */
     private $firstRowIsData;
 
-    /**
-     * Data constructor.
-     */
     public function __construct()
     {
         $this->arrayToDataTable = [];
@@ -27,7 +24,7 @@ class Data
     }
 
     /**
-     * @return array
+     * @return array<mixed>
      */
     public function getArrayToDataTable()
     {
@@ -42,9 +39,11 @@ class Data
      * defined explicitly using object literal notation. Object literal notation may also be used for any cell,
      * allowing you to define Cell Objects).
      *
-     * @param array $arrayToDataTable a two-dimensional array, where each row represents a row in the data table
-     * @param bool  $firstRowIsData   if firstRowIsData is false (the default), the first row will be interpreted
-     *                                as header labels
+     * @param array<mixed> $arrayToDataTable a two-dimensional array, where each row represents a row in the data table
+     * @param bool         $firstRowIsData   if firstRowIsData is false (the default), the first row will be interpreted
+     *                                       as header labels
+     *
+     * @return void
      */
     public function setArrayToDataTable($arrayToDataTable, $firstRowIsData = false)
     {

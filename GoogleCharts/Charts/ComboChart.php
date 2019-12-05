@@ -23,25 +23,16 @@ class ComboChart extends Chart
         $this->options = new ComboChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'ComboChart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'corechart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -64,7 +55,7 @@ class ComboChart extends Chart
     }
 
     /**
-     * @param $options ComboChartOptions
+     * @param ComboChartOptions $options
      *
      * @return ComboChart
      */

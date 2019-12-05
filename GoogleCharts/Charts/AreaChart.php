@@ -16,9 +16,6 @@ class AreaChart extends Chart
      */
     protected $options;
 
-    /**
-     * AreaChart constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -26,29 +23,16 @@ class AreaChart extends Chart
         $this->options = new AreaChartOptions();
     }
 
-    /**
-     * Returns the chart type.
-     *
-     * @return string
-     */
     public function getType()
     {
         return 'AreaChart';
     }
 
-    /**
-     * Returns the chart package.
-     *
-     * @return string
-     */
     public function getPackage()
     {
         return 'corechart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -71,7 +55,7 @@ class AreaChart extends Chart
     }
 
     /**
-     * @param $options AreaChartOptions
+     * @param AreaChartOptions $options
      *
      * @return AreaChart
      */

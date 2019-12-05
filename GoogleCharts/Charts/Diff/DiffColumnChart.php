@@ -10,6 +10,11 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffColumnChart\DiffColumn
 class DiffColumnChart extends ColumnChart implements DiffChart
 {
     /**
+     * @var DiffColumnChartOptions
+     */
+    protected $options;
+
+    /**
      * @var BarChart|ColumnChart
      */
     private $oldChart;
@@ -19,6 +24,12 @@ class DiffColumnChart extends ColumnChart implements DiffChart
      */
     private $newChart;
 
+    /**
+     * @param BarChart|ColumnChart|object $oldChart
+     * @param BarChart|ColumnChart|object $newChart
+     *
+     * @throws GoogleChartsException
+     */
     public function __construct($oldChart, $newChart)
     {
         if ((!$oldChart instanceof ColumnChart && !$oldChart instanceof BarChart)
@@ -43,7 +54,7 @@ class DiffColumnChart extends ColumnChart implements DiffChart
     }
 
     /**
-     * @param $options DiffColumnChartOptions
+     * @param DiffColumnChartOptions $options
      *
      * @return DiffColumnChart
      */

@@ -104,7 +104,7 @@ class VAxis
      * [ ['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four'] ] ]
      * [16, ['v' => 32, 'f' => 'thirty two'], ['v' => 64, 'f' => 'sixty four'], 128] ].
      *
-     * @var array
+     * @var array<mixed>
      */
     protected $ticks;
 
@@ -154,9 +154,6 @@ class VAxis
      */
     protected $viewWindow;
 
-    /**
-     * VAxis constructor.
-     */
     public function __construct()
     {
         $this->gridlines = new Gridlines();
@@ -291,7 +288,7 @@ class VAxis
     }
 
     /**
-     * @param array $ticks
+     * @param array<mixed> $ticks
      *
      * @return $this
      */

@@ -12,14 +12,18 @@ interface OptionsOutputInterface
     /**
      * Removes recursively array elements that have a null value.
      *
-     * @param ChartOptionsInterface|array $options ChartOptions instance or an array of options passed by reference
+     * @param ChartOptionsInterface|array<mixed> $options ChartOptions instance or an array of options passed by reference
+     *
+     * @return void
      */
     public function removeRecursivelyNullValue(&$options);
 
     /**
      * Removes recursively array elements that have an empty array.
      *
-     * @param array $options Array of options passed by reference
+     * @param array<mixed> $options Array of options passed by reference
+     *
+     * @return void
      */
     public function removeRecursivelyEmptyArray(&$options);
 
@@ -27,9 +31,9 @@ interface OptionsOutputInterface
      * Renames recursively array keys to remove prefixes and suffixes "\x00". They come from conversion of class with
      * protected properties to an array.
      *
-     * @param array $options Array of options
+     * @param array<mixed> $options Array of options
      *
-     * @return array Array of options with new keys
+     * @return array<mixed> Array of options with new keys
      */
     public function renameRecursivelyKeys($options);
 

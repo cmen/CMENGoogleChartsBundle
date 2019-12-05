@@ -59,7 +59,7 @@ class WordTree extends Chart
     }
 
     /**
-     * @param $options WordTreeOptions
+     * @param WordTreeOptions $options
      *
      * @return WordTree
      */
