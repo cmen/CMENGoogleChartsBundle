@@ -4,7 +4,6 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\BubbleChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedAnimation;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedChartOptions;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedColorAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AdvancedLegend;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\BasicTooltip;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
@@ -29,7 +28,7 @@ class BubbleChartOptions extends AdvancedChartOptions
     protected $bubble;
 
     /**
-     * @var AdvancedColorAxis
+     * @var ColorAxis
      */
     protected $colorAxis;
 
@@ -82,7 +81,7 @@ class BubbleChartOptions extends AdvancedChartOptions
 
         $this->animation = new AdvancedAnimation();
         $this->bubble = new Bubble();
-        $this->colorAxis = new AdvancedColorAxis();
+        $this->colorAxis = new ColorAxis();
         $this->explorer = new Explorer();
         $this->hAxis = new MediumHAxis();
         $this->legend = new AdvancedLegend();
@@ -108,7 +107,7 @@ class BubbleChartOptions extends AdvancedChartOptions
     }
 
     /**
-     * @return AdvancedColorAxis
+     * @return ColorAxis
      */
     public function getColorAxis()
     {

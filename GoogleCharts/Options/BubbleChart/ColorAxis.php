@@ -1,22 +1,17 @@
 <?php
 
-namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
-
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\BubbleChart\Legend;
+namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\BubbleChart;
 
 /**
  * @author Christophe Meneses
  */
-class AdvancedColorAxis extends ColorAxis
+class ColorAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorAxis
 {
     /**
      * @var Legend
      */
     protected $legend;
 
-    /**
-     * AdvancedColorAxis constructor.
-     */
     public function __construct()
     {
         $this->legend = new Legend();
