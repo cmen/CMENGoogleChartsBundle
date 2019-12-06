@@ -185,7 +185,7 @@ class AnnotationChartOptions implements ChartOptionsInterface
      *   over each series will display its true value.
      * - 'allfixed' - Same as 'fixed,' but used when multiple scales are displayed. This setting adjusts each scale
      *   to the series to which it applies (use this in conjunction with scaleColumns).
-
+     *
      * If you specify the min and/or max options, they will take precedence over the minimum and maximum values
      * determined by your scale type.
      *
@@ -219,9 +219,6 @@ class AnnotationChartOptions implements ChartOptionsInterface
      */
     protected $zoomStartTime;
 
-    /**
-     * AnnotationChartOptions constructor.
-     */
     public function __construct()
     {
         $this->table = new Table();
@@ -404,7 +401,7 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param \int[] $scaleColumns
+     * @param int[] $scaleColumns
      *
      * @return $this
      */

@@ -23,25 +23,16 @@ class LineChart extends Chart
         $this->options = new LineChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'LineChart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'corechart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -64,7 +55,7 @@ class LineChart extends Chart
     }
 
     /**
-     * @param $options LineChartOptions
+     * @param LineChartOptions $options
      *
      * @return LineChart
      */

@@ -16,17 +16,11 @@ class GoogleChartsExtension extends AbstractExtension
     /** @var ChartOutputInterface */
     private $chartOutput;
 
-    /**
-     * GoogleChartsExtension constructor.
-     */
     public function __construct(ChartOutputInterface $chartOutput)
     {
         $this->chartOutput = $chartOutput;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getFunctions()
     {
         return [
@@ -88,6 +82,8 @@ class GoogleChartsExtension extends AbstractExtension
      * @param Chart  $chart        A Chart instance
      * @param string $type         Type of event
      * @param string $functionName Name of Javascript function
+     *
+     * @return void
      */
     public function gcEvent(Chart $chart, $type, $functionName)
     {
@@ -100,6 +96,8 @@ class GoogleChartsExtension extends AbstractExtension
      * @see https://developers.google.com/chart/interactive/docs/basic_load_libs#loadwithlocale
      *
      * @param string $language Locale, for example : "fr"
+     *
+     * @return void
      */
     public function gcLanguage($language)
     {

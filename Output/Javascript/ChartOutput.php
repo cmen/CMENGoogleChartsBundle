@@ -25,8 +25,6 @@ class ChartOutput extends AbstractChartOutput
     private $eventsOutput;
 
     /**
-     * ChartOutput constructor.
-     *
      * @param string $version
      * @param string $language
      */
@@ -44,9 +42,6 @@ class ChartOutput extends AbstractChartOutput
         $this->eventsOutput = $eventsOutput;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function startChart(Chart $chart)
     {
         if (null === $chart->getElementID()) {
@@ -71,9 +66,6 @@ class ChartOutput extends AbstractChartOutput
         return $js;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function endChart(Chart $chart)
     {
         if ('visualization' == $chart->getLibrary()) {
@@ -88,9 +80,6 @@ class ChartOutput extends AbstractChartOutput
             '.draw('.$chart->getDataName().', '.$options.');';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function startCharts($charts, $elementsID = null)
     {
         if ($charts instanceof Chart) {
@@ -107,6 +96,10 @@ class ChartOutput extends AbstractChartOutput
             $this->checkChartsTypes($charts);
 
             if (null !== $elementsID) {
+                if (!is_array($elementsID)) {
+                    throw new GoogleChartsException('An array of string is expected for HTML elements IDs.');
+                }
+
                 $this->checkElementsId($charts, $elementsID);
             }
         } else {
@@ -115,7 +108,8 @@ class ChartOutput extends AbstractChartOutput
 
         $packages = [];
         $drawChartName = '';
-        for ($i = 0; $i < count($charts); ++$i) {
+        $nbCharts = count($charts);
+        for ($i = 0; $i < $nbCharts; ++$i) {
             if ($elementsID) {
                 $charts[$i]->setElementID($elementsID[$i]);
             }
@@ -137,9 +131,6 @@ class ChartOutput extends AbstractChartOutput
         return $js;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function endCharts($charts)
     {
         if ($charts instanceof Chart) {
@@ -160,17 +151,11 @@ class ChartOutput extends AbstractChartOutput
         return $js;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function fullCharts($charts, $elementsID = null)
     {
         return $this->startCharts($charts, $elementsID).$this->endCharts($charts);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function loadLibraries(array $packages)
     {
         array_walk($packages, function (&$item) {
@@ -184,17 +169,11 @@ class ChartOutput extends AbstractChartOutput
         return "google.charts.load($load);";
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function startCallback($name)
     {
         return "google.charts.setOnLoadCallback($name); function $name() {";
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function endCallback()
     {
         return '}';

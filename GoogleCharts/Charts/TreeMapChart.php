@@ -23,25 +23,16 @@ class TreeMapChart extends Chart
         $this->options = new TreeMapChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'TreeMap';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'treemap';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -62,7 +53,7 @@ class TreeMapChart extends Chart
     }
 
     /**
-     * @param $options TreeMapChartOptions
+     * @param TreeMapChartOptions $options
      *
      * @return TreeMapChart
      */

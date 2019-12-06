@@ -23,29 +23,16 @@ class Map extends Chart
         $this->options = new MapOptions();
     }
 
-    /**
-     * Returns the chart type.
-     *
-     * @return string
-     */
     public function getType()
     {
         return 'Map';
     }
 
-    /**
-     * Returns the chart package.
-     *
-     * @return string
-     */
     public function getPackage()
     {
         return 'map';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -63,7 +50,7 @@ class Map extends Chart
     }
 
     /**
-     * @param $options MapOptions
+     * @param MapOptions $options
      *
      * @return Map
      */

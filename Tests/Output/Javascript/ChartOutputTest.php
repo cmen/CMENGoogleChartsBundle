@@ -75,7 +75,7 @@ class ChartOutputTest extends \PHPUnit_Framework_TestCase
      *
      * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
      */
-    public function testParamChartsBadTypeForCharts()
+    public function testParamChartsBadTypeForMultipleCharts()
     {
         $charts = [new ColumnChart(), new ColumnChart(), 'xxx'];
         $elementsID = ['div1', 'div2', 'div3'];
@@ -89,7 +89,7 @@ class ChartOutputTest extends \PHPUnit_Framework_TestCase
      *
      * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
      */
-    public function testParamElementsIDBadTypeForChart()
+    public function testParamElementsIDBadTypeForOneChart()
     {
         $this->chartOutput->startCharts(new ColumnChart(), 66);
     }
@@ -100,10 +100,24 @@ class ChartOutputTest extends \PHPUnit_Framework_TestCase
      *
      * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
      */
-    public function testParamElementsIDBadTypeForCharts()
+    public function testParamElementsIDBadTypeForMultipleCharts()
     {
         $charts = [new ColumnChart(), new ColumnChart(), new ColumnChart()];
         $elementsID = ['div1', 123, 'div3'];
+
+        $this->chartOutput->startCharts($charts, $elementsID);
+    }
+
+    /**
+     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @expectedExceptionMessage An array of string is expected for HTML elements IDs.
+     *
+     * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     */
+    public function testParamElementsIDNotArrayForMultipleCharts()
+    {
+        $charts = [new ColumnChart(), new ColumnChart(), new ColumnChart()];
+        $elementsID = 'div1';
 
         $this->chartOutput->startCharts($charts, $elementsID);
     }
@@ -114,7 +128,7 @@ class ChartOutputTest extends \PHPUnit_Framework_TestCase
      *
      * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
      */
-    public function testParamElementsIDBadCountForCharts()
+    public function testParamElementsIDBadCountForMultipleCharts()
     {
         $charts = [new ColumnChart(), new ColumnChart(), new ColumnChart()];
         $elementsID = ['div1', 'div2'];

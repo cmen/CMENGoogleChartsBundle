@@ -23,25 +23,16 @@ class BubbleChart extends Chart
         $this->options = new BubbleChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'BubbleChart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'corechart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -64,7 +55,7 @@ class BubbleChart extends Chart
     }
 
     /**
-     * @param $options BubbleChartOptions
+     * @param BubbleChartOptions $options
      *
      * @return BubbleChart
      */

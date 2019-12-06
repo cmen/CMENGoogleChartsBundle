@@ -30,7 +30,7 @@ class DataOutput implements DataOutputInterface
     {
         $arrayToDataTable = $data->getArrayToDataTable();
 
-        if (!$arrayToDataTable) {
+        if (empty($arrayToDataTable)) {
             throw new GoogleChartsException('There is no data for chart. Use method setArrayToDataTable() to provide data.');
         }
 

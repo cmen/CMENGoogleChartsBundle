@@ -2,18 +2,11 @@
 
 namespace CMEN\GoogleChartsBundle\Output;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
-
 /**
  * @author Christophe Meneses
  */
 abstract class AbstractOptionsOutput implements OptionsOutputInterface
 {
-    /**
-     * Removes recursively array elements that have a null value.
-     *
-     * @param ChartOptionsInterface|array $options ChartOptions instance or an array of options passed by reference
-     */
     public function removeRecursivelyNullValue(&$options)
     {
         $options = array_filter((array) $options, function ($val) {
@@ -27,11 +20,6 @@ abstract class AbstractOptionsOutput implements OptionsOutputInterface
         }
     }
 
-    /**
-     * Removes recursively array elements that have an empty array.
-     *
-     * @param array $options Array of options passed by reference
-     */
     public function removeRecursivelyEmptyArray(&$options)
     {
         foreach ($options as $key => $value) {
@@ -45,14 +33,6 @@ abstract class AbstractOptionsOutput implements OptionsOutputInterface
         }
     }
 
-    /**
-     * Renames recursively array keys to remove prefixes and suffixes "\x00". They come from conversion of class with
-     * protected properties to an array.
-     *
-     * @param array $options Array of options
-     *
-     * @return array Array of options with new keys
-     */
     public function renameRecursivelyKeys($options)
     {
         $newOptions = [];

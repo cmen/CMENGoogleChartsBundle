@@ -12,6 +12,11 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffPieChart\DiffPieChartO
 class DiffPieChart extends PieChart implements DiffChart
 {
     /**
+     * @var DiffPieChartOptions
+     */
+    protected $options;
+
+    /**
      * @var PieChart
      */
     private $oldChart;
@@ -21,6 +26,12 @@ class DiffPieChart extends PieChart implements DiffChart
      */
     private $newChart;
 
+    /**
+     * @param PieChart|object $oldChart
+     * @param PieChart|object $newChart
+     *
+     * @throws GoogleChartsException
+     */
     public function __construct($oldChart, $newChart)
     {
         if (!$oldChart instanceof PieChart || !$newChart instanceof PieChart) {
@@ -44,7 +55,7 @@ class DiffPieChart extends PieChart implements DiffChart
     }
 
     /**
-     * @param $options DiffPieChartOptions
+     * @param DiffPieChartOptions $options
      *
      * @return DiffPieChart
      */

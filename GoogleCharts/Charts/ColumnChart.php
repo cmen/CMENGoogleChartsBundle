@@ -23,25 +23,16 @@ class ColumnChart extends Chart
         $this->options = new ColumnChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'ColumnChart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'corechart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -64,7 +55,7 @@ class ColumnChart extends Chart
     }
 
     /**
-     * @param $options ColumnChartOptions
+     * @param ColumnChartOptions $options
      *
      * @return ColumnChart
      */

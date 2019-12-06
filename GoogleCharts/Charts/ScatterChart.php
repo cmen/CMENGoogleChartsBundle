@@ -23,25 +23,16 @@ class ScatterChart extends Chart
         $this->options = new ScatterChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'ScatterChart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'corechart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -64,7 +55,7 @@ class ScatterChart extends Chart
     }
 
     /**
-     * @param $options ScatterChartOptions
+     * @param ScatterChartOptions $options
      *
      * @return ScatterChart
      */

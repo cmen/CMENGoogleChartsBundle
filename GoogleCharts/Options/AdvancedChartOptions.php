@@ -20,9 +20,6 @@ class AdvancedChartOptions extends MediumChartOptions
      */
     protected $vAxis;
 
-    /**
-     * AdvancedChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();

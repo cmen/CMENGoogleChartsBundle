@@ -13,6 +13,11 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffBarChart\DiffBarChartO
 class DiffBarChart extends BarChart implements DiffChart
 {
     /**
+     * @var DiffBarChartOptions
+     */
+    protected $options;
+
+    /**
      * @var BarChart|ColumnChart
      */
     private $oldChart;
@@ -23,10 +28,8 @@ class DiffBarChart extends BarChart implements DiffChart
     private $newChart;
 
     /**
-     * DiffBarChart constructor.
-     *
-     * @param BarChart|ColumnChart $oldChart
-     * @param BarChart|ColumnChart $newChart
+     * @param BarChart|ColumnChart|object $oldChart
+     * @param BarChart|ColumnChart|object $newChart
      *
      * @throws GoogleChartsException
      */
@@ -54,7 +57,7 @@ class DiffBarChart extends BarChart implements DiffChart
     }
 
     /**
-     * @param $options DiffBarChartOptions
+     * @param DiffBarChartOptions $options
      *
      * @return DiffBarChart
      */

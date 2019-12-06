@@ -9,12 +9,9 @@ use CMEN\GoogleChartsBundle\Output\DateOutputInterface;
  */
 class DateOutput implements DateOutputInterface
 {
-    /**
-     * {@inheritdoc}
-     */
     public function draw(\DateTimeInterface $date)
     {
-        return 'new Date('.$date->format('Y').', '.($date->format('n') - 1).', '.$date->format('j').', '.
+        return 'new Date('.$date->format('Y').', '.((int) $date->format('n') - 1).', '.$date->format('j').', '.
             $date->format('H').', '.$date->format('i').', '.$date->format('s').')';
     }
 }

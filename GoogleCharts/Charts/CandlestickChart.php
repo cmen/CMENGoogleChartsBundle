@@ -23,25 +23,16 @@ class CandlestickChart extends Chart
         $this->options = new CandlestickChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'CandlestickChart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'corechart';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAvailableEventTypes()
     {
         return [
@@ -64,7 +55,7 @@ class CandlestickChart extends Chart
     }
 
     /**
-     * @param $options CandlestickChartOptions
+     * @param CandlestickChartOptions $options
      *
      * @return CandlestickChart
      */

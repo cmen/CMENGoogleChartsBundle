@@ -10,7 +10,7 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 abstract class Chart
 {
     /**
-     * @var string
+     * @var string|null
      */
     protected $elementID;
 
@@ -29,9 +29,6 @@ abstract class Chart
      */
     protected $events;
 
-    /**
-     * Chart constructor.
-     */
     public function __construct()
     {
         $this->data = new Data();
@@ -45,6 +42,10 @@ abstract class Chart
      */
     public function getName()
     {
+        if (null === $this->elementID) {
+            return '';
+        }
+
         return 'chart'.ucfirst($this->elementID);
     }
 
@@ -101,6 +102,8 @@ abstract class Chart
 
     /**
      * Returns the instance options.
+     *
+     * @return ChartOptionsInterface
      */
     abstract public function getOptions();
 
@@ -109,7 +112,7 @@ abstract class Chart
      *
      * @param ChartOptionsInterface $options
      *
-     * @return ChartOptionsInterface
+     * @return $this
      */
     abstract public function setOptions($options);
 
@@ -126,7 +129,7 @@ abstract class Chart
     }
 
     /**
-     * @return string
+     * @return string|null
      */
     public function getElementID()
     {

@@ -3,8 +3,6 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Material;
 
 /**
- * Trait MaterialTrait.
- *
  * @author Christophe Meneses
  */
 trait MaterialTrait
@@ -15,7 +13,7 @@ trait MaterialTrait
     protected $chart;
 
     /**
-     * @var array
+     * @var array<mixed>
      */
     protected $axes;
 
@@ -28,7 +26,7 @@ trait MaterialTrait
     }
 
     /**
-     * @param array $axes
+     * @param array<mixed> $axes
      *
      * @return $this
      */

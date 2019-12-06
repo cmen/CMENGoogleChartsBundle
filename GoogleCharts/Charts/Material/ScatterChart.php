@@ -5,15 +5,15 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ScatterChart\Material\ScatterChartOptions;
 
 /**
- * Class ScatterChart.
- *
  * @author Christophe Meneses
  */
 class ScatterChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterChart
 {
     /**
-     * ScatterChart constructor.
+     * @var ScatterChartOptions
      */
+    protected $options;
+
     public function __construct()
     {
         parent::__construct();
@@ -21,25 +21,16 @@ class ScatterChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterC
         $this->options = new ScatterChartOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'scatter';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getLibrary()
     {
         return 'charts';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'Scatter';

@@ -12,6 +12,11 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffScatterChart\DiffScatt
 class DiffScatterChart extends ScatterChart implements DiffChart
 {
     /**
+     * @var DiffScatterChartOptions
+     */
+    protected $options;
+
+    /**
      * @var ScatterChart
      */
     private $oldChart;
@@ -21,6 +26,12 @@ class DiffScatterChart extends ScatterChart implements DiffChart
      */
     private $newChart;
 
+    /**
+     * @param ScatterChart|object $oldChart
+     * @param ScatterChart|object $newChart
+     *
+     * @throws GoogleChartsException
+     */
     public function __construct($oldChart, $newChart)
     {
         if (!$oldChart instanceof ScatterChart || !$newChart instanceof ScatterChart) {
@@ -44,7 +55,7 @@ class DiffScatterChart extends ScatterChart implements DiffChart
     }
 
     /**
-     * @param $options DiffScatterChartOptions
+     * @param DiffScatterChartOptions $options
      *
      * @return DiffScatterChart
      */

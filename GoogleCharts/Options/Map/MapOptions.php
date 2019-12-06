@@ -24,7 +24,7 @@ class MapOptions implements ChartOptionsInterface
      * ['default' => ['normal' => '/path/to/marker/image', 'selected' => '/path/to/marker/image'],
      *  'customMarker' => ['normal' => '/path/to/other/marker/image', 'selected' => '/path/to/other/marker/image']]
      *
-     * @var array
+     * @var array<mixed>
      */
     protected $icons;
 
@@ -44,7 +44,7 @@ class MapOptions implements ChartOptionsInterface
      *    name: The display name for the styled map type
      *    styles: An array containing the style objects for the styled map type.
      *
-     * @var array
+     * @var array<mixed>
      */
     protected $maps;
 
@@ -61,7 +61,7 @@ class MapOptions implements ChartOptionsInterface
      * types displayed in the map type control. If this option is not set, the map type control will default to the
      * standard Google Maps map type control options plus any custom map types that may be available.
      *
-     * @var array
+     * @var array<mixed>
      */
     protected $mapTypeIds;
 
@@ -108,7 +108,7 @@ class MapOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param array $icons
+     * @param array<mixed> $icons
      *
      * @return $this
      */
@@ -132,7 +132,7 @@ class MapOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param array $maps
+     * @param array<mixed> $maps
      *
      * @return $this
      */
@@ -156,7 +156,7 @@ class MapOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param array $mapTypeIds
+     * @param array<mixed> $mapTypeIds
      *
      * @return $this
      */

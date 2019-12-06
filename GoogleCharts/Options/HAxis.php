@@ -25,7 +25,7 @@ class HAxis
     protected $textPosition;
 
     /**
-     * @var TextStyle
+     * @var MediumTextStyle
      */
     protected $textStyle;
 
@@ -57,9 +57,6 @@ class HAxis
      */
     protected $viewWindowMode;
 
-    /**
-     * HAxis constructor.
-     */
     public function __construct()
     {
         $this->gridlines = new Gridlines();

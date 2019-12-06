@@ -42,7 +42,7 @@ class GaugeChartOptions extends ChartOptions
      * Labels for major tick marks. The number of labels define the number of major ticks in all gauges. The default
      * is five major ticks, with the labels of the minimal and maximal gauge value.
      *
-     * @var array
+     * @var array<mixed>
      */
     protected $majorTicks;
 
@@ -99,9 +99,6 @@ class GaugeChartOptions extends ChartOptions
      */
     protected $yellowTo;
 
-    /**
-     * GaugeChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -154,7 +151,7 @@ class GaugeChartOptions extends ChartOptions
     }
 
     /**
-     * @param array $majorTicks
+     * @param array<mixed> $majorTicks
      *
      * @return $this
      */

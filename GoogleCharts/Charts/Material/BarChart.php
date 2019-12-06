@@ -5,15 +5,15 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\BarChart\Material\BarChartOptions;
 
 /**
- * Class BarChart.
- *
  * @author Christophe Meneses
  */
 class BarChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart
 {
     /**
-     * BarChart constructor.
+     * @var BarChartOptions
      */
+    protected $options;
+
     public function __construct()
     {
         parent::__construct();
@@ -22,25 +22,16 @@ class BarChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart
         $this->options->setBars('horizontal');
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPackage()
     {
         return 'bar';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getLibrary()
     {
         return 'charts';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getType()
     {
         return 'Bar';

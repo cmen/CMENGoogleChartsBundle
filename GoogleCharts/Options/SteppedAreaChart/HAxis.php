@@ -101,7 +101,7 @@ class HAxis
      *
      * This option is only supported for a continuous axis.
      *
-     * @var array
+     * @var array<mixed>
      */
     protected $ticks;
 
@@ -117,9 +117,6 @@ class HAxis
      */
     protected $viewWindow;
 
-    /**
-     * HAxis constructor.
-     */
     public function __construct()
     {
         $this->textStyle = new TextStyle();
@@ -152,7 +149,7 @@ class HAxis
     }
 
     /**
-     * @param array $ticks
+     * @param array<mixed> $ticks
      *
      * @return $this
      */
