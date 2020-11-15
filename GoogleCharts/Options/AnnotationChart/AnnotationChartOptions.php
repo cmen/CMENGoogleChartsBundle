@@ -224,20 +224,15 @@ class AnnotationChartOptions implements ChartOptionsInterface
         $this->table = new Table();
     }
 
-    /**
-     * @return Table
-     */
-    public function getTable()
+    public function getTable(): Table
     {
         return $this->table;
     }
 
     /**
-     * @param string $allValuesSuffix
-     *
      * @return $this
      */
-    public function setAllValuesSuffix($allValuesSuffix)
+    public function setAllValuesSuffix(string $allValuesSuffix)
     {
         $this->allValuesSuffix = $allValuesSuffix;
 
@@ -245,11 +240,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param int $annotationsWidth
-     *
      * @return $this
      */
-    public function setAnnotationsWidth($annotationsWidth)
+    public function setAnnotationsWidth(int $annotationsWidth)
     {
         $this->annotationsWidth = $annotationsWidth;
 
@@ -257,11 +250,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $dateFormat
-     *
      * @return $this
      */
-    public function setDateFormat($dateFormat)
+    public function setDateFormat(string $dateFormat)
     {
         $this->dateFormat = $dateFormat;
 
@@ -269,11 +260,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $displayAnnotations
-     *
      * @return $this
      */
-    public function setDisplayAnnotations($displayAnnotations)
+    public function setDisplayAnnotations(bool $displayAnnotations)
     {
         $this->displayAnnotations = $displayAnnotations;
 
@@ -281,11 +270,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $displayAnnotationsFilter
-     *
      * @return $this
      */
-    public function setDisplayAnnotationsFilter($displayAnnotationsFilter)
+    public function setDisplayAnnotationsFilter(bool $displayAnnotationsFilter)
     {
         $this->displayAnnotationsFilter = $displayAnnotationsFilter;
 
@@ -293,11 +280,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $displayDateBarSeparator
-     *
      * @return $this
      */
-    public function setDisplayDateBarSeparator($displayDateBarSeparator)
+    public function setDisplayDateBarSeparator(bool $displayDateBarSeparator)
     {
         $this->displayDateBarSeparator = $displayDateBarSeparator;
 
@@ -305,11 +290,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $displayExactValues
-     *
      * @return $this
      */
-    public function setDisplayExactValues($displayExactValues)
+    public function setDisplayExactValues(bool $displayExactValues)
     {
         $this->displayExactValues = $displayExactValues;
 
@@ -317,11 +300,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $displayLegendDots
-     *
      * @return $this
      */
-    public function setDisplayLegendDots($displayLegendDots)
+    public function setDisplayLegendDots(bool $displayLegendDots)
     {
         $this->displayLegendDots = $displayLegendDots;
 
@@ -329,11 +310,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $displayLegendValues
-     *
      * @return $this
      */
-    public function setDisplayLegendValues($displayLegendValues)
+    public function setDisplayLegendValues(bool $displayLegendValues)
     {
         $this->displayLegendValues = $displayLegendValues;
 
@@ -341,11 +320,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $displayRangeSelector
-     *
      * @return $this
      */
-    public function setDisplayRangeSelector($displayRangeSelector)
+    public function setDisplayRangeSelector(bool $displayRangeSelector)
     {
         $this->displayRangeSelector = $displayRangeSelector;
 
@@ -353,11 +330,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $displayZoomButtons
-     *
      * @return $this
      */
-    public function setDisplayZoomButtons($displayZoomButtons)
+    public function setDisplayZoomButtons(bool $displayZoomButtons)
     {
         $this->displayZoomButtons = $displayZoomButtons;
 
@@ -365,11 +340,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param int $fill
-     *
      * @return $this
      */
-    public function setFill($fill)
+    public function setFill(int $fill)
     {
         $this->fill = $fill;
 
@@ -377,11 +350,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $legendPosition
-     *
      * @return $this
      */
-    public function setLegendPosition($legendPosition)
+    public function setLegendPosition(string $legendPosition)
     {
         $this->legendPosition = $legendPosition;
 
@@ -389,11 +360,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $numberFormats
-     *
      * @return $this
      */
-    public function setNumberFormats($numberFormats)
+    public function setNumberFormats(string $numberFormats)
     {
         $this->numberFormats = $numberFormats;
 
@@ -405,7 +374,7 @@ class AnnotationChartOptions implements ChartOptionsInterface
      *
      * @return $this
      */
-    public function setScaleColumns($scaleColumns)
+    public function setScaleColumns(array $scaleColumns)
     {
         $this->scaleColumns = $scaleColumns;
 
@@ -413,11 +382,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $scaleFormat
-     *
      * @return $this
      */
-    public function setScaleFormat($scaleFormat)
+    public function setScaleFormat(string $scaleFormat)
     {
         $this->scaleFormat = $scaleFormat;
 
@@ -425,11 +392,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $scaleType
-     *
      * @return $this
      */
-    public function setScaleType($scaleType)
+    public function setScaleType(string $scaleType)
     {
         $this->scaleType = $scaleType;
 
@@ -437,11 +402,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param DateTime $zoomStartTime
-     *
      * @return $this
      */
-    public function setZoomStartTime($zoomStartTime)
+    public function setZoomStartTime(DateTime $zoomStartTime)
     {
         $this->zoomStartTime = $zoomStartTime;
 
@@ -449,11 +412,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param int $thickness
-     *
      * @return $this
      */
-    public function setThickness($thickness)
+    public function setThickness(int $thickness)
     {
         $this->thickness = $thickness;
 
@@ -461,11 +422,9 @@ class AnnotationChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param DateTime $zoomEndTime
-     *
      * @return $this
      */
-    public function setZoomEndTime($zoomEndTime)
+    public function setZoomEndTime(DateTime $zoomEndTime)
     {
         $this->zoomEndTime = $zoomEndTime;
 

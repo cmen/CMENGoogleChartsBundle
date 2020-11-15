@@ -17,11 +17,9 @@ trait SelectionModeTrait
     protected $selectionMode;
 
     /**
-     * @param string $selectionMode
-     *
      * @return $this
      */
-    public function setSelectionMode($selectionMode)
+    public function setSelectionMode(string $selectionMode)
     {
         $this->selectionMode = $selectionMode;
 

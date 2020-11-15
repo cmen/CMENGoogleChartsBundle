@@ -24,7 +24,7 @@ class EventType
     /**
      * @return string[]
      */
-    public static function getAllEventTypes()
+    public static function getAllEventTypes(): array
     {
         return [
             self::ANIMATION_FINISH,

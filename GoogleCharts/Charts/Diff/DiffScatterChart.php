@@ -2,7 +2,6 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff;
 
-use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterChart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffScatterChart\DiffScatterChartOptions;
 
@@ -26,18 +25,8 @@ class DiffScatterChart extends ScatterChart implements DiffChart
      */
     private $newChart;
 
-    /**
-     * @param ScatterChart|object $oldChart
-     * @param ScatterChart|object $newChart
-     *
-     * @throws GoogleChartsException
-     */
-    public function __construct($oldChart, $newChart)
+    public function __construct(ScatterChart $oldChart, ScatterChart $newChart)
     {
-        if (!$oldChart instanceof ScatterChart || !$newChart instanceof ScatterChart) {
-            throw new GoogleChartsException('Instance of PieChart is expected');
-        }
-
         parent::__construct();
 
         $this->options = new DiffScatterChartOptions();
@@ -46,20 +35,15 @@ class DiffScatterChart extends ScatterChart implements DiffChart
         $this->newChart = $newChart;
     }
 
-    /**
-     * @return DiffScatterChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): DiffScatterChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param DiffScatterChartOptions $options
-     *
-     * @return DiffScatterChart
      */
-    public function setOptions($options)
+    public function setOptions(/* DiffScatterChartOptions */$options): DiffScatterChart
     {
         $this->options = $options;
 

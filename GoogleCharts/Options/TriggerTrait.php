@@ -20,11 +20,9 @@ trait TriggerTrait
     protected $trigger;
 
     /**
-     * @param string $trigger
-     *
      * @return $this
      */
-    public function setTrigger($trigger)
+    public function setTrigger(string $trigger)
     {
         $this->trigger = $trigger;
 

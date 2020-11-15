@@ -22,9 +22,6 @@ class Diff
      */
     protected $oldData;
 
-    /**
-     * Diff constructor.
-     */
     public function __construct()
     {
         $this->innerCircle = new InnerCircle();
@@ -32,26 +29,17 @@ class Diff
         $this->oldData = new OldData();
     }
 
-    /**
-     * @return NewData
-     */
-    public function getNewData()
+    public function getNewData(): NewData
     {
         return $this->newData;
     }
 
-    /**
-     * @return InnerCircle
-     */
-    public function getInnerCircle()
+    public function getInnerCircle(): InnerCircle
     {
         return $this->innerCircle;
     }
 
-    /**
-     * @return OldData
-     */
-    public function getOldData()
+    public function getOldData(): OldData
     {
         return $this->oldData;
     }

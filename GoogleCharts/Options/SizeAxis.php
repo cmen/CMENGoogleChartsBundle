@@ -38,11 +38,9 @@ class SizeAxis
     protected $minValue;
 
     /**
-     * @param int $maxSize
-     *
      * @return $this
      */
-    public function setMaxSize($maxSize)
+    public function setMaxSize(int $maxSize)
     {
         $this->maxSize = $maxSize;
 
@@ -50,11 +48,9 @@ class SizeAxis
     }
 
     /**
-     * @param int $maxValue
-     *
      * @return $this
      */
-    public function setMaxValue($maxValue)
+    public function setMaxValue(int $maxValue)
     {
         $this->maxValue = $maxValue;
 
@@ -62,11 +58,9 @@ class SizeAxis
     }
 
     /**
-     * @param int $minSize
-     *
      * @return $this
      */
-    public function setMinSize($minSize)
+    public function setMinSize(int $minSize)
     {
         $this->minSize = $minSize;
 
@@ -74,11 +68,9 @@ class SizeAxis
     }
 
     /**
-     * @param int $minValue
-     *
      * @return $this
      */
-    public function setMinValue($minValue)
+    public function setMinValue(int $minValue)
     {
         $this->minValue = $minValue;
 

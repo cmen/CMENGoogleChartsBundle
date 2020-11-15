@@ -33,37 +33,26 @@ class Crosshair
      */
     protected $trigger;
 
-    /**
-     * Crosshair constructor.
-     */
     public function __construct()
     {
         $this->focused = new Focused();
         $this->selected = new Selected();
     }
 
-    /**
-     * @return Focused
-     */
-    public function getFocused()
+    public function getFocused(): Focused
     {
         return $this->focused;
     }
 
-    /**
-     * @return Selected
-     */
-    public function getSelected()
+    public function getSelected(): Selected
     {
         return $this->selected;
     }
 
     /**
-     * @param string $trigger
-     *
      * @return $this
      */
-    public function setTrigger($trigger)
+    public function setTrigger(string $trigger)
     {
         $this->trigger = $trigger;
 

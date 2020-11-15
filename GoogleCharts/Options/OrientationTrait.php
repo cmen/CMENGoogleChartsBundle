@@ -21,11 +21,9 @@ trait OrientationTrait
     protected $orientation;
 
     /**
-     * @param string $orientation
-     *
      * @return $this
      */
-    public function setOrientation($orientation)
+    public function setOrientation(string $orientation)
     {
         $this->orientation = $orientation;
 

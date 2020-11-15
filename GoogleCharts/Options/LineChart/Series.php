@@ -18,18 +18,12 @@ class Series extends LineSeries
 
     use CurveTypeTrait;
 
-    /**
-     * Series constructor.
-     */
     public function __construct()
     {
         $this->annotations = new Annotations();
     }
 
-    /**
-     * @return Annotations
-     */
-    public function getAnnotations()
+    public function getAnnotations(): Annotations
     {
         return $this->annotations;
     }

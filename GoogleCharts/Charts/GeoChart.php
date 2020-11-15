@@ -23,17 +23,17 @@ class GeoChart extends Chart
         $this->options = new GeoChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'GeoChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'geochart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ERROR,
@@ -43,20 +43,15 @@ class GeoChart extends Chart
         ];
     }
 
-    /**
-     * @return GeoChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): GeoChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param GeoChartOptions $options
-     *
-     * @return GeoChart
      */
-    public function setOptions($options)
+    public function setOptions(/* GeoChartOptions */$options): GeoChart
     {
         $this->options = $options;
 

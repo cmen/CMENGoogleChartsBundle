@@ -23,7 +23,7 @@ trait LineDashStyleTrait
      *
      * @return $this
      */
-    public function setLineDashStyle($lineDashStyle)
+    public function setLineDashStyle(array $lineDashStyle)
     {
         $this->lineDashStyle = $lineDashStyle;
 

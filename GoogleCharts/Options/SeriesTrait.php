@@ -28,7 +28,7 @@ trait SeriesTrait
      *
      * @return $this
      */
-    public function setSeries($series)
+    public function setSeries(array $series)
     {
         $this->series = $series;
 

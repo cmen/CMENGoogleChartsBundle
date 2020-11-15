@@ -21,25 +21,22 @@ class ScatterChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterC
         $this->options = new ScatterChartOptions();
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'scatter';
     }
 
-    public function getLibrary()
+    public function getLibrary(): string
     {
         return 'charts';
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Scatter';
     }
 
-    /**
-     * @return ScatterChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): ScatterChartOptions
     {
         return $this->options;
     }

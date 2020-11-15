@@ -23,17 +23,17 @@ class BarChart extends Chart
         $this->options = new BarChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'BarChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ANIMATION_FINISH,
@@ -46,10 +46,7 @@ class BarChart extends Chart
         ];
     }
 
-    /**
-     * @return BarChartOptions
-     */
-    public function getOptions()
+    public function getOptions()/* : BarChartOptions */
     {
         return $this->options;
     }
@@ -59,7 +56,7 @@ class BarChart extends Chart
      *
      * @return BarChart
      */
-    public function setOptions($options)
+    public function setOptions(/* BarChartOptions */$options)/* : BarChart */
     {
         $this->options = $options;
 

@@ -41,28 +41,20 @@ class Legend
      */
     protected $textStyle;
 
-    /**
-     * Legend constructor.
-     */
     public function __construct()
     {
         $this->textStyle = new MediumTextStyle();
     }
 
-    /**
-     * @return MediumTextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): MediumTextStyle
     {
         return $this->textStyle;
     }
 
     /**
-     * @param string $alignment
-     *
      * @return $this
      */
-    public function setAlignment($alignment)
+    public function setAlignment(string $alignment)
     {
         $this->alignment = $alignment;
 
@@ -70,11 +62,9 @@ class Legend
     }
 
     /**
-     * @param string $position
-     *
      * @return $this
      */
-    public function setPosition($position)
+    public function setPosition(string $position)
     {
         $this->position = $position;
 

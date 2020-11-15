@@ -36,11 +36,9 @@ class ColorAxis
     use ColorsTrait;
 
     /**
-     * @param int $minValue
-     *
      * @return $this
      */
-    public function setMinValue($minValue)
+    public function setMinValue(int $minValue)
     {
         $this->minValue = $minValue;
 
@@ -48,11 +46,9 @@ class ColorAxis
     }
 
     /**
-     * @param int $maxValue
-     *
      * @return $this
      */
-    public function setMaxValue($maxValue)
+    public function setMaxValue(int $maxValue)
     {
         $this->maxValue = $maxValue;
 
@@ -64,7 +60,7 @@ class ColorAxis
      *
      * @return $this
      */
-    public function setValues($values)
+    public function setValues(array $values)
     {
         $this->values = $values;
 

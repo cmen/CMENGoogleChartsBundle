@@ -43,11 +43,9 @@ class OrgChartOptions implements ChartOptionsInterface
     protected $size;
 
     /**
-     * @param bool $allowCollapse
-     *
      * @return $this
      */
-    public function setAllowCollapse($allowCollapse)
+    public function setAllowCollapse(bool $allowCollapse)
     {
         $this->allowCollapse = $allowCollapse;
 
@@ -55,11 +53,9 @@ class OrgChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $nodeClass
-     *
      * @return $this
      */
-    public function setNodeClass($nodeClass)
+    public function setNodeClass(string $nodeClass)
     {
         $this->nodeClass = $nodeClass;
 
@@ -67,11 +63,9 @@ class OrgChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $selectedNodeClass
-     *
      * @return $this
      */
-    public function setSelectedNodeClass($selectedNodeClass)
+    public function setSelectedNodeClass(string $selectedNodeClass)
     {
         $this->selectedNodeClass = $selectedNodeClass;
 
@@ -79,11 +73,9 @@ class OrgChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $size
-     *
      * @return $this
      */
-    public function setSize($size)
+    public function setSize(string $size)
     {
         $this->size = $size;
 

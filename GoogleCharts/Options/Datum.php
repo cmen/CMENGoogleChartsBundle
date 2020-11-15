@@ -22,28 +22,20 @@ class Datum
      */
     protected $style;
 
-    /**
-     * Datum constructor.
-     */
     public function __construct()
     {
         $this->stem = new Stem();
     }
 
-    /**
-     * @return Stem
-     */
-    public function getStem()
+    public function getStem(): Stem
     {
         return $this->stem;
     }
 
     /**
-     * @param string $style
-     *
      * @return $this
      */
-    public function setStyle($style)
+    public function setStyle(string $style)
     {
         $this->style = $style;
 

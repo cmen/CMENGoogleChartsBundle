@@ -23,17 +23,17 @@ class PieChart extends Chart
         $this->options = new PieChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'PieChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::CLICK,
@@ -48,7 +48,7 @@ class PieChart extends Chart
     /**
      * @return PieChartOptions
      */
-    public function getOptions()
+    public function getOptions()/* : PieChartOptions */
     {
         return $this->options;
     }
@@ -58,7 +58,7 @@ class PieChart extends Chart
      *
      * @return PieChart
      */
-    public function setOptions($options)
+    public function setOptions(/* PieChartOptions */$options)/* : PieChart */
     {
         $this->options = $options;
 

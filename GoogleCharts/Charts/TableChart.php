@@ -23,17 +23,17 @@ class TableChart extends Chart
         $this->options = new TableChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Table';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'table';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::PAGE,
@@ -43,20 +43,15 @@ class TableChart extends Chart
         ];
     }
 
-    /**
-     * @return TableChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): TableChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param TableChartOptions $options
-     *
-     * @return TableChart
      */
-    public function setOptions($options)
+    public function setOptions(/* TableChartOptions */$options): TableChart
     {
         $this->options = $options;
 

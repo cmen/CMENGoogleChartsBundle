@@ -15,11 +15,9 @@ trait MaxTrait
     protected $max;
 
     /**
-     * @param int $max
-     *
      * @return $this
      */
-    public function setMax($max)
+    public function setMax(int $max)
     {
         $this->max = $max;
 

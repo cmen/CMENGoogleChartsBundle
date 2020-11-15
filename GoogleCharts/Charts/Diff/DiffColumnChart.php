@@ -55,10 +55,8 @@ class DiffColumnChart extends ColumnChart implements DiffChart
 
     /**
      * @param DiffColumnChartOptions $options
-     *
-     * @return DiffColumnChart
      */
-    public function setOptions($options)
+    public function setOptions(/* DiffColumnChartOptions */$options): DiffColumnChart
     {
         $this->options = $options;
 

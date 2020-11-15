@@ -13,9 +13,6 @@ class ChartOptions implements ChartOptionsInterface
 
     use WidthTrait;
 
-    /**
-     * ChartOptions constructor.
-     */
     public function __construct()
     {
     }

@@ -22,25 +22,22 @@ class BarChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart
         $this->options->setBars('horizontal');
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'bar';
     }
 
-    public function getLibrary()
+    public function getLibrary(): string
     {
         return 'charts';
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Bar';
     }
 
-    /**
-     * @return BarChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): BarChartOptions
     {
         return $this->options;
     }

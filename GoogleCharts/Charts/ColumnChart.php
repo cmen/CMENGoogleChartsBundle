@@ -23,17 +23,17 @@ class ColumnChart extends Chart
         $this->options = new ColumnChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'ColumnChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ANIMATION_FINISH,
@@ -46,10 +46,7 @@ class ColumnChart extends Chart
         ];
     }
 
-    /**
-     * @return ColumnChartOptions
-     */
-    public function getOptions()
+    public function getOptions()/* : ColumnChartOptions */
     {
         return $this->options;
     }
@@ -59,7 +56,7 @@ class ColumnChart extends Chart
      *
      * @return ColumnChart
      */
-    public function setOptions($options)
+    public function setOptions(/* ColumnChartOptions */$options)/* : ColumnChart */
     {
         $this->options = $options;
 

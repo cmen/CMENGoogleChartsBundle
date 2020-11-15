@@ -11,11 +11,12 @@ use CMEN\GoogleChartsBundle\Output\Javascript\DataOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\DateOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\EventsOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\OptionsOutput;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @author Christophe Meneses
  */
-class ColumnChartTest extends \PHPUnit_Framework_TestCase
+class ColumnChartTest extends TestCase
 {
     /** @var ChartOutputInterface */
     private $chartOutput;

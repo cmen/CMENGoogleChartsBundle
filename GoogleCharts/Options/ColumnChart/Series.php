@@ -23,28 +23,20 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
      */
     protected $targetAxisIndex;
 
-    /**
-     * Series constructor.
-     */
     public function __construct()
     {
         $this->annotations = new AdvancedAnnotations();
     }
 
-    /**
-     * @return AdvancedAnnotations
-     */
-    public function getAnnotations()
+    public function getAnnotations(): AdvancedAnnotations
     {
         return $this->annotations;
     }
 
     /**
-     * @param int $targetAxisIndex
-     *
      * @return $this
      */
-    public function setTargetAxisIndex($targetAxisIndex)
+    public function setTargetAxisIndex(int $targetAxisIndex)
     {
         $this->targetAxisIndex = $targetAxisIndex;
 

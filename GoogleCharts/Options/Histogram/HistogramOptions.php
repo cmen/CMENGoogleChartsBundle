@@ -64,9 +64,6 @@ class HistogramOptions extends AdvancedChartOptions
 
     use VAxesTrait;
 
-    /**
-     * HistogramOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -79,50 +76,32 @@ class HistogramOptions extends AdvancedChartOptions
         $this->tooltip = new MediumTooltip();
     }
 
-    /**
-     * @return AdvancedAnimation
-     */
-    public function getAnimation()
+    public function getAnimation(): AdvancedAnimation
     {
         return $this->animation;
     }
 
-    /**
-     * @return Bar
-     */
-    public function getBar()
+    public function getBar(): Bar
     {
         return $this->bar;
     }
 
-    /**
-     * @return Histogram
-     */
-    public function getHistogram()
+    public function getHistogram(): Histogram
     {
         return $this->histogram;
     }
 
-    /**
-     * @return HAxis
-     */
-    public function getHAxis()
+    public function getHAxis(): HAxis
     {
         return $this->hAxis;
     }
 
-    /**
-     * @return AdvancedLegend
-     */
-    public function getLegend()
+    public function getLegend(): AdvancedLegend
     {
         return $this->legend;
     }
 
-    /**
-     * @return MediumTooltip
-     */
-    public function getTooltip()
+    public function getTooltip(): MediumTooltip
     {
         return $this->tooltip;
     }

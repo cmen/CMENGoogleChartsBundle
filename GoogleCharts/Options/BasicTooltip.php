@@ -14,18 +14,12 @@ class BasicTooltip extends Tooltip
 
     use TriggerTrait;
 
-    /**
-     * BasicTooltip constructor.
-     */
     public function __construct()
     {
         $this->textStyle = new MediumTextStyle();
     }
 
-    /**
-     * @return MediumTextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): MediumTextStyle
     {
         return $this->textStyle;
     }

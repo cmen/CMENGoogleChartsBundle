@@ -47,11 +47,9 @@ class Arrow
     protected $width;
 
     /**
-     * @param int $angle
-     *
      * @return $this
      */
-    public function setAngle($angle)
+    public function setAngle(int $angle)
     {
         $this->angle = $angle;
 
@@ -59,11 +57,9 @@ class Arrow
     }
 
     /**
-     * @param int $length
-     *
      * @return $this
      */
-    public function setLength($length)
+    public function setLength(int $length)
     {
         $this->length = $length;
 
@@ -71,11 +67,9 @@ class Arrow
     }
 
     /**
-     * @param int $radius
-     *
      * @return $this
      */
-    public function setRadius($radius)
+    public function setRadius(int $radius)
     {
         $this->radius = $radius;
 
@@ -83,11 +77,9 @@ class Arrow
     }
 
     /**
-     * @param int $spaceAfter
-     *
      * @return $this
      */
-    public function setSpaceAfter($spaceAfter)
+    public function setSpaceAfter(int $spaceAfter)
     {
         $this->spaceAfter = $spaceAfter;
 
@@ -95,11 +87,9 @@ class Arrow
     }
 
     /**
-     * @param float $width
-     *
      * @return $this
      */
-    public function setWidth($width)
+    public function setWidth(float $width)
     {
         $this->width = $width;
 

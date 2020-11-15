@@ -57,11 +57,9 @@ class Gradient
     protected $useObjectBoundingBoxUnits;
 
     /**
-     * @param string $color1
-     *
      * @return $this
      */
-    public function setColor1($color1)
+    public function setColor1(string $color1)
     {
         $this->color1 = $color1;
 
@@ -69,11 +67,9 @@ class Gradient
     }
 
     /**
-     * @param string $color2
-     *
      * @return $this
      */
-    public function setColor2($color2)
+    public function setColor2(string $color2)
     {
         $this->color2 = $color2;
 
@@ -81,11 +77,9 @@ class Gradient
     }
 
     /**
-     * @param string $x1
-     *
      * @return $this
      */
-    public function setX1($x1)
+    public function setX1(string $x1)
     {
         $this->x1 = $x1;
 
@@ -93,11 +87,9 @@ class Gradient
     }
 
     /**
-     * @param string $y1
-     *
      * @return $this
      */
-    public function setY1($y1)
+    public function setY1(string $y1)
     {
         $this->y1 = $y1;
 
@@ -105,11 +97,9 @@ class Gradient
     }
 
     /**
-     * @param string $x2
-     *
      * @return $this
      */
-    public function setX2($x2)
+    public function setX2(string $x2)
     {
         $this->x2 = $x2;
 
@@ -117,11 +107,9 @@ class Gradient
     }
 
     /**
-     * @param string $y2
-     *
      * @return $this
      */
-    public function setY2($y2)
+    public function setY2(string $y2)
     {
         $this->y2 = $y2;
 
@@ -129,11 +117,9 @@ class Gradient
     }
 
     /**
-     * @param bool $useObjectBoundingBoxUnits
-     *
      * @return $this
      */
-    public function setUseObjectBoundingBoxUnits($useObjectBoundingBoxUnits)
+    public function setUseObjectBoundingBoxUnits(bool $useObjectBoundingBoxUnits)
     {
         $this->useObjectBoundingBoxUnits = $useObjectBoundingBoxUnits;
 

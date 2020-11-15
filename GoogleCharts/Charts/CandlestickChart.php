@@ -23,17 +23,17 @@ class CandlestickChart extends Chart
         $this->options = new CandlestickChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'CandlestickChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ANIMATION_FINISH,
@@ -46,20 +46,15 @@ class CandlestickChart extends Chart
         ];
     }
 
-    /**
-     * @return CandlestickChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): CandlestickChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param CandlestickChartOptions $options
-     *
-     * @return CandlestickChart
      */
-    public function setOptions($options)
+    public function setOptions(/* CandlestickChartOptions */$options): CandlestickChart
     {
         $this->options = $options;
 

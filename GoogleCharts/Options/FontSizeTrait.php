@@ -18,11 +18,9 @@ trait FontSizeTrait
     protected $fontSize;
 
     /**
-     * @param int $fontSize
-     *
      * @return $this
      */
-    public function setFontSize($fontSize)
+    public function setFontSize(int $fontSize)
     {
         $this->fontSize = $fontSize;
 

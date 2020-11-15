@@ -20,7 +20,7 @@ trait ColorsTrait
      *
      * @return $this
      */
-    public function setColors($colors)
+    public function setColors(array $colors)
     {
         $this->colors = $colors;
 

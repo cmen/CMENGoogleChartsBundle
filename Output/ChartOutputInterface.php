@@ -13,18 +13,14 @@ interface ChartOutputInterface
     /**
      * Returns a string to draw the beginning of the chart (Declaration, data and options).
      *
-     * @return string
-     *
      * @throws GoogleChartsException
      */
-    public function startChart(Chart $chart);
+    public function startChart(Chart $chart): string;
 
     /**
      * Returns a string to draw the end of the chart (Events and drawing).
-     *
-     * @return string
      */
-    public function endChart(Chart $chart);
+    public function endChart(Chart $chart): string;
 
     /**
      * Returns a string to draw the beginning of one or more charts.
@@ -32,22 +28,18 @@ interface ChartOutputInterface
      * @param Chart|Chart[]        $charts     Chart instance or array of Chart instance
      * @param string|string[]|null $elementsID HTML element ID or array of HTML elements IDs. Can be null
      *
-     * @return string
-     *
      * @throws GoogleChartsException
      */
-    public function startCharts($charts, $elementsID = null);
+    public function startCharts($charts, $elementsID = null): string;
 
     /**
      * Returns a string to draw the end of one or more charts.
      *
      * @param Chart|Chart[] $charts Chart instance or array of Chart instance
      *
-     * @return string
-     *
      * @throws GoogleChartsException
      */
-    public function endCharts($charts);
+    public function endCharts($charts): string;
 
     /**
      * Returns a string to draw one or more complete charts.
@@ -55,43 +47,31 @@ interface ChartOutputInterface
      * @param Chart|Chart[]        $charts     Chart instance or array of Chart instance
      * @param string|string[]|null $elementsID HTML element ID or array of HTML elements IDs. Can be null
      *
-     * @return string
-     *
      * @throws GoogleChartsException
      */
-    public function fullCharts($charts, $elementsID = null);
+    public function fullCharts($charts, $elementsID = null): string;
 
     /**
      * Returns a string to load Google libraries.
      *
      * @param string[] $packages List of packages to load
-     *
-     * @return string
      */
-    public function loadLibraries(array $packages);
+    public function loadLibraries(array $packages): string;
 
     /**
      * Returns a string for the beginning of the callback.
-     *
-     * @param string $name Name of callback
-     *
-     * @return string
      */
-    public function startCallback($name);
+    public function startCallback(string $name): string;
 
     /**
      * Returns a string for the end of the callback.
-     *
-     * @return string
      */
-    public function endCallback();
+    public function endCallback(): string;
 
     /**
      * Sets the language used by Google for charts.
      *
-     * @param string $language
-     *
      * @return $this
      */
-    public function setLanguage($language);
+    public function setLanguage(string $language): ChartOutputInterface;
 }

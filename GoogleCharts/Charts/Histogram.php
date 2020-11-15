@@ -23,17 +23,17 @@ class Histogram extends Chart
         $this->options = new HistogramOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Histogram';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ANIMATION_FINISH,
@@ -46,20 +46,15 @@ class Histogram extends Chart
         ];
     }
 
-    /**
-     * @return HistogramOptions
-     */
-    public function getOptions()
+    public function getOptions(): HistogramOptions
     {
         return $this->options;
     }
 
     /**
      * @param HistogramOptions $options
-     *
-     * @return Histogram
      */
-    public function setOptions($options)
+    public function setOptions(/* HistogramOptions */$options): Histogram
     {
         $this->options = $options;
 

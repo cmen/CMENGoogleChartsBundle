@@ -20,18 +20,12 @@ class Bubble
      */
     protected $textStyle;
 
-    /**
-     * Bubble constructor.
-     */
     public function __construct()
     {
         $this->textStyle = new AdvancedTextStyle();
     }
 
-    /**
-     * @return AdvancedTextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): AdvancedTextStyle
     {
         return $this->textStyle;
     }

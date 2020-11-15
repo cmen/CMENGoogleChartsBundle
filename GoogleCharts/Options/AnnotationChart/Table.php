@@ -23,11 +23,9 @@ class Table
     protected $sortColumn;
 
     /**
-     * @param bool $sortAscending
-     *
      * @return $this
      */
-    public function setSortAscending($sortAscending)
+    public function setSortAscending(bool $sortAscending)
     {
         $this->sortAscending = $sortAscending;
 
@@ -35,11 +33,9 @@ class Table
     }
 
     /**
-     * @param int $sortColumn
-     *
      * @return $this
      */
-    public function setSortColumn($sortColumn)
+    public function setSortColumn(int $sortColumn)
     {
         $this->sortColumn = $sortColumn;
 

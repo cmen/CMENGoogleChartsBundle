@@ -17,10 +17,7 @@ class ColorAxis extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorAxis
         $this->legend = new Legend();
     }
 
-    /**
-     * @return Legend
-     */
-    public function getLegend()
+    public function getLegend(): Legend
     {
         return $this->legend;
     }

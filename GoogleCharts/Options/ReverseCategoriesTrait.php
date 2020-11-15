@@ -18,11 +18,9 @@ trait ReverseCategoriesTrait
     protected $reverseCategories;
 
     /**
-     * @param bool $reverseCategories
-     *
      * @return $this
      */
-    public function setReverseCategories($reverseCategories)
+    public function setReverseCategories(bool $reverseCategories)
     {
         $this->reverseCategories = $reverseCategories;
 

@@ -20,11 +20,9 @@ trait AxisTitlesPositionTrait
     protected $axisTitlesPosition;
 
     /**
-     * @param string $axisTitlesPosition
-     *
      * @return $this
      */
-    public function setAxisTitlesPosition($axisTitlesPosition)
+    public function setAxisTitlesPosition(string $axisTitlesPosition)
     {
         $this->axisTitlesPosition = $axisTitlesPosition;
 

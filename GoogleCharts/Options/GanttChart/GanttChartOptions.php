@@ -25,27 +25,18 @@ class GanttChartOptions implements ChartOptionsInterface
 
     use WidthTrait;
 
-    /**
-     * GanttChartOptions constructor.
-     */
     public function __construct()
     {
         $this->backgroundColor = new BackgroundColor();
         $this->gantt = new Gantt();
     }
 
-    /**
-     * @return BackgroundColor
-     */
-    public function getBackgroundColor()
+    public function getBackgroundColor(): BackgroundColor
     {
         return $this->backgroundColor;
     }
 
-    /**
-     * @return Gantt
-     */
-    public function getGantt()
+    public function getGantt(): Gantt
     {
         return $this->gantt;
     }

@@ -25,11 +25,9 @@ class MagnifyingGlass
     protected $zoomFactor;
 
     /**
-     * @param bool $enable
-     *
      * @return $this
      */
-    public function setEnable($enable)
+    public function setEnable(bool $enable)
     {
         $this->enable = $enable;
 
@@ -37,11 +35,9 @@ class MagnifyingGlass
     }
 
     /**
-     * @param float $zoomFactor
-     *
      * @return $this
      */
-    public function setZoomFactor($zoomFactor)
+    public function setZoomFactor(float $zoomFactor)
     {
         $this->zoomFactor = $zoomFactor;
 

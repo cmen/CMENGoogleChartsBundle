@@ -22,35 +22,30 @@ class GaugeChart extends Chart
         $this->options = new GaugeChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Gauge';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'gauge';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [];
     }
 
-    /**
-     * @return GaugeChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): GaugeChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param GaugeChartOptions $options
-     *
-     * @return GaugeChart
      */
-    public function setOptions($options)
+    public function setOptions(/* GaugeChartOptions */$options): GaugeChart
     {
         $this->options = $options;
 

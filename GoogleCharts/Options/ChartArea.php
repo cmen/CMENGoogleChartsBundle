@@ -112,11 +112,9 @@ class ChartArea
     }
 
     /**
-     * @param string $backgroundColor
-     *
      * @return $this
      */
-    public function setBackgroundColor($backgroundColor)
+    public function setBackgroundColor(string $backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
 

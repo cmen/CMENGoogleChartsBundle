@@ -20,11 +20,9 @@ trait TitlePositionTrait
     protected $titlePosition;
 
     /**
-     * @param string $titlePosition
-     *
      * @return $this
      */
-    public function setTitlePosition($titlePosition)
+    public function setTitlePosition(string $titlePosition)
     {
         $this->titlePosition = $titlePosition;
 

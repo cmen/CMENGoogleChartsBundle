@@ -24,37 +24,26 @@ class Candlestick
      */
     protected $risingColor;
 
-    /**
-     * Candlestick constructor.
-     */
     public function __construct()
     {
         $this->fallingColor = new FallingColor();
         $this->risingColor = new RisingColor();
     }
 
-    /**
-     * @return FallingColor
-     */
-    public function getFallingColor()
+    public function getFallingColor(): FallingColor
     {
         return $this->fallingColor;
     }
 
-    /**
-     * @return RisingColor
-     */
-    public function getRisingColor()
+    public function getRisingColor(): RisingColor
     {
         return $this->risingColor;
     }
 
     /**
-     * @param bool $hollowIsRising
-     *
      * @return $this
      */
-    public function setHollowIsRising($hollowIsRising)
+    public function setHollowIsRising(bool $hollowIsRising)
     {
         $this->hollowIsRising = $hollowIsRising;
 

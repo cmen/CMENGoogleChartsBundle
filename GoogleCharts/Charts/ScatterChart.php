@@ -23,17 +23,17 @@ class ScatterChart extends Chart
         $this->options = new ScatterChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'ScatterChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ANIMATION_FINISH,
@@ -46,10 +46,7 @@ class ScatterChart extends Chart
         ];
     }
 
-    /**
-     * @return ScatterChartOptions
-     */
-    public function getOptions()
+    public function getOptions()/*: ScatterChartOptions */
     {
         return $this->options;
     }
@@ -59,7 +56,7 @@ class ScatterChart extends Chart
      *
      * @return ScatterChart
      */
-    public function setOptions($options)
+    public function setOptions(/* ScatterChartOptions */$options)/* : ScatterChart */
     {
         $this->options = $options;
 

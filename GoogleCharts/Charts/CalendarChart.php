@@ -23,17 +23,17 @@ class CalendarChart extends Chart
         $this->options = new CalendarChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Calendar';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'calendar';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ERROR,
@@ -44,20 +44,15 @@ class CalendarChart extends Chart
         ];
     }
 
-    /**
-     * @return CalendarChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): CalendarChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param CalendarChartOptions $options
-     *
-     * @return CalendarChart
      */
-    public function setOptions($options)
+    public function setOptions(/* CalendarChartOptions */$options): CalendarChart
     {
         $this->options = $options;
 

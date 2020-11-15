@@ -23,17 +23,17 @@ class SteppedAreaChart extends Chart
         $this->options = new SteppedAreaChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'SteppedAreaChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ANIMATION_FINISH,
@@ -46,20 +46,15 @@ class SteppedAreaChart extends Chart
         ];
     }
 
-    /**
-     * @return SteppedAreaChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): SteppedAreaChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param SteppedAreaChartOptions $options
-     *
-     * @return SteppedAreaChart
      */
-    public function setOptions($options)
+    public function setOptions(/* SteppedAreaChartOptions */$options): SteppedAreaChart
     {
         $this->options = $options;
 

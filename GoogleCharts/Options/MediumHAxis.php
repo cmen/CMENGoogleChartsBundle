@@ -111,11 +111,9 @@ class MediumHAxis extends HAxis
     protected $ticks;
 
     /**
-     * @param int $baseline
-     *
      * @return $this
      */
-    public function setBaseline($baseline)
+    public function setBaseline(int $baseline)
     {
         $this->baseline = $baseline;
 
@@ -123,11 +121,9 @@ class MediumHAxis extends HAxis
     }
 
     /**
-     * @param string $baselineColor
-     *
      * @return $this
      */
-    public function setBaselineColor($baselineColor)
+    public function setBaselineColor(string $baselineColor)
     {
         $this->baselineColor = $baselineColor;
 
@@ -135,11 +131,9 @@ class MediumHAxis extends HAxis
     }
 
     /**
-     * @param int $direction
-     *
      * @return $this
      */
-    public function setDirection($direction)
+    public function setDirection(int $direction)
     {
         $this->direction = $direction;
 
@@ -147,11 +141,9 @@ class MediumHAxis extends HAxis
     }
 
     /**
-     * @param string $format
-     *
      * @return $this
      */
-    public function setFormat($format)
+    public function setFormat(string $format)
     {
         $this->format = $format;
 
@@ -159,11 +151,9 @@ class MediumHAxis extends HAxis
     }
 
     /**
-     * @param bool $logScale
-     *
      * @return $this
      */
-    public function setLogScale($logScale)
+    public function setLogScale(bool $logScale)
     {
         $this->logScale = $logScale;
 
@@ -171,11 +161,9 @@ class MediumHAxis extends HAxis
     }
 
     /**
-     * @param string $scaleType
-     *
      * @return $this
      */
-    public function setScaleType($scaleType)
+    public function setScaleType(string $scaleType)
     {
         $this->scaleType = $scaleType;
 
@@ -187,7 +175,7 @@ class MediumHAxis extends HAxis
      *
      * @return $this
      */
-    public function setTicks($ticks)
+    public function setTicks(array $ticks)
     {
         $this->ticks = $ticks;
 
@@ -195,11 +183,9 @@ class MediumHAxis extends HAxis
     }
 
     /**
-     * @param int $maxValue
-     *
      * @return $this
      */
-    public function setMaxValue($maxValue)
+    public function setMaxValue(int $maxValue)
     {
         $this->maxValue = $maxValue;
 
@@ -207,11 +193,9 @@ class MediumHAxis extends HAxis
     }
 
     /**
-     * @param int $minValue
-     *
      * @return $this
      */
-    public function setMinValue($minValue)
+    public function setMinValue(int $minValue)
     {
         $this->minValue = $minValue;
 

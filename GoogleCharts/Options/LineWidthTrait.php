@@ -18,11 +18,9 @@ trait LineWidthTrait
     protected $lineWidth;
 
     /**
-     * @param int $lineWidth
-     *
      * @return $this
      */
-    public function setLineWidth($lineWidth)
+    public function setLineWidth(int $lineWidth)
     {
         $this->lineWidth = $lineWidth;
 

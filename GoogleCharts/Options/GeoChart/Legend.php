@@ -22,28 +22,20 @@ class Legend
      */
     protected $textStyle;
 
-    /**
-     * Legend constructor.
-     */
     public function __construct()
     {
         $this->textStyle = new MediumTextStyle();
     }
 
-    /**
-     * @return MediumTextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): MediumTextStyle
     {
         return $this->textStyle;
     }
 
     /**
-     * @param string $numberFormat
-     *
      * @return $this
      */
-    public function setNumberFormat($numberFormat)
+    public function setNumberFormat(string $numberFormat)
     {
         $this->numberFormat = $numberFormat;
 

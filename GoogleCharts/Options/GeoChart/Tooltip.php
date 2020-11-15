@@ -22,10 +22,7 @@ class Tooltip
         $this->textStyle = new MediumTextStyle();
     }
 
-    /**
-     * @return MediumTextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): MediumTextStyle
     {
         return $this->textStyle;
     }

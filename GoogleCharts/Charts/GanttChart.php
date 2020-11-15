@@ -23,17 +23,17 @@ class GanttChart extends Chart
         $this->options = new GanttChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Gantt';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'gantt';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::CLICK,
@@ -43,20 +43,15 @@ class GanttChart extends Chart
         ];
     }
 
-    /**
-     * @return GanttChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): GanttChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param GanttChartOptions $options
-     *
-     * @return GanttChart
      */
-    public function setOptions($options)
+    public function setOptions(/* GanttChartOptions */$options): GanttChart
     {
         $this->options = $options;
 

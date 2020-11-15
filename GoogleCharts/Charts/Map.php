@@ -23,17 +23,17 @@ class Map extends Chart
         $this->options = new MapOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Map';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'map';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ERROR,
@@ -41,20 +41,15 @@ class Map extends Chart
         ];
     }
 
-    /**
-     * @return MapOptions
-     */
-    public function getOptions()
+    public function getOptions(): MapOptions
     {
         return $this->options;
     }
 
     /**
      * @param MapOptions $options
-     *
-     * @return Map
      */
-    public function setOptions($options)
+    public function setOptions(/* MapOptions */$options): Map
     {
         $this->options = $options;
 

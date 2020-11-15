@@ -5,8 +5,6 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options\Material;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTrait;
 
 /**
- * Class Chart.
- *
  * @author Christophe Meneses
  */
 class Chart
@@ -21,11 +19,9 @@ class Chart
     use TitleTrait;
 
     /**
-     * @param string $subtitle
-     *
      * @return Chart
      */
-    public function setSubtitle($subtitle)
+    public function setSubtitle(string $subtitle)
     {
         $this->subtitle = $subtitle;
 

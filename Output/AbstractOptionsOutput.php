@@ -7,7 +7,7 @@ namespace CMEN\GoogleChartsBundle\Output;
  */
 abstract class AbstractOptionsOutput implements OptionsOutputInterface
 {
-    public function removeRecursivelyNullValue(&$options)
+    public function removeRecursivelyNullValue(&$options): void
     {
         $options = array_filter((array) $options, function ($val) {
             return !is_null($val);
@@ -20,7 +20,7 @@ abstract class AbstractOptionsOutput implements OptionsOutputInterface
         }
     }
 
-    public function removeRecursivelyEmptyArray(&$options)
+    public function removeRecursivelyEmptyArray(array &$options): void
     {
         foreach ($options as $key => $value) {
             if (is_array($value)) {
@@ -33,7 +33,7 @@ abstract class AbstractOptionsOutput implements OptionsOutputInterface
         }
     }
 
-    public function renameRecursivelyKeys($options)
+    public function renameRecursivelyKeys(array $options): array
     {
         $newOptions = [];
 

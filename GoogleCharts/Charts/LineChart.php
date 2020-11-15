@@ -23,17 +23,17 @@ class LineChart extends Chart
         $this->options = new LineChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'LineChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ANIMATION_FINISH,
@@ -46,20 +46,15 @@ class LineChart extends Chart
         ];
     }
 
-    /**
-     * @return LineChartOptions
-     */
-    public function getOptions()
+    public function getOptions()/* : LineChartOptions */
     {
         return $this->options;
     }
 
     /**
      * @param LineChartOptions $options
-     *
-     * @return LineChart
      */
-    public function setOptions($options)
+    public function setOptions(/* LineChartOptions */$options): LineChart
     {
         $this->options = $options;
 

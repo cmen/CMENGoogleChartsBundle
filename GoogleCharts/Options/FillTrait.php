@@ -15,11 +15,9 @@ trait FillTrait
     protected $fill;
 
     /**
-     * @param string $fill
-     *
      * @return $this
      */
-    public function setFill($fill)
+    public function setFill(string $fill)
     {
         $this->fill = $fill;
 

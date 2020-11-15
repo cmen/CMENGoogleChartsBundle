@@ -113,9 +113,6 @@ class Gantt
      */
     protected $trackHeight;
 
-    /**
-     * Gantt constructor.
-     */
     public function __construct()
     {
         $this->arrow = new Arrow();
@@ -127,68 +124,45 @@ class Gantt
         $this->percentStyle = new PercentStyle();
     }
 
-    /**
-     * @return Arrow
-     */
-    public function getArrow()
+    public function getArrow(): Arrow
     {
         return $this->arrow;
     }
 
-    /**
-     * @return CriticalPathStyle
-     */
-    public function getCriticalPathStyle()
+    public function getCriticalPathStyle(): CriticalPathStyle
     {
         return $this->criticalPathStyle;
     }
 
-    /**
-     * @return InnerGridHorizLine
-     */
-    public function getInnerGridHorizLine()
+    public function getInnerGridHorizLine(): InnerGridHorizLine
     {
         return $this->innerGridHorizLine;
     }
 
-    /**
-     * @return InnerGridTrack
-     */
-    public function getInnerGridTrack()
+    public function getInnerGridTrack(): InnerGridTrack
     {
         return $this->innerGridTrack;
     }
 
-    /**
-     * @return InnerGridDarkTrack
-     */
-    public function getInnerGridDarkTrack()
+    public function getInnerGridDarkTrack(): InnerGridDarkTrack
     {
         return $this->innerGridDarkTrack;
     }
 
-    /**
-     * @return LabelStyle
-     */
-    public function getLabelStyle()
+    public function getLabelStyle(): LabelStyle
     {
         return $this->labelStyle;
     }
 
-    /**
-     * @return PercentStyle
-     */
-    public function getPercentStyle()
+    public function getPercentStyle(): PercentStyle
     {
         return $this->percentStyle;
     }
 
     /**
-     * @param int $barCornerRadius
-     *
      * @return $this
      */
-    public function setBarCornerRadius($barCornerRadius)
+    public function setBarCornerRadius(int $barCornerRadius)
     {
         $this->barCornerRadius = $barCornerRadius;
 
@@ -196,11 +170,9 @@ class Gantt
     }
 
     /**
-     * @param int $barHeight
-     *
      * @return $this
      */
-    public function setBarHeight($barHeight)
+    public function setBarHeight(int $barHeight)
     {
         $this->barHeight = $barHeight;
 
@@ -208,11 +180,9 @@ class Gantt
     }
 
     /**
-     * @param bool $criticalPathEnabled
-     *
      * @return $this
      */
-    public function setCriticalPathEnabled($criticalPathEnabled)
+    public function setCriticalPathEnabled(bool $criticalPathEnabled)
     {
         $this->criticalPathEnabled = $criticalPathEnabled;
 
@@ -220,11 +190,9 @@ class Gantt
     }
 
     /**
-     * @param int $defaultStartDate
-     *
      * @return $this
      */
-    public function setDefaultStartDate($defaultStartDate)
+    public function setDefaultStartDate(int $defaultStartDate)
     {
         $this->defaultStartDate = $defaultStartDate;
 
@@ -232,11 +200,9 @@ class Gantt
     }
 
     /**
-     * @param int $labelMaxWidth
-     *
      * @return $this
      */
-    public function setLabelMaxWidth($labelMaxWidth)
+    public function setLabelMaxWidth(int $labelMaxWidth)
     {
         $this->labelMaxWidth = $labelMaxWidth;
 
@@ -244,11 +210,9 @@ class Gantt
     }
 
     /**
-     * @param bool $percentEnabled
-     *
      * @return $this
      */
-    public function setPercentEnabled($percentEnabled)
+    public function setPercentEnabled(bool $percentEnabled)
     {
         $this->percentEnabled = $percentEnabled;
 
@@ -256,11 +220,9 @@ class Gantt
     }
 
     /**
-     * @param bool $shadowEnabled
-     *
      * @return $this
      */
-    public function setShadowEnabled($shadowEnabled)
+    public function setShadowEnabled(bool $shadowEnabled)
     {
         $this->shadowEnabled = $shadowEnabled;
 
@@ -268,11 +230,9 @@ class Gantt
     }
 
     /**
-     * @param string $shadowColor
-     *
      * @return $this
      */
-    public function setShadowColor($shadowColor)
+    public function setShadowColor(string $shadowColor)
     {
         $this->shadowColor = $shadowColor;
 
@@ -280,11 +240,9 @@ class Gantt
     }
 
     /**
-     * @param int $shadowOffset
-     *
      * @return $this
      */
-    public function setShadowOffset($shadowOffset)
+    public function setShadowOffset(int $shadowOffset)
     {
         $this->shadowOffset = $shadowOffset;
 
@@ -292,11 +250,9 @@ class Gantt
     }
 
     /**
-     * @param int $trackHeight
-     *
      * @return $this
      */
-    public function setTrackHeight($trackHeight)
+    public function setTrackHeight(int $trackHeight)
     {
         $this->trackHeight = $trackHeight;
 

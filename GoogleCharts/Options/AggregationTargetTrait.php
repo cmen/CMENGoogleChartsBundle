@@ -34,11 +34,9 @@ trait AggregationTargetTrait
     protected $aggregationTarget;
 
     /**
-     * @param string $aggregationTarget
-     *
      * @return $this
      */
-    public function setAggregationTarget($aggregationTarget)
+    public function setAggregationTarget(string $aggregationTarget)
     {
         $this->aggregationTarget = $aggregationTarget;
 

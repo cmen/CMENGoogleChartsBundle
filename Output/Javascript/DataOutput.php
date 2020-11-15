@@ -15,18 +15,12 @@ class DataOutput implements DataOutputInterface
     /** @var DateOutputInterface */
     private $dateOutput;
 
-    /**
-     * DataOutput constructor.
-     */
     public function __construct(DateOutputInterface $dateOutput)
     {
         $this->dateOutput = $dateOutput;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function draw(Data $data, $dataName)
+    public function draw(Data $data, string $dataName): string
     {
         $arrayToDataTable = $data->getArrayToDataTable();
 

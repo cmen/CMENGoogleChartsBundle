@@ -23,7 +23,7 @@ trait VAxesTrait
      *
      * @return $this
      */
-    public function setVAxes($vAxes)
+    public function setVAxes(array $vAxes)
     {
         $this->vAxes = $vAxes;
 

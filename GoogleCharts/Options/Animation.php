@@ -27,11 +27,9 @@ class Animation
     protected $easing;
 
     /**
-     * @param int $duration
-     *
      * @return $this
      */
-    public function setDuration($duration)
+    public function setDuration(int $duration)
     {
         $this->duration = $duration;
 
@@ -39,11 +37,9 @@ class Animation
     }
 
     /**
-     * @param string $easing
-     *
      * @return $this
      */
-    public function setEasing($easing)
+    public function setEasing(string $easing)
     {
         $this->easing = $easing;
 

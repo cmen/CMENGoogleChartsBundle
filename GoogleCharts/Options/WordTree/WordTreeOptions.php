@@ -27,9 +27,6 @@ class WordTreeOptions extends ChartOptions
      */
     protected $wordtree;
 
-    /**
-     * WordTreeOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -37,20 +34,15 @@ class WordTreeOptions extends ChartOptions
         $this->wordtree = new WordTree();
     }
 
-    /**
-     * @return WordTree
-     */
-    public function getWordtree()
+    public function getWordtree(): WordTree
     {
         return $this->wordtree;
     }
 
     /**
-     * @param int $maxFontSize
-     *
      * @return $this
      */
-    public function setMaxFontSize($maxFontSize)
+    public function setMaxFontSize(int $maxFontSize)
     {
         $this->maxFontSize = $maxFontSize;
 

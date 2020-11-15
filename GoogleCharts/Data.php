@@ -26,7 +26,7 @@ class Data
     /**
      * @return array<mixed>
      */
-    public function getArrayToDataTable()
+    public function getArrayToDataTable(): array
     {
         return $this->arrayToDataTable;
     }
@@ -45,16 +45,13 @@ class Data
      *
      * @return void
      */
-    public function setArrayToDataTable($arrayToDataTable, $firstRowIsData = false)
+    public function setArrayToDataTable(array $arrayToDataTable, bool $firstRowIsData = false)
     {
         $this->arrayToDataTable = $arrayToDataTable;
         $this->firstRowIsData = $firstRowIsData;
     }
 
-    /**
-     * @return bool
-     */
-    public function isFirstRowIsData()
+    public function isFirstRowIsData(): bool
     {
         return $this->firstRowIsData;
     }

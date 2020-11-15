@@ -15,11 +15,9 @@ class NewData
     protected $widthFactor;
 
     /**
-     * @param float $widthFactor
-     *
      * @return $this
      */
-    public function setWidthFactor($widthFactor)
+    public function setWidthFactor(float $widthFactor)
     {
         $this->widthFactor = $widthFactor;
 

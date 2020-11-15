@@ -29,11 +29,9 @@ class Histogram
     protected $lastBucketPercentile;
 
     /**
-     * @param int $bucketSize
-     *
      * @return $this
      */
-    public function setBucketSize($bucketSize)
+    public function setBucketSize(int $bucketSize)
     {
         $this->bucketSize = $bucketSize;
 
@@ -41,11 +39,9 @@ class Histogram
     }
 
     /**
-     * @param bool $hideBucketItems
-     *
      * @return $this
      */
-    public function setHideBucketItems($hideBucketItems)
+    public function setHideBucketItems(bool $hideBucketItems)
     {
         $this->hideBucketItems = $hideBucketItems;
 
@@ -53,11 +49,9 @@ class Histogram
     }
 
     /**
-     * @param int $lastBucketPercentile
-     *
      * @return $this
      */
-    public function setLastBucketPercentile($lastBucketPercentile)
+    public function setLastBucketPercentile(int $lastBucketPercentile)
     {
         $this->lastBucketPercentile = $lastBucketPercentile;
 

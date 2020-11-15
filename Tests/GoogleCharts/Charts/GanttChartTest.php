@@ -10,11 +10,12 @@ use CMEN\GoogleChartsBundle\Output\Javascript\DateOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\EventsOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\OptionsOutput;
 use DateTime;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @author Christophe Meneses
  */
-class GanttChartTest extends \PHPUnit_Framework_TestCase
+class GanttChartTest extends TestCase
 {
     /** @var ChartOutputInterface */
     private $chartOutput;

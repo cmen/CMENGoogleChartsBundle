@@ -54,11 +54,9 @@ class Trendlines
     protected $visibleInLegend;
 
     /**
-     * @param bool $visibleInLegend
-     *
      * @return $this
      */
-    public function setVisibleInLegend($visibleInLegend)
+    public function setVisibleInLegend(bool $visibleInLegend)
     {
         $this->visibleInLegend = $visibleInLegend;
 
@@ -66,11 +64,9 @@ class Trendlines
     }
 
     /**
-     * @param int $degree
-     *
      * @return $this
      */
-    public function setDegree($degree)
+    public function setDegree(int $degree)
     {
         $this->degree = $degree;
 
@@ -78,11 +74,9 @@ class Trendlines
     }
 
     /**
-     * @param string $labelInLegend
-     *
      * @return $this
      */
-    public function setLabelInLegend($labelInLegend)
+    public function setLabelInLegend(string $labelInLegend)
     {
         $this->labelInLegend = $labelInLegend;
 
@@ -90,11 +84,9 @@ class Trendlines
     }
 
     /**
-     * @param bool $showR2
-     *
      * @return $this
      */
-    public function setShowR2($showR2)
+    public function setShowR2(bool $showR2)
     {
         $this->showR2 = $showR2;
 
@@ -102,11 +94,9 @@ class Trendlines
     }
 
     /**
-     * @param string $type
-     *
      * @return $this
      */
-    public function setType($type)
+    public function setType(string $type)
     {
         $this->type = $type;
 

@@ -14,9 +14,6 @@ class DiffColumnChartOptions extends ColumnChartOptions
      */
     protected $diff;
 
-    /**
-     * DiffColumnChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -24,10 +21,7 @@ class DiffColumnChartOptions extends ColumnChartOptions
         $this->diff = new Diff();
     }
 
-    /**
-     * @return Diff
-     */
-    public function getDiff()
+    public function getDiff(): Diff
     {
         return $this->diff;
     }

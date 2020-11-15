@@ -24,13 +24,9 @@ class ChartOutput extends AbstractChartOutput
     /** @var EventsOutputInterface */
     private $eventsOutput;
 
-    /**
-     * @param string $version
-     * @param string $language
-     */
     public function __construct(
-        $version,
-        $language,
+        string $version,
+        string $language,
         OptionsOutputInterface $optionsOutput,
         DataOutputInterface $dataOutput,
         EventsOutputInterface $eventsOutput
@@ -42,7 +38,7 @@ class ChartOutput extends AbstractChartOutput
         $this->eventsOutput = $eventsOutput;
     }
 
-    public function startChart(Chart $chart)
+    public function startChart(Chart $chart): string
     {
         if (null === $chart->getElementID()) {
             throw new GoogleChartsException('Container is not defined.');
@@ -66,7 +62,7 @@ class ChartOutput extends AbstractChartOutput
         return $js;
     }
 
-    public function endChart(Chart $chart)
+    public function endChart(Chart $chart): string
     {
         if ('visualization' == $chart->getLibrary()) {
             $options = $chart->getOptionsName();
@@ -80,7 +76,7 @@ class ChartOutput extends AbstractChartOutput
             '.draw('.$chart->getDataName().', '.$options.');';
     }
 
-    public function startCharts($charts, $elementsID = null)
+    public function startCharts($charts, $elementsID = null): string
     {
         if ($charts instanceof Chart) {
             $charts = [$charts];
@@ -131,7 +127,7 @@ class ChartOutput extends AbstractChartOutput
         return $js;
     }
 
-    public function endCharts($charts)
+    public function endCharts($charts): string
     {
         if ($charts instanceof Chart) {
             $js = $this->endChart($charts).$this->endCallback();
@@ -151,12 +147,12 @@ class ChartOutput extends AbstractChartOutput
         return $js;
     }
 
-    public function fullCharts($charts, $elementsID = null)
+    public function fullCharts($charts, $elementsID = null): string
     {
         return $this->startCharts($charts, $elementsID).$this->endCharts($charts);
     }
 
-    public function loadLibraries(array $packages)
+    public function loadLibraries(array $packages): string
     {
         array_walk($packages, function (&$item) {
             $item = "'".$item."'";
@@ -169,12 +165,12 @@ class ChartOutput extends AbstractChartOutput
         return "google.charts.load($load);";
     }
 
-    public function startCallback($name)
+    public function startCallback(string $name): string
     {
         return "google.charts.setOnLoadCallback($name); function $name() {";
     }
 
-    public function endCallback()
+    public function endCallback(): string
     {
         return '}';
     }

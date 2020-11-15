@@ -13,11 +13,9 @@ trait BoldTrait
     protected $bold;
 
     /**
-     * @param bool $bold
-     *
      * @return $this
      */
-    public function setBold($bold)
+    public function setBold(bool $bold)
     {
         $this->bold = $bold;
 

@@ -18,11 +18,9 @@ trait ForceIFrameTrait
     protected $forceIFrame;
 
     /**
-     * @param bool $forceIFrame
-     *
      * @return $this
      */
-    public function setForceIFrame($forceIFrame)
+    public function setForceIFrame(bool $forceIFrame)
     {
         $this->forceIFrame = $forceIFrame;
 

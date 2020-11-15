@@ -28,9 +28,6 @@ class CalendarChartOptions extends ChartOptions
      */
     protected $noDataPattern;
 
-    /**
-     * CalendarChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -40,26 +37,17 @@ class CalendarChartOptions extends ChartOptions
         $this->noDataPattern = new NoDataPattern();
     }
 
-    /**
-     * @return Calendar
-     */
-    public function getCalendar()
+    public function getCalendar(): Calendar
     {
         return $this->calendar;
     }
 
-    /**
-     * @return ColorAxis
-     */
-    public function getColorAxis()
+    public function getColorAxis(): ColorAxis
     {
         return $this->colorAxis;
     }
 
-    /**
-     * @return NoDataPattern
-     */
-    public function getNoDataPattern()
+    public function getNoDataPattern(): NoDataPattern
     {
         return $this->noDataPattern;
     }

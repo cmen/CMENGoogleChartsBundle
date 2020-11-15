@@ -18,11 +18,9 @@ class Series
     protected $visibleInLegend;
 
     /**
-     * @param bool $visibleInLegend
-     *
      * @return $this
      */
-    public function setVisibleInLegend($visibleInLegend)
+    public function setVisibleInLegend(bool $visibleInLegend)
     {
         $this->visibleInLegend = $visibleInLegend;
 

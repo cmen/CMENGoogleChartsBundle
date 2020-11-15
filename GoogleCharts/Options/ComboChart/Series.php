@@ -42,9 +42,6 @@ class Series extends LineSeries
      */
     protected $type;
 
-    /**
-     * Series constructor.
-     */
     public function __construct()
     {
         $this->annotations = new Annotations();
@@ -52,36 +49,25 @@ class Series extends LineSeries
         $this->risingColor = new RisingColor();
     }
 
-    /**
-     * @return Annotations
-     */
-    public function getAnnotations()
+    public function getAnnotations(): Annotations
     {
         return $this->annotations;
     }
 
-    /**
-     * @return FallingColor
-     */
-    public function getFallingColor()
+    public function getFallingColor(): FallingColor
     {
         return $this->fallingColor;
     }
 
-    /**
-     * @return RisingColor
-     */
-    public function getRisingColor()
+    public function getRisingColor(): RisingColor
     {
         return $this->risingColor;
     }
 
     /**
-     * @param string $type
-     *
      * @return $this
      */
-    public function setType($type)
+    public function setType(string $type)
     {
         $this->type = $type;
 

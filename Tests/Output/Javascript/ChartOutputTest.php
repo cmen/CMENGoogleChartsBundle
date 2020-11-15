@@ -2,17 +2,19 @@
 
 namespace CMEN\GoogleChartsBundle\Tests\Output\Javascript;
 
+use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnChart;
 use CMEN\GoogleChartsBundle\Output\ChartOutputInterface;
 use CMEN\GoogleChartsBundle\Output\DataOutputInterface;
 use CMEN\GoogleChartsBundle\Output\EventsOutputInterface;
 use CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput;
 use CMEN\GoogleChartsBundle\Output\OptionsOutputInterface;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @author Christophe Meneses
  */
-class ChartOutputTest extends \PHPUnit_Framework_TestCase
+class ChartOutputTest extends TestCase
 {
     /** @var ChartOutputInterface */
     private $chartOutput;
@@ -26,18 +28,17 @@ class ChartOutputTest extends \PHPUnit_Framework_TestCase
         $dataOutput = $this->createMock(DataOutputInterface::class);
         $eventsOutput = $this->createMock(EventsOutputInterface::class);
 
-        /* @noinspection PhpParamsInspection */
         $this->chartOutput = new ChartOutput('current', 'en', $optionsOutput, $dataOutput, $eventsOutput);
     }
 
     /**
-     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
-     * @expectedExceptionMessage Container is not defined.
-     *
-     * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @throws GoogleChartsException
      */
     public function testContainerIsNotDefined()
     {
+        $this->expectException(GoogleChartsException::class);
+        $this->expectExceptionMessage('Container is not defined.');
+
         $chart = new ColumnChart();
         $chart->getOptions()->setTitle('title');
         $chart->getData()->setArrayToDataTable([
@@ -58,25 +59,25 @@ class ChartOutputTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
-     * @expectedExceptionMessage An instance of Chart or an array of Chart is expected.
-     *
-     * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @throws GoogleChartsException
      */
     public function testParamChartsBadType()
     {
+        $this->expectException(GoogleChartsException::class);
+        $this->expectExceptionMessage('An instance of Chart or an array of Chart is expected.');
+
         /* @noinspection PhpParamsInspection */
         $this->chartOutput->startCharts('xxxx');
     }
 
     /**
-     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
-     * @expectedExceptionMessage An array of Chart is expected.
-     *
-     * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @throws GoogleChartsException
      */
     public function testParamChartsBadTypeForMultipleCharts()
     {
+        $this->expectException(GoogleChartsException::class);
+        $this->expectExceptionMessage('An array of Chart is expected.');
+
         $charts = [new ColumnChart(), new ColumnChart(), 'xxx'];
         $elementsID = ['div1', 'div2', 'div3'];
 
@@ -84,24 +85,24 @@ class ChartOutputTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
-     * @expectedExceptionMessage A string is expected for HTML element ID.
-     *
-     * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @throws GoogleChartsException
      */
     public function testParamElementsIDBadTypeForOneChart()
     {
+        $this->expectException(GoogleChartsException::class);
+        $this->expectExceptionMessage('A string is expected for HTML element ID.');
+
         $this->chartOutput->startCharts(new ColumnChart(), 66);
     }
 
     /**
-     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
-     * @expectedExceptionMessage A string is expected for HTML element ID.
-     *
-     * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @throws GoogleChartsException
      */
     public function testParamElementsIDBadTypeForMultipleCharts()
     {
+        $this->expectException(GoogleChartsException::class);
+        $this->expectExceptionMessage('A string is expected for HTML element ID.');
+
         $charts = [new ColumnChart(), new ColumnChart(), new ColumnChart()];
         $elementsID = ['div1', 123, 'div3'];
 
@@ -109,13 +110,13 @@ class ChartOutputTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
-     * @expectedExceptionMessage An array of string is expected for HTML elements IDs.
-     *
-     * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @throws GoogleChartsException
      */
     public function testParamElementsIDNotArrayForMultipleCharts()
     {
+        $this->expectException(GoogleChartsException::class);
+        $this->expectExceptionMessage('An array of string is expected for HTML elements IDs.');
+
         $charts = [new ColumnChart(), new ColumnChart(), new ColumnChart()];
         $elementsID = 'div1';
 
@@ -123,13 +124,13 @@ class ChartOutputTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
-     * @expectedExceptionMessage Array charts and array HTML elements ID do not have the same number of element.
-     *
-     * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @throws GoogleChartsException
      */
     public function testParamElementsIDBadCountForMultipleCharts()
     {
+        $this->expectException(GoogleChartsException::class);
+        $this->expectExceptionMessage('Array charts and array HTML elements ID do not have the same number of element.');
+
         $charts = [new ColumnChart(), new ColumnChart(), new ColumnChart()];
         $elementsID = ['div1', 'div2'];
 

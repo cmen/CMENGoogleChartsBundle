@@ -11,9 +11,6 @@ class DiffScatterChartOptions extends ScatterChartOptions
      */
     protected $diff;
 
-    /**
-     * DiffScatterChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -21,10 +18,7 @@ class DiffScatterChartOptions extends ScatterChartOptions
         $this->diff = new Diff();
     }
 
-    /**
-     * @return Diff
-     */
-    public function getDiff()
+    public function getDiff(): Diff
     {
         return $this->diff;
     }

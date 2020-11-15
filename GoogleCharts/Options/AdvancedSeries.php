@@ -24,11 +24,9 @@ class AdvancedSeries extends Series
     protected $labelInLegend;
 
     /**
-     * @param int $targetAxisIndex
-     *
      * @return $this
      */
-    public function setTargetAxisIndex($targetAxisIndex)
+    public function setTargetAxisIndex(int $targetAxisIndex)
     {
         $this->targetAxisIndex = $targetAxisIndex;
 
@@ -36,11 +34,9 @@ class AdvancedSeries extends Series
     }
 
     /**
-     * @param string $labelInLegend
-     *
      * @return $this
      */
-    public function setLabelInLegend($labelInLegend)
+    public function setLabelInLegend(string $labelInLegend)
     {
         $this->labelInLegend = $labelInLegend;
 

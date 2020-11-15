@@ -18,11 +18,9 @@ trait AreaOpacityTrait
     protected $areaOpacity;
 
     /**
-     * @param float $areaOpacity
-     *
      * @return $this
      */
-    public function setAreaOpacity($areaOpacity)
+    public function setAreaOpacity(float $areaOpacity)
     {
         $this->areaOpacity = $areaOpacity;
 

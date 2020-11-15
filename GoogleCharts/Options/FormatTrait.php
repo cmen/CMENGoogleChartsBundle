@@ -13,11 +13,9 @@ trait FormatTrait
     protected $format;
 
     /**
-     * @param string $format
-     *
      * @return $this
      */
-    public function setFormat($format)
+    public function setFormat(string $format)
     {
         $this->format = $format;
 

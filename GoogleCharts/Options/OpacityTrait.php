@@ -15,11 +15,9 @@ trait OpacityTrait
     protected $opacity;
 
     /**
-     * @param float $opacity
-     *
      * @return $this
      */
-    public function setOpacity($opacity)
+    public function setOpacity(float $opacity)
     {
         $this->opacity = $opacity;
 

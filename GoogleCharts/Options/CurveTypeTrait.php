@@ -19,11 +19,9 @@ trait CurveTypeTrait
     protected $curveType;
 
     /**
-     * @param string $curveType
-     *
      * @return $this
      */
-    public function setCurveType($curveType)
+    public function setCurveType(string $curveType)
     {
         $this->curveType = $curveType;
 

@@ -22,11 +22,9 @@ trait DataOpacityTrait
     protected $dataOpacity;
 
     /**
-     * @param float $dataOpacity
-     *
      * @return $this
      */
-    public function setDataOpacity($dataOpacity)
+    public function setDataOpacity(float $dataOpacity)
     {
         $this->dataOpacity = $dataOpacity;
 

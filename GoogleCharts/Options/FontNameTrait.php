@@ -18,11 +18,9 @@ trait FontNameTrait
     protected $fontName;
 
     /**
-     * @param string $fontName
-     *
      * @return $this
      */
-    public function setFontName($fontName)
+    public function setFontName(string $fontName)
     {
         $this->fontName = $fontName;
 

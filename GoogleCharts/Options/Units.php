@@ -42,9 +42,6 @@ class Units
      */
     protected $milliseconds;
 
-    /**
-     * Units constructor.
-     */
     public function __construct()
     {
         $this->years = new Years();
@@ -56,58 +53,37 @@ class Units
         $this->milliseconds = new Milliseconds();
     }
 
-    /**
-     * @return Years
-     */
-    public function getYears()
+    public function getYears(): Years
     {
         return $this->years;
     }
 
-    /**
-     * @return Months
-     */
-    public function getMonths()
+    public function getMonths(): Months
     {
         return $this->months;
     }
 
-    /**
-     * @return Days
-     */
-    public function getDays()
+    public function getDays(): Days
     {
         return $this->days;
     }
 
-    /**
-     * @return Hours
-     */
-    public function getHours()
+    public function getHours(): Hours
     {
         return $this->hours;
     }
 
-    /**
-     * @return Minutes
-     */
-    public function getMinutes()
+    public function getMinutes(): Minutes
     {
         return $this->minutes;
     }
 
-    /**
-     * @return Seconds
-     */
-    public function getSeconds()
+    public function getSeconds(): Seconds
     {
         return $this->seconds;
     }
 
-    /**
-     * @return Milliseconds
-     */
-    public function getMilliseconds()
+    public function getMilliseconds(): Milliseconds
     {
         return $this->milliseconds;
     }

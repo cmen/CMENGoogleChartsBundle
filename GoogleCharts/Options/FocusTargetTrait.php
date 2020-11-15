@@ -23,11 +23,9 @@ trait FocusTargetTrait
     protected $focusTarget;
 
     /**
-     * @param string $focusTarget
-     *
      * @return $this
      */
-    public function setFocusTarget($focusTarget)
+    public function setFocusTarget(string $focusTarget)
     {
         $this->focusTarget = $focusTarget;
 

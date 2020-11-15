@@ -21,25 +21,22 @@ class LineChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\LineChart
         $this->options = new LineChartOptions();
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'line';
     }
 
-    public function getLibrary()
+    public function getLibrary(): string
     {
         return 'charts';
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Line';
     }
 
-    /**
-     * @return LineChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): LineChartOptions
     {
         return $this->options;
     }

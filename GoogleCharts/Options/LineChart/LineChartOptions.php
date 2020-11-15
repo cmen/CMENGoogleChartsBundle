@@ -78,9 +78,6 @@ class LineChartOptions extends LineOptions
 
     use VAxesTrait;
 
-    /**
-     * LineChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -93,50 +90,32 @@ class LineChartOptions extends LineOptions
         $this->legend = new AdvancedLegend();
     }
 
-    /**
-     * @return AdvancedAnimation
-     */
-    public function getAnimation()
+    public function getAnimation(): AdvancedAnimation
     {
         return $this->animation;
     }
 
-    /**
-     * @return Annotations
-     */
-    public function getAnnotations()
+    public function getAnnotations(): Annotations
     {
         return $this->annotations;
     }
 
-    /**
-     * @return Crosshair
-     */
-    public function getCrosshair()
+    public function getCrosshair(): Crosshair
     {
         return $this->crosshair;
     }
 
-    /**
-     * @return Explorer
-     */
-    public function getExplorer()
+    public function getExplorer(): Explorer
     {
         return $this->explorer;
     }
 
-    /**
-     * @return AdvancedHAxis
-     */
-    public function getHAxis()
+    public function getHAxis(): AdvancedHAxis
     {
         return $this->hAxis;
     }
 
-    /**
-     * @return AdvancedLegend
-     */
-    public function getLegend()
+    public function getLegend(): AdvancedLegend
     {
         return $this->legend;
     }
@@ -146,7 +125,7 @@ class LineChartOptions extends LineOptions
      *
      * @return $this
      */
-    public function setTrendlines($trendlines)
+    public function setTrendlines(array $trendlines)
     {
         $this->trendlines = $trendlines;
 
