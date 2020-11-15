@@ -17,11 +17,9 @@ trait AllowHtmlTrait
     protected $allowHtml;
 
     /**
-     * @param bool $allowHtml
-     *
      * @return $this
      */
-    public function setAllowHtml($allowHtml)
+    public function setAllowHtml(bool $allowHtml)
     {
         $this->allowHtml = $allowHtml;
 

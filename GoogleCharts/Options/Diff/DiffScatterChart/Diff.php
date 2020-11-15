@@ -17,27 +17,18 @@ class Diff
      */
     protected $oldData;
 
-    /**
-     * Diff constructor.
-     */
     public function __construct()
     {
         $this->newData = new NewData();
         $this->oldData = new OldData();
     }
 
-    /**
-     * @return NewData
-     */
-    public function getNewData()
+    public function getNewData(): NewData
     {
         return $this->newData;
     }
 
-    /**
-     * @return OldData
-     */
-    public function getOldData()
+    public function getOldData(): OldData
     {
         return $this->oldData;
     }

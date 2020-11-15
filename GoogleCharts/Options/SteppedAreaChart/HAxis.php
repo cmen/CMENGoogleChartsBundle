@@ -124,26 +124,17 @@ class HAxis
         $this->viewWindow = new ViewWindow();
     }
 
-    /**
-     * @return TextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): TextStyle
     {
         return $this->textStyle;
     }
 
-    /**
-     * @return TitleTextStyle
-     */
-    public function getTitleTextStyle()
+    public function getTitleTextStyle(): TitleTextStyle
     {
         return $this->titleTextStyle;
     }
 
-    /**
-     * @return ViewWindow
-     */
-    public function getViewWindow()
+    public function getViewWindow(): ViewWindow
     {
         return $this->viewWindow;
     }
@@ -153,7 +144,7 @@ class HAxis
      *
      * @return $this
      */
-    public function setTicks($ticks)
+    public function setTicks(array $ticks)
     {
         $this->ticks = $ticks;
 
@@ -161,11 +152,9 @@ class HAxis
     }
 
     /**
-     * @param int $direction
-     *
      * @return $this
      */
-    public function setDirection($direction)
+    public function setDirection(int $direction)
     {
         $this->direction = $direction;
 
@@ -173,11 +162,9 @@ class HAxis
     }
 
     /**
-     * @param int $showTextEvery
-     *
      * @return $this
      */
-    public function setShowTextEvery($showTextEvery)
+    public function setShowTextEvery(int $showTextEvery)
     {
         $this->showTextEvery = $showTextEvery;
 
@@ -185,11 +172,9 @@ class HAxis
     }
 
     /**
-     * @param bool $allowContainerBoundaryTextCufoff
-     *
      * @return $this
      */
-    public function setAllowContainerBoundaryTextCufoff($allowContainerBoundaryTextCufoff)
+    public function setAllowContainerBoundaryTextCufoff(bool $allowContainerBoundaryTextCufoff)
     {
         $this->allowContainerBoundaryTextCufoff = $allowContainerBoundaryTextCufoff;
 
@@ -197,11 +182,9 @@ class HAxis
     }
 
     /**
-     * @param bool $slantedText
-     *
      * @return $this
      */
-    public function setSlantedText($slantedText)
+    public function setSlantedText(bool $slantedText)
     {
         $this->slantedText = $slantedText;
 
@@ -209,11 +192,9 @@ class HAxis
     }
 
     /**
-     * @param int $slantedTextAngle
-     *
      * @return $this
      */
-    public function setSlantedTextAngle($slantedTextAngle)
+    public function setSlantedTextAngle(int $slantedTextAngle)
     {
         $this->slantedTextAngle = $slantedTextAngle;
 
@@ -221,11 +202,9 @@ class HAxis
     }
 
     /**
-     * @param int $maxAlternation
-     *
      * @return $this
      */
-    public function setMaxAlternation($maxAlternation)
+    public function setMaxAlternation(int $maxAlternation)
     {
         $this->maxAlternation = $maxAlternation;
 
@@ -233,11 +212,9 @@ class HAxis
     }
 
     /**
-     * @param int $maxTextLines
-     *
      * @return $this
      */
-    public function setMaxTextLines($maxTextLines)
+    public function setMaxTextLines(int $maxTextLines)
     {
         $this->maxTextLines = $maxTextLines;
 
@@ -245,11 +222,9 @@ class HAxis
     }
 
     /**
-     * @param int $minTextSpacing
-     *
      * @return $this
      */
-    public function setMinTextSpacing($minTextSpacing)
+    public function setMinTextSpacing(int $minTextSpacing)
     {
         $this->minTextSpacing = $minTextSpacing;
 
@@ -257,11 +232,9 @@ class HAxis
     }
 
     /**
-     * @param string $textPosition
-     *
      * @return $this
      */
-    public function setTextPosition($textPosition)
+    public function setTextPosition(string $textPosition)
     {
         $this->textPosition = $textPosition;
 

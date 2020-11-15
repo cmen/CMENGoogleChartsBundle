@@ -23,17 +23,17 @@ class AreaChart extends Chart
         $this->options = new AreaChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'AreaChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ANIMATION_FINISH,
@@ -46,20 +46,15 @@ class AreaChart extends Chart
         ];
     }
 
-    /**
-     * @return AreaChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): AreaChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param AreaChartOptions $options
-     *
-     * @return AreaChart
      */
-    public function setOptions($options)
+    public function setOptions(/* AreaChartOptions */$options): AreaChart
     {
         $this->options = $options;
 

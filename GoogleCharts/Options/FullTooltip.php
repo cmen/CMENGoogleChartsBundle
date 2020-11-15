@@ -18,11 +18,9 @@ class FullTooltip extends AdvancedTooltip
     protected $text;
 
     /**
-     * @param string $text
-     *
      * @return $this
      */
-    public function setText($text)
+    public function setText(string $text)
     {
         $this->text = $text;
 

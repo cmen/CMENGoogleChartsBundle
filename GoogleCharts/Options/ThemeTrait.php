@@ -24,11 +24,9 @@ trait ThemeTrait
     protected $theme;
 
     /**
-     * @param string $theme
-     *
      * @return $this
      */
-    public function setTheme($theme)
+    public function setTheme(string $theme)
     {
         $this->theme = $theme;
 

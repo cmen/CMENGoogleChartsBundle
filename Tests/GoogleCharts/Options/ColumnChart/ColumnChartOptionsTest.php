@@ -3,11 +3,12 @@
 namespace CMEN\GoogleChartsBundle\Tests\GoogleCharts\Options\ColumnChart;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColumnChart\ColumnChartOptions;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @author Christophe Meneses
  */
-class ColumnChartOptionsTest extends \PHPUnit_Framework_TestCase
+class ColumnChartOptionsTest extends TestCase
 {
     public function testNumberOptions()
     {

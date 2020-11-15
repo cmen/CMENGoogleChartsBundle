@@ -19,11 +19,9 @@ trait InterpolateNullsTrait
     protected $interpolateNulls;
 
     /**
-     * @param bool $interpolateNulls
-     *
      * @return $this
      */
-    public function setInterpolateNulls($interpolateNulls)
+    public function setInterpolateNulls(bool $interpolateNulls)
     {
         $this->interpolateNulls = $interpolateNulls;
 

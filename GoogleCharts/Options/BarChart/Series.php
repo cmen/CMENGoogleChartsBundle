@@ -20,10 +20,7 @@ class Series extends AdvancedSeries
         $this->annotations = new AdvancedAnnotations();
     }
 
-    /**
-     * @return AdvancedAnnotations
-     */
-    public function getAnnotations()
+    public function getAnnotations(): AdvancedAnnotations
     {
         return $this->annotations;
     }

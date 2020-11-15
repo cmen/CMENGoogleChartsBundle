@@ -23,17 +23,17 @@ class BubbleChart extends Chart
         $this->options = new BubbleChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'BubbleChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ANIMATION_FINISH,
@@ -46,20 +46,15 @@ class BubbleChart extends Chart
         ];
     }
 
-    /**
-     * @return BubbleChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): BubbleChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param BubbleChartOptions $options
-     *
-     * @return BubbleChart
      */
-    public function setOptions($options)
+    public function setOptions(/* BubbleChartOptions */$options): BubbleChart
     {
         $this->options = $options;
 

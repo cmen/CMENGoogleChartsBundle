@@ -10,7 +10,6 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Explorer;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MediumHAxis;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\SelectionModeTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\SizeAxis;
-use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxis;
 
 /**
  * @author Christophe Meneses
@@ -67,14 +66,6 @@ class BubbleChartOptions extends AdvancedChartOptions
      */
     protected $tooltip;
 
-    /**
-     * @var VAxis
-     */
-    protected $vAxis;
-
-    /**
-     * BubbleChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -87,87 +78,52 @@ class BubbleChartOptions extends AdvancedChartOptions
         $this->legend = new AdvancedLegend();
         $this->sizeAxis = new SizeAxis();
         $this->tooltip = new BasicTooltip();
-        $this->vAxis = new VAxis();
     }
 
-    /**
-     * @return AdvancedAnimation
-     */
-    public function getAnimation()
+    public function getAnimation(): AdvancedAnimation
     {
         return $this->animation;
     }
 
-    /**
-     * @return Bubble
-     */
-    public function getBubble()
+    public function getBubble(): Bubble
     {
         return $this->bubble;
     }
 
-    /**
-     * @return ColorAxis
-     */
-    public function getColorAxis()
+    public function getColorAxis(): ColorAxis
     {
         return $this->colorAxis;
     }
 
-    /**
-     * @return Explorer
-     */
-    public function getExplorer()
+    public function getExplorer(): Explorer
     {
         return $this->explorer;
     }
 
-    /**
-     * @return MediumHAxis
-     */
-    public function getHAxis()
+    public function getHAxis(): MediumHAxis
     {
         return $this->hAxis;
     }
 
-    /**
-     * @return AdvancedLegend
-     */
-    public function getLegend()
+    public function getLegend(): AdvancedLegend
     {
         return $this->legend;
     }
 
-    /**
-     * @return SizeAxis
-     */
-    public function getSizeAxis()
+    public function getSizeAxis(): SizeAxis
     {
         return $this->sizeAxis;
     }
 
-    /**
-     * @return BasicTooltip
-     */
-    public function getTooltip()
+    public function getTooltip(): BasicTooltip
     {
         return $this->tooltip;
     }
 
     /**
-     * @return VAxis
-     */
-    public function getVAxis()
-    {
-        return $this->vAxis;
-    }
-
-    /**
-     * @param bool $sortBubblesBySize
-     *
      * @return $this
      */
-    public function setSortBubblesBySize($sortBubblesBySize)
+    public function setSortBubblesBySize(bool $sortBubblesBySize)
     {
         $this->sortBubblesBySize = $sortBubblesBySize;
 

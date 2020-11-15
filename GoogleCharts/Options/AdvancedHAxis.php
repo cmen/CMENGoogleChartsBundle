@@ -64,11 +64,9 @@ class AdvancedHAxis extends MediumHAxis
     protected $showTextEvery;
 
     /**
-     * @param int $showTextEvery
-     *
      * @return $this
      */
-    public function setShowTextEvery($showTextEvery)
+    public function setShowTextEvery(int $showTextEvery)
     {
         $this->showTextEvery = $showTextEvery;
 
@@ -76,11 +74,9 @@ class AdvancedHAxis extends MediumHAxis
     }
 
     /**
-     * @param bool $allowContainerBoundaryTextCufoff
-     *
      * @return $this
      */
-    public function setAllowContainerBoundaryTextCufoff($allowContainerBoundaryTextCufoff)
+    public function setAllowContainerBoundaryTextCufoff(bool $allowContainerBoundaryTextCufoff)
     {
         $this->allowContainerBoundaryTextCufoff = $allowContainerBoundaryTextCufoff;
 
@@ -88,11 +84,9 @@ class AdvancedHAxis extends MediumHAxis
     }
 
     /**
-     * @param bool $slantedText
-     *
      * @return $this
      */
-    public function setSlantedText($slantedText)
+    public function setSlantedText(bool $slantedText)
     {
         $this->slantedText = $slantedText;
 
@@ -100,11 +94,9 @@ class AdvancedHAxis extends MediumHAxis
     }
 
     /**
-     * @param int $slantedTextAngle
-     *
      * @return $this
      */
-    public function setSlantedTextAngle($slantedTextAngle)
+    public function setSlantedTextAngle(int $slantedTextAngle)
     {
         $this->slantedTextAngle = $slantedTextAngle;
 
@@ -112,11 +104,9 @@ class AdvancedHAxis extends MediumHAxis
     }
 
     /**
-     * @param int $maxAlternation
-     *
      * @return $this
      */
-    public function setMaxAlternation($maxAlternation)
+    public function setMaxAlternation(int $maxAlternation)
     {
         $this->maxAlternation = $maxAlternation;
 
@@ -124,11 +114,9 @@ class AdvancedHAxis extends MediumHAxis
     }
 
     /**
-     * @param int $maxTextLines
-     *
      * @return $this
      */
-    public function setMaxTextLines($maxTextLines)
+    public function setMaxTextLines(int $maxTextLines)
     {
         $this->maxTextLines = $maxTextLines;
 
@@ -136,11 +124,9 @@ class AdvancedHAxis extends MediumHAxis
     }
 
     /**
-     * @param int $minTextSpacing
-     *
      * @return $this
      */
-    public function setMinTextSpacing($minTextSpacing)
+    public function setMinTextSpacing(int $minTextSpacing)
     {
         $this->minTextSpacing = $minTextSpacing;
 

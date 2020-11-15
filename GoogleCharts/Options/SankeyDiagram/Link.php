@@ -31,28 +31,20 @@ class Link
      */
     protected $colorMode;
 
-    /**
-     * Link constructor.
-     */
     public function __construct()
     {
         $this->color = new Color();
     }
 
-    /**
-     * @return Color
-     */
-    public function getColor()
+    public function getColor(): Color
     {
         return $this->color;
     }
 
     /**
-     * @param string $colorMode
-     *
      * @return $this
      */
-    public function setColorMode($colorMode)
+    public function setColorMode(string $colorMode)
     {
         $this->colorMode = $colorMode;
 

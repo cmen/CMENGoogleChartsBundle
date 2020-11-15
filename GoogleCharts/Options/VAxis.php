@@ -163,52 +163,35 @@ class VAxis
         $this->textStyle = new MediumTextStyle();
     }
 
-    /**
-     * @return Gridlines
-     */
-    public function getGridlines()
+    public function getGridlines(): Gridlines
     {
         return $this->gridlines;
     }
 
-    /**
-     * @return MinorGridlines
-     */
-    public function getMinorGridlines()
+    public function getMinorGridlines(): MinorGridlines
     {
         return $this->minorGridlines;
     }
 
-    /**
-     * @return TitleTextStyle
-     */
-    public function getTitleTextStyle()
+    public function getTitleTextStyle(): TitleTextStyle
     {
         return $this->titleTextStyle;
     }
 
-    /**
-     * @return ViewWindow
-     */
-    public function getViewWindow()
+    public function getViewWindow(): ViewWindow
     {
         return $this->viewWindow;
     }
 
-    /**
-     * @return MediumTextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): MediumTextStyle
     {
         return $this->textStyle;
     }
 
     /**
-     * @param int $baseline
-     *
      * @return $this
      */
-    public function setBaseline($baseline)
+    public function setBaseline(int $baseline)
     {
         $this->baseline = $baseline;
 
@@ -216,11 +199,9 @@ class VAxis
     }
 
     /**
-     * @param string $baselineColor
-     *
      * @return $this
      */
-    public function setBaselineColor($baselineColor)
+    public function setBaselineColor(string $baselineColor)
     {
         $this->baselineColor = $baselineColor;
 
@@ -228,11 +209,9 @@ class VAxis
     }
 
     /**
-     * @param int $direction
-     *
      * @return $this
      */
-    public function setDirection($direction)
+    public function setDirection(int $direction)
     {
         $this->direction = $direction;
 
@@ -240,11 +219,9 @@ class VAxis
     }
 
     /**
-     * @param string $format
-     *
      * @return $this
      */
-    public function setFormat($format)
+    public function setFormat(string $format)
     {
         $this->format = $format;
 
@@ -252,11 +229,9 @@ class VAxis
     }
 
     /**
-     * @param bool $logScale
-     *
      * @return $this
      */
-    public function setLogScale($logScale)
+    public function setLogScale(bool $logScale)
     {
         $this->logScale = $logScale;
 
@@ -264,11 +239,9 @@ class VAxis
     }
 
     /**
-     * @param string $scaleType
-     *
      * @return $this
      */
-    public function setScaleType($scaleType)
+    public function setScaleType(string $scaleType)
     {
         $this->scaleType = $scaleType;
 
@@ -276,11 +249,9 @@ class VAxis
     }
 
     /**
-     * @param string $textPosition
-     *
      * @return $this
      */
-    public function setTextPosition($textPosition)
+    public function setTextPosition(string $textPosition)
     {
         $this->textPosition = $textPosition;
 
@@ -292,7 +263,7 @@ class VAxis
      *
      * @return $this
      */
-    public function setTicks($ticks)
+    public function setTicks(array $ticks)
     {
         $this->ticks = $ticks;
 
@@ -300,11 +271,9 @@ class VAxis
     }
 
     /**
-     * @param int $maxValue
-     *
      * @return $this
      */
-    public function setMaxValue($maxValue)
+    public function setMaxValue(int $maxValue)
     {
         $this->maxValue = $maxValue;
 
@@ -312,11 +281,9 @@ class VAxis
     }
 
     /**
-     * @param int $minValue
-     *
      * @return $this
      */
-    public function setMinValue($minValue)
+    public function setMinValue(int $minValue)
     {
         $this->minValue = $minValue;
 
@@ -324,11 +291,9 @@ class VAxis
     }
 
     /**
-     * @param string $viewWindowMode
-     *
      * @return $this
      */
-    public function setViewWindowMode($viewWindowMode)
+    public function setViewWindowMode(string $viewWindowMode)
     {
         $this->viewWindowMode = $viewWindowMode;
 

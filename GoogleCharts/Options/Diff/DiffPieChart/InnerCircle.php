@@ -22,11 +22,9 @@ class InnerCircle
     protected $borderFactor;
 
     /**
-     * @param float $radiusFactor
-     *
      * @return $this
      */
-    public function setRadiusFactor($radiusFactor)
+    public function setRadiusFactor(float $radiusFactor)
     {
         $this->radiusFactor = $radiusFactor;
 
@@ -34,11 +32,9 @@ class InnerCircle
     }
 
     /**
-     * @param float $borderFactor
-     *
      * @return $this
      */
-    public function setBorderFactor($borderFactor)
+    public function setBorderFactor(float $borderFactor)
     {
         $this->borderFactor = $borderFactor;
 

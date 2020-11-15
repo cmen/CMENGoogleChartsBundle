@@ -25,15 +25,7 @@ class Events
         $this->chart = $chart;
     }
 
-    /**
-     * Adds a listener.
-     *
-     * @param string $type         Type of event
-     * @param string $functionName Name of Javascript function
-     *
-     * @return void
-     */
-    public function addListener($type, $functionName)
+    public function addListener(string $type, string $functionName): void
     {
         if (!in_array($type, $this->chart->getAvailableEventTypes())) {
             throw new GoogleChartsException("$type event is not available for this type of chart.");
@@ -45,7 +37,7 @@ class Events
     /**
      * @return Listener[]
      */
-    public function getListeners()
+    public function getListeners(): array
     {
         return $this->listeners;
     }

@@ -46,11 +46,9 @@ class WordTree
     protected $wordRegex;
 
     /**
-     * @param string $format
-     *
      * @return $this
      */
-    public function setFormat($format)
+    public function setFormat(string $format)
     {
         $this->format = $format;
 
@@ -58,11 +56,9 @@ class WordTree
     }
 
     /**
-     * @param string $sentenceRegex
-     *
      * @return $this
      */
-    public function setSentenceRegex($sentenceRegex)
+    public function setSentenceRegex(string $sentenceRegex)
     {
         $this->sentenceRegex = $sentenceRegex;
 
@@ -70,11 +66,9 @@ class WordTree
     }
 
     /**
-     * @param string $type
-     *
      * @return $this
      */
-    public function setType($type)
+    public function setType(string $type)
     {
         $this->type = $type;
 
@@ -82,11 +76,9 @@ class WordTree
     }
 
     /**
-     * @param string $word
-     *
      * @return $this
      */
-    public function setWord($word)
+    public function setWord(string $word)
     {
         $this->word = $word;
 
@@ -94,11 +86,9 @@ class WordTree
     }
 
     /**
-     * @param string $wordRegex
-     *
      * @return $this
      */
-    public function setWordRegex($wordRegex)
+    public function setWordRegex(string $wordRegex)
     {
         $this->wordRegex = $wordRegex;
 

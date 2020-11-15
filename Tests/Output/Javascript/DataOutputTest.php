@@ -2,23 +2,25 @@
 
 namespace CMEN\GoogleChartsBundle\Tests\Output\Javascript;
 
+use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Data;
 use CMEN\GoogleChartsBundle\Output\Javascript\DataOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\DateOutput;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @author Christophe Meneses
  */
-class DataOutputTest extends \PHPUnit_Framework_TestCase
+class DataOutputTest extends TestCase
 {
     /**
-     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
-     * @expectedExceptionMessage There is no data for chart. Use method setArrayToDataTable() to provide data.
-     *
-     * @throws \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
+     * @throws GoogleChartsException
      */
     public function testEmptyData()
     {
+        $this->expectException(GoogleChartsException::class);
+        $this->expectExceptionMessage('There is no data for chart. Use method setArrayToDataTable() to provide data.');
+
         $data = new Data();
 
         $dataOutput = new DataOutput(new DateOutput());

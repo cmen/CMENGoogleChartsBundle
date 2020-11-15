@@ -73,7 +73,7 @@ class Explorer
      *
      * @return $this
      */
-    public function setActions($actions)
+    public function setActions(array $actions)
     {
         $this->actions = $actions;
 
@@ -81,11 +81,9 @@ class Explorer
     }
 
     /**
-     * @param string $axis
-     *
      * @return $this
      */
-    public function setAxis($axis)
+    public function setAxis(string $axis)
     {
         $this->axis = $axis;
 
@@ -93,11 +91,9 @@ class Explorer
     }
 
     /**
-     * @param bool $keepInBounds
-     *
      * @return $this
      */
-    public function setKeepInBounds($keepInBounds)
+    public function setKeepInBounds(bool $keepInBounds)
     {
         $this->keepInBounds = $keepInBounds;
 
@@ -105,11 +101,9 @@ class Explorer
     }
 
     /**
-     * @param float $maxZoomIn
-     *
      * @return $this
      */
-    public function setMaxZoomIn($maxZoomIn)
+    public function setMaxZoomIn(float $maxZoomIn)
     {
         $this->maxZoomIn = $maxZoomIn;
 
@@ -117,11 +111,9 @@ class Explorer
     }
 
     /**
-     * @param float $maxZoomOut
-     *
      * @return $this
      */
-    public function setMaxZoomOut($maxZoomOut)
+    public function setMaxZoomOut(float $maxZoomOut)
     {
         $this->maxZoomOut = $maxZoomOut;
 
@@ -129,11 +121,9 @@ class Explorer
     }
 
     /**
-     * @param float $zoomDelta
-     *
-     * @return Explorer
+     * @return $this
      */
-    public function setZoomDelta($zoomDelta)
+    public function setZoomDelta(float $zoomDelta)
     {
         $this->zoomDelta = $zoomDelta;
 

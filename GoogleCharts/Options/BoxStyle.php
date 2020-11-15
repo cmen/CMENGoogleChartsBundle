@@ -30,28 +30,20 @@ class BoxStyle
      */
     protected $gradient;
 
-    /**
-     * BoxStyle constructor.
-     */
     public function __construct()
     {
         $this->gradient = new Gradient();
     }
 
-    /**
-     * @return Gradient
-     */
-    public function getGradient()
+    public function getGradient(): Gradient
     {
         return $this->gradient;
     }
 
     /**
-     * @param int $rx
-     *
      * @return $this
      */
-    public function setRx($rx)
+    public function setRx(int $rx)
     {
         $this->rx = $rx;
 
@@ -59,11 +51,9 @@ class BoxStyle
     }
 
     /**
-     * @param int $ry
-     *
      * @return $this
      */
-    public function setRy($ry)
+    public function setRy(int $ry)
     {
         $this->ry = $ry;
 

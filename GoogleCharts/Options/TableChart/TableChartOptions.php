@@ -152,28 +152,20 @@ class TableChartOptions implements ChartOptionsInterface
      */
     protected $width;
 
-    /**
-     * TableChartOptions constructor.
-     */
     public function __construct()
     {
         $this->cssClassNames = new CssClassNames();
     }
 
-    /**
-     * @return CssClassNames
-     */
-    public function getCssClassNames()
+    public function getCssClassNames(): CssClassNames
     {
         return $this->cssClassNames;
     }
 
     /**
-     * @param bool $alternatingRowStyle
-     *
      * @return $this
      */
-    public function setAlternatingRowStyle($alternatingRowStyle)
+    public function setAlternatingRowStyle(bool $alternatingRowStyle)
     {
         $this->alternatingRowStyle = $alternatingRowStyle;
 
@@ -181,11 +173,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param int $firstRowNumber
-     *
      * @return $this
      */
-    public function setFirstRowNumber($firstRowNumber)
+    public function setFirstRowNumber(int $firstRowNumber)
     {
         $this->firstRowNumber = $firstRowNumber;
 
@@ -193,11 +183,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param int $frozenColumns
-     *
      * @return $this
      */
-    public function setFrozenColumns($frozenColumns)
+    public function setFrozenColumns(int $frozenColumns)
     {
         $this->frozenColumns = $frozenColumns;
 
@@ -205,11 +193,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $page
-     *
      * @return $this
      */
-    public function setPage($page)
+    public function setPage(string $page)
     {
         $this->page = $page;
 
@@ -217,11 +203,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param int $pageSize
-     *
      * @return $this
      */
-    public function setPageSize($pageSize)
+    public function setPageSize(int $pageSize)
     {
         $this->pageSize = $pageSize;
 
@@ -241,11 +225,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $rtlTable
-     *
      * @return $this
      */
-    public function setRtlTable($rtlTable)
+    public function setRtlTable(bool $rtlTable)
     {
         $this->rtlTable = $rtlTable;
 
@@ -253,11 +235,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param int $scrollLeftStartPosition
-     *
      * @return $this
      */
-    public function setScrollLeftStartPosition($scrollLeftStartPosition)
+    public function setScrollLeftStartPosition(int $scrollLeftStartPosition)
     {
         $this->scrollLeftStartPosition = $scrollLeftStartPosition;
 
@@ -265,11 +245,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $showRowNumber
-     *
      * @return $this
      */
-    public function setShowRowNumber($showRowNumber)
+    public function setShowRowNumber(bool $showRowNumber)
     {
         $this->showRowNumber = $showRowNumber;
 
@@ -277,11 +255,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $sort
-     *
      * @return $this
      */
-    public function setSort($sort)
+    public function setSort(string $sort)
     {
         $this->sort = $sort;
 
@@ -289,11 +265,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $sortAscending
-     *
      * @return $this
      */
-    public function setSortAscending($sortAscending)
+    public function setSortAscending(bool $sortAscending)
     {
         $this->sortAscending = $sortAscending;
 
@@ -301,11 +275,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param int $sortColumn
-     *
      * @return $this
      */
-    public function setSortColumn($sortColumn)
+    public function setSortColumn(int $sortColumn)
     {
         $this->sortColumn = $sortColumn;
 
@@ -313,11 +285,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param int $startPage
-     *
      * @return $this
      */
-    public function setStartPage($startPage)
+    public function setStartPage(int $startPage)
     {
         $this->startPage = $startPage;
 
@@ -325,11 +295,9 @@ class TableChartOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $width
-     *
      * @return $this
      */
-    public function setWidth($width)
+    public function setWidth(string $width)
     {
         $this->width = $width;
 

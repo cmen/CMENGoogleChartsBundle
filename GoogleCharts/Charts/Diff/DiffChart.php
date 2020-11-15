@@ -9,10 +9,10 @@ interface DiffChart
     /**
      * @return Chart
      */
-    public function getOldChart();
+    public function getOldChart()/* : Chart */;
 
     /**
      * @return Chart
      */
-    public function getNewChart();
+    public function getNewChart()/* : Chart */;
 }

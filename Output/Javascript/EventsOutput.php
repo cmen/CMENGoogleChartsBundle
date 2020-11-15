@@ -7,10 +7,7 @@ use CMEN\GoogleChartsBundle\Output\EventsOutputInterface;
 
 class EventsOutput implements EventsOutputInterface
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function draw(Events $events, $chartName)
+    public function draw(Events $events, string $chartName): string
     {
         $js = '';
 

@@ -15,11 +15,9 @@ trait MinTrait
     protected $min;
 
     /**
-     * @param int $min
-     *
      * @return $this
      */
-    public function setMin($min)
+    public function setMin(int $min)
     {
         $this->min = $min;
 

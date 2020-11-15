@@ -66,52 +66,35 @@ class HAxis
         $this->viewWindow = new ViewWindow();
     }
 
-    /**
-     * @return Gridlines
-     */
-    public function getGridlines()
+    public function getGridlines(): Gridlines
     {
         return $this->gridlines;
     }
 
-    /**
-     * @return MinorGridlines
-     */
-    public function getMinorGridlines()
+    public function getMinorGridlines(): MinorGridlines
     {
         return $this->minorGridlines;
     }
 
-    /**
-     * @return MediumTextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): MediumTextStyle
     {
         return $this->textStyle;
     }
 
-    /**
-     * @return TitleTextStyle
-     */
-    public function getTitleTextStyle()
+    public function getTitleTextStyle(): TitleTextStyle
     {
         return $this->titleTextStyle;
     }
 
-    /**
-     * @return ViewWindow
-     */
-    public function getViewWindow()
+    public function getViewWindow(): ViewWindow
     {
         return $this->viewWindow;
     }
 
     /**
-     * @param string $textPosition
-     *
      * @return $this
      */
-    public function setTextPosition($textPosition)
+    public function setTextPosition(string $textPosition)
     {
         $this->textPosition = $textPosition;
 
@@ -119,11 +102,9 @@ class HAxis
     }
 
     /**
-     * @param string $viewWindowMode
-     *
      * @return $this
      */
-    public function setViewWindowMode($viewWindowMode)
+    public function setViewWindowMode(string $viewWindowMode)
     {
         $this->viewWindowMode = $viewWindowMode;
 

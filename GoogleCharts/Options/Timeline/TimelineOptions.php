@@ -39,9 +39,6 @@ class TimelineOptions extends BasicChartOptions
      */
     protected $tooltip;
 
-    /**
-     * TimelineOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -50,28 +47,20 @@ class TimelineOptions extends BasicChartOptions
         $this->tooltip = new BasicTooltip();
     }
 
-    /**
-     * @return Timeline
-     */
-    public function getTimeline()
+    public function getTimeline(): Timeline
     {
         return $this->timeline;
     }
 
-    /**
-     * @return BasicTooltip
-     */
-    public function getTooltip()
+    public function getTooltip(): BasicTooltip
     {
         return $this->tooltip;
     }
 
     /**
-     * @param bool $avoidOverlappingGridLines
-     *
      * @return $this
      */
-    public function setAvoidOverlappingGridLines($avoidOverlappingGridLines)
+    public function setAvoidOverlappingGridLines(bool $avoidOverlappingGridLines)
     {
         $this->avoidOverlappingGridLines = $avoidOverlappingGridLines;
 
@@ -79,11 +68,9 @@ class TimelineOptions extends BasicChartOptions
     }
 
     /**
-     * @param string $backgroundColor
-     *
      * @return $this
      */
-    public function setBackgroundColor($backgroundColor)
+    public function setBackgroundColor(string $backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
 

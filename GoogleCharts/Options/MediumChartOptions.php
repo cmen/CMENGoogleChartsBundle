@@ -53,28 +53,20 @@ class MediumChartOptions extends BasicChartOptions
         return $this->backgroundColor;
     }
 
-    /**
-     * @return ChartArea
-     */
-    public function getChartArea()
+    public function getChartArea(): ChartArea
     {
         return $this->chartArea;
     }
 
-    /**
-     * @return TitleTextStyle
-     */
-    public function getTitleTextStyle()
+    public function getTitleTextStyle(): TitleTextStyle
     {
         return $this->titleTextStyle;
     }
 
     /**
-     * @param string $backgroundColor
-     *
      * @return $this
      */
-    public function setBackgroundColor($backgroundColor)
+    public function setBackgroundColor(string $backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
 

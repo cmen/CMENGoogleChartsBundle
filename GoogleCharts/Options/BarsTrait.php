@@ -17,11 +17,9 @@ trait BarsTrait
     protected $bars;
 
     /**
-     * @param string $bars
-     *
      * @return $this
      */
-    public function setBars($bars)
+    public function setBars(string $bars)
     {
         $this->bars = $bars;
 

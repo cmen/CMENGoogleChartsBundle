@@ -152,52 +152,35 @@ class GeoChartOptions extends ChartOptions
         return $this->backgroundColor;
     }
 
-    /**
-     * @return ColorAxis
-     */
-    public function getColorAxis()
+    public function getColorAxis(): ColorAxis
     {
         return $this->colorAxis;
     }
 
-    /**
-     * @return Legend
-     */
-    public function getLegend()
+    public function getLegend(): Legend
     {
         return $this->legend;
     }
 
-    /**
-     * @return MagnifyingGlass
-     */
-    public function getMagnifyingGlass()
+    public function getMagnifyingGlass(): MagnifyingGlass
     {
         return $this->magnifyingGlass;
     }
 
-    /**
-     * @return SizeAxis
-     */
-    public function getSizeAxis()
+    public function getSizeAxis(): SizeAxis
     {
         return $this->sizeAxis;
     }
 
-    /**
-     * @return Tooltip
-     */
-    public function getTooltip()
+    public function getTooltip(): Tooltip
     {
         return $this->tooltip;
     }
 
     /**
-     * @param string $backgroundColor
-     *
      * @return $this
      */
-    public function setBackgroundColor($backgroundColor)
+    public function setBackgroundColor(string $backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
 
@@ -205,11 +188,9 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param string $datalessRegionColor
-     *
      * @return $this
      */
-    public function setDatalessRegionColor($datalessRegionColor)
+    public function setDatalessRegionColor(string $datalessRegionColor)
     {
         $this->datalessRegionColor = $datalessRegionColor;
 
@@ -217,11 +198,9 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param string $displayMode
-     *
      * @return $this
      */
-    public function setDisplayMode($displayMode)
+    public function setDisplayMode(string $displayMode)
     {
         $this->displayMode = $displayMode;
 
@@ -229,11 +208,9 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param string $defaultColor
-     *
      * @return $this
      */
-    public function setDefaultColor($defaultColor)
+    public function setDefaultColor(string $defaultColor)
     {
         $this->defaultColor = $defaultColor;
 
@@ -241,11 +218,9 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param string $domain
-     *
      * @return $this
      */
-    public function setDomain($domain)
+    public function setDomain(string $domain)
     {
         $this->domain = $domain;
 
@@ -253,11 +228,9 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param bool $keepAspectRatio
-     *
      * @return $this
      */
-    public function setKeepAspectRatio($keepAspectRatio)
+    public function setKeepAspectRatio(bool $keepAspectRatio)
     {
         $this->keepAspectRatio = $keepAspectRatio;
 
@@ -265,11 +238,9 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param bool $enableRegionInteractivity
-     *
      * @return $this
      */
-    public function setEnableRegionInteractivity($enableRegionInteractivity)
+    public function setEnableRegionInteractivity(bool $enableRegionInteractivity)
     {
         $this->enableRegionInteractivity = $enableRegionInteractivity;
 
@@ -277,11 +248,9 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param string $region
-     *
      * @return $this
      */
-    public function setRegion($region)
+    public function setRegion(string $region)
     {
         $this->region = $region;
 
@@ -289,11 +258,9 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param float $markerOpacity
-     *
      * @return $this
      */
-    public function setMarkerOpacity($markerOpacity)
+    public function setMarkerOpacity(float $markerOpacity)
     {
         $this->markerOpacity = $markerOpacity;
 
@@ -301,11 +268,9 @@ class GeoChartOptions extends ChartOptions
     }
 
     /**
-     * @param string $resolution
-     *
      * @return $this
      */
-    public function setResolution($resolution)
+    public function setResolution(string $resolution)
     {
         $this->resolution = $resolution;
 

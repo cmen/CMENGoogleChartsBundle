@@ -17,11 +17,9 @@ class AdvancedTextStyle extends MediumTextStyle
     use OpacityTrait;
 
     /**
-     * @param string $auraColor
-     *
      * @return $this
      */
-    public function setAuraColor($auraColor)
+    public function setAuraColor(string $auraColor)
     {
         $this->auraColor = $auraColor;
 

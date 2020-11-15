@@ -23,26 +23,17 @@ class WordTree extends Chart
         $this->options = new WordTreeOptions();
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getType()
+    public function getType(): string
     {
         return 'WordTree';
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'wordtree';
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::READY,
@@ -50,20 +41,15 @@ class WordTree extends Chart
         ];
     }
 
-    /**
-     * @return WordTreeOptions
-     */
-    public function getOptions()
+    public function getOptions(): WordTreeOptions
     {
         return $this->options;
     }
 
     /**
      * @param WordTreeOptions $options
-     *
-     * @return WordTree
      */
-    public function setOptions($options)
+    public function setOptions(/* WordTreeOptions */$options): WordTree
     {
         $this->options = $options;
 

@@ -10,13 +10,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Install PHP dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Run PHP CS Fixer
-        run: vendor/bin/php-cs-fixer fix --diff --dry-run --verbose --stop-on-violation
+        run: ./vendor/bin/php-cs-fixer fix --diff --dry-run --verbose --stop-on-violation
 
   code_analyze:
     runs-on: [ubuntu-latest]
@@ -25,37 +25,37 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Install PHP dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Run PHPStan
-        run: vendor/bin/phpstan analyse --level max
+        run: ./vendor/bin/phpstan analyse --level max
 
   tests:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        php-versions: ['5.6', '7.0', '7.1', '7.2', '7.3', '7.4']
+        php-versions: ['7.1', '7.2', '7.3', '7.4']
 
     runs-on: ${{ matrix.operating-system }}
 
     name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v1
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: xml, dom, mbstring
+          coverage: xdebug
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v1
-      with:
-        php-version: ${{ matrix.php-versions }}
-        extension-csv: xml, dom, mbstring
-        coverage: none
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Remove PHPStan (Not compatible with PHP < 7.1) and install PHP dependencies
-      run: composer remove phpstan/phpstan --dev
+      - name: Install PHP dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: Run test suite
-      run: vendor/bin/phpunit
+      - name: Run test suite
+        run: ./vendor/bin/phpunit

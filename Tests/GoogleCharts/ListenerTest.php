@@ -2,20 +2,21 @@
 
 namespace CMEN\GoogleChartsBundle\Tests\GoogleCharts;
 
+use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Listener;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @author Christophe Meneses
  */
-class ListenerTest extends \PHPUnit_Framework_TestCase
+class ListenerTest extends TestCase
 {
-    /**
-     * @expectedException \CMEN\GoogleChartsBundle\Exception\GoogleChartsException
-     * @expectedExceptionMessage  badType is not a valid type of event.
-     */
     public function testBadType()
     {
+        $this->expectException(GoogleChartsException::class);
+        $this->expectExceptionMessage('badType is not a valid type of event.');
+
         new Listener('badType', 'functionName');
     }
 

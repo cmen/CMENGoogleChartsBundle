@@ -17,11 +17,9 @@ trait PointShapeTrait
     protected $pointShape;
 
     /**
-     * @param string $pointShape
-     *
      * @return $this
      */
-    public function setPointShape($pointShape)
+    public function setPointShape(string $pointShape)
     {
         $this->pointShape = $pointShape;
 

@@ -106,20 +106,15 @@ class GaugeChartOptions extends ChartOptions
         $this->animation = new Animation();
     }
 
-    /**
-     * @return Animation
-     */
-    public function getAnimation()
+    public function getAnimation(): Animation
     {
         return $this->animation;
     }
 
     /**
-     * @param string $greenColor
-     *
      * @return $this
      */
-    public function setGreenColor($greenColor)
+    public function setGreenColor(string $greenColor)
     {
         $this->greenColor = $greenColor;
 
@@ -127,11 +122,9 @@ class GaugeChartOptions extends ChartOptions
     }
 
     /**
-     * @param int $greenFrom
-     *
      * @return $this
      */
-    public function setGreenFrom($greenFrom)
+    public function setGreenFrom(int $greenFrom)
     {
         $this->greenFrom = $greenFrom;
 
@@ -139,11 +132,9 @@ class GaugeChartOptions extends ChartOptions
     }
 
     /**
-     * @param int $greenTo
-     *
      * @return $this
      */
-    public function setGreenTo($greenTo)
+    public function setGreenTo(int $greenTo)
     {
         $this->greenTo = $greenTo;
 
@@ -155,7 +146,7 @@ class GaugeChartOptions extends ChartOptions
      *
      * @return $this
      */
-    public function setMajorTicks($majorTicks)
+    public function setMajorTicks(array $majorTicks)
     {
         $this->majorTicks = $majorTicks;
 
@@ -163,11 +154,9 @@ class GaugeChartOptions extends ChartOptions
     }
 
     /**
-     * @param int $minorTicks
-     *
      * @return $this
      */
-    public function setMinorTicks($minorTicks)
+    public function setMinorTicks(int $minorTicks)
     {
         $this->minorTicks = $minorTicks;
 
@@ -175,11 +164,9 @@ class GaugeChartOptions extends ChartOptions
     }
 
     /**
-     * @param string $redColor
-     *
      * @return $this
      */
-    public function setRedColor($redColor)
+    public function setRedColor(string $redColor)
     {
         $this->redColor = $redColor;
 
@@ -187,11 +174,9 @@ class GaugeChartOptions extends ChartOptions
     }
 
     /**
-     * @param int $redFrom
-     *
      * @return $this
      */
-    public function setRedFrom($redFrom)
+    public function setRedFrom(int $redFrom)
     {
         $this->redFrom = $redFrom;
 
@@ -199,11 +184,9 @@ class GaugeChartOptions extends ChartOptions
     }
 
     /**
-     * @param int $redTo
-     *
      * @return $this
      */
-    public function setRedTo($redTo)
+    public function setRedTo(int $redTo)
     {
         $this->redTo = $redTo;
 
@@ -211,11 +194,9 @@ class GaugeChartOptions extends ChartOptions
     }
 
     /**
-     * @param string $yellowColor
-     *
      * @return $this
      */
-    public function setYellowColor($yellowColor)
+    public function setYellowColor(string $yellowColor)
     {
         $this->yellowColor = $yellowColor;
 
@@ -223,11 +204,9 @@ class GaugeChartOptions extends ChartOptions
     }
 
     /**
-     * @param int $yellowFrom
-     *
      * @return $this
      */
-    public function setYellowFrom($yellowFrom)
+    public function setYellowFrom(int $yellowFrom)
     {
         $this->yellowFrom = $yellowFrom;
 
@@ -235,11 +214,9 @@ class GaugeChartOptions extends ChartOptions
     }
 
     /**
-     * @param int $yellowTo
-     *
      * @return $this
      */
-    public function setYellowTo($yellowTo)
+    public function setYellowTo(int $yellowTo)
     {
         $this->yellowTo = $yellowTo;
 

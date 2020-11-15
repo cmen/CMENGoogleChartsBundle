@@ -23,17 +23,17 @@ class ComboChart extends Chart
         $this->options = new ComboChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'ComboChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'corechart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ANIMATION_FINISH,
@@ -46,20 +46,15 @@ class ComboChart extends Chart
         ];
     }
 
-    /**
-     * @return ComboChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): ComboChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param ComboChartOptions $options
-     *
-     * @return ComboChart
      */
-    public function setOptions($options)
+    public function setOptions(/* ComboChartOptions */$options): ComboChart
     {
         $this->options = $options;
 

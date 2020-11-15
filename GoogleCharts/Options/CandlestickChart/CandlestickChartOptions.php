@@ -63,9 +63,6 @@ class CandlestickChartOptions extends AdvancedChartOptions
 
     use VAxesTrait;
 
-    /**
-     * CandlestickChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -78,50 +75,32 @@ class CandlestickChartOptions extends AdvancedChartOptions
         $this->tooltip = new AdvancedTooltip();
     }
 
-    /**
-     * @return AdvancedAnimation
-     */
-    public function getAnimation()
+    public function getAnimation(): AdvancedAnimation
     {
         return $this->animation;
     }
 
-    /**
-     * @return Bar
-     */
-    public function getBar()
+    public function getBar(): Bar
     {
         return $this->bar;
     }
 
-    /**
-     * @return Candlestick
-     */
-    public function getCandlestick()
+    public function getCandlestick(): Candlestick
     {
         return $this->candlestick;
     }
 
-    /**
-     * @return AdvancedHAxis
-     */
-    public function getHAxis()
+    public function getHAxis(): AdvancedHAxis
     {
         return $this->hAxis;
     }
 
-    /**
-     * @return AdvancedLegend
-     */
-    public function getLegend()
+    public function getLegend(): AdvancedLegend
     {
         return $this->legend;
     }
 
-    /**
-     * @return AdvancedTooltip
-     */
-    public function getTooltip()
+    public function getTooltip(): AdvancedTooltip
     {
         return $this->tooltip;
     }

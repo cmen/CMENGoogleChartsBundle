@@ -3,11 +3,12 @@
 namespace CMEN\GoogleChartsBundle\Tests\Output\Javascript;
 
 use CMEN\GoogleChartsBundle\Output\Javascript\DateOutput;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @author Christophe Meneses
  */
-class DateOutputTest extends \PHPUnit_Framework_TestCase
+class DateOutputTest extends TestCase
 {
     public function testDraw()
     {

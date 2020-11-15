@@ -48,28 +48,20 @@ class Node
      */
     protected $colorMode;
 
-    /**
-     * Node constructor.
-     */
     public function __construct()
     {
         $this->label = new Label();
     }
 
-    /**
-     * @return Label
-     */
-    public function getLabel()
+    public function getLabel(): Label
     {
         return $this->label;
     }
 
     /**
-     * @param bool $interactivity
-     *
      * @return $this
      */
-    public function setInteractivity($interactivity)
+    public function setInteractivity(bool $interactivity)
     {
         $this->interactivity = $interactivity;
 
@@ -77,11 +69,9 @@ class Node
     }
 
     /**
-     * @param int $labelPadding
-     *
      * @return $this
      */
-    public function setLabelPadding($labelPadding)
+    public function setLabelPadding(int $labelPadding)
     {
         $this->labelPadding = $labelPadding;
 
@@ -89,11 +79,9 @@ class Node
     }
 
     /**
-     * @param int $nodePadding
-     *
      * @return $this
      */
-    public function setNodePadding($nodePadding)
+    public function setNodePadding(int $nodePadding)
     {
         $this->nodePadding = $nodePadding;
 
@@ -101,11 +89,9 @@ class Node
     }
 
     /**
-     * @param string $colorMode
-     *
      * @return $this
      */
-    public function setColorMode($colorMode)
+    public function setColorMode(string $colorMode)
     {
         $this->colorMode = $colorMode;
 

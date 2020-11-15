@@ -98,9 +98,6 @@ class ComboChartOptions extends LineOptions
 
     use VAxesTrait;
 
-    /**
-     * ComboChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -114,58 +111,37 @@ class ComboChartOptions extends LineOptions
         $this->legend = new AdvancedLegend();
     }
 
-    /**
-     * @return AdvancedAnimation
-     */
-    public function getAnimation()
+    public function getAnimation(): AdvancedAnimation
     {
         return $this->animation;
     }
 
-    /**
-     * @return Annotations
-     */
-    public function getAnnotations()
+    public function getAnnotations(): Annotations
     {
         return $this->annotations;
     }
 
-    /**
-     * @return Bar
-     */
-    public function getBar()
+    public function getBar(): Bar
     {
         return $this->bar;
     }
 
-    /**
-     * @return Candlestick
-     */
-    public function getCandlestick()
+    public function getCandlestick(): Candlestick
     {
         return $this->candlestick;
     }
 
-    /**
-     * @return Crosshair
-     */
-    public function getCrosshair()
+    public function getCrosshair(): Crosshair
     {
         return $this->crosshair;
     }
 
-    /**
-     * @return AdvancedHAxis
-     */
-    public function getHAxis()
+    public function getHAxis(): AdvancedHAxis
     {
         return $this->hAxis;
     }
 
-    /**
-     * @return AdvancedLegend
-     */
-    public function getLegend()
+    public function getLegend(): AdvancedLegend
     {
         return $this->legend;
     }
@@ -175,7 +151,7 @@ class ComboChartOptions extends LineOptions
      *
      * @return $this
      */
-    public function setTrendlines($trendlines)
+    public function setTrendlines(array $trendlines)
     {
         $this->trendlines = $trendlines;
 
@@ -183,11 +159,9 @@ class ComboChartOptions extends LineOptions
     }
 
     /**
-     * @param string $seriesType
-     *
      * @return $this
      */
-    public function setSeriesType($seriesType)
+    public function setSeriesType(string $seriesType)
     {
         $this->seriesType = $seriesType;
 

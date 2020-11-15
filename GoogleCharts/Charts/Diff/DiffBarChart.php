@@ -48,20 +48,15 @@ class DiffBarChart extends BarChart implements DiffChart
         $this->newChart = $newChart;
     }
 
-    /**
-     * @return DiffBarChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): DiffBarChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param DiffBarChartOptions $options
-     *
-     * @return DiffBarChart
      */
-    public function setOptions($options)
+    public function setOptions(/* DiffBarChartOptions */$options): DiffBarChart
     {
         $this->options = $options;
 

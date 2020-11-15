@@ -19,11 +19,9 @@ class OldData
     protected $inCenter;
 
     /**
-     * @param bool $inCenter
-     *
      * @return $this
      */
-    public function setInCenter($inCenter)
+    public function setInCenter(bool $inCenter)
     {
         $this->inCenter = $inCenter;
 

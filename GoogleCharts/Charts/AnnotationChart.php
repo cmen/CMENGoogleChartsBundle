@@ -23,17 +23,17 @@ class AnnotationChart extends Chart
         $this->options = new AnnotationChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'AnnotationChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'annotationchart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::RANGE_CHANGE,
@@ -42,20 +42,15 @@ class AnnotationChart extends Chart
         ];
     }
 
-    /**
-     * @return AnnotationChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): AnnotationChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param AnnotationChartOptions $options
-     *
-     * @return AnnotationChart
      */
-    public function setOptions($options)
+    public function setOptions(/* AnnotationChartOptions */$options): AnnotationChart
     {
         $this->options = $options;
 

@@ -21,11 +21,9 @@ trait PointsVisibleTrait
     protected $pointsVisible;
 
     /**
-     * @param bool $pointsVisible
-     *
      * @return $this
      */
-    public function setPointsVisible($pointsVisible)
+    public function setPointsVisible(bool $pointsVisible)
     {
         $this->pointsVisible = $pointsVisible;
 

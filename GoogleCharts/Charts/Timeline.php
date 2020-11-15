@@ -23,17 +23,17 @@ class Timeline extends Chart
         $this->options = new TimelineOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Timeline';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'timeline';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ERROR,
@@ -44,20 +44,15 @@ class Timeline extends Chart
         ];
     }
 
-    /**
-     * @return TimelineOptions
-     */
-    public function getOptions()
+    public function getOptions(): TimelineOptions
     {
         return $this->options;
     }
 
     /**
      * @param TimelineOptions $options
-     *
-     * @return Timeline
      */
-    public function setOptions($options)
+    public function setOptions(/* TimelineOptions */$options): Timeline
     {
         $this->options = $options;
 

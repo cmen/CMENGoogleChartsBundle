@@ -16,11 +16,9 @@ class MediumTooltip extends BasicTooltip
     protected $showColorCode;
 
     /**
-     * @param bool $showColorCode
-     *
      * @return $this
      */
-    public function setShowColorCode($showColorCode)
+    public function setShowColorCode(bool $showColorCode)
     {
         $this->showColorCode = $showColorCode;
 

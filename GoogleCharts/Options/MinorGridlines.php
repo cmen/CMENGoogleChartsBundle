@@ -21,28 +21,20 @@ class MinorGridlines
      */
     protected $units;
 
-    /**
-     * MinorGridlines constructor.
-     */
     public function __construct()
     {
         $this->units = new Units();
     }
 
-    /**
-     * @return Units
-     */
-    public function getUnits()
+    public function getUnits(): Units
     {
         return $this->units;
     }
 
     /**
-     * @param int $count
-     *
      * @return $this
      */
-    public function setCount($count)
+    public function setCount(int $count)
     {
         $this->count = $count;
 

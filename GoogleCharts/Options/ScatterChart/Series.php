@@ -22,11 +22,9 @@ class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
     use PointTrait;
 
     /**
-     * @param string $labelInLegend
-     *
      * @return $this
      */
-    public function setLabelInLegend($labelInLegend)
+    public function setLabelInLegend(string $labelInLegend)
     {
         $this->labelInLegend = $labelInLegend;
 

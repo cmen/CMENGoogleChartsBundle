@@ -15,11 +15,9 @@ class Stem
     protected $length;
 
     /**
-     * @param int $length
-     *
      * @return $this
      */
-    public function setLength($length)
+    public function setLength(int $length)
     {
         $this->length = $length;
 

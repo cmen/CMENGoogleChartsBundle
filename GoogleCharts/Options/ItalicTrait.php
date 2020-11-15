@@ -13,11 +13,9 @@ trait ItalicTrait
     protected $italic;
 
     /**
-     * @param bool $italic
-     *
      * @return $this
      */
-    public function setItalic($italic)
+    public function setItalic(bool $italic)
     {
         $this->italic = $italic;
 

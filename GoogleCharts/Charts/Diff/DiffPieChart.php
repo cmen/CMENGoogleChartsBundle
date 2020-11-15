@@ -2,7 +2,6 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff;
 
-use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\PieChart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffPieChart\DiffPieChartOptions;
 
@@ -26,18 +25,8 @@ class DiffPieChart extends PieChart implements DiffChart
      */
     private $newChart;
 
-    /**
-     * @param PieChart|object $oldChart
-     * @param PieChart|object $newChart
-     *
-     * @throws GoogleChartsException
-     */
-    public function __construct($oldChart, $newChart)
+    public function __construct(PieChart $oldChart, PieChart $newChart)
     {
-        if (!$oldChart instanceof PieChart || !$newChart instanceof PieChart) {
-            throw new GoogleChartsException('Instance of PieChart is expected');
-        }
-
         parent::__construct();
 
         $this->options = new DiffPieChartOptions();
@@ -46,38 +35,27 @@ class DiffPieChart extends PieChart implements DiffChart
         $this->newChart = $newChart;
     }
 
-    /**
-     * @return DiffPieChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): DiffPieChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param DiffPieChartOptions $options
-     *
-     * @return DiffPieChart
      */
-    public function setOptions($options)
+    public function setOptions(/* DiffPieChartOptions */$options): DiffPieChart
     {
         $this->options = $options;
 
         return $this;
     }
 
-    /**
-     * @return PieChart
-     */
-    public function getOldChart()
+    public function getOldChart(): PieChart
     {
         return $this->oldChart;
     }
 
-    /**
-     * @return PieChart
-     */
-    public function getNewChart()
+    public function getNewChart(): PieChart
     {
         return $this->newChart;
     }

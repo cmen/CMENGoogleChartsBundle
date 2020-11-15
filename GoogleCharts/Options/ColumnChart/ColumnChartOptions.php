@@ -78,9 +78,6 @@ class ColumnChartOptions extends AdvancedChartOptions
 
     use VAxesTrait;
 
-    /**
-     * ColumnChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -94,58 +91,37 @@ class ColumnChartOptions extends AdvancedChartOptions
         $this->tooltip = new AdvancedTooltip();
     }
 
-    /**
-     * @return AdvancedAnimation
-     */
-    public function getAnimation()
+    public function getAnimation(): AdvancedAnimation
     {
         return $this->animation;
     }
 
-    /**
-     * @return AdvancedAnnotations
-     */
-    public function getAnnotations()
+    public function getAnnotations(): AdvancedAnnotations
     {
         return $this->annotations;
     }
 
-    /**
-     * @return Bar
-     */
-    public function getBar()
+    public function getBar(): Bar
     {
         return $this->bar;
     }
 
-    /**
-     * @return Explorer
-     */
-    public function getExplorer()
+    public function getExplorer(): Explorer
     {
         return $this->explorer;
     }
 
-    /**
-     * @return AdvancedHAxis
-     */
-    public function getHAxis()
+    public function getHAxis(): AdvancedHAxis
     {
         return $this->hAxis;
     }
 
-    /**
-     * @return Legend
-     */
-    public function getLegend()
+    public function getLegend(): Legend
     {
         return $this->legend;
     }
 
-    /**
-     * @return AdvancedTooltip
-     */
-    public function getTooltip()
+    public function getTooltip(): AdvancedTooltip
     {
         return $this->tooltip;
     }
@@ -155,7 +131,7 @@ class ColumnChartOptions extends AdvancedChartOptions
      *
      * @return $this
      */
-    public function setTrendlines($trendlines)
+    public function setTrendlines(array $trendlines)
     {
         $this->trendlines = $trendlines;
 

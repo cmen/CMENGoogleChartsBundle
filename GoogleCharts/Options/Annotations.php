@@ -49,9 +49,6 @@ class Annotations
      */
     protected $textStyle;
 
-    /**
-     * Annotations constructor.
-     */
     public function __construct()
     {
         $this->boxStyle = new BoxStyle();
@@ -61,52 +58,35 @@ class Annotations
         $this->textStyle = new AdvancedTextStyle();
     }
 
-    /**
-     * @return BoxStyle
-     */
-    public function getBoxStyle()
+    public function getBoxStyle(): BoxStyle
     {
         return $this->boxStyle;
     }
 
-    /**
-     * @return Datum
-     */
-    public function getDatum()
+    public function getDatum(): Datum
     {
         return $this->datum;
     }
 
-    /**
-     * @return Domain
-     */
-    public function getDomain()
+    public function getDomain(): Domain
     {
         return $this->domain;
     }
 
-    /**
-     * @return Stem
-     */
-    public function getStem()
+    public function getStem(): Stem
     {
         return $this->stem;
     }
 
-    /**
-     * @return AdvancedTextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): AdvancedTextStyle
     {
         return $this->textStyle;
     }
 
     /**
-     * @param bool $highContrast
-     *
      * @return $this
      */
-    public function setHighContrast($highContrast)
+    public function setHighContrast(bool $highContrast)
     {
         $this->highContrast = $highContrast;
 
@@ -114,11 +94,9 @@ class Annotations
     }
 
     /**
-     * @param string $style
-     *
      * @return $this
      */
-    public function setStyle($style)
+    public function setStyle(string $style)
     {
         $this->style = $style;
 

@@ -96,11 +96,9 @@ class MapOptions implements ChartOptionsInterface
     protected $zoomLevel;
 
     /**
-     * @param bool $enableScrollWheel
-     *
      * @return $this
      */
-    public function setEnableScrollWheel($enableScrollWheel)
+    public function setEnableScrollWheel(bool $enableScrollWheel)
     {
         $this->enableScrollWheel = $enableScrollWheel;
 
@@ -112,7 +110,7 @@ class MapOptions implements ChartOptionsInterface
      *
      * @return $this
      */
-    public function setIcons($icons)
+    public function setIcons(array $icons)
     {
         $this->icons = $icons;
 
@@ -120,11 +118,9 @@ class MapOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $lineColor
-     *
      * @return $this
      */
-    public function setLineColor($lineColor)
+    public function setLineColor(bool $lineColor)
     {
         $this->lineColor = $lineColor;
 
@@ -136,7 +132,7 @@ class MapOptions implements ChartOptionsInterface
      *
      * @return $this
      */
-    public function setMaps($maps)
+    public function setMaps(array $maps)
     {
         $this->maps = $maps;
 
@@ -144,11 +140,9 @@ class MapOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param string $mapType
-     *
      * @return $this
      */
-    public function setMapType($mapType)
+    public function setMapType(string $mapType)
     {
         $this->mapType = $mapType;
 
@@ -160,7 +154,7 @@ class MapOptions implements ChartOptionsInterface
      *
      * @return $this
      */
-    public function setMapTypeIds($mapTypeIds)
+    public function setMapTypeIds(array $mapTypeIds)
     {
         $this->mapTypeIds = $mapTypeIds;
 
@@ -168,11 +162,9 @@ class MapOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $showLine
-     *
      * @return $this
      */
-    public function setShowLine($showLine)
+    public function setShowLine(bool $showLine)
     {
         $this->showLine = $showLine;
 
@@ -180,11 +172,9 @@ class MapOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $showTip
-     *
      * @return $this
      */
-    public function setShowTip($showTip)
+    public function setShowTip(bool $showTip)
     {
         $this->showTip = $showTip;
 
@@ -192,11 +182,9 @@ class MapOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param bool $useMapTypeControl
-     *
      * @return $this
      */
-    public function setUseMapTypeControl($useMapTypeControl)
+    public function setUseMapTypeControl(bool $useMapTypeControl)
     {
         $this->useMapTypeControl = $useMapTypeControl;
 
@@ -204,11 +192,9 @@ class MapOptions implements ChartOptionsInterface
     }
 
     /**
-     * @param int $zoomLevel
-     *
      * @return $this
      */
-    public function setZoomLevel($zoomLevel)
+    public function setZoomLevel(int $zoomLevel)
     {
         $this->zoomLevel = $zoomLevel;
 

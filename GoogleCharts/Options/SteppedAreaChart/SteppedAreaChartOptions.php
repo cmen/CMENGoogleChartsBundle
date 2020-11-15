@@ -61,9 +61,6 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
 
     use VAxesTrait;
 
-    /**
-     * SteppedAreaChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -74,44 +71,30 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
         $this->tooltip = new AdvancedTooltip();
     }
 
-    /**
-     * @return AdvancedAnimation
-     */
-    public function getAnimation()
+    public function getAnimation(): AdvancedAnimation
     {
         return $this->animation;
     }
 
-    /**
-     * @return HAxis
-     */
-    public function getHAxis()
+    public function getHAxis(): HAxis
     {
         return $this->hAxis;
     }
 
-    /**
-     * @return AdvancedLegend
-     */
-    public function getLegend()
+    public function getLegend(): AdvancedLegend
     {
         return $this->legend;
     }
 
-    /**
-     * @return AdvancedTooltip
-     */
-    public function getTooltip()
+    public function getTooltip(): AdvancedTooltip
     {
         return $this->tooltip;
     }
 
     /**
-     * @param bool $connectSteps
-     *
      * @return $this
      */
-    public function setConnectSteps($connectSteps)
+    public function setConnectSteps(bool $connectSteps)
     {
         $this->connectSteps = $connectSteps;
 

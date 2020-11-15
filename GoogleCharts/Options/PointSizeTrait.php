@@ -19,11 +19,9 @@ trait PointSizeTrait
     protected $pointSize;
 
     /**
-     * @param int $pointSize
-     *
      * @return $this
      */
-    public function setPointSize($pointSize)
+    public function setPointSize(int $pointSize)
     {
         $this->pointSize = $pointSize;
 

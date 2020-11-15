@@ -24,22 +24,16 @@ abstract class AbstractChartOutput implements ChartOutputInterface
      */
     protected $language;
 
-    /**
-     * @param string $version
-     * @param string $language
-     */
-    public function __construct($version, $language)
+    public function __construct(string $version, string $language)
     {
         $this->version = $version;
         $this->language = $language;
     }
 
     /**
-     * @param string $language
-     *
      * @return $this
      */
-    public function setLanguage($language)
+    public function setLanguage(string $language): ChartOutputInterface
     {
         $this->language = $language;
 
@@ -52,11 +46,9 @@ abstract class AbstractChartOutput implements ChartOutputInterface
      * @param Chart[]  $charts
      * @param string[] $elementsID
      *
-     * @return void
-     *
      * @throws GoogleChartsException
      */
-    protected function checkElementsId(array $charts, array $elementsID)
+    protected function checkElementsId(array $charts, array $elementsID): void
     {
         if (count($charts) != count($elementsID)) {
             throw new GoogleChartsException('Array charts and array HTML elements ID do not have the same number of element.');
@@ -74,11 +66,9 @@ abstract class AbstractChartOutput implements ChartOutputInterface
      *
      * @param Chart[] $charts
      *
-     * @return void
-     *
      * @throws GoogleChartsException
      */
-    protected function checkChartsTypes(array $charts)
+    protected function checkChartsTypes(array $charts): void
     {
         foreach ($charts as $chart) {
             if (!$chart instanceof Chart) {

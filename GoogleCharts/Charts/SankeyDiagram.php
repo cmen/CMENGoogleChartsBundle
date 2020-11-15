@@ -23,17 +23,17 @@ class SankeyDiagram extends Chart
         $this->options = new SankeyDiagramOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Sankey';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'sankey';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ERROR,
@@ -44,20 +44,15 @@ class SankeyDiagram extends Chart
         ];
     }
 
-    /**
-     * @return SankeyDiagramOptions
-     */
-    public function getOptions()
+    public function getOptions(): SankeyDiagramOptions
     {
         return $this->options;
     }
 
     /**
      * @param SankeyDiagramOptions $options
-     *
-     * @return SankeyDiagram
      */
-    public function setOptions($options)
+    public function setOptions(/* SankeyDiagramOptions */$options): SankeyDiagram
     {
         $this->options = $options;
 

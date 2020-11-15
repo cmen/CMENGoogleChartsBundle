@@ -150,11 +150,9 @@ class Calendar
     }
 
     /**
-     * @param int $cellSize
-     *
      * @return $this
      */
-    public function setCellSize($cellSize)
+    public function setCellSize(int $cellSize)
     {
         $this->cellSize = $cellSize;
 
@@ -162,11 +160,9 @@ class Calendar
     }
 
     /**
-     * @param int $dayOfWeekRightSpace
-     *
      * @return $this
      */
-    public function setDayOfWeekRightSpace($dayOfWeekRightSpace)
+    public function setDayOfWeekRightSpace(int $dayOfWeekRightSpace)
     {
         $this->dayOfWeekRightSpace = $dayOfWeekRightSpace;
 
@@ -174,11 +170,9 @@ class Calendar
     }
 
     /**
-     * @param string $daysOfWeek
-     *
      * @return $this
      */
-    public function setDaysOfWeek($daysOfWeek)
+    public function setDaysOfWeek(string $daysOfWeek)
     {
         $this->daysOfWeek = $daysOfWeek;
 
@@ -186,11 +180,9 @@ class Calendar
     }
 
     /**
-     * @param int $underMonthSpace
-     *
      * @return $this
      */
-    public function setUnderMonthSpace($underMonthSpace)
+    public function setUnderMonthSpace(int $underMonthSpace)
     {
         $this->underMonthSpace = $underMonthSpace;
 
@@ -198,11 +190,9 @@ class Calendar
     }
 
     /**
-     * @param int $underYearSpace
-     *
      * @return $this
      */
-    public function setUnderYearSpace($underYearSpace)
+    public function setUnderYearSpace(int $underYearSpace)
     {
         $this->underYearSpace = $underYearSpace;
 

@@ -25,28 +25,20 @@ class PieSlice
      */
     protected $textStyle;
 
-    /**
-     * PieSlice constructor.
-     */
     public function __construct()
     {
         $this->textStyle = new PieSliceTextStyle();
     }
 
-    /**
-     * @return PieSliceTextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): PieSliceTextStyle
     {
         return $this->textStyle;
     }
 
     /**
-     * @param float $offset
-     *
      * @return $this
      */
-    public function setOffset($offset)
+    public function setOffset(float $offset)
     {
         $this->offset = $offset;
 

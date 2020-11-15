@@ -105,9 +105,6 @@ class PieChartOptions extends MediumChartOptions
      */
     protected $tooltip;
 
-    /**
-     * PieChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -117,36 +114,25 @@ class PieChartOptions extends MediumChartOptions
         $this->tooltip = new FullTooltip();
     }
 
-    /**
-     * @return PieSliceTextStyle
-     */
-    public function getPieSliceTextStyle()
+    public function getPieSliceTextStyle(): PieSliceTextStyle
     {
         return $this->pieSliceTextStyle;
     }
 
-    /**
-     * @return FullTooltip
-     */
-    public function getTooltip()
+    public function getTooltip(): FullTooltip
     {
         return $this->tooltip;
     }
 
-    /**
-     * @return AdvancedLegend
-     */
-    public function getLegend()
+    public function getLegend(): AdvancedLegend
     {
         return $this->legend;
     }
 
     /**
-     * @param bool $is3D
-     *
      * @return $this
      */
-    public function setIs3D($is3D)
+    public function setIs3D(bool $is3D)
     {
         $this->is3D = $is3D;
 
@@ -154,11 +140,9 @@ class PieChartOptions extends MediumChartOptions
     }
 
     /**
-     * @param float $pieHole
-     *
      * @return $this
      */
-    public function setPieHole($pieHole)
+    public function setPieHole(float $pieHole)
     {
         $this->pieHole = $pieHole;
 
@@ -166,11 +150,9 @@ class PieChartOptions extends MediumChartOptions
     }
 
     /**
-     * @param int $pieStartAngle
-     *
      * @return $this
      */
-    public function setPieStartAngle($pieStartAngle)
+    public function setPieStartAngle(int $pieStartAngle)
     {
         $this->pieStartAngle = $pieStartAngle;
 
@@ -178,11 +160,9 @@ class PieChartOptions extends MediumChartOptions
     }
 
     /**
-     * @param string $pieSliceText
-     *
      * @return $this
      */
-    public function setPieSliceText($pieSliceText)
+    public function setPieSliceText(string $pieSliceText)
     {
         $this->pieSliceText = $pieSliceText;
 
@@ -194,7 +174,7 @@ class PieChartOptions extends MediumChartOptions
      *
      * @return $this
      */
-    public function setSlices($slices)
+    public function setSlices(array $slices)
     {
         $this->slices = $slices;
 
@@ -202,11 +182,9 @@ class PieChartOptions extends MediumChartOptions
     }
 
     /**
-     * @param float $sliceVisibilityThreshold
-     *
      * @return $this
      */
-    public function setSliceVisibilityThreshold($sliceVisibilityThreshold)
+    public function setSliceVisibilityThreshold(float $sliceVisibilityThreshold)
     {
         $this->sliceVisibilityThreshold = $sliceVisibilityThreshold;
 
@@ -214,11 +192,9 @@ class PieChartOptions extends MediumChartOptions
     }
 
     /**
-     * @param string $pieResidueSliceColor
-     *
      * @return $this
      */
-    public function setPieResidueSliceColor($pieResidueSliceColor)
+    public function setPieResidueSliceColor(string $pieResidueSliceColor)
     {
         $this->pieResidueSliceColor = $pieResidueSliceColor;
 
@@ -226,11 +202,9 @@ class PieChartOptions extends MediumChartOptions
     }
 
     /**
-     * @param string $pieResidueSliceLabel
-     *
      * @return $this
      */
-    public function setPieResidueSliceLabel($pieResidueSliceLabel)
+    public function setPieResidueSliceLabel(string $pieResidueSliceLabel)
     {
         $this->pieResidueSliceLabel = $pieResidueSliceLabel;
 

@@ -81,9 +81,6 @@ class ScatterChartOptions extends AdvancedChartOptions
      */
     protected $trendlines;
 
-    /**
-     * ScatterChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -97,58 +94,37 @@ class ScatterChartOptions extends AdvancedChartOptions
         $this->tooltip = new AdvancedTooltip();
     }
 
-    /**
-     * @return AdvancedAnimation
-     */
-    public function getAnimation()
+    public function getAnimation(): AdvancedAnimation
     {
         return $this->animation;
     }
 
-    /**
-     * @return Annotations
-     */
-    public function getAnnotations()
+    public function getAnnotations(): Annotations
     {
         return $this->annotations;
     }
 
-    /**
-     * @return Crosshair
-     */
-    public function getCrosshair()
+    public function getCrosshair(): Crosshair
     {
         return $this->crosshair;
     }
 
-    /**
-     * @return Explorer
-     */
-    public function getExplorer()
+    public function getExplorer(): Explorer
     {
         return $this->explorer;
     }
 
-    /**
-     * @return MediumHAxis
-     */
-    public function getHAxis()
+    public function getHAxis(): MediumHAxis
     {
         return $this->hAxis;
     }
 
-    /**
-     * @return AdvancedLegend
-     */
-    public function getLegend()
+    public function getLegend(): AdvancedLegend
     {
         return $this->legend;
     }
 
-    /**
-     * @return AdvancedTooltip
-     */
-    public function getTooltip()
+    public function getTooltip(): AdvancedTooltip
     {
         return $this->tooltip;
     }
@@ -158,7 +134,7 @@ class ScatterChartOptions extends AdvancedChartOptions
      *
      * @return $this
      */
-    public function setTrendlines($trendlines)
+    public function setTrendlines(array $trendlines)
     {
         $this->trendlines = $trendlines;
 

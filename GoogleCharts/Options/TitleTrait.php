@@ -17,11 +17,9 @@ trait TitleTrait
     protected $title;
 
     /**
-     * @param string $title
-     *
      * @return $this
      */
-    public function setTitle($title)
+    public function setTitle(string $title)
     {
         $this->title = $title;
 

@@ -23,17 +23,17 @@ class OrgChart extends Chart
         $this->options = new OrgChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'OrgChart';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'orgchart';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::COLLAPSE,
@@ -44,20 +44,15 @@ class OrgChart extends Chart
         ];
     }
 
-    /**
-     * @return OrgChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): OrgChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param OrgChartOptions $options
-     *
-     * @return OrgChart
      */
-    public function setOptions($options)
+    public function setOptions(/* OrgChartOptions */$options): OrgChart
     {
         $this->options = $options;
 

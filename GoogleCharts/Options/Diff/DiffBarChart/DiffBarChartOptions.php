@@ -14,9 +14,6 @@ class DiffBarChartOptions extends BarChartOptions
      */
     protected $diff;
 
-    /**
-     * DiffBarChartOptions constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -24,10 +21,7 @@ class DiffBarChartOptions extends BarChartOptions
         $this->diff = new Diff();
     }
 
-    /**
-     * @return Diff
-     */
-    public function getDiff()
+    public function getDiff(): Diff
     {
         return $this->diff;
     }

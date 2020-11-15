@@ -53,37 +53,26 @@ class Timeline
      */
     protected $singleColor;
 
-    /**
-     * Timeline constructor.
-     */
     public function __construct()
     {
         $this->barLabelStyle = new BarLabelStyle();
         $this->rowLabelStyle = new RowLabelStyle();
     }
 
-    /**
-     * @return BarLabelStyle
-     */
-    public function getBarLabelStyle()
+    public function getBarLabelStyle(): BarLabelStyle
     {
         return $this->barLabelStyle;
     }
 
-    /**
-     * @return RowLabelStyle
-     */
-    public function getRowLabelStyle()
+    public function getRowLabelStyle(): RowLabelStyle
     {
         return $this->rowLabelStyle;
     }
 
     /**
-     * @param bool $colorByRowLabel
-     *
      * @return $this
      */
-    public function setColorByRowLabel($colorByRowLabel)
+    public function setColorByRowLabel(bool $colorByRowLabel)
     {
         $this->colorByRowLabel = $colorByRowLabel;
 
@@ -91,11 +80,9 @@ class Timeline
     }
 
     /**
-     * @param bool $showBarLabels
-     *
      * @return $this
      */
-    public function setShowBarLabels($showBarLabels)
+    public function setShowBarLabels(bool $showBarLabels)
     {
         $this->showBarLabels = $showBarLabels;
 
@@ -103,11 +90,9 @@ class Timeline
     }
 
     /**
-     * @param bool $showRowLabels
-     *
      * @return $this
      */
-    public function setShowRowLabels($showRowLabels)
+    public function setShowRowLabels(bool $showRowLabels)
     {
         $this->showRowLabels = $showRowLabels;
 
@@ -115,11 +100,9 @@ class Timeline
     }
 
     /**
-     * @param string $singleColor
-     *
      * @return $this
      */
-    public function setSingleColor($singleColor)
+    public function setSingleColor(string $singleColor)
     {
         $this->singleColor = $singleColor;
 
@@ -127,11 +110,9 @@ class Timeline
     }
 
     /**
-     * @param bool $groupByRowLabel
-     *
      * @return $this
      */
-    public function setGroupByRowLabel($groupByRowLabel)
+    public function setGroupByRowLabel(bool $groupByRowLabel)
     {
         $this->groupByRowLabel = $groupByRowLabel;
 

@@ -16,11 +16,9 @@ class AdvancedAnimation extends Animation
     protected $startup;
 
     /**
-     * @param bool $startup
-     *
      * @return $this
      */
-    public function setStartup($startup)
+    public function setStartup(bool $startup)
     {
         $this->startup = $startup;
 

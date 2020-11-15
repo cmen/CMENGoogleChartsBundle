@@ -13,11 +13,7 @@ interface DataOutputInterface
     /**
      * Returns a string to draw data.
      *
-     * @param string $dataName Variable name who will contain the data
-     *
-     * @return string
-     *
      * @throws GoogleChartsException
      */
-    public function draw(Data $data, $dataName);
+    public function draw(Data $data, string $dataName): string;
 }

@@ -38,11 +38,9 @@ class GoogleChartsExtension extends AbstractExtension
      * @param Chart|Chart[]        $charts     Chart instance or array of Chart instance
      * @param string|string[]|null $elementsID HTML element ID or array of HTML elements IDs. Can be null
      *
-     * @return string
-     *
      * @throws GoogleChartsException
      */
-    public function gcStart($charts, $elementsID = null)
+    public function gcStart($charts, $elementsID = null): string
     {
         return $this->chartOutput->startCharts($charts, $elementsID);
     }
@@ -52,11 +50,9 @@ class GoogleChartsExtension extends AbstractExtension
      *
      * @param Chart|Chart[] $charts Chart instance or array of Chart instance
      *
-     * @return string
-     *
      * @throws GoogleChartsException
      */
-    public function gcEnd($charts)
+    public function gcEnd($charts): string
     {
         return $this->chartOutput->endCharts($charts);
     }
@@ -67,25 +63,17 @@ class GoogleChartsExtension extends AbstractExtension
      * @param Chart|Chart[]        $charts     Chart instance or array of Chart instance
      * @param string|string[]|null $elementsID HTML element ID or array of HTML elements IDs. Can be null
      *
-     * @return string
-     *
      * @throws GoogleChartsException
      */
-    public function gcDraw($charts, $elementsID = null)
+    public function gcDraw($charts, $elementsID = null): string
     {
         return $this->chartOutput->fullCharts($charts, $elementsID);
     }
 
     /**
      * Add an event to a chart.
-     *
-     * @param Chart  $chart        A Chart instance
-     * @param string $type         Type of event
-     * @param string $functionName Name of Javascript function
-     *
-     * @return void
      */
-    public function gcEvent(Chart $chart, $type, $functionName)
+    public function gcEvent(Chart $chart, string $type, string $functionName): void
     {
         $chart->getEvents()->addListener($type, $functionName);
     }
@@ -94,12 +82,8 @@ class GoogleChartsExtension extends AbstractExtension
      * Set the locale. Must be called before drawing charts.
      *
      * @see https://developers.google.com/chart/interactive/docs/basic_load_libs#loadwithlocale
-     *
-     * @param string $language Locale, for example : "fr"
-     *
-     * @return void
      */
-    public function gcLanguage($language)
+    public function gcLanguage(string $language): void
     {
         $this->chartOutput->setLanguage($language);
     }

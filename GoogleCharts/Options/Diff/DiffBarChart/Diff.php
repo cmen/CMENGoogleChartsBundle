@@ -12,18 +12,12 @@ class Diff
      */
     protected $newData;
 
-    /**
-     * Diff constructor.
-     */
     public function __construct()
     {
         $this->newData = new NewData();
     }
 
-    /**
-     * @return NewData
-     */
-    public function getNewData()
+    public function getNewData(): NewData
     {
         return $this->newData;
     }

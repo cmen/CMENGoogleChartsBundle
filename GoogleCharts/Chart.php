@@ -37,10 +37,8 @@ abstract class Chart
 
     /**
      * Returns chart's name.
-     *
-     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         if (null === $this->elementID) {
             return '';
@@ -51,61 +49,51 @@ abstract class Chart
 
     /**
      * Returns data chart's name.
-     *
-     * @return string
      */
-    public function getDataName()
+    public function getDataName(): string
     {
         return 'data'.ucfirst($this->getName());
     }
 
     /**
      * Returns options chart's name.
-     *
-     * @return string
      */
-    public function getOptionsName()
+    public function getOptionsName(): string
     {
         return 'options'.ucfirst($this->getName());
     }
 
     /**
      * Returns the chart type.
-     *
-     * @return string
      */
-    abstract public function getType();
+    abstract public function getType(): string;
 
     /**
      * Returns library used by chart.
-     *
-     * @return string
      */
-    public function getLibrary()
+    public function getLibrary(): string
     {
         return 'visualization';
     }
 
     /**
      * Returns the chart package.
-     *
-     * @return string
      */
-    abstract public function getPackage();
+    abstract public function getPackage(): string;
 
     /**
      * Returns available event types.
      *
      * @return string[]
      */
-    abstract public function getAvailableEventTypes();
+    abstract public function getAvailableEventTypes(): array;
 
     /**
      * Returns the instance options.
      *
      * @return ChartOptionsInterface
      */
-    abstract public function getOptions();
+    abstract public function getOptions()/* : ChartOptionsInterface */;
 
     /**
      * Sets the instance Options.
@@ -114,40 +102,29 @@ abstract class Chart
      *
      * @return $this
      */
-    abstract public function setOptions($options);
+    abstract public function setOptions(/* ChartOptionsInterface */$options)/* : Chart */;
 
     /**
-     * @param string $elementID
-     *
      * @return $this
      */
-    public function setElementID($elementID)
+    public function setElementID(string $elementID)
     {
         $this->elementID = $elementID;
 
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getElementID()
+    public function getElementID(): ?string
     {
         return $this->elementID;
     }
 
-    /**
-     * @return Data
-     */
-    public function getData()
+    public function getData(): Data
     {
         return $this->data;
     }
 
-    /**
-     * @return Events
-     */
-    public function getEvents()
+    public function getEvents(): Events
     {
         return $this->events;
     }

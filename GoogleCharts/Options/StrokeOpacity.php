@@ -15,11 +15,9 @@ trait StrokeOpacity
     protected $strokeOpacity;
 
     /**
-     * @param float $strokeOpacity
-     *
      * @return $this
      */
-    public function setStrokeOpacity($strokeOpacity)
+    public function setStrokeOpacity(float $strokeOpacity)
     {
         $this->strokeOpacity = $strokeOpacity;
 

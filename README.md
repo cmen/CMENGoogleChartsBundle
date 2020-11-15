@@ -17,6 +17,7 @@
 * [Diff charts](Resources/doc/diff_charts.md)
 * [Events](Resources/doc/events.md)
 * [Google Charts documentation](https://developers.google.com/chart/interactive/docs/)
+* [How to contribute](Resources/doc/contribute.md)
 
 ## Examples
 

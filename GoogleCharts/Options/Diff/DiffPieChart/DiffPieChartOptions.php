@@ -18,10 +18,7 @@ class DiffPieChartOptions extends PieChartOptions
         $this->diff = new Diff();
     }
 
-    /**
-     * @return Diff
-     */
-    public function getDiff()
+    public function getDiff(): Diff
     {
         return $this->diff;
     }

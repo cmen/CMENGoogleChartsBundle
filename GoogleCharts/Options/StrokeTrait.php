@@ -17,11 +17,9 @@ trait StrokeTrait
     protected $stroke;
 
     /**
-     * @param string $stroke
-     *
      * @return $this
      */
-    public function setStroke($stroke)
+    public function setStroke(string $stroke)
     {
         $this->stroke = $stroke;
 

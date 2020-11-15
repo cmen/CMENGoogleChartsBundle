@@ -30,7 +30,7 @@ trait MaterialTrait
      *
      * @return $this
      */
-    public function setAxes($axes)
+    public function setAxes(array $axes)
     {
         $this->axes = $axes;
 

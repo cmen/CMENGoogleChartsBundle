@@ -15,11 +15,9 @@ trait ColorTrait
     protected $color;
 
     /**
-     * @param string $color
-     *
      * @return $this
      */
-    public function setColor($color)
+    public function setColor(string $color)
     {
         $this->color = $color;
 

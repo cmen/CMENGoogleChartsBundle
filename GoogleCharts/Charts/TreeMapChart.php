@@ -23,17 +23,17 @@ class TreeMapChart extends Chart
         $this->options = new TreeMapChartOptions();
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'TreeMap';
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'treemap';
     }
 
-    public function getAvailableEventTypes()
+    public function getAvailableEventTypes(): array
     {
         return [
             EventType::ON_MOUSE_OUT,
@@ -44,20 +44,15 @@ class TreeMapChart extends Chart
         ];
     }
 
-    /**
-     * @return TreeMapChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): TreeMapChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param TreeMapChartOptions $options
-     *
-     * @return TreeMapChart
      */
-    public function setOptions($options)
+    public function setOptions(/* TreeMapChartOptions */$options): TreeMapChart
     {
         $this->options = $options;
 

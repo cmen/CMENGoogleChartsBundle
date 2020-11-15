@@ -19,11 +19,9 @@ trait EnableInteractivityTrait
     protected $enableInteractivity;
 
     /**
-     * @param bool $enableInteractivity
-     *
      * @return $this
      */
-    public function setEnableInteractivity($enableInteractivity)
+    public function setEnableInteractivity(bool $enableInteractivity)
     {
         $this->enableInteractivity = $enableInteractivity;
 

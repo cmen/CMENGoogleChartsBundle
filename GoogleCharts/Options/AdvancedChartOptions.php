@@ -27,10 +27,7 @@ class AdvancedChartOptions extends MediumChartOptions
         $this->vAxis = new VAxis();
     }
 
-    /**
-     * @return VAxis
-     */
-    public function getVAxis()
+    public function getVAxis(): VAxis
     {
         return $this->vAxis;
     }

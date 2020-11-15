@@ -21,25 +21,22 @@ class ColumnChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnCha
         $this->options = new ColumnChartOptions();
     }
 
-    public function getPackage()
+    public function getPackage(): string
     {
         return 'bar';
     }
 
-    public function getLibrary()
+    public function getLibrary(): string
     {
         return 'charts';
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'Bar';
     }
 
-    /**
-     * @return ColumnChartOptions
-     */
-    public function getOptions()
+    public function getOptions(): ColumnChartOptions
     {
         return $this->options;
     }

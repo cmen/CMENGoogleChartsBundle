@@ -17,11 +17,9 @@ class AdvancedTooltip extends MediumTooltip
     protected $ignoreBounds;
 
     /**
-     * @param bool $ignoreBounds
-     *
      * @return $this
      */
-    public function setIgnoreBounds($ignoreBounds)
+    public function setIgnoreBounds(bool $ignoreBounds)
     {
         $this->ignoreBounds = $ignoreBounds;
 

@@ -65,11 +65,9 @@ class CssClassNames
     protected $rowNumberCell;
 
     /**
-     * @param string $headerRow
-     *
      * @return $this
      */
-    public function setHeaderRow($headerRow)
+    public function setHeaderRow(string $headerRow)
     {
         $this->headerRow = $headerRow;
 
@@ -77,11 +75,9 @@ class CssClassNames
     }
 
     /**
-     * @param string $tableRow
-     *
      * @return $this
      */
-    public function setTableRow($tableRow)
+    public function setTableRow(string $tableRow)
     {
         $this->tableRow = $tableRow;
 
@@ -89,11 +85,9 @@ class CssClassNames
     }
 
     /**
-     * @param string $oddTableRow
-     *
      * @return $this
      */
-    public function setOddTableRow($oddTableRow)
+    public function setOddTableRow(string $oddTableRow)
     {
         $this->oddTableRow = $oddTableRow;
 
@@ -101,11 +95,9 @@ class CssClassNames
     }
 
     /**
-     * @param string $selectedTableRow
-     *
      * @return $this
      */
-    public function setSelectedTableRow($selectedTableRow)
+    public function setSelectedTableRow(string $selectedTableRow)
     {
         $this->selectedTableRow = $selectedTableRow;
 
@@ -113,11 +105,9 @@ class CssClassNames
     }
 
     /**
-     * @param string $hoverTableRow
-     *
      * @return $this
      */
-    public function setHoverTableRow($hoverTableRow)
+    public function setHoverTableRow(string $hoverTableRow)
     {
         $this->hoverTableRow = $hoverTableRow;
 
@@ -125,11 +115,9 @@ class CssClassNames
     }
 
     /**
-     * @param string $headerCell
-     *
      * @return $this
      */
-    public function setHeaderCell($headerCell)
+    public function setHeaderCell(string $headerCell)
     {
         $this->headerCell = $headerCell;
 
@@ -137,11 +125,9 @@ class CssClassNames
     }
 
     /**
-     * @param string $tableCell
-     *
      * @return $this
      */
-    public function setTableCell($tableCell)
+    public function setTableCell(string $tableCell)
     {
         $this->tableCell = $tableCell;
 
@@ -149,11 +135,9 @@ class CssClassNames
     }
 
     /**
-     * @param string $rowNumberCell
-     *
      * @return $this
      */
-    public function setRowNumberCell($rowNumberCell)
+    public function setRowNumberCell(string $rowNumberCell)
     {
         $this->rowNumberCell = $rowNumberCell;
 

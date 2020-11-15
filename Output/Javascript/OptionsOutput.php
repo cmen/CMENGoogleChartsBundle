@@ -19,7 +19,7 @@ class OptionsOutput extends AbstractOptionsOutput
         $this->dateOutput = $dateOutput;
     }
 
-    public function draw(ChartOptionsInterface $options, $optionsName)
+    public function draw(ChartOptionsInterface $options, string $optionsName): string
     {
         $this->removeRecursivelyNullValue($options);
 

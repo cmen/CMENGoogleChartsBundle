@@ -25,20 +25,15 @@ class Legend
      */
     protected $textStyle;
 
-    /**
-     * @return TextStyle
-     */
-    public function getTextStyle()
+    public function getTextStyle(): TextStyle
     {
         return $this->textStyle;
     }
 
     /**
-     * @param string $position
-     *
      * @return $this
      */
-    public function setPosition($position)
+    public function setPosition(string $position)
     {
         $this->position = $position;
 
