@@ -19,16 +19,6 @@
 * [Google Charts documentation](https://developers.google.com/chart/interactive/docs/)
 * [How to contribute](Resources/doc/contribute.md)
 
-## Examples
-
-![Pie Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/g2.png)  
-
-![Histogram](http://static.christophe-meneses.fr/img/google_charts_bundle/g3.png)  
-
-![Line Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/g4.png)  
-
-![Combo Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/g1.png)  
-
 ## License
 
 This bundle is released under the MIT license. See the complete license in file LICENCE.
