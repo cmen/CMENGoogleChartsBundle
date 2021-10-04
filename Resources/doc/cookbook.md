@@ -58,8 +58,6 @@ $bar->getOptions()->setHeight(500);
 ## Bar Chart (Material)
 Warning : the Material Charts are in beta.
 
-![Material Bar Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matbar.png) 
-
 ```php
 $chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\BarChart();
 $chart->getData()->setArrayToDataTable([
@@ -228,8 +226,6 @@ $col->getOptions()->setHeight(500);
 
 ## Column Chart (Material)
 Warning : the Material Charts are in beta.
-
-![Material Column Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matcol.png) 
 
 ```php
 $chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\ColumnChart();
@@ -494,8 +490,6 @@ $line->getOptions()->getLegend()->setPosition('none');
 ## Line Chart (Material)
 Warning : the Material Charts are in beta.
 
-![Material Line Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matline.png) 
-
 ```php
 $chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\LineChart();
 $chart->getData()->setArrayToDataTable([
@@ -686,8 +680,6 @@ $scatter->getOptions()->getLegend()->setPosition('none');
 
 ## Scatter Chart (Material)
 Warning : the Material Charts are in beta.
-
-![Material Scatter Chart](http://static.christophe-meneses.fr/img/google_charts_bundle/matscat.png) 
 
 ```php
 $chart = new \CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material\ScatterChart();
