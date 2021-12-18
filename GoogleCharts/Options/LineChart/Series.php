@@ -11,12 +11,12 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineSeries;
  */
 class Series extends LineSeries
 {
+    use CurveTypeTrait;
+
     /**
      * @var Annotations
      */
     protected $annotations;
-
-    use CurveTypeTrait;
 
     public function __construct()
     {

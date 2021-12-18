@@ -10,14 +10,14 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
  */
 class OrgChartOptions implements ChartOptionsInterface
 {
+    use AllowHtmlTrait;
+
     /**
      * Determines if double click will collapse a node.
      *
      * @var bool
      */
     protected $allowCollapse;
-
-    use AllowHtmlTrait;
 
     /**
      * A class name to assign to node elements. Apply CSS to this class name to specify colors or styles for the chart

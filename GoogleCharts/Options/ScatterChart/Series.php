@@ -10,16 +10,16 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\PointTrait;
  */
 class Series extends \CMEN\GoogleChartsBundle\GoogleCharts\Options\Series
 {
+    use LineWidthTrait;
+
+    use PointTrait;
+
     /**
      * The description of the series to appear in the chart legend.
      *
      * @var string
      */
     protected $labelInLegend;
-
-    use LineWidthTrait;
-
-    use PointTrait;
 
     /**
      * @return $this

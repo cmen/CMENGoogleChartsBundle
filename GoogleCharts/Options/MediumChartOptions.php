@@ -7,6 +7,14 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class MediumChartOptions extends BasicChartOptions
 {
+    use ColorsTrait;
+
+    use FontNameTrait;
+
+    use FontSizeTrait;
+
+    use TitleTrait;
+
     /**
      * The background color for the main area of the chart. Can be either a simple HTML color string, for example :
      * 'red' or '#00cc00', or a BackgroundColor object.
@@ -22,14 +30,6 @@ class MediumChartOptions extends BasicChartOptions
      * @var ChartArea
      */
     protected $chartArea;
-
-    use ColorsTrait;
-
-    use FontNameTrait;
-
-    use FontSizeTrait;
-
-    use TitleTrait;
 
     /**
      * @var TitleTextStyle

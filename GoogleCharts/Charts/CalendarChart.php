@@ -5,6 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\CalendarChart\CalendarChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
@@ -14,7 +15,7 @@ class CalendarChart extends Chart
     /**
      * @var CalendarChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -52,7 +53,7 @@ class CalendarChart extends Chart
     /**
      * @param CalendarChartOptions $options
      */
-    public function setOptions(/* CalendarChartOptions */$options): CalendarChart
+    public function setOptions(ChartOptionsInterface $options): CalendarChart
     {
         $this->options = $options;
 

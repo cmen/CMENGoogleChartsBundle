@@ -10,6 +10,10 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\WidthTrait;
  */
 class Node
 {
+    use WidthTrait;
+
+    use ColorsTrait;
+
     /**
      * @var Label
      */
@@ -35,10 +39,6 @@ class Node
      * @var int
      */
     protected $nodePadding;
-
-    use WidthTrait;
-
-    use ColorsTrait;
 
     /**
      * Sets a coloring mode for the sankey nodes. Possible values:

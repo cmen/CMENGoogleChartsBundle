@@ -22,7 +22,7 @@ class ChartOutputTest extends TestCase
     /**
      * {@inheritdoc}
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $optionsOutput = $this->createMock(OptionsOutputInterface::class);
         $dataOutput = $this->createMock(DataOutputInterface::class);
@@ -34,7 +34,7 @@ class ChartOutputTest extends TestCase
     /**
      * @throws GoogleChartsException
      */
-    public function testContainerIsNotDefined()
+    public function testContainerIsNotDefined(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('Container is not defined.');
@@ -61,7 +61,7 @@ class ChartOutputTest extends TestCase
     /**
      * @throws GoogleChartsException
      */
-    public function testParamChartsBadType()
+    public function testParamChartsBadType(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('An instance of Chart or an array of Chart is expected.');
@@ -73,7 +73,7 @@ class ChartOutputTest extends TestCase
     /**
      * @throws GoogleChartsException
      */
-    public function testParamChartsBadTypeForMultipleCharts()
+    public function testParamChartsBadTypeForMultipleCharts(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('An array of Chart is expected.');
@@ -87,7 +87,7 @@ class ChartOutputTest extends TestCase
     /**
      * @throws GoogleChartsException
      */
-    public function testParamElementsIDBadTypeForOneChart()
+    public function testParamElementsIDBadTypeForOneChart(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('A string is expected for HTML element ID.');
@@ -98,7 +98,7 @@ class ChartOutputTest extends TestCase
     /**
      * @throws GoogleChartsException
      */
-    public function testParamElementsIDBadTypeForMultipleCharts()
+    public function testParamElementsIDBadTypeForMultipleCharts(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('A string is expected for HTML element ID.');
@@ -112,7 +112,7 @@ class ChartOutputTest extends TestCase
     /**
      * @throws GoogleChartsException
      */
-    public function testParamElementsIDNotArrayForMultipleCharts()
+    public function testParamElementsIDNotArrayForMultipleCharts(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('An array of string is expected for HTML elements IDs.');
@@ -126,7 +126,7 @@ class ChartOutputTest extends TestCase
     /**
      * @throws GoogleChartsException
      */
-    public function testParamElementsIDBadCountForMultipleCharts()
+    public function testParamElementsIDBadCountForMultipleCharts(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('Array charts and array HTML elements ID do not have the same number of element.');
@@ -137,7 +137,7 @@ class ChartOutputTest extends TestCase
         $this->chartOutput->startCharts($charts, $elementsID);
     }
 
-    public function testLoadLibraries()
+    public function testLoadLibraries(): void
     {
         $this->assertEquals(
             "google.charts.load('current', {packages:['corechart','map','gauge'], language: 'en'});",
@@ -145,7 +145,7 @@ class ChartOutputTest extends TestCase
         );
     }
 
-    public function testStartCallback()
+    public function testStartCallback(): void
     {
         $this->assertEquals(
             'google.charts.setOnLoadCallback(myCallback); function myCallback() {',
@@ -153,7 +153,7 @@ class ChartOutputTest extends TestCase
         );
     }
 
-    public function testEndCallback()
+    public function testEndCallback(): void
     {
         $this->assertEquals('}', $this->chartOutput->endCallback());
     }

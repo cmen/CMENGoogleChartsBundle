@@ -13,6 +13,10 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTrait;
  */
 class TreeMapChartOptions extends ChartOptions
 {
+    use FontSizeTrait;
+
+    use TitleTrait;
+
     /**
      * The text color. Specify an HTML color value.
      *
@@ -26,8 +30,6 @@ class TreeMapChartOptions extends ChartOptions
      * @var string
      */
     protected $fontFamily;
-
-    use FontSizeTrait;
 
     /**
      * The color of the header section for each node. Specify an HTML color value.
@@ -181,8 +183,6 @@ class TreeMapChartOptions extends ChartOptions
      * @var MediumTextStyle
      */
     protected $textStyle;
-
-    use TitleTrait;
 
     /**
      * @var TitleTextStyle

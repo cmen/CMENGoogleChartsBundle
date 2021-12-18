@@ -3,8 +3,10 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff;
 
 use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
+use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnChart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffBarChart\DiffBarChartOptions;
 
 /**
@@ -15,7 +17,7 @@ class DiffBarChart extends BarChart implements DiffChart
     /**
      * @var DiffBarChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     /**
      * @var BarChart|ColumnChart
@@ -56,7 +58,7 @@ class DiffBarChart extends BarChart implements DiffChart
     /**
      * @param DiffBarChartOptions $options
      */
-    public function setOptions(/* DiffBarChartOptions */$options): DiffBarChart
+    public function setOptions(ChartOptionsInterface $options): DiffBarChart
     {
         $this->options = $options;
 
@@ -66,7 +68,7 @@ class DiffBarChart extends BarChart implements DiffChart
     /**
      * @return BarChart|ColumnChart
      */
-    public function getOldChart()
+    public function getOldChart(): Chart
     {
         return $this->oldChart;
     }
@@ -74,7 +76,7 @@ class DiffBarChart extends BarChart implements DiffChart
     /**
      * @return BarChart|ColumnChart
      */
-    public function getNewChart()
+    public function getNewChart(): Chart
     {
         return $this->newChart;
     }

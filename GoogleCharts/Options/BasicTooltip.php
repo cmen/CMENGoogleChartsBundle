@@ -7,12 +7,12 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class BasicTooltip extends Tooltip
 {
+    use TriggerTrait;
+
     /**
      * @var MediumTextStyle
      */
     protected $textStyle;
-
-    use TriggerTrait;
 
     public function __construct()
     {

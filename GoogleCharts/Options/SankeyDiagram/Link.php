@@ -9,12 +9,12 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
  */
 class Link
 {
+    use ColorsTrait;
+
     /**
      * @var Color
      */
     protected $color;
-
-    use ColorsTrait;
 
     /**
      * Sets a coloring mode for the links between nodes. Possible values :

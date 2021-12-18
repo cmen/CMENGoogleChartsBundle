@@ -11,19 +11,19 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\WidthTrait;
  */
 class GanttChartOptions implements ChartOptionsInterface
 {
+    use HeightTrait;
+
+    use WidthTrait;
+
     /**
      * @var BackgroundColor
      */
     protected $backgroundColor;
 
-    use HeightTrait;
-
     /**
      * @var Gantt
      */
     protected $gantt;
-
-    use WidthTrait;
 
     public function __construct()
     {

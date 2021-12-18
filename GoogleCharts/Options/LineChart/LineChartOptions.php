@@ -24,6 +24,22 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxesTrait;
  */
 class LineChartOptions extends LineOptions
 {
+    use CurveTypeTrait;
+
+    use DataOpacityTrait;
+
+    use FocusTargetTrait;
+
+    use InterpolateNullsTrait;
+
+    use OrientationTrait;
+
+    use ReverseCategoriesTrait;
+
+    use SelectionModeTrait;
+
+    use VAxesTrait;
+
     /**
      * @var AdvancedAnimation
      */
@@ -39,34 +55,20 @@ class LineChartOptions extends LineOptions
      */
     protected $crosshair;
 
-    use CurveTypeTrait;
-
-    use DataOpacityTrait;
-
     /**
      * @var Explorer
      */
     protected $explorer;
-
-    use FocusTargetTrait;
 
     /**
      * @var AdvancedHAxis
      */
     protected $hAxis;
 
-    use InterpolateNullsTrait;
-
     /**
      * @var AdvancedLegend
      */
     protected $legend;
-
-    use OrientationTrait;
-
-    use ReverseCategoriesTrait;
-
-    use SelectionModeTrait;
 
     /**
      * Displays trendlines on the charts that support them. By default, linear trendlines are used, but this can be
@@ -75,8 +77,6 @@ class LineChartOptions extends LineOptions
      * @var Trendlines[]
      */
     protected $trendlines;
-
-    use VAxesTrait;
 
     public function __construct()
     {

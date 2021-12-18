@@ -31,13 +31,13 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Run PHPStan
-        run: ./vendor/bin/phpstan analyse --level max
+        run: ./vendor/bin/phpstan analyse
 
   tests:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        php-versions: ['7.1', '7.2', '7.3', '7.4']
+        php-versions: ['7.4', '8.0', '8.1']
 
     runs-on: ${{ matrix.operating-system }}
 

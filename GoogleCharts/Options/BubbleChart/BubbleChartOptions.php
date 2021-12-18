@@ -16,6 +16,8 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\SizeAxis;
  */
 class BubbleChartOptions extends AdvancedChartOptions
 {
+    use SelectionModeTrait;
+
     /**
      * @var AdvancedAnimation
      */
@@ -45,8 +47,6 @@ class BubbleChartOptions extends AdvancedChartOptions
      * @var AdvancedLegend
      */
     protected $legend;
-
-    use SelectionModeTrait;
 
     /**
      * @var SizeAxis

@@ -20,10 +20,7 @@ class AnnotationChartTest extends TestCase
     /** @var ChartOutputInterface */
     private $chartOutput;
 
-    /**
-     * {@inheritdoc}
-     */
-    protected function setUp()
+    protected function setUp(): void
     {
         $dateOutput = new DateOutput();
         $optionsOutput = new OptionsOutput($dateOutput);
@@ -33,7 +30,7 @@ class AnnotationChartTest extends TestCase
         $this->chartOutput = new ChartOutput('current', 'en', $optionsOutput, $dataOutput, $eventsOutput);
     }
 
-    public function testJavascriptOutput()
+    public function testJavascriptOutput(): void
     {
         $chart = new AnnotationChart();
         $chart->setElementID('div-chart')
@@ -88,6 +85,6 @@ class AnnotationChartTest extends TestCase
         /** @noinspection PhpUnhandledExceptionInspection */
         $js = $this->chartOutput->fullCharts($chart);
 
-        $this->assertContains('{"allValuesSuffix":"", "annotationsWidth":25, "dateFormat":"HH:mm MMMM dd, yyyy", "displayAnnotations":true, "displayAnnotationsFilter":false, "displayDateBarSeparator":true, "displayExactValues":false, "displayLegendDots":true, "displayLegendValues":true, "displayRangeSelector":true, "displayZoomButtons":true, "fill":0, "legendPosition":"sameRow", "numberFormats":"", "scaleColumns":[1000], "scaleFormat":"#", "scaleType":"fixed", "table":{"sortAscending":true,"sortColumn":1}, "thickness":0, "zoomEndTime":new Date(2314, 1, 17, 00, 00, 00), "zoomStartTime":new Date(2314, 1, 15, 00, 00, 00), "allowHtml":false, "colors":["#FF0000","#0000FF"], "max":1000, "min":0};', $js);
+        $this->assertStringContainsString('{"allValuesSuffix":"", "annotationsWidth":25, "dateFormat":"HH:mm MMMM dd, yyyy", "displayAnnotations":true, "displayAnnotationsFilter":false, "displayDateBarSeparator":true, "displayExactValues":false, "displayLegendDots":true, "displayLegendValues":true, "displayRangeSelector":true, "displayZoomButtons":true, "fill":0, "legendPosition":"sameRow", "numberFormats":"", "scaleColumns":[1000], "scaleFormat":"#", "scaleType":"fixed", "table":{"sortAscending":true,"sortColumn":1}, "thickness":0, "zoomEndTime":new Date(2314, 1, 17, 00, 00, 00), "zoomStartTime":new Date(2314, 1, 15, 00, 00, 00), "allowHtml":false, "colors":["#FF0000","#0000FF"], "max":1000, "min":0};', $js);
     }
 }

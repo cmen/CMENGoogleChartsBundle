@@ -10,12 +10,12 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\TriggerTrait;
  */
 class Tooltip
 {
+    use TriggerTrait;
+
     /**
      * @var MediumTextStyle
      */
     protected $textStyle;
-
-    use TriggerTrait;
 
     public function __construct()
     {

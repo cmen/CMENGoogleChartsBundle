@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  */
 class AnnotationChartOptionsTest extends TestCase
 {
-    public function testNumberOptions()
+    public function testNumberOptions(): void
     {
         $annotationChartOptions = new AnnotationChartOptions();
 

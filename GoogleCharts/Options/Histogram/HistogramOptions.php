@@ -20,6 +20,20 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxesTrait;
  */
 class HistogramOptions extends AdvancedChartOptions
 {
+    use DataOpacityTrait;
+
+    use FocusTargetTrait;
+
+    use InterpolateNullsTrait;
+
+    use IsStackedTrait;
+
+    use OrientationTrait;
+
+    use ReverseCategoriesTrait;
+
+    use VAxesTrait;
+
     /**
      * @var AdvancedAnimation
      */
@@ -29,10 +43,6 @@ class HistogramOptions extends AdvancedChartOptions
      * @var Bar
      */
     protected $bar;
-
-    use DataOpacityTrait;
-
-    use FocusTargetTrait;
 
     /**
      * @var HAxis
@@ -44,25 +54,15 @@ class HistogramOptions extends AdvancedChartOptions
      */
     protected $histogram;
 
-    use InterpolateNullsTrait;
-
-    use IsStackedTrait;
-
     /**
      * @var AdvancedLegend
      */
     protected $legend;
 
-    use OrientationTrait;
-
-    use ReverseCategoriesTrait;
-
     /**
      * @var MediumTooltip
      */
     protected $tooltip;
-
-    use VAxesTrait;
 
     public function __construct()
     {

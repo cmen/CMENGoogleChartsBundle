@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\GeoChart\GeoChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class GeoChart extends Chart
     /**
      * @var GeoChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -51,7 +52,7 @@ class GeoChart extends Chart
     /**
      * @param GeoChartOptions $options
      */
-    public function setOptions(/* GeoChartOptions */$options): GeoChart
+    public function setOptions(ChartOptionsInterface $options): GeoChart
     {
         $this->options = $options;
 

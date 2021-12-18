@@ -20,10 +20,7 @@ class GanttChartTest extends TestCase
     /** @var ChartOutputInterface */
     private $chartOutput;
 
-    /**
-     * {@inheritdoc}
-     */
-    protected function setUp()
+    protected function setUp(): void
     {
         $dateOutput = new DateOutput();
         $optionsOutput = new OptionsOutput($dateOutput);
@@ -33,7 +30,7 @@ class GanttChartTest extends TestCase
         $this->chartOutput = new ChartOutput('current', 'en', $optionsOutput, $dataOutput, $eventsOutput);
     }
 
-    public function testJavascriptOutput()
+    public function testJavascriptOutput(): void
     {
         $chart = new GanttChart();
         $chart->setElementID('div-chart')->getData()->setArrayToDataTable([
@@ -118,6 +115,6 @@ class GanttChartTest extends TestCase
         /** @noinspection PhpUnhandledExceptionInspection */
         $js = $this->chartOutput->fullCharts($chart);
 
-        $this->assertContains('{"backgroundColor":{"fill":"white"}, "gantt":{"arrow":{"angle":45,"length":8,"radius":15,"spaceAfter":4,"width":1.4,"color":"#000"},"barCornerRadius":2,"barHeight":15,"criticalPathEnabled":true,"criticalPathStyle":{"stroke":"red","strokeWidth":1.4},"defaultStartDate":1494312323000,"innerGridHorizLine":{"stroke":"green","strokeWidth":1},"innerGridTrack":{"fill":"blue"},"innerGridDarkTrack":{"fill":"black"},"labelMaxWidth":300,"labelStyle":{"fontName":"Roboto2","fontSize":14,"color":"#757575"},"percentEnabled":true,"percentStyle":{"fill":"yellow"},"shadowEnabled":true,"shadowColor":"#000","shadowOffset":1,"trackHeight":15}, "height":400, "width":900};', $js);
+        $this->assertStringContainsString('{"backgroundColor":{"fill":"white"}, "gantt":{"arrow":{"angle":45,"length":8,"radius":15,"spaceAfter":4,"width":1.4,"color":"#000"},"barCornerRadius":2,"barHeight":15,"criticalPathEnabled":true,"criticalPathStyle":{"stroke":"red","strokeWidth":1.4},"defaultStartDate":1494312323000,"innerGridHorizLine":{"stroke":"green","strokeWidth":1},"innerGridTrack":{"fill":"blue"},"innerGridDarkTrack":{"fill":"black"},"labelMaxWidth":300,"labelStyle":{"fontName":"Roboto2","fontSize":14,"color":"#757575"},"percentEnabled":true,"percentStyle":{"fill":"yellow"},"shadowEnabled":true,"shadowColor":"#000","shadowOffset":1,"trackHeight":15}, "height":400, "width":900};', $js);
     }
 }

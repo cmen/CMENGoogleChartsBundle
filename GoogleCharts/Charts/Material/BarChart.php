@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\BarChart\Material\BarChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
@@ -12,7 +13,7 @@ class BarChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\BarChart
     /**
      * @var BarChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {

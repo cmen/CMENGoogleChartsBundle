@@ -9,15 +9,9 @@ use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
  */
 class Listener
 {
-    /**
-     * @var string
-     */
-    protected $type;
+    protected string $type;
 
-    /**
-     * @var string
-     */
-    protected $functionName;
+    protected string $functionName;
 
     /**
      * @throws GoogleChartsException

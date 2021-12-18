@@ -12,12 +12,9 @@ class Events
     /**
      * @var Listener[]
      */
-    protected $listeners;
+    protected array $listeners;
 
-    /**
-     * @var Chart
-     */
-    protected $chart;
+    protected Chart $chart;
 
     public function __construct(Chart $chart)
     {
@@ -25,6 +22,9 @@ class Events
         $this->chart = $chart;
     }
 
+    /**
+     * @throws GoogleChartsException
+     */
     public function addListener(string $type, string $functionName): void
     {
         if (!in_array($type, $this->chart->getAvailableEventTypes())) {

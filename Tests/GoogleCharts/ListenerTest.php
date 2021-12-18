@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  */
 class ListenerTest extends TestCase
 {
-    public function testBadType()
+    public function testBadType(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('badType is not a valid type of event.');
@@ -20,7 +20,7 @@ class ListenerTest extends TestCase
         new Listener('badType', 'functionName');
     }
 
-    public function testGoodType()
+    public function testGoodType(): void
     {
         $listener = new Listener(EventType::READY, 'functionName');
 

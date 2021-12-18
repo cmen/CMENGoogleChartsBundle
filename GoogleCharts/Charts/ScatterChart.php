@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ScatterChart\ScatterChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class ScatterChart extends Chart
     /**
      * @var ScatterChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -46,17 +47,15 @@ class ScatterChart extends Chart
         ];
     }
 
-    public function getOptions()/*: ScatterChartOptions */
+    public function getOptions(): ScatterChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param ScatterChartOptions $options
-     *
-     * @return ScatterChart
      */
-    public function setOptions(/* ScatterChartOptions */$options)/* : ScatterChart */
+    public function setOptions(ChartOptionsInterface $options): ScatterChart
     {
         $this->options = $options;
 

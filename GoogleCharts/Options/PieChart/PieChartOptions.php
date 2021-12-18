@@ -15,6 +15,8 @@ class PieChartOptions extends MediumChartOptions
 {
     use InterpolateNullsTrait;
 
+    use ReverseCategoriesTrait;
+
     /**
      * If true, displays a three-dimensional chart.
      *
@@ -74,8 +76,6 @@ class PieChartOptions extends MediumChartOptions
      * @var int
      */
     protected $pieStartAngle;
-
-    use ReverseCategoriesTrait;
 
     /**
      * An array of Slice object, each describing the format of the corresponding slice in the pie. To use default values

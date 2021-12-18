@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColumnChart\ColumnChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class ColumnChart extends Chart
     /**
      * @var ColumnChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -46,17 +47,15 @@ class ColumnChart extends Chart
         ];
     }
 
-    public function getOptions()/* : ColumnChartOptions */
+    public function getOptions(): ColumnChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param ColumnChartOptions $options
-     *
-     * @return ColumnChart
      */
-    public function setOptions(/* ColumnChartOptions */$options)/* : ColumnChart */
+    public function setOptions(ChartOptionsInterface $options): ColumnChart
     {
         $this->options = $options;
 

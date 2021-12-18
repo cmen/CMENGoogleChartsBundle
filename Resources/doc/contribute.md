@@ -4,7 +4,7 @@ Before opening a pull request, be sure to follow the steps below.
 
 ## Step 1 : check and correct the code using PHPStan
 ```bash
-./vendor/bin/phpstan analyse --level max
+./vendor/bin/phpstan analyse
 ```
 
 ## Step 2 : run tests using PHPUnit and check all tests are OK

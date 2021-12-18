@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Histogram\HistogramOptions;
 
 /**
@@ -14,7 +15,7 @@ class Histogram extends Chart
     /**
      * @var HistogramOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -54,7 +55,7 @@ class Histogram extends Chart
     /**
      * @param HistogramOptions $options
      */
-    public function setOptions(/* HistogramOptions */$options): Histogram
+    public function setOptions(ChartOptionsInterface $options): Histogram
     {
         $this->options = $options;
 

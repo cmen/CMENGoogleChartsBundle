@@ -2,6 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineChart\Material\LineChartOptions;
 
 /**
@@ -12,7 +13,7 @@ class LineChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\LineChart
     /**
      * @var LineChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {

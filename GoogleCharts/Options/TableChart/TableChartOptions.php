@@ -13,6 +13,8 @@ class TableChartOptions implements ChartOptionsInterface
 {
     use AllowHtmlTrait;
 
+    use HeightTrait;
+
     /**
      * Determines if alternating color style will be assigned to odd and even rows.
      *
@@ -40,8 +42,6 @@ class TableChartOptions implements ChartOptionsInterface
      * @var int
      */
     protected $frozenColumns;
-
-    use HeightTrait;
 
     /**
      *  If and how to enable paging through the data. Choose one of the following string values :

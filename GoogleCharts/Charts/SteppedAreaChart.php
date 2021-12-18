@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\SteppedAreaChart\SteppedAreaChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class SteppedAreaChart extends Chart
     /**
      * @var SteppedAreaChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -54,7 +55,7 @@ class SteppedAreaChart extends Chart
     /**
      * @param SteppedAreaChartOptions $options
      */
-    public function setOptions(/* SteppedAreaChartOptions */$options): SteppedAreaChart
+    public function setOptions(ChartOptionsInterface $options): SteppedAreaChart
     {
         $this->options = $options;
 

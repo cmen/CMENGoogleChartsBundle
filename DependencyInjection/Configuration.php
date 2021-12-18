@@ -7,18 +7,14 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
+    /**
+     * @return TreeBuilder
+     */
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder('cmen_google_charts');
 
-        if (method_exists($treeBuilder, 'getRootNode')) {
-            $rootNode = $treeBuilder->getRootNode();
-        } else {
-            // BC layer for symfony/config 4.1 and older
-            $rootNode = $treeBuilder->root('cmen_google_charts');
-        }
-
-        $rootNode
+        $treeBuilder->getRootNode()
             ->children()
                 ->scalarNode('version')->defaultValue('current')->end()
                 ->scalarNode('language')->defaultValue('')->end()

@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Map\MapOptions;
 
 /**
@@ -14,7 +15,7 @@ class Map extends Chart
     /**
      * @var MapOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -49,7 +50,7 @@ class Map extends Chart
     /**
      * @param MapOptions $options
      */
-    public function setOptions(/* MapOptions */$options): Map
+    public function setOptions(ChartOptionsInterface $options): Map
     {
         $this->options = $options;
 

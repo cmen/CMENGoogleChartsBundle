@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\SankeyDiagram\SankeyDiagramOptions;
 
 /**
@@ -14,7 +15,7 @@ class SankeyDiagram extends Chart
     /**
      * @var SankeyDiagramOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -52,7 +53,7 @@ class SankeyDiagram extends Chart
     /**
      * @param SankeyDiagramOptions $options
      */
-    public function setOptions(/* SankeyDiagramOptions */$options): SankeyDiagram
+    public function setOptions(ChartOptionsInterface $options): SankeyDiagram
     {
         $this->options = $options;
 

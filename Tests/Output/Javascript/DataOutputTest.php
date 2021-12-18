@@ -16,7 +16,7 @@ class DataOutputTest extends TestCase
     /**
      * @throws GoogleChartsException
      */
-    public function testEmptyData()
+    public function testEmptyData(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('There is no data for chart. Use method setArrayToDataTable() to provide data.');

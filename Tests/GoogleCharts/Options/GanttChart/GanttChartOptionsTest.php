@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  */
 class GanttChartOptionsTest extends TestCase
 {
-    public function testNumberOptions()
+    public function testNumberOptions(): void
     {
         $ganttChartOptions = new GanttChartOptions();
 
