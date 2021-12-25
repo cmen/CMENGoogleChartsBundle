@@ -5,6 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AnnotationChart\AnnotationChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
@@ -14,7 +15,7 @@ class AnnotationChart extends Chart
     /**
      * @var AnnotationChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -50,7 +51,7 @@ class AnnotationChart extends Chart
     /**
      * @param AnnotationChartOptions $options
      */
-    public function setOptions(/* AnnotationChartOptions */$options): AnnotationChart
+    public function setOptions(ChartOptionsInterface $options): AnnotationChart
     {
         $this->options = $options;
 

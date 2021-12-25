@@ -24,6 +24,24 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxesTrait;
  */
 class AreaChartOptions extends LineOptions
 {
+    use AreaOpacityTrait;
+
+    use DataOpacityTrait;
+
+    use FocusTargetTrait;
+
+    use InterpolateNullsTrait;
+
+    use IsStackedTrait;
+
+    use OrientationTrait;
+
+    use ReverseCategoriesTrait;
+
+    use SelectionModeTrait;
+
+    use VAxesTrait;
+
     /**
      * @var AdvancedAnimation
      */
@@ -34,43 +52,25 @@ class AreaChartOptions extends LineOptions
      */
     protected $annotations;
 
-    use AreaOpacityTrait;
-
     /**
      * @var Crosshair
      */
     protected $crosshair;
-
-    use DataOpacityTrait;
 
     /**
      * @var Explorer
      */
     protected $explorer;
 
-    use FocusTargetTrait;
-
     /**
      * @var AdvancedHAxis
      */
     protected $hAxis;
 
-    use InterpolateNullsTrait;
-
-    use IsStackedTrait;
-
     /**
      * @var AdvancedLegend
      */
     protected $legend;
-
-    use OrientationTrait;
-
-    use ReverseCategoriesTrait;
-
-    use SelectionModeTrait;
-
-    use VAxesTrait;
 
     public function __construct()
     {

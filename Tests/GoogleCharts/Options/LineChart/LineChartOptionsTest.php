@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  */
 class LineChartOptionsTest extends TestCase
 {
-    public function testNumberOptions()
+    public function testNumberOptions(): void
     {
         $lineChartOptions = new LineChartOptions();
 

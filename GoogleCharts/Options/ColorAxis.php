@@ -7,6 +7,8 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class ColorAxis
 {
+    use ColorsTrait;
+
     /**
      * If present, specifies a minimum value for chart color data. Color data values of this value and lower will be
      * rendered as the first color in the colorAxis.colors range.
@@ -32,8 +34,6 @@ class ColorAxis
      * @var int[]
      */
     protected $values;
-
-    use ColorsTrait;
 
     /**
      * @return $this

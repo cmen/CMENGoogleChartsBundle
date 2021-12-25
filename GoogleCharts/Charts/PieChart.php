@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\PieChart\PieChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class PieChart extends Chart
     /**
      * @var PieChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -45,20 +46,15 @@ class PieChart extends Chart
         ];
     }
 
-    /**
-     * @return PieChartOptions
-     */
-    public function getOptions()/* : PieChartOptions */
+    public function getOptions(): PieChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param PieChartOptions $options
-     *
-     * @return PieChart
      */
-    public function setOptions(/* PieChartOptions */$options)/* : PieChart */
+    public function setOptions(ChartOptionsInterface $options): PieChart
     {
         $this->options = $options;
 

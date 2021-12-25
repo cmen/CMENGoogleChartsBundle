@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\TableChart\TableChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class TableChart extends Chart
     /**
      * @var TableChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -51,7 +52,7 @@ class TableChart extends Chart
     /**
      * @param TableChartOptions $options
      */
-    public function setOptions(/* TableChartOptions */$options): TableChart
+    public function setOptions(ChartOptionsInterface $options): TableChart
     {
         $this->options = $options;
 

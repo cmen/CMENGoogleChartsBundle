@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  */
 class DateOutputTest extends TestCase
 {
-    public function testDraw()
+    public function testDraw(): void
     {
         $date = new \DateTime('2017-05-07 17:03:55');
 

@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\TreeMapChart\TreeMapChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class TreeMapChart extends Chart
     /**
      * @var TreeMapChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -52,7 +53,7 @@ class TreeMapChart extends Chart
     /**
      * @param TreeMapChartOptions $options
      */
-    public function setOptions(/* TreeMapChartOptions */$options): TreeMapChart
+    public function setOptions(ChartOptionsInterface $options): TreeMapChart
     {
         $this->options = $options;
 

@@ -9,14 +9,14 @@ class Crosshair
 {
     use ColorTrait;
 
+    use OpacityTrait;
+
+    use OrientationTrait;
+
     /**
      * @var Focused
      */
     protected $focused;
-
-    use OpacityTrait;
-
-    use OrientationTrait;
 
     /**
      * @var Selected

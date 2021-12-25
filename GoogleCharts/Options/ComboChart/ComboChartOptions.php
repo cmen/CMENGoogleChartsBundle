@@ -27,6 +27,26 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxesTrait;
  */
 class ComboChartOptions extends LineOptions
 {
+    use AreaOpacityTrait;
+
+    use CurveTypeTrait;
+
+    use DataOpacityTrait;
+
+    use FocusTargetTrait;
+
+    use InterpolateNullsTrait;
+
+    use IsStackedTrait;
+
+    use OrientationTrait;
+
+    use ReverseCategoriesTrait;
+
+    use SelectionModeTrait;
+
+    use VAxesTrait;
+
     /**
      * @var AdvancedAnimation
      */
@@ -36,8 +56,6 @@ class ComboChartOptions extends LineOptions
      * @var Annotations
      */
     protected $annotations;
-
-    use AreaOpacityTrait;
 
     /**
      * @var Bar
@@ -54,31 +72,15 @@ class ComboChartOptions extends LineOptions
      */
     protected $crosshair;
 
-    use CurveTypeTrait;
-
-    use DataOpacityTrait;
-
-    use FocusTargetTrait;
-
     /**
      * @var AdvancedHAxis
      */
     protected $hAxis;
 
-    use InterpolateNullsTrait;
-
-    use IsStackedTrait;
-
     /**
      * @var AdvancedLegend
      */
     protected $legend;
-
-    use OrientationTrait;
-
-    use ReverseCategoriesTrait;
-
-    use SelectionModeTrait;
 
     /**
      * The default line type for any series not specified in the series property. Available values are 'line', 'area',
@@ -95,8 +97,6 @@ class ComboChartOptions extends LineOptions
      * @var Trendlines[]
      */
     protected $trendlines;
-
-    use VAxesTrait;
 
     public function __construct()
     {

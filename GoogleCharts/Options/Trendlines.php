@@ -9,6 +9,14 @@ class Trendlines
 {
     use ColorTrait;
 
+    use LineWidthTrait;
+
+    use OpacityTrait;
+
+    use PointSizeTrait;
+
+    use PointsVisibleTrait;
+
     /**
      * For trendlines of type: 'polynomial', the degree of the polynomial (2 for quadratic, 3 for cubic, and so on).
      * (The default degree may change from 3 to 2 in an upcoming release of Google Charts.).
@@ -23,14 +31,6 @@ class Trendlines
      * @var string
      */
     protected $labelInLegend;
-
-    use LineWidthTrait;
-
-    use OpacityTrait;
-
-    use PointSizeTrait;
-
-    use PointsVisibleTrait;
 
     /**
      * Whether to show the coefficient of determination in the legend or trendline tooltip.

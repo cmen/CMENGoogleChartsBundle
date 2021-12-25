@@ -12,12 +12,12 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorTrait;
  */
 class NoDataPattern
 {
+    use ColorTrait;
+
     /**
      * @var string
      */
     protected $backgroundColor;
-
-    use ColorTrait;
 
     /**
      * @return $this

@@ -5,14 +5,14 @@ namespace CMEN\GoogleChartsBundle\Output\Javascript;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\Output\AbstractOptionsOutput;
 use CMEN\GoogleChartsBundle\Output\DateOutputInterface;
+use DateTime;
 
 /**
  * @author Christophe Meneses
  */
 class OptionsOutput extends AbstractOptionsOutput
 {
-    /** @var DateOutputInterface */
-    private $dateOutput;
+    private DateOutputInterface $dateOutput;
 
     public function __construct(DateOutputInterface $dateOutput)
     {
@@ -36,7 +36,7 @@ class OptionsOutput extends AbstractOptionsOutput
             $js .= '"'.$optionKey.'":';
 
             if (isset($optionValue['date'])) {
-                $js .= $this->dateOutput->draw(new \DateTime($optionValue['date']));
+                $js .= $this->dateOutput->draw(new DateTime($optionValue['date']));
             } elseif (in_array($optionKey, ['series', 'vAxes'])) {
                 $js .= json_encode($optionValue, JSON_FORCE_OBJECT);
             } else {

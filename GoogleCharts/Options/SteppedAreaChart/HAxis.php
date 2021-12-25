@@ -12,6 +12,8 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ViewWindow;
  */
 class HAxis
 {
+    use TitleTrait;
+
     /**
      * If false, will hide outermost labels rather than allow them to be cropped by the chart container. If true,
      * will allow label cropping.
@@ -104,8 +106,6 @@ class HAxis
      * @var array<mixed>
      */
     protected $ticks;
-
-    use TitleTrait;
 
     /**
      * @var TitleTextStyle

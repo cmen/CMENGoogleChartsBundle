@@ -7,6 +7,8 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class VAxis
 {
+    use TitleTrait;
+
     /**
      * vAxis property that specifies the baseline for the vertical axis. If the baseline is larger than the highest
      * grid line or smaller than the lowest grid line, it will be rounded to the closest gridline.
@@ -107,8 +109,6 @@ class VAxis
      * @var array<mixed>
      */
     protected $ticks;
-
-    use TitleTrait;
 
     /**
      * @var TitleTextStyle

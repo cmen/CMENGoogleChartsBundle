@@ -15,14 +15,11 @@ use CMEN\GoogleChartsBundle\Output\OptionsOutputInterface;
  */
 class ChartOutput extends AbstractChartOutput
 {
-    /** @var OptionsOutputInterface */
-    private $optionsOutput;
+    private OptionsOutputInterface $optionsOutput;
 
-    /** @var DataOutputInterface */
-    private $dataOutput;
+    private DataOutputInterface $dataOutput;
 
-    /** @var EventsOutputInterface */
-    private $eventsOutput;
+    private EventsOutputInterface $eventsOutput;
 
     public function __construct(
         string $version,

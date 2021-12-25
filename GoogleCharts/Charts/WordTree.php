@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\WordTree\WordTreeOptions;
 
 /**
@@ -14,7 +15,7 @@ class WordTree extends Chart
     /**
      * @var WordTreeOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -49,7 +50,7 @@ class WordTree extends Chart
     /**
      * @param WordTreeOptions $options
      */
-    public function setOptions(/* WordTreeOptions */$options): WordTree
+    public function setOptions(ChartOptionsInterface $options): WordTree
     {
         $this->options = $options;
 

@@ -2,6 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColumnChart\Material\ColumnChartOptions;
 
 /**
@@ -12,7 +13,7 @@ class ColumnChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnCha
     /**
      * @var ColumnChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {

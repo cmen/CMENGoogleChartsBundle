@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\GanttChart\GanttChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class GanttChart extends Chart
     /**
      * @var GanttChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -51,7 +52,7 @@ class GanttChart extends Chart
     /**
      * @param GanttChartOptions $options
      */
-    public function setOptions(/* GanttChartOptions */$options): GanttChart
+    public function setOptions(ChartOptionsInterface $options): GanttChart
     {
         $this->options = $options;
 

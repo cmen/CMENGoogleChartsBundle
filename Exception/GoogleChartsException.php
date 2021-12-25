@@ -2,9 +2,11 @@
 
 namespace CMEN\GoogleChartsBundle\Exception;
 
+use Exception;
+
 /**
  * @author Christophe Meneses
  */
-class GoogleChartsException extends \Exception
+class GoogleChartsException extends Exception
 {
 }

@@ -9,14 +9,14 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\TitleTrait;
  */
 class Chart
 {
+    use TitleTrait;
+
     /**
      * This option specifies the subtitle.
      *
      * @var string
      */
     protected $subtitle;
-
-    use TitleTrait;
 
     /**
      * @return Chart

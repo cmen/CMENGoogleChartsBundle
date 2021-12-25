@@ -12,6 +12,10 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\MinTrait;
  */
 class GaugeChartOptions extends ChartOptions
 {
+    use MaxTrait;
+
+    use MinTrait;
+
     /**
      * @var Animation
      */
@@ -45,10 +49,6 @@ class GaugeChartOptions extends ChartOptions
      * @var array<mixed>
      */
     protected $majorTicks;
-
-    use MaxTrait;
-
-    use MinTrait;
 
     /**
      * The number of minor tick section in each major tick section.

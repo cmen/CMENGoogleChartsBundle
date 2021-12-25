@@ -9,25 +9,13 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
  */
 abstract class Chart
 {
-    /**
-     * @var string|null
-     */
-    protected $elementID;
+    protected ?string $elementID = null;
 
-    /**
-     * @var Data
-     */
-    protected $data;
+    protected Data $data;
 
-    /**
-     * @var ChartOptionsInterface
-     */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
-    /**
-     * @var Events
-     */
-    protected $events;
+    protected Events $events;
 
     public function __construct()
     {
@@ -90,24 +78,15 @@ abstract class Chart
 
     /**
      * Returns the instance options.
-     *
-     * @return ChartOptionsInterface
      */
-    abstract public function getOptions()/* : ChartOptionsInterface */;
+    abstract public function getOptions(): ChartOptionsInterface;
 
     /**
      * Sets the instance Options.
-     *
-     * @param ChartOptionsInterface $options
-     *
-     * @return $this
      */
-    abstract public function setOptions(/* ChartOptionsInterface */$options)/* : Chart */;
+    abstract public function setOptions(ChartOptionsInterface $options): Chart;
 
-    /**
-     * @return $this
-     */
-    public function setElementID(string $elementID)
+    public function setElementID(string $elementID): Chart
     {
         $this->elementID = $elementID;
 

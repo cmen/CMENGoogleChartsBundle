@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ComboChart\ComboChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class ComboChart extends Chart
     /**
      * @var ComboChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -54,7 +55,7 @@ class ComboChart extends Chart
     /**
      * @param ComboChartOptions $options
      */
-    public function setOptions(/* ComboChartOptions */$options): ComboChart
+    public function setOptions(ChartOptionsInterface $options): ComboChart
     {
         $this->options = $options;
 

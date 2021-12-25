@@ -5,6 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\CandlestickChart\CandlestickChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
@@ -14,7 +15,7 @@ class CandlestickChart extends Chart
     /**
      * @var CandlestickChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -54,7 +55,7 @@ class CandlestickChart extends Chart
     /**
      * @param CandlestickChartOptions $options
      */
-    public function setOptions(/* CandlestickChartOptions */$options): CandlestickChart
+    public function setOptions(ChartOptionsInterface $options): CandlestickChart
     {
         $this->options = $options;
 

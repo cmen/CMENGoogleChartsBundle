@@ -14,6 +14,14 @@ use DateTime;
  */
 class AnnotationChartOptions implements ChartOptionsInterface
 {
+    use AllowHtmlTrait;
+
+    use ColorsTrait;
+
+    use MaxTrait;
+
+    use MinTrait;
+
     /**
      * A suffix to be added to all values in the legend and tick labels in the vertical axes.
      *
@@ -21,16 +29,12 @@ class AnnotationChartOptions implements ChartOptionsInterface
      */
     protected $allValuesSuffix;
 
-    use AllowHtmlTrait;
-
     /**
      * The width (in percent) of the annotations area, out of the entire chart area. Must be a number in the range 5-80.
      *
      * @var int
      */
     protected $annotationsWidth;
-
-    use ColorsTrait;
 
     /**
      * The format used to display the date information in the top right corner. The format of this field is as
@@ -120,10 +124,6 @@ class AnnotationChartOptions implements ChartOptionsInterface
      * @var string
      */
     protected $legendPosition;
-
-    use MaxTrait;
-
-    use MinTrait;
 
     /**
      * Specifies the number format patterns to be used to format the values at the top of the graph.

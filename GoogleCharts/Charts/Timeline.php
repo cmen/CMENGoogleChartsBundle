@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Timeline\TimelineOptions;
 
 /**
@@ -14,7 +15,7 @@ class Timeline extends Chart
     /**
      * @var TimelineOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -52,7 +53,7 @@ class Timeline extends Chart
     /**
      * @param TimelineOptions $options
      */
-    public function setOptions(/* TimelineOptions */$options): Timeline
+    public function setOptions(ChartOptionsInterface $options): Timeline
     {
         $this->options = $options;
 

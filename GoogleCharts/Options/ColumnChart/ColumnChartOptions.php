@@ -23,6 +23,18 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\VAxesTrait;
  */
 class ColumnChartOptions extends AdvancedChartOptions
 {
+    use DataOpacityTrait;
+
+    use FocusTargetTrait;
+
+    use IsStackedTrait;
+
+    use OrientationTrait;
+
+    use ReverseCategoriesTrait;
+
+    use VAxesTrait;
+
     /**
      * @var AdvancedAnimation
      */
@@ -38,30 +50,20 @@ class ColumnChartOptions extends AdvancedChartOptions
      */
     protected $bar;
 
-    use DataOpacityTrait;
-
     /**
      * @var Explorer
      */
     protected $explorer;
-
-    use FocusTargetTrait;
 
     /**
      * @var AdvancedHAxis
      */
     protected $hAxis;
 
-    use IsStackedTrait;
-
     /**
      * @var Legend
      */
     protected $legend;
-
-    use OrientationTrait;
-
-    use ReverseCategoriesTrait;
 
     /**
      * @var AdvancedTooltip
@@ -75,8 +77,6 @@ class ColumnChartOptions extends AdvancedChartOptions
      * @var Trendlines[]
      */
     protected $trendlines;
-
-    use VAxesTrait;
 
     public function __construct()
     {

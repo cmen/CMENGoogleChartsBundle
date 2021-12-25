@@ -13,8 +13,7 @@ use Twig\TwigFunction;
  */
 class GoogleChartsExtension extends AbstractExtension
 {
-    /** @var ChartOutputInterface */
-    private $chartOutput;
+    private ChartOutputInterface $chartOutput;
 
     public function __construct(ChartOutputInterface $chartOutput)
     {

@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
  */
 class EventsTest extends TestCase
 {
-    public function testAddListenerWithBadEventType()
+    public function testAddListenerWithBadEventType(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('badEventType event is not available for this type of chart.');
@@ -26,7 +26,7 @@ class EventsTest extends TestCase
         $events->addListener('badEventType', 'functionName');
     }
 
-    public function testAddListenerWithEventTypeNotAvailableForTypeOfChart()
+    public function testAddListenerWithEventTypeNotAvailableForTypeOfChart(): void
     {
         $this->expectException(GoogleChartsException::class);
         $this->expectExceptionMessage('regionClick event is not available for this type of chart.');
@@ -37,7 +37,7 @@ class EventsTest extends TestCase
         $events->addListener(EventType::REGION_CLICK, 'functionName');
     }
 
-    public function testAddListenerWithEventTypeAvailableForTypeOfChart()
+    public function testAddListenerWithEventTypeAvailableForTypeOfChart(): void
     {
         $treeMap = new TreeMapChart();
 

@@ -9,14 +9,14 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorTrait;
  */
 class Arrow
 {
+    use ColorTrait;
+
     /**
      * The angle of the head of the arrow.
      *
      * @var int
      */
     protected $angle;
-
-    use ColorTrait;
 
     /**
      * The length of the head of the arrow.

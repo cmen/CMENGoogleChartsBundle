@@ -11,6 +11,8 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
  */
 class TimelineOptions extends BasicChartOptions
 {
+    use ColorsTrait;
+
     /**
      * Whether display elements (e.g., the bars in a timeline) should obscure grid lines. If false, grid lines may be
      * covered completely by display elements. If true, display elements may be altered to keep grid lines visible.
@@ -26,8 +28,6 @@ class TimelineOptions extends BasicChartOptions
      * @var string
      */
     protected $backgroundColor;
-
-    use ColorsTrait;
 
     /**
      * @var Timeline

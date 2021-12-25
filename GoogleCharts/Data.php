@@ -10,12 +10,9 @@ class Data
     /**
      * @var array<mixed>
      */
-    private $arrayToDataTable;
+    private array $arrayToDataTable;
 
-    /**
-     * @var bool
-     */
-    private $firstRowIsData;
+    private bool $firstRowIsData;
 
     public function __construct()
     {

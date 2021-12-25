@@ -10,6 +10,8 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineWidthTrait;
  */
 class MapOptions implements ChartOptionsInterface
 {
+    use LineWidthTrait;
+
     /**
      * If set to true, enables zooming in and out using the mouse scroll wheel.
      *
@@ -34,8 +36,6 @@ class MapOptions implements ChartOptionsInterface
      * @var bool
      */
     protected $lineColor;
-
-    use LineWidthTrait;
 
     /**
      * An object containing properties of a custom map type. This custom map type will be accessed by the mapTypeId

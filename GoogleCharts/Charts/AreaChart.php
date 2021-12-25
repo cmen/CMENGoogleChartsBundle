@@ -5,6 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\AreaChart\AreaChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
@@ -14,7 +15,7 @@ class AreaChart extends Chart
     /**
      * @var AreaChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -54,7 +55,7 @@ class AreaChart extends Chart
     /**
      * @param AreaChartOptions $options
      */
-    public function setOptions(/* AreaChartOptions */$options): AreaChart
+    public function setOptions(ChartOptionsInterface $options): AreaChart
     {
         $this->options = $options;
 

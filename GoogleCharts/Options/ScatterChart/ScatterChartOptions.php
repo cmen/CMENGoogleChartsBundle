@@ -26,6 +26,18 @@ class ScatterChartOptions extends AdvancedChartOptions
 {
     use AggregationTargetTrait;
 
+    use CurveTypeTrait;
+
+    use DataOpacityTrait;
+
+    use LineWidthTrait;
+
+    use OrientationTrait;
+
+    use PointTrait;
+
+    use SelectionModeTrait;
+
     /**
      * @var AdvancedAnimation
      */
@@ -41,10 +53,6 @@ class ScatterChartOptions extends AdvancedChartOptions
      */
     protected $crosshair;
 
-    use CurveTypeTrait;
-
-    use DataOpacityTrait;
-
     /**
      * @var Explorer
      */
@@ -59,14 +67,6 @@ class ScatterChartOptions extends AdvancedChartOptions
      * @var AdvancedLegend
      */
     protected $legend;
-
-    use LineWidthTrait;
-
-    use OrientationTrait;
-
-    use PointTrait;
-
-    use SelectionModeTrait;
 
     /**
      * @var AdvancedTooltip

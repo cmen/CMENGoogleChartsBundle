@@ -15,7 +15,7 @@ class Chart
     protected $subtitle;
 
     /**
-     * @param mixed $subtitle
+     * @param string $subtitle
      *
      * @return $this
      */

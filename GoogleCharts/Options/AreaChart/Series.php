@@ -11,12 +11,12 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineSeries;
  */
 class Series extends LineSeries
 {
+    use AreaOpacityTrait;
+
     /**
      * @var Annotations
      */
     protected $annotations;
-
-    use AreaOpacityTrait;
 
     public function __construct()
     {

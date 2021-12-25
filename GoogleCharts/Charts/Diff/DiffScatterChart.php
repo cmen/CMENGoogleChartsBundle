@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterChart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffScatterChart\DiffScatterChartOptions;
 
 /**
@@ -13,17 +14,11 @@ class DiffScatterChart extends ScatterChart implements DiffChart
     /**
      * @var DiffScatterChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
-    /**
-     * @var ScatterChart
-     */
-    private $oldChart;
+    private ScatterChart $oldChart;
 
-    /**
-     * @var ScatterChart
-     */
-    private $newChart;
+    private ScatterChart $newChart;
 
     public function __construct(ScatterChart $oldChart, ScatterChart $newChart)
     {
@@ -43,25 +38,19 @@ class DiffScatterChart extends ScatterChart implements DiffChart
     /**
      * @param DiffScatterChartOptions $options
      */
-    public function setOptions(/* DiffScatterChartOptions */$options): DiffScatterChart
+    public function setOptions(ChartOptionsInterface $options): DiffScatterChart
     {
         $this->options = $options;
 
         return $this;
     }
 
-    /**
-     * @return ScatterChart
-     */
-    public function getOldChart()
+    public function getOldChart(): ScatterChart
     {
         return $this->oldChart;
     }
 
-    /**
-     * @return ScatterChart
-     */
-    public function getNewChart()
+    public function getNewChart(): ScatterChart
     {
         return $this->newChart;
     }

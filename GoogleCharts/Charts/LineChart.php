@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\LineChart\LineChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class LineChart extends Chart
     /**
      * @var LineChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -46,7 +47,7 @@ class LineChart extends Chart
         ];
     }
 
-    public function getOptions()/* : LineChartOptions */
+    public function getOptions(): LineChartOptions
     {
         return $this->options;
     }
@@ -54,7 +55,7 @@ class LineChart extends Chart
     /**
      * @param LineChartOptions $options
      */
-    public function setOptions(/* LineChartOptions */$options): LineChart
+    public function setOptions(ChartOptionsInterface $options): LineChart
     {
         $this->options = $options;
 

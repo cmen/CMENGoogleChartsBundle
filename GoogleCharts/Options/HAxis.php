@@ -7,6 +7,8 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class HAxis
 {
+    use TitleTrait;
+
     /**
      * @var Gridlines
      */
@@ -28,8 +30,6 @@ class HAxis
      * @var MediumTextStyle
      */
     protected $textStyle;
-
-    use TitleTrait;
 
     /**
      * @var TitleTextStyle

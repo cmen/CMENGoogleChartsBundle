@@ -5,6 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\BubbleChart\BubbleChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
@@ -14,7 +15,7 @@ class BubbleChart extends Chart
     /**
      * @var BubbleChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -54,7 +55,7 @@ class BubbleChart extends Chart
     /**
      * @param BubbleChartOptions $options
      */
-    public function setOptions(/* BubbleChartOptions */$options): BubbleChart
+    public function setOptions(ChartOptionsInterface $options): BubbleChart
     {
         $this->options = $options;
 

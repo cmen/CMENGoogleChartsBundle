@@ -4,6 +4,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\OrgChart\OrgChartOptions;
 
 /**
@@ -14,7 +15,7 @@ class OrgChart extends Chart
     /**
      * @var OrgChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -52,7 +53,7 @@ class OrgChart extends Chart
     /**
      * @param OrgChartOptions $options
      */
-    public function setOptions(/* OrgChartOptions */$options): OrgChart
+    public function setOptions(ChartOptionsInterface $options): OrgChart
     {
         $this->options = $options;
 

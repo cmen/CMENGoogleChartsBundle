@@ -14,14 +14,14 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\RisingColor;
  */
 class Series extends LineSeries
 {
+    use AreaOpacityTrait;
+
+    use CurveTypeTrait;
+
     /**
      * @var Annotations
      */
     protected $annotations;
-
-    use AreaOpacityTrait;
-
-    use CurveTypeTrait;
 
     /**
      * @var FallingColor

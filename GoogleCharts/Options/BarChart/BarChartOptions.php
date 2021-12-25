@@ -23,6 +23,16 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\Trendlines;
  */
 class BarChartOptions extends AdvancedChartOptions
 {
+    use DataOpacityTrait;
+
+    use FocusTargetTrait;
+
+    use IsStackedTrait;
+
+    use OrientationTrait;
+
+    use ReverseCategoriesTrait;
+
     /**
      * @var AdvancedAnimation
      */
@@ -38,14 +48,10 @@ class BarChartOptions extends AdvancedChartOptions
      */
     protected $bar;
 
-    use DataOpacityTrait;
-
     /**
      * @var Explorer
      */
     protected $explorer;
-
-    use FocusTargetTrait;
 
     /**
      * Specifies properties for individual horizontal axes, if the chart has multiple horizontal axes. Each child
@@ -64,16 +70,10 @@ class BarChartOptions extends AdvancedChartOptions
      */
     protected $hAxis;
 
-    use IsStackedTrait;
-
     /**
      * @var AdvancedLegend
      */
     protected $legend;
-
-    use OrientationTrait;
-
-    use ReverseCategoriesTrait;
 
     /**
      * @var AdvancedTooltip

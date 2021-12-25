@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\GaugeChart\GaugeChartOptions;
 
 /**
@@ -13,7 +14,7 @@ class GaugeChart extends Chart
     /**
      * @var GaugeChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -45,7 +46,7 @@ class GaugeChart extends Chart
     /**
      * @param GaugeChartOptions $options
      */
-    public function setOptions(/* GaugeChartOptions */$options): GaugeChart
+    public function setOptions(ChartOptionsInterface $options): GaugeChart
     {
         $this->options = $options;
 

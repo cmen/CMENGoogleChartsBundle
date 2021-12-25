@@ -23,6 +23,16 @@ class CandlestickChartOptions extends AdvancedChartOptions
 {
     use AggregationTargetTrait;
 
+    use FocusTargetTrait;
+
+    use OrientationTrait;
+
+    use ReverseCategoriesTrait;
+
+    use SelectionModeTrait;
+
+    use VAxesTrait;
+
     /**
      * @var AdvancedAnimation
      */
@@ -38,8 +48,6 @@ class CandlestickChartOptions extends AdvancedChartOptions
      */
     protected $candlestick;
 
-    use FocusTargetTrait;
-
     /**
      * @var AdvancedHAxis
      */
@@ -50,18 +58,10 @@ class CandlestickChartOptions extends AdvancedChartOptions
      */
     protected $legend;
 
-    use OrientationTrait;
-
-    use ReverseCategoriesTrait;
-
-    use SelectionModeTrait;
-
     /**
      * @var AdvancedTooltip
      */
     protected $tooltip;
-
-    use VAxesTrait;
 
     public function __construct()
     {

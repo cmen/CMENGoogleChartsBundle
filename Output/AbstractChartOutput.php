@@ -12,17 +12,13 @@ abstract class AbstractChartOutput implements ChartOutputInterface
 {
     /**
      * Version of Google Charts used.
-     *
-     * @var string
      */
-    protected $version;
+    protected string $version;
 
     /**
      * Locale to customize currencies, dates, and numbers.
-     *
-     * @var string
      */
-    protected $language;
+    protected string $language;
 
     public function __construct(string $version, string $language)
     {

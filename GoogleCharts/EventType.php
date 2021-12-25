@@ -7,19 +7,19 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts;
  */
 class EventType
 {
-    const ANIMATION_FINISH = 'animationfinish';
-    const CLICK = 'click';
-    const COLLAPSE = 'collapse';
-    const ERROR = 'error';
-    const ON_MOUSE_OUT = 'onmouseout';
-    const ON_MOUSE_OVER = 'onmouseover';
-    const PAGE = 'page';
-    const RANGE_CHANGE = 'rangechange';
-    const READY = 'ready';
-    const REGION_CLICK = 'regionClick';
-    const ROLLUP = 'rollup';
-    const SELECT = 'select';
-    const SORT = 'sort';
+    public const ANIMATION_FINISH = 'animationfinish';
+    public const CLICK = 'click';
+    public const COLLAPSE = 'collapse';
+    public const ERROR = 'error';
+    public const ON_MOUSE_OUT = 'onmouseout';
+    public const ON_MOUSE_OVER = 'onmouseover';
+    public const PAGE = 'page';
+    public const RANGE_CHANGE = 'rangechange';
+    public const READY = 'ready';
+    public const REGION_CLICK = 'regionClick';
+    public const ROLLUP = 'rollup';
+    public const SELECT = 'select';
+    public const SORT = 'sort';
 
     /**
      * @return string[]

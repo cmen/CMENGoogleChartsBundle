@@ -5,6 +5,7 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts;
 use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\EventType;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\BarChart\BarChartOptions;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 
 /**
  * @author Christophe Meneses
@@ -14,7 +15,7 @@ class BarChart extends Chart
     /**
      * @var BarChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {
@@ -46,17 +47,15 @@ class BarChart extends Chart
         ];
     }
 
-    public function getOptions()/* : BarChartOptions */
+    public function getOptions(): BarChartOptions
     {
         return $this->options;
     }
 
     /**
      * @param BarChartOptions $options
-     *
-     * @return BarChart
      */
-    public function setOptions(/* BarChartOptions */$options)/* : BarChart */
+    public function setOptions(ChartOptionsInterface $options): BarChart
     {
         $this->options = $options;
 

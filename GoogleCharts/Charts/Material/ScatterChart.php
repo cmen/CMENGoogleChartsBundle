@@ -2,6 +2,7 @@
 
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Material;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ScatterChart\Material\ScatterChartOptions;
 
 /**
@@ -12,7 +13,7 @@ class ScatterChart extends \CMEN\GoogleChartsBundle\GoogleCharts\Charts\ScatterC
     /**
      * @var ScatterChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
     public function __construct()
     {

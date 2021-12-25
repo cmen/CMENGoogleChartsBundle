@@ -3,6 +3,7 @@
 namespace CMEN\GoogleChartsBundle\GoogleCharts\Charts\Diff;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\PieChart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\Diff\DiffPieChart\DiffPieChartOptions;
 
 /**
@@ -13,17 +14,11 @@ class DiffPieChart extends PieChart implements DiffChart
     /**
      * @var DiffPieChartOptions
      */
-    protected $options;
+    protected ChartOptionsInterface $options;
 
-    /**
-     * @var PieChart
-     */
-    private $oldChart;
+    private PieChart $oldChart;
 
-    /**
-     * @var PieChart
-     */
-    private $newChart;
+    private PieChart $newChart;
 
     public function __construct(PieChart $oldChart, PieChart $newChart)
     {
@@ -43,7 +38,7 @@ class DiffPieChart extends PieChart implements DiffChart
     /**
      * @param DiffPieChartOptions $options
      */
-    public function setOptions(/* DiffPieChartOptions */$options): DiffPieChart
+    public function setOptions(ChartOptionsInterface $options): DiffPieChart
     {
         $this->options = $options;
 

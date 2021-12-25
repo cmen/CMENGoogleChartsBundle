@@ -2,7 +2,6 @@
 
 namespace CMEN\GoogleChartsBundle\Output;
 
-use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
 use CMEN\GoogleChartsBundle\GoogleCharts\Events;
 
 interface EventsOutputInterface

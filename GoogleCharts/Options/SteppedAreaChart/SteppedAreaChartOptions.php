@@ -21,12 +21,22 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
 {
     use AggregationTargetTrait;
 
+    use AreaOpacityTrait;
+
+    use IsStackedTrait;
+
+    use LineDashStyleTrait;
+
+    use ReverseCategoriesTrait;
+
+    use SelectionModeTrait;
+
+    use VAxesTrait;
+
     /**
      * @var AdvancedAnimation
      */
     protected $animation;
-
-    use AreaOpacityTrait;
 
     /**
      * If set to true, will connect the steps to form a stepped line. Otherwise, only a top line appears. The default
@@ -41,25 +51,15 @@ class SteppedAreaChartOptions extends AdvancedChartOptions
      */
     protected $hAxis;
 
-    use IsStackedTrait;
-
     /**
      * @var AdvancedLegend
      */
     protected $legend;
 
-    use LineDashStyleTrait;
-
-    use ReverseCategoriesTrait;
-
-    use SelectionModeTrait;
-
     /**
      * @var AdvancedTooltip
      */
     protected $tooltip;
-
-    use VAxesTrait;
 
     public function __construct()
     {

@@ -7,14 +7,14 @@ namespace CMEN\GoogleChartsBundle\GoogleCharts\Options;
  */
 class AdvancedTextStyle extends MediumTextStyle
 {
+    use OpacityTrait;
+
     /**
      * Color of the text outline.
      *
      * @var string
      */
     protected $auraColor;
-
-    use OpacityTrait;
 
     /**
      * @return $this
