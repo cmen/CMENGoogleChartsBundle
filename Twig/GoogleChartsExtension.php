@@ -20,7 +20,7 @@ class GoogleChartsExtension extends AbstractExtension
         $this->chartOutput = $chartOutput;
     }
 
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('gc_draw', [$this, 'gcDraw'], ['is_safe' => ['html']]),
