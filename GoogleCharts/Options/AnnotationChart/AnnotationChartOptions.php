@@ -7,7 +7,6 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Options\ChartOptionsInterface;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\ColorsTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MaxTrait;
 use CMEN\GoogleChartsBundle\GoogleCharts\Options\MinTrait;
-use DateTime;
 
 /**
  * @author Christophe Meneses
@@ -208,14 +207,14 @@ class AnnotationChartOptions implements ChartOptionsInterface
     /**
      * Sets the end date/time of the selected zoom range.
      *
-     * @var DateTime
+     * @var \DateTime
      */
     protected $zoomEndTime;
 
     /**
      * Sets the start date/time of the selected zoom range.
      *
-     * @var DateTime
+     * @var \DateTime
      */
     protected $zoomStartTime;
 
@@ -404,7 +403,7 @@ class AnnotationChartOptions implements ChartOptionsInterface
     /**
      * @return $this
      */
-    public function setZoomStartTime(DateTime $zoomStartTime)
+    public function setZoomStartTime(\DateTime $zoomStartTime)
     {
         $this->zoomStartTime = $zoomStartTime;
 
@@ -424,7 +423,7 @@ class AnnotationChartOptions implements ChartOptionsInterface
     /**
      * @return $this
      */
-    public function setZoomEndTime(DateTime $zoomEndTime)
+    public function setZoomEndTime(\DateTime $zoomEndTime)
     {
         $this->zoomEndTime = $zoomEndTime;
 

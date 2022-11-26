@@ -9,7 +9,6 @@ use CMEN\GoogleChartsBundle\Output\Javascript\DataOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\DateOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\EventsOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\OptionsOutput;
-use DateTime;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,18 +43,18 @@ class GanttChartTest extends TestCase
                 ['label' => 'Percent Complete', 'type' => 'number'],
                 ['label' => 'Dependencies', 'type' => 'string'],
             ],
-            ['2014Spring', 'Spring 2014', 'spring', new DateTime('2014-02-22'), new DateTime('2014-05-20'), null, 100, null],
-            ['2014Summer', 'Summer 2014', 'summer', new DateTime('2014-05-21'), new DateTime('2014-08-20'), null, 100, null],
-            ['2014Autumn', 'Autumn 2014', 'autumn', new DateTime('2014-08-21'), new DateTime('2014-11-20'), null, 100, null],
-            ['2014Winter', 'Winter 2014', 'winter', new DateTime('2014-11-21'), new DateTime('2015-02-21'), null, 100, null],
-            ['2015Spring', 'Spring 2015', 'spring', new DateTime('2015-2-22'), new DateTime('2015-5-20'), null, 50, null],
-            ['2015Summer', 'Summer 2015', 'summer', new DateTime('2015-5-21'), new DateTime('2015-8-20'), null, 0, null],
-            ['2015Autumn', 'Autumn 2015', 'autumn', new DateTime('2015-8-21'), new DateTime('2015-11-20'), null, 0, null],
-            ['2015Winter', 'Winter 2015', 'winter', new DateTime('2015-11-21'), new DateTime('2016-2-21'), null, 0, null],
-            ['Football', 'Football Season', 'sports', new DateTime('2014-8-4'), new DateTime('2015-1-1'), null, 100, null],
-            ['Baseball', 'Baseball Season', 'sports', new DateTime('2015-2-31'), new DateTime('2015-9-20'), null, 14, null],
-            ['Basketball', 'Basketball Season', 'sports', new DateTime('2014-9-28'), new DateTime('2015-5-20'), null, 86, null],
-            ['Hockey', 'Hockey Season', 'sports', new DateTime('2014-9-8'), new DateTime('2015-5-21'), null, 89, null],
+            ['2014Spring', 'Spring 2014', 'spring', new \DateTime('2014-02-22'), new \DateTime('2014-05-20'), null, 100, null],
+            ['2014Summer', 'Summer 2014', 'summer', new \DateTime('2014-05-21'), new \DateTime('2014-08-20'), null, 100, null],
+            ['2014Autumn', 'Autumn 2014', 'autumn', new \DateTime('2014-08-21'), new \DateTime('2014-11-20'), null, 100, null],
+            ['2014Winter', 'Winter 2014', 'winter', new \DateTime('2014-11-21'), new \DateTime('2015-02-21'), null, 100, null],
+            ['2015Spring', 'Spring 2015', 'spring', new \DateTime('2015-2-22'), new \DateTime('2015-5-20'), null, 50, null],
+            ['2015Summer', 'Summer 2015', 'summer', new \DateTime('2015-5-21'), new \DateTime('2015-8-20'), null, 0, null],
+            ['2015Autumn', 'Autumn 2015', 'autumn', new \DateTime('2015-8-21'), new \DateTime('2015-11-20'), null, 0, null],
+            ['2015Winter', 'Winter 2015', 'winter', new \DateTime('2015-11-21'), new \DateTime('2016-2-21'), null, 0, null],
+            ['Football', 'Football Season', 'sports', new \DateTime('2014-8-4'), new \DateTime('2015-1-1'), null, 100, null],
+            ['Baseball', 'Baseball Season', 'sports', new \DateTime('2015-2-31'), new \DateTime('2015-9-20'), null, 14, null],
+            ['Basketball', 'Basketball Season', 'sports', new \DateTime('2014-9-28'), new \DateTime('2015-5-20'), null, 86, null],
+            ['Hockey', 'Hockey Season', 'sports', new \DateTime('2014-9-8'), new \DateTime('2015-5-21'), null, 89, null],
         ]);
         $chart->getOptions()->getBackgroundColor()->setFill('white');
 
