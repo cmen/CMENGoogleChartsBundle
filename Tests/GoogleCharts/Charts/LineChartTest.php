@@ -106,14 +106,14 @@ class LineChartTest extends TestCase
         $chart->getOptions()
             ->setAxisTitlesPosition('out');
 
-        //$chart->getOptions()->setBackgroundColor('red');
+        // $chart->getOptions()->setBackgroundColor('red');
         $chart->getOptions()->getBackgroundColor()
             ->setStroke('#666')
             ->setStrokeWidth(0)
             ->setFill('white');
 
         $chart->getOptions()->getChartArea()
-            //->setBackgroundColor('black')
+            // ->setBackgroundColor('black')
             ->getBackgroundColor()
                 ->setStroke('black')
                 ->setStrokeWidth(1);

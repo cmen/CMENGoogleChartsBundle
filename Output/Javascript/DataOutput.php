@@ -6,7 +6,6 @@ use CMEN\GoogleChartsBundle\Exception\GoogleChartsException;
 use CMEN\GoogleChartsBundle\GoogleCharts\Data;
 use CMEN\GoogleChartsBundle\Output\DataOutputInterface;
 use CMEN\GoogleChartsBundle\Output\DateOutputInterface;
-use DateTimeInterface;
 
 /**
  * @author Christophe Meneses
@@ -38,7 +37,7 @@ class DataOutput implements DataOutputInterface
             end($row);
             $lastKeyValue = key($row);
             foreach ($row as $key => $value) {
-                if ($value instanceof DateTimeInterface) {
+                if ($value instanceof \DateTimeInterface) {
                     $js .= $this->dateOutput->draw($value);
                 } else {
                     $js .= json_encode($value);

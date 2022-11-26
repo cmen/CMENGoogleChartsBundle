@@ -12,5 +12,5 @@ interface DateOutputInterface
     /**
      * Returns a string to draw a DateTimeInterface object.
      */
-    public function draw(DateTimeInterface $date): string;
+    public function draw(\DateTimeInterface $date): string;
 }

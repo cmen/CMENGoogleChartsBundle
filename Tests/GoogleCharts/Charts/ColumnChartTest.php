@@ -101,7 +101,7 @@ class ColumnChartTest extends TestCase
 
         $chart->getOptions()->setAxisTitlesPosition('out');
 
-        //$chart->getOptions()->setBackgroundColor('red');
+        // $chart->getOptions()->setBackgroundColor('red');
         $chart->getOptions()->getBackgroundColor()
             ->setStroke('#666')
             ->setStrokeWidth(0)
@@ -110,7 +110,7 @@ class ColumnChartTest extends TestCase
         $chart->getOptions()->getBar()->setGroupWidth('61.8%');
 
         $chart->getOptions()->getChartArea()
-            //->setBackgroundColor('black')
+            // ->setBackgroundColor('black')
             ->getBackgroundColor()
                 ->setStroke('black')
                 ->setStrokeWidth(1);

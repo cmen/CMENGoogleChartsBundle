@@ -9,7 +9,6 @@ use CMEN\GoogleChartsBundle\Output\Javascript\DataOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\DateOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\EventsOutput;
 use CMEN\GoogleChartsBundle\Output\Javascript\OptionsOutput;
-use DateTime;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,12 +43,12 @@ class AnnotationChartTest extends TestCase
                     ['label' => 'Gliese title', 'type' => 'string'],
                     ['label' => 'Gliese text', 'type' => 'string'],
                 ],
-                [new DateTime('2314-02-15'), 12400, 'undefined', 'undefined', 10645, 'undefined', 'undefined'],
-                [new DateTime('2314-02-16'), 24045, 'Lalibertines', 'First encounter', 12374, 'undefined', 'undefined'],
-                [new DateTime('2314-02-17'), 35022, 'Lalibertines', 'They are very tall', 15766, 'Gallantors', 'First Encounter'],
-                [new DateTime('2314-02-18'), 12284, 'Lalibertines', 'Attack on our crew!', 34334, 'Gallantors', 'Statement of shared principles'],
-                [new DateTime('2314-02-19'), 8476, 'Lalibertines', 'Heavy casualties', 66467, 'Gallantors', 'Mysteries revealed'],
-                [new DateTime('2314-02-20'), 0, 'Lalibertines', 'All crew lost', 79463, 'Gallantors', 'Omniscience achieved'],
+                [new \DateTime('2314-02-15'), 12400, 'undefined', 'undefined', 10645, 'undefined', 'undefined'],
+                [new \DateTime('2314-02-16'), 24045, 'Lalibertines', 'First encounter', 12374, 'undefined', 'undefined'],
+                [new \DateTime('2314-02-17'), 35022, 'Lalibertines', 'They are very tall', 15766, 'Gallantors', 'First Encounter'],
+                [new \DateTime('2314-02-18'), 12284, 'Lalibertines', 'Attack on our crew!', 34334, 'Gallantors', 'Statement of shared principles'],
+                [new \DateTime('2314-02-19'), 8476, 'Lalibertines', 'Heavy casualties', 66467, 'Gallantors', 'Mysteries revealed'],
+                [new \DateTime('2314-02-20'), 0, 'Lalibertines', 'All crew lost', 79463, 'Gallantors', 'Omniscience achieved'],
             ]);
 
         $chart->getOptions()
@@ -79,8 +78,8 @@ class AnnotationChartTest extends TestCase
                 ->setSortColumn(1);
         $chart->getOptions()
             ->setThickness(0)
-            ->setZoomStartTime(new DateTime('2314-02-15'))
-            ->setZoomEndTime(new DateTime('2314-02-17'));
+            ->setZoomStartTime(new \DateTime('2314-02-15'))
+            ->setZoomEndTime(new \DateTime('2314-02-17'));
 
         /** @noinspection PhpUnhandledExceptionInspection */
         $js = $this->chartOutput->fullCharts($chart);
