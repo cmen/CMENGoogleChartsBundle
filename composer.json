@@ -12,8 +12,10 @@
   "require": {
     "php": ">=7.4",
     "ext-json": "*",
-    "symfony/framework-bundle": "^4.4 || ^5.4 || ^6.0",
-    "twig/twig": "^1.43 | ^2.13 | ^3.0.4"
+    "symfony/config": "^5.4 || ^6.0 || ^7.0",
+    "symfony/dependency-injection": "^5.4 || ^6.0 || ^7.0",
+    "symfony/http-kernel": "^5.4 || ^6.0 || ^7.0",
+    "twig/twig": "^2.13 | ^3.0.4"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.4",
