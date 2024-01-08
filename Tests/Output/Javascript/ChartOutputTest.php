@@ -19,9 +19,6 @@ class ChartOutputTest extends TestCase
     /** @var ChartOutputInterface */
     private $chartOutput;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         $optionsOutput = $this->createMock(OptionsOutputInterface::class);
