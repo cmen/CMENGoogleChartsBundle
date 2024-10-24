@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install PHP dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
@@ -25,19 +25,19 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install PHP dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Run PHPStan
-        run: ./vendor/bin/phpstan analyse
+        run: composer analyse
 
   tests:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        php-versions: ['7.4', '8.0', '8.1', '8.2']
+        php-versions: ['8.1', '8.2', '8.3']
 
     runs-on: ${{ matrix.operating-system }}
 
@@ -52,10 +52,10 @@ jobs:
           coverage: xdebug
 
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install PHP dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Run test suite
-        run: ./vendor/bin/phpunit
+        run: composer tests

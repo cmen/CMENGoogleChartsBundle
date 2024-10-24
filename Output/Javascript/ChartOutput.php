@@ -26,7 +26,7 @@ class ChartOutput extends AbstractChartOutput
         string $language,
         OptionsOutputInterface $optionsOutput,
         DataOutputInterface $dataOutput,
-        EventsOutputInterface $eventsOutput
+        EventsOutputInterface $eventsOutput,
     ) {
         parent::__construct($version, $language);
 
