@@ -10,17 +10,18 @@
     }
   ],
   "require": {
-    "php": ">=7.4",
+    "php": ">=8.1",
     "ext-json": "*",
-    "symfony/config": "^5.4 || ^6.0 || ^7.0",
-    "symfony/dependency-injection": "^5.4 || ^6.0 || ^7.0",
-    "symfony/http-kernel": "^5.4 || ^6.0 || ^7.0",
-    "twig/twig": "^2.13 | ^3.0.4"
+    "symfony/config": "^6.0 || ^7.0",
+    "symfony/dependency-injection": "^6.0 || ^7.0",
+    "symfony/http-kernel": "^6.0 || ^7.0",
+    "twig/twig": "^2.13 | ^3.0.4 | 4.x-dev@dev"
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.4",
-    "phpstan/phpstan": "^1.2",
-    "phpunit/phpunit": "^9.5"
+    "friendsofphp/php-cs-fixer": "^3.64",
+    "phpstan/phpstan": "^1.12",
+    "phpunit/phpunit": "^10.5",
+    "rector/rector": "^1.2"
   },
   "autoload": {
     "psr-4": { "CMEN\\GoogleChartsBundle\\": "" }
@@ -30,5 +31,11 @@
   },
   "config": {
     "sort-packages": true
+  },
+  "scripts": {
+    "analyze": "./vendor/bin/phpstan analyse",
+    "rector": "./vendor/bin/rector process",
+    "lint": "./vendor/bin/php-cs-fixer fix --diff -vv",
+    "tests": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --testdox"
   }
 }

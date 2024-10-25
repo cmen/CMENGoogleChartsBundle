@@ -4,7 +4,7 @@ filter:
 
 build:
   environment:
-    php: '7.4'
+    php: '8.1'
 
   nodes:
     analysis:
@@ -15,7 +15,7 @@ build:
     tests-and-coverage:
       tests:
         override:
-          - command: 'vendor/bin/phpunit --coverage-clover=coverage-file'
+          - command: 'XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover=coverage-file'
             coverage:
               file: 'coverage-file'
               format: 'clover'

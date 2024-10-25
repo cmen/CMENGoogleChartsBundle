@@ -1,20 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" colors="true" bootstrap="vendor/autoload.php" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         cacheDirectory=".phpunit.cache"
+         executionOrder="random"
+         beStrictAboutOutputDuringTests="true"
+         colors="true"
+         failOnRisky="true"
+         failOnWarning="true"
+         displayDetailsOnTestsThatTriggerDeprecations="true"
+         displayDetailsOnTestsThatTriggerErrors="true"
+         displayDetailsOnTestsThatTriggerWarnings="true"
+         displayDetailsOnTestsThatTriggerNotices="true"
+>
   <coverage>
-    <include>
-      <directory>.</directory>
-    </include>
-    <exclude>
-      <directory>./DependencyInjection</directory>
-      <directory>./Resources</directory>
-      <directory>./Tests</directory>
-      <directory>./vendor</directory>
-    </exclude>
+    <report>
+      <html outputDirectory="coverage"/>
+      <clover outputFile="coverage/clover.xml"/>
+    </report>
   </coverage>
   <testsuites>
     <testsuite name="CMENGoogleChartsBundle Test Suite">
       <directory>./Tests</directory>
     </testsuite>
   </testsuites>
+  <source>
+    <include>
+      <directory>.</directory>
+    </include>
+    <exclude>
+      <directory>./Resources</directory>
+      <directory>./Tests</directory>
+      <directory>./vendor</directory>
+      <file>.php-cs-fixer.dist.php</file>
+    </exclude>
+  </source>
 </phpunit>

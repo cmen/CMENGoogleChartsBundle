@@ -19,6 +19,14 @@
 * [Google Charts documentation](https://developers.google.com/chart/interactive/docs/)
 * [How to contribute](Resources/doc/contribute.md)
 
+## Examples
+![Area](./Resources/doc/charts/area.png)
+![Bubble](./Resources/doc/charts/bubble.png)
+![Histo](./Resources/doc/charts/histo.png)
+![Line](./Resources/doc/charts/line.png)
+![Pie](./Resources/doc/charts/pie.png)
+![Timeline](./Resources/doc/charts/timeline.png)
+
 ## License
 
 This bundle is released under the MIT license. See the complete license in file LICENCE.

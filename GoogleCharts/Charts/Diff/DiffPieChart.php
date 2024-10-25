@@ -16,18 +16,11 @@ class DiffPieChart extends PieChart implements DiffChart
      */
     protected ChartOptionsInterface $options;
 
-    private PieChart $oldChart;
-
-    private PieChart $newChart;
-
-    public function __construct(PieChart $oldChart, PieChart $newChart)
+    public function __construct(private readonly PieChart $oldChart, private readonly PieChart $newChart)
     {
         parent::__construct();
 
         $this->options = new DiffPieChartOptions();
-
-        $this->oldChart = $oldChart;
-        $this->newChart = $newChart;
     }
 
     public function getOptions(): DiffPieChartOptions

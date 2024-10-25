@@ -9,9 +9,7 @@ abstract class AbstractOptionsOutput implements OptionsOutputInterface
 {
     public function removeRecursivelyNullValue(&$options): void
     {
-        $options = array_filter((array) $options, function ($val) {
-            return !is_null($val);
-        });
+        $options = array_filter((array) $options, fn ($val) => !is_null($val));
 
         foreach ($options as $key => $value) {
             if (is_object($value) || is_array($value)) {

@@ -11,11 +11,8 @@ use CMEN\GoogleChartsBundle\Output\DateOutputInterface;
  */
 class OptionsOutput extends AbstractOptionsOutput
 {
-    private DateOutputInterface $dateOutput;
-
-    public function __construct(DateOutputInterface $dateOutput)
+    public function __construct(private readonly DateOutputInterface $dateOutput)
     {
-        $this->dateOutput = $dateOutput;
     }
 
     public function draw(ChartOptionsInterface $options, string $optionsName): string
@@ -28,9 +25,7 @@ class OptionsOutput extends AbstractOptionsOutput
         $options = $this->renameRecursivelyKeys($options);
 
         $js = "var $optionsName = {";
-
-        end($options);
-        $lastKey = key($options);
+        $lastKey = array_key_last($options);
         foreach ($options as $optionKey => $optionValue) {
             $js .= '"'.$optionKey.'":';
 

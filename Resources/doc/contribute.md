@@ -2,17 +2,18 @@
 
 Before opening a pull request, be sure to follow the steps below.
 
-## Step 1 : check and correct the code using PHPStan
+## Step 1 : check and correct the code using PHPStan and Rector
 ```bash
-./vendor/bin/phpstan analyse
+composer analyse
+composer rector
 ```
 
 ## Step 2 : run tests using PHPUnit and check all tests are OK
 ```bash
-./vendor/bin/phpunit
+composer tests
 ```
 
 ## Step 3 : check and correct coding standards using PHP CS Fixer
 ```bash
-./vendor/bin/php-cs-fixer fix --diff -vv
+composer lint
 ```

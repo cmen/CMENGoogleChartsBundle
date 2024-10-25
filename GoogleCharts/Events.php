@@ -14,12 +14,9 @@ class Events
      */
     protected array $listeners;
 
-    protected Chart $chart;
-
-    public function __construct(Chart $chart)
+    public function __construct(protected Chart $chart)
     {
         $this->listeners = [];
-        $this->chart = $chart;
     }
 
     /**

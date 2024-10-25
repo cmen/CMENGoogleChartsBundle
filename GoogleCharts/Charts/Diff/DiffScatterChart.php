@@ -16,18 +16,11 @@ class DiffScatterChart extends ScatterChart implements DiffChart
      */
     protected ChartOptionsInterface $options;
 
-    private ScatterChart $oldChart;
-
-    private ScatterChart $newChart;
-
-    public function __construct(ScatterChart $oldChart, ScatterChart $newChart)
+    public function __construct(private readonly ScatterChart $oldChart, private readonly ScatterChart $newChart)
     {
         parent::__construct();
 
         $this->options = new DiffScatterChartOptions();
-
-        $this->oldChart = $oldChart;
-        $this->newChart = $newChart;
     }
 
     public function getOptions(): DiffScatterChartOptions

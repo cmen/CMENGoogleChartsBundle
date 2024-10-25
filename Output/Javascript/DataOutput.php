@@ -12,11 +12,8 @@ use CMEN\GoogleChartsBundle\Output\DateOutputInterface;
  */
 class DataOutput implements DataOutputInterface
 {
-    private DateOutputInterface $dateOutput;
-
-    public function __construct(DateOutputInterface $dateOutput)
+    public function __construct(private readonly DateOutputInterface $dateOutput)
     {
-        $this->dateOutput = $dateOutput;
     }
 
     public function draw(Data $data, string $dataName): string
@@ -28,14 +25,10 @@ class DataOutput implements DataOutputInterface
         }
 
         $js = "var $dataName = new google.visualization.arrayToDataTable([";
-
-        end($arrayToDataTable);
-        $lastKeyRow = key($arrayToDataTable);
+        $lastKeyRow = array_key_last($arrayToDataTable);
         foreach ($data->getArrayToDataTable() as $keyRow => $row) {
             $js .= '[';
-
-            end($row);
-            $lastKeyValue = key($row);
+            $lastKeyValue = array_key_last($row);
             foreach ($row as $key => $value) {
                 if ($value instanceof \DateTimeInterface) {
                     $js .= $this->dateOutput->draw($value);

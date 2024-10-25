@@ -13,21 +13,18 @@ use Twig\TwigFunction;
  */
 class GoogleChartsExtension extends AbstractExtension
 {
-    private ChartOutputInterface $chartOutput;
-
-    public function __construct(ChartOutputInterface $chartOutput)
+    public function __construct(private readonly ChartOutputInterface $chartOutput)
     {
-        $this->chartOutput = $chartOutput;
     }
 
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('gc_draw', [$this, 'gcDraw'], ['is_safe' => ['html']]),
-            new TwigFunction('gc_start', [$this, 'gcStart'], ['is_safe' => ['html']]),
-            new TwigFunction('gc_end', [$this, 'gcEnd'], ['is_safe' => ['html']]),
-            new TwigFunction('gc_event', [$this, 'gcEvent'], ['is_safe' => ['html']]),
-            new TwigFunction('gc_language', [$this, 'gcLanguage']),
+            new TwigFunction('gc_draw', $this->gcDraw(...), ['is_safe' => ['html']]),
+            new TwigFunction('gc_start', $this->gcStart(...), ['is_safe' => ['html']]),
+            new TwigFunction('gc_end', $this->gcEnd(...), ['is_safe' => ['html']]),
+            new TwigFunction('gc_event', $this->gcEvent(...), ['is_safe' => ['html']]),
+            new TwigFunction('gc_language', $this->gcLanguage(...)),
         ];
     }
 

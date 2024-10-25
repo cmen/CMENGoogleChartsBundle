@@ -10,20 +10,16 @@ use CMEN\GoogleChartsBundle\GoogleCharts\Chart;
  */
 abstract class AbstractChartOutput implements ChartOutputInterface
 {
-    /**
-     * Version of Google Charts used.
-     */
-    protected string $version;
-
-    /**
-     * Locale to customize currencies, dates, and numbers.
-     */
-    protected string $language;
-
-    public function __construct(string $version, string $language)
-    {
-        $this->version = $version;
-        $this->language = $language;
+    public function __construct(
+        /**
+         * Version of Google Charts used.
+         */
+        protected string $version,
+        /**
+         * Locale to customize currencies, dates, and numbers.
+         */
+        protected string $language,
+    ) {
     }
 
     /**
