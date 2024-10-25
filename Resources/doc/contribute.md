@@ -2,9 +2,10 @@
 
 Before opening a pull request, be sure to follow the steps below.
 
-## Step 1 : check and correct the code using PHPStan
+## Step 1 : check and correct the code using PHPStan and Rector
 ```bash
 composer analyse
+composer rector
 ```
 
 ## Step 2 : run tests using PHPUnit and check all tests are OK

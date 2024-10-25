@@ -15,24 +15,14 @@ use CMEN\GoogleChartsBundle\Output\OptionsOutputInterface;
  */
 class ChartOutput extends AbstractChartOutput
 {
-    private OptionsOutputInterface $optionsOutput;
-
-    private DataOutputInterface $dataOutput;
-
-    private EventsOutputInterface $eventsOutput;
-
     public function __construct(
         string $version,
         string $language,
-        OptionsOutputInterface $optionsOutput,
-        DataOutputInterface $dataOutput,
-        EventsOutputInterface $eventsOutput,
+        private readonly OptionsOutputInterface $optionsOutput,
+        private readonly DataOutputInterface $dataOutput,
+        private readonly EventsOutputInterface $eventsOutput,
     ) {
         parent::__construct($version, $language);
-
-        $this->optionsOutput = $optionsOutput;
-        $this->dataOutput = $dataOutput;
-        $this->eventsOutput = $eventsOutput;
     }
 
     public function startChart(Chart $chart): string
@@ -151,7 +141,7 @@ class ChartOutput extends AbstractChartOutput
 
     public function loadLibraries(array $packages): string
     {
-        array_walk($packages, function (&$item) {
+        array_walk($packages, function (&$item): void {
             $item = "'".$item."'";
         });
 
