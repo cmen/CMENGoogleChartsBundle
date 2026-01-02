@@ -12,11 +12,9 @@ class CMENGoogleChartsExtension extends Extension
     /**
      * @param array<mixed> $configs
      *
-     * @return void
-     *
      * @throws \Exception
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
@@ -24,7 +22,7 @@ class CMENGoogleChartsExtension extends Extension
         $container->setParameter('cmen_google_charts.version', $config['version']);
         $container->setParameter('cmen_google_charts.language', $config['language']);
 
-        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('services.xml');
+        $loader = new Loader\PhpFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('services.php');
     }
 }
