@@ -5,5 +5,3 @@ parameters:
     excludePaths:
         - %currentWorkingDirectory%/Tests
         - %currentWorkingDirectory%/vendor
-    ignoreErrors:
-        - '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\).#'
