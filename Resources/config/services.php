@@ -29,12 +29,12 @@ return static function (ContainerConfigurator $container) {
     $services->set(ChartOutput::class, ChartOutput::class)
              ->private()
              ->args([
-                        '%cmen_google_charts.version%',
-                        '%cmen_google_charts.language%',
-                        service(OptionsOutput::class),
-                        service(DataOutput::class),
-                        service(EventsOutput::class),
-                    ]);
+                 '%cmen_google_charts.version%',
+                 '%cmen_google_charts.language%',
+                 service(OptionsOutput::class),
+                 service(DataOutput::class),
+                 service(EventsOutput::class),
+             ]);
 
     $services->set(GoogleChartsExtension::class, GoogleChartsExtension::class)
              ->private()
